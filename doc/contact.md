@@ -13,7 +13,7 @@
 	Email: yurihoogeweg@gmail.com
 	Skype: yurihoogeweg
 
-### Tom Broeninkkkkkkk
+### Tom Broenink
 	Tel: 06 29 277 096
 	Email: tom_broenink@hotmail.com
 	Skype: spirit3775
