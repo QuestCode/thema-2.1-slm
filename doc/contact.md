@@ -13,9 +13,9 @@ Tel: 06 29 04 99 21
 Email: yurihoogeweg@gmail.com  
 Skype: yurihoogeweg
 
-### Tom Broenink hihi
-Tel: 06 29 277 096
-Email: tom_broenink@hotmail.com
+### Tom Broenink
+Tel: 06 29 277 096  
+Email: tom_broenink@hotmail.com  
 Skype: spirit3775
 
 ### Maurits van Mastrigt
