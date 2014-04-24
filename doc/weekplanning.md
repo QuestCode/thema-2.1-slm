@@ -19,7 +19,9 @@
 
 ### SLM
 
-- 22 mei, inleveren hardcopy SLM1 (LT3) voor 12:00
+- 15 mei, inleveren hardcopy SLM1 (LT3) voor 12:00
+- 17 juni, inleveren hardcopy SLM2 (LT4) voor 12:00
+	- Geven presentatie (meer info in kick-off slides)
 
 ## Uitzoeken
 
