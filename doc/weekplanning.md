@@ -13,6 +13,10 @@
 - 4 juni, eerste formal meeting
 - Regelen visitekaartjes
 
+### BSS
+
+- 9 mei, inleveren leertaak 1
+
 ### SLM
 
 - 22 mei, inleveren hardcopy SLM1 (LT3) voor 12:00
