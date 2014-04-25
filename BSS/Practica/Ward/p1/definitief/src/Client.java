@@ -1,10 +1,9 @@
+import java.io.*;
+import java.net.*;
+
 /**
  * Created by Ward on 25-4-14.
  */
-import com.sun.jndi.url.corbaname.corbanameURLContextFactory;
-
-import java.io.*;
-import java.net.*;
 
 public class Client {
 
