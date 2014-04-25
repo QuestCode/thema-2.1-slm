@@ -35,3 +35,11 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
+
+# Java Files
+*.class
+*.war
+*.ear
+
+# Intellij Project Folders
+*.idea/
