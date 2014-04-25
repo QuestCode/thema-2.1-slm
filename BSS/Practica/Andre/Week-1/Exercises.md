@@ -64,3 +64,272 @@ The other model to use is a Message-Passing system. This model involves an objec
 When a context-switch occurs the context of the old process is saved in the PCB (the Process Control Block). The context of another process is loaded from this same PCB and the new process is set to run. 
 
 This process is pure overhead as the system is not doing anything useful during a context-switch
+
+## Programming execersise
+
+### Server.java
+```java
+import java.io.IOException;
+import java.net.InetAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.net.UnknownHostException;
+import java.util.ArrayList;
+
+/**
+ * Created by Andre Nanninga on 25-4-14.
+ */
+public class Server {
+
+    private int port = 6052;
+    private ServerSocket socket;
+    private ArrayList<Connection> connections;
+    private Boolean isDebug = true;
+
+    public Server() {
+        connections = new ArrayList<Connection>();
+
+        try {
+            createServerSocket();
+            listenToServerSocket();
+        }
+        catch (IOException e) {
+            System.err.println("Critical error: " + e.getMessage());
+            System.exit(0);
+        }
+    }
+
+    /**
+     * Create a server socket
+     *
+     * @throws IOException
+     */
+    public void createServerSocket() throws IOException {
+        debug("server/createServerSocket", "Creating serverSocket with port: " + port);
+        socket = new ServerSocket(port);
+    }
+
+    /**
+     * Set the server to listen to clients
+     *
+     * @throws IOException
+     */
+    public void listenToServerSocket() throws IOException {
+        while(true) {
+            Socket client = socket.accept();
+            debug("server/listenToServerSocket", "accepting client: " + client.getInetAddress());
+
+            createConnection(client);
+        }
+    }
+
+    /**
+     * create a new connection
+     *
+     * @param client The socket of the client of the connection
+     * @throws IOException
+     */
+    private void createConnection(Socket client) throws IOException {
+        Connection connection = new Connection(this, client);
+        new Thread(connection).start();
+        connections.add(connection);
+    }
+
+    /**
+     * Close the connection and remove it from the connections pool
+     *
+     * @param connection The connection to close and remove
+     * @throws IOException
+     */
+    private void closeConnection(Connection connection) throws IOException {
+        connection.close();
+        connections.remove(connection);
+    }
+
+    /**
+     * Get the ip of a hostname
+     *
+     * @param hostname The hostname
+     * @return The resolved ip of the hostname
+     */
+    public String getIpByHostname(String hostname) {
+        try {
+            InetAddress hostAddress = InetAddress.getByName(hostname);
+            return hostAddress.getHostAddress();
+        }
+        catch (UnknownHostException e) {
+            debug("Server/getIpByHostname", "could not resolve: " + hostname);
+            return "Unable to resolve host " + hostname;
+        }
+    }
+
+    /**
+     * Print a message to the console when isDebug is set to true
+     *
+     * @param location Location of the code where the message was debugged
+     * @param message Message of the debug
+     */
+    public void debug(String location, String message) {
+        if(isDebug) {
+            System.out.println("[" + location + "] - " + message);
+        }
+    }
+
+    public static void main(String[] args) {
+        new Server();
+    }
+}
+```
+
+### Connection.java
+```java
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.Socket;
+
+/**
+ * Created by Andre Nanninga on 25-4-14.
+ */
+public class Connection implements Runnable {
+
+    private Socket socket;
+    private Server server;
+
+    private BufferedReader reader;
+    private PrintWriter writer;
+
+    private Boolean isRunning = true;
+
+    /**
+     * A connection of a client
+     *
+     * @param server The server parent
+     * @param socket The socket of the client
+     * @throws IOException
+     */
+    public Connection(Server server, Socket socket) throws IOException {
+        this.server = server;
+        this.socket = socket;
+
+        writer = new PrintWriter(socket.getOutputStream(), true);
+        reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+    }
+
+    /**
+     * Close the connection
+     *
+     * @throws IOException
+     */
+    public void close() throws IOException {
+        isRunning = false;
+        socket.close();
+    }
+
+    @Override
+    /**
+     * Reads and writes messages from the client
+     */
+    public void run() {
+        String line = "";
+        while(isRunning) {
+
+            try {
+                line = reader.readLine();
+            }
+            catch (IOException e) {
+                server.debug("Connection/Run", "Error while reading line: " + e.getMessage());
+                try {
+                    close();
+                }
+                catch (IOException e1) { }
+            }
+
+            if(line != null) {
+                server.debug("Connection/Run", "Received: " + line);
+
+                String ip = server.getIpByHostname(line);
+
+                writer.println(ip);
+            }
+        }
+    }
+}
+```
+
+### Client.java
+
+```java
+import java.io.*;
+import java.net.Socket;
+
+/**
+ * Created by Andre Nanninga on 25-4-14.
+ */
+public class Client {
+
+    private String serverHost = "localhost";
+    private int serverPort = 6052;
+
+    private Socket socket;
+    private BufferedReader reader;
+    private PrintWriter writer;
+
+    private Boolean isDebug = true;
+
+    /**
+     * The host to resolve the ip of
+     *
+     * @param host
+     */
+    public Client(String host) {
+        String message = host;
+        Boolean listening = true;
+
+        try {
+            socket = new Socket(serverHost, serverPort);
+            writer = new PrintWriter(socket.getOutputStream(), true);
+            reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+
+            debug("Client/Client", "sending message: " + message);
+            writer.println(message);
+
+            String line;
+            while(listening) {
+                if((line = reader.readLine()) != null) {
+                    debug("Client/Client", "received message: " + line);
+                    listening = false;
+                }
+            }
+            socket.close();
+        }
+        catch (IOException e) {
+            System.err.println("Critical error: " + e.getMessage());
+            System.exit(0);
+        }
+    }
+
+    /**
+     * Print a message to the console when isDebug is set to true
+     *
+     * @param location Location of the code where the message was debugged
+     * @param message Message of the debug
+     */
+    public void debug(String location, String message) {
+        if(isDebug) {
+            System.out.println("[" + location + "] - " + message);
+        }
+    }
+
+    public static void main(String[] args) {
+        if(args.length == 1) {
+            new Client(args[0]);
+        }
+        else {
+            System.err.println("Expected host as first argument");
+            System.exit(0);
+        }
+    }
+}	
+```
