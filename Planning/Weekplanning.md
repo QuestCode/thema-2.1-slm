@@ -1,6 +1,6 @@
 # Oude weekplanning
 
-Zie `Resources/Weekplanning 2011-2012kw4v1.01.pdf` voor een oude versie van de weekplanning. Hierin verschilt het volgende:
+Zie [Resources/Weekplanning 2011-2012kw4v1.01.pdf](https://github.com/mauvm/thema-2.1-i/raw/master/Planning/Resources/Weekplanning%202011-2012kw4v1.01.pdf) voor een oude versie van de weekplanning. Hierin verschilt het volgende:
 
 - Nieuw boek voor Service Level Management;
 - Nieuwe leertaak 4 (inclusief presentatie en tutoruren);
@@ -12,7 +12,7 @@ Zie `Resources/Weekplanning 2011-2012kw4v1.01.pdf` voor een oude versie van de w
 
 ### Week 1 (21-25 april)
 
-Al geweest.
+Al voorbij.
 
 ### Week 2 (5-9 mei)
 
@@ -20,7 +20,7 @@ Al geweest.
 2. Opstellen 'communication guideline' (Operating Principles and Norms, OP&Ns)
 	- Opnemen resultaten Belbin test
 3. Concept cultureel document
-	- Gewoontes en zakendoen in eigen land (zie ICC/Resources/Customs-in-the-Netherlands.md)
+	- Gewoontes en zakendoen in eigen land (zie [ICC/Resources/Customs-in-the-Netherlands.md](https://github.com/mauvm/thema-2.1-i/blob/master/ICC/Resources/Customs-in-the-Netherlands.md))
 	- Gewoontes en zakendoen met gekozen land
 	- Vergelijkingstabel
 4. Regelen agenda (voor eerste vergadering)
@@ -30,9 +30,9 @@ Al geweest.
 | Taak | Door wie               | Deadline         |
 | ---- | ---------------------- | ---------------- |
 | #1   | Maurits                | 5 mei vóór 17:00 |
-| #2   | Maurits                | 6 mei            |
-| #3   | Andre, Ward, Yuri, Tom | 6 mei            |
-| #4   | Andre                  | 6 mei            |
+| #2   | Maurits                | 5 mei            |
+| #3   | Andre, Ward, Yuri, Tom | 5 mei            |
+| #4   | Andre                  | 5 mei            |
 | #5   | Tom                    | 7 mei            |
 | #6   | Iedereen               | 9 mei            |
 
