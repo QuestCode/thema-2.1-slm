@@ -38,33 +38,65 @@ Al voorbij.
 
 ### Week 3 (12-16 mei)
 
-- Regelen visitekaartjes
+1. Regelen visitekaartjes
+
+| Taak | Door wie               | Deadline         |
+| ---- | ---------------------- | ---------------- |
+| #1   |                        |                  |
 
 ### Week 4 (19-23 mei)
 
-- 15 mei, inleveren hardcopy SLM1 (LT3) voor 12:00
+1. Inleveren hardcopy SLM1 (LT3)
+
+| Taak | Door wie               | Deadline          |
+| ---- | ---------------------- | ----------------  |
+| #1   |                        | 15 mei vóór 12:00 |
 
 ### Week 5 (26-30 mei)
 
+1. ..
 
+| Taak | Door wie               | Deadline         |
+| ---- | ---------------------- | ---------------- |
+| #1   |                        |                  |
 
 ### Week 6 (2-6 juni)
 
-- 4 juni, eerste formal meeting
+1. Eerste formal meeting
+
+| Taak | Door wie               | Deadline         |
+| ---- | ---------------------- | ---------------- |
+| #1   |                        | 4 juni           |
 
 ### Week 7 (9-13 juni)
 
+1. ..
 
+| Taak | Door wie               | Deadline         |
+| ---- | ---------------------- | ---------------- |
+| #1   |                        |                  |
 
 ### Week 8 (16-20 juni)
 
-- 17 juni, inleveren hardcopy SLM2 (LT4) voor 12:00
+1. Inleveren hardcopy SLM2 (LT4)
 	- Geven presentatie (meer info in kick-off slides)
+
+| Taak | Door wie               | Deadline           |
+| ---- | ---------------------- | ----------------   |
+| #1   |                        | 17 juni vóór 12:00 |
 
 ### Week 9 (23-27 juni)
 
+1. ..
 
+| Taak | Door wie               | Deadline         |
+| ---- | ---------------------- | ---------------- |
+| #1   |                        |                  |
 
 ### Week 10 (30 juni - 4 juli)
 
+1. ..
 
+| Taak | Door wie               | Deadline         |
+| ---- | ---------------------- | ---------------- |
+| #1   |                        |                  |
