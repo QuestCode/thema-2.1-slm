@@ -12,12 +12,14 @@ public class Client {
     private Socket socket;
     private String line;
 
+    // De url waarvan we het IP willen hebben
     private String url = "www.westminstercollege.edu";
 
     public static void main(String args[]) {
         int port = 6052;
         String hostname = "localhost";
 
+        // Maak verbinding met de server
         Client client = new Client( port, hostname );
 
         client.startClient();
@@ -41,6 +43,8 @@ public class Client {
             InputStream is = socket.getInputStream();
             BufferedReader bis = new BufferedReader(new InputStreamReader(is));
 
+            // Haal de welkoms meldingen op
+            // Stuur vervolgens de aanvraag en haal het antwoord op
             while((line = bis.readLine()) != null) {
                 System.out.println(line);
 
@@ -58,6 +62,7 @@ public class Client {
 
                 break;
             }
+            // Verbreek de verbinding
             socket.close();
             System.exit(0);
         }

@@ -1,8 +1,5 @@
 import java.io.*;
-import java.net.InetAddress;
-import java.net.ServerSocket;
-import java.net.Socket;
-import java.net.UnknownHostException;
+import java.net.*;
 
 /**
  * Created by Ward on 25-4-14.
@@ -21,6 +18,7 @@ public class Server {
         int port = 6052;
         Server server = new Server( port );
 
+        // Start de server
         server.startServer();
     }
     public Server(int port) {
@@ -39,34 +37,12 @@ public class Server {
         while(true) {
             try {
                 clientSocket = socket.accept();
-                PrintWriter os = new PrintWriter(clientSocket.getOutputStream(), true);
-                InputStream is = clientSocket.getInputStream();
-                BufferedReader bis = new BufferedReader(new InputStreamReader(is));
 
-                numConnections ++;
+                // Hou bij hoeveel clients we gehad hebben
+                numConnections++;
 
-                os.println("Welcome connectionNr: #" + numConnections);
-                os.println("Please enter a hostname");
-
-                while((line = bis.readLine()) != null) {
-
-                    System.out.println("Getting input...");
-                    System.out.println(line);
-                    os.print("IP: ");
-                    System.out.println("IP: ");
-
-                    try {
-                        InetAddress hostAddress = InetAddress.getByName(line);
-                        line = hostAddress.getHostAddress();
-                    } catch(UnknownHostException e) {
-                        System.err.println(e);
-                        os.println("Unknown Host");
-                    }
-
-                    os.print(line);
-                    System.out.println(line);
-                    os.println();
-                }
+                Connection connection = new Connection(clientSocket, numConnections, this);
+                new Thread(connection).start();
             }
             catch (IOException e) {
                 System.err.println(e);
