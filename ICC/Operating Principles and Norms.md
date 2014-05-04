@@ -50,12 +50,12 @@ Each project member will be available during week days from 9:00 AM until 4:00 P
 The attendance during meetings is required. In case of absence there must be a valid reason given to the group, since someone can always be ill or have private issues. The responsibility to keep up-to-date, as well in our group as in lectures, is for the individual. If a project member is repeatedly absent, the other members will vote to determine consequences.
 
 ### Presence during lectures
-Although the attendance in a lecture is not mandatory, the knowledge during a lecture is necessary for our learning task. Our group agreed on following this lectures so we can use the knowledge for our learning tasks. If someone is absence during a lecture, he should get the knowledge out of a book or from a group-member.
+Although the attendance in a lecture is not mandatory, the knowledge during a lecture is necessary for our learning task. Our group agreed on following these lectures so we can use the knowledge for our learning tasks. If someone is absence during a lecture, he should get the knowledge out of a book or from a group-member.
 
 Members may refuse to inform other members about the missed lectures or meetings. This prevents irritations among the members and attempts to motivate the less motivated.
 
 ### Presence during group meetings and deadlines
-In case of meetings, consulting or other appointments a date, time and location will be discussed and agreed upon. Attendees are expected to be on time.
+In case of meetings, consults or other appointments: a date, time and location will be discussed and agreed upon. Attendees are expected to be on time.
 
 In a case where a group member is not able to attend the meeting, the project leader (or when not available: another member) must be informed via WhatsApp, e-mail, or preferably a phone call. This must be done at least one day in advance (an exception is made for circumstances beyond one's control). The project leader will communicate the member's access to the rest of the group.
 
@@ -66,7 +66,7 @@ In case of personal reasons or work duties, absence can be arranged in consultat
 ## Conflict situations
 If a group member, disregarding the reason, fails to provide and fulfill his or her task - without alerting the group in advance - the consequences will be determined by the other group members through voting.
 
-In most cases the solution will be the member attempting to find an alternate solution. In case of no alternate solutions, the other group members should be consulted to find a collective solution which all members agree with.
+In most cases the solution will be the member attempting to find an alternative solution. In case of no alternative solutions, the other group members should be consulted to find a collective solution which all members agree with.
 
 The group member will be warned if he fails to fulfill his task. If the group member has a valid reason, he will be informed that the warning is declared invalid.
 
