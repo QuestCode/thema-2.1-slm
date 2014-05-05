@@ -1,19 +1,20 @@
 # Agenda
 
-> * group: 1
-> * date: 6 may 2014
+> * Group: 1
+> * Date: May 6th 2014
 > * Venue: TN/A221 P14
 > * Chair: Andre Nanninga
 > * Secretary: Tom Broenink
+> * Action Point Guy (APG): Ward Holthof
 
-Name                       | Signature | Absent with / without notice | Other info
----------------------------|-----------|----------------------------|-----------
-Tom Broenink               |           |                            |
-Ward Holthof               |           |                            |
-Yuri Hoogeweg              |           |                            |
-Andre Nanninga             |           |                            |
-Maurits van Mastrigt       |           |                            |
-Josephina Margaretha Wempe |           |                            |
+| Name                        | Signature   | Absent with / without notice | Other info  |
+| :-------------------------- | :---------- | :--------------------------- | :---------- |
+| Tom Broenink                |             |                              |             |
+| Ward Holthof                |             |                              |             |
+| Yuri Hoogeweg               |             |                              |             |
+| Andre Nanninga              |             |                              |             |
+| Maurits van Mastrigt        |             |                              |             |
+| Josephina M. Wempe          |             |                              |             |
 
 ## Items
 
@@ -31,9 +32,9 @@ Josephina Margaretha Wempe |           |                            |
 
 7. Learning Task 1
 
-  1. Groups / role division
-  2. Progress
-  3. Issues / obstacles
+	- Groups / role division
+	- Progress
+	- Issues / obstacles
 
 8. ICC / BSS / ITSM
 
