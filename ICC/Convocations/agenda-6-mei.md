@@ -27,11 +27,7 @@ Josephina Margaretha Wempe |           |                            |
 
 5. Confirmation minutes last meeting
 
-6. Group Process
-
-  1. Contact info
-  2. Github working directory
-  3. Feedback
+6. Operating Principles and Norms
 
 7. Learning Task 1
 
