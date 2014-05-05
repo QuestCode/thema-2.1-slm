@@ -38,25 +38,19 @@ public class Client {
             System.err.println(e);
         }
 
+        // Zet de input/output streams
         try {
             PrintWriter os = new PrintWriter(socket.getOutputStream(), true);
             InputStream is = socket.getInputStream();
             BufferedReader bis = new BufferedReader(new InputStreamReader(is));
 
-            // Haal de welkoms meldingen op
-            // Stuur vervolgens de aanvraag en haal het antwoord op
-            while((line = bis.readLine()) != null) {
-                System.out.println(line);
+            // Stuur de aanvraag en haal het antwoord op
+            while(true) {
 
-                line = bis.readLine();
-                System.out.println(line);
-
-                // We have had the welcomes message
-                // Now output our url
-                System.out.println(url);
+                // De url waarvan we het ip willen
                 os.println(url);
 
-                // Write back our response
+                // Geef het antwoord
                 line = bis.readLine();
                 System.out.println(line);
 

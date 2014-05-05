@@ -6,7 +6,7 @@ import java.util.*;
  * Created by Ward on 25-4-14.
  */
 
-public class Connection implements Runnable{
+public class Connection implements Runnable {
 
     private BufferedReader is;
     private PrintStream os;
@@ -14,53 +14,46 @@ public class Connection implements Runnable{
     private int id;
     private Server server;
     private String line;
+    private String address;
 
     public Connection(Socket clientSocket, int id, Server server) {
 
         this.clientSocket = clientSocket;
         this.id = id;
         this.server = server;
-
-        try {
-            PrintWriter os = new PrintWriter(clientSocket.getOutputStream(), true);
-            InputStream is = clientSocket.getInputStream();
-            BufferedReader bis = new BufferedReader(new InputStreamReader(is));
-        } catch (IOException line) {
-            System.out.println(line);
-            os.println(line);
-        }
     }
 
     public void run() {
 
+        // Zet de input/output streams
         try {
-            // Geef een welkoms bericht
-            os.println("Welcome connectionNr: #" + id);
-            os.println("Please enter a hostname");
+            PrintWriter os = new PrintWriter(clientSocket.getOutputStream(), true);
+            InputStream is = clientSocket.getInputStream();
+            BufferedReader bis = new BufferedReader(new InputStreamReader(is));
+
 
             // Zodra we input krijgen zet deze om naar output en geef deze terug
-            while ((line = is.readLine()) != null) {
-
-                System.out.println("Getting input...");
-                System.out.println(line);
-                os.print("IP: ");
-                System.out.println("IP: ");
+            while ((line = bis.readLine()) != null) {
 
                 try {
                     InetAddress hostAddress = InetAddress.getByName(line);
-                    line = hostAddress.getHostAddress();
+                    address = hostAddress.getHostAddress();
                 } catch (UnknownHostException e) {
                     System.err.println(e);
                     os.println("Unknown Host");
                 }
 
-                os.print(line);
-                System.out.println(line);
-                os.println();
+                System.out.println( "Resolved " + line + " to " + address );
+
+                // Geef het ip terug
+                os.print(address);
 
             }
-        } catch (IOException e) {
-            System.out.println(e);
+            clientSocket.close();
+
+        } catch (IOException line) {
+            System.out.println(line);
+            os.println(line);
         }
     }
 }
