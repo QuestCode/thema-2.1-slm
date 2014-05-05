@@ -2,38 +2,50 @@
 
 ## Differences between Dutch and Lithuanian business etiquette
 
+...
+
 ## Communication
-| Dutch | Lithuania |
-|-------|-----------|
-|		| Politeness and courtesy get in the way of discussion. |
-|		| Saying no is troublesome during the first stages of acquaintanceship. |
-|		| Do not show there enthousiasm clearly. Something like "Not Bad" might be the highest appreciation you get. |
+
+| Dutch   | Lithuania                                                                                                  |
+| ------- | -----------                                                                                                |
+|         | Politeness and courtesy get in the way of discussion.                                                      |
+|         | Saying no is troublesome during the first stages of acquaintanceship.                                      |
+|         | Do not show there enthousiasm clearly. Something like "Not Bad" might be the highest appreciation you get. |
 
 ## Punctuality
-| Dutch | Lithuania |
-|-------|-----------|
 
+| Dutch   | Lithuania   |
+| ------- | ----------- |
+| ...     |             |
 
 ## Dress code
-| Dutch | Lithuania |
-|-------|-----------|
 
+| Dutch   | Lithuania   |
+| ------- | ----------- |
+| ...     |             |
 
 ## Bribery and Corruption
-| Dutch | Lithuania |
-|-------|-----------|
+
+| Dutch   | Lithuania   |
+| ------- | ----------- |
+| ...     |             |
 
 
 
 
 
 
+## Bronnen
 
-## TODO
-Lithuanians prefer to demonstrate individuality and compete rather than collaberate
-Lithuanians like to know who is in control. Find equal partnerships more difficult to manage
-Lithuanians want a strong leader who takes responsibility when working in project groups
-Lithuanians belief in education but also belief that one can only do things for witch one had has recieved proper training
+1. [http://businessculture.org/eastern-europe/lithuania/business-etiquette/](http://businessculture.org/eastern-europe/lithuania/business-etiquette/)
+2. [http://www.ediplomat.com/np/cultural_etiquette/ce_nl.htm](http://www.ediplomat.com/np/cultural_etiquette/ce_nl.htm)
+
+## To Do
+
+- Lithuanians prefer to demonstrate individuality and compete rather than collaberate
+- Lithuanians like to know who is in control. Find equal partnerships more difficult to manage
+- Lithuanians want a strong leader who takes responsibility when working in project groups
+- Lithuanians belief in education but also belief that one can only do things for witch one had has recieved proper training
 
 
 
