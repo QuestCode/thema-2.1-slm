@@ -32,7 +32,6 @@ This document contains the following chapters:
 	- Presence during lectures
 	- Presence during group meetings and deadlines
 3. Conflict situations
-	- Warnings
 
 ## Communication
 Most communication shall be done in person and via the project its WhatsApp messenger group. When simple messaging falls short emails will be used. In the event of a high priority message or notification, direct contact must be used. This can be achieved by meeting the individual or group in person or a phone call. The project members should respond within 24 hours.
