@@ -29,20 +29,17 @@ public class Client {
             writer = new PrintWriter(socket.getOutputStream(), true);
             reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
-            debug("Client/Client", "sending message: " + message);
             writer.println(message);
 
             String line;
             while(listening) {
                 if((line = reader.readLine()) != null) {
-                    debug("Client/Client", "received message: " + line);
                     listening = false;
                 }
             }
             socket.close();
         }
         catch (IOException e) {
-            System.err.println("Critical error: " + e.getMessage());
             System.exit(0);
         }
     }
