@@ -240,11 +240,3 @@ Tested with:
 	Java HotSpot(TM) 64-Bit Server VM (build 20.65-b04-462, mixed mode)
 
 By Maurits van Mastrigt (398497), 25th of april 2014
-
-
-<!-- Marked spacing, this sucks.. -->
-.
-
-.
-
-.
