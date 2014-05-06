@@ -10,7 +10,6 @@ public class Client {
     private String hostname;
     private int port;
     private Socket socket;
-    private String line;
 
     // De url waarvan we het IP willen hebben
     private String url = "www.westminstercollege.edu";
@@ -43,6 +42,8 @@ public class Client {
             PrintWriter os = new PrintWriter(socket.getOutputStream(), true);
             InputStream is = socket.getInputStream();
             BufferedReader bis = new BufferedReader(new InputStreamReader(is));
+
+            String line;
 
             // Stuur de aanvraag en haal het antwoord op
             while(true) {
