@@ -163,3 +163,12 @@ An interval of time in which the CPU is processing a process.
 The best average is SJF with _3.6_.
 
 > _1.7 Which of the following scheduling algorithms could result in starvation? (5.9)_
+
+Non-preemptive Priority, a process with a low priority could starve when new processes with higher priority
+are inserted before the low priority process has a chance to execute.
+
+> _2.1 Consider the two general approaches to handle critical sections in operating systems. Discuss the favor for the preemptive approach and the difficulties with SMP architectures. (6.1)_
+
+> _2.2 Explain the differences between a counting semaphore and a binary semaphore. (6.2)_
+
+> _2.3 Describe how a program can overcome the need for busy waiting. (6.3)_
