@@ -46,7 +46,7 @@ public class Connection implements Runnable {
                 System.out.println( "Resolved " + line + " to " + address );
 
                 // Geef het ip terug
-                os.print(address);
+                os.println(address);
 
             }
             clientSocket.close();
