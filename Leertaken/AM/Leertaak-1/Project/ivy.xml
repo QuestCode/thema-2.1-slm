@@ -9,6 +9,7 @@
 	</configurations>
 
 	<dependencies>
+		<dependency org="mysql" name="mysql-connector-java" rev="5.1.30"/>
 	</dependencies>
 
 </ivy-module>
