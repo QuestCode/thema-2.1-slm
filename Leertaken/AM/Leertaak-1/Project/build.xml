@@ -1,6 +1,9 @@
 <?xml version="1.0"?>
 <project name="Leertaak 1" default="run" xmlns:ivy="antlib:org.apache.ivy.ant">
 
+	<property environment="env"/>
+	<property name="ivy.home" value="${env.IVY_HOME}"/>
+
 	<property name="dir.src" location="src" />
 	<property name="dir.build" location="build" />
 	<property name="dir.classes" location="${dir.build}/classes" />
@@ -8,6 +11,14 @@
 	<property name="dir.lib" location="${dir.build}/lib" />
 
 	<property name="main-class" value="am.App" />
+
+	<taskdef resource="org/apache/ivy/ant/antlib.xml" uri="antlib:org.apache.ivy.ant">
+		<classpath>
+			<fileset dir="${ivy.home}">
+				<include name="*.jar"/>
+			</fileset>
+		</classpath>
+	</taskdef>
 
 	<target name="init">
 		<ivy:resolve />
