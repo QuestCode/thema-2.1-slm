@@ -41,7 +41,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # argument is a set of non-required options.
   # config.vm.synced_folder "../data", "/vagrant_data"
 
-  db.vm.provision "docker" do |d|
+  config.vm.provision "docker" do |d|
     # Host    : 127.0.0.1:5432
     # Username: postgres
     # Password: banaan
