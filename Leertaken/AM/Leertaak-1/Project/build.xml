@@ -5,18 +5,14 @@
 	<property name="dir.build" location="build" />
 	<property name="dir.classes" location="${dir.build}/classes" />
 	<property name="dir.jar" location="${dir.build}/jar" />
-	<property name="dir.ivy.reports" location="${dir.build}/ivy-reports" />
 
 	<property name="main-class" value="am.App" />
 
 	<target name="init">
 		<ivy:resolve />
 
-		<ivy:report todir="${dir.ivy.reports}" graph="false" xml="false" />
-
 		<mkdir dir="${dir.classes}" />
 		<mkdir dir="${dir.jar}" />
-		<mkdir dir="${dir.ivy.reports}" />
 	</target>
 
 	<target name="compile" depends="init">
@@ -37,6 +33,10 @@
 				<pathelement location="${dir.classes}" />
 			</classpath>
 		</java>
+	</target>
+
+	<target name="clean">
+		<delete dir="${dir.build}" />
 	</target>
 
 </project>
