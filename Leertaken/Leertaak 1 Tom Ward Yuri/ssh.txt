@@ -1,0 +1,5 @@
+hostname: sleaveweb-04.nl
+ip: 95.85.63.58
+
+username: sw_admin
+password: Tr3ll0?
