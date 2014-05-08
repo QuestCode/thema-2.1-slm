@@ -1,0 +1,83 @@
+------- USAGE -------
+Date        : 2012/05/17 at 22:45:32
+Runtime     : 30 seconds
+Memory      : 734,88 MB
+Threads     : 1606
+Workers     : 1600
+Queries     : 469
+Records     : 46900
+In buffer   : 7
+In database : 46900
+Expected    : 48000
+Efficiency  : 97,71 %
+---------------------
+
+------- USAGE -------
+Date        : 2012/05/17 at 23:01:22
+Runtime     : 30 seconds
+Memory      : 472,44 MB
+Threads     : 806
+Workers     : 800
+Queries     : 239
+Records     : 23900
+In buffer   : 93
+In database : 23900
+Expected    : 24000
+Efficiency  : 99,58 %
+---------------------
+
+------- USAGE -------
+Date        : 2012/05/17 at 23:06:01
+Runtime     : 30 seconds
+Memory      : 504,13 MB
+Threads     : 806
+Workers     : 800
+Queries     : 238
+Records     : 23800
+In buffer   : 28
+In database : 23800
+Expected    : 24000
+Efficiency  : 99,17 %
+---------------------
+
+------- USAGE -------
+Date        : 2012/05/17 at 23:08:05
+Runtime     : 30 seconds
+Memory      : 505,56 MB
+Threads     : 806
+Workers     : 800
+Queries     : 239
+Records     : 23900
+In buffer   : 42
+In database : 23900
+Expected    : 24000
+Efficiency  : 99,58 %
+---------------------
+
+------- USAGE -------
+Date        : 2012/05/17 at 23:28:45
+Runtime     : 30 seconds
+Memory      : 730,63 MB
+Threads     : 3206
+Workers     : 1600
+Queries     : 480
+Records     : 48000
+In buffer   : 0
+In database : 48000
+Expected    : 48000
+Efficiency  : 100,00 %
+---------------------
+
+------- USAGE -------
+Date        : 2012/05/17 at 23:33:46
+Runtime     : 30 seconds
+Memory      : 734,00 MB
+Threads     : 3206
+Workers     : 1600
+Queries     : 471
+Records     : 47100
+In buffer   : 66
+In database : 47100
+Expected    : 48000
+Efficiency  : 98,13 %
+---------------------
