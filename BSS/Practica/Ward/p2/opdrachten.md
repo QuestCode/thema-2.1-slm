@@ -191,3 +191,153 @@ the favor for the preemptive approach and the difficulties with SMP architecture
 A binary semaphore heeft maar 2 staten (0,1) en kan dus niet gebruikt worden om te tellen. Deze semaforen worden vaak gebruikt als locks.
 
 **2.3 Describe how a program can overcome the need for busy waiting. (6.3)**
+
+
+#TimedClient
+
+```java
+import java.net.*;
+import java.io.*;
+
+
+public class TimedClient
+{
+    public static void main(String[] args) throws IOException {
+        InputStream in = null;
+        BufferedReader bin = null;
+        Socket sock = null;
+
+        try {
+            sock = new Socket("127.0.0.1",2500);
+            in = sock.getInputStream();
+            bin = new BufferedReader(new InputStreamReader(in));
+
+            String line;
+            while( (line = bin.readLine()) != null)
+                System.out.println(line);
+        }
+        catch (IOException ioe) {
+            System.err.println(ioe);
+        }
+        finally {
+            sock.close();
+        }
+    }
+}
+```
+
+#TimedServer
+
+```java
+import java.net.*;
+import java.io.*;
+import java.util.concurrent.*;
+
+
+class Worker implements Runnable
+{
+    private int sleepTime = 10;
+
+    private Socket connection;
+
+    // De toegevoegde semafoor
+    private Semaphore sem;
+
+    public Worker(Socket connection, Semaphore sem) {
+        this.connection = connection;
+        this.sem = sem;
+    }
+
+    public void run() {
+        try {
+
+            PrintWriter pout = new PrintWriter(connection.getOutputStream(), true);
+
+            while (sleepTime > 0) {
+                String s = (sleepTime == 1) ? " second." : " seconds.";
+                pout.println("Sleeping " + sleepTime + " more " + s);
+                Thread.sleep(1000);
+                sleepTime -= 1;
+            }
+
+            // now close the socket connection
+            connection.close();
+        }
+        catch (InterruptedException ie) { }
+        catch (IOException ioe) { }
+
+        // Geef de semafoor weer terug
+        finally {
+            sem.release();
+        }
+    }
+}
+
+
+public class TimedServer
+{
+    public static final int PORT = 2500;
+
+    public static void main(String[] args) {
+
+        Socket connection;
+        Semaphore sem = new Semaphore(2);
+
+        try {
+            ServerSocket server = new ServerSocket(PORT);
+
+            while (true) {
+
+                // Gebruik de semafoor
+                sem.acquire();
+                connection = server.accept();
+
+                Thread worker = new Thread(new Worker(connection, sem));
+                worker.start();
+            }
+        }
+        catch (java.io.IOException ioe) { }
+        catch (InterruptedException e) { }
+    }
+}
+```
+
+#Manager
+
+```java
+public class Manager {
+
+    public static final int MAX RESOURCES = 5;
+    private int availableResources = MAX RESOURCES;
+
+
+/**
+* Decrease availableResources by count resources.
+* return 0 if sufficient resources available,
+* otherwise return -1
+*/
+            // Exclusive accessing m.b.v synchronized
+    public synchronized void decreaseCount(int count) {
+
+        // Kijk of er uberhaupt nog resources beschikbaar zijn
+        // Wanneer ze niet beschikbaar zijn wacht tot ze er wel zijn
+        while(availableResources < count) { 
+            try {
+                wait();
+            }
+            catch(InterruptException e) { }
+        }
+
+            availableResources -= count;
+    }
+
+    /* Increase availableResources by count resources. */
+            // Exclusive accessing m.b.v synchronized
+    public synchronized void increaseCount(int count) {
+        availableResources += count;
+
+        // Laat de ander weten dat hij verder kan gaan
+        notify();
+    }
+}
+```
