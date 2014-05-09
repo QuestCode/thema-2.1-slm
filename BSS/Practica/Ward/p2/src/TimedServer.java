@@ -2,11 +2,14 @@ import java.net.*;
 import java.io.*;
 import java.util.concurrent.*;
 
+
 class Worker implements Runnable
 {
     private int sleepTime = 10;
 
     private Socket connection;
+
+    // De toegevoegde semafoor
     private Semaphore sem;
 
     public Worker(Socket connection, Semaphore sem) {
@@ -32,6 +35,7 @@ class Worker implements Runnable
         catch (InterruptedException ie) { }
         catch (IOException ioe) { }
 
+        // Geef de semafoor weer terug
         finally {
             sem.release();
         }
@@ -53,6 +57,7 @@ public class TimedServer
 
             while (true) {
 
+                // Gebruik de semafoor
                 sem.acquire();
                 connection = server.accept();
 

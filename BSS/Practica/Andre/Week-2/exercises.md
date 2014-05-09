@@ -7,7 +7,7 @@
 
 > _1.1 Explain why the term process scheduling is actually incorrect. (5.1)_
 
-
+The Process Scheduler is actually scheduling threads of a process. The correct term should be Thread Scheduling
 
 > _1.2 Explain the difference between a CPU scheduler and a dispatcher. (5.4)_
 
@@ -167,8 +167,148 @@ The best average is SJF with _3.6_.
 Non-preemptive Priority, a process with a low priority could starve when new processes with higher priority
 are inserted before the low priority process has a chance to execute.
 
+## Chapter 6
+
 > _2.1 Consider the two general approaches to handle critical sections in operating systems. Discuss the favor for the preemptive approach and the difficulties with SMP architectures. (6.1)_
+
+With the use of preemptive scheduling you can more easier ensure that no process is starved and that every process is given some processing time in a timely matter. For the end user having feedback on a process is very important, seeing a process slowly but steadily progressing is favored above a process that does nothing for a long time and in one burst completes it's process.
 
 > _2.2 Explain the differences between a counting semaphore and a binary semaphore. (6.2)_
 
+A binary semaphore only takes two values, one to represent that the shared resource is occupied and one to represent that the shared resource is available. A counting semaphore can hold n values. This n represents how many threads can access a shared resources simulanteously.
+
 > _2.3 Describe how a program can overcome the need for busy waiting. (6.3)_
+
+A process block itself instead of busy waiting. This would put the process in the waiting queue associated with the semaphore.
+
+## Programming excersise
+
+> _3.1 Servers can be designed to limit the number of open connections. For example, a server may wish to have only N socket connections open at any point in time. After N connections have been made, the server will not accept another incoming connection until an existing connection is released. In the source code available on Wiley PLUS, there is a program named TimedServer.java that listens to port 2500. When a connection is made (via telnet or the supplied client program TimedClient.java), the server creates a new thread that maintains the connection for 10 seconds (writing the number of seconds remaining while the connection remains open). At the end of 10 seconds, the thread closes the connection. Currently, TimedServer.java will accept an unlimited number of connections. Using semaphores, modify this program so that it limits the number of concurrent connections. (6.4)_
+
+### TimedServer.java
+```java
+import java.net.*;
+import java.io.*;
+import java.util.concurrent.*;
+
+public class TimedServer {
+
+  public static final int PORT = 2500;
+  public static final int LIMIT = 2;
+
+  public static void main(String[] args){
+    try {
+      ServerSocket server = new ServerSocket(PORT);
+      Semaphore semaphore = new Semaphore(LIMIT);
+
+      while(true) {
+        semaphore.acquire();
+
+        Socket socket = server.accept();
+
+        Thread worker = new Thread(new Worker(socket, semaphore));
+        worker.start();
+      }
+    }
+    catch(Exception e) {
+      System.err.println(e.getMessage());
+      System.exit(0);
+    }
+  }
+}
+```
+
+### Worker.java
+```java
+import java.net.*;
+import java.io.*;
+import java.util.concurrent.*;
+
+public class Worker implements Runnable {
+  private int timer = 10;
+
+  private Socket socket;
+  private Semaphore semaphore;
+
+  public Worker(Socket socket, Semaphore semaphore) {
+    this.socket = socket;
+    this.semaphore = semaphore;
+  }
+
+  public void run() {
+    try {
+      PrintWriter writer = new PrintWriter(socket.getOutputStream(), true);
+
+      while(timer > 0) {
+        writer.println("Sleeping for " + timer + " more second(s).");
+
+        Thread.sleep(1000);
+
+        timer--;
+      }
+    }
+    catch(Exception e) {
+      System.err.println(e.getMessage());
+    }
+    finally {
+      semaphore.release();
+
+      try {
+        socket.close();
+      }
+      catch(Exception e) {
+        System.err.println(e.getMessage());
+      }
+    }
+  }
+}
+```
+
+> _3.2 Assume that a finite number of resources of a single resource type must be managed. Processes may ask for a number of these resources and — once finished — will return them. As an example, many commercial software packages provide a given number of licenses , indicating the number of applications that may run concurrently. When the application is started, the license count is decremented. When the application is terminated, the license count is incremented. If all licenses are in use, requests to start the application are denied. Such requests will only be granted when an existing license holder terminates the application and a license is returned.The following Java class is used to manage a finite number of instances of an available resource. Note that when a process wishes to obtain a number of resources, it invokes the decreaseCount() method. Similarly, when a process wants to return a number of resources, it calls increaseCount()._
+
+> _a. Identify the data involved in the race condition._
+
+The integer `availableResources`. When this is data is not synchronized between threads the value may not be up to date when one thread causes this variable to be decreased.
+
+> _b. Identify the location (or locations) in the code where the race condition occurs._
+
+In both the `decreaseCount` and `increaseCount` can a race condition occur. Any modification on a shared unsynchronized variable can be the cause of a race condition. Both these methods do a modification on the variable `availableResources`.
+
+> _c. Using Java synchronization, fix the race condition. Also modify decreaseCount() so that a thread blocks if there aren’t sufficient resources available._
+
+```java
+public class Manager {
+  public static final int MAX_RESOURCES = 5;
+  private Integer availableResources = MAX_RESOURCES;
+
+  // Decrease availableResources by count resources.
+  // return 0 if sufficient resources available,
+  // otherwise return -1
+  public int decreaseCount(int count) {
+    synchronized(availableResources) {
+      try {
+        if(availableResources < count) {
+          availableResources.wait();
+        }
+
+        availableResources -= count;
+      }
+      catch(Exception e) { }
+
+      return 0;
+    }
+  }
+  
+  /* Increase availableResources by count resources. */
+  public void increaseCount(int count) {
+    synchronized(availableResources) {
+      availableResources += count;
+
+      try {
+        availableResources.notify();
+      }
+      catch(Exception e) { }
+    }
+  }
+}
+```

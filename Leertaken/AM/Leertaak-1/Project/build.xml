@@ -14,9 +14,15 @@
 
 	<property name="sql.driver" value="org.gjt.mm.mysql.Driver"/>
 	<property name="sql.classpath" value="${dir.lib}/compile/mysql-connector-java.jar"/>
-	<property name="sql.url" value="jdbc:mysql://localhost/"/>
+	<property name="sql.url" value="jdbc:mysql://localhost:3506/"/>
 	<property name="sql.user" value="root"/>
 	<property name="sql.pass" value="banaan"/>
+
+	<path id="lib-classpath">
+		<fileset dir="${dir.lib}">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
 
 	<taskdef resource="org/apache/ivy/ant/antlib.xml" uri="antlib:org.apache.ivy.ant">
 		<classpath>
@@ -35,16 +41,16 @@
 	</target>
 
 	<target name="compile" depends="init">
-		<javac srcdir="${dir.src}" destdir="${dir.classes}" includeantruntime="false" debug="true" />
+		<javac srcdir="${dir.src}" destdir="${dir.classes}" includeantruntime="false" debug="true">
+			<classpath refid="lib-classpath" />
+		</javac>
 	</target>
 
 	<target name="run" depends="compile">
 		<java classname="${main-class}">
 			<classpath>
 				<pathelement location="${dir.classes}" />
-				<fileset dir="${dir.lib}">
-					<include name="**/*.jar" />
-				</fileset>
+				<path refid="lib-classpath" />
 			</classpath>
 		</java>
 	</target>
