@@ -1,13 +1,6 @@
-/**
- * TimedClient.java
- *
- * @author Gagne, Galvin, Silberschatz
- * Operating System Concepts with Java - Eighth Edition
- * Copyright John Wiley & Sons - 2010.
- */
-
 import java.net.*;
 import java.io.*;
+
 
 public class TimedClient
 {
