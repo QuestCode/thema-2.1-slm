@@ -127,6 +127,8 @@ public class Database {
 			appendComma = true;
 		}
 
+		System.out.println( "[Database/commit] " + query);
+
 		// Execute query
 		this.execute( this.query + values );
 	}
