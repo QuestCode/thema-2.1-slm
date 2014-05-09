@@ -28,14 +28,15 @@ class Worker implements Runnable {
 				sleepTime -= 1;
 			}
 		}
-		catch( InterruptedException ie ) { }
+		catch( InterruptedException ie ) {}
 		catch( IOException ioe ) { }
 		finally {
 			try {
 				sock.close();
 			}
-			catch( IOException ioe2 ) {}
+			catch( IOException e ) {}
 
+			// Allow other worker instances by releasing own lock
 			sem.release();
 		}
 	}
@@ -52,9 +53,12 @@ public class TimedServer {
 
 		try {
 			ServerSocket server = new ServerSocket( PORT );
-			Semaphore sem       = new Semaphore( LIMIT );
+
+			// Create semaphore with worker limit
+			Semaphore sem = new Semaphore( LIMIT );
 
 			while( true ) {
+				// Reserve worker instance by acquiring a single lock
 				sem.acquire();
 
 				sock = server.accept();
@@ -63,7 +67,7 @@ public class TimedServer {
 				worker.start();
 			}
 		}
-		catch( InterruptedException ie ) { }
-		catch( java.io.IOException ioe ) { }
+		catch( InterruptedException ie ) {}
+		catch( java.io.IOException ioe ) {}
 	}
 }
