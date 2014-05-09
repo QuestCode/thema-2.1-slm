@@ -4,12 +4,15 @@ import java.util.concurrent.*;
 
 class Worker implements Runnable
 {
-	private int sleepTime = DURATION;
+	private int sleepTime = 10;
 
 	private Socket connection;
 
-	public Worker(Socket connection) {
+    private Semaphore semaphore;
+
+	public Worker(Socket connection, Semaphore semaphore) {
 		this.connection = connection;
+        this.semaphore = semaphore;
 	}
 
 	public void run() {
@@ -23,8 +26,9 @@ class Worker implements Runnable
 				sleepTime -= 1;
 			}
 
-			// now close the socket connection
+			// now close the socket connection and release a semaphore permit
 			connection.close();
+            semaphore.release();
 
 		}
 		catch (InterruptedException ie) { }
@@ -37,7 +41,7 @@ public class TimedServer
 {
 	public static final int PORT = 2500;
 
-    private final Semaphore semaphore = new Semaphore(50, true);
+    private static Semaphore semaphore = new Semaphore(3, true);
 
 	public static void main(String[] args) {
 		Socket connection;
@@ -46,13 +50,20 @@ public class TimedServer
 			ServerSocket server = new ServerSocket(PORT);
 
 			while (true) {
+
+                // Try to acquire a semaphore permit.
+                try {
+                    semaphore.acquire();
+                } catch (Exception e){
+                    System.out.println(e.getMessage());
+                }
+
 				connection = server.accept();
 
-				Thread worker = new Thread(new Worker(connection));
+				Thread worker = new Thread(new Worker(connection, semaphore));
 				worker.start();
 			}
 		}
-		catch (InterruptedException ie) { }
 		catch (java.io.IOException ioe) { }
 	}
 }
