@@ -20,7 +20,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
-  config.vm.network "forwarded_port", guest: 5432, host: 5432
+  config.vm.network "forwarded_port", guest: 3306, host: 3306
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
@@ -42,17 +42,30 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # config.vm.synced_folder "../data", "/vagrant_data"
 
   config.vm.provision "docker" do |d|
-    # d.pull_images "ubuntu"
-
-    d.pull_images "tutum-docker-postgresql"
-    d.run "postgresql",
-      image: "tutum-docker-postgresql",
+    # Host    : 127.0.0.1:3306
+    # Username: root
+    # Password: banaan
+    d.run "mysql",
+      image: "orchardup/mysql",
       daemonize: true,
-      args: "-p 5432:5432 \
-             -e POSTGRES_PASS='banaan'"
+      args: "-p 3306:3306 \
+             -e MYSQL_ROOT_PASSWORD='banaan'"
+
+    # d.run "postgresql",
+    #   image: "paintedfox/postgresql",
+    #   daemonize: true,
+    #   args: "-p 127.0.0.1:5432:5432 \
+    #         -v /tmp/postgresql:/data \
+    #         -e USER='postgres' \
+    #         -e DB='UNWDMI' \
+    #         -e PASS='banaan'"
+
+    # d.build_image "/vagrant/Resources/import",
+    #   args: "-t 'dbimport'"
+    # d.run "postgresql_import",
+    #   image: "dbimport",
+    #   args: "--link postgresql:db"
 
     # d.pull_images "dockerfile/java"
   end
-
-  # config.vm.provision "shell", path: "setup.sh"
 end

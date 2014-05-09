@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<ivy-module version="2.0">
+
+	<info organisation="com.am" module="Leertaak-1" />
+
+	<configurations defaultconfmapping="compile->default">
+		<conf name="compile" />
+		<conf name="runtime" />
+		<conf name="test" />
+	</configurations>
+
+	<dependencies>
+		<dependency org="mysql" name="mysql-connector-java" rev="5.1.30"/>
+	</dependencies>
+
+</ivy-module>
