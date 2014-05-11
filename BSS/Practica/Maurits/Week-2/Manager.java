@@ -13,7 +13,7 @@ public class Manager {
 	 */
 	public int decreaseCount( int count ) throws InterruptedException {
 		synchronized( availableResources ) {
-			if( availableResources < count ) {
+			while( availableResources < count ) {
 				availableResources.wait();
 			}
 
