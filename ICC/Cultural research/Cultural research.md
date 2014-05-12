@@ -10,6 +10,8 @@ The Netherlands, which shares it borders with Germany and Belgium, is often refe
 
 The politics of the Netherlands take place within the framework of a parliamentary representative democracy, a constitutional monarchy and a decentralised unitary state. The Netherlands is described as a consociational state.[2] Dutch politics and governance are characterised by a common striving for broad consensus on important issues, within both the political community and society as a whole.
 
+![Religion Netherlands](religion_netherlands.png "Religion Netherlands")
+
 ### Lithuania
 
 Lithuania is a relatively small country in the northern part of Europe. The largest among the three Baltic States, it neighbours Latvia and Belarus to the north and to the southeast, respectively. To the south, the country borders Poland and to the southwest the Russian exclave of the Kaliningrad Oblast. Reaching 65,300 km2, Lithuania’s land mass is larger than that of Switzerland, the Netherlands, Belgium or Denmark. Lithuania has approximately 91 km of sandy coastline; however, no more than 38 km of these face the open Baltic Sea. The remaining length of the coast is along the Curonian Spit. Lithuania has an ice-free port in Klaipëda, which is the largest and most important transport hub in the country and links routes through sea, land and railway from both East and West. The climate can be classed as between maritime and continental, with wet, moderate summers and winters. Lithuania is in the Eastern European Time Zone and adheres to CET (UTC +2) during the winter and EEST (UTC +3) during the summer.
@@ -21,6 +23,8 @@ The Lithuanian population is more than three million people, mostly comprised of
 Politics of Lithuania takes place in a framework of a parliamentary representative democratic republic, whereby the Prime Minister of Lithuania is the head of government, and of a multi-party system.
 
 Executive power is exercised by the government, which is headed by the Prime Minister. Legislative power is vested in both the government and the unicameral Seimas (Lithuanian Parliament). Judicial power is vested in judges appointed by the President of Lithuania and is independent of executive and legislature power. The judiciary consists of the Constitutional Court, the Supreme Court, and the Court of Appeal as well as the separate administrative courts. The Constitution of the Republic of Lithuania established these powers upon its approval on October 25, 1992. Being a multi-party system, the government of Lithuania is not dominated by any single political party, rather it consists of numerous parties that must work with each other to form coalition governments.
+
+![Religion Lithuania](religion_lithuania.png "Religion Lithuania")
 
 
 ## Differences between Dutch and Lithuanian business etiquette
