@@ -10,6 +10,8 @@ The Netherlands, which shares it borders with Germany and Belgium, is often refe
 
 The politics of the Netherlands take place within the framework of a parliamentary representative democracy, a constitutional monarchy and a decentralised unitary state. The Netherlands is described as a consociational state.[2] Dutch politics and governance are characterised by a common striving for broad consensus on important issues, within both the political community and society as a whole.
 
+The Netherlands has a maritime climate, with cool summers and mild winters. The average temperature is 2°C in January and 19°C in July, with an annual average of about 10°C. Clouds generally appear every day, and in the winter months fog often abounds, while rainfall occurs frequently.
+
 ### Lithuania
 
 Lithuania is a relatively small country in the northern part of Europe. The largest among the three Baltic States, it neighbours Latvia and Belarus to the north and to the southeast, respectively. To the south, the country borders Poland and to the southwest the Russian exclave of the Kaliningrad Oblast. Reaching 65,300 km2, Lithuania’s land mass is larger than that of Switzerland, the Netherlands, Belgium or Denmark. Lithuania has approximately 91 km of sandy coastline; however, no more than 38 km of these face the open Baltic Sea. The remaining length of the coast is along the Curonian Spit. Lithuania has an ice-free port in Klaipëda, which is the largest and most important transport hub in the country and links routes through sea, land and railway from both East and West. The climate can be classed as between maritime and continental, with wet, moderate summers and winters. Lithuania is in the Eastern European Time Zone and adheres to CET (UTC +2) during the winter and EEST (UTC +3) during the summer.
@@ -136,4 +138,8 @@ Executive power is exercised by the government, which is headed by the Prime Min
 2. [http://www.ediplomat.com/np/cultural_etiquette/ce_nl.htm](http://www.ediplomat.com/np/cultural_etiquette/ce_nl.htm)
 3. [http://businessculture.org/western-europe/business-culture-in-netherlands/business-etiquette-in-netherlands/](http://businessculture.org/western-europe/business-culture-in-netherlands/business-etiquette-in-netherlands/)
 4. [http://en.wikipedia.org/wiki/Dutch_customs_and_etiquette](http://en.wikipedia.org/wiki/Dutch_customs_and_etiquette)
+<<<<<<< HEAD
 5. [https://www.youtube.com/watch?v=QuKwMV8-cjE](https://www.youtube.com/watch?v=QuKwMV8-cjE)
+=======
+5. [http://www.nationsencyclopedia.com/Europe/Netherlands-CLIMATE.html](http://www.nationsencyclopedia.com/Europe/Netherlands-CLIMATE.html)
+>>>>>>> Add info about Dutch climate to Cultural Research document.
