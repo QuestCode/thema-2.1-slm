@@ -88,6 +88,16 @@ Executive power is exercised by the government, which is headed by the Prime Min
 3.	Lithuanians will not be rushed into making a deal until they believe it is in their best interest
 4.	Meetings often conclude with a summary of the discussion and a toast to future business
 
+### Business hierarchy
+77% of the Lithuanian population is roman catholic. Because of the strong hierarchy inside the roman catholic church in Lithuania and the big impact the church has on everyday life, these hierarchical trends carry on into the business aspects of the Lithuanian culture.  
+
+There is a strong sense of hierarchy within every part of the culture, this means that showing respect and deference to people of a higher authority is important. At the same time, bragging or overstating your higher authority when you are in this position is frowned upon, as most Lithuanians are very modest. It is also important to note that it is not uncommon for Lithuanian companies to have a strict hierarchy wherein senior-level businessmen only speak with people of the same rank. This could seem arrogant or even rude to some cultures.  
+
+In comparison, the Dutch usually have a significantly less strict hierarchy. Hierarchies in the Netherlands tend to have productivity as a goal, and function less as a way of respect or authority above another person.
+
+#### Tips
+1. Key tip here is to keep in mind that not all Lithuanian companies will adhere to such a strict hierarchy, but to know that IF they do. Try to figure out your place in the conversation and do not be offended if a highly-ranked person in the company speaks less often to you (or not at all).
+
 ### Dress code
 | Dutch                                                  | Lithuania                                                                          |
 | -------                                                | -----------                                                                        |
