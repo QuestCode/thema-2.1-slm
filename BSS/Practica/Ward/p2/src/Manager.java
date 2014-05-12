@@ -1,7 +1,7 @@
 public class Manager {
 
-    public static final int MAX RESOURCES = 5;
-    private int availableResources = MAX RESOURCES;
+    public static final int MAX_RESOURCES = 5;
+    private int availableResources = MAX_RESOURCES;
 
 
 /**
@@ -18,7 +18,7 @@ public class Manager {
             try {
                 wait();
             }
-            catch(InterruptException e) { }
+            catch(InterruptedException e) { }
         }
 
             availableResources -= count;
