@@ -21,7 +21,7 @@ public class Factory {
 			resources[i] = Integer.parseInt(args[i].trim());
 		}
 
-		Bank theBank     = new BankImpl(resources);
+		Bank theBank     = new BankImpl( resources );
 		int[] maxDemand  = new int[numOfResources];
 		Thread[] workers = new Thread[Customer.COUNT]; // The customers
 

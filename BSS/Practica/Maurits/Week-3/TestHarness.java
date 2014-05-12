@@ -27,7 +27,7 @@ public class TestHarness {
 		int[] resources        = new int[numOfResources]; // The resources involved in the transaction
 
 		for( int i = 0; i < numOfResources; i++ ) {
-			initialResources[i] = Integer.parseInt( args[i+1].trim() );
+			initialResources[i] = Integer.parseInt( args[i + 1].trim() );
 		}
 
 		// Create the bank
@@ -78,41 +78,42 @@ public class TestHarness {
 
 			if( requestLine.equals( "*" ) ) {
 				theBank.getState(); // Output the state
-			} else {
+			}
+			else {
 				// We know that we are reading N items on the command line
 				// [RQ || RL] <customer number> <resource #1> <#2> <#3>
 				StringTokenizer tokens = new StringTokenizer( requestLine );
-			}
 
-			// Get transaction type - request (RQ) or release (RL)
-			String trans = tokens.nextToken().trim();
+				// Get transaction type - request (RQ) or release (RL)
+				String trans = tokens.nextToken().trim();
 
-			// Get the customer number making the tranaction
-			int custNum = Integer.parseInt( tokens.nextToken().trim() );
+				// Get the customer number making the tranaction
+				int custNum = Integer.parseInt( tokens.nextToken().trim() );
 
-			// Get the resources involved in the transaction
-			for( int i = 0; i < numOfResources; i++ ) {
-				resources[i] = Integer.parseInt( tokens.nextToken().trim() );
+				// Get the resources involved in the transaction
+				for( int i = 0; i < numOfResources; i++ ) {
+					resources[i] = Integer.parseInt( tokens.nextToken().trim() );
 
-				System.out.println( "*" + resources[i] + "*" );
-			}
-
-			// Now check the transaction type
-			if( trans.equals( "RQ" ) ) {
-				// Request
-				if( theBank.requestResources( custNum, resources ) ) {
-					System.out.println( "Approved" );
-				} else {
-					System.out.println( "Denied" );
+					System.out.println( "*" + resources[i] + "*" );
 				}
-			}
-			else if( trans.equals( "RL" ) ) {
-				// Release
-				theBank.releaseResources( custNum, resources );
-			}
-			else {
-				// Illegal request
-				System.err.println( "Must be either 'RQ' or 'RL'" );
+
+				// Now check the transaction type
+				if( trans.equals( "RQ" ) ) {
+					// Request
+					if( theBank.requestResources( custNum, resources ) ) {
+						System.out.println( "Approved" );
+					} else {
+						System.out.println( "Denied" );
+					}
+				}
+				else if( trans.equals( "RL" ) ) {
+					// Release
+					theBank.releaseResources( custNum, resources );
+				}
+				else {
+					// Illegal request
+					System.err.println( "Must be either 'RQ' or 'RL'" );
+				}
 			}
 		}
 	}
