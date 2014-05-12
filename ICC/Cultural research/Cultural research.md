@@ -18,12 +18,15 @@ Lithuania has had an interesting history. At the end of the 14th century, the co
 
 The Lithuanian population is more than three million people, mostly comprised of Lithuanians, but also Poles, Russians, Belarusians and other ethnic groups. The main religions are Roman Catholicism and Russian Orthodox.
 
+<<<<<<< HEAD
 Politics of Lithuania takes place in a framework of a parliamentary representative democratic republic, whereby the Prime Minister of Lithuania is the head of government, and of a multi-party system.
 
 Executive power is exercised by the government, which is headed by the Prime Minister. Legislative power is vested in both the government and the unicameral Seimas (Lithuanian Parliament). Judicial power is vested in judges appointed by the President of Lithuania and is independent of executive and legislature power. The judiciary consists of the Constitutional Court, the Supreme Court, and the Court of Appeal as well as the separate administrative courts. The Constitution of the Republic of Lithuania established these powers upon its approval on October 25, 1992. Being a multi-party system, the government of Lithuania is not dominated by any single political party, rather it consists of numerous parties that must work with each other to form coalition governments.
 
 
 
+=======
+>>>>>>> a1e97bc5e9d2678ccfeda051b0acdec3bc93bdd5
 ## Differences between Dutch and Lithuanian business etiquette
 
 ### Communication
@@ -42,9 +45,6 @@ Executive power is exercised by the government, which is headed by the Prime Min
 2.	Ask open questions during the first (or first few) meetings.
 3.	Don't be taken aback if you don't see clear signs of appreciation. Ask for confirmation if you're unclear about their opinion.
 
-
-
-
 ### General Etiquette
 | Dutch                                                                                                  | Lithuania                                                                                               |
 | -------                                                                                                | -----------                                                                                             |
@@ -55,9 +55,6 @@ Executive power is exercised by the government, which is headed by the Prime Min
 
 ##### Tips
 1.	The Roman Catholic Church has great influence on the daily life of Lithuanians, so swearing is not done.
-
-
-
 
 ### Non-verbal Communication
 | Dutch                                                                                                                                                               | Lithuania   |
@@ -73,9 +70,6 @@ Executive power is exercised by the government, which is headed by the Prime Min
 1.	Something else?
 -->
 
-
-
-
 ### Punctuality
 | Dutch                                                                                                    | Lithuania                                                          |
 | -------                                                                                                  | -----------                                                        |
@@ -87,9 +81,6 @@ Executive power is exercised by the government, which is headed by the Prime Min
 1.	Arrive for a meeting 10 minutes beforehand to decrease the chances of arriving late.
 2.	Give the Lithuanians a call when you might arrive late.
 
-
-
-
 ### Dress code
 | Dutch                                                  | Lithuania                                                                          |
 | -------                                                | -----------                                                                        |
@@ -98,9 +89,6 @@ Executive power is exercised by the government, which is headed by the Prime Min
 
 ##### Tips
 1.	Dress well, dark suit and a tie is the safest option.
-
-
-
 
 ### Gift giving
 | Dutch                                                                  | Lithuania                                                                   |
@@ -112,9 +100,6 @@ Executive power is exercised by the government, which is headed by the Prime Min
 
 ##### Tips
 1. For a meeting **after** the first meeting, bring a souvenir from your home country.
-
-
-
 
 ### Bribery and Corruption
 | Dutch                                                                 | Lithuania                                                            |
