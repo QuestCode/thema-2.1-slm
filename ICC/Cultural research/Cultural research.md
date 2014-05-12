@@ -144,8 +144,5 @@ Executive power is exercised by the government, which is headed by the Prime Min
 2. [http://www.ediplomat.com/np/cultural_etiquette/ce_nl.htm](http://www.ediplomat.com/np/cultural_etiquette/ce_nl.htm)
 3. [http://businessculture.org/western-europe/business-culture-in-netherlands/business-etiquette-in-netherlands/](http://businessculture.org/western-europe/business-culture-in-netherlands/business-etiquette-in-netherlands/)
 4. [http://en.wikipedia.org/wiki/Dutch_customs_and_etiquette](http://en.wikipedia.org/wiki/Dutch_customs_and_etiquette)
-<<<<<<< HEAD
 5. [https://www.youtube.com/watch?v=QuKwMV8-cjE](https://www.youtube.com/watch?v=QuKwMV8-cjE)
-=======
-5. [http://www.nationsencyclopedia.com/Europe/Netherlands-CLIMATE.html](http://www.nationsencyclopedia.com/Europe/Netherlands-CLIMATE.html)
->>>>>>> Add info about Dutch climate to Cultural Research document.
+6. [http://www.nationsencyclopedia.com/Europe/Netherlands-CLIMATE.html](http://www.nationsencyclopedia.com/Europe/Netherlands-CLIMATE.html)
