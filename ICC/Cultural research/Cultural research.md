@@ -10,7 +10,11 @@ The Netherlands, which shares it borders with Germany and Belgium, is often refe
 
 The politics of the Netherlands take place within the framework of a parliamentary representative democracy, a constitutional monarchy and a decentralised unitary state. The Netherlands is described as a consociational state.[2] Dutch politics and governance are characterised by a common striving for broad consensus on important issues, within both the political community and society as a whole.
 
+<<<<<<< HEAD
 ![Religion Netherlands](religion_netherlands.png "Religion Netherlands")
+=======
+The Netherlands has a maritime climate, with cool summers and mild winters. The average temperature is 2°C in January and 19°C in July, with an annual average of about 10°C. Clouds generally appear every day, and in the winter months fog often abounds, while rainfall occurs frequently.
+>>>>>>> 7d1cdfacba03cd645b12748adfa4c9c6eeeaf042
 
 ### Lithuania
 
@@ -140,4 +144,8 @@ Executive power is exercised by the government, which is headed by the Prime Min
 2. [http://www.ediplomat.com/np/cultural_etiquette/ce_nl.htm](http://www.ediplomat.com/np/cultural_etiquette/ce_nl.htm)
 3. [http://businessculture.org/western-europe/business-culture-in-netherlands/business-etiquette-in-netherlands/](http://businessculture.org/western-europe/business-culture-in-netherlands/business-etiquette-in-netherlands/)
 4. [http://en.wikipedia.org/wiki/Dutch_customs_and_etiquette](http://en.wikipedia.org/wiki/Dutch_customs_and_etiquette)
+<<<<<<< HEAD
 5. [https://www.youtube.com/watch?v=QuKwMV8-cjE](https://www.youtube.com/watch?v=QuKwMV8-cjE)
+=======
+5. [http://www.nationsencyclopedia.com/Europe/Netherlands-CLIMATE.html](http://www.nationsencyclopedia.com/Europe/Netherlands-CLIMATE.html)
+>>>>>>> Add info about Dutch climate to Cultural Research document.
