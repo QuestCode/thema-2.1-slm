@@ -57,3 +57,204 @@ This would allow threads to easily deadlock itself by acquiring a lock on an obj
 
 ##### 2.1 Write a multithreaded program that implements the banker's algorithm discussed in Section 7.5.3.
 
+```java
+import java.lang.System;
+
+public class BankImpl implements Bank {
+
+    private int threadCount;
+    private int resourceCount;
+
+    private int[] available;
+    private int[][] allocation;
+    private int[][] max;
+
+    public BankImpl( int[] resources ) {
+        threadCount   = Customer.COUNT;
+        resourceCount = resources.length;
+        available     = (int[]) resources.clone();
+        allocation    = new int[ threadCount ][];
+        max           = new int[ threadCount ][];
+    }
+
+    /**
+     * Add a customer to the bank.
+     * @param threadNum The number of the customer being added.
+     * @param maxDemand The maximum demand for this customer.
+     */
+    public void addCustomer( int threadNum, int[] maxDemand ) {
+        allocation[ threadNum ] = new int[ resourceCount ];
+        max[ threadNum ]        = (int[]) maxDemand.clone();
+    }
+
+    /**
+     * Outputs the available, allocation, max, and need matrices.
+     */
+    public void getState() {
+        this.printMatrix( "Available" , new int[][] { available } );
+        this.printMatrix( "Allocation", allocation );
+        this.printMatrix( "Maximum"   , max );
+        this.printMatrix( "Need"      , this.getNeed() );
+    }
+
+    private void printMatrix( String name, int[][] matrix ) {
+        int last, i;
+
+        System.out.println( "-- " + name + " --" );
+
+        for( i = 0; i < matrix.length; ++i ) {
+            System.out.print( i + " = " );
+
+            this.printTuple( matrix[i] );
+        }
+
+        System.out.println( "" );
+    }
+
+    private void printTuple( int[] tuple ) {
+        int last, i;
+
+        System.out.print( "(" );
+
+        last = tuple.length - 1;
+
+        for( i = 0; i < last; ++i ) {
+            System.out.print( tuple[i] + ", " );
+        }
+
+        System.out.println( tuple[last] + ")" );
+    }
+
+    private int[][] getNeed() {
+        int threadNum, i;
+        int[][] need = new int[ threadCount ][];
+
+        for( threadNum = 0; threadNum < threadCount; ++threadNum ) {
+            need[threadNum] = new int[ resourceCount ];
+
+            for( i = 0; i < resourceCount; ++i ) {
+                need[threadNum][i] = this.getNeed( threadNum, i );
+            }
+        }
+
+        return need;
+    }
+
+    private int getNeed( int threadNum, int resource ) {
+        return max[threadNum][resource] - allocation[threadNum][resource];
+    }
+
+    private boolean isSafeState( int threadNum, int[] request ) {
+        int i, j, k;
+        int[] work;
+        boolean[] finish;
+        boolean canFinish;
+
+        // Check if enough resources available
+        for( i = 0; i < resourceCount; ++i ) {
+            if( request[i] > available[i]
+                || request[i] > this.getNeed( threadNum, i ) ) {
+                return false;
+            }
+        }
+
+        // Find thread ordering that can finish
+        finish = new boolean[ threadCount ];
+        work   = (int[]) available.clone();
+
+        // Apply temporary request
+        for( i = 0; i < resourceCount; ++i ) {
+            work[i]                  -= request[i];
+            allocation[threadNum][i] += request[i];
+        }
+
+        // Determine if all threads can finish
+        for( i = 0; i < threadCount; ++i ) {
+            for( j = 0; j < threadCount; ++j ) {
+                if( finish[j] ) {
+                    continue;
+                }
+
+                canFinish = true;
+
+                for( k = 0; k < resourceCount; ++k ) {
+                    if( this.getNeed( j, k ) > work[k] ) {
+                        canFinish = false;
+                        break;
+                    }
+                }
+
+                if( canFinish ) {
+                    finish[j] = true;
+
+                    for( k = 0; k < resourceCount; ++k ) {
+                        work[k] += allocation[j][k];
+                    }
+                }
+            }
+        }
+
+        // Revert applying temporary request
+        for( i = 0; i < resourceCount; ++i ) {
+            allocation[threadNum][i] -= request[i];
+        }
+
+        // Check if all can finish
+        for( i = 0; i < threadCount; ++i ) {
+            if( ! finish[i] ) {
+                return false;
+            }
+        }
+
+        // Request leaves bank in safe state
+        return true;
+    }
+
+    /**
+     * Make a request for resources.
+     * @param threadNum The number of the customer being added.
+     * @param request The request for this customer.
+     * @return true The request is granted.
+     * @return false The request is not granted.
+     */
+    public synchronized boolean requestResources( int threadNum,
+                                              int[] request ) {
+        int i;
+
+        // Check if safe state
+        if( ! isSafeState( threadNum, request ) ) {
+            return false;
+        }
+
+        // Process request
+        for( i = 0; i < resourceCount; ++i ) {
+            available[i]             -= request[i];
+            allocation[threadNum][i] += request[i];
+        }
+
+        return true;
+    }
+
+    /**
+     * Release resources.
+     * @param threadNum The number of the customer being added.
+     * @param release The resources to be released.
+     */
+    public synchronized void releaseResources( int threadNum, int[] release ) {
+        int i, amount;
+
+        // Process release
+        for( i = 0; i < resourceCount; ++i ) {
+            if( release[i] > allocation[threadNum][i] ) {
+                throw new RuntimeException( "Can not release " + release[i]
+                    + " resources for thread " + threadNum );
+            }
+
+            available[i]             += release[i];
+            allocation[threadNum][i] -= release[i];
+        }
+    }
+}
+```
+
+By Maurits van Mastrigt (398497), May 12th 2014
