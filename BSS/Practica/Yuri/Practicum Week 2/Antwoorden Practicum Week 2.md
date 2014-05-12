@@ -251,5 +251,50 @@ public class TimedServer
 
 ### 3.2
 #### a. Identify the data involved in the race condition.
+the private int availableResources. If two threads try to modify this variable at the same moment or too quickly after one another, the modification one of the threads might not have gone through yet. Resulting in only one of the two modifications actually being completed. (This can occur both during decreasing and increasing the count)
+
 #### b. Identify the location (or locations) in the code where the race condition occurs.
+As said above, this occurs in both the decreaseCount and increaseCount method because they both modify the data involved in the race conditioon (availableResource integer).
+
 #### c. Using Java synchronization, fix the race condition. Also modify decreaseCount() so that a thread blocks if there aren’t sufficient resources available.
+```java
+public class Manager {
+    public static final int MAX_RESOURCES = 5;
+    private Integer availableResources = MAX_RESOURCES;
+
+    /**
+     * Decrease availableResources by count resources.
+     * return 0 if sufficient resources available,
+     * otherwise return -1
+     */
+    public int decreaseCount(int count){
+        synchronized(availableResources){
+            if (availableResources < count) {
+                try {
+                    availableResources.wait();
+                } catch (Exception e){
+                    System.out.println(e.getClass().toString());
+                    return -1;
+                }
+            } else {
+                availableResources -= count;
+                return 0;
+            }
+        }
+        return 0;
+    }
+
+    /* Increase availableResources by count resources. */
+    public void increaseCount(int count){
+        synchronized(availableResources){
+            availableResources += count;
+
+            try{
+                availableResources.notify();
+            } catch (Exception e){
+               System.out.println(e.getClass().toString());
+            }
+        }
+    }
+}
+```
