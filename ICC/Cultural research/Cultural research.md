@@ -78,11 +78,14 @@ Executive power is exercised by the government, which is headed by the Prime Min
 | -------                                                                                                  | -----------                                                        |
 | Punctuality regarded as virtue                                                                           | Usually on time, expects partner to be on time                     |
 | Accept apologies for late arrival                                                                        | Expect partner to notify them when partner is unexpectedly delayed |
-| Calling half an hour or less before the start of a meeting to change the time is considered bad manners. |                                                                    |
+| Calling half an hour or less before the start of a meeting to change the time is considered bad manners. | Use time as a tactic, especially if they know you have a deadline  |
+
 
 ##### Tips
 1.	Arrive for a meeting 10 minutes beforehand to decrease the chances of arriving late.
 2.	Give the Lithuanians a call when you might arrive late.
+3.	Lithuanians will not be rushed into making a deal until they believe it is in their best interest
+4.	Meetings often conclude with a summary of the discussion and a toast to future business
 
 ### Dress code
 | Dutch                                                  | Lithuania                                                                          |
@@ -145,3 +148,4 @@ Executive power is exercised by the government, which is headed by the Prime Min
 4. [http://en.wikipedia.org/wiki/Dutch_customs_and_etiquette](http://en.wikipedia.org/wiki/Dutch_customs_and_etiquette)
 5. [https://www.youtube.com/watch?v=QuKwMV8-cjE](https://www.youtube.com/watch?v=QuKwMV8-cjE)
 6. [http://www.nationsencyclopedia.com/Europe/Netherlands-CLIMATE.html](http://www.nationsencyclopedia.com/Europe/Netherlands-CLIMATE.html)
+7. [http://www.readysetpresent.com/products/powerpointcountries/lithuania.htm](http://www.readysetpresent.com/products/powerpointcountries/lithuania.htm)
