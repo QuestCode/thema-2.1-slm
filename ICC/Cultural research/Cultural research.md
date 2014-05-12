@@ -122,7 +122,27 @@ The Lithuanian population is more than three million people, mostly comprised of
 1. Somethings?
 -->
 
-
+### Basic words and phrases
+| Dutch                     | Lithuania                |
+| -------                   | -----------              |
+| Hallo                     | Labas                    |
+| Goedemiddag               | Laba diena               |
+| Hoe gaat het?             | Kaip Sekasi              |
+| Goed                      | Puikiai                  |
+| Tot ziens                 | Viso gero                |
+| Ik spreek geen Litouws    | As nekalbu lietuviskai   |
+| Spreekt u Engels?         | Ar jus kalbate angliskai |
+| Wat is u naam?            | Koks tavo vardas         |
+| Mijn naam is ...          | Mano vardas ...          |
+| Kunt u dat herhalen       | Prasom pakartoti         |
+| Wilt u een moment wachten | Prasom palaukti          |
+| Nee                       | Ne                       |
+| Ja                        | Taip                     |
+| Litouwen                  | Lietuva                  |
+| Graag gedaan, alstublieft | Prasom                   |
+| Dank u                    | Aciu                     |
+| Pardon                    | Atsiprasau               |
+| Ik weet het niet          | Nezinau                  |
 
 ## Sources
 
@@ -130,3 +150,4 @@ The Lithuanian population is more than three million people, mostly comprised of
 2. [http://www.ediplomat.com/np/cultural_etiquette/ce_nl.htm](http://www.ediplomat.com/np/cultural_etiquette/ce_nl.htm)
 3. [http://businessculture.org/western-europe/business-culture-in-netherlands/business-etiquette-in-netherlands/](http://businessculture.org/western-europe/business-culture-in-netherlands/business-etiquette-in-netherlands/)
 4. [http://en.wikipedia.org/wiki/Dutch_customs_and_etiquette](http://en.wikipedia.org/wiki/Dutch_customs_and_etiquette)
+5. [https://www.youtube.com/watch?v=QuKwMV8-cjE](https://www.youtube.com/watch?v=QuKwMV8-cjE)
