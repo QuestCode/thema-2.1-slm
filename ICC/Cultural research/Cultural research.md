@@ -20,14 +20,14 @@ The Lithuanian population is more than three million people, mostly comprised of
 
 ### Communication
 
-| Dutch   									 | Lithuania 						                                      									  |
-| ------- 									 | -----------                                                           									  |
-| Very direct, will give their (raw) opinion | Politeness and courtesy get in the way of discussion.                  								      |
-|  											 | Saying no is troublesome during the first stages of acquaintanceship.   									  |
-|         								     | Do not show their enthusiasm clearly. Something like "Not Bad" might be the highest appreciation you get.  |
-|											 | Prefer to demonstrate individuality and compete rather than collaberate.									  |
-|											 | Like to know who is in control. Find equal partnerships more difficult to manage.						  |
-|											 | Believe in education but also believe that one can only do things for which one has had proper training    |
+| Dutch                                      | Lithuania                                                                                                 |
+| -------                                    | -----------                                                                                               |
+| Very direct, will give their (raw) opinion | Politeness and courtesy get in the way of discussion.                                                     |
+| Don't have problems saying no or giving their opinion up front  | Saying no is troublesome during the first stages of acquaintanceship.                |
+| Have a well-developed sense of humour                                           | Do not show their enthusiasm clearly. Something like "Not Bad" might be the highest appreciation you get. |
+|                                            | Prefer to demonstrate individuality and compete rather than collaberate.                                  |
+| May look to you to break the ice           | Like to know who is in control. Find equal partnerships more difficult to manage.                         |
+|                                            | Believe in education but also believe that one can only do things for which one has had proper training   |
 
 #### Tips
 1.	Try to guide the conversation in the right direction, but of course prevent coming across as rude.
