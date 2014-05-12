@@ -35,6 +35,7 @@ Executive power is exercised by the government, which is headed by the Prime Min
 ### Communication
 | Dutch                                                                                              | Lithuania                                                                                                 |
 | -------                                                                                            | -----------                                                                                               |
+| Strictly Sir/Madam.                                                                                | Titles are regularly used. In the absence use Sir or Madam.                                               |
 | Very direct, will give their (raw) opinion                                                         | Politeness and courtesy get in the way of discussion.                                                     |
 | Don't have problems saying no or giving their opinion up front                                     | Saying no is troublesome during the first stages of acquaintanceship.                                     |
 | When something is "not bad", "okay" or "nice", it should be perceived as praise for the recipient. | Do not show their enthusiasm clearly. Something like "Not Bad" might be the highest appreciation you get. |
@@ -149,3 +150,4 @@ Executive power is exercised by the government, which is headed by the Prime Min
 5. [https://www.youtube.com/watch?v=QuKwMV8-cjE](https://www.youtube.com/watch?v=QuKwMV8-cjE)
 6. [http://www.nationsencyclopedia.com/Europe/Netherlands-CLIMATE.html](http://www.nationsencyclopedia.com/Europe/Netherlands-CLIMATE.html)
 7. [http://www.readysetpresent.com/products/powerpointcountries/lithuania.htm](http://www.readysetpresent.com/products/powerpointcountries/lithuania.htm)
+8. [http://www.kwintessential.co.uk/etiquette/doing-business-lithuania.html](http://www.kwintessential.co.uk/etiquette/doing-business-lithuania.html)
