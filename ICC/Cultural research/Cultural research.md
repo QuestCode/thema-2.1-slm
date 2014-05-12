@@ -16,9 +16,6 @@ Lithuania has had an interesting history. At the end of the 14th century, the co
 
 The Lithuanian population is more than three million people, mostly comprised of Lithuanians, but also Poles, Russians, Belarusians and other ethnic groups. The main religions are Roman Catholicism and Russian Orthodox.
 
-
-
-
 ## Differences between Dutch and Lithuanian business etiquette
 
 ### Communication
@@ -37,9 +34,6 @@ The Lithuanian population is more than three million people, mostly comprised of
 2.	Ask open questions during the first (or first few) meetings.
 3.	Don't be taken aback if you don't see clear signs of appreciation. Ask for confirmation if you're unclear about their opinion.
 
-
-
-
 ### General Etiquette
 | Dutch                                                                                                  | Lithuania                                                                                               |
 | -------                                                                                                | -----------                                                                                             |
@@ -50,9 +44,6 @@ The Lithuanian population is more than three million people, mostly comprised of
 
 ##### Tips
 1.	The Roman Catholic Church has great influence on the daily life of Lithuanians, so swearing is not done.
-
-
-
 
 ### Non-verbal Communication
 | Dutch                                                                                                                                                               | Lithuania   |
@@ -68,9 +59,6 @@ The Lithuanian population is more than three million people, mostly comprised of
 1.	Something else?
 -->
 
-
-
-
 ### Punctuality
 | Dutch                                                                                                    | Lithuania                                                          |
 | -------                                                                                                  | -----------                                                        |
@@ -82,9 +70,6 @@ The Lithuanian population is more than three million people, mostly comprised of
 1.	Arrive for a meeting 10 minutes beforehand to decrease the chances of arriving late.
 2.	Give the Lithuanians a call when you might arrive late.
 
-
-
-
 ### Dress code
 | Dutch                                                  | Lithuania                                                                          |
 | -------                                                | -----------                                                                        |
@@ -93,9 +78,6 @@ The Lithuanian population is more than three million people, mostly comprised of
 
 ##### Tips
 1.	Dress well, dark suit and a tie is the safest option.
-
-
-
 
 ### Gift giving
 | Dutch                                                                  | Lithuania                                                                   |
@@ -107,9 +89,6 @@ The Lithuanian population is more than three million people, mostly comprised of
 
 ##### Tips
 1. For a meeting **after** the first meeting, bring a souvenir from your home country.
-
-
-
 
 ### Bribery and Corruption
 | Dutch                                                                 | Lithuania                                                            |
