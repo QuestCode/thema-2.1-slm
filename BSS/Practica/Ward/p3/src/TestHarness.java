@@ -27,8 +27,8 @@ public class TestHarness
 		// now get the resources
                 int numOfResources = args.length-1; 
 
-		// the initial number of resources
-		int[] initialResources= new int[numOfResources];
+        // the initial number of resources
+        int[] initialResources= new int[numOfResources];
 
 		// the resources involved in the transaction
 		int[] resources= new int[numOfResources];

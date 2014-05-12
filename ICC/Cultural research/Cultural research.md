@@ -16,61 +16,85 @@ Lithuania has had an interesting history. At the end of the 14th century, the co
 
 The Lithuanian population is more than three million people, mostly comprised of Lithuanians, but also Poles, Russians, Belarusians and other ethnic groups. The main religions are Roman Catholicism and Russian Orthodox.
 
+
+
 ## Differences between Dutch and Lithuanian business etiquette
 
 ### Communication
-
-| Dutch   									 | Lithuania 						                                      									  |
-| ------- 									 | -----------                                                           									  |
-| Very direct, will give their (raw) opinion | Politeness and courtesy get in the way of discussion.                  								      |
-|  											 | Saying no is troublesome during the first stages of acquaintanceship.   									  |
-|         								     | Do not show their enthusiasm clearly. Something like "Not Bad" might be the highest appreciation you get.  |
-|											 | Prefer to demonstrate individuality and compete rather than collaberate.									  |
-|											 | Like to know who is in control. Find equal partnerships more difficult to manage.						  |
-|											 | Believe in education but also believe that one can only do things for which one has had proper training    |
+| Dutch                                                                                              | Lithuania                                                                                                 |
+| -------                                                                                            | -----------                                                                                               |
+| Very direct, will give their (raw) opinion                                                         | Politeness and courtesy get in the way of discussion.                                                     |
+| Don't have problems saying no or giving their opinion up front                                     | Saying no is troublesome during the first stages of acquaintanceship.                                     |
+| When something is "not bad", "okay" or "nice", it should be perceived as praise for the recipient. | Do not show their enthusiasm clearly. Something like "Not Bad" might be the highest appreciation you get. |
+| Have a well-developed sense of humour                                                              | Prefer to demonstrate individuality and compete rather than collaberate.                                  |
+| May look to you to break the ice                                                                   | Like to know who is in control. Find equal partnerships more difficult to manage.                         |
+|                                                                                                    | Believe in education but also believe that one can only do things for which one has had proper training   |
 
 #### Tips
 1.	Try to guide the conversation in the right direction, but of course prevent coming across as rude.
 2.	Ask open questions during the first (or first few) meetings.
 3.	Don't be taken aback if you don't see clear signs of appreciation. Ask for confirmation if you're unclear about their opinion.
 
+
+
+### Non-verbal Communication
+| Dutch                                                                                                                                                                | Lithuania   |
+| -------                                                                                                                                                              | ----------- |
+| When entering a room it is customary to shake hands with everyone present, then to shake hands again on leaving.                                                     |             |
+| If seated, it is polite to stand up before shaking hands.                                                                                                            |             |
+| The Dutch expect eye contact while speaking with someone. Looking away or staring at the ground is considered impolite and may be perceived as disinterest or lying. |             |
+| The Dutch tend to be reserved in using hand gestures. However, having your hands in pockets or arms crossed might be interpreted as a sign of disinterest.           |             |
+| When yawning, coughing or sneezing, the mouth should be covered with a flat hand or fist.                                                                            |             |
+
+#### Tips
+1. 
+
+
 ### Punctuality
 
-| Dutch   | Lithuania   |
-| ------- | ----------- |
-| Punctuality regarded as virtue. | Usually on time, expects partner to be on time |
-| Accept apologies for late arrival | Expect partner to notify them when partner is unexpectedly delayed|
+| Dutch                             | Lithuania                                                          |
+| -------                           | -----------                                                        |
+| Punctuality regarded as virtue.   | Usually on time, expects partner to be on time                     |
+| Accept apologies for late arrival | Expect partner to notify them when partner is unexpectedly delayed |
 
 #### Tips
 1.	Arrive for a meeting 10 minutes beforehand to decrease the chances of arriving late.
 2.	Give the Lithuanians a call when you might arrive late.
 
+
+
 ### Dress code
 
-| Dutch   | Lithuania   |
-| ------- | ----------- |
+| Dutch                                                  | Lithuania                                                                          |
+| -------                                                | -----------                                                                        |
 | Conservatively though less formal in different sectors | Conservatively, dark suit and tie for men, trouser suit/jacket and skirt for women |
-| Better to be well-dressed rather than under-dressed    | Expect business associate to be well dressed |
+| Better to be well-dressed rather than under-dressed    | Expect business associate to be well dressed                                       |
 
 #### Tips
 1.	Dress well, dark suit and a tie is the safest option.
 
+
+
 ### Gift giving
-| Dutch		| Lithuania |
-| --------- | --------- |
-| Don't like to feel obligated into gift giving. | Do not expect gifts at first meeting |
+| Dutch                                                                  | Lithuania                                                                   |
+| -------                                                                | -----------                                                                 |
+| Don't like to feel obligated into gift giving.                         | Do not expect gifts at first meeting                                        |
 | Don't like receiving gifts with company logo or business card attached | Gifts are generally acceptable, especially souvenirs from your home country |
-| If invited to a Dutch home, it's accepted to bring a gift |	|
+| If invited to a Dutch home, it's accepted to bring a gift              |                                                                             |
 
 #### Tips
 1. For a meeting **after** the first meeting, bring a souvenir from your home country.
 
+
+
 ### Bribery and Corruption
 
-| Dutch   | Lithuania   |
-| ------- | ----------- |
-| Reputation for honesty												| Average corruption and bribery. Anti-corruption measures on the rise |
-| One of the highest transparency ratings in the world (9th out of 176) | Somewhat average transparency rating (48th out of 176)			   |
+| Dutch                                                                 | Lithuania                                                            |
+| -------                                                               | -----------                                                          |
+| Reputation for honesty                                                | Average corruption and bribery. Anti-corruption measures on the rise |
+| One of the highest transparency ratings in the world (9th out of 176) | Somewhat average transparency rating (48th out of 176)               |
+
+
 
 ## Sources
 
