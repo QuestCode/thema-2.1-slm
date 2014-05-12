@@ -35,12 +35,12 @@ The matrix need contains the remaining recources for each process. Need equals t
 
 
 **b. Is the system in a safe state?**  
+Yes there are still enough recources for P0 or P3 to run.
 
-
-
-**c. If a request from process Pi arrives for (0, 4, 2, 0), can the request be granted immediately?**  
-
+**c. If a request from process P1 arrives for (0, 4, 2, 0), can the request be granted immediately?**  
+Yes, now there is still 1,1,0,0 available. Which is enough for P0 to run.
 
 
 **Exercise 1.3  Java’s locking mechanism (the synchronized statement) is considered reentrant. That is, if a thread acquires the lock for an object (byinvoking a synchronized method or block), it can 
-enter other synchronized methods or blocks for the same object. Explain how deadlock would be possible i f Java’s locking mechanism were not reentrant.**
+enter other synchronized methods or blocks for the same object. Explain how deadlock would be possible if Java’s locking mechanism were not reentrant.**
+
