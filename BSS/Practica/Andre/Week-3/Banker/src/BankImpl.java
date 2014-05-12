@@ -20,7 +20,9 @@ public class BankImpl implements Bank {
     boolean allowRequest = true;
 
     for(int i = 0; i < resources.length; i++) {
-      if(request[i] > resources[i] || request[i] > customer.max[i] || request[i] > customer.max[i] - customer.allocated[i]) {
+      if(request[i] > resources[i] || 
+        request[i] > customer.max[i] || 
+        request[i] > customer.max[i] - customer.allocated[i]) {
         allowRequest = false;
       }
     }
@@ -74,8 +76,8 @@ public class BankImpl implements Bank {
     }
   }
 
-  private boolean isSafeState(int[] resources) {
-    
+  private boolean isSafeState( int[] resources ) {
+
   }
 }
 
@@ -84,10 +86,13 @@ class CustomerResources {
   public int id;
   public int[] allocated;
   public int[] max;
+  public boolean finished;
 
-  public CustomerResources(int id, int[] max) {
+  public CustomerResources( int id, int[] max ) {
     this.id = id;
     this.max = max;
     this.allocated = new int[max.length];
+    this.finished = false;
   }
+  
 }
