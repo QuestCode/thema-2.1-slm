@@ -1,4 +1,4 @@
-#	Cultural research	(DRAFT)
+#	Cultural Research
 
 ## General cultural information
 
@@ -17,7 +17,6 @@ Lithuania has had an interesting history. At the end of the 14th century, the co
 The Lithuanian population is more than three million people, mostly comprised of Lithuanians, but also Poles, Russians, Belarusians and other ethnic groups. The main religions are Roman Catholicism and Russian Orthodox.
 
 
-***
 
 
 ## Differences between Dutch and Lithuanian business etiquette
@@ -33,13 +32,12 @@ The Lithuanian population is more than three million people, mostly comprised of
 | Whispering in the presence of other people is considered impolite.                                 |                                                                                                           |
 | Relatively loud conversations in public are not uncommon. However, they may be frowned upon.       |                                                                                                           |
 
-#### Tips
+##### Tips
 1.	Try to guide the conversation in the right direction, but of course prevent coming across as rude.
 2.	Ask open questions during the first (or first few) meetings.
 3.	Don't be taken aback if you don't see clear signs of appreciation. Ask for confirmation if you're unclear about their opinion.
 
 
-***
 
 
 ### General Etiquette
@@ -50,11 +48,10 @@ The Lithuanian population is more than three million people, mostly comprised of
 | An individual's cooperation and trust are valued over performance; one-upmanship is frowned upon.      | Like to know who is in control. Find equal partnerships more difficult to manage.                       |
 | In the Netherlands, commitments are taken seriously. Do not promise anything that cannot be delivered. | Believe in education but also believe that one can only do things for which one has had proper training |
 
-#### Tips
-1.	Something?
+##### Tips
+1.	The Roman Catholic Church has great influence on the daily life of Lithuanians, so swearing is not done.
 
 
-***
 
 
 ### Non-verbal Communication
@@ -66,11 +63,12 @@ The Lithuanian population is more than three million people, mostly comprised of
 | The Dutch tend to be reserved in using hand gestures. However, having your hands in pockets or arms crossed might be interpreted as a sign of disinterest           |             |
 | When yawning, coughing or sneezing, the mouth should be covered with a flat hand or fist                                                                            |             |
 
-#### Tips
+<!--
+##### Tips
 1.	Something else?
+-->
 
 
-***
 
 
 ### Punctuality
@@ -80,12 +78,11 @@ The Lithuanian population is more than three million people, mostly comprised of
 | Accept apologies for late arrival                                                                        | Expect partner to notify them when partner is unexpectedly delayed |
 | Calling half an hour or less before the start of a meeting to change the time is considered bad manners. |                                                                    |
 
-#### Tips
+##### Tips
 1.	Arrive for a meeting 10 minutes beforehand to decrease the chances of arriving late.
 2.	Give the Lithuanians a call when you might arrive late.
 
 
-***
 
 
 ### Dress code
@@ -94,11 +91,10 @@ The Lithuanian population is more than three million people, mostly comprised of
 | Conservatively though less formal in different sectors | Conservatively, dark suit and tie for men, trouser suit/jacket and skirt for women |
 | Better to be well-dressed rather than under-dressed    | Expect business associate to be well dressed                                       |
 
-#### Tips
+##### Tips
 1.	Dress well, dark suit and a tie is the safest option.
 
 
-***
 
 
 ### Gift giving
@@ -109,11 +105,10 @@ The Lithuanian population is more than three million people, mostly comprised of
 | If invited to a Dutch home, it's accepted to bring a gift              |                                                                             |
 | Gifts are generally not given or expected at business meetings         |                                                                             |
 
-#### Tips
+##### Tips
 1. For a meeting **after** the first meeting, bring a souvenir from your home country.
 
 
-***
 
 
 ### Bribery and Corruption
@@ -122,11 +117,11 @@ The Lithuanian population is more than three million people, mostly comprised of
 | Reputation for honesty                                                | Average corruption and bribery. Anti-corruption measures on the rise |
 | One of the highest transparency ratings in the world (9th out of 176) | Somewhat average transparency rating (48th out of 176)               |
 
-#### Tips
+<!--
+##### Tips
 1. Somethings?
+-->
 
-
-***
 
 
 ## Sources
