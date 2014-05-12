@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<project name="Banker" default="run">
+
+	<property name="dir.src" location="Source" />
+	<property name="dir.build" location="Build" />
+	<property name="dir.classes" location="${dir.build}/classes" />
+	<property name="dir.jar" location="${dir.build}/jar" />
+
+	<property name="main-class" value="TestHarness" />
+
+	<target name="init">
+		<mkdir dir="${dir.classes}" />
+		<mkdir dir="${dir.jar}" />
+	</target>
+
+	<target name="compile" depends="init">
+		<javac srcdir="${dir.src}" destdir="${dir.classes}" includeantruntime="false" debug="true" />
+	</target>
+
+	<target name="testharness" depends="compile">
+		<java classname="${main-class}">
+			<arg value="infile.txt" />
+			<arg value="10" />
+			<arg value="5" />
+			<arg value="7" />
+			<classpath>
+				<pathelement location="${dir.classes}" />
+			</classpath>
+		</java>
+	</target>
+
+	<target name="factory" depends="compile">
+		<java classname="Factory">
+			<arg value="10" />
+			<arg value="5" />
+			<arg value="7" />
+			<classpath>
+				<pathelement location="${dir.classes}" />
+			</classpath>
+		</java>
+	</target>
+
+	<target name="jar" depends="compile">
+		<jar destfile="${dir.jar}/Banker.jar" basedir="${dir.classes}">
+			<manifest>
+				<attribute name="Main-Class" value="${main-class}" />
+			</manifest>
+		</jar>
+	</target>
+</project>

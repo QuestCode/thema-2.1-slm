@@ -14,10 +14,10 @@ import java.util.*;
 public class Factory
 {
 	public static void main(String[] args) {
-                int numOfResources = args.length; 
+        int numOfResources = args.length;
 		int[] resources = new int[numOfResources];
 		for (int i = 0; i < numOfResources; i++)
-			resources[i] = Integer.parseInt(args[i].trim());
+		resources[i] = Integer.parseInt(args[i].trim());
 
 		Bank theBank = new BankImpl(resources);
                 int[] maxDemand = new int[numOfResources];
