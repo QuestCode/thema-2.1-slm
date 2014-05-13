@@ -15,9 +15,11 @@ import java.util.regex.Pattern;
 public class Connection implements Runnable {
     Socket client;
     customInputStreamReader customInputStreamReader;
+    DatabaseConnection databaseConnection;
 
-    public Connection(Socket client){
+    public Connection(Socket client, DatabaseConnection databaseConnection){
         this.client = client;
+        this.databaseConnection = databaseConnection;
 
         try
         {
@@ -28,39 +30,16 @@ public class Connection implements Runnable {
     }
 
     public void run(){
-        String line;
+        Message message;
 
-        while((line = customInputStreamReader.receiveString()) != null){
-            String time = getValue("TIME", line);
-            if(time != null){
-                System.out.println(time);
-            }
+        while((message = customInputStreamReader.receiveMessage()) != null){
+            System.out.println(message.toString());
         }
-    }
-
-    private String getValue(String xmlName, String message){
-
-
-        /* REGEX APPROACH
-        Pattern regex = Pattern.compile("<" + xmlName + ">(.*?)</" + xmlName + ">", Pattern.DOTALL);
-        Matcher matcher = regex.matcher(message);
-        if (matcher.find()) {
-            if(xmlName == "TIME"){
-                Pattern regex2 = Pattern.compile("[0-9][0-9]:|[0-9][0-9]");
-                Matcher matcher2 = regex2.matcher(matcher.group());
-
-                return matcher2.group();
-            }
-
-            return matcher.group();
-        }*/
-        return null;
     }
 
 private class customInputStreamReader {
     InputStream inputStream;
     BufferedReader bufferedReader = null;
-    StringBuilder stringBuilder = new StringBuilder();
     String line;
 
         public customInputStreamReader(InputStream inputStream){
@@ -68,14 +47,20 @@ private class customInputStreamReader {
             this.bufferedReader = new BufferedReader(new InputStreamReader(this.inputStream));
         }
 
-        private String receiveString(){
+        private Message receiveMessage(){
+            Message message = new Message();
+
             try{
                 while((line = bufferedReader.readLine()) != null){
-                    return line;
+                    message.addValue(line);
+
+                    if(line.contains("</WEATHERDATA>")){
+                        return message;
+                    }
                 }
 
             } catch (Exception e){
-
+                System.out.println(e);
             }
             return null;
         }
