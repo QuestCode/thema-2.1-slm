@@ -49,6 +49,17 @@ Executive power is exercised by the government, which is headed by the Prime Min
 2.	Ask open questions during the first (or first few) meetings.
 3.	Don't be taken aback if you don't see clear signs of appreciation. Ask for confirmation if you're unclear about their opinion.
 
+### Breaking the ice
+Any topic of discussion is good to start a conversation with. You can talk about family, work, hobbies and sports. Lithuanians are fond of basketball and their national team is among the best in the world.
+
+People are referred to by their title and surname. Colleagues and supervisors are usually referred to by their first name with Ponas (Mr), Panele (Ms) or Ponia (Mrs) or by title: Doctor, Professor, Director, Principle etc. and sometimes including last names. It is important not to address someone by their first name until invited to do so.
+
+It is advisable to use the information on their business card to determine how to address an associate. So, if he or she has a title written in front of their name, then you should address the person by their title and surname
+
+During a first meeting, Lithuanians will try to be formal and polite, listening very diligently. They like to ask questions to be sure that they understand what you are saying. Usually, Lithuanians like to build a personal relationship with potential partners before moving the conversation to business. It is essential that you try to speed up this process, as it is critical to the success of the discussion and doing business in Lithuania. 
+
+
+
 ### General Etiquette
 | Dutch                                                                                                  | Lithuania                                                                                               |
 | -------                                                                                                | -----------                                                                                             |
@@ -60,6 +71,8 @@ Executive power is exercised by the government, which is headed by the Prime Min
 ##### Tips
 1.	The Roman Catholic Church has great influence on the daily life of Lithuanians, so swearing is not done.
 
+
+
 ### Non-verbal Communication
 | Dutch                                                                                                                                                               | Lithuania   |
 | -------                                                                                                                                                             | ----------- |
@@ -69,10 +82,7 @@ Executive power is exercised by the government, which is headed by the Prime Min
 | The Dutch tend to be reserved in using hand gestures. However, having your hands in pockets or arms crossed might be interpreted as a sign of disinterest           |             |
 | When yawning, coughing or sneezing, the mouth should be covered with a flat hand or fist                                                                            |             |
 
-<!--
-##### Tips
-1.	Something else?
--->
+
 
 ### Punctuality
 | Dutch                                                                                                    | Lithuania                                                          |
@@ -81,12 +91,13 @@ Executive power is exercised by the government, which is headed by the Prime Min
 | Accept apologies for late arrival                                                                        | Expect partner to notify them when partner is unexpectedly delayed |
 | Calling half an hour or less before the start of a meeting to change the time is considered bad manners. | Use time as a tactic, especially if they know you have a deadline  |
 
-
 ##### Tips
 1.	Arrive for a meeting 10 minutes beforehand to decrease the chances of arriving late.
 2.	Give the Lithuanians a call when you might arrive late.
 3.	Lithuanians will not be rushed into making a deal until they believe it is in their best interest
 4.	Meetings often conclude with a summary of the discussion and a toast to future business
+
+
 
 ### Business hierarchy
 77% of the Lithuanian population is roman catholic. Because of the strong hierarchy inside the roman catholic church in Lithuania and the big impact the church has on everyday life, these hierarchical trends carry on into the business aspects of the Lithuanian culture.  
@@ -98,6 +109,8 @@ In comparison, the Dutch usually have a significantly less strict hierarchy. Hie
 #### Tips
 1. Key tip here is to keep in mind that not all Lithuanian companies will adhere to such a strict hierarchy, but to know that IF they do. Try to figure out your place in the conversation and do not be offended if a highly-ranked person in the company speaks less often to you (or not at all).
 
+
+
 ### Dress code
 | Dutch                                                  | Lithuania                                                                          |
 | -------                                                | -----------                                                                        |
@@ -106,6 +119,8 @@ In comparison, the Dutch usually have a significantly less strict hierarchy. Hie
 
 ##### Tips
 1.	Dress well, dark suit and a tie is the safest option.
+
+
 
 ### Gift giving
 | Dutch                                                                  | Lithuania                                                                   |
@@ -118,16 +133,15 @@ In comparison, the Dutch usually have a significantly less strict hierarchy. Hie
 ##### Tips
 1. For a meeting **after** the first meeting, bring a souvenir from your home country.
 
+
+
 ### Bribery and Corruption
 | Dutch                                                                 | Lithuania                                                            |
 | -------                                                               | -----------                                                          |
 | Reputation for honesty                                                | Average corruption and bribery. Anti-corruption measures on the rise |
 | One of the highest transparency ratings in the world (9th out of 176) | Somewhat average transparency rating (48th out of 176)               |
 
-<!--
-##### Tips
-1. Somethings?
--->
+
 
 ### Basic words and phrases
 | Dutch                     | Lithuania                |
@@ -150,6 +164,7 @@ In comparison, the Dutch usually have a significantly less strict hierarchy. Hie
 | Dank u                    | Aciu                     |
 | Pardon                    | Atsiprasau               |
 | Ik weet het niet          | Nezinau                  |
+
 
 ## Sources
 
