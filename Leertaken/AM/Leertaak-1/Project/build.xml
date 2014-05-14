@@ -47,7 +47,9 @@
 	</target>
 
 	<target name="run" depends="compile">
-		<java classname="${main-class}">
+		<java classname="${main-class}" fork="true">
+			<jvmarg value="-Xms32m"/>
+			<jvmarg value="-Xmx32m"/>
 			<classpath>
 				<pathelement location="${dir.classes}" />
 				<path refid="lib-classpath" />

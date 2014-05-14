@@ -1,6 +1,7 @@
 package runner;
 
 import java.lang.management.ManagementFactory;
+import java.lang.management.ThreadMXBean;
 import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -28,8 +29,9 @@ public class UNWDMI {
 	 */
 
 	public UNWDMI() {
-		Server server       = new Server();
-		Thread serverThread = new Thread( server );
+		Server server           = new Server();
+		Thread serverThread     = new Thread( server );
+		ThreadMXBean threadBean = ManagementFactory.getThreadMXBean();
 
 		serverThread.start();
 
@@ -39,28 +41,38 @@ public class UNWDMI {
 		try {
 			while( Worker.ID == 0 ) { Thread.sleep( 10 ); }
 
+			System.out.println( "[UNWDMI] Running..");
+
 			// Run for given period of time
 			Thread.sleep( this.runtime * 1000 );
 
 			// Gather process information
 			long memory     = Runtime.getRuntime().totalMemory();
-			int threadCount = ManagementFactory.getThreadMXBean().getThreadCount();
+			int threadCount = threadBean.getThreadCount();
 
 			// Stop
 			server.interrupt();
 
+			// System.out.println( "[UNWDMI] Thread count: " + threadBean.getThreadCount() );
+			while( threadBean.getThreadCount() > 100 ) { Thread.sleep( 10 ); }
+
 			// Get total row count
 			ResultSet result = database.query( "SELECT COUNT(*) as total FROM measurement LIMIT 1" );
+			int rowCount     = -1;
 
-			if( result != null )	result.next();
-
-			int rowCount = ( result != null ? result.getInt( "total" ) : 0 );
+			if( result != null ) {
+				result.next();
+				rowCount = result.getInt( "total" );
+			}
 
 			// Output information
-			int queryCount = database.getQueryCount() - 2; // Ignore TRUNCATE and SELECT COUNT query
+			int queryCount          = database.getQueryCount();
+			int workerCount         = Worker.ID;
+			int expectedRecordCount = ( workerCount * 10 * this.runtime );
 
 			// Close database connection
-			System.out.println( "[UNWDMI] Closing database connection..");
+			System.out.println( "[UNWDMI] Closing database connection.." );
+
 			database.close();
 
 			System.out.print(
@@ -69,13 +81,13 @@ public class UNWDMI {
 				+ "Runtime     : " + this.runtime + " seconds\n"
 				+ "Memory      : " + String.format( "%.2f", (float) memory / 1024 / 1024 ) + " MB\n"
 				+ "Threads     : " + threadCount + "\n"
-				+ "Workers     : " + Worker.ID + "\n"
+				+ "Workers     : " + workerCount + "\n"
 				+ "Queries     : " + queryCount + "\n"
 				+ "Records     : " + database.getInsertedCount() + "\n"
 				+ "In buffer   : " + database.getBufferCount() + "\n"
 				+ "In database : " + rowCount + "\n"
-				+ "Expected    : " + ( Worker.ID * this.runtime ) + "\n"
-				+ "Efficiency  : " + String.format( "%.2f", ( (float) rowCount / Worker.ID / this.runtime ) * 100 ) + " %\n"
+				+ "Expected    : " + expectedRecordCount + "\n"
+				+ "Efficiency  : " + String.format( "%.2f", ( (float) rowCount / expectedRecordCount ) * 100 ) + " %\n"
 				+ "---------------------\n"
 			);
 		}

@@ -22,7 +22,7 @@ public class Server implements Runnable
 			System.out.println( "[Server] Measurements cleared." );
 		}
 		else {
-			System.err.println( "[Server] Error clearing measurements" );
+			throw new RuntimeException( "[Server] Error clearing measurements!" );
 		}
 
 		// Set buffer size
@@ -36,6 +36,9 @@ public class Server implements Runnable
 	public void interrupt() throws IOException {
 		System.out.println( "[Server] Shutting down.." );
 
+		// Close socket
+		this.socket.close();
+
 		// Shutdown workers
 		this.workerPool.shutdownNow();
 
@@ -47,9 +50,6 @@ public class Server implements Runnable
 			e.printStackTrace();
 		}
 		finally {
-			// Close socket
-			this.socket.close();
-
 			// Save database buffer
 			System.out.println("[Server] Saving database buffer..");
 			this.database.commitRecords();

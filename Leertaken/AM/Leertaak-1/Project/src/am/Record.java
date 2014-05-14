@@ -88,7 +88,7 @@ public class Record implements Runnable
 		return null;
 	}
 
-	public String getQuery() {
+	public String toString() {
 		return
 			"(" + this.STN    +  "," +
 			"'" + this.DATE   + "'," +

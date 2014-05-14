@@ -20,7 +20,7 @@ public class Database {
 		+ " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 	private PreparedStatement statement;
 
-	private int bufferSize    = 50;
+	private int bufferSize    = 10;
 	private int count         = 0;
 	private int queryCount    = 0;
 	private int insertedCount = 0;
@@ -37,7 +37,7 @@ public class Database {
 			this.connection = DriverManager.getConnection( "jdbc:mysql://" + host + ":" + port + "/" + name, username, password );
 			this.connection.setAutoCommit( false );
 
-			statement = this.connection.prepareStatement(query);
+			statement = this.connection.prepareStatement( query );
 
 			System.out.println( "[Database] Connected to " + host + ":" + port );
 		}
@@ -105,6 +105,8 @@ public class Database {
 		// Increment counter
 		++count;
 
+		// System.err.println("[Database/insert] Adding record #" + count );
+
 		// Add to prepared statement
 		// (`STN`,`DATE`,`TIME`,`TEMP`,`DEWP`,`STP`,`SLP`,`VISIB`,`WDSP`,`PRCP`,`SNDP`,`FRSHTT`,`CLDC`,`WNDDIR`)";
 		try {
@@ -138,6 +140,12 @@ public class Database {
 		try {
 			if( this.connection.isClosed() ) {
 				System.err.println( "[Database/commitRecords] Can't execute because database is closed." );
+
+				return false;
+			}
+
+			if( this.count == 0 ) {
+				System.err.println( "[Database/commitRecords] Nothing to commit." );
 
 				return false;
 			}
