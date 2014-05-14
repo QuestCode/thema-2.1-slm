@@ -12,10 +12,10 @@ public class Server implements Runnable
 
 	public Server() {
 		// Create worker pool
-		workerPool = Executors.newCachedThreadPool();
+		workerPool = Executors.newFixedThreadPool( 850 );
 
 		// Connect to database
-		this.database = new Database( "localhost", 3506, "unwdmi", "root", "banaan" );
+		this.database = new Database( "localhost", 3306, "unwdmi", "root", "banaan" );
 
 		// Clear measurements table
 		if( this.database.clearMeasurements() ) {

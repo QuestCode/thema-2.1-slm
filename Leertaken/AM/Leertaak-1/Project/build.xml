@@ -14,7 +14,7 @@
 
 	<property name="sql.driver" value="org.gjt.mm.mysql.Driver"/>
 	<property name="sql.classpath" value="${dir.lib}/compile/mysql-connector-java.jar"/>
-	<property name="sql.url" value="jdbc:mysql://localhost:3506/"/>
+	<property name="sql.url" value="jdbc:mysql://localhost:3306/"/>
 	<property name="sql.user" value="root"/>
 	<property name="sql.pass" value="banaan"/>
 

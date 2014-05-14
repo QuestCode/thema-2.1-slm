@@ -43,6 +43,9 @@ public class UNWDMI {
 
 			System.out.println( "[UNWDMI] Running..");
 
+			// Benchmark
+			long startTime = System.nanoTime();
+
 			// Run for given period of time
 			Thread.sleep( this.runtime * 1000 );
 
@@ -53,8 +56,11 @@ public class UNWDMI {
 			// Stop
 			server.interrupt();
 
+			// Block until gracefully terminated
 			// System.out.println( "[UNWDMI] Thread count: " + threadBean.getThreadCount() );
-			while( threadBean.getThreadCount() > 100 ) { Thread.sleep( 10 ); }
+			while( threadBean.getThreadCount() > 5 ) { Thread.sleep( 10 ); }
+
+			long endTime = System.nanoTime();
 
 			// Get total row count
 			ResultSet result = database.query( "SELECT COUNT(*) as total FROM measurement LIMIT 1" );
@@ -65,20 +71,22 @@ public class UNWDMI {
 				rowCount = result.getInt( "total" );
 			}
 
-			// Output information
-			int queryCount          = database.getQueryCount();
-			int workerCount         = Worker.ID;
-			int expectedRecordCount = ( workerCount * 10 * this.runtime );
-
 			// Close database connection
 			System.out.println( "[UNWDMI] Closing database connection.." );
 
 			database.close();
 
+			// Output information
+			float actualTime        = (float) ( endTime - startTime ) / 1000000000;
+			int queryCount          = database.getQueryCount();
+			int workerCount         = Worker.ID;
+			int expectedRecordCount = Math.round( workerCount * 10 * this.runtime );
+
 			System.out.print(
 				  "------- USAGE -------\n"
 				+ "Date        : " + new SimpleDateFormat( "yyyy/MM/dd 'at' HH:mm:ss" ).format( new Date() ) + "\n"
 				+ "Runtime     : " + this.runtime + " seconds\n"
+				+ "Actual time : " + actualTime + " seconds\n"
 				+ "Memory      : " + String.format( "%.2f", (float) memory / 1024 / 1024 ) + " MB\n"
 				+ "Threads     : " + threadCount + "\n"
 				+ "Workers     : " + workerCount + "\n"
