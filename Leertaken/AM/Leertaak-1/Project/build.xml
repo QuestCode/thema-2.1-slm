@@ -10,7 +10,7 @@
 	<property name="dir.jar" location="${dir.build}/jar" />
 	<property name="dir.lib" location="${dir.build}/lib" />
 
-	<property name="main-class" value="runner.UNWDMI" />
+	<property name="main-class" value="am.Runner" />
 
 	<property name="sql.driver" value="org.gjt.mm.mysql.Driver"/>
 	<property name="sql.classpath" value="${dir.lib}/compile/mysql-connector-java.jar"/>

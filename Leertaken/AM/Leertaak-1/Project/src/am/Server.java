@@ -1,4 +1,4 @@
-package lt1;
+package am;
 
 import java.io.*;
 import java.net.*;

@@ -1,4 +1,4 @@
-package lt1;
+package am;
 
 import java.lang.*;
 import java.sql.CallableStatement;
@@ -7,7 +7,6 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.SQLWarning;
-import java.sql.PreparedStatement;
 
 public class Database {
 	/**
@@ -17,13 +16,14 @@ public class Database {
 
 	private String query = "INSERT INTO `measurement` (`STN`,`DATE`,`TIME`,`TEMP`,"
 		+ "`DEWP`,`STP`,`SLP`,`VISIB`,`WDSP`,`PRCP`,`SNDP`,`FRSHTT`,`CLDC`,`WNDDIR`)"
-		+ " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-	private PreparedStatement statement;
+		+ " VALUES";
 
-	private int bufferSize    = 10;
-	private int count         = 0;
-	private int queryCount    = 0;
-	private int insertedCount = 0;
+	private StringBuilder valueBuffer;
+
+	private int bufferSize        = 10;
+	private int count             = 0;
+	private int queryCount        = 0;
+	private Integer insertedCount = 0;
 
 	/**
 	 * Constructor(s)
@@ -37,14 +37,14 @@ public class Database {
 			this.connection = DriverManager.getConnection( "jdbc:mysql://" + host + ":" + port + "/" + name, username, password );
 			this.connection.setAutoCommit( false );
 
-			statement = this.connection.prepareStatement( query );
-
 			System.out.println( "[Database] Connected to " + host + ":" + port );
 		}
 		catch( Exception e ) {
 			// Print error
 			e.printStackTrace();
 		}
+
+		this.valueBuffer = new StringBuilder();
 	}
 
 	/**
@@ -101,93 +101,59 @@ public class Database {
 		return this.execute( "TRUNCATE TABLE `measurement`" );
 	}
 
-	public synchronized void insertRecord( Record record ) {
-		// Increment counter
-		++count;
+	public synchronized void insertRecord( Object[] record ) {
+		String valueString = null;
+		int valueCount     = 0;
 
-		// System.err.println("[Database/insert] Adding record #" + count );
+		synchronized( this.valueBuffer ) {
+			// Increment counter
+			++count;
 
-		// Add to prepared statement
-		// (`STN`,`DATE`,`TIME`,`TEMP`,`DEWP`,`STP`,`SLP`,`VISIB`,`WDSP`,`PRCP`,`SNDP`,`FRSHTT`,`CLDC`,`WNDDIR`)";
-		try {
-			statement.setInt(1, record.getSTN());
-			statement.setString(2, record.getDATE());
-			statement.setString(3, record.getTIME());
-			statement.setDouble(4, record.getTEMP());
-			statement.setDouble(5, record.getDEWP());
-			statement.setDouble(6, record.getSTP());
-			statement.setDouble(7, record.getSLP());
-			statement.setDouble(8, record.getVISIB());
-			statement.setDouble(9, record.getWDSP());
-			statement.setDouble(10, record.getPRCP());
-			statement.setDouble(11, record.getSNDP());
-			statement.setInt(12, record.getFRSHTT());
-			statement.setDouble(13, record.getCLDC());
-			statement.setInt(14, record.getWNDDIR());
-			statement.addBatch();
-		}
-		catch(SQLException e) {
-			System.err.println("[Database/insert] " + e.getMessage());
+			// System.err.println("[Database/insert] Adding record #" + count );
+
+			Record.appendToStringBuilder( record, this.valueBuffer );
+
+			// If buffer is full
+			if( count >= bufferSize ) {
+				valueString = valueBuffer.deleteCharAt( valueBuffer.length() - 1 ).toString();
+				this.valueBuffer.setLength( 0 ); // Empty buffer
+
+				valueCount = count;
+				count      = 0;
+
+			}
 		}
 
 		// Commit
-		if( count >= bufferSize ) {
-			this.commitRecords();
+		if( valueString != null ) {
+			this.insertValues( valueString, valueCount );
 		}
 	}
 
-	public synchronized boolean commitRecords() {
-		try {
-			if( this.connection.isClosed() ) {
-				System.err.println( "[Database/commitRecords] Can't execute because database is closed." );
+	public void commitRecords() {
+		String valueString = null;
+		int valueCount     = 0;
 
-				return false;
-			}
+		synchronized( this.valueBuffer ) {
+			valueString = valueBuffer.deleteCharAt( valueBuffer.length() - 1 ).toString();
+			this.valueBuffer.setLength( 0 ); // Empty buffer
 
-			if( this.count == 0 ) {
-				System.err.println( "[Database/commitRecords] Nothing to commit." );
-
-				return false;
-			}
-
-			// Increment counter
-			++queryCount;
-
-			statement.executeBatch();
-			SQLWarning warning = statement.getWarnings();
-
-			if(warning != null) {
-				// Print warning(s)
-				System.err.println(warning);
-				warning.printStackTrace();
-			}
-
-			this.connection.commit();
-
-			warning = this.connection.getWarnings();
-
-			if(warning != null) {
-				// Print warning(s)
-				System.err.println(warning);
-				warning.printStackTrace();
-
-				return false;
-			}
-
-			this.insertedCount += count;
-
-			return true;
+			valueCount = count;
+			count      = 0;
 		}
-		catch( SQLException e ) {
-			// Print error
-			e.printStackTrace();
 
-			// Failure
-			return false;
+		// Commit
+		this.insertValues( valueString, valueCount );
+	}
+
+	private void insertValues( String values, int count ) {
+		if( this.execute( this.query + values ) ) {
+			synchronized( this.insertedCount ) {
+				this.insertedCount += count;
+			}
 		}
-		finally {
-			// Reset
-			count = 0;
+		else {
+			System.err.println( "[Database] Error inserting record batch." );
 		}
 	}
 
@@ -201,7 +167,7 @@ public class Database {
 			}
 
 			// Increment counter
-			++queryCount;
+			++this.queryCount;
 
 			// Execute query
 			CallableStatement statement = this.connection.prepareCall( query );
