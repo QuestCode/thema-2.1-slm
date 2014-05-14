@@ -34,7 +34,7 @@
 
 	<target name="init">
 		<ivy:resolve />
-		<ivy:retrieve pattern="${dir.lib}/[conf]/[artifact].[ext]" />
+		<ivy:retrieve pattern="${dir.lib}/[artifact].[ext]" />
 
 		<mkdir dir="${dir.classes}" />
 		<mkdir dir="${dir.jar}" />
@@ -59,10 +59,17 @@
 
 	<target name="jar" depends="compile">
 		<jar destfile="${dir.jar}/Leertaak-1.jar" basedir="${dir.classes}">
+			<zipgroupfileset dir="${dir.lib}" includes="*.jar" />
 			<manifest>
 				<attribute name="Main-Class" value="${main-class}" />
 			</manifest>
 		</jar>
+	</target>
+
+	<target name="profile" depends="jar"> 
+		<java jar="${dir.jar}/Leertaak-1.jar" fork="true">
+			<jvmarg value="-agentlib:hprof=cpu=times" />
+		</java>
 	</target>
 
 	<target name="clean">

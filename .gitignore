@@ -45,3 +45,6 @@ $RECYCLE.BIN/
 
 # Log files
 *.log
+
+# Java HPROF output
+*.hprof.txt
