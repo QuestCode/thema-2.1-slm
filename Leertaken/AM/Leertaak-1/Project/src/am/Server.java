@@ -47,7 +47,9 @@ public class Server implements Runnable
 
 		// Block until shut down
 		try { this.workerPool.awaitTermination( 4000, TimeUnit.SECONDS ); }
-		catch( InterruptedException e ) { e.printStackTrace(); }
+		catch( InterruptedException e ) {
+			// e.printStackTrace();
+		}
 	}
 
 	public void run() {

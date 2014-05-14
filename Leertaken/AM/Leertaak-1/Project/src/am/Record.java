@@ -1,6 +1,7 @@
 package lt1;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class Record implements Runnable
 {
@@ -9,21 +10,20 @@ public class Record implements Runnable
 	 *******************************************************/
 	private Corrector corrector;
 
-	private int     STN;
+	private Integer STN;
 	private String  DATE;
 	private String  TIME;
-	private double  TEMP;
-	private double  DEWP;
-	private double  STP;
-	private double  SLP;
-	private double  VISIB;
-	private double  WDSP;
-	private double  PRCP;
-	private double  SNDP;
-	private int     FRSHTT;
-	private double  CLDC;
-	private int     WNDDIR;
-	private String  missing;
+	private Double  TEMP;
+	private Double  DEWP;
+	private Double  STP;
+	private Double  SLP;
+	private Double  VISIB;
+	private Double  WDSP;
+	private Double  PRCP;
+	private Double  SNDP;
+	private Integer FRSHTT;
+	private Double  CLDC;
+	private Integer WNDDIR;
 
 	/**
 	 * Constructor(s)
@@ -36,59 +36,111 @@ public class Record implements Runnable
 	/**
 	 * Getters
 	 *******************************************************/
-	public int     getSTN()     { return this.STN;     }
-	public String  getDATE()    { return this.DATE;    }
-	public String  getTIME()    { return this.TIME;    }
-	public double  getTEMP()    { return this.TEMP;    }
-	public double  getDEWP()    { return this.DEWP;    }
-	public double  getSTP()     { return this.STP;     }
-	public double  getSLP()     { return this.SLP;     }
-	public double  getVISIB()   { return this.VISIB;   }
-	public double  getWDSP()    { return this.WDSP;    }
-	public double  getPRCP()    { return this.PRCP;    }
-	public double  getSNDP()    { return this.SNDP;    }
-	public int     getFRSHTT()  { return this.FRSHTT;  }
-	public double  getCLDC()    { return this.CLDC;    }
-	public int     getWNDDIR()  { return this.WNDDIR;  }
-	public String  getMissing() { return this.missing; }
+	public ArrayList<String> getMissing() {
+		ArrayList<String> missing = new ArrayList<String>();
 
-	public String getQuery()
-	{
+		if( this.TEMP   == null ) { missing.add( "TEMP"   ); }
+		if( this.DEWP   == null ) { missing.add( "DEWP"   ); }
+		if( this.STP    == null ) { missing.add( "STP"    ); }
+		if( this.SLP    == null ) { missing.add( "SLP"    ); }
+		if( this.VISIB  == null ) { missing.add( "VISIB"  ); }
+		if( this.WDSP   == null ) { missing.add( "WDSP"   ); }
+		if( this.PRCP   == null ) { missing.add( "PRCP"   ); }
+		if( this.SNDP   == null ) { missing.add( "SNDP"   ); }
+		if( this.FRSHTT == null ) { missing.add( "FRSHTT" ); }
+		if( this.CLDC   == null ) { missing.add( "CLDC"   ); }
+		if( this.WNDDIR == null ) { missing.add( "WNDDIR" ); }
+
+		return missing;
+	}
+
+	public Integer getSTN()    { return this.STN;    }
+	public String  getDATE()   { return this.DATE;   }
+	public String  getTIME()   { return this.TIME;   }
+	public Double  getTEMP()   { return this.TEMP;   }
+	public Double  getDEWP()   { return this.DEWP;   }
+	public Double  getSTP()    { return this.STP;    }
+	public Double  getSLP()    { return this.SLP;    }
+	public Double  getVISIB()  { return this.VISIB;  }
+	public Double  getWDSP()   { return this.WDSP;   }
+	public Double  getPRCP()   { return this.PRCP;   }
+	public Double  getSNDP()   { return this.SNDP;   }
+	public Integer getFRSHTT() { return this.FRSHTT; }
+	public Double  getCLDC()   { return this.CLDC;   }
+	public Integer getWNDDIR() { return this.WNDDIR; }
+
+	public Object getProperty( String name ) {
+		if( name.equals( "STN"    ) ) { return this.STN;    }
+		if( name.equals( "DATE"   ) ) { return this.DATE;   }
+		if( name.equals( "TIME"   ) ) { return this.TIME;   }
+		if( name.equals( "TEMP"   ) ) { return this.TEMP;   }
+		if( name.equals( "DEWP"   ) ) { return this.DEWP;   }
+		if( name.equals( "STP"    ) ) { return this.STP;    }
+		if( name.equals( "SLP"    ) ) { return this.SLP;    }
+		if( name.equals( "VISIB"  ) ) { return this.VISIB;  }
+		if( name.equals( "WDSP"   ) ) { return this.WDSP;   }
+		if( name.equals( "PRCP"   ) ) { return this.PRCP;   }
+		if( name.equals( "SNDP"   ) ) { return this.SNDP;   }
+		if( name.equals( "FRSHTT" ) ) { return this.FRSHTT; }
+		if( name.equals( "CLDC"   ) ) { return this.CLDC;   }
+		if( name.equals( "WNDDIR" ) ) { return this.WNDDIR; }
+
+		return null;
+	}
+
+	public String getQuery() {
 		return
-			"(" + STN    +  "," +
-			"'" + DATE   + "'," +
-			"'" + TIME   + "'," +
-			"'" + TEMP   + "'," +
-			"'" + DEWP   + "'," +
-			"'" + STP    + "'," +
-			"'" + SLP    + "'," +
-			"'" + VISIB  + "'," +
-			"'" + WDSP   + "'," +
-			"'" + PRCP   + "'," +
-			"'" + SNDP   + "'," +
-				+ FRSHTT +  "," +
-			"'" + CLDC   + "'," +
-				+ WNDDIR +  ")";
+			"(" + this.STN    +  "," +
+			"'" + this.DATE   + "'," +
+			"'" + this.TIME   + "'," +
+			"'" + this.TEMP   + "'," +
+			"'" + this.DEWP   + "'," +
+			"'" + this.STP    + "'," +
+			"'" + this.SLP    + "'," +
+			"'" + this.VISIB  + "'," +
+			"'" + this.WDSP   + "'," +
+			"'" + this.PRCP   + "'," +
+			"'" + this.SNDP   + "'," +
+				+ this.FRSHTT +  "," +
+			"'" + this.CLDC   + "'," +
+				+ this.WNDDIR +  ")";
 	}
 
 	/**
 	 * Setters
 	 *******************************************************/
-	public void setSTN     ( int v )    { this.STN     = v; }
-	public void setDATE    ( String v ) { this.DATE    = v; }
-	public void setTIME    ( String v ) { this.TIME    = v; }
-	public void setTEMP    ( double v ) { this.TEMP    = v; }
-	public void setDEWP    ( double v ) { this.DEWP    = v; }
-	public void setSTP     ( double v ) { this.STP     = v; }
-	public void setSLP     ( double v ) { this.SLP     = v; }
-	public void setVISIB   ( double v ) { this.VISIB   = v; }
-	public void setWDSP    ( double v ) { this.WDSP    = v; }
-	public void setPRCP    ( double v ) { this.PRCP    = v; }
-	public void setSNDP    ( double v ) { this.SNDP    = v; }
-	public void setFRSHTT  ( int v )    { this.FRSHTT  = v; }
-	public void setCLDC    ( double v ) { this.CLDC    = v; }
-	public void setWNDDIR  ( int v )    { this.WNDDIR  = v; }
-	public void setMissing ( String v ) { this.missing = v; }
+	public void setSTN    ( Integer v ) { this.STN    = v; }
+	public void setDATE   ( String  v ) { this.DATE   = v; }
+	public void setTIME   ( String  v ) { this.TIME   = v; }
+	public void setTEMP   ( Double  v ) { this.TEMP   = v; }
+	public void setDEWP   ( Double  v ) { this.DEWP   = v; }
+	public void setSTP    ( Double  v ) { this.STP    = v; }
+	public void setSLP    ( Double  v ) { this.SLP    = v; }
+	public void setVISIB  ( Double  v ) { this.VISIB  = v; }
+	public void setWDSP   ( Double  v ) { this.WDSP   = v; }
+	public void setPRCP   ( Double  v ) { this.PRCP   = v; }
+	public void setSNDP   ( Double  v ) { this.SNDP   = v; }
+	public void setFRSHTT ( Integer v ) { this.FRSHTT = v; }
+	public void setCLDC   ( Double  v ) { this.CLDC   = v; }
+	public void setWNDDIR ( Integer v ) { this.WNDDIR = v; }
+
+	public void setProperty( String name, Object v ) {
+		if     ( name.equals( "STN"    ) ) { this.STN    = (Integer) v; }
+		else if( name.equals( "DATE"   ) ) { this.DATE   = (String)  v; }
+		else if( name.equals( "TIME"   ) ) { this.TIME   = (String)  v; }
+		else if( name.equals( "TEMP"   ) ) { this.TEMP   = (Double)  v; }
+		else if( name.equals( "DEWP"   ) ) { this.DEWP   = (Double)  v; }
+		else if( name.equals( "STP"    ) ) { this.STP    = (Double)  v; }
+		else if( name.equals( "SLP"    ) ) { this.SLP    = (Double)  v; }
+		else if( name.equals( "VISIB"  ) ) { this.VISIB  = (Double)  v; }
+		else if( name.equals( "WDSP"   ) ) { this.WDSP   = (Double)  v; }
+		else if( name.equals( "PRCP"   ) ) { this.PRCP   = (Double)  v; }
+		else if( name.equals( "SNDP"   ) ) { this.SNDP   = (Double)  v; }
+		else if( name.equals( "FRSHTT" ) ) { this.FRSHTT = (Integer) v; }
+		else if( name.equals( "CLDC"   ) ) { this.CLDC   = (Double)  v; }
+		else if( name.equals( "WNDDIR" ) ) { this.WNDDIR = ( v instanceof Double ? ( (Double) v ).intValue() : (Integer) v ); }
+		else { throw new RuntimeException( "Record has no property '" + name + "'." ); }
+	}
 
 	/**
 	 * Runnable implementation
