@@ -101,7 +101,7 @@ public class Database {
 		return this.execute( "TRUNCATE TABLE `measurement`" );
 	}
 
-	public void insertRecord( Record record ) {
+	public synchronized void insertRecord( Record record ) {
 		// Increment counter
 		++count;
 
@@ -130,12 +130,7 @@ public class Database {
 
 		// Commit
 		if( count == bufferSize ) {
-			this.insertedCount += bufferSize;
-
 			this.commitRecords();
-
-			// Reset
-			count = 0;
 		}
 	}
 
@@ -171,6 +166,8 @@ public class Database {
 				return false;
 			}
 
+			this.insertedCount += count;
+
 			return true;
 		}
 		catch( SQLException e ) {
@@ -179,6 +176,10 @@ public class Database {
 
 			// Failure
 			return false;
+		}
+		finally {
+			// Reset
+			count = 0;
 		}
 	}
 

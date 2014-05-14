@@ -10,7 +10,7 @@ import lt1.Server;
 import lt1.Worker;
 
 public class UNWDMI {
-	private int runtime = 30; // seconds
+	private int runtime = 10; // seconds
 
 	/**
 	 * Bootstrap
@@ -56,11 +56,12 @@ public class UNWDMI {
 
 			int rowCount = ( result != null ? result.getInt( "total" ) : 0 );
 
-			// Close database connection
-			database.close();
-
 			// Output information
 			int queryCount = database.getQueryCount() - 2; // Ignore TRUNCATE and SELECT COUNT query
+
+			// Close database connection
+			System.out.println( "[UNWDMI] Closing database connection..");
+			database.close();
 
 			System.out.print(
 				  "------- USAGE -------\n"

@@ -39,16 +39,20 @@ public class Server implements Runnable
 		// Shutdown workers
 		this.workerPool.shutdownNow();
 
-		// Interrupt Thread
-		Thread.currentThread().interrupt();
-
-		// Close socket
-		this.socket.close();
-
 		// Block until shut down
-		try { this.workerPool.awaitTermination( 4000, TimeUnit.SECONDS ); }
+		try {
+			this.workerPool.awaitTermination( 10, TimeUnit.SECONDS );
+		}
 		catch( InterruptedException e ) {
-			// e.printStackTrace();
+			e.printStackTrace();
+		}
+		finally {
+			// Close socket
+			this.socket.close();
+
+			// Save database buffer
+			System.out.println("[Server] Saving database buffer..");
+			this.database.commitRecords();
 		}
 	}
 

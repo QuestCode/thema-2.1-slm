@@ -159,16 +159,9 @@ public class Worker implements Runnable {
 				this.recordPool.execute( record );
 			}
 
-			// Shutdown record pool
-			this.recordPool.shutdownNow();
-
-			// Block until shut down
-			try {
-				this.recordPool.awaitTermination( 2000, TimeUnit.SECONDS );
-			}
-			catch( InterruptedException e ) {
-				// e.printStackTrace();
-			}
+			// System.out.println("[Worker] shutting down..");
+			socket.close();
+			recordPool.shutdownNow();
 		}
 		catch( Exception e ) {
 			// Print error
