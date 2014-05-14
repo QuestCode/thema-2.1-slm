@@ -101,7 +101,7 @@ public class Database {
 		return this.execute( "TRUNCATE TABLE `measurement`" );
 	}
 
-	public synchronized void insertRecord( Record record ) {
+	public void insertRecord( Record record ) {
 		// Increment counter
 		++count;
 
@@ -146,7 +146,7 @@ public class Database {
 
 				return false;
 			}
-			
+
 			// Increment counter
 			++queryCount;
 
