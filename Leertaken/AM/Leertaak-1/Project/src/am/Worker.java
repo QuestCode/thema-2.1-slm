@@ -8,6 +8,8 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
+import java.util.ArrayList;
+
 public class Worker implements Runnable {
 	public static int ID = 0;
 	private int id;
@@ -25,7 +27,7 @@ public class Worker implements Runnable {
 	}
 
 	public void run() {
-		System.out.println( "[Worker #" + this.id + "] Started." );
+		// System.out.println( "[Worker #" + this.id + "] Started." );
 
 		try {
 			// Prepare
@@ -39,89 +41,134 @@ public class Worker implements Runnable {
 					while( ! in.readLine().equals( "<?xml version=\"1.0\"?>" ) ); // Reset and skip
 				}
 				catch( Exception e ) {
-					System.out.println( "[Worker #" + this.id + "] Socket closed. Shutting down." );
+					// System.out.println( "[Worker #" + this.id + "] Socket closed. Shutting down." );
 
 					break;
 				}
 
-				in.readLine();		// <WEATHERDATA>
-				in.readLine();		// <MEASUREMENT>
+				in.readLine(); // <WEATHERDATA>
+				in.readLine(); // <MEASUREMENT>
 
-				// Create new Record
+				// Prepare
 				record = new Record( this.corrector );
 
 				// Parse and set data
 				try {
-					record.setSTN	( Integer.parseInt( this.strip( in.readLine() ) ) );
+					record.setSTN( Integer.parseInt( this.strip( in.readLine() ) ) );
 				}
-				catch( NumberFormatException e ) { System.err.println( "[Worker #" + this.id + "] Invalid data for STN" ); }
+				catch( NumberFormatException e ) {
+					// System.err.println( "[Worker #" + this.id + "] Invalid data for STN" );
+				}
+
 				try {
-					record.setDATE	( this.strip( in.readLine() ) );
+					record.setDATE( this.strip( in.readLine() ) );
 				}
-				catch( NumberFormatException e ) { System.err.println( "[Worker #" + this.id + "] Invalid data for DATE" ); }
+				catch( NumberFormatException e ) {
+					// System.err.println( "[Worker #" + this.id + "] Invalid data for DATE" );
+				}
+
 				try {
-					record.setTIME	( this.strip( in.readLine() ) );
+					record.setTIME( this.strip( in.readLine() ) );
 				}
-				catch( NumberFormatException e ) { System.err.println( "[Worker #" + this.id + "] Invalid data for TIME" ); }
+				catch( NumberFormatException e ) {
+					// System.err.println( "[Worker #" + this.id + "] Invalid data for TIME" );
+				}
+
 				try {
-					record.setTEMP	( Double.parseDouble( this.strip( in.readLine() ) ) );
+					record.setTEMP( Double.parseDouble( this.strip( in.readLine() ) ) );
 				}
-				catch( NumberFormatException e ) { System.err.println( "[Worker #" + this.id + "] Invalid data for TEMP" ); record.setMissing("TEMP"); }
+				catch( NumberFormatException e ) {
+					// System.err.println( "[Worker #" + this.id + "] Invalid data for TEMP" );
+				}
+
 				try {
-					record.setDEWP	( Double.parseDouble( this.strip( in.readLine() ) ) );
+					record.setDEWP( Double.parseDouble( this.strip( in.readLine() ) ) );
 				}
-				catch( NumberFormatException e ) { System.err.println( "[Worker #" + this.id + "] Invalid data for DEWP" ); record.setMissing("DEWP"); }
+				catch( NumberFormatException e ) {
+					// System.err.println( "[Worker #" + this.id + "] Invalid data for DEWP" );
+				}
+
 				try {
-					record.setSTP	( Double.parseDouble( this.strip( in.readLine() ) ) );
+					record.setSTP( Double.parseDouble( this.strip( in.readLine() ) ) );
 				}
-				catch( NumberFormatException e ) { System.err.println( "[Worker #" + this.id + "] Invalid data for STP" ); record.setMissing("STP"); }
+				catch( NumberFormatException e ) {
+					// System.err.println( "[Worker #" + this.id + "] Invalid data for STP" );
+				}
+
 				try {
-					record.setSLP	( Double.parseDouble( this.strip( in.readLine() ) ) );
+					record.setSLP( Double.parseDouble( this.strip( in.readLine() ) ) );
 				}
-				catch( NumberFormatException e ) { System.err.println( "[Worker #" + this.id + "] Invalid data for SLP" ); record.setMissing("SLP"); }
+				catch( NumberFormatException e ) {
+					// System.err.println( "[Worker #" + this.id + "] Invalid data for SLP" );
+				}
+
 				try {
 					record.setVISIB( Double.parseDouble( this.strip( in.readLine() ) ) );
 				}
-				catch( NumberFormatException e ) { System.err.println( "[Worker #" + this.id + "] Invalid data for VISIB" ); record.setMissing("VISIB"); }
-				try {
-					record.setWDSP	( Double.parseDouble( this.strip( in.readLine() ) ) );
+				catch( NumberFormatException e ) {
+					// System.err.println( "[Worker #" + this.id + "] Invalid data for VISIB" );
 				}
-				catch( NumberFormatException e ) { System.err.println( "[Worker #" + this.id + "] Invalid data for WDSP" ); record.setMissing("WDSP"); }
+
 				try {
-					record.setPRCP	( Double.parseDouble( this.strip( in.readLine() ) ) );
+					record.setWDSP( Double.parseDouble( this.strip( in.readLine() ) ) );
 				}
-				catch( NumberFormatException e ) { System.err.println( "[Worker #" + this.id + "] Invalid data for PRCP" ); record.setMissing("PRCP"); }
+				catch( NumberFormatException e ) {
+					// System.err.println( "[Worker #" + this.id + "] Invalid data for WDSP" );
+				}
+
 				try {
-					record.setSNDP	( Double.parseDouble( this.strip( in.readLine() ) ) );
+					record.setPRCP( Double.parseDouble( this.strip( in.readLine() ) ) );
 				}
-				catch( NumberFormatException e ) { System.err.println( "[Worker #" + this.id + "] Invalid data for SNDP" ); record.setMissing("SNDP"); }
+				catch( NumberFormatException e ) {
+					// System.err.println( "[Worker #" + this.id + "] Invalid data for PRCP" );
+				}
+
+				try {
+					record.setSNDP( Double.parseDouble( this.strip( in.readLine() ) ) );
+				}
+				catch( NumberFormatException e ) {
+					// System.err.println( "[Worker #" + this.id + "] Invalid data for SNDP" );
+				}
+
 				try {
 					record.setFRSHTT( Integer.parseInt( this.strip( in.readLine() ), 2 ) ); // Binary to integer
 				}
-				catch( NumberFormatException e ) { System.err.println( "[Worker #" + this.id + "] Invalid data for FRSHTT" ); record.setMissing("FRSHTT"); }
-				try {
-					record.setCLDC	( Double.parseDouble( this.strip( in.readLine() ) ) );
+				catch( NumberFormatException e ) {
+					// System.err.println( "[Worker #" + this.id + "] Invalid data for FRSHTT" );
 				}
-				catch( NumberFormatException e ) { System.err.println( "[Worker #" + this.id + "] Invalid data for CLDC" ); record.setMissing("CLDC"); }
+
+				try {
+					record.setCLDC( Double.parseDouble( this.strip( in.readLine() ) ) );
+				}
+				catch( NumberFormatException e ) {
+					// System.err.println( "[Worker #" + this.id + "] Invalid data for CLDC" );
+				}
+
 				try {
 					record.setWNDDIR( Integer.parseInt( this.strip( in.readLine() ) ) );
 				}
-				catch( NumberFormatException e ) { System.err.println( "[Worker #" + this.id + "] Invalid data for WNDDIR" ); record.setMissing("WNDDIR"); }
-
-				// Execute Record
-				this.recordPool.execute( record );
+				catch( NumberFormatException e ) {
+					// System.err.println( "[Worker #" + this.id + "] Invalid data for WNDDIR" );
+				}
 
 				// Skip surface
 				in.readLine(); // </MEASUREMENT>
 				in.readLine(); // </WEATHERDATA>
+
+				// Execute Record
+				this.recordPool.execute( record );
 			}
 
 			// Shutdown record pool
 			this.recordPool.shutdownNow();
 
 			// Block until shut down
-			try { this.recordPool.awaitTermination( 2000, TimeUnit.SECONDS ); }
-			catch( InterruptedException e ) {} //e.printStackTrace(); }
+			try {
+				this.recordPool.awaitTermination( 2000, TimeUnit.SECONDS );
+			}
+			catch( InterruptedException e ) {
+				// e.printStackTrace();
+			}
 		}
 		catch( Exception e ) {
 			// Print error

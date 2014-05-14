@@ -95,4 +95,11 @@
 		</sql>
 	</target>
 
+	<target name="generate">
+		<exec executable="java" newenvironment="true" dir="../Resources">
+			<arg value="-jar"/>
+			<arg value="UnwdmiGenerator-2.1.jar"/>
+		</exec>
+	</target>
+
 </project>

@@ -39,7 +39,7 @@ public class UNWDMI {
 		try {
 			while( Worker.ID == 0 ) { Thread.sleep( 10 ); }
 
-			// Run for half a minute
+			// Run for given period of time
 			Thread.sleep( this.runtime * 1000 );
 
 			// Gather process information
