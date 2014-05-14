@@ -5,7 +5,7 @@
 > * Venue: TN/A221 P14
 > * Chair: Ward Holthof
 > * Secretary: Yuri Hoogeweg
-> * Action Point Dude (APD: Maurits van Mastrigt
+> * Action Point Dude (APD): Maurits van Mastrigt
 
 | Name                        | Signature   | Absent with / without notice | Other info  |
 | :-------------------------- | :---------- | :--------------------------- | :---------- |
@@ -14,6 +14,7 @@
 | Yuri Hoogeweg               |             |                              |             |
 | Andre Nanninga              |             |                              |             |
 | Maurits van Mastrigt        |             |                              |             |
+| Markus Wind                 |             |                              |             |
 | Josephina M. Wempe          |             |                              |             |
 
 ## Items
