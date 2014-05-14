@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by Yuri on 13/5/2014.
@@ -51,5 +53,52 @@ public class Message {
                 "\nCLDC:  " + this.getValue("CLDC") +
                 "\nWNDDIR:" + this.getValue("WNDDIR");
 
+    }
+
+    public String getInsertQuery(){
+        return "INSERT INTO measurements VALUES(" +
+                this.getValue("STN") + ", '" +
+                this.getValue("DATE") + "', '" +
+                this.getValue("TIME") + "', " +
+                this.getValue("TEMP") + ", " +
+                this.getValue("DEWP") + ", " +
+                this.getValue("STP") + ", " +
+                this.getValue("SLP") + ", " +
+                this.getValue("VISIB") + ", " +
+                this.getValue("WDSP") + ", " +
+                this.getValue("PRCP") + ", " +
+                this.getValue("SNDP") + ", " +
+                this.getValue("FRSHTT") + ", " +
+                this.getValue("CLDC") + ", " +
+                this.getValue("WNDDIR") +
+                ")";
+    }
+
+    public Boolean isComplete(){
+        for(Map.Entry<String, String> entry : this.valuesMap.entrySet()){
+            if(entry.getValue() == "" || entry.getValue() == null || entry.getValue().isEmpty()){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public String[] getEmptyFieldNames(){
+        ArrayList<String> emptyFields = new ArrayList<String>();
+
+        for(Map.Entry<String, String> entry: this.valuesMap.entrySet()){
+            if(entry.getValue() == "" || entry.getValue() == null || entry.getValue().isEmpty()){
+                emptyFields.add(entry.getKey());
+            }
+        }
+
+        return emptyFields.toArray(new String[emptyFields.size()]);
+    }
+
+    public void updateValue(String fieldName, String value){
+        if(this.valuesMap.containsKey(fieldName)){
+            this.valuesMap.remove(fieldName);
+        }
+        this.valuesMap.put(fieldName, value);
     }
 }

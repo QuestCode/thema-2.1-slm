@@ -34,6 +34,7 @@ public class Connection implements Runnable {
 
         while((message = customInputStreamReader.receiveMessage()) != null){
             System.out.println(message.toString());
+            databaseConnection.sendToServer(message);
         }
     }
 
