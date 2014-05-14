@@ -1,11 +1,13 @@
 package lt1;
 
+import java.lang.*;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.SQLWarning;
+import java.sql.PreparedStatement;
 
 public class Database {
 	/**
@@ -13,8 +15,10 @@ public class Database {
 	 *******************************************************/
 	private Connection connection;
 
-	private final String query = "INSERT INTO `measurement` (`STN`,`DATE`,`TIME`,`TEMP`,`DEWP`,`STP`,`SLP`,`VISIB`,`WDSP`,`PRCP`,`SNDP`,`FRSHTT`,`CLDC`,`WNDDIR`)VALUES";
-	private String[] buffer;
+	private String query = "INSERT INTO `measurement` (`STN`,`DATE`,`TIME`,`TEMP`,"
+		+ "`DEWP`,`STP`,`SLP`,`VISIB`,`WDSP`,`PRCP`,`SNDP`,`FRSHTT`,`CLDC`,`WNDDIR`)"
+		+ " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+	private PreparedStatement statement;
 
 	private int bufferSize    = 50;
 	private int count         = 0;
@@ -25,9 +29,6 @@ public class Database {
 	 * Constructor(s)
 	 *******************************************************/
 	public Database( String host, int port, String name, String username, String password ) {
-		// Set up buffer
-		this.buffer = new String[bufferSize];
-
 		try {
 			// Register driver
 			DriverManager.registerDriver( new com.mysql.jdbc.Driver() );
@@ -35,6 +36,8 @@ public class Database {
 			// Connect to database
 			this.connection = DriverManager.getConnection( "jdbc:mysql://" + host + ":" + port + "/" + name, username, password );
 			this.connection.setAutoCommit( false );
+
+			statement = this.connection.prepareStatement(query);
 
 			System.out.println( "[Database] Connected to " + host + ":" + port );
 		}
@@ -68,7 +71,6 @@ public class Database {
 	 *******************************************************/
 	public void setBufferSize( int size ) {
 		this.bufferSize = size;
-		this.buffer     = new String[this.bufferSize];
 	}
 
 	/**
@@ -99,38 +101,85 @@ public class Database {
 		return this.execute( "TRUNCATE TABLE `measurement`" );
 	}
 
-	public synchronized void insert( Record record ) {
-		// Add to buffer
-		this.buffer[count] = record.getQuery();
-
+	public synchronized void insertRecord( Record record ) {
 		// Increment counter
 		++count;
+
+		// Add to prepared statement
+		// (`STN`,`DATE`,`TIME`,`TEMP`,`DEWP`,`STP`,`SLP`,`VISIB`,`WDSP`,`PRCP`,`SNDP`,`FRSHTT`,`CLDC`,`WNDDIR`)";
+		try {
+			statement.setInt(1, record.getSTN());
+			statement.setString(2, record.getDATE());
+			statement.setString(3, record.getTIME());
+			statement.setDouble(4, record.getTEMP());
+			statement.setDouble(5, record.getDEWP());
+			statement.setDouble(6, record.getSTP());
+			statement.setDouble(7, record.getSLP());
+			statement.setDouble(8, record.getVISIB());
+			statement.setDouble(9, record.getWDSP());
+			statement.setDouble(10, record.getPRCP());
+			statement.setDouble(11, record.getSNDP());
+			statement.setInt(12, record.getFRSHTT());
+			statement.setDouble(13, record.getCLDC());
+			statement.setInt(14, record.getWNDDIR());
+			statement.addBatch();
+		}
+		catch(SQLException e) {
+			System.err.println("[Database/insert] " + e.getMessage());
+		}
 
 		// Commit
 		if( count == bufferSize ) {
 			this.insertedCount += bufferSize;
 
-			this.commit();
+			this.commitRecords();
 
 			// Reset
 			count = 0;
 		}
 	}
 
-	public void commit() {
-		// Build query
-		String values       = "";
-		boolean appendComma = false;
+	public synchronized boolean commitRecords() {
+		try {
+			if( this.connection.isClosed() ) {
+				System.err.println( "[Database/commitRecords] Can't execute because database is closed." );
 
-		for( String q : this.buffer ) {
-			values     += ( appendComma ? "," : "" ) + q;
-			appendComma = true;
+				return false;
+			}
+			
+			// Increment counter
+			++queryCount;
+
+			statement.executeBatch();
+			SQLWarning warning = statement.getWarnings();
+
+			if(warning != null) {
+				// Print warning(s)
+				System.err.println(warning);
+				warning.printStackTrace();
+			}
+
+			this.connection.commit();
+
+			warning = this.connection.getWarnings();
+
+			if(warning != null) {
+				// Print warning(s)
+				System.err.println(warning);
+				warning.printStackTrace();
+
+				return false;
+			}
+
+			return true;
 		}
+		catch( SQLException e ) {
+			// Print error
+			e.printStackTrace();
 
-		System.out.println( "[Database/commit] " + query);
-
-		// Execute query
-		this.execute( this.query + values );
+			// Failure
+			return false;
+		}
 	}
 
 	public synchronized boolean execute( String query ) {
