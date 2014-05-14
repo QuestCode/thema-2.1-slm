@@ -101,7 +101,7 @@ public class Database {
 		return this.execute( "TRUNCATE TABLE `measurement`" );
 	}
 
-	public synchronized void insertRecord( Object[] record ) {
+	public void insertRecord( Object[] record ) {
 		String valueString = null;
 		int valueCount     = 0;
 

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class Corrector {
 
-	private final static int CACHE_SIZE = 30;
+	private final static int CACHE_SIZE = 5;
 
 	private Database database;
 	private ArrayList<Object[]> cache;
@@ -18,7 +18,7 @@ public class Corrector {
 	/**
 	 * Extrapolation of records
 	 */
-	public synchronized void validateAndInsert( Object[] record ) throws SQLException {
+	public void validateAndInsert( Object[] record ) {
 		checkCacheSize();
 		correctTemperature( record );
 		correctMissing( record );

@@ -26,7 +26,7 @@ public class Server implements Runnable
 		}
 
 		// Set buffer size
-		this.database.setBufferSize( 100 );
+		this.database.setBufferSize( 200 );
 	}
 
 	public Database getDatabase() {
