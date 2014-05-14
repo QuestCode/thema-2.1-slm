@@ -159,7 +159,7 @@ public class Worker implements Runnable {
 				}
 			}
 
-			// System.out.println("[Worker] shutting down..");
+			// System.out.println("[Worker] Shutting down worker #" + this.id + "..");
 			// recordPool.shutdownNow();
 			socket.close();
 		}

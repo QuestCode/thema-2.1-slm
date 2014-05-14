@@ -80,7 +80,7 @@ public class UNWDMI {
 			float actualTime        = (float) ( endTime - startTime ) / 1000000000;
 			int queryCount          = database.getQueryCount();
 			int workerCount         = Worker.ID;
-			int expectedRecordCount = Math.round( workerCount * 10 * actualTime );
+			int expectedRecordCount = Math.round( workerCount * 10 * this.runtime );
 
 			System.out.print(
 				  "------- USAGE -------\n"

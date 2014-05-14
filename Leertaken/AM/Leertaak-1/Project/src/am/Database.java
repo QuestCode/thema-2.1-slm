@@ -131,7 +131,7 @@ public class Database {
 		}
 
 		// Commit
-		if( count == bufferSize ) {
+		if( count >= bufferSize ) {
 			this.commitRecords();
 		}
 	}
