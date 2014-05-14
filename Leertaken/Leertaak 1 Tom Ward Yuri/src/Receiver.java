@@ -11,6 +11,8 @@ public class Receiver {
             int threadsInCurrentPool = 0;
             int currentPool = 0;
 
+            DatabaseConnection databaseConnection = new DatabaseConnection();
+
             ServerSocket socket = new ServerSocket(port);
             Socket client = null;
 
@@ -30,7 +32,7 @@ public class Receiver {
                         threadPools[currentPool] = Executors.newFixedThreadPool(threadsPerPool);
                     }
 
-                    threadPools[currentPool].submit(new Connection(client));
+                    threadPools[currentPool].submit(new Connection(client, databaseConnection));
                     threadsInCurrentPool++;
                 } else {
                     threadsInCurrentPool = 0;

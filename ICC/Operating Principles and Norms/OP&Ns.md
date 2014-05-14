@@ -6,14 +6,15 @@ This document contains the operating principles and norms regarding course 2.1 g
 
 ### Contact information
 
-| Name                                  | Phone number        | Email address            | Hanze Email address        | Skype username         |
-| :------------------------------------ | :------------------ | :----------------------- | :-----------------------   | :--------------------- |
-| Ward Holthof                          | +(31)6 12 79 77 17  | wa.holthof@gmail.com     | w.a.holthof@st.hanze.nl    | wa.holthof@outlook.com |
-| André Nanninga                        | +(31)6 41 83 74 77  | ag.nanninga@gmail.com    | a.g.nanninga@st.hanze.nl   | fakeyou-skype          |
-| Yuri Hoogeweg                         | +(31)6 29 04 99 21  | yurihoogeweg@gmail.com   | y.hoogeweg@st.hanze.nl     | yurihoogeweg           |
-| Tom Broenink                          | +(31)6 29 277 096   | tom_broenink@hotmail.com | t.broenink@st.hanze.nl     | spirit3775             |
-| Maurits van Mastrigt (project leader) | +(31)6 105 73 692   | maurits@vanmastrigt.nl   | m.van.mastrigt@st.hanze.nl | maurits_van_mastrigt   |
-| Josepina Wempe                        | +(31)6 46 18 98 30  | -                        | j.m.wempe@pl.hanze.nl      | josmarwe               |
+| Name                                  | Phone number        | Email address            | Hanze email address        |
+| :------------------------------------ | :------------------ | :----------------------- | :-----------------------   |
+| Ward Holthof                          | +(31)6 12 79 77 17  | wa.holthof@gmail.com     | w.a.holthof@st.hanze.nl    |
+| André Nanninga                        | +(31)6 41 83 74 77  | ag.nanninga@gmail.com    | a.g.nanninga@st.hanze.nl   |
+| Yuri Hoogeweg                         | +(31)6 29 04 99 21  | yurihoogeweg@gmail.com   | y.hoogeweg@st.hanze.nl     |
+| Tom Broenink                          | +(31)6 29 277 096   | tom_broenink@hotmail.com | t.broenink@st.hanze.nl     |
+| Maurits van Mastrigt (project leader) | +(31)6 105 73 692   | maurits@vanmastrigt.nl   | m.van.mastrigt@st.hanze.nl |
+| Markus Wind                           | +(31)6 302 597 61   | markuswind@gmail.com     | mk.wind@st.hanze.nl        |
+| Josepina Wempe                        | +(31)6 46 18 98 30  | -                        | j.m.wempe@pl.hanze.nl      |
 
 ### Versioning
 
@@ -21,6 +22,9 @@ This document contains the operating principles and norms regarding course 2.1 g
 | :------- | :------- | :--------------------------------------- |
 | 1.0.0    | 01/05/14 | Initial release.                         |
 | 1.1.0    | 12/05/14 | Apply changes discussed in first meeting |
+| 1.2.0    | 14/05/14 | Add Markus Wind to contact information   |
+
+---
 
 ### Index
 
@@ -55,6 +59,8 @@ Each project member will be available during week days from 9:00 AM until 4:00 P
 
 ## Agreements regarding presence
 The attendance during meetings is required. In case of absence there must be a valid reason given to the group, since someone can always be ill or have private issues. The responsibility to keep up-to-date, as well in our group as in lectures, is for the individual. If a project member is repeatedly absent, the other members will vote to determine consequences.
+
+---
 
 ### Presence during lectures
 Although the attendance in a lecture is not mandatory, the knowledge during a lecture is necessary for our learning task. Our group agreed on following these lectures so we can use the knowledge for our learning tasks. If someone is absence during a lecture, he should get the knowledge out of a book or from a group-member. He should also notify the lecturer about his absence.
