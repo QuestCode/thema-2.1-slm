@@ -23,7 +23,7 @@ public class Corrector {
 		correctTemperature( record );
 		correctMissing( record );
 		cache.add( record );
-		database.insert( record );
+		database.insertRecord( record );
 	}
 
 	private void checkCacheSize() {
@@ -33,6 +33,10 @@ public class Corrector {
 	}
 
 	private Object predictPropertyValue( Record record, String property ) {
+		if( cache.size() < 2 ) {
+			return 0.0;
+		}
+
 		Object value;
 		Double lastValue = 0.0;
 		Double prevValue = null;
@@ -80,14 +84,14 @@ public class Corrector {
 	private void correctMissing( Record record ) {
 		ArrayList<String> missing = record.getMissing();
 
-		if( cache.size() < 2 || missing.size() == 0 ) {
+		if( missing.size() == 0 ) {
 			return;
 		}
 
 		for( String property : missing ) {
 			if( property.equals( "FRSHTT" ) ) {
-				// Use previous if binary flags
-				record.setFRSHTT( cache.get( cache.size() - 1 ).getFRSHTT() );
+				// Use previous for binary flags (or 0 if cache is empty)
+				record.setFRSHTT( cache.size() > 0 ? cache.get( cache.size() - 1 ).getFRSHTT() : 0 );
 				continue;
 			}
 
