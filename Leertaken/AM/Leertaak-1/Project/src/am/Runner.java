@@ -32,10 +32,15 @@ public class Runner {
 		Server server           = new Server();
 		Thread serverThread     = new Thread( server );
 		ThreadMXBean threadBean = ManagementFactory.getThreadMXBean();
+		Database database       = server.getDatabase();
 
 		serverThread.start();
 
-		Database database = server.getDatabase();
+		// Set database buffer size
+		database.setBufferSize( 200 );
+
+		// Set corrector cache size
+		Corrector.CACHE_SIZE = 8;
 
 		// Wait until notified
 		try {

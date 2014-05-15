@@ -24,9 +24,6 @@ public class Server implements Runnable
 		else {
 			throw new RuntimeException( "[Server] Error clearing measurements!" );
 		}
-
-		// Set buffer size
-		this.database.setBufferSize( 200 );
 	}
 
 	public Database getDatabase() {
