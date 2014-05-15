@@ -1,4 +1,5 @@
-import java.net.*;
+import java.net.ServerSocket;
+import java.net.Socket;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -35,7 +36,7 @@ public class Receiver {
                         threadPools[currentPool] = Executors.newFixedThreadPool(threadsPerPool);
                     }
 
-                    threadPools[currentPool].submit(new Connection(client, databaseConnection));
+                    threadPools[currentPool].submit(new ClusterConnection(client, databaseConnection));
                     threadsInCurrentPool++;
                 } else {
                     threadsInCurrentPool = 0;

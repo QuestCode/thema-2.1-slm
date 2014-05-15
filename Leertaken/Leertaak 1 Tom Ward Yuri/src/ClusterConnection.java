@@ -2,18 +2,16 @@ import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.Socket;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by Yuri on 8/5/2014.
  */
-public class Connection implements Runnable {
+public class ClusterConnection implements Runnable {
     Socket client;
     customInputStreamReader customInputStreamReader;
     public DatabaseConnection databaseConnection;
 
-    public Connection(Socket client, DatabaseConnection databaseConnection){
+    public ClusterConnection(Socket client, DatabaseConnection databaseConnection){
         this.client = client;
         this.databaseConnection = databaseConnection;
 
