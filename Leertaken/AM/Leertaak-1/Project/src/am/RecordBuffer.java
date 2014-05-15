@@ -4,7 +4,8 @@ import java.lang.StringBuilder;
 
 public class RecordBuffer {
 
-	public static int BUFFER_SIZE = 100;
+	public static int MIN_BUFFER_SIZE = 100;
+	public static int MAX_BUFFER_SIZE = 200;
 
 	private Database database;
 	private StringBuilder buffer;
@@ -21,7 +22,10 @@ public class RecordBuffer {
 
 		this.count += 1;
 
-		if( this.count >= RecordBuffer.BUFFER_SIZE ) {
+		// System.out.println( "[RecordBuffer] adding record: " + this.count );
+
+		// Apply a 0.1% chance to write when the min buffer size is exceeded
+		if( (this.count >= RecordBuffer.MIN_BUFFER_SIZE && Math.random() < 0.001) || (this.count >= RecordBuffer.MAX_BUFFER_SIZE) ) {
 			this.write();
 		}
 	}
@@ -30,6 +34,8 @@ public class RecordBuffer {
 		if( this.count == 0 ) {
 			return;
 		}
+
+		System.out.println( "[RecordBuffer] writing " + this.count + " records to database" );
 
 		// Write buffer
 		this.database.insertValues( this.buffer.deleteCharAt( buffer.length() - 1 ).toString(), this.count );

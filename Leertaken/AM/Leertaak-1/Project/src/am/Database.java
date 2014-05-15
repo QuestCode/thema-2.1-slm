@@ -109,6 +109,7 @@ public class Database {
 			// Execute query
 			Thread t = new Thread( new Database.Executor( this.connection, query ) );
 			t.start();
+			System.gc();
 
 			return true;
 		}

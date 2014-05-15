@@ -33,7 +33,7 @@
 	</taskdef>
 
 	<target name="init">
-		<delete dir="${dir.build}"/>
+		<delete dir="${dir.build}" failonerror="false" />
 		<mkdir dir="${dir.classes}" />
 		<mkdir dir="${dir.jar}" />
 		<mkdir dir="${dir.lib}" />

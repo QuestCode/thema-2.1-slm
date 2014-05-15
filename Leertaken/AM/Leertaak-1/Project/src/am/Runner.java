@@ -11,7 +11,7 @@ import am.Server;
 import am.Worker;
 
 public class Runner {
-	private int runtime = 10; // seconds
+	private int runtime = 600; // seconds
 
 	/**
 	 * Bootstrap
@@ -37,10 +37,11 @@ public class Runner {
 		serverThread.start();
 
 		// Set query buffer size
-		RecordBuffer.BUFFER_SIZE = 200;
+		RecordBuffer.MIN_BUFFER_SIZE = 300;
+		RecordBuffer.MAX_BUFFER_SIZE = 1500;
 
 		// Set corrector cache size
-		Corrector.CACHE_SIZE = 8;
+		Corrector.CACHE_SIZE = 4;
 
 		// Wait until notified
 		try {
@@ -62,8 +63,10 @@ public class Runner {
 			server.interrupt();
 
 			// Block until gracefully terminated
-			// System.out.println( "[Runner] Thread count: " + threadBean.getThreadCount() );
-			while( threadBean.getThreadCount() > 10 ) { Thread.sleep( 10 ); }
+			while( threadBean.getThreadCount() > 10 ) {
+				System.out.println( "[Runner] Thread count: " + threadBean.getThreadCount() );
+				Thread.sleep( 500 ); 
+			}
 
 			long endTime = System.nanoTime();
 
@@ -90,7 +93,8 @@ public class Runner {
 			System.out.print(
 				  "--- CONFIGURATION ---\n"
 				+ "Runtime           : " + this.runtime + " seconds\n"
-				+ "Record buffer     : " + RecordBuffer.BUFFER_SIZE + "\n"
+				+ "Min record buffer : " + RecordBuffer.MIN_BUFFER_SIZE + "\n"
+				+ "Max record buffer : " + RecordBuffer.MAX_BUFFER_SIZE + "\n"
 				+ "Cache size        : " + Corrector.CACHE_SIZE + "\n"
 				+ "------- USAGE -------\n"
 				+ "Date              : " + new SimpleDateFormat( "yyyy/MM/dd 'at' HH:mm:ss" ).format( new Date() ) + "\n"
@@ -103,7 +107,7 @@ public class Runner {
 				+ "In database       : " + rowCount + "\n"
 				+ "Expected (1)      : " + Math.round( workerCount * 10 * this.runtime ) + "\n"
 				+ "Expected (2)      : " + expectedRecordCount + "\n"
-				+ "Efficiency        : " + String.format( "%.2f", ( (float) rowCount / expectedRecordCount ) * 100 ) + " %\n"
+				+ "Efficiency        : " + String.format( "%.2f", ( (float) rowCount / Math.round( workerCount * 10 * this.runtime ) ) * 100 ) + " %\n"
 				+ "---------------------\n"
 			);
 		}
