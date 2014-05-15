@@ -31,7 +31,6 @@ public class DatabaseConnection {
         try {
             databaseConnection = DriverManager.getConnection(hostname, username, password);
             System.out.println("Database connection established");
-            sendToServer(new Message());
 
         } catch (Exception e){
             System.out.println("Database connection failed: " + e.getMessage());
@@ -65,7 +64,7 @@ public class DatabaseConnection {
             statement.executeQuery(query);
         } catch (Exception e){
             //System.out.println(e.getMessage() + " " + e.getStackTrace());
-            //counter.increment();
+            counter.increment();
         }
     }
 }
