@@ -5,9 +5,7 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.*;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 public class DatabaseConnection {
     private static final String hostname = "jdbc:postgresql://95.85.63.58:5432/one";
@@ -28,16 +26,17 @@ public class DatabaseConnection {
         try {
             databaseConnection = DriverManager.getConnection(hostname, username, password);
             System.out.println("Database connection established");
-            sendToServer(new Message());
+            sendMeasurementToServer(new Message());
 
         } catch (Exception e){
             System.out.println("Database connection failed: " + e.getMessage());
         }
     }
 
-    public void sendToServer(Message message){
+    public void sendMeasurementToServer(Message message){
         String query = "";
         MessageCorrector messageCorrector;
+        Message message1 = message;
 
         try {
             Statement statement = databaseConnection.createStatement();
@@ -61,7 +60,13 @@ public class DatabaseConnection {
             messageCorrector.addMessage(message);
             statement.executeQuery(query);
         } catch (Exception e){
-            System.out.println(e.getMessage() + " " + e.getStackTrace());
+            //System.out.println(e.getMessage() + " " + e.getStackTrace());
+        }
+    }
+
+    public void sendMeasurementsToServer(Message[] messages){
+        for(int i = 0; i < messages.length; i++){
+            sendMeasurementToServer(messages[i]);
         }
     }
 }

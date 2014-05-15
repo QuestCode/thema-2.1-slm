@@ -11,6 +11,8 @@ public class Receiver {
             int threadsInCurrentPool = 0;
             int currentPool = 0;
 
+            int clusters = 0;
+
             DatabaseConnection databaseConnection = new DatabaseConnection();
 
             ServerSocket socket = new ServerSocket(port);
@@ -25,7 +27,8 @@ public class Receiver {
                 // Accept client and assign to thread
                 client = socket.accept();
 
-                System.out.println("Client accepted");
+                clusters++;
+                System.out.println("Cluster " + clusters + " accepted");
 
                 if(threadsInCurrentPool < threadsPerPool){
                     if(threadPools[currentPool] == null){
