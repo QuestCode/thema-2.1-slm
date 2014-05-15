@@ -24,10 +24,12 @@ public class Worker implements Runnable {
 	public void run() {
 		// System.out.println( "[Worker #" + this.id + "] Started." );
 
+		BufferedReader in;
+		Object[] record;
+
 		try {
 			// Prepare
-			BufferedReader in = new BufferedReader( new InputStreamReader( this.socket.getInputStream() ) );
-			Object[] record;
+			in = new BufferedReader( new InputStreamReader( this.socket.getInputStream() ) );
 
 			while( ! Thread.currentThread().isInterrupted() ) {
 				// Skip preface
@@ -160,6 +162,10 @@ public class Worker implements Runnable {
 			// Print error
 			System.err.println( e );
 			e.printStackTrace();
+		}
+		finally {
+			// Clean up
+			in = null;
 		}
 	}
 

@@ -128,6 +128,10 @@ public class Database {
 		if( valueString != null ) {
 			this.insertValues( valueString, valueCount );
 		}
+
+		// Clean up
+		valueString = null;
+		valueCount  = null;
 	}
 
 	public void commitRecords() {
@@ -144,6 +148,10 @@ public class Database {
 
 		// Commit
 		this.insertValues( valueString, valueCount );
+
+		// Clean up
+		valueString = null;
+		valueCount  = null;
 	}
 
 	private void insertValues( String values, int count ) {
@@ -158,6 +166,9 @@ public class Database {
 	}
 
 	public synchronized boolean execute( String query ) {
+		CallableStatement statement;
+		SQLWarning warning;
+
 		try {
 			// Closed already
 			if( this.connection.isClosed() ) {
@@ -170,11 +181,11 @@ public class Database {
 			++this.queryCount;
 
 			// Execute query
-			CallableStatement statement = this.connection.prepareCall( query );
+			statement = this.connection.prepareCall( query );
 
 			if( ! statement.execute() ) {
 				// Handle warnings
-				SQLWarning warning = statement.getWarnings();
+				warning = statement.getWarnings();
 
 				if( warning != null ) {
 					// Print warning(s)
@@ -186,7 +197,7 @@ public class Database {
 			this.connection.commit();
 
 			// Handle warnings
-			SQLWarning warning = this.connection.getWarnings();
+			warning = this.connection.getWarnings();
 
 			if( warning != null ) {
 				// Print warning(s)
@@ -206,9 +217,17 @@ public class Database {
 			// Failure
 			return false;
 		}
+		finally {
+			// Clean up
+			statement = null;
+			warning   = null;
+		}
 	}
 
 	public synchronized ResultSet query( String query ) {
+		ResultSet resultSet;
+		SQLWarning warning;
+
 		try {
 			// Closed already
 			if( this.connection.isClosed() ) {
@@ -221,10 +240,10 @@ public class Database {
 			++queryCount;
 
 			// Execute query
-			ResultSet resultSet = this.connection.createStatement().executeQuery( query );
+			resultSet = this.connection.createStatement().executeQuery( query );
 
 			// Handle warnings
-			SQLWarning warning = this.connection.getWarnings();
+			warning = this.connection.getWarnings();
 
 			if( warning != null ) {
 				// Print warning(s)
@@ -243,6 +262,10 @@ public class Database {
 
 			// Failure
 			return null;
+		}
+		finally {
+			// Clean up
+			warning = null;
 		}
 	}
 }

@@ -60,10 +60,15 @@ public class Corrector {
 		}
 
 		// Divide by total, minus one because we skipped the first one
-		meanDiff /= ( cache.size() - 1 );
+		meanDiff  /= ( cache.size() - 1 );
+		lastValue += meanDiff;
+
+		// Clean up
+		prevValue = null;
+		meanDiff  = null;
 
 		// Return predicted value
-		return lastValue + meanDiff;
+		return lastValue;
 	}
 
 	private void correctTemperature( Object[] record ) {
@@ -79,6 +84,10 @@ public class Corrector {
 		if( Math.abs( ( currentValue - predictedValue ) / currentValue ) > 0.2 ) { // 20%
 			record[ Record.TEMP ] = predictedValue;
 		}
+
+		// Clean up
+		currentValue   = null;
+		predictedValue = null;
 	}
 
 	private void correctMissing( Object[] record ) {
@@ -103,5 +112,9 @@ public class Corrector {
 
 			record[ property ] = predictPropertyValue( record, property );
 		}
+
+		// Clean up
+		missing  = null;
+		property = null;
 	}
 }
