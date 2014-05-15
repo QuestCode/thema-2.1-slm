@@ -1,6 +1,5 @@
 package am;
 
-import java.lang.*;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -18,10 +17,6 @@ public class Database {
 		+ "`DEWP`,`STP`,`SLP`,`VISIB`,`WDSP`,`PRCP`,`SNDP`,`FRSHTT`,`CLDC`,`WNDDIR`)"
 		+ " VALUES";
 
-	private StringBuilder valueBuffer;
-
-	private int bufferSize        = 10;
-	private int count             = 0;
 	private int queryCount        = 0;
 	private Integer insertedCount = 0;
 
@@ -43,8 +38,6 @@ public class Database {
 			// Print error
 			e.printStackTrace();
 		}
-
-		this.valueBuffer = new StringBuilder();
 	}
 
 	/**
@@ -58,20 +51,9 @@ public class Database {
 		return this.insertedCount;
 	}
 
-	public int getBufferCount() {
-		return this.count;
-	}
-
-	public int getBufferSize() {
-		return this.bufferSize;
-	}
-
 	/**
 	 * Setters
 	 *******************************************************/
-	public void setBufferSize( int size ) {
-		this.bufferSize = size;
-	}
 
 	/**
 	 * Connection methods
@@ -101,58 +83,7 @@ public class Database {
 		return this.execute( "TRUNCATE TABLE `measurement`" );
 	}
 
-	public void insertRecord( Object[] record ) {
-		String valueString = null;
-		int valueCount     = 0;
-
-		synchronized( this.valueBuffer ) {
-			// Increment counter
-			++count;
-
-			// System.err.println("[Database/insert] Adding record #" + count );
-
-			Record.appendToStringBuilder( record, this.valueBuffer );
-
-			// If buffer is full
-			if( count >= bufferSize ) {
-				valueString = valueBuffer.deleteCharAt( valueBuffer.length() - 1 ).toString();
-				this.valueBuffer.setLength( 0 ); // Empty buffer
-
-				valueCount = count;
-				count      = 0;
-
-			}
-		}
-
-		// Commit
-		if( valueString != null ) {
-			this.insertValues( valueString, valueCount );
-		}
-
-		// Clean up
-		valueString = null;
-	}
-
-	public void commitRecords() {
-		String valueString = null;
-		int valueCount     = 0;
-
-		synchronized( this.valueBuffer ) {
-			valueString = valueBuffer.deleteCharAt( valueBuffer.length() - 1 ).toString();
-			this.valueBuffer.setLength( 0 ); // Empty buffer
-
-			valueCount = count;
-			count      = 0;
-		}
-
-		// Commit
-		this.insertValues( valueString, valueCount );
-
-		// Clean up
-		valueString = null;
-	}
-
-	private void insertValues( String values, int count ) {
+	public void insertValues( String values, int count ) {
 		if( this.execute( this.query + values ) ) {
 			synchronized( this.insertedCount ) {
 				this.insertedCount += count;
@@ -163,10 +94,7 @@ public class Database {
 		}
 	}
 
-	public synchronized boolean execute( String query ) {
-		CallableStatement statement;
-		SQLWarning warning;
-
+	private synchronized boolean execute( String query ) {
 		try {
 			// Closed already
 			if( this.connection.isClosed() ) {
@@ -179,11 +107,51 @@ public class Database {
 			++this.queryCount;
 
 			// Execute query
-			statement = this.connection.prepareCall( query );
+			Thread t = new Thread( new Database.Executor( this.connection, query ) );
+			t.start();
 
-			if( ! statement.execute() ) {
+			return true;
+		}
+		catch( Exception e ) {
+			e.printStackTrace();
+
+			return false;
+		}
+	}
+
+	private class Executor implements Runnable {
+
+		private Connection connection;
+		private String query;
+
+		public Executor( Connection connection, String query ) {
+			this.connection = connection;
+			this.query      = query;
+		}
+
+		public void run() {
+			CallableStatement statement;
+			SQLWarning warning;
+
+			try {
+				// Execute query
+				statement = this.connection.prepareCall( this.query );
+
+				if( ! statement.execute() ) {
+					// Handle warnings
+					warning = statement.getWarnings();
+
+					if( warning != null ) {
+						// Print warning(s)
+						System.err.println( warning );
+						warning.printStackTrace();
+					}
+				}
+
+				this.connection.commit();
+
 				// Handle warnings
-				warning = statement.getWarnings();
+				warning = this.connection.getWarnings();
 
 				if( warning != null ) {
 					// Print warning(s)
@@ -191,34 +159,15 @@ public class Database {
 					warning.printStackTrace();
 				}
 			}
-
-			this.connection.commit();
-
-			// Handle warnings
-			warning = this.connection.getWarnings();
-
-			if( warning != null ) {
-				// Print warning(s)
-				System.err.println( warning );
-				warning.printStackTrace();
-
-				return false;
+			catch( SQLException e ) {
+				// Print error
+				e.printStackTrace();
 			}
-
-			// Success
-			return true;
-		}
-		catch( SQLException e ) {
-			// Print error
-			e.printStackTrace();
-
-			// Failure
-			return false;
-		}
-		finally {
-			// Clean up
-			statement = null;
-			warning   = null;
+			finally {
+				// Clean up
+				statement = null;
+				warning   = null;
+			}
 		}
 	}
 
@@ -235,7 +184,7 @@ public class Database {
 			}
 
 			// Increment counter
-			++queryCount;
+			++this.queryCount;
 
 			// Execute query
 			resultSet = this.connection.createStatement().executeQuery( query );

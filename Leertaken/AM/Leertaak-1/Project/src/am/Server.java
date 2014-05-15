@@ -46,11 +46,6 @@ public class Server implements Runnable
 		catch( InterruptedException e ) {
 			e.printStackTrace();
 		}
-		finally {
-			// Save database buffer
-			System.out.println("[Server] Saving database buffer..");
-			this.database.commitRecords();
-		}
 	}
 
 	public void run() {

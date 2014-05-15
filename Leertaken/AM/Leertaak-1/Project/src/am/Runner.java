@@ -36,8 +36,8 @@ public class Runner {
 
 		serverThread.start();
 
-		// Set database buffer size
-		database.setBufferSize( 200 );
+		// Set query buffer size
+		RecordBuffer.BUFFER_SIZE = 200;
 
 		// Set corrector cache size
 		Corrector.CACHE_SIZE = 8;
@@ -46,10 +46,10 @@ public class Runner {
 		try {
 			while( Worker.ID == 0 ) { Thread.sleep( 10 ); }
 
-			System.out.println( "[Runner] Running..");
-
 			// Benchmark
 			long startTime = System.nanoTime();
+
+			System.out.println( "[Runner] Running..");
 
 			// Run for given period of time
 			Thread.sleep( this.runtime * 1000 );
@@ -63,7 +63,7 @@ public class Runner {
 
 			// Block until gracefully terminated
 			// System.out.println( "[Runner] Thread count: " + threadBean.getThreadCount() );
-			while( threadBean.getThreadCount() > 5 ) { Thread.sleep( 10 ); }
+			while( threadBean.getThreadCount() > 10 ) { Thread.sleep( 10 ); }
 
 			long endTime = System.nanoTime();
 
@@ -85,25 +85,25 @@ public class Runner {
 			float actualTime        = (float) ( endTime - startTime ) / 1000000000;
 			int queryCount          = database.getQueryCount();
 			int workerCount         = Worker.ID;
-			int expectedRecordCount = Math.round( workerCount * 10 * this.runtime );
+			int expectedRecordCount = Math.round( workerCount * 10 * actualTime );
 
 			System.out.print(
 				  "--- CONFIGURATION ---\n"
-				+ "Runtime      : " + this.runtime + " seconds\n"
-				+ "DB buffer    : " + database.getBufferSize() + "\n"
-				+ "Cache buffer : " + Corrector.CACHE_SIZE + "\n"
+				+ "Runtime           : " + this.runtime + " seconds\n"
+				+ "Record buffer     : " + RecordBuffer.BUFFER_SIZE + "\n"
+				+ "Cache size        : " + Corrector.CACHE_SIZE + "\n"
 				+ "------- USAGE -------\n"
-				+ "Date         : " + new SimpleDateFormat( "yyyy/MM/dd 'at' HH:mm:ss" ).format( new Date() ) + "\n"
-				+ "Actual time  : " + actualTime + " seconds\n"
-				+ "Memory       : " + String.format( "%.2f", (float) memory / 1024 / 1024 ) + " MB\n"
-				+ "Threads      : " + threadCount + "\n"
-				+ "Workers      : " + workerCount + "\n"
-				+ "Queries      : " + queryCount + "\n"
-				+ "Records      : " + database.getInsertedCount() + "\n"
-				+ "In buffer    : " + database.getBufferCount() + "\n"
-				+ "In database  : " + rowCount + "\n"
-				+ "Expected     : " + expectedRecordCount + "\n"
-				+ "Efficiency   : " + String.format( "%.2f", ( (float) rowCount / expectedRecordCount ) * 100 ) + " %\n"
+				+ "Date              : " + new SimpleDateFormat( "yyyy/MM/dd 'at' HH:mm:ss" ).format( new Date() ) + "\n"
+				+ "Actual time       : " + actualTime + " seconds\n"
+				+ "Memory            : " + String.format( "%.2f", (float) memory / 1024 / 1024 ) + " MB\n"
+				+ "Threads           : " + threadCount + "\n"
+				+ "Workers           : " + workerCount + "\n"
+				+ "Queries           : " + queryCount + "\n"
+				+ "Records           : " + database.getInsertedCount() + "\n"
+				+ "In database       : " + rowCount + "\n"
+				+ "Expected (1)      : " + Math.round( workerCount * 10 * this.runtime ) + "\n"
+				+ "Expected (2)      : " + expectedRecordCount + "\n"
+				+ "Efficiency        : " + String.format( "%.2f", ( (float) rowCount / expectedRecordCount ) * 100 ) + " %\n"
 				+ "---------------------\n"
 			);
 		}
