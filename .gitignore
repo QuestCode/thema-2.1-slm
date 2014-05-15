@@ -48,3 +48,7 @@ $RECYCLE.BIN/
 
 # Java HPROF output
 *.hprof.txt
+*.hprof.txt.*
+
+# UNWDMI Generator settings
+Leertaken/UNWDMI Generator/settings.conf
