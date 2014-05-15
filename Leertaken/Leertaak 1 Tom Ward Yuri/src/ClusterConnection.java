@@ -51,7 +51,7 @@ private class customInputStreamReader {
                     message.addValue(line);
 
                     if(line.contains("</MEASUREMENT>")){
-                        databaseConnection.sendMeasurementToServer(message);
+                        databaseConnection.sendToServer(message);
                         message = new Message();
                         weatherdataCount++;
 

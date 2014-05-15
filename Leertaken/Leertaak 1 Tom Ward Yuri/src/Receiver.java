@@ -32,7 +32,7 @@ public class Receiver {
                         threadPools[currentPool] = Executors.newFixedThreadPool(threadsPerPool);
                     }
 
-                    threadPools[currentPool].submit(new Connection(client, databaseConnection));
+                    threadPools[currentPool].submit(new ClusterConnection(client, databaseConnection));
                     threadsInCurrentPool++;
                 } else {
                     threadsInCurrentPool = 0;
