@@ -1,18 +1,21 @@
 package am;
 
 import java.sql.SQLException;
+
 import java.util.ArrayList;
 
 public class Corrector {
 
-	public final static int CACHE_SIZE = 8;
+	public static int CACHE_SIZE = 30;
 
 	private Database database;
-	private ArrayList<Object[]> cache;
+	private Object[][] cache;
+	private int cachePointer;
 
 	public Corrector( Database database ) {
-		this.database = database;
-		this.cache    = new ArrayList<Object[]>();
+		this.database     = database;
+		this.cache        = new Object[ CACHE_SIZE ][];
+		this.cachePointer = 0;
 	}
 
 	/**
@@ -22,29 +25,38 @@ public class Corrector {
 		checkCacheSize();
 		correctTemperature( record );
 		correctMissing( record );
-		cache.add( record );
+
+		cache[ cachePointer ] = record;
+		cachePointer++;
+
 		database.insertRecord( record );
 	}
 
 	private void checkCacheSize() {
-		if( cache.size() == CACHE_SIZE ) {
-			cache.remove( 0 );
+		if( cachePointer == CACHE_SIZE ) {
+			cachePointer = 0;
 		}
 	}
 
 	private Object predictPropertyValue( Object[] record, int property ) {
-		if( cache.size() < 2 ) {
+		if( cache[1] == null ) { // Cache size < 2
 			return 0.0;
 		}
 
+		int i, size = 0;
 		Object value;
 		Double lastValue = 0.0;
 		Double prevValue = null;
 		Double meanDiff  = 0.0;
 
 		// Sum the differences
-		for( Object[] lastRecord : cache ) {
-			value     = lastRecord[ property ];
+		for( i = 0; i < CACHE_SIZE; ++i ) {
+			if( cache[i] == null ) {
+				break;
+			}
+
+			size     += 1;
+			value     = cache[ i ][ property ];
 			lastValue = ( value instanceof Integer
 							? Double.parseDouble( ( (Integer) value ).toString() )
 							: (Double) lastValue
@@ -59,8 +71,8 @@ public class Corrector {
 			prevValue = lastValue;
 		}
 
-		// Divide by total, minus one because we skipped the first one
-		meanDiff  /= ( cache.size() - 1 );
+		// Divide by total, minus one (because n objects have n - 1 differences)
+		meanDiff  /= ( size - 1 ); // index = size
 		lastValue += meanDiff;
 
 		// Clean up
@@ -73,7 +85,7 @@ public class Corrector {
 
 	private void correctTemperature( Object[] record ) {
 		// Check temperature for deviation
-		if( cache.size() < 2 ) {
+		if( cache[1] == null ) { // Cache size < 2
 			return;
 		}
 
@@ -100,11 +112,10 @@ public class Corrector {
 		for( Integer property : missing ) {
 			if( property == Record.FRSHTT ) {
 				// Use previous for binary flags (or 0 if cache is empty)
-				if( cache.size() > 0 ) {
-					record[ Record.FRSHTT ] = cache.get( cache.size() - 1 )[ Record.FRSHTT ];
-				}
-				else {
-					record[ Record.FRSHTT ] = 0;
+				record[ Record.FRSHTT ] = 0;
+
+				if( cache[ cachePointer ] != null ) {
+					record[ Record.FRSHTT ] = cache[ cachePointer ][ Record.FRSHTT ];
 				}
 
 				continue;
@@ -114,6 +125,6 @@ public class Corrector {
 		}
 
 		// Clean up
-		missing  = null;
+		missing = null;
 	}
 }
