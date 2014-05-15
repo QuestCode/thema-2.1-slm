@@ -99,14 +99,18 @@ public class Corrector {
 	}
 
 	private void correctMissing( Object[] record ) {
-		ArrayList<Integer> missing = Record.determineMissing( record );
+		int i;
+		Integer[] missing = Record.determineMissing( record );
 
-		if( missing.size() == 0 ) {
+		if( missing[0] == null ) {
 			return;
 		}
 
-		for( Integer property : missing ) {
-			if( property == Record.FRSHTT ) {
+		for( i = 0; i < missing.length; ++i ) {
+			if( missing[i] == null ) {
+				break;
+			}
+			if( missing[i] == Record.FRSHTT ) {
 				// Use previous for binary flags (or 0 if cache is empty)
 				record[ Record.FRSHTT ] = 0;
 
@@ -117,7 +121,7 @@ public class Corrector {
 				continue;
 			}
 
-			record[ property ] = predictPropertyValue( record, property );
+			record[ missing[i] ] = predictPropertyValue( record, missing[i] );
 		}
 
 		// Clean up

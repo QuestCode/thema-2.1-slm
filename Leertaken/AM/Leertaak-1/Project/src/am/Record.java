@@ -5,6 +5,9 @@ import java.util.ArrayList;
 
 public class Record {
 
+	/**
+	 * Record properties (read by Worker)
+	 */
 	public final static int STN    = 0;
 	public final static int DATE   = 1;
 	public final static int TIME   = 2;
@@ -20,26 +23,41 @@ public class Record {
 	public final static int CLDC   = 12;
 	public final static int WNDDIR = 13;
 
-	public final static int SIZE   = 14;
+	public final static int SIZE         = 14;
+	public final static int MISSING_SIZE = 4;
 
-	public static ArrayList<Integer> determineMissing( Object[] record ) {
-		ArrayList<Integer> missing = new ArrayList<Integer>();
+	/**
+	 * Make int array with keys of missing values
+	 *
+	 * @param Object[] record
+	 * @return Integer[] missing
+	 */
+	public static Integer[] determineMissing( Object[] record ) {
+		Integer[] missing  = new Integer[ MISSING_SIZE ];
+		int i, missingPointer = 0;
 
-		if( record[ Record.TEMP   ] == null ) { missing.add( Record.TEMP   ); }
-		if( record[ Record.DEWP   ] == null ) { missing.add( Record.DEWP   ); }
-		if( record[ Record.STP    ] == null ) { missing.add( Record.STP    ); }
-		if( record[ Record.SLP    ] == null ) { missing.add( Record.SLP    ); }
-		if( record[ Record.VISIB  ] == null ) { missing.add( Record.VISIB  ); }
-		if( record[ Record.WDSP   ] == null ) { missing.add( Record.WDSP   ); }
-		if( record[ Record.PRCP   ] == null ) { missing.add( Record.PRCP   ); }
-		if( record[ Record.SNDP   ] == null ) { missing.add( Record.SNDP   ); }
-		if( record[ Record.FRSHTT ] == null ) { missing.add( Record.FRSHTT ); }
-		if( record[ Record.CLDC   ] == null ) { missing.add( Record.CLDC   ); }
-		if( record[ Record.WNDDIR ] == null ) { missing.add( Record.WNDDIR ); }
+		// From TEMP - WNDDIR
+		for( i = TEMP; i < SIZE; ++i ) {
+			if( record[i] == null ) {
+				missing[ missingPointer++ ] = i;
+
+				// Maximum missing is reached
+				if( missingPointer == MISSING_SIZE ) {
+					System.err.println( "Maximum missing reached for record: " + record );
+					break;
+				}
+			}
+		}
 
 		return missing;
 	}
 
+	/**
+	 * Append insert query "(stn, date, ..)" to StringBuilder
+	 *
+	 * @param Object[] record
+	 * @param StringBuilder builder
+	 */
 	public static void appendToStringBuilder( Object[] record, StringBuilder builder ) {
 		builder
 			.append( "(" + record[ Record.STN ]   +  "," )
