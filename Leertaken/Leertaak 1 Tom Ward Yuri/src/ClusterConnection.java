@@ -1,23 +1,17 @@
-import com.sun.org.apache.xpath.internal.jaxp.XPathFactoryImpl;
-
-import javax.xml.xpath.XPath;
-import javax.xml.xpath.XPathFactory;
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.Socket;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
  * Created by Yuri on 8/5/2014.
  */
-public class Connection implements Runnable {
+public class ClusterConnection implements Runnable {
     Socket client;
     customInputStreamReader customInputStreamReader;
-    DatabaseConnection databaseConnection;
+    public DatabaseConnection databaseConnection;
 
-    public Connection(Socket client, DatabaseConnection databaseConnection){
+    public ClusterConnection(Socket client, DatabaseConnection databaseConnection){
         this.client = client;
         this.databaseConnection = databaseConnection;
 
@@ -30,11 +24,10 @@ public class Connection implements Runnable {
     }
 
     public void run(){
-        Message message;
+        Message[] messages;
 
-        while((message = customInputStreamReader.receiveMessage()) != null){
-            System.out.println(message.toString());
-            databaseConnection.sendToServer(message);
+        while(true){
+            customInputStreamReader.receiveMessage();
         }
     }
 
@@ -48,22 +41,29 @@ private class customInputStreamReader {
             this.bufferedReader = new BufferedReader(new InputStreamReader(this.inputStream));
         }
 
-        private Message receiveMessage(){
+        private void receiveMessage(){
             Message message = new Message();
+            int weatherdataCount = 0;
 
             try{
-                while((line = bufferedReader.readLine()) != null){
+                while(true){
+                    line = bufferedReader.readLine();
                     message.addValue(line);
 
-                    if(line.contains("</WEATHERDATA>")){
-                        return message;
+                    if(line.contains("</MEASUREMENT>")){
+                        databaseConnection.sendMeasurementToServer(message);
+                        message = new Message();
+                        weatherdataCount++;
+
+                        if(weatherdataCount > 10){
+                            return;
+                        }
                     }
                 }
 
             } catch (Exception e){
-                System.out.println(e);
             }
-            return null;
+            return;
         }
     }
 }
