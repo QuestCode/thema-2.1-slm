@@ -1,5 +1,4 @@
-import java.net.ServerSocket;
-import java.net.Socket;
+import java.net.*;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -11,8 +10,6 @@ public class Receiver {
         try{
             int threadsInCurrentPool = 0;
             int currentPool = 0;
-
-            int clusters = 0;
 
             DatabaseConnection databaseConnection = new DatabaseConnection();
 
@@ -28,15 +25,14 @@ public class Receiver {
                 // Accept client and assign to thread
                 client = socket.accept();
 
-                clusters++;
-                System.out.println("Cluster " + clusters + " accepted");
+                System.out.println("Client accepted");
 
                 if(threadsInCurrentPool < threadsPerPool){
                     if(threadPools[currentPool] == null){
                         threadPools[currentPool] = Executors.newFixedThreadPool(threadsPerPool);
                     }
 
-                    threadPools[currentPool].submit(new ClusterConnection(client, databaseConnection));
+                    threadPools[currentPool].submit(new Connection(client, databaseConnection));
                     threadsInCurrentPool++;
                 } else {
                     threadsInCurrentPool = 0;
