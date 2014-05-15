@@ -8,10 +8,11 @@ import java.util.concurrent.Executors;
 public class Receiver {
     public Receiver(int port, int threadsPerPool, int maxPools){
         try{
+            MessageCounter counter = new MessageCounter();
             int threadsInCurrentPool = 0;
             int currentPool = 0;
 
-            DatabaseConnection databaseConnection = new DatabaseConnection();
+            DatabaseConnection databaseConnection = new DatabaseConnection(counter);
 
             ServerSocket socket = new ServerSocket(port);
             Socket client = null;
@@ -32,7 +33,7 @@ public class Receiver {
                         threadPools[currentPool] = Executors.newFixedThreadPool(threadsPerPool);
                     }
 
-                    threadPools[currentPool].submit(new ClusterConnection(client, databaseConnection));
+                    threadPools[currentPool].submit(new ClusterConnection(client, databaseConnection, counter));
                     threadsInCurrentPool++;
                 } else {
                     threadsInCurrentPool = 0;
@@ -40,7 +41,7 @@ public class Receiver {
                 }
             }
         } catch (Exception e){
-
+            System.out.println(e.getMessage());
         }
     }
 }

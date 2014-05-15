@@ -11,7 +11,7 @@ public class ClusterConnection implements Runnable {
     customInputStreamReader customInputStreamReader;
     public DatabaseConnection databaseConnection;
 
-    public ClusterConnection(Socket client, DatabaseConnection databaseConnection){
+    public ClusterConnection(Socket client, DatabaseConnection databaseConnection, MessageCounter counter){
         this.client = client;
         this.databaseConnection = databaseConnection;
 

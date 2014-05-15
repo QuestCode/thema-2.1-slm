@@ -18,7 +18,10 @@ public class DatabaseConnection {
 
     HashMap<String, MessageCorrector> messageCorrectors = new HashMap<String,MessageCorrector>();
 
-    public DatabaseConnection(){
+    MessageCounter counter;
+
+    public DatabaseConnection(MessageCounter counter){
+        this.counter = counter;
         try {
             Class.forName("org.postgresql.Driver");
         } catch (Exception e){
@@ -61,7 +64,8 @@ public class DatabaseConnection {
             messageCorrector.addMessage(message);
             statement.executeQuery(query);
         } catch (Exception e){
-            System.out.println(e.getMessage() + " " + e.getStackTrace());
+            //System.out.println(e.getMessage() + " " + e.getStackTrace());
+            //counter.increment();
         }
     }
 }
