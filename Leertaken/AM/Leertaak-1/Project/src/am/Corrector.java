@@ -8,12 +8,10 @@ public class Corrector {
 
 	public static int CACHE_SIZE = 30;
 
-	private Database database;
 	private Object[][] cache;
 	private int cachePointer;
 
-	public Corrector( Database database ) {
-		this.database     = database;
+	public Corrector() {
 		this.cache        = new Object[ CACHE_SIZE ][];
 		this.cachePointer = 0;
 	}
@@ -21,15 +19,13 @@ public class Corrector {
 	/**
 	 * Extrapolation of records
 	 */
-	public void validateAndInsert( Object[] record ) {
+	public void validate( Object[] record ) {
 		checkCacheSize();
 		correctTemperature( record );
 		correctMissing( record );
 
 		cache[ cachePointer ] = record;
 		cachePointer++;
-
-		database.insertRecord( record );
 	}
 
 	private void checkCacheSize() {

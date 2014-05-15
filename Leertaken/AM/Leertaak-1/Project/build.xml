@@ -33,11 +33,13 @@
 	</taskdef>
 
 	<target name="init">
-		<ivy:resolve />
-		<ivy:retrieve pattern="${dir.lib}/[artifact].[ext]" />
-
+		<delete dir="${dir.build}"/>
 		<mkdir dir="${dir.classes}" />
 		<mkdir dir="${dir.jar}" />
+		<mkdir dir="${dir.lib}" />
+
+		<ivy:resolve />
+		<ivy:retrieve pattern="${dir.lib}/[artifact].[ext]" />
 	</target>
 
 	<target name="compile" depends="init">
@@ -66,9 +68,9 @@
 		</jar>
 	</target>
 
-	<target name="profile" depends="jar"> 
+	<target name="profile" depends="jar">
 		<java jar="${dir.jar}/Leertaak-1.jar" fork="true">
-			<jvmarg value="-agentlib:hprof=cpu=times,heap=dump" />
+			<jvmarg value="-agentlib:hprof=cpu=times,heap=dump,depth=5" />
 		</java>
 	</target>
 

@@ -6,9 +6,9 @@ import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import lt1.Database;
-import lt1.Server;
-import lt1.Worker;
+import am.Database;
+import am.Server;
+import am.Worker;
 
 public class Runner {
 	private int runtime = 10; // seconds

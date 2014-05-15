@@ -14,11 +14,13 @@ public class Worker implements Runnable {
 
 	private Socket socket;
 	private Corrector corrector;
+	private Database database;
 
 	public Worker( Socket socket, Database database ) {
 		this.id         = ++Worker.ID;
 		this.socket     = socket;
-		this.corrector  = new Corrector( database );
+		this.corrector  = new Corrector();
+		this.database   = database;
 	}
 
 	public void run() {
@@ -151,7 +153,8 @@ public class Worker implements Runnable {
 					in.readLine(); // </MEASUREMENT>
 
 					// Execute Record
-					corrector.validateAndInsert( record );
+					corrector.validate( record );
+					database.insertRecord( record );
 				}
 			}
 
