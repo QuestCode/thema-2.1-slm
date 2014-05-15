@@ -20,6 +20,8 @@ public class Record {
 	public final static int CLDC   = 12;
 	public final static int WNDDIR = 13;
 
+	public final static int SIZE   = 14;
+
 	public static ArrayList<Integer> determineMissing( Object[] record ) {
 		ArrayList<Integer> missing = new ArrayList<Integer>();
 

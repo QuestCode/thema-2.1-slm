@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class Corrector {
 
-	private final static int CACHE_SIZE = 5;
+	private final static int CACHE_SIZE = 8;
 
 	private Database database;
 	private ArrayList<Object[]> cache;

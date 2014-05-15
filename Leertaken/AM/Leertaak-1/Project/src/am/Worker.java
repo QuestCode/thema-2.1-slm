@@ -47,7 +47,7 @@ public class Worker implements Runnable {
 				// Read <MEASUREMENT> until </WEATHERDATA> is found
 				while( in.readLine().equals( "\t<MEASUREMENT>" ) ) {
 					// Prepare
-					record = new Object[14];
+					record = new Object[ Record.SIZE ];
 
 					// Parse and set data
 					try {
