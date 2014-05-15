@@ -115,6 +115,5 @@ public class Corrector {
 
 		// Clean up
 		missing  = null;
-		property = null;
 	}
 }

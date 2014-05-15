@@ -131,7 +131,6 @@ public class Database {
 
 		// Clean up
 		valueString = null;
-		valueCount  = null;
 	}
 
 	public void commitRecords() {
@@ -151,7 +150,6 @@ public class Database {
 
 		// Clean up
 		valueString = null;
-		valueCount  = null;
 	}
 
 	private void insertValues( String values, int count ) {
