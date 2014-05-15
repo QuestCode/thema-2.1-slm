@@ -1,0 +1,113 @@
+--- CONFIGURATION ---
+Runtime           : 120 seconds
+Min record buffer : 300
+Max record buffer : 1500
+Cache size        : 4
+------- USAGE -------
+Date              : 2014/05/15 at 20:04:46
+Actual time       : 296.20016 seconds
+Memory            : 490.00 MB
+Threads           : 818
+Workers           : 800
+Queries           : 1400
+Records           : 968000
+In database       : 968000
+Expected (1)      : 960000
+Expected (2)      : 2369601
+Efficiency        : 100.83 %
+---------------------
+
+--- CONFIGURATION ---
+Runtime           : 120 seconds
+Min record buffer : 300
+Max record buffer : 1500
+Cache size        : 4
+------- USAGE -------
+Date              : 2014/05/15 at 20:10:36
+Actual time       : 296.52612 seconds
+Memory            : 484.00 MB
+Threads           : 818
+Workers           : 800
+Queries           : 1400
+Records           : 967840
+In database       : 967840
+Expected (1)      : 960000
+Expected (2)      : 2372209
+Efficiency        : 100.82 %
+---------------------
+
+--- CONFIGURATION ---
+Runtime           : 120 seconds
+Min record buffer : 300
+Max record buffer : 1500
+Cache size        : 4
+------- USAGE -------
+Date              : 2014/05/15 at 20:16:05
+Actual time       : 292.3109 seconds
+Memory            : 485.00 MB
+Threads           : 807
+Workers           : 800
+Queries           : 1365
+Records           : 968000
+In database       : 968000
+Expected (1)      : 960000
+Expected (2)      : 2338487
+Efficiency        : 100.83 %
+---------------------
+
+--- CONFIGURATION ---
+Runtime           : 120 seconds
+Min record buffer : 300
+Max record buffer : 1500
+Cache size        : 4
+------- USAGE -------
+Date              : 2014/05/15 at 20:21:27
+Actual time       : 295.88315 seconds
+Memory            : 499.00 MB
+Threads           : 809
+Workers           : 800
+Queries           : 1343
+Records           : 967850
+In database       : 967850
+Expected (1)      : 960000
+Expected (2)      : 2367065
+Efficiency        : 100.82 %
+---------------------
+
+--- CONFIGURATION ---
+Runtime           : 120 seconds
+Min record buffer : 300
+Max record buffer : 1500
+Cache size        : 4
+------- USAGE -------
+Date              : 2014/05/15 at 20:25:26
+Actual time       : 212.09956 seconds
+Memory            : 343.50 MB
+Threads           : 557
+Workers           : 549
+Queries           : 936
+Records           : 658570
+In database       : 659780
+Expected (1)      : 658800
+Expected (2)      : 1164427
+Efficiency        : 100.15 %
+---------------------
+
+--- CONFIGURATION ---
+Runtime           : 120 seconds
+Min record buffer : 300
+Max record buffer : 1500
+Cache size        : 4
+------- USAGE -------
+Date              : 2014/05/15 at 20:31:05
+Actual time       : 295.28012 seconds
+Memory            : 500.00 MB
+Threads           : 808
+Workers           : 800
+Queries           : 1350
+Records           : 969440
+In database       : 969440
+Expected (1)      : 960000
+Expected (2)      : 2362241
+Efficiency        : 100.98 %
+---------------------

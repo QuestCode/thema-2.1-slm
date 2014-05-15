@@ -35,7 +35,7 @@ public class RecordBuffer {
 			return;
 		}
 
-		System.out.println( "[RecordBuffer] writing " + this.count + " records to database" );
+		// System.out.println( "[RecordBuffer] writing " + this.count + " records to database" );
 
 		// Write buffer
 		this.database.insertValues( this.buffer.deleteCharAt( buffer.length() - 1 ).toString(), this.count );

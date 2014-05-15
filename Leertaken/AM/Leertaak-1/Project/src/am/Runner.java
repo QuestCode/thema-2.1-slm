@@ -11,7 +11,7 @@ import am.Server;
 import am.Worker;
 
 public class Runner {
-	private int runtime = 600; // seconds
+	private int runtime = 300; // seconds
 
 	/**
 	 * Bootstrap
@@ -64,7 +64,7 @@ public class Runner {
 
 			// Block until gracefully terminated
 			while( threadBean.getThreadCount() > 10 ) {
-				System.out.println( "[Runner] Thread count: " + threadBean.getThreadCount() );
+				// System.out.println( "[Runner] Thread count: " + threadBean.getThreadCount() );
 				Thread.sleep( 500 ); 
 			}
 

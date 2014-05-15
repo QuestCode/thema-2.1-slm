@@ -13,7 +13,7 @@
 	<property name="main-class" value="am.Runner" />
 
 	<property name="sql.driver" value="org.gjt.mm.mysql.Driver"/>
-	<property name="sql.classpath" value="${dir.lib}/compile/mysql-connector-java.jar"/>
+	<property name="sql.classpath" value="${dir.lib}/mysql-connector-java.jar"/>
 	<property name="sql.url" value="jdbc:mysql://localhost:3306/"/>
 	<property name="sql.user" value="root"/>
 	<property name="sql.pass" value="banaan"/>
@@ -50,8 +50,8 @@
 
 	<target name="run" depends="compile">
 		<java classname="${main-class}" fork="true">
-			<jvmarg value="-Xms32m"/>
-			<jvmarg value="-Xmx32m"/>
+			<jvmarg value="-XX:-UseGCOverheadLimit" />
+			<jvmarg value="-Xmx1200m" />
 			<classpath>
 				<pathelement location="${dir.classes}" />
 				<path refid="lib-classpath" />
@@ -71,6 +71,8 @@
 	<target name="profile" depends="jar">
 		<java jar="${dir.jar}/Leertaak-1.jar" fork="true">
 			<jvmarg value="-agentlib:hprof=cpu=times,heap=dump,depth=5" />
+			<jvmarg value="-XX:-UseGCOverheadLimit" />
+			<jvmarg value="-Xmx1200m" />
 		</java>
 	</target>
 
