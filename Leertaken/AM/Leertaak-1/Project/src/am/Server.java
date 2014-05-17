@@ -1,8 +1,11 @@
 package am;
 
-import java.io.*;
-import java.net.*;
-import java.util.concurrent.*;
+import java.net.ServerSocket;
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.TimeUnit;
 
 public class Server implements Runnable
 {
@@ -12,13 +15,13 @@ public class Server implements Runnable
 
 	public Server() {
 		// Create worker pool
-		workerPool = Executors.newFixedThreadPool( 850 );
+		this.workerPool = Executors.newFixedThreadPool( 850 );
 
 		// Connect to database
 		this.database = new Database( "localhost", 3306, "unwdmi", "root", "banaan" );
 
 		// Clear measurements table
-		if( this.database.clearMeasurements() ) {
+		if( this.database.execute( "TRUNCATE TABLE `measurement`" ) ) {
 			System.out.println( "[Server] Measurements cleared." );
 		}
 		else {
@@ -44,6 +47,15 @@ public class Server implements Runnable
 			this.workerPool.awaitTermination( 10, TimeUnit.SECONDS );
 		}
 		catch( InterruptedException e ) {
+			e.printStackTrace();
+		}
+
+		// Shutdown executors and release locks
+		try {
+			this.database.shutdownExecutors();
+			this.database.commit();
+		}
+		catch( SQLException e ) {
 			e.printStackTrace();
 		}
 	}

@@ -31,14 +31,11 @@ public class Runner {
 	public Runner() {
 
 		// Set query buffer size
-		RecordBuffer.MIN_BUFFER_SIZE = 200;
-		RecordBuffer.MAX_BUFFER_SIZE = 1000;
+		RecordBuffer.MIN_BUFFER_SIZE = 20;
+		RecordBuffer.MAX_BUFFER_SIZE = 300;
 
 		// Set corrector cache size
 		Corrector.CACHE_SIZE = 4;
-
-		// Set database executor amount
-		Database.EXECUTORS = 2000;
 
 		Server server           = new Server();
 		Thread serverThread     = new Thread( server );
@@ -53,7 +50,6 @@ public class Runner {
 				+ "Min record buffer  : " + RecordBuffer.MIN_BUFFER_SIZE + "\n"
 				+ "Max record buffer  : " + RecordBuffer.MAX_BUFFER_SIZE + "\n"
 				+ "Cache size         : " + Corrector.CACHE_SIZE + "\n"
-				+ "Database executors : " + Database.EXECUTORS + "\n"
 				+ "---------------------"
 		);
 
@@ -75,13 +71,13 @@ public class Runner {
 
 			// Stop
 			server.interrupt();
-			database.interrupt();
 
 			// Block until gracefully terminated
-			while( threadBean.getThreadCount() > 10 ) {
+			while( threadBean.getThreadCount() > 6 ) {
 				// System.out.println( "[Runner] Thread count: " + threadBean.getThreadCount() );
-				Thread.sleep( 500 ); 
+				Thread.sleep( 500 );
 			}
+
 			long endTime = System.nanoTime();
 
 			// Get total row count
@@ -110,7 +106,6 @@ public class Runner {
 				+ "Min record buffer  : " + RecordBuffer.MIN_BUFFER_SIZE + "\n"
 				+ "Max record buffer  : " + RecordBuffer.MAX_BUFFER_SIZE + "\n"
 				+ "Cache size         : " + Corrector.CACHE_SIZE + "\n"
-				+ "Database executors : " + Database.EXECUTORS + "\n"
 				+ "------- USAGE -------\n"
 				+ "Date               : " + new SimpleDateFormat( "yyyy/MM/dd 'at' HH:mm:ss" ).format( new Date() ) + "\n"
 				+ "Actual time        : " + actualTime + " seconds\n"

@@ -5,19 +5,16 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.SQLWarning;
-import java.util.concurrent.*;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ExecutorService;
 
 public class Database {
 	/**
 	 * Variables
 	 *******************************************************/
-	public static int EXECUTORS = 200;
-
 	private Connection connection;
-	private Executor[] executors;
-	private Thread[] executorThreads;
-	private int lastExecutor;
+	private ExecutorService executorPool;
+	private int queriesPerCommit = 10;
 
 	private String query = "INSERT INTO `measurement` (`STN`,`DATE`,`TIME`,`TEMP`,"
 		+ "`DEWP`,`STP`,`SLP`,`VISIB`,`WDSP`,`PRCP`,`SNDP`,`FRSHTT`,`CLDC`,`WNDDIR`)"
@@ -40,24 +37,8 @@ public class Database {
 
 			System.out.println( "[Database] Connected to " + host + ":" + port );
 
-			// set last executor index
-			this.lastExecutor = 0;
-
-			// Create executorPool
-			this.executors = new Executor[EXECUTORS];
-			this.executorThreads = new Thread[EXECUTORS];
-
-			Thread t;
-			Executor e;
-			for(int i = 0; i < EXECUTORS; i++) {
-				e = new Executor( this.connection );
-				t = new Thread( e );
-				t.setPriority( Thread.MAX_PRIORITY );
-				t.start();
-
-				this.executors[i] = e;
-				this.executorThreads[i] = t;
-			}
+			// Create cached thread pool
+			this.executorPool = Executors.newCachedThreadPool();
 		}
 		catch( Exception e ) {
 			// Print error
@@ -75,10 +56,6 @@ public class Database {
 	public int getInsertedCount() {
 		return this.insertedCount;
 	}
-
-	/**
-	 * Setters
-	 *******************************************************/
 
 	/**
 	 * Connection methods
@@ -101,19 +78,9 @@ public class Database {
 		}
 	}
 
-	public synchronized void interrupt() {
-		for(int i = 0; i < EXECUTORS; i++) {
-			this.executors[i].stop();
-		}
-	}
-
 	/**
 	 * Querying
 	 *******************************************************/
-	public boolean clearMeasurements() {
-		return this.execute( "TRUNCATE TABLE `measurement`" );
-	}
-
 	public void insertValues( String values, int count ) {
 		if( this.execute( this.query + values ) ) {
 			synchronized( this.insertedCount ) {
@@ -125,7 +92,7 @@ public class Database {
 		}
 	}
 
-	private synchronized boolean execute( String query ) {
+	public synchronized boolean execute( String query ) {
 		try {
 			// Closed already
 			if( this.connection.isClosed() ) {
@@ -138,85 +105,51 @@ public class Database {
 			++this.queryCount;
 
 			// Execute query
-			if(this.executors[this.lastExecutor].query != null) {
-				System.out.println("[Database] Executor not ready yet.");
-			}
-			this.executors[this.lastExecutor].setQuery( query );
+			this.executorPool.submit( new Executor( this.connection, query ) );
 
-			this.lastExecutor++;
-
-			if(this.lastExecutor >= EXECUTORS) {
-				this.lastExecutor = 0;
+			// Commit every X queries
+			if( this.queryCount % this.queriesPerCommit == 0 ) {
+				this.commit();
 			}
 
 			return true;
 		}
-		catch( Exception e ) {
+		catch( SQLException e ) {
 			e.printStackTrace();
 
 			return false;
 		}
 	}
 
-	private class Executor implements Runnable {
+	public void commit() throws SQLException {
+		this.connection.commit();
+	}
+
+	public void shutdownExecutors() {
+		this.executorPool.shutdownNow();
+	}
+
+	protected class Executor implements Runnable {
 
 		private Connection connection;
 		public String query;
-		private boolean running;
 
-		public Executor( Connection connection ) {
+		public Executor( Connection connection, String query ) {
 			this.connection = connection;
-			this.running = true;
-		}
-
-		public void setQuery( String query ) {
-			this.query = query;
-		}
-
-		public void stop() {
-			this.running = false;
+			this.query      = query;
 		}
 
 		public void run() {
 			try {
-				Statement statement = this.connection.createStatement();
-
-				while( this.running ) {
-					while( this.running && this.query == null ) {
-						try {
-							Thread.sleep(100);
-						}
-						catch( Exception e ) {
-
-						}
-					}
-
-					if( this.query != null ) {
-						try {
-							// Execute query
-							statement.executeUpdate( this.query );
-						}
-						catch( SQLException e ) {
-							// Print error
-							e.printStackTrace();
-						}
-						finally {
-							// Clean up
-							this.query = null;
-						}
-					}
-				}
+				this.connection.createStatement().executeUpdate( this.query );
 			}
-			catch(SQLException e) {
+			catch( SQLException e ) {
 				e.printStackTrace();
 			}
 		}
 	}
 
 	public synchronized ResultSet query( String query ) {
-		ResultSet resultSet;
-		SQLWarning warning;
-
 		try {
 			// Closed already
 			if( this.connection.isClosed() ) {
@@ -229,21 +162,7 @@ public class Database {
 			++this.queryCount;
 
 			// Execute query
-			resultSet = this.connection.createStatement().executeQuery( query );
-
-			// Handle warnings
-			warning = this.connection.getWarnings();
-
-			if( warning != null ) {
-				// Print warning(s)
-				System.err.println( warning );
-				warning.printStackTrace();
-
-				return null;
-			}
-
-			// Success
-			return resultSet;
+			return this.connection.createStatement().executeQuery( query );
 		}
 		catch( SQLException e ) {
 			// Print error
@@ -251,10 +170,6 @@ public class Database {
 
 			// Failure
 			return null;
-		}
-		finally {
-			// Clean up
-			warning = null;
 		}
 	}
 }
