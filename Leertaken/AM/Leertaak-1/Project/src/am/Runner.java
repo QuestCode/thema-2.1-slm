@@ -11,7 +11,7 @@ import am.Server;
 import am.Worker;
 
 public class Runner {
-	private int runtime = 1800; // seconds
+	private int runtime = 10; // seconds
 
 	/**
 	 * Bootstrap

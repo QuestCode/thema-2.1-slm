@@ -13,6 +13,7 @@
 	- Infrastructuur
 	- Applicatie
 - Stresstest resultaten
+- Bottlenecks
 - Conclusie
 
 ---
@@ -156,6 +157,8 @@ Het aantal queries is drastisch gedaalt en daarmee is de efficientie weer op 100
 
 Te concluderen valt dat de grootste bottleneck momenteel nog de MySQL database is. Hoewel uiteindelijk deze toch de ruwweg 8000 records per seconde aan kan blijkt dit toch het punt te zijn waar het het eerste fout gaat. De vraag is hoe goed de MySQL database mee schaalt wanneer meer clusters worden gebruikt en wanneer de applicatie langer draait.
 
+## Machine resources tijdens stresstesting
+
 <center>
   !["CPU usage"](Figures/cpu-usage.png "CPU usage")
   !["Memory usage"](Figures/memory-usage.png "Memory usage")
@@ -174,4 +177,4 @@ Te concluderen valt dat de grootste bottleneck momenteel nog de MySQL database i
 
 # Conclusie
 
-+ [A] Een onderbouwing van je uitleg met behulp van gegevens van tools zoals taskmanager, perfmon, top (of door jouw gebruikte, vergelijkbare tools). Voeg screenshots van deze gegevens toe.
+Het doel van 8000 records per seconde verwerken is uiteindelijk gehaald omdat er gefocust is op het scheiden van data en taken. Elk onderdeel van de applicatie is zoveel mogelijk zelfstandig gemaakt zodat deze niet op een ander onderdeel hoeft te wachten. Deze opzet heeft er voor gezorgd dat de applicatie een grote hoeveelheid data kan ontvangen, verwerken en op kan slaan in een database.
