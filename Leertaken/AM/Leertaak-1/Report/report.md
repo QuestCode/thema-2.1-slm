@@ -4,25 +4,21 @@
 > __Auteurs:__ André Nanninga &amp; Maurits van Mastrigt
 > __Datum:__ 17 mei 2014
 
----
-
 # Inhoud
 
-- Inleiding
-- Verklaring programmaonderdelen
-	- Infrastructuur
-	- Applicatie
-- Stresstest resultaten
-- Machine gebruik tijdens stresstesting
-- Bottlenecks
-	+ Trage invoerverwerking
-	+ Trage datacorrectie
-	+ Efficiënt verwerken van weerdata
-	+ MySQL database
-	+ Batchen van queries
-- Conclusie
-
----
+- __Inleiding__                             <span style="float:right;font-weight:bold">3</span>
+- __Verklaring programmaonderdelen__        <span style="float:right;font-weight:bold">4</span>
+	- Infrastructuur                        <span style="float:right;font-weight:normal">4</span>
+	- Applicatie                            <span style="float:right;font-weight:normal">5</span>
+- __Stresstest resultaten__                 <span style="float:right;font-weight:bold">8</span>
+- __Machine gebruik tijdens stresstesting__ <span style="float:right;font-weight:bold">9</span>
+- __Bottlenecks__                           <span style="float:right;font-weight:bold">11</span>
+	+ Trage invoerverwerking                <span style="float:right;font-weight:normal">11</span>
+	+ Trage datacorrectie                   <span style="float:right;font-weight:normal">11</span>
+	+ Efficiënt verwerken van weerdata      <span style="float:right;font-weight:normal">11</span>
+	+ MySQL database                        <span style="float:right;font-weight:normal">11</span>
+	+ Batchen van queries                   <span style="float:right;font-weight:normal">12</span>
+- __Conclusie__                             <span style="float:right;font-weight:bold">13</span>
 
 # Inleiding
 
@@ -35,9 +31,7 @@ Dit rapport beschrijft de conclusies en bevindingen van André Nanninga en Mauri
 	+ Welke resource de bottleneck vormt en door welk proces dit wordt veroorzaakt;
 - Een onderbouwing met behulp van de verzamelde gegevens.
 
-De in dit rapport beschreven bevindingen zullen worden meegenomen in het uitwerken van leertaken twee en vijf.
-
----
+De in dit rapport beschreven conclusies en bevindingen zullen worden meegenomen in het uitwerken van leertaak twee en leertaak vijf.
 
 # Verklaring programmaonderdelen
 
@@ -62,8 +56,6 @@ De __generator__ is door de Hanzehogeschool als uitvoerbaar `.jar`-bestand aange
 De bovengenoemde __applicatie__ is volledig zelf ontwikkeld. Hier lagen wel een aantal vereisten aan ten grondslag. Samengevat moest er een multithreaded Java applicatie worden gebouwd, die door middel van sockets een XML stream uitleest. De ingelezen gegevens moeten vervolgens worden omgezet naar een werkbaar data formaat. Ontbrekende data moest worden gecorrigeerd en de data moest worden opgeslagen in een RDBMS. De specifieke uitwerking van de applicatie zal nader worden toegelicht in paragraaf _Applicatie_.
 
 Voor opslag van de gegevens is er gekozen voor de bekende relationele database __MySQL__. Met name het makkelijke opzetten van deze database, en de uitgebreide online hulpmiddelen, heeft hier de doorslag in gegeven (ten opzichte van PostgreSQL).
-
----
 
 ## Applicatie
 
@@ -94,6 +86,8 @@ De _Database_ klasse zorgt voor zowel het tot stand brengen van een verbinding m
 
 Voor het optimaal uitvoeren van de "INSERT" queries, waarbij de ingelezen weerdata wordt ingeschoten in de database, is er gekozen om deze uit te laten voeren door een aparta klasse: _Database.Executor_. De database klasse maakt een _Executor_ instantie aan voor elke query die wordt gedraaid, waardoor er eenvoudig in één keer een grote hoeveelheid aan records ingeschoten kan worden.
 
+---
+
 ### Database.Executor
 
 Voor een zo hoog mogelijke verwerkingssneldheden is er gekozen voor het maken van een _Executor_, waarin een database query in een aparte thread wordt uitgevoerd. Dit voorkomt dat de applicatie blokkeert tijdens het inschieten van de ingelezen weerdata.
@@ -119,8 +113,6 @@ Zodra de weerdata - in de vorm van een record object - is ingelezen en (waar nod
 De _Record_ klasse dient voornamelijk als hulpmiddel bij gebruik van een record object. De ingelezen weerdata wordt namelijk niet omgezet naar een klasseinstantie, maar wordt in een Object array gezet. Dit is zeer lichtgewicht, waardoor er enkel een hulpmiddel nodig is voor het defineren van de indexen van de array (welke sleutel welke waarde representeert).
 
 Tevens biedt deze klasse de mogelijkheid de missende waarde van een record object te bepalen en een record object om te zetten naar een database "INSERT" query. Op deze manier wordt alle logica intern gehouden, waardoor de applicatie code netjes blijft en andere klassen geen kennis hoeven te hebben van het record object. Met uitzondering van het ophalen van een waarde (bijvoorbeeld `record[ Record.WNDDIR ]`) en het instellen van een waarde (bijvoorbeeld `record[ Record.WNDDIR ] = value;`).
-
----
 
 # Stresstest resultaten
 
@@ -174,8 +166,6 @@ Onderstaand schermafdrukken van respectievelijk het CPU-, geheugen-, en hardesch
   !["Overall usage"](Figures/overall-usage.png "Overall usage")
 </center>
 
----
-
 # Bottlenecks
 
 Onderstaand worden de hindernissen beschreven die op het pad zijn gekomen tijdens het ontwikkel van de applicatie.
@@ -201,8 +191,6 @@ Echter na het aan/uit zetten van de referentiële integriteit kon er worden geco
 ## Batchen van queries
 
 Het bufferen van queries om records in te schieten, om deze vervolgens per honderd tot tweehonderd uit te voeren, scheelt bepaalde overhead. Bij het batchen en versturen van de queries zit een bepaalde willekeurigheid. Deze willekeurigheid moet er voor zorgen dat niet elke _RecordBuffer_ tegelijkertijd een batch verstuurde. Denk hierbij aan het verwerken van de query, locken van de tabel, etc. Door het batchen van deze queries kon de applicatie circa acht keer meer data verwerken. Dit verschil is significant, ondanks dat het batchen de complexiteit van de applicate verhoogd.
-
----
 
 # Conclusie
 
