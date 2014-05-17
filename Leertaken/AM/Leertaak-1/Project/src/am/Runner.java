@@ -11,7 +11,7 @@ import am.Server;
 import am.Worker;
 
 public class Runner {
-	private int runtime = 10; // seconds
+	private int runtime = 600; // seconds
 
 	/**
 	 * Bootstrap
@@ -31,8 +31,8 @@ public class Runner {
 	public Runner() {
 
 		// Set query buffer size
-		RecordBuffer.MIN_BUFFER_SIZE = 20;
-		RecordBuffer.MAX_BUFFER_SIZE = 300;
+		RecordBuffer.MIN_BUFFER_SIZE = 200;
+		RecordBuffer.MAX_BUFFER_SIZE = 600;
 
 		// Set corrector cache size
 		Corrector.CACHE_SIZE = 4;
@@ -75,7 +75,7 @@ public class Runner {
 			// Block until gracefully terminated
 			while( threadBean.getThreadCount() > 6 ) {
 				// System.out.println( "[Runner] Thread count: " + threadBean.getThreadCount() );
-				Thread.sleep( 500 );
+				Thread.sleep( 100 );
 			}
 
 			long endTime = System.nanoTime();

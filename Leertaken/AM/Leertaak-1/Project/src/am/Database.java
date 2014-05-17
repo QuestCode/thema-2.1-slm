@@ -14,7 +14,7 @@ public class Database {
 	 *******************************************************/
 	private Connection connection;
 	private ExecutorService executorPool;
-	private int queriesPerCommit = 10;
+	private int queriesPerCommit = 15;
 
 	private String query = "INSERT INTO `measurement` (`STN`,`DATE`,`TIME`,`TEMP`,"
 		+ "`DEWP`,`STP`,`SLP`,`VISIB`,`WDSP`,`PRCP`,`SNDP`,`FRSHTT`,`CLDC`,`WNDDIR`)"
