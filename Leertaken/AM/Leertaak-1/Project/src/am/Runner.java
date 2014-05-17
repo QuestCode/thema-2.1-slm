@@ -11,7 +11,7 @@ import am.Server;
 import am.Worker;
 
 public class Runner {
-	private int runtime = 600; // seconds
+	private int runtime = 1800; // seconds
 
 	/**
 	 * Bootstrap
@@ -31,8 +31,8 @@ public class Runner {
 	public Runner() {
 
 		// Set query buffer size
-		RecordBuffer.MIN_BUFFER_SIZE = 200;
-		RecordBuffer.MAX_BUFFER_SIZE = 600;
+		RecordBuffer.MIN_BUFFER_SIZE = 400;
+		RecordBuffer.MAX_BUFFER_SIZE = 1200;
 
 		// Set corrector cache size
 		Corrector.CACHE_SIZE = 4;
@@ -50,6 +50,7 @@ public class Runner {
 				+ "Min record buffer  : " + RecordBuffer.MIN_BUFFER_SIZE + "\n"
 				+ "Max record buffer  : " + RecordBuffer.MAX_BUFFER_SIZE + "\n"
 				+ "Cache size         : " + Corrector.CACHE_SIZE + "\n"
+				+ "Date               : " + new SimpleDateFormat( "yyyy/MM/dd 'at' HH:mm:ss" ).format( new Date() ) + "\n"
 				+ "---------------------"
 		);
 
