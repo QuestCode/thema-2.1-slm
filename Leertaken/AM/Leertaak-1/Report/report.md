@@ -1,4 +1,4 @@
-# Leertaak 1 <small>Stresstest rapportage</small>
+# Leertaak 1 <small>Testrapport</small>
 
 > __Groep:__ 1a
 > __Auteurs:__ André Nanninga &amp; Maurits van Mastrigt
@@ -29,7 +29,7 @@ Dit rapport beschrijft de conclusies en bevindingen van André Nanninga en Mauri
 	+ Welke resource de bottleneck vormt en door welk proces dit wordt veroorzaakt;
 - Een onderbouwing met behulp van de verzamelde gegevens.
 
-De in dit rapport beschreven bevindingen zullen worden meegenomen in het uitwerken van leertaken 2 en 5.
+De in dit rapport beschreven bevindingen zullen worden meegenomen in het uitwerken van leertaken twee en vijf.
 
 ---
 
@@ -46,15 +46,10 @@ Onderstaand een toelichting op de verschillende programmaonderdelen. Met als eer
 In het bovenstaande figuur is te zien waar elk onderdeel verantwoordelijk voor is. Zowel de generator, applicatie, en de database werden gedraaid op één en dezelfde desktop PC. Deze PC heeft de volgende specificaties:
 
 	Besturingssysteem: Windows 8.1 Pro 64-bit
-
 	CPU: AMD Athlon(tm) X4 740 Quad Core Processor
 	Geheugen: 8.00GB Dual-Channel DDR3 @ 665MHz (9-9-9-24)
 	Moederboord: ASRock FM2A75 Pro4-M (CPUSocket)
-
-	Opslag: RAID 0,
-		232GB Seagate ST3250318AS ATA Device
-		232GB Seagate ST3250318AS ATA Device
-		232GB Seagate ST3250318AS ATA Device
+	Opslag: RAID 0 (3x 232GB Seagate ST3250318AS ATA Device)
 
 De __generator__ is door de Hanzehogeschool als uitvoerbaar `.jar`-bestand aangeleverd. Deze Java applicatie genereert (semi)willekeurge weerdata aan de hand van een aantal instellingen. Zo kon het aantal workers worden ingesteld, waarmee de server applicatie eenvoudig te stresstesten was.
 
@@ -66,7 +61,7 @@ Voor opslag van de gegevens is er gekozen voor de bekende relationele database _
 
 ## Applicatie
 
-In deze paragraaf zullen de verschillende onderdelen van de applicatie in volgorde van verloop worden toegelicht.
+In deze paragraaf zullen de verschillende klassen van de applicatie in volgorde van verloop worden toegelicht.
 
 ### Runner
 
@@ -81,11 +76,11 @@ De zogeheten "Runner" van de applicatie dient als startpunt van de applicatie. H
 - Uiteindelijke aantal records
 - Efficiëntie
 
-Met deze meeteenheden kan applicatiebrede efficiëntie worden gemeten, wat zeer heeft geholpen bij het verbeteren van de applicatie code.
+Met deze meeteenheden kan applicatiebrede efficiëntie worden gemeten, wat enorm heeft geholpen bij het verbeteren van de applicatie code.
 
 ### Server
 
-De _Server_ klasse beheert de database connectie en accepteert continue inkomende connecties, welke worden overgezet naar een aparte _Worker_ voor elke connectie. Deze connecties komen voor nu nog vanaf de generator.
+De _Server_ klasse beheert de database connectie en accepteert continue inkomende connecties. Elke inkomende connectie wordt overgezet naar een aparte _Worker_, welke vervolgens de data inleest en verwerkt. Deze connecties komen voor nu nog vanaf de generator.
 
 ### Database
 
@@ -95,27 +90,29 @@ Voor het optimaal uitvoeren van de "INSERT" queries, waarbij de ingelezen weerda
 
 ### Database.Executor
 
-Voor optimaal verwerkingssneldheden is er gekozen voor het maken van een _Executor_, waarin een database query in een aparte thread wordt uitgevoerd. Dit voorkomt dat de applicatie blokkeert tijdens het inschieten van de ingelezen weerdata.
+Voor een zo hoog mogelijke verwerkingssneldheden is er gekozen voor het maken van een _Executor_, waarin een database query in een aparte thread wordt uitgevoerd. Dit voorkomt dat de applicatie blokkeert tijdens het inschieten van de ingelezen weerdata.
+
+Tevens wordt er per query honderd tot tweehonderd records ingeschoten, waardoor veel overhead (verificatie van data, parsen van query, locken van tabel, etc.) tot het minimale wordt gereduceerd.
 
 ### Worker
 
-Accepteert inkomende data, verwerkt en corrigeert de data (middels een Corrector), en schiet deze in de database in (middels een RecordBuffer).
-
-_Bevat een instantie van: Corrector en RecordBuffer._
+De _Worker_ klasse staat centraal aan de applicatie. Deze moet zo snel mogelijk de ingelezen gegevens verwerken tot bruikbare weerdata, de data corrigeren (met behulp van een _Corrector_), en inschieten in de database (met behulp van een _RecordBuffer_). Dit laatste punt kost weinig tijd door het gebruik query buffering en de _Database.Executor_ klasse (welke in een aparte thread draait).
 
 ### Corrector
 
-Corrigeert ontbrekende of afwijkende data door middel van extrapolatie.
+Elke _Worker_ heeft een eigen instantie van de _Corrector_, welke - zoals de naam aanduidt - de missende waarden corrigeert. Met behulp van extrapolatie wordt een schatting gedaan van de ontbrekende waarde. Tevens wordt er gekeken of de temperatuur niet meer dan 20% afwijkt van de vorige waarde. Is dit wel het geval, dan wordt ook deze gecorrigeerd (naar het maximale percentage).
+
+Ook de _Corrector_ moet snel handelen, omdat deze draait in dezelfde thread als de bijbehorende _Worker_. Dit is mogelijk, omdat de corrector zeer efficiënt omgaat met de gegevens. Dit is behaald door  het vinden van de juiste record buffer grootte (het aantal records waar extrapolatie op wordt toegepast) en extreme code optimalatie.
 
 ### RecordBuffer
 
-Houdt een X aantal records vast, om deze één database query te kunnen inschieten (batch).
-
-_Bevat een instantie van: Database._
+Zodra de weerdata - in de vorm van een record object - is ingelezen en (waar nodig) gecorrigeerd, wordt deze doorgegeven aan een _RecordBuffer_. Elke _Worker_ heeft naast een eigen _Corrector_ ook een eigen _RecordBuffer_, waarin honderd tot tweehonderd record objecten worden vastgehouden en in een batch worden ingeschoten. Dit inschieten wordt gedaan met behulp van een _Database.Executor_. Dit batchen van "INSERT" queries vergroot de verwerkingssnelheid van de applicatie in grootte mate.
 
 ### Record
 
-Helper voor waarden in een record object. voor het bepalen van missende waarden en het omzetten naar een database "INSERT" query.
+De _Record_ klasse dient voornamelijk als hulpmiddel bij gebruik van een record object. De ingelezen weerdata wordt namelijk niet omgezet naar een klasseinstantie, maar wordt in een Object array gezet. Dit is zeer lichtgewicht, waardoor er enkel een hulpmiddel nodig is voor het defineren van de indexen van de array (welke sleutel welke waarde representeert).
+
+Tevens biedt deze klasse de mogelijkheid de missende waarde van een record object te bepalen en een record object om te zetten naar een database "INSERT" query. Op deze manier wordt alle logica intern gehouden, waardoor de applicatie code netjes blijft en andere klassen geen kennis hoeven te hebben van het record object. Met uitzondering van het ophalen van een waarde (bijvoorbeeld `record[ Record.WNDDIR ]`) en het instellen van een waarde (bijvoorbeeld `record[ Record.WNDDIR ] = value;`).
 
 ---
 
