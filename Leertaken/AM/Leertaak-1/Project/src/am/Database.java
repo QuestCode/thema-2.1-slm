@@ -6,12 +6,16 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.SQLWarning;
+import java.util.concurrent.*;
 
 public class Database {
 	/**
 	 * Variables
 	 *******************************************************/
 	private Connection connection;
+	private Executor[] executors;
+	private Thread[] executorThreads;
+	private int lastExecutor;
 
 	private String query = "INSERT INTO `measurement` (`STN`,`DATE`,`TIME`,`TEMP`,"
 		+ "`DEWP`,`STP`,`SLP`,`VISIB`,`WDSP`,`PRCP`,`SNDP`,`FRSHTT`,`CLDC`,`WNDDIR`)"
@@ -33,6 +37,24 @@ public class Database {
 			this.connection.setAutoCommit( false );
 
 			System.out.println( "[Database] Connected to " + host + ":" + port );
+
+			// set last executor index
+			this.lastExecutor = 0;
+
+			// Create executorPool
+			this.executors = new Executor[1000];
+			this.executorThreads = new Thread[1000];
+
+			Thread t;
+			Executor e;
+			for(int i = 0; i < 1000; i++) {
+				e = new Executor( this.connection );
+				t = new Thread( e );
+				t.start();
+
+				this.executors[i] = e;
+				this.executorThreads[i] = t;
+			}
 		}
 		catch( Exception e ) {
 			// Print error
@@ -76,6 +98,12 @@ public class Database {
 		}
 	}
 
+	public synchronized void interrupt() {
+		for(int i = 0; i < 1000; i++) {
+			this.executors[i].stop();
+		}
+	}
+
 	/**
 	 * Querying
 	 *******************************************************/
@@ -107,9 +135,13 @@ public class Database {
 			++this.queryCount;
 
 			// Execute query
-			Thread t = new Thread( new Database.Executor( this.connection, query ) );
-			t.start();
-			System.gc();
+			this.executors[this.lastExecutor].setQuery( query );
+
+			this.lastExecutor++;
+
+			if(this.lastExecutor >= 1000) {
+				this.lastExecutor = 0;
+			}
 
 			return true;
 		}
@@ -124,50 +156,74 @@ public class Database {
 
 		private Connection connection;
 		private String query;
+		private boolean running;
 
-		public Executor( Connection connection, String query ) {
+		public Executor( Connection connection ) {
 			this.connection = connection;
-			this.query      = query;
+			this.running = true;
+		}
+
+		public void setQuery( String query ) {
+			this.query = query;
+		}
+
+		public void stop() {
+			this.running = false;
 		}
 
 		public void run() {
-			CallableStatement statement;
-			SQLWarning warning;
+			while( this.running ) {
+				while( this.running && this.query == null ) {
+					try {
+						Thread.sleep(100);
+					}
+					catch( Exception e ) {
 
-			try {
-				// Execute query
-				statement = this.connection.prepareCall( this.query );
-
-				if( ! statement.execute() ) {
-					// Handle warnings
-					warning = statement.getWarnings();
-
-					if( warning != null ) {
-						// Print warning(s)
-						System.err.println( warning );
-						warning.printStackTrace();
 					}
 				}
 
-				this.connection.commit();
+				if( this.query != null ) {
+					CallableStatement statement;
+					SQLWarning warning;
 
-				// Handle warnings
-				warning = this.connection.getWarnings();
+					try {
+						// Execute query
+						statement = this.connection.prepareCall( this.query );
 
-				if( warning != null ) {
-					// Print warning(s)
-					System.err.println( warning );
-					warning.printStackTrace();
+						if( ! statement.execute() ) {
+							// Handle warnings
+							warning = statement.getWarnings();
+
+							if( warning != null ) {
+								// Print warning(s)
+								System.err.println( warning );
+								warning.printStackTrace();
+							}
+						}
+
+						this.connection.commit();
+
+						// Handle warnings
+						warning = this.connection.getWarnings();
+
+						if( warning != null ) {
+							// Print warning(s)
+							System.err.println( warning );
+							warning.printStackTrace();
+						}
+					}
+					catch( SQLException e ) {
+						// Print error
+						e.printStackTrace();
+					}
+					finally {
+						// Clean up
+						statement  = null;
+						warning    = null;
+						this.query = null;
+						System.gc();
+					}
 				}
-			}
-			catch( SQLException e ) {
-				// Print error
-				e.printStackTrace();
-			}
-			finally {
-				// Clean up
-				statement = null;
-				warning   = null;
 			}
 		}
 	}

@@ -51,7 +51,7 @@
 	<target name="run" depends="compile">
 		<java classname="${main-class}" fork="true">
 			<jvmarg value="-XX:-UseGCOverheadLimit" />
-			<jvmarg value="-Xmx1200m" />
+			<jvmarg value="-Xmx1512m" />
 			<classpath>
 				<pathelement location="${dir.classes}" />
 				<path refid="lib-classpath" />

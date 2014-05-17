@@ -11,7 +11,7 @@ import am.Server;
 import am.Worker;
 
 public class Runner {
-	private int runtime = 300; // seconds
+	private int runtime = 600; // seconds
 
 	/**
 	 * Bootstrap
@@ -37,8 +37,8 @@ public class Runner {
 		serverThread.start();
 
 		// Set query buffer size
-		RecordBuffer.MIN_BUFFER_SIZE = 300;
-		RecordBuffer.MAX_BUFFER_SIZE = 1500;
+		RecordBuffer.MIN_BUFFER_SIZE = 1000;
+		RecordBuffer.MAX_BUFFER_SIZE = 2500;
 
 		// Set corrector cache size
 		Corrector.CACHE_SIZE = 4;
@@ -61,13 +61,13 @@ public class Runner {
 
 			// Stop
 			server.interrupt();
+			database.interrupt();
 
 			// Block until gracefully terminated
 			while( threadBean.getThreadCount() > 10 ) {
-				// System.out.println( "[Runner] Thread count: " + threadBean.getThreadCount() );
+				System.out.println( "[Runner] Thread count: " + threadBean.getThreadCount() );
 				Thread.sleep( 500 ); 
 			}
-
 			long endTime = System.nanoTime();
 
 			// Get total row count
@@ -110,11 +110,15 @@ public class Runner {
 				+ "Efficiency        : " + String.format( "%.2f", ( (float) rowCount / Math.round( workerCount * 10 * this.runtime ) ) * 100 ) + " %\n"
 				+ "---------------------\n"
 			);
+
 		}
 		catch( Exception e ) {
 			// Print error
 			System.err.println( e );
 			e.printStackTrace();
+		}
+		finally {
+			System.exit(0);
 		}
 	}
 }
