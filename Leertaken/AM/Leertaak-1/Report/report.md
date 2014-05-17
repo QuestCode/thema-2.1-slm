@@ -124,7 +124,7 @@ Tevens biedt deze klasse de mogelijkheid de missende waarde van een record objec
 
 # Stresstest resultaten
 
-De stress is meerdere malen uitgevoerd met een doorloop tijd van 30 seconden. De resultaten hiervan zijn als volgt:
+De stresstest is meerdere malen uitgevoerd met een doorloop tijd van 30 seconden. De resultaten hiervan zijn als volgt:
 
 | Clusters      | Geheugen  | Queries | Aantal records | Verwacht aantal records | Efficiëntie |
 | :------------ | :-------- | :------ | :------------- | :---------------------- | :---------- |
@@ -138,7 +138,7 @@ De stress is meerdere malen uitgevoerd met een doorloop tijd van 30 seconden. De
 
 De verwerkingssnelheid van de applicatie is hoog genoeg om alle 800 clusters die de generator kan simuleren af te handelen. De reden dat de efficiëntie boven 100% is omdat de workers niet direct worden gestopt en zo dus nog een klein beetje data kunnen ontvangen.
 
-Tijdens het uitvoeren van de stresstest verbruikt de applicatie ongeveer 50% cpu tijd, de MySQL database verbruikt slechts 5%. Qua geheugen gebruik zien we dat MySQL 1.5GB in beslag neemt en de applicatie 700MB. Verder schrijft de MySQL database ongeveer 4MB/s weg naar de harde schijven.
+Tijdens het uitvoeren van de stresstest verbruikt de applicatie ongeveer 50% cpu tijd, de MySQL database verbruikt slechts 5%. Qua geheugen gebruik zien we dat MySQL 1.5GB in beslag neemt en de applicatie 700MB. Verder schrijft de MySQL database ongeveer 4MB/s weg naar de hardeschijven.
 
 Uit een stresstest van een half uur kwamen de volgende getallen:
 
