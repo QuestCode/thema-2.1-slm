@@ -45,17 +45,19 @@ Onderstaand een toelichting op de verschillende programmaonderdelen. Met als eer
 
 In het bovenstaande figuur is te zien waar elk onderdeel verantwoordelijk voor is. Zowel de generator, applicatie, en de database werden gedraaid op één en dezelfde desktop PC. Deze PC heeft de volgende specificaties:
 
-	Besturingssysteem: Windows 8.1 Pro 64-bit
-	CPU: AMD Athlon(tm) X4 740 Quad Core Processor
-	Geheugen: 8.00GB Dual-Channel DDR3 @ 665MHz (9-9-9-24)
-	Moederboord: ASRock FM2A75 Pro4-M (CPUSocket)
-	Opslag: RAID 0 (3x 232GB Seagate ST3250318AS ATA Device)
+> <span style="display:inline-block;width:140px">Besturingssysteem:</span> Windows 8.1 Pro 64-bit
+> <span style="display:inline-block;width:140px">CPU:</span> AMD Athlon(tm) X4 740 Quad Core Processor
+> <span style="display:inline-block;width:140px">Geheugen:</span> 8.00GB Dual-Channel DDR3 @ 665MHz (9-9-9-24)
+> <span style="display:inline-block;width:140px">Moederboord:</span> ASRock FM2A75 Pro4-M (CPUSocket)
+> <span style="display:inline-block;width:140px">Opslag:</span> RAID 0 (3x 232GB Seagate ST3250318AS ATA Device)
 
 De __generator__ is door de Hanzehogeschool als uitvoerbaar `.jar`-bestand aangeleverd. Deze Java applicatie genereert (semi)willekeurge weerdata aan de hand van een aantal instellingen. Zo kon het aantal workers worden ingesteld, waarmee de server applicatie eenvoudig te stresstesten was.
 
 De bovengenoemde __applicatie__ is volledig zelf ontwikkeld. Hier lagen wel een aantal vereisten aan ten grondslag. Samengevat moest er een multithreaded Java applicatie worden gebouwd, die door middel van sockets een XML stream uitleest. De ingelezen gegevens moeten vervolgens worden omgezet naar een werkbaar data formaat. Ontbrekende data moest worden gecorrigeerd en de data moest worden opgeslagen in een RDBMS. De specifieke uitwerking van de applicatie zal nader worden toegelicht in paragraaf _Applicatie_.
 
 Voor opslag van de gegevens is er gekozen voor de bekende relationele database __MySQL__. Met name het makkelijke opzetten van deze database, en de uitgebreide online hulpmiddelen, heeft hier de doorslag in gegeven (ten opzichte van PostgreSQL).
+
+---
 
 ## Applicatie
 
