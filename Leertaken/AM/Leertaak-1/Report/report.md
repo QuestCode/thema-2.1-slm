@@ -13,6 +13,7 @@
 	- Infrastructuur
 	- Applicatie
 - Stresstest resultaten
+- Machine gebruik tijdens stresstesting
 - Bottlenecks
 	+ Trage invoerverwerking
 	+ Trage datacorrectie
@@ -159,11 +160,17 @@ Het aantal queries is drastisch gedaalt en daarmee is de efficientie weer op 100
 
 Te concluderen valt dat de grootste bottleneck momenteel nog de MySQL database is. Hoewel uiteindelijk deze toch de ruwweg 8000 records per seconde aan kan blijkt dit toch het punt te zijn waar het het eerste fout gaat. De vraag is hoe goed de MySQL database mee schaalt wanneer meer clusters worden gebruikt en wanneer de applicatie langer draait.
 
-## Machine resources tijdens stresstesting
+## Machine gebruik tijdens stresstesting
+
+Onderstaand schermafdrukken van respectievelijk het CPU-, geheugen-, en hardeschijfgebruik.
 
 <center>
   !["CPU usage"](Figures/cpu-usage.png "CPU usage")
+</center>
+<center>
   !["Memory usage"](Figures/memory-usage.png "Memory usage")
+</center>
+<center>
   !["Overall usage"](Figures/overall-usage.png "Overall usage")
 </center>
 
@@ -199,4 +206,8 @@ Het bufferen van queries om records in te schieten, om deze vervolgens per honde
 
 # Conclusie
 
-Het doel van 8000 records per seconde verwerken is uiteindelijk gehaald omdat er gefocust is op het scheiden van data en taken. Elk onderdeel van de applicatie is zoveel mogelijk zelfstandig gemaakt zodat deze niet op een ander onderdeel hoeft te wachten. Deze opzet heeft er voor gezorgd dat de applicatie een grote hoeveelheid data kan ontvangen, verwerken en op kan slaan in een database.
+De doel van de opdracht is het bepalen van bottlenecks in de applicatie, waardoor uiteindelijk het verwerken van 8000 records per seconde niet mogelijk zou moeten zijn. Er zijn veel punten die een bottleneck kunnen vormen, waaronder de hardware, het verwerken van data, het corrigeren van data, en het opslaan van de data in de database. Echter is er gebleken dat elk obstakel, door middel van de juiste optimalisaties, te overkomen is. Zo moest er voor elk onderdeel van de applicatie worden gekeken naar de mogelijke bottlenecks en waar hierin winst te behalen is. Met behulp van goede meetinstrumenten (zoals Java HProf en handmatig gemeten waarden) kon de kink in de kabel telkens relatief snel worden bepaald.
+
+Het doel van 8000 records per seconde verwerken is uiteindelijk gehaald. Hieraan ligt ten grondslag dat elk onderdeel van de applicatie is gescheiden (waaronder met behulp van multithreading), waardoor er een zo hoog mogelijk haalbare verwerkingssnelheid kon worden bereikt. Tevens bleek het gebruik van de juiste hardware (een quadcore desktop PC) noodzakelijk, omdat met het gebruik van laptops het maximaal gehaalde aantal clusters slechts 560 was.
+
+Desalniettemin is de database telkens de grootste bottleneck gebleken. Er moest hievoor grote hoeveelheden code worden geoptimaliseerd. Tevens kan er niet worden uitgesloten dat bij het langer draaien van de applicatie, de dataverwerkingssnelheid constant blijft. Het is goed mogelijk dat deze afneemt, doordat de database de invoer niet op tijd kan verwerken (door schrijfsnelheiden naar de hardeschijf en het intact houden van de referentiële integriteit).
