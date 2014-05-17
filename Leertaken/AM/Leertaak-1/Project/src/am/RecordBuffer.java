@@ -25,7 +25,7 @@ public class RecordBuffer {
 		// System.out.println( "[RecordBuffer] adding record: " + this.count );
 
 		// Apply a 0.1% chance to write when the min buffer size is exceeded
-		if( (this.count >= RecordBuffer.MIN_BUFFER_SIZE && Math.random() < 0.001) || (this.count >= RecordBuffer.MAX_BUFFER_SIZE) ) {
+		if( ( this.count >= RecordBuffer.MIN_BUFFER_SIZE && Math.random() < 0.001 ) || ( this.count >= RecordBuffer.MAX_BUFFER_SIZE ) ) {
 			this.write();
 		}
 	}
