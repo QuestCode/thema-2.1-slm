@@ -14,6 +14,11 @@
 	- Applicatie
 - Stresstest resultaten
 - Bottlenecks
+	+ Trage invoerverwerking
+	+ Trage datacorrectie
+	+ Efficiënt verwerken van weerdata
+	+ MySQL database
+	+ Batchen van queries
 - Conclusie
 
 ---
@@ -166,11 +171,31 @@ Te concluderen valt dat de grootste bottleneck momenteel nog de MySQL database i
 
 # Bottlenecks
 
-- Worker blocking
-- Slow Corrector
-- Efficient Parsen
-- MySQL
-- Query commiting
+Onderstaand worden de hindernissen beschreven die op het pad zijn gekomen tijdens het ontwikkel van de applicatie.
+
+## Trage invoerverwerking
+
+Door onvoldoende optimalisatie van de _Worker_ klasse, blokkeerde deze. Dit kwam doordat het corrigeren van ontbrekende data relatief lang duurde en het inschieten van de records in de database in dezelfde thread gebeurde, waardoor deze bleef wachten totdat de database query voltooid was. Hierdoor werd de invoer niet snel genoeg uitgelezen, wat het maximaal haalbare cluster verlaagde tot circa 120.
+
+## Trage datacorrectie
+
+Zoals in vorige paragraaf genoemd, werkte de _Corrector_ klasse in eerste instantie niet snel genoeg. Deze was niet geoptimaliseerd voor snelheid, waardoor er nog over een _ArrayList_ geïtereerd werd (in plaats van het vele malen snellere object array) en er onnodige `if/else` constructies aanwezig waren. Na een korte optimalisatieronde werden deze problemen verholpen, wat de applicatie circa 10% sneller maakte. Zo nam het corrigeren en inschieten van de weerdata eerst circa 90% van de applicatie CPU tijd in beslag, terwijl deze na het optimaliseren slechts rond de 80% kostte.
+
+## Efficiënt verwerken van weerdata
+
+Het verwerken van de XML data die wordt verzonden door de generator kan met behulp van een XML parser of door het gebruik van reguliere expressies. Deze twee methoden zijn traag vergeleken met het uitvoeren van een simpele substring. Elk datasegment is omringt door twee XML tags (bijvoorbeeld `<WNDDIR>` en `</WNDDIR>`), door de tekst na de eerste `>` en voor de laaste `<` eruit te knippen kan de, in dit geval, windrichting waarde worden uitgelezen.
+
+## MySQL database
+
+Een MySQL database is op zichzelf zeer efficiënt in het verwerken van grote hoeveelheden data, echter was een opdrachtvoorwaarde dat er referentiële integriteit werd afgedwongen. Wat inhoudt dat voor elk weerdata record dat wordt ingeschoten, er moet worden gecontroleerd of het bijbehorende station wel bestaat. Dit kost de nodige tijd, wat een bottleneck kan veroorzaken.
+
+Echter na het aan/uit zetten van de referentiële integriteit kon er worden geconcludeerd dat dit een kleinere impact heeft dan verwacht. Zo konden er (op een andere testmachine) met referentiële integriteit circa 160 clusters worden verwerkt, terwijl er circa 175 konden worden verwerkt zodra dit werd uitgezet.
+
+## Batchen van queries
+
+Het bufferen van queries om records in te schieten, om deze vervolgens per honderd of tweehonderd uit te voeren, scheelt bepaalde overhead. Denk hierbij aan het verwerken van de query, locken van de tabel, etc. Door het batchen van deze queries kon de applicatie circa acht keer meer data verwerken. Dit verschil is significant, ondanks dat het batchen de complexiteit van de applicate verhoogd.
+
+---
 
 # Conclusie
 
