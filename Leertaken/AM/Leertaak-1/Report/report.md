@@ -193,7 +193,7 @@ Echter na het aan/uit zetten van de referentiële integriteit kon er worden geco
 
 ## Batchen van queries
 
-Het bufferen van queries om records in te schieten, om deze vervolgens per honderd of tweehonderd uit te voeren, scheelt bepaalde overhead. Denk hierbij aan het verwerken van de query, locken van de tabel, etc. Door het batchen van deze queries kon de applicatie circa acht keer meer data verwerken. Dit verschil is significant, ondanks dat het batchen de complexiteit van de applicate verhoogd.
+Het bufferen van queries om records in te schieten, om deze vervolgens per honderd tot tweehonderd uit te voeren, scheelt bepaalde overhead. Bij het batchen en versturen van de queries zit een bepaalde willekeurigheid. Deze willekeurigheid moet er voor zorgen dat niet elke _RecordBuffer_ tegelijkertijd een batch verstuurde. Denk hierbij aan het verwerken van de query, locken van de tabel, etc. Door het batchen van deze queries kon de applicatie circa acht keer meer data verwerken. Dit verschil is significant, ondanks dat het batchen de complexiteit van de applicate verhoogd.
 
 ---
 
