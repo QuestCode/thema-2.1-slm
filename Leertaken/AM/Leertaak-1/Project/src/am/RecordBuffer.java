@@ -41,7 +41,7 @@ public class RecordBuffer {
 		this.database.insertValues( this.buffer.deleteCharAt( buffer.length() - 1 ).toString(), this.count );
 
 		// Empty buffer
-		this.buffer.delete(0, this.buffer.length());
+		this.buffer.delete( 0, this.buffer.length() );
 		this.count = 0;
 		System.gc();
 	}

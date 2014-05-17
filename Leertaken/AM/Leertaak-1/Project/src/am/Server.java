@@ -62,7 +62,7 @@ public class Server implements Runnable
 					// Create new Worker Thread
 					t = new Thread( new Worker( this.socket.accept(), this.database ) );
 
-					t.setPriority( Thread.MAX_PRIORITY );
+					// t.setPriority( Thread.MAX_PRIORITY );
 
 					// Add to pool and execute
 					this.workerPool.execute( t );

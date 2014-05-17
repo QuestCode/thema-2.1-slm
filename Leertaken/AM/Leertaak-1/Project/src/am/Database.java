@@ -1,6 +1,6 @@
 package am;
 
-import java.sql.CallableStatement;
+import java.sql.Statement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -12,6 +12,8 @@ public class Database {
 	/**
 	 * Variables
 	 *******************************************************/
+	public static int EXECUTORS = 200;
+
 	private Connection connection;
 	private Executor[] executors;
 	private Thread[] executorThreads;
@@ -42,14 +44,15 @@ public class Database {
 			this.lastExecutor = 0;
 
 			// Create executorPool
-			this.executors = new Executor[1000];
-			this.executorThreads = new Thread[1000];
+			this.executors = new Executor[EXECUTORS];
+			this.executorThreads = new Thread[EXECUTORS];
 
 			Thread t;
 			Executor e;
-			for(int i = 0; i < 1000; i++) {
+			for(int i = 0; i < EXECUTORS; i++) {
 				e = new Executor( this.connection );
 				t = new Thread( e );
+				t.setPriority( Thread.MAX_PRIORITY );
 				t.start();
 
 				this.executors[i] = e;
@@ -99,7 +102,7 @@ public class Database {
 	}
 
 	public synchronized void interrupt() {
-		for(int i = 0; i < 1000; i++) {
+		for(int i = 0; i < EXECUTORS; i++) {
 			this.executors[i].stop();
 		}
 	}
@@ -135,11 +138,14 @@ public class Database {
 			++this.queryCount;
 
 			// Execute query
+			if(this.executors[this.lastExecutor].query != null) {
+				System.out.println("[Database] Executor not ready yet.");
+			}
 			this.executors[this.lastExecutor].setQuery( query );
 
 			this.lastExecutor++;
 
-			if(this.lastExecutor >= 1000) {
+			if(this.lastExecutor >= EXECUTORS) {
 				this.lastExecutor = 0;
 			}
 
@@ -155,7 +161,7 @@ public class Database {
 	private class Executor implements Runnable {
 
 		private Connection connection;
-		private String query;
+		public String query;
 		private boolean running;
 
 		public Executor( Connection connection ) {
@@ -172,58 +178,37 @@ public class Database {
 		}
 
 		public void run() {
-			while( this.running ) {
-				while( this.running && this.query == null ) {
-					try {
-						Thread.sleep(100);
-					}
-					catch( Exception e ) {
+			try {
+				Statement statement = this.connection.createStatement();
 
-					}
-				}
-
-				if( this.query != null ) {
-					CallableStatement statement;
-					SQLWarning warning;
-
-					try {
-						// Execute query
-						statement = this.connection.prepareCall( this.query );
-
-						if( ! statement.execute() ) {
-							// Handle warnings
-							warning = statement.getWarnings();
-
-							if( warning != null ) {
-								// Print warning(s)
-								System.err.println( warning );
-								warning.printStackTrace();
-							}
+				while( this.running ) {
+					while( this.running && this.query == null ) {
+						try {
+							Thread.sleep(100);
 						}
+						catch( Exception e ) {
 
-						this.connection.commit();
-
-						// Handle warnings
-						warning = this.connection.getWarnings();
-
-						if( warning != null ) {
-							// Print warning(s)
-							System.err.println( warning );
-							warning.printStackTrace();
 						}
 					}
-					catch( SQLException e ) {
-						// Print error
-						e.printStackTrace();
-					}
-					finally {
-						// Clean up
-						statement  = null;
-						warning    = null;
-						this.query = null;
-						System.gc();
+
+					if( this.query != null ) {
+						try {
+							// Execute query
+							statement.executeUpdate( this.query );
+						}
+						catch( SQLException e ) {
+							// Print error
+							e.printStackTrace();
+						}
+						finally {
+							// Clean up
+							this.query = null;
+						}
 					}
 				}
+			}
+			catch(SQLException e) {
+				e.printStackTrace();
 			}
 		}
 	}

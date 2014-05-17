@@ -11,7 +11,7 @@ import am.Server;
 import am.Worker;
 
 public class Runner {
-	private int runtime = 600; // seconds
+	private int runtime = 10; // seconds
 
 	/**
 	 * Bootstrap
@@ -29,6 +29,17 @@ public class Runner {
 	 */
 
 	public Runner() {
+
+		// Set query buffer size
+		RecordBuffer.MIN_BUFFER_SIZE = 200;
+		RecordBuffer.MAX_BUFFER_SIZE = 1000;
+
+		// Set corrector cache size
+		Corrector.CACHE_SIZE = 4;
+
+		// Set database executor amount
+		Database.EXECUTORS = 2000;
+
 		Server server           = new Server();
 		Thread serverThread     = new Thread( server );
 		ThreadMXBean threadBean = ManagementFactory.getThreadMXBean();
@@ -36,12 +47,15 @@ public class Runner {
 
 		serverThread.start();
 
-		// Set query buffer size
-		RecordBuffer.MIN_BUFFER_SIZE = 1000;
-		RecordBuffer.MAX_BUFFER_SIZE = 2500;
-
-		// Set corrector cache size
-		Corrector.CACHE_SIZE = 4;
+		System.out.println(
+				  "--- CONFIGURATION ---\n"
+				+ "Runtime            : " + this.runtime + " seconds\n"
+				+ "Min record buffer  : " + RecordBuffer.MIN_BUFFER_SIZE + "\n"
+				+ "Max record buffer  : " + RecordBuffer.MAX_BUFFER_SIZE + "\n"
+				+ "Cache size         : " + Corrector.CACHE_SIZE + "\n"
+				+ "Database executors : " + Database.EXECUTORS + "\n"
+				+ "---------------------"
+		);
 
 		// Wait until notified
 		try {
@@ -65,7 +79,7 @@ public class Runner {
 
 			// Block until gracefully terminated
 			while( threadBean.getThreadCount() > 10 ) {
-				System.out.println( "[Runner] Thread count: " + threadBean.getThreadCount() );
+				// System.out.println( "[Runner] Thread count: " + threadBean.getThreadCount() );
 				Thread.sleep( 500 ); 
 			}
 			long endTime = System.nanoTime();
@@ -92,23 +106,24 @@ public class Runner {
 
 			System.out.print(
 				  "--- CONFIGURATION ---\n"
-				+ "Runtime           : " + this.runtime + " seconds\n"
-				+ "Min record buffer : " + RecordBuffer.MIN_BUFFER_SIZE + "\n"
-				+ "Max record buffer : " + RecordBuffer.MAX_BUFFER_SIZE + "\n"
-				+ "Cache size        : " + Corrector.CACHE_SIZE + "\n"
+				+ "Runtime            : " + this.runtime + " seconds\n"
+				+ "Min record buffer  : " + RecordBuffer.MIN_BUFFER_SIZE + "\n"
+				+ "Max record buffer  : " + RecordBuffer.MAX_BUFFER_SIZE + "\n"
+				+ "Cache size         : " + Corrector.CACHE_SIZE + "\n"
+				+ "Database executors : " + Database.EXECUTORS + "\n"
 				+ "------- USAGE -------\n"
-				+ "Date              : " + new SimpleDateFormat( "yyyy/MM/dd 'at' HH:mm:ss" ).format( new Date() ) + "\n"
-				+ "Actual time       : " + actualTime + " seconds\n"
-				+ "Memory            : " + String.format( "%.2f", (float) memory / 1024 / 1024 ) + " MB\n"
-				+ "Threads           : " + threadCount + "\n"
-				+ "Workers           : " + workerCount + "\n"
-				+ "Queries           : " + queryCount + "\n"
-				+ "Records           : " + database.getInsertedCount() + "\n"
-				+ "In database       : " + rowCount + "\n"
-				+ "Expected (1)      : " + Math.round( workerCount * 10 * this.runtime ) + "\n"
-				+ "Expected (2)      : " + expectedRecordCount + "\n"
-				+ "Efficiency        : " + String.format( "%.2f", ( (float) rowCount / Math.round( workerCount * 10 * this.runtime ) ) * 100 ) + " %\n"
-				+ "---------------------\n"
+				+ "Date               : " + new SimpleDateFormat( "yyyy/MM/dd 'at' HH:mm:ss" ).format( new Date() ) + "\n"
+				+ "Actual time        : " + actualTime + " seconds\n"
+				+ "Memory             : " + String.format( "%.2f", (float) memory / 1024 / 1024 ) + " MB\n"
+				+ "Threads            : " + threadCount + "\n"
+				+ "Workers            : " + workerCount + "\n"
+				+ "Queries            : " + queryCount + "\n"
+				+ "Records            : " + database.getInsertedCount() + "\n"
+				+ "In database        : " + rowCount + "\n"
+				+ "Expected (1)       : " + Math.round( workerCount * 10 * this.runtime ) + "\n"
+				+ "Expected (2)       : " + expectedRecordCount + "\n"
+				+ "Efficiency         : " + String.format( "%.2f", ( (float) rowCount / Math.round( workerCount * 10 * this.runtime ) ) * 100 ) + " %\n"
+				+ "---------------------"
 			);
 
 		}
