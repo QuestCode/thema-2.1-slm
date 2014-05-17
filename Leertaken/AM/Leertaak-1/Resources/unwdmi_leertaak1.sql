@@ -36,4 +36,4 @@ CREATE TABLE `measurement` (
   `wnddir` int(10) NOT NULL,
   KEY `FK_measurement_stations` (`stn`),
   CONSTRAINT `FK_measurement_stations` FOREIGN KEY (`stn`) REFERENCES `stations` (`stn`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=ascii;
