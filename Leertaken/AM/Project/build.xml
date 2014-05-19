@@ -85,6 +85,14 @@
 			<arg value="unwdmi" />
 			<arg value="../Resources/db.setup.js" />
 		</exec>
+
+		<exec executable="mongoimport">
+			<arg line="--db unwdmi" />
+			<arg line="--collection stations" />
+			<arg line="--type json" />
+			<arg line="--file ../Resources/unwdmi_nosql_stations_data.json" />
+			<arg line="--jsonArray" />
+		</exec>
 	</target>
 
 	<target name="db:reset">
@@ -93,34 +101,6 @@
 			<arg value="../Resources/db.reset.js" />
 		</exec>
 	</target>
-<!-- 
-	<target name="db:setup">
-		<sql driver="${sql.driver}"
-			url="${sql.url}"
-			userid="${sql.user}"
-			password="${sql.pass}"
-			classpath="${sql.classpath}"
-			src="../Resources/unwdmi_mysql.sql"/>
-
-		<sql driver="${sql.driver}"
-			url="${sql.url}"
-			userid="${sql.user}"
-			password="${sql.pass}"
-			classpath="${sql.classpath}"
-			src="../Resources/unwdmi_leertaak1.sql"/>
-	</target>
- --><!-- 
-	<target name="db:reset">
-		<sql driver="${sql.driver}"
-			url="${sql.url}"
-			userid="${sql.user}"
-			password="${sql.pass}"
-			classpath="${sql.classpath}">
-			CREATE DATABASE IF NOT EXISTS unwdmi;
-			USE unwdmi;
-			TRUNCATE TABLE `measurement`;
-		</sql>
-	</target> -->
 
 	<target name="generate">
 		<exec executable="java" newenvironment="true" dir="../Resources">
