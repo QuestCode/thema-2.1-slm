@@ -19,6 +19,10 @@ public class BankImpl implements Bank {
     CustomerResources customer = customers.get(threadNum);
     boolean allowRequest = true;
 
+    if( !isSafeState( threadNum, request ) ) {
+      return false;
+    }
+
     for(int i = 0; i < resources.length; i++) {
       if(request[i] > resources[i] || 
         request[i] > customer.max[i] || 
@@ -76,8 +80,55 @@ public class BankImpl implements Bank {
     }
   }
 
-  private boolean isSafeState( int[] resources ) {
+  private boolean isSafeState( int threadNum, int[] request ) {
+    CustomerResources customer = customers.get(threadNum).clone();
+    int[] resources = this.resources.clone();
+    boolean[] finish = new boolean[customers.size()];
+    
+    for(int i = 0; i < resources.length; i++) {
+      if( request[i] > resources[i] ) {
+        return false;
+      }
+    }
 
+    for(int i = 0; i < request.length; i++) {
+      resources[i] -= request[i];
+      customer.allocated[i] += request[i];
+    }
+
+    for(int i = 0; i < this.customers.size(); i++) {
+      for(int j = 0; j < this.customers.size(); j++) {
+        
+        if( finish[j] ) {
+          continue;
+        }
+
+        boolean canFinish = true;
+
+        for(int k = 0; k < resources.length; k++) {
+          if(customer.max[k] - customer.allocated[k] > resources[k]) {
+            canFinish = false;
+            break;
+          }
+        }
+
+        if(canFinish) {
+          finish[j] = true;
+
+          for(int k = 0; k < resources.length; k++) {
+            resources[k] += customer.allocated[k];
+          }
+        }
+      }
+    }
+
+    for(int i = 0; i < customers.size(); i++) {
+      if(!finish[i]) {
+        return false;
+      }
+    }
+
+    return true;
   }
 }
 
@@ -93,6 +144,14 @@ class CustomerResources {
     this.max = max;
     this.allocated = new int[max.length];
     this.finished = false;
+  }
+
+  public CustomerResources clone() {
+    CustomerResources customer = new CustomerResources(id, max.clone());
+    customer.allocated = allocated.clone();
+    customer.finished = finished;
+
+    return customer;
   }
   
 }
