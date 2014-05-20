@@ -1,11 +1,12 @@
 package am;
 
+// http://api.mongodb.org/java/current/index.html
 import java.net.ServerSocket;
 import java.io.IOException;
-import java.sql.SQLException;
+
 import java.util.concurrent.Executors;
 import java.util.concurrent.ExecutorService;
-import java.util.concurrent.TimeUnit;
+import static java.util.concurrent.TimeUnit.SECONDS;
 
 public class Server implements Runnable
 {
@@ -18,15 +19,14 @@ public class Server implements Runnable
 		this.workerPool = Executors.newFixedThreadPool( 850 );
 
 		// Connect to database
-		this.database = new Database( "localhost", 3306, "unwdmi", "root", "banaan" );
+		this.database = new Database( "localhost", 27017, "unwdmi" );
 
 		// Clear measurements table
-		if( this.database.execute( "TRUNCATE TABLE `measurement`" ) ) {
-			System.out.println( "[Server] Measurements cleared." );
-		}
-		else {
-			throw new RuntimeException( "[Server] Error clearing measurements!" );
-		}
+		System.out.println( this.database.getActualQueryCount() );
+		this.database.clearMeasurements();
+		System.out.println( this.database.getActualQueryCount() );
+
+		System.out.println( "[Server] Measurements cleared." );
 	}
 
 	public Database getDatabase() {
@@ -44,7 +44,7 @@ public class Server implements Runnable
 
 		// Block until shut down
 		try {
-			this.workerPool.awaitTermination( 600, TimeUnit.SECONDS );
+			this.workerPool.awaitTermination( 600, SECONDS );
 		}
 		catch( InterruptedException e ) {
 			e.printStackTrace();
@@ -53,9 +53,8 @@ public class Server implements Runnable
 		// Shutdown executors and release locks
 		try {
 			this.database.shutdownExecutors();
-			this.database.commit();
 		}
-		catch( SQLException e ) {
+		catch( Exception e ) {
 			e.printStackTrace();
 		}
 	}

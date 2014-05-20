@@ -100,6 +100,7 @@
 			<arg value="unwdmi" />
 			<arg value="../Resources/db.reset.js" />
 		</exec>
+		<antcall target="db:setup"/>
 	</target>
 
 	<target name="generate">

@@ -2,7 +2,6 @@ package am;
 
 import java.lang.management.ManagementFactory;
 import java.lang.management.ThreadMXBean;
-import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -31,8 +30,7 @@ public class Runner {
 	public Runner() {
 
 		// Set query buffer size
-		RecordBuffer.MIN_BUFFER_SIZE = 400;
-		RecordBuffer.MAX_BUFFER_SIZE = 1200;
+		RecordBuffer.BUFFER_SIZE = 300;
 
 		// Set corrector cache size
 		Corrector.CACHE_SIZE = 4;
@@ -47,8 +45,7 @@ public class Runner {
 		System.out.println(
 				  "--- CONFIGURATION ---\n"
 				+ "Runtime            : " + this.runtime + " seconds\n"
-				+ "Min record buffer  : " + RecordBuffer.MIN_BUFFER_SIZE + "\n"
-				+ "Max record buffer  : " + RecordBuffer.MAX_BUFFER_SIZE + "\n"
+				+ "Record buffer size : " + RecordBuffer.BUFFER_SIZE + "\n"
 				+ "Cache size         : " + Corrector.CACHE_SIZE + "\n"
 				+ "Date               : " + new SimpleDateFormat( "yyyy/MM/dd 'at' HH:mm:ss" ).format( new Date() ) + "\n"
 				+ "---------------------"
@@ -82,13 +79,7 @@ public class Runner {
 			long endTime = System.nanoTime();
 
 			// Get total row count
-			ResultSet result = database.query( "SELECT COUNT(*) as total FROM measurement LIMIT 1" );
-			int rowCount     = -1;
-
-			if( result != null ) {
-				result.next();
-				rowCount = result.getInt( "total" );
-			}
+			long rowCount = database.getActualQueryCount();
 
 			// Close database connection
 			System.out.println( "[Runner] Closing database connection.." );
@@ -97,15 +88,14 @@ public class Runner {
 
 			// Output information
 			float actualTime        = (float) ( endTime - startTime ) / 1000000000;
-			int queryCount          = database.getQueryCount();
+			long queryCount         = database.getQueryCount();
 			int workerCount         = Worker.ID;
 			int expectedRecordCount = Math.round( workerCount * 10 * actualTime );
 
 			System.out.print(
 				  "--- CONFIGURATION ---\n"
 				+ "Runtime            : " + this.runtime + " seconds\n"
-				+ "Min record buffer  : " + RecordBuffer.MIN_BUFFER_SIZE + "\n"
-				+ "Max record buffer  : " + RecordBuffer.MAX_BUFFER_SIZE + "\n"
+				+ "Record buffer size : " + RecordBuffer.BUFFER_SIZE + "\n"
 				+ "Cache size         : " + Corrector.CACHE_SIZE + "\n"
 				+ "------- USAGE -------\n"
 				+ "Date               : " + new SimpleDateFormat( "yyyy/MM/dd 'at' HH:mm:ss" ).format( new Date() ) + "\n"

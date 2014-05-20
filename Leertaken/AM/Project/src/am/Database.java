@@ -1,39 +1,49 @@
 package am;
 
-import java.sql.Statement;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import com.mongodb.BasicDBObject;
+import com.mongodb.BulkWriteOperation;
+import com.mongodb.BulkWriteResult;
+import com.mongodb.Cursor;
+import com.mongodb.DB;
+import com.mongodb.DBCollection;
+import com.mongodb.DBCursor;
+import com.mongodb.DBObject;
+import com.mongodb.MongoClient;
+import com.mongodb.WriteConcern;
+import com.mongodb.ParallelScanOptions;
+
+import java.util.List;
+import java.util.Set;
+
 import java.util.concurrent.Executors;
 import java.util.concurrent.ExecutorService;
+import static java.util.concurrent.TimeUnit.SECONDS;
 
 public class Database {
 	/**
 	 * Variables
 	 *******************************************************/
-	private Connection connection;
+	private MongoClient mongoClient;
+	private DB database;
+	private DBCollection collection;
 	private ExecutorService executorPool;
-	private int queriesPerCommit = 15;
 
-	private String query = "INSERT INTO `measurement` (`STN`,`DATE`,`TIME`,`TEMP`,"
-		+ "`DEWP`,`STP`,`SLP`,`VISIB`,`WDSP`,`PRCP`,`SNDP`,`FRSHTT`,`CLDC`,`WNDDIR`)"
-		+ " VALUES";
-
-	private int queryCount        = 0;
-	private Integer insertedCount = 0;
+	private long queryCount    = 0;
+	private Long insertedCount = 0L;
 
 	/**
 	 * Constructor(s)
 	 *******************************************************/
-	public Database( String host, int port, String name, String username, String password ) {
+	public Database( String host, int port, String name ) {
 		try {
-			// Register driver
-			DriverManager.registerDriver( new com.mysql.jdbc.Driver() );
+			this.mongoClient = new MongoClient( host, port );
+
+			this.mongoClient.setWriteConcern( WriteConcern.UNACKNOWLEDGED );
 
 			// Connect to database
-			this.connection = DriverManager.getConnection( "jdbc:mysql://" + host + ":" + port + "/" + name, username, password );
-			this.connection.setAutoCommit( false );
+			this.database = mongoClient.getDB( name );
+
+			this.collection = this.database.getCollection( "measurements" );
 
 			System.out.println( "[Database] Connected to " + host + ":" + port );
 
@@ -49,80 +59,61 @@ public class Database {
 	/**
 	 * Getters
 	 *******************************************************/
-	public int getQueryCount() {
+	public DBCollection getCollection() {
+		return this.collection;
+	}
+
+	public long getQueryCount() {
 		return this.queryCount;
 	}
 
-	public int getInsertedCount() {
+	public long getActualQueryCount() {
+		// Get actual measurement count
+		return this.collection.count();
+	}
+
+	public long getInsertedCount() {
 		return this.insertedCount;
+	}
+
+	/**
+	 * Setters
+	 *******************************************************/
+	public void increaseInsertedCount( long count ) {
+		synchronized( this.insertedCount ) {
+			this.insertedCount += count;
+		}
 	}
 
 	/**
 	 * Connection methods
 	 *******************************************************/
-	public synchronized boolean close() {
-		try {
-			// Closed already
-			if( this.connection.isClosed() )
-				return true;
+	public void clearMeasurements() {
+		// Empty measurements document
+		this.collection.remove( new BasicDBObject() );
+	}
 
-			// Close connection
-			this.connection.close();
-
-			// Success
-			return true;
-		}
-		catch( SQLException e ) {
-			// Failure
-			return false;
-		}
+	public void close() {
+		// Close connection
+		this.mongoClient.close();
 	}
 
 	/**
 	 * Querying
 	 *******************************************************/
-	public void insertValues( String values, int count ) {
-		if( this.execute( this.query + values ) ) {
-			synchronized( this.insertedCount ) {
-				this.insertedCount += count;
-			}
-		}
-		else {
-			System.err.println( "[Database] Error inserting record batch." );
-		}
-	}
-
-	public synchronized boolean execute( String query ) {
+	public void insertValues( BasicDBObject[] values ) {
 		try {
-			// Closed already
-			if( this.connection.isClosed() ) {
-				System.err.println( "[Database] Can't execute because database is closed." );
-
-				return false;
-			}
-
 			// Increment counter
 			++this.queryCount;
 
 			// Execute query
-			this.executorPool.submit( new Executor( this.connection, query ) );
-
-			// Commit every X queries
-			if( this.queryCount % this.queriesPerCommit == 0 ) {
-				this.commit();
-			}
-
-			return true;
+			this.executorPool.submit( new Executor( this, values ) );
 		}
-		catch( SQLException e ) {
+		catch( Exception e ) {
+			System.err.println( "[Database] Error inserting record batch." );
+
 			e.printStackTrace();
-
-			return false;
 		}
-	}
-
-	public void commit() throws SQLException {
-		this.connection.commit();
 	}
 
 	public void shutdownExecutors() {
@@ -131,45 +122,35 @@ public class Database {
 
 	protected class Executor implements Runnable {
 
-		private Connection connection;
-		public String query;
+		private Database database;
+		public BasicDBObject values[];
 
-		public Executor( Connection connection, String query ) {
-			this.connection = connection;
-			this.query      = query;
+		public Executor( Database database, BasicDBObject[] values ) {
+			this.database = database;
+			this.values   = values;
 		}
 
 		public void run() {
+			int i = 0;
+			DBCollection collection = database.getCollection();
+
 			try {
-				this.connection.createStatement().executeUpdate( this.query );
+
+				for( ; i < values.length; ++i ) {
+					collection.insert( values[i] );
+				}
+
+				++i;
 			}
-			catch( SQLException e ) {
+			catch( Exception e ) {
 				e.printStackTrace();
 			}
-		}
-	}
+			finally {
+				this.database.increaseInsertedCount( Long.valueOf( i ) );
 
-	public synchronized ResultSet query( String query ) {
-		try {
-			// Closed already
-			if( this.connection.isClosed() ) {
-				System.err.println( "[Database] Can't query because database is closed." );
-
-				return null;
+				// Clean up
+				collection = null;
 			}
-
-			// Increment counter
-			++this.queryCount;
-
-			// Execute query
-			return this.connection.createStatement().executeQuery( query );
-		}
-		catch( SQLException e ) {
-			// Print error
-			e.printStackTrace();
-
-			// Failure
-			return null;
 		}
 	}
 }

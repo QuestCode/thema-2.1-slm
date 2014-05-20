@@ -1,7 +1,6 @@
 package am;
 
-import java.lang.StringBuilder;
-import java.util.ArrayList;
+import com.mongodb.BasicDBObject;
 
 public class Record {
 
@@ -58,22 +57,21 @@ public class Record {
 	 * @param Object[] record
 	 * @param StringBuilder builder
 	 */
-	public static void appendToStringBuilder( Object[] record, StringBuilder builder ) {
-		builder
-			.append( "(" + record[ Record.STN ]   +  "," )
-			.append( "'" + record[ Record.DATE ]  + "'," )
-			.append( "'" + record[ Record.TIME ]  + "'," )
-			.append( "'" + record[ Record.TEMP ]  + "'," )
-			.append( "'" + record[ Record.DEWP ]  + "'," )
-			.append( "'" + record[ Record.STP ]   + "'," )
-			.append( "'" + record[ Record.SLP ]   + "'," )
-			.append( "'" + record[ Record.VISIB ] + "'," )
-			.append( "'" + record[ Record.WDSP ]  + "'," )
-			.append( "'" + record[ Record.PRCP ]  + "'," )
-			.append( "'" + record[ Record.SNDP ]  + "'," )
-			.append( record[ Record.FRSHTT ] + "," )
-			.append( "'" + record[ Record.CLDC ]  + "'," )
-			.append( record[ Record.WNDDIR ] + ")," )
+	public static BasicDBObject toDBObject( Object[] record ) {
+		return new BasicDBObject( "stn", record[ Record.STN ].toString() )
+			.append( "date"  , record[ Record.DATE   ].toString() )
+			.append( "time"  , record[ Record.TIME   ].toString() )
+			.append( "temp"  , record[ Record.TEMP   ].toString() )
+			.append( "dewp"  , record[ Record.DEWP   ].toString() )
+			.append( "stp"   , record[ Record.STP    ].toString() )
+			.append( "slp"   , record[ Record.SLP    ].toString() )
+			.append( "visib" , record[ Record.VISIB  ].toString() )
+			.append( "wdsp"  , record[ Record.WDSP   ].toString() )
+			.append( "prcp"  , record[ Record.PRCP   ].toString() )
+			.append( "sndp"  , record[ Record.SNDP   ].toString() )
+			.append( "frshtt", record[ Record.FRSHTT ].toString() )
+			.append( "cldc"  , record[ Record.CLDC   ].toString() )
+			.append( "wnddir", record[ Record.WNDDIR ].toString() )
 			;
 	}
 }
