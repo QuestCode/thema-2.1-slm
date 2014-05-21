@@ -1,3 +1,5 @@
+package src;
+
 public class Customer implements Runnable
 {
         public static final int COUNT = 5;	// the number of threads

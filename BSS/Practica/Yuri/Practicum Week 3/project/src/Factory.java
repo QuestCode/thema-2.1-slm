@@ -1,4 +1,4 @@
-/**
+package src; /**
  * A factory class that creates (1) the bank and (2) each customer at the bank.
  *
  * Usage:
@@ -28,7 +28,7 @@ public class Factory
 		// read initial values for maximum array 
 		String line;
 		try {
-			BufferedReader inFile = new BufferedReader(new FileReader("infile.txt"));
+			BufferedReader inFile = new BufferedReader(new FileReader("src/infile.txt"));
 
 			int threadNum = 0;
                         int resourceNum = 0;

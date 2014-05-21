@@ -1,4 +1,4 @@
-/**
+package src; /**
  * A test harness for the bankers algorithm.
  *
  * Usage:
