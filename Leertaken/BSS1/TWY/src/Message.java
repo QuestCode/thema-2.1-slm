@@ -6,7 +6,7 @@ import java.util.Map;
  * Created by Yuri on 13/5/2014.
  */
 public class Message {
-    private HashMap<String, String> valuesMap = new HashMap<String, String>();
+    private String[] values = new String[14];
 
     public Message(){
     }
@@ -20,7 +20,7 @@ public class Message {
         String name = stripName(line);
 
         if(value != "" && name != ""){
-            valuesMap.put(name, value);
+            putValue(name, value);
         }
     }
 
@@ -34,71 +34,102 @@ public class Message {
     }
 
     public String getValue(String name){
-        return this.valuesMap.get(name);
+        return this.values[getIndexForName(name)];
+    }
+
+    public String getValue(int index){
+        return this.values[index];
     }
 
     public String toString(){
-        return  "\nSTN:   " + this.getValue("STN") +
-                "\nDATE:  " + this.getValue("DATE") +
-                "\nTIME:  " + this.getValue("TIME") +
-                "\nTEMP:  " + this.getValue("TEMP") +
-                "\nDEWP:  " + this.getValue("DEWP") +
-                "\nSTP:   " + this.getValue("STP") +
-                "\nSLP:   " + this.getValue("SLP") +
-                "\nVISIB: " + this.getValue("VISIB") +
-                "\nWDSP:  " + this.getValue("WDSP") +
-                "\nPRCP:  " + this.getValue("PRCP") +
-                "\nSNDP:  " + this.getValue("SNDP") +
-                "\nFRSHTT:" + this.getValue("FRSHTT") +
-                "\nCLDC:  " + this.getValue("CLDC") +
-                "\nWNDDIR:" + this.getValue("WNDDIR");
+        return  "\nSTN:   " + this.values[0] +
+                "\nDATE:  " + this.values[1] +
+                "\nTIME:  " + this.values[2] +
+                "\nTEMP:  " + this.values[3] +
+                "\nDEWP:  " + this.values[4] +
+                "\nSTP:   " + this.values[5] +
+                "\nSLP:   " + this.values[6] +
+                "\nVISIB: " + this.values[7] +
+                "\nWDSP:  " + this.values[8] +
+                "\nPRCP:  " + this.values[9] +
+                "\nSNDP:  " + this.values[10] +
+                "\nFRSHTT:" + this.values[11] +
+                "\nCLDC:  " + this.values[12] +
+                "\nWNDDIR:" + this.values[13];
 
     }
 
     public String getInsertQuery(){
         return "INSERT INTO measurements VALUES(" +
-                this.getValue("STN") + ", '" +
-                this.getValue("DATE") + "', '" +
-                this.getValue("TIME") + "', " +
-                this.getValue("TEMP") + ", " +
-                this.getValue("DEWP") + ", " +
-                this.getValue("STP") + ", " +
-                this.getValue("SLP") + ", " +
-                this.getValue("VISIB") + ", " +
-                this.getValue("WDSP") + ", " +
-                this.getValue("PRCP") + ", " +
-                this.getValue("SNDP") + ", " +
-                this.getValue("FRSHTT") + ", " +
-                this.getValue("CLDC") + ", " +
-                this.getValue("WNDDIR") +
-                ")";
+                this.values[0] + ", '" +
+                this.values[1] + "', '" +
+                this.values[2] + "', " +
+                this.values[3] + ", " +
+                this.values[4] + ", " +
+                this.values[5] + ", " +
+                this.values[6] + ", " +
+                this.values[7] + ", " +
+                this.values[8] + ", " +
+                this.values[9] + ", " +
+                this.values[10] + ", " +
+                this.values[11] + ", " +
+                this.values[12] + ", " +
+                this.values[13] + ")";
     }
 
     public Boolean isComplete(){
-        for(Map.Entry<String, String> entry : this.valuesMap.entrySet()){
-            if(entry.getValue() == "" || entry.getValue() == null || entry.getValue().isEmpty()){
+        for(int i = 0; i < this.values.length; i++){
+            if(values[i] == null || this.values[i] == ""){
                 return false;
             }
         }
         return true;
     }
 
-    public String[] getEmptyFieldNames(){
-        ArrayList<String> emptyFields = new ArrayList<String>();
+    public int[] getEmptyFieldIndexes(){
+        ArrayList<Integer> emptyFields = new ArrayList<Integer>();
 
-        for(Map.Entry<String, String> entry: this.valuesMap.entrySet()){
-            if(entry.getValue() == "" || entry.getValue() == null || entry.getValue().isEmpty()){
-                emptyFields.add(entry.getKey());
+        for(int i = 0; i < this.values.length; i++){
+            if(this.values[i] == null || this.values[i] == "") {
+                emptyFields.add(i);
             }
         }
 
-        return emptyFields.toArray(new String[emptyFields.size()]);
+        // Convert Integer List to int[]
+        int returnArray[] = new int[emptyFields.size()];
+        for(int i = 0; i < emptyFields.size(); i++){
+            returnArray[i] = emptyFields.get(i);
+        }
+
+        return returnArray;
     }
 
-    public void updateValue(String fieldName, String value){
-        if(this.valuesMap.containsKey(fieldName)){
-            this.valuesMap.remove(fieldName);
-        }
-        this.valuesMap.put(fieldName, value);
+    public int getIndexForName(String name){
+        int index = 0;
+
+        index =         (name == "STN") ? 0 :
+                        (name == "DATE") ? 1 :
+                        (name == "TIME") ? 2 :
+                        (name == "TEMP") ? 3 :
+                        (name == "DEWP") ? 4 :
+                        (name == "STP") ? 5 :
+                        (name == "SLP") ? 6 :
+                        (name == "VISIB") ? 7 :
+                        (name == "WDSP") ? 8 :
+                        (name == "PRCP") ? 9 :
+                        (name == "SNDP") ?  10 :
+                        (name == "FRSHTT") ? 11 :
+                        (name == "CLDC") ? 12 :
+                        (name == "WNDDIR") ? 13 : 999;
+
+        return index;
+    }
+
+    public void putValue(String name, String value){
+        this.values[getIndexForName(name)] = value;
+    }
+
+    public void putValue(int index, String value){
+        this.values[index] = value;
     }
 }

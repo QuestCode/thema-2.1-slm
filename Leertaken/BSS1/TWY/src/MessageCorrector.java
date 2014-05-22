@@ -7,69 +7,88 @@ import java.util.List;
  */
 public class MessageCorrector {
     public String STN;
-    ArrayList<Message> oldMessages = new ArrayList<Message>();
+    Message[] oldMessages = new Message[30];
+    private int counter = 0;
 
     public MessageCorrector(String stn){
         this.STN = stn;
     }
 
     public void addMessage(Message message){
-        if(oldMessages.size() >= 30){
-            oldMessages.remove(0);
+        oldMessages[counter] = message;
+
+        if(counter == 30){
+            counter = 0;
+        } else {
+            counter++;
         }
 
-        oldMessages.add(message);
     }
 
     public Message correctMessage(Message message){
-        if(this.oldMessages.size() == 0){
-            System.out.println("couldnt extrapolate because we have no messages");
+        if(this.oldMessages[0] == null && this.oldMessages[1] == null){
+            System.out.println("Could not extrapolate because we have no messages");
             return message;
         }
 
-        String[] emptyFieldNames = message.getEmptyFieldNames();
+        int[] emptyFieldIndexes = message.getEmptyFieldIndexes();
 
-        for(int i = 0; i < emptyFieldNames.length; i++){
-            message.updateValue(emptyFieldNames[i], this.getExtrapolatedValue(emptyFieldNames[i]));
-            System.out.println("Got extrapolated value for: " + emptyFieldNames[i]);
+        for(int i = 0; i < emptyFieldIndexes.length; i++){
+            message.putValue(emptyFieldIndexes[i], this.getExtrapolatedValue(emptyFieldIndexes[i]));
+            System.out.println("Got extrapolated value for: " + emptyFieldIndexes[i]);
         }
         return message;
     }
 
     public Message correctTemperature(Message message){
-        if(this.oldMessages.size() == 0){
-            System.out.println("couldnt extrapolate because we have no messages");
+        if(this.oldMessages[0] == null && this.oldMessages[1] == null){
+            System.out.println("Could not extrapolate because we have no messages");
             return message;
         }
 
         Double messageTemp = Double.parseDouble(message.getValue("TEMP"));
-        Double extrapolatedTemp = Double.parseDouble(getExtrapolatedValue("TEMP"));
+        Double extrapolatedTemp = Double.parseDouble(getExtrapolatedValue(3));
 
         if(messageTemp < extrapolatedTemp * 0.8 || messageTemp > extrapolatedTemp * 1.2){
-            message.updateValue("TEMP", Double.toString(extrapolatedTemp));
+            message.putValue(3, Double.toString(extrapolatedTemp));
         }
         return message;
     }
 
-    private String getExtrapolatedValue(String fieldName){
+    private String getExtrapolatedValue(int fieldIndex){
         Double totalDeviation = 0.0;
 
-        if(fieldName == "TIME" || fieldName == "DATE"){
+        if(fieldIndex == 1 || fieldIndex == 2){
             System.out.println("Cannot extrapolate date/time");
             return "";
         }
 
-        for(int i = 0; i < oldMessages.size() - 1; i++){
-            totalDeviation += (Double.parseDouble(oldMessages.get(i + 1).getValue(fieldName)) - Double.parseDouble(oldMessages.get(i).getValue(fieldName)));
+        int amountOfOldMessages = getAmountofOldMessages();
+
+        for(int i = 0; i < amountOfOldMessages - 1; i++){
+            totalDeviation += (Double.parseDouble(oldMessages[i + 1].getValue(fieldIndex)) - Double.parseDouble(oldMessages[i].getValue(fieldIndex)));
         }
 
-        Double deviation = totalDeviation / oldMessages.size();
-        Double extrapolatedValue = Double.parseDouble(oldMessages.get(oldMessages.size() - 1).getValue(fieldName)) + deviation;
+        Double deviation = totalDeviation / amountOfOldMessages;
+        Double extrapolatedValue = (Double.parseDouble(oldMessages[amountOfOldMessages - 1].getValue(fieldIndex)) + deviation);
 
         if(extrapolatedValue != 0){
             return Double.toString(Math.floor(extrapolatedValue));
         } else{
             return "0";
         }
+    }
+
+    private int getAmountofOldMessages(){
+        int counter = 0;
+
+        for(int i = 0; i < oldMessages.length; i++){
+            if(oldMessages[i] == null){
+                return counter - 1;
+            }
+            counter++;
+        }
+
+        return counter;
     }
 }
