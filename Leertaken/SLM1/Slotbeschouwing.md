@@ -1,3 +1,15 @@
 # Slotbeschouwing
 
-> Een slotbeschouwing waarin je met je medestudenten aangeeft in hoeverre de voorbeeld SLA’s overeenstemmen met de leerstof en de colleges Service Level Management. Je beargumenteert welke SLA je het beste vindt, als je naar de “best practices” kijkt die in het boek worden beschreven en door de docent wordt verteld tijdens de colleges.
+Onderstaand wordt toegelicht in hoeverre de beoordeelde SLA overeenkomt met de behandelde leerstof. Afsluitend wordt er gekeken naar de in de colleges behandelde best practices en of de SLA hier gebruik van maakt.
+
+## Overeenstemming met leerstof
+
+Summier, incompleet en onsamenhangend.
+
+Er wordt meerdere keren vermeld dat er bepaalde dingen niet kunnen worden gegarandeerd, wat de kwaliteitskenmerken niet ten goede komt.
+
+Er worden verwijzingen gedaan naar CPB, het ICT/Softwarehuis, de ontwikkelstraat en de ICT service catalogus. Omschrijvingen hiervan/verwijzingen hiernaar missen.
+
+## Best practices
+
+Iemand?
