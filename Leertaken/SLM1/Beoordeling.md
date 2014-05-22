@@ -105,11 +105,11 @@ Er wordt in de SLA nergens aangegeven wat de zerkerheidsgaranties zijn. Voor de 
 ### 9. Uitzonderingssituaties.
 > Geef je mening over het al dan niet voorkomen van uitzonderingssituaties in de SLA. Zijn deze situaties helder gedefinieerd en realistisch?
 
-In de SLA zijn geen uitzonderingssituaties opgenomen. Het gevolg hiervan is dat bijvoorbeeld bij een catastrophe toch nog de verwachting bestaat dat service zoals de normale afspraken geleverd wordt.
+In de SLA zijn geen uitzonderingssituaties opgenomen. Het gevolg hiervan is dat bijvoorbeeld bij een catastrofe toch nog de verwachting bestaat dat service zoals de normale afspraken geleverd wordt.
 
 Bij de uitzonderingssituaties zouden in elk geval situaties zoals brand of overstroming, waarbij de leverancier fysiek weerhouden wordt de service te leveren, worden opgenomen. Voor zulke situaties zou in de SLA een clausule moeten worden opgenomen waarbij bijvoorbeeld de leverancier drie werkdagen de ruimte krijgt om de service wordt werkend te krijgen.
 
-De leverancier snijd zichzelf in de vingers door geen uitzonderingssituaties op te nemen in de SLA. In het geval van een bovenstaande catastrophe kan de klant zich beroepen op de in de SLA gedefinieerde zekerheidsgarantie. Als deze garantie dankzij een catastrophe niet wordt behaald kunnen er boetes worden neergelegd bij de leverancier.
+De leverancier snijdt zichzelf in de vingers door geen uitzonderingssituaties op te nemen in de SLA. In het geval van een bovenstaande catastrofe kan de klant zich beroepen op de in de SLA gedefinieerde zekerheidsgarantie. Als deze garantie dankzij een catastrofe niet wordt behaald kunnen er boetes worden neergelegd bij de leverancier.
 
 
 
@@ -128,4 +128,4 @@ In hoofdstuk 2.1 Service Reviews staat het volgende:
 
 > "Twee maanden voor het einde van de looptijd van de SLA, zal de wijze van beheer door Directie Klantenservice en Directie ICT worden beoordeeld en heroverwogen."
 
-Wat de wijze van de beoordeling is wordt verder niet genoemd maar bij deze beoordeling zouden de rapportage over de geleverde diensten veel waarde kunnen toepassen door harde cijfers te leveren. De keuze voor het weglaten van een periodieke servicerapportage is daarom ook een rare keuze.
+Wat de wijze van de beoordeling is wordt verder niet genoemd, maar bij deze beoordeling zouden de rapportage over de geleverde diensten veel waarde kunnen toepassen door harde cijfers te leveren. De keuze voor het weglaten van een periodieke servicerapportage is daarom ook een rare keuze.
