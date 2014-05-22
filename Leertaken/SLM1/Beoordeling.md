@@ -3,10 +3,24 @@
 ### 1. Klantgericht of servicegericht
 > Gaat de SLA uit van de leverancier en de diensten die hij levert of van de klant en hoe die de diensten ziet?
 
+De SLA gaat uit van de leverancier en de diensten die hij levert en is daarom __servicegericht__. De leverancier is in dit geval 'Directie ICT'. In het doel staat het volgende beschreven:
+
+> "In deze Service Level Agreement zijn afspraken vastgelegd over de kwaliteit en de reikwijdte van de dienstverlening die door de Directie ICT wordt geleverd met betrekking tot de EU-applicatie."
+
+Daarnaast wordt in 2.8 Service Overzicht beschreven hoe de dienstverlening van 'Directie ICT' tot stand komt.
+
+Mede door het niet kunnen garanderen dat één van beide functionarissen met kennis van de applicatie aanwezig is én het niet werken aan het opbouwen van de kennis over de applicatie lijkt deze SLA meer servicegericht dan klantgericht.
+
+Daarbij is in de wijzigingsprocedure is het volgende te vinden: 'In principe worden gedurende de looptijd geen wijzigingen op een mini-SLA toegestaan'. Een klantgerichte SLA zou zich hier flexibeler in opstellen, om beter aan de wensen van de klant te kunnen voldoen. Ook is het service overzicht relatief uitgebreid en beslaat het een groot gedeelte van het SLA. Deze twee factoren dragen ook zeker bij aan het feit dat deze SLA hoofdzakelijk servicegericht is.
+
 
 
 ### 2. Klant- of basisdiensten
 > Geef in je reactie aan of je vindt dat het SLA vooral klantdiensten of vooral basisdiensten betreft en licht je mening toe.
+
+Vooral klantdiensten, omdat de geleverde diensten voornamelijk betrekking hebben op een specifieke applicatie, namelijk de EU-applicatie.
+
+Deze SLA is heel kort en als logisch gevolg daarvan ontbreekt er een aantal hoofdstukken die in je in een meer klantgericht SLA wel zou verwachten. Het overgrote deel van de informatie in deze SLA is dan ook uitsluitend gericht op de basisdienst (de applicatie).
 
 
 
