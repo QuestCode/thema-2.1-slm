@@ -1,3 +1,8 @@
+### 6. Meetgrootheden
+> Geef je mening over de helderheid waarmee de meetgrootheden gedefinieerd zijn en van de wijze waarop er gemeten wordt.
+
+In het SLA wordt geen woord gerept over metingen of meetgrootheden. Omdat het niet duidelijk is welke service wordt geleverd (zie punt 3) is het ook lastig om vast te stellen wat mogelijke meetgrootheden zouden kunnen zijn. Volgens de Rapportageverplichtingen (zie punt 10) wordt er ook geen periodieke servicerapportage gedaan waar deze meetgrootheden van belang zouden zijn.
+
 ### 9. Uitzonderingssituaties. 
 > Geef je mening over het al dan niet voorkomen van uitzonderingssituaties in het SLA. Zijn deze situaties helder gedefinieerd en realistisch?
 
@@ -16,7 +21,7 @@ In hoofdstuk 2.5 Rapportage staat het volgende:
 
 Zonder rapportage is het erg moeilijk om vast te stellen wat de kwaliteit van de service. Deze informatie is voor zowel de klant als leverancier niet alleen erg waardevol maar cruciaal om te bepalen of aan de voorwaarde van het SLA worden voldaan.
 
-Een servicerapportage is belangrijk omdat hier kan worden bepaalt of de geleverde service voldoet aan de kwaliteitskenmerken. Aangezien in het SLA de kwaliteitskenmerken niet zijn opgenomen (zie punt 5) is het echter ook niet duidelijk waar een dergelijke rapportage over zou moeten rapporteren.
+Een servicerapportage is belangrijk omdat hier kan worden bepaalt of de geleverde service voldoet aan de kwaliteitskenmerken. Aangezien in het SLA de kwaliteitskenmerken en meetgrootheden niet zijn opgenomen (zie punt 5 & 6) is het echter ook niet duidelijk waar een dergelijke rapportage over zou moeten rapporteren.
 
 In hoofdstuk 2.1 Service Reviews staat het volgende:
 
