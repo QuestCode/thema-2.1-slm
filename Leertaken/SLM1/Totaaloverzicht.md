@@ -17,7 +17,7 @@ Onderstaand een overzicht van punten waarop de SLA beoordeeld is.
 | Bewaartermijnen               | X        |                                                                                                       |
 | Partijen                      | ✓        | Alleen namen                                                                                          |
 | Omschrijving van dienst       | ✓        | Het onderhoud van een MS-Access applicatie.                                                           |
-| Rapportages meetbaarheid      | X        | Staat alleen beschreven dat er geen periodieke rapportages zullen zijn.                               |
+| Rapportages meetbaarheid      | ✓        | Staat alleen beschreven dat er geen periodieke rapportages zullen zijn.                               |
 | Verplichtingen klant          | ✓        |                                                                                                       |
 | Verplichtingen dienstverlener | X        |                                                                                                       |
 | Kosten / tarieven             | X        | Enkel een verzoek of de proceseigenaar wil aangeven hoeveel uren er voor onderhoud beschikbaar zijn.* |
