@@ -3,10 +3,10 @@
 ## Structuur
 
 ### Navigatie
-> De SLA bevat veel informatie en moet daarom gebruikersvriendelijk en overzichtelijk zijn. De benodigde informatie moet gestructureerd worden gepresenteerd en daarmee makkelijk te vinden zijn.
+> De SLA bevat veel informatie en moet daarom gebruikersvriendelijk en overzichtelijk zijn. De benodigde informatie moet gestructureerd worden gepresenteerd en daarmee makkelijk te vinden zijn. // Tom
 
 ### Schaalbaarheid
-> De structuur van de SLA moet de mogelijkheid bieden voor aanpassingen, toevoegingen, en verwijderingen van services of service metrics.
+> De structuur van de SLA moet de mogelijkheid bieden voor aanpassingen, toevoegingen, en verwijderingen van services of service metrics. // Tom
 
 ### Rapportage
 > De SLA moet de eisen voor rapportage helder maken en duidelijk aangeven hoe rapportages gestructureerd zijn.
