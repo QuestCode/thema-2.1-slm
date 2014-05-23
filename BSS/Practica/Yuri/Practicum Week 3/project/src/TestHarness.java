@@ -1,4 +1,5 @@
-package src; /**
+package src;
+/**
  * A test harness for the bankers algorithm.
  *
  * Usage:
@@ -85,27 +86,27 @@ public class TestHarness
                         // [RQ || RL] <customer number> <resource #1> <#2> <#3>
                         StringTokenizer tokens = new StringTokenizer(requestLine);
 
-			// get transaction type - request (RQ) or release (RL)
-			String trans = tokens.nextToken().trim();
+                        // get transaction type - request (RQ) or release (RL)
+                        String trans = tokens.nextToken().trim();
 
-			// get the customer number making the tranaction
+                        // get the customer number making the tranaction
                         int custNum = Integer.parseInt(tokens.nextToken().trim());
 
-			// get the resources involved in the transaction
-			for (int i = 0; i < numOfResources; i++) {
+                        // get the resources involved in the transaction
+                        for (int i = 0; i < numOfResources; i++) {
                             resources[i] = Integer.parseInt(tokens.nextToken().trim());
-                            System.out.println("*"+resources[i]+"*");
-			}
+                            System.out.println("*" + resources[i] + "*");
+                        }
 
-			// now check the transaction type
-			if (trans.equals("RQ")) {  // request
-                        	if (theBank.requestResources(custNum,resources))
-                            		System.out.println("Approved");
-                        	else
-                            		System.out.println("Denied");
-			}
-			else if (trans.equals("RL")) // release
-				theBank.releaseResources(custNum, resources);
+                        // now check the transaction type
+                        if (trans.equals("RQ")) {  // request
+                            if (theBank.requestResources(custNum, resources))
+                                System.out.println("Approved");
+                            else
+                                System.out.println("Denied");
+                        } else if (trans.equals("RL")){ // release
+                            theBank.releaseResources(custNum, resources);
+                    }
 			else // illegal request
 				System.err.println("Must be either 'RQ' or 'RL'");
                     }
