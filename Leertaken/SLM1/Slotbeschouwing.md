@@ -19,4 +19,11 @@ Er worden verwijzingen gedaan naar CPB, het ICT/Softwarehuis, de ontwikkelstraat
 
 ## Best practices
 
-Iemand?
+__Key Performance Indicators (KPI's) overzichtelijk en duidelijk specifiëren__  
+
+Er is een gebrek aan overzicht in deze SLA. KPI's worden weinig genoemd en zijn vaak weggewerkt in het 'Service Overzicht' onderdeel van de SLA. Het zou handiger zijn om deze KPI's en de eisen voor de KPI's op een rijtje te zetten door middel van een tabel.  
+  
+__Mogelijkheden bieden tot het analyseren van de SLA aan de hand van rapportages__  
+
+Omdat er geen maandelijkse rapportage wordt opgegeleverd is het na het lezen van deze SLA niet duidelijk of er überhaupt metingen worden gedaan. Als dit onduidelijk is of er helemaal geen metingen worden verricht is het lastig om de kwaliteit van de dienstverlening met oog op de SLA te meten en te verbeteren.  
+
