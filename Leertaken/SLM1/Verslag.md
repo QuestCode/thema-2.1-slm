@@ -165,36 +165,36 @@ Onderstaand een overzicht van punten waarop de SLA beoordeeld is.
 
 <div style="font-size:0.9em">
 
-| Onderdeel                     | Aanwezig\* | Opmerking(en)                                                                                            |
-| :-------------------          | :-         | :-------------------                                                                                     |
-| Startdatum                    | ✓          |                                                                                                          |
-| Einddatum                     | ✓          |                                                                                                          |
-| Versiebeheer                  | ✓          |                                                                                                          |
-| Distributielijst              | ✓          |                                                                                                          |
-| Doel van SLA / Inleiding      | ✓          |                                                                                                          |
-| Scope/domein van SLA          | ✓          | Verwijst wel naar missende service catalogus.                                                            |
-| Wijzigingsprocedure van SLA   | ✓          |                                                                                                          |
-| Vertrouwelijkheid van SLA     | ✓          |                                                                                                          |
-| Openstellingstijden           | X          |                                                                                                          |
-| Inhoudsopgave                 | ✓          |                                                                                                          |
-| Bewaartermijnen               | X          |                                                                                                          |
-| Partijen                      | ✓          | Alleen namen                                                                                             |
-| Omschrijving van dienst       | X          | Het onderhoud van een MS-Access applicatie, echter is dit moeilijk te achterhalen.                       |
-| Rapportages meetbaarheid      | X          |                                                                                                          |
-| Verplichtingen klant          | ✓          |                                                                                                          |
-| Verplichtingen dienstverlener | X          |                                                                                                          |
-| Kosten / tarieven             | X          | Enkel een verzoek of de proceseigenaar wil aangeven hoeveel uren er voor onderhoud beschikbaar zijn.\*\* |
-| Hoe betaling plaatsvind       | X          |                                                                                                          |
-| Calamiteiten                  | X          |                                                                                                          |
-| Klachten                      | ✓          |                                                                                                          |
-| Leverancier                   | X          | Alleen mogelijke uitbesteding van beheer van de MS-Access applicatie wordt genoemd.                      |
-| Bewaartermijnen               | X          |                                                                                                          |
-| Kwaliteitskenmerken           | X          |                                                                                                          |
-| - Beschikbaarheid             | X          | "afhandeltijden voor het oplossen van problemen worden niet gegarandeerd".                               |
-| - Integriteit                 | X          |                                                                                                          |
-| - Exclusiviteit               | X          |                                                                                                          |
-| - Responsetijd / Performance  | ✓          | Aanwezigheid van functionaris kan niet worden gegarandeerd i.v.m. vakanties.                             |
-| Incidenten oplossen           | X          |                                                                                                          |
+| Onderdeel                     | Aanwezig\* | Opmerking(en)                                                                                                               |
+| :-------------------          | :-         | :-------------------                                                                                                        |
+| Startdatum                    | ✓          |                                                                                                                             |
+| Einddatum                     | ✓          |                                                                                                                             |
+| Versiebeheer                  | ✓          |                                                                                                                             |
+| Distributielijst              | ✓          |                                                                                                                             |
+| Doel van SLA / Inleiding      | ✓          |                                                                                                                             |
+| Scope / domein van SLA        | ✓          | Verwijst wel naar missende service catalogus.                                                                               |
+| Wijzigingsprocedure van SLA   | ✓          |                                                                                                                             |
+| Vertrouwelijkheid van SLA     | ✓          |                                                                                                                             |
+| Openstellingstijden           | X          |                                                                                                                             |
+| Inhoudsopgave                 | ✓          |                                                                                                                             |
+| Bewaartermijnen               | X          |                                                                                                                             |
+| Partijen                      | X          | Er wordt niet genoemd wie de gebruikers van de service zijn. De leverancier en opdrachtgever worden slecht benoemd.         |
+| Omschrijving van dienst       | X          | Het onderhoud van een MS-Access applicatie, echter is dit moeilijk te achterhalen.                                          |
+| Rapportages meetbaarheid      | ✓          | Staat alleen beschreven dat er geen periodieke rapportages zullen zijn.                                                     |
+| Verplichtingen klant          | ✓          |                                                                                                                             |
+| Verplichtingen dienstverlener | X          |                                                                                                                             |
+| Kosten / tarieven             | X          | Enkel een verzoek of de proceseigenaar wil aangeven hoeveel uren er voor onderhoud beschikbaar zijn.\*\*                    |
+| Hoe betaling plaatsvind       | X          |                                                                                                                             |
+| Calamiteiten                  | X          |                                                                                                                             |
+| Klachten                      | ✓          |                                                                                                                             |
+| Leverancier                   | X          | Alleen mogelijke uitbesteding van beheer van de MS-Access applicatie wordt genoemd.                                         |
+| Bewaartermijnen               | X          |                                                                                                                             |
+| Kwaliteitskenmerken           | X          |                                                                                                                             |
+| - Beschikbaarheid             | X          | "afhandeltijden voor het oplossen van problemen worden niet gegarandeerd".                                                  |
+| - Integriteit                 | X          |                                                                                                                             |
+| - Exclusiviteit               | X          |                                                                                                                             |
+| - Responsetijd / Performance  | X          | Wordt niet voldoende beschreven. Alleen dat de aanwezigheid van functionaris kan niet worden gegarandeerd i.v.m. vakanties. |
+| Incidenten oplossen           | X          |                                                                                                                             |
 
 </div>
 
@@ -214,15 +214,26 @@ Het belangrijkste bij het schrijven van een SLA is om het _simpel_, _meetbaar_ e
 
 Om de kwaliteit van een SLA te bepalen kunnen er 4 indicatoren gebruikt worden, namelijk:
 
-- Availability
-- Integrity
-- Exclusivity
-- Performance
+- __Availability.__ Availability geeft aan hoeveel procent van de tijd het systeem beschikbaar is.
+- __Integrity.__ Integrity geeft aan in hoeveel procent van de gevallen de informatiebronnen up-to-date zijn.
+- __Exclusivity.__ Exclusivity geeft de omvang van beschikbare data voor een bepaalde groep geauthoriseerde gebruikers aan.
+- __Performance.__ Performance geeft aan in hoeverre de performance gewaardborgd wordt.
 
 In deze SLA wordt aan elk van deze punten te weinig aandacht besteed. Er wordt meerdere keren vermeld dat er bepaalde zaken of diensten niet kunnen worden gegarandeerd, wat de kwaliteitskenmerken niet ten goede komt. In een SLA is de manier waarop er geschreven wordt erg belangrijk. Een SLA moet simpel en in zakelijke termen geschreven worden. Deze SLA slaagt daar niet in.
 
 Er worden verwijzingen gedaan naar CPB, het ICT/Softwarehuis, de ontwikkelstraat en de ICT service catalogus. Omschrijvingen hiervan/verwijzingen hiernaar missen. Verder wordt er teveel gebruikt gemaakt van technisch jargon, wat onduidelijkheden kan opleveren voor niet-technische mensen.
 
+Deze SLA is ruim onvoldoende. Er ontbreken teveel onderdelen die wel in een SLA opgenomen zouden moeten zijn.
+
 ### Best practices
 
-Iemand?
+Onderstaand een aantal best practices en toelichting in hoeverre de SLA hier gebruik van heeft gemaakt.
+
+##### Key Performance Indicators (KPI's) overzichtelijk en duidelijk specifiëren
+
+Er is een gebrek aan overzicht in deze SLA. KPI's worden weinig genoemd en zijn vaak weggewerkt in het 'Service Overzicht' onderdeel van de SLA. Het zou handiger zijn om deze KPI's en de eisen voor de KPI's op een rijtje te zetten door middel van een tabel.
+
+##### Mogelijkheden bieden tot het analyseren van de SLA aan de hand van rapportages
+
+Omdat er geen maandelijkse rapportage wordt opgegeleverd is het na het lezen van deze SLA niet duidelijk of er überhaupt metingen worden gedaan. Als dit onduidelijk is of er helemaal geen metingen worden verricht is het lastig om de kwaliteit van de dienstverlening met oog op de SLA te meten en te verbeteren.
+

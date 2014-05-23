@@ -10,12 +10,17 @@
 
 ### Rapportage
 > De SLA moet de eisen voor rapportage helder maken en duidelijk aangeven hoe rapportages gestructureerd zijn.
+Er staat duidelijk vermeld dat er _niet_ gerapporteerd gaat worden. Wel wordt er aangegeven dat er twee maanden voor het einde van de SLA looptijd het beheer heroverwogen zal worden.
 
 ### Overeenkomstbeheer
 > Er moet worden beschreven hoe er wordt omgegaan met de klant perceptie en verwachtingen. Dit is belangrijk indien er bonussen of boetes worden vervaardigd aan de hand van prestatieresultaten.
+Er wordt in het SLA beschreven dat er in princiepe amper tot geen ondersteuning wordt geboden. De klant mag dan ook niet verwachten dat er direct ondersteuning geboden zal worden.
+Er worden verder geen bonussen en boetes genoemd.
 
 ### Test periode
 > De SLA moet aangeven wanneer en hoe lang de testperiode zal draaien, waarin (ingrijpende) revisies van de SLA nog mogelijk zijn. Ook moet er worden beschreven hoe aanpassingen worden doorgevoerd.
+
+Over een testperiode wordt niet gesproken in het SLA. Ook worden er in principe geen wijzigingen aan het SLA toegestaan tijdens de looptijd. Reden hiervoor is dat de inspanning met betrekking tot exoten op een 'best effort' basis wordt uitgevoerd. Er wordt dus ook niet omschreven hoe de aanpassingen zouden worden doorgevoerd.
 
 ### Vermijding van vakjargon
 > Voor een betere leesbaarheid moet vakjargon worden voorkomen. Indien niet mogelijk, moeten termen worden toegelicht in een verklarende woordenlijst.
