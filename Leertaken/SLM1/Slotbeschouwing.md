@@ -17,6 +17,8 @@ In deze SLA wordt aan elk van deze punten te weinig aandacht besteed. Er wordt m
 
 Er worden verwijzingen gedaan naar CPB, het ICT/Softwarehuis, de ontwikkelstraat en de ICT service catalogus. Omschrijvingen hiervan/verwijzingen hiernaar missen. Verder wordt er teveel gebruikt gemaakt van technisch jargon, wat onduidelijkheden kan opleveren voor niet-technische mensen.
 
+Al met al is deze SLA ruim onvoldoende. Er ontbreken teveel onderdelen die wel in een SLA opgenomen zouden moeten zijn.
+
 ## Best practices
 
 Iemand?
