@@ -48,17 +48,6 @@
 		</javac>
 	</target>
 
-	<target name="run" depends="compile">
-		<java classname="${main-class}" fork="true">
-			<jvmarg value="-XX:-UseGCOverheadLimit" />
-			<jvmarg value="-Xmx1512m" />
-			<classpath>
-				<pathelement location="${dir.classes}" />
-				<path refid="lib-classpath" />
-			</classpath>
-		</java>
-	</target>
-
 	<target name="jar" depends="compile">
 		<jar destfile="${dir.jar}/Leertaak-2.jar" basedir="${dir.classes}">
 			<zipgroupfileset dir="${dir.lib}" includes="*.jar" />
@@ -72,7 +61,18 @@
 		<java jar="${dir.jar}/Leertaak-2.jar" fork="true">
 			<jvmarg value="-agentlib:hprof=cpu=times,heap=dump,depth=10" />
 			<jvmarg value="-XX:-UseGCOverheadLimit" />
-			<jvmarg value="-Xmx1200m" />
+			<jvmarg value="-Xmx1512m" />
+		</java>
+	</target>
+
+	<target name="run" depends="compile">
+		<java classname="${main-class}" fork="true">
+			<jvmarg value="-XX:-UseGCOverheadLimit" />
+			<jvmarg value="-Xmx1512m" />
+			<classpath>
+				<pathelement location="${dir.classes}" />
+				<path refid="lib-classpath" />
+			</classpath>
 		</java>
 	</target>
 
