@@ -4,7 +4,7 @@
 ####Why are page sizes always powers of 2?####
 
 Because this makes the translation from logical address into a page number and page offset easy.
-
+Becouse of the way the calculation is done.
 
 ###Exercise 1.2 Paging###
 ####On a system with paging, a process cannot access memory that it does not own; why? How could the operating system allow access to other memory? Why should it or should it not?####
@@ -20,10 +20,12 @@ Only reentrant code can be shared, data pages wil not be shared for obvious reas
 ###Exercise 1.3 Memory Reference###
 ####Consider a paging system with the page table storedin memory.####
 
-**a) If a memory reference takes 160 nanoseconds, howlong does a paged memory reference take?**
-160 + 160 = 320 nanoseconds
+**a) If a memory reference takes 160 nanoseconds, howlong does a paged memory reference take?**  
+160 (access page) + 160 (access word) = 320 nanoseconds
 
-**b) If we add associative registers, and 75 percent of all page-table references are found in the associative registers, what is the effective memoryreference time? (Assume that finding a pagetable entry in the associative registers takes zerotime if the entry is there .)**
+**b) If we add associative registers, and 75 percent of all page-table references are found in the associative registers, what is the effective memoryreference time? (Assume that finding a pagetable entry in the associative registers takes zerotime if the entry is there .)**  
+
+0.75 * 160 + 0.25 * 320 = 120 + 80 = __200__ nanoseconds
 
 
 ###Exercise 1.4 Memory Partitions###
@@ -140,23 +142,42 @@ Offset = __16384 % 1024 = 0__
 
 | Frames | 1   | 3   | 2   | 4   | 2   | 1   | 5   | 3   | 2   | 1   | 6   | 3   | 7   | 6   | 3   | 2   | 1   | 7   | 3   | 6   |
 | :--    | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| 1      |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |
-| 2      |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |
-| 3      |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |
-| 4      |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |
-| 5      |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |
-| 6      |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |
-| Fault  |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |
+| 1      | 1   |     |     |     |     |     |     |     |     |     |     |     | 1   |     |     |     |     |     |     |     |
+| 2      |     | 3   |     |     |     |     |     |     |     |     |     |     | 3   |     |     |     |     |     |     |     |
+| 3      |     |     | 2   |     |     |     |     |     |     |     |     |     | 2   |     |     |     |     |     |     |     |
+| 4      |     |     |     | 4   |     |     |     |     |     |     |     |     | 7   |     |     |     |     |     |     |     |
+| 5      |     |     |     |     |     |     | 5   |     |     |     |     |     | 5   |     |     |     |     |     |     |     |
+| 6      |     |     |     |     |     |     |     |     |     |     | 6   |     | 6   |     |     |     |     |     |     |     |
+| Fault  | 1   | 1   | 1   | 1   |     |     | 1   |     |     |     | 1   |     | 1   |     |     |     |     |     |     |     |
 
+**7 Faults**
 
 
 ###Exercise 2.2 Copy-on-write###
 ####What is the copy-on-write feature and under what circumstances is it beneficial t o use this feature?####
+
+When two programs are trying to access the same code segment, then its usefull to map the pages in write protected mode. When a write does take place then a copy can be made to make sure the other program does not get influenced.
+
 ####What is the hardware support required to implement this feature ?####
+
+Yes, on memory access the page table needs to be checked to see if the page is protected. If it is protected a trap needs to accur and the os can resolve the issue.
 
 
 ###Exercise 2.3 Hit ratio of the TLB###
 ####Explain the term hit ratio.####
 
+How many virtual addresses are translated in the TLB instead of the page table.
+The number represents the amount of entries in the TLB.
+
+To increase the number increase the entries in the TLB at loss of memory.
+
 ###Exercise 9.43 TLB Reach###
 ####Explain the term TLB reach. And explain three ways of how to increase the TLB reach.####
+
+The TLB reach is the number of entries multiplied by the page size.
+
+1. Double the number of entries
+
+2. Increase page size
+
+3. Provide multiple page sizes

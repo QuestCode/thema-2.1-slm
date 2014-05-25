@@ -46,6 +46,8 @@ enter other synchronized methods or blocks for the same object. Explain how dead
 
 This would allow deadlocks by acquiring a lock on a object then calling a method which also requires that object. The second would be blocked by the first and the first will never lose it lock.
 
+##BankImpl.java
+
 ```java
 import java.io.*;
 import java.util.*;
@@ -55,175 +57,196 @@ import java.util.*;
  */
 public class BankImpl implements Bank {
 
-    private int[] available;    // Amount of available resources
+    private int[] resources;
+    private Customer[] customers = new Customer[Customer.COUNT];
+
     private int[][] maximum;    // Maximum amount for each thread
     private int[][] allocation;    // The amount currently in use by each thread
-    private int[][] need;        // The remaining amount for each thread
+
+    //private int[] available;    // Amount of available resources
+    //private int[][] need;        // The remaining amount for each thread
 
     private int n;              // Threads
     private int m;              // Resources
 
-    public BankImpl(int[] resources) {
+    public BankImpl(int[] resources){
+        this.resources = resources;
 
-        int m = resources.length;
-        int n = Customer.COUNT;
+        n = Customer.COUNT;
+        m = resources.length;
 
-        available = new int[m];
-        System.arraycopy(resources, 0, available, 0, m);
-
-        maximum = new int[n][];
-        allocation = new int[n][];
-        need = new int[n][];
+        this.maximum = new int[n][m];
+        this.allocation = new int[n][m];
     }
 
-    @Override
-    public void addCustomer(int threadNum, int[] maxDemand) {
-
-        maximum[threadNum] = new int[m];
-        allocation[threadNum] = new int[m];
-        need[threadNum] = new int[m];
-
-        System.arraycopy(maxDemand, 0, maximum[threadNum], 0, maxDemand.length);
-        System.arraycopy(maxDemand, 0, need[threadNum], 0, maxDemand.length);
+    /**
+     * Add a customer to the bank.
+     * @param threadNum The number of the customer being added.
+     * @param maximum The maximum demand for this customer.
+     */
+    public void addCustomer(int threadNum, int[] maximum){
+        this.customers[threadNum] = new Customer(threadNum, maximum, this);
+        this.maximum[threadNum] = maximum;
     }
 
-    @Override
-    public void getState() {
+    /**
+     * Outputs the available, allocation, max, and need matrices.
+     */
+    public void getState(){
+        StringBuilder sb = new StringBuilder();
 
-        System.out.print("Available = ");
-        for (int i = 0; i < m - 1; i++)
-            System.out.print(available[i] + " ");
-
-        System.out.println(available[m - 1]);
-        System.out.print("\nAllocation = ");
-
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m - 1; j++)
-                System.out.print(allocation[i][j] + " ");
-            System.out.print(allocation[i][m - 1]);
+        // Append available
+        sb.append("\n\nAvailable:\n----------\n");
+        for(int i = 0; i < m; i++){
+            sb.append("Resource " + i + ": " + resources[i] + "\n");
         }
 
-        System.out.print("\nMax = ");
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m - 1; j++)
-                System.out.print(maximum[i][j] + " ");
-            System.out.print(maximum[i][m - 1]);
+        // Append allocation
+        sb.append("\n\nAllocated:\n----------\n");
+        for(int i = 0; i < allocation[0].length; i++){
+            // Sum of all allocation resources
+            int sum = 0;
+
+            for(int j = 0; j < allocation.length; j++){
+                sum += allocation[j][i];
+            }
+
+            sb.append("Resource " + i + ": " + sum + "\n");
         }
 
-        System.out.print("\nNeed = ");
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m - 1; j++)
-                System.out.print(need[i][j] + " ");
-            System.out.print(need[i][m - 1]);
+        // Append max
+        sb.append("\n\nMax demand:\n----------");
+        for(int i = 0; i < maximum.length; i++){
+            sb.append("\nCustomer " + i + ": ");
+
+            // Append individual resources to line.
+            for(int j = 0; j < maximum[i].length; j++){
+                sb.append(maximum[i][j] + ", ");
+            }
         }
-        System.out.println();
+
+        // Append need
+        sb.append("\n\nNeed:\n----------");
+        for(int i = 0; i < maximum.length; i++){
+            sb.append("\nCustomer " + i + ": ");
+
+            for(int j = 0; j < maximum[i].length; j++){
+                sb.append(allocation[i][j] + ", ");
+            }
+        }
+
+        // Print everything in one go.
+        System.out.println(sb);
     }
 
-    private boolean isSafeState(int threadNum, int[] request) {
-
-        System.out.print("\n Customer # " + threadNum + " requesting ");
-
-        for (int i = 0; i < m; i++) System.out.print(request[i] + " ");
-        System.out.print("Available = ");
-
-        for (int i = 0; i < m; i++)
-            System.out.print(available[i] + " ");
-
-        for (int i = 0; i < m; i++)
-            if (request[i] > available[i]) {
-                System.err.println("NOT ENOUGH RESOURCES");
-
+    /**
+     * Make a request for resources.
+     * @param threadNum The number of the customer being added.
+     * @param request The request for this customer.
+     * @return  true The request is granted.
+     * @return  false The request is not granted.
+     */
+    public synchronized boolean requestResources(int threadNum, int[] request){
+        // Check if we allow this request to be processed.
+        for(int i = 0; i < request.length; i++){
+            // Decline request if it does not leave the system in safe state.
+            if(request[i] > resources[i]){
                 return false;
             }
 
+            // Decline request if request is more than the max demand for that customer
+            if(request[i] > maximum[threadNum][i]){
+                return false;
+            }
+        }
 
-        boolean[] finish = new boolean[n];
-        for (int i = 0; i < n; i++)
-            finish[i] = false;
+        // Check if it leaves the system in a safe state
+        if(!isSafeState(threadNum, request)){
+            return false;
+        }
 
-
-        int[] avail = new int[m];
-        System.arraycopy(available, 0, avail, 0, available.length);
-
-
-        for (int i = 0; i < m; i++) {
-            avail[i] -= request[i];
-            need[threadNum][i] -= request[i];
+        // Process request and return true
+        for(int i = 0; i < request.length; i++){
+            resources[i] -= request[i];
             allocation[threadNum][i] += request[i];
         }
 
+        return true;
+    }
 
-        for (int i = 0; i < n; i++) {
+    /**
+     * Release resources.
+     * @param threadNum The number of the customer being added.
+     * @param release The resources to be released.
+     */
+    public synchronized void releaseResources(int threadNum, int[] release){
+        // Release resources
+        for(int i = 0; i < release.length; i++){
+            resources[i] += release[i];
+            allocation[threadNum][i] -= release[i];
+        }
+        getState();
+    }
 
-            for (int j = 0; j < n; j++) {
+        private boolean isSafeState( int customerNum, int[] request ) {
+            // Determines if a state is safe by trying to find a hypothetical set of requests by the processes that would allow each to acquire its
+            // maximum resources and then terminate (returning its resources to the system).
+            // Any state where no such set exists is an unsafe state.
+        int[] clonedResources = resources.clone();
+        int[][] clonedAllocated = allocation.clone();
 
-                if (!finish[j]) {
+        // First check if any part of the request requires more resources than are available (unsafe state)
+        for(int i = 0; i < clonedResources.length; i++){
+            if(request[i] > clonedResources[i]){
+                return false;
+            }
+        }
+
+        // If we reach this point, the first request was valid so we execute it on the simulated resources
+        for(int i = 0; i < clonedResources.length; i++){
+            clonedResources[i] -= request[i];
+            clonedAllocated[customerNum][i] += request[i];
+        }
+
+        // Create new boolean array and set all to false
+        boolean[] canFinish = new boolean[customers.length];
+
+        for(int i = 0; i < canFinish.length; i++){
+            canFinish[i] = false;
+        }
+
+        // Now check if there is an order wherein other customers can still finish after us
+        for(int i = 0; i < customers.length; i++){
+            // Find a customer that can finish a request. Loop through all resources per customer
+            for(int j = 0; j < customers.length; j++){
+                if(!canFinish[j]){
                     boolean temp = true;
-
-                    for (int k = 0; k < m; k++) {
-                        if (need[j][k] > avail[k])
-                            temp = false;
-                    }
-
-                    if (temp) {
-                        finish[j] = true;
-                        for (int x = 0; x < m; x++)
-                            avail[x] += allocation[j][x];
+                    for(int k = 0; k < clonedResources.length; k++){
+                        // If the need (maximum - allocation = need) is not bigger than the amount of available resources, thread can finish
+                        if(!((maximum[j][k] - clonedAllocated[j][k]) > clonedResources[k])){
+                            canFinish[j] = true;
+                            for(int l = 0; l < clonedResources.length; l++){
+                                clonedResources[l] += clonedAllocated[j][l];
+                            }
+                        }
                     }
                 }
             }
         }
 
+        // restore the value of need and allocation for this thread
         for (int i = 0; i < m; i++) {
-            need[threadNum][i] += request[i];
-            allocation[threadNum][i] -= request[i];
+            clonedAllocated[customerNum][i] -= request[i];
         }
 
-        boolean returnValue = true;
-        for (int i = 0; i < n; i++)
-
-            if (!finish[i]) {
-                returnValue = false;
-                break;
+        // After all the previous calculations. Loop through the array and see if every customer can complete the transaction for their maximum demand
+        for(int i = 0; i < canFinish.length; i++){
+            if(canFinish[i] == false){
+                return false;
             }
-
-        return returnValue;
-    }
-
-
-    @Override
-    public synchronized boolean requestResources(int threadNum, int[] request) {
-
-        if (!isSafeState(threadNum, request)) {
-            return false;
         }
 
-        for (int i = 0; i < m; i++) {
-            available[i] -= request[i];
-            allocation[threadNum][i] += request[i];
-            need[threadNum][i] = maximum[threadNum][i] - allocation[threadNum][i];
-        }
         return true;
-    }
-
-    @Override
-    public void releaseResources(int threadNum, int[] release) {
-
-        System.out.print("\n Customer # " + threadNum + " releasing ");
-
-        for (int i = 0; i < m; i++) System.out.print(release[i] + " ");
-
-        for (int i = 0; i < m; i++) {
-            available[i] += release[i];
-            allocation[threadNum][i] -= release[i];
-            need[threadNum][i] = maximum[threadNum][i] + allocation[threadNum][i];
-        }
-        System.out.print("Available = ");
-        for (int i = 0; i < m; i++)
-            System.out.print(available[i] + " ");
-        System.out.print("Allocated = 5s55");
-        for (int i = 0; i < m; i++)
-            System.out.print(allocation[threadNum][i] + " ");
     }
 }
 ```
