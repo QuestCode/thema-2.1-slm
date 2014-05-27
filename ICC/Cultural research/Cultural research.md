@@ -14,7 +14,7 @@ The politics of the country take place mostly in The Hague, this city is also ho
 
 Religion in the Netherlands was predominantly Christian. However, there has been a steep decline of religious adherence. The Netherlands is one of the most secular countries in Western Europe. Only 39% of the country's population is affiliated to a religion.
 
-The Netherlands has a maritime climate, with both mild summers and winters. The average annual temperature is around 10 degrees celsius.
+The Netherlands has a maritime climate, with both mild summers and winters. The average annual temperature is around 10 degrees celsius. The time zone in the Netherlands is CE(S)T Central European (Summer) Time (GMT+2 during Daylight Savings Time (DST), GMT+1 without DST)
 ---
 
 ### Lithuania
@@ -31,7 +31,7 @@ Politics of Lithuania are democratic, the Prime Minister of Lithuania is the hea
 
 During the 2011 census, it was determined that the predominant religion in Lithuania is Christianity. The far majority of the Christians in Lithuania are Roman Catholicist. About 77% of the population is Roman Catholic according to the census.
 
-The climate in Lithuania is maritime and wet, Lithuania has both moderate winters and summers.
+The climate in Lithuania is maritime and wet, Lithuania has both moderate winters and summers. The time zone in Lithuania is EE(S)T, Eastern European (Summer) Time (GMT+3 during Daylight Savings Time (DST), GMT+2 without DST).
 
 ---
 
