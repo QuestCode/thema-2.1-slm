@@ -46,7 +46,7 @@ Executive power is exercised by the government, which is headed by the Prime Min
 | Don't have problems saying no or giving their opinion up front                                     | Saying no is troublesome during the first stages of acquaintanceship.                                     |
 | When something is "not bad", "okay" or "nice", it should be perceived as praise for the recipient. | Do not show their enthusiasm clearly. Something like "Not Bad" might be the highest appreciation you get. |
 | Have a well-developed sense of humour                                                              |                                                                                                           |
-| May look to you to break the ice                                                                   |                                                                                                           |
+| Don't like to start a conversation unless familliar with each other.                               |                                                                                                           |
 | Whispering in the presence of other people is considered impolite.                                 |                                                                                                           |
 | Relatively loud conversations in public are not uncommon. However, they may be frowned upon.       |                                                                                                           |
 
@@ -64,6 +64,16 @@ It is advisable to use the information on their business card to determine how t
 
 During a first meeting, Lithuanians will try to be formal and polite, listening very diligently. They like to ask questions to be sure that they understand what you are saying. Usually, Lithuanians like to build a personal relationship with potential partners before moving the conversation to business. It is essential that you try to speed up this process, as it is critical to the success of the discussion and doing business in Lithuania. 
 
+| Dutch                             | Lithuania                                                          |
+| -------                           | -----------                                                        |
+| Like to get on a first name basis | Like to use the name and title on their bussiness cards            |
+|                                   | Are formal and polite                                              |
+|                                   | Like to build a personal relationship before moving on to business |
+
+##### Tips for Dutchies
+1.	Try starting with a light discussion. You can talk about family, work, hobbies and sports.
+2.	Use the name and title on the business cards to address your conversation partner.
+3.	Be friendly and try to build a personal relationship as soon as possible.
 
 
 ### General Etiquette
@@ -104,7 +114,7 @@ During a first meeting, Lithuanians will try to be formal and polite, listening 
 4.	Meetings often conclude with a summary of the discussion and a toast to future business
 
 
-
+	
 ### Business hierarchy
 77% of the Lithuanian population is roman catholic. Because of the strong hierarchy inside the roman catholic church in Lithuania and the big impact the church has on everyday life, these hierarchical trends carry on into the business aspects of the Lithuanian culture.  
 
