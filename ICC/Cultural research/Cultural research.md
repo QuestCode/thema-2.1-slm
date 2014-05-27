@@ -50,7 +50,7 @@ The climate in Lithuania is maritime and wet, Lithuania has both moderate winter
 | Whispering in the presence of other people is considered impolite.                                 |     Lithuanian humor is much like British humor. Dry.                                                                                                      | 
 | Relatively loud conversations in public are not uncommon. However, they may be frowned upon.       |        Lithuanians like talking about basketball, it is the country's favourite sport.                                                                                                   | 
 
-##### Tips for Dutchies
+##### Tips for Dutch people
 1.	Try to guide the conversation in the right direction, but of course prevent coming across as rude.
 2.	Ask open questions during the first (or first few) meetings.
 3.	Don't be taken aback if you don't see clear signs of appreciation. Ask for confirmation if you're unclear about their opinion.
@@ -65,18 +65,38 @@ People are referred to by their title and surname. Colleagues and supervisors ar
 
 It is advisable to use the information on their business card to determine how to address an associate. So, if he or she has a title written in front of their name, then you should address the person by their title and surname
 
-During a first meeting, Lithuanians will try to be formal and polite, listening very diligently. They like to ask questions to be sure that they understand what you are saying. Usually, Lithuanians like to build a personal relationship with potential partners before moving the conversation to business. It is essential that you try to speed up this process, as it is critical to the success of the discussion and doing business in Lithuania. 
+During a first meeting, Lithuanians will try to be formal and polite, listening very diligently. They like to ask questions to be sure that they understand what you are saying. Usually, Lithuanians like to build a personal relationship with potential partners before moving the conversation to business. It is essential that you try to speed up this process, as it is critical to the success of the discussion and doing business in Lithuania.
 
-| Dutch                             | Lithuania                                                          |
-| -------                           | -----------                                                        |
-| Like to get on a first name basis | Like to use the name and title on their bussiness cards            |
-|                                   | Are formal and polite                                              |
-|                                   | Like to build a personal relationship before moving on to business |
+| Dutch                                            | Lithuania                                                          |
+| -------                                          | -----------                                                        |
+| Like to get on a first name basis                | Like to use the name and title on their bussiness cards            |
+| Are informal and direct                          | Are formal and polite                                              |
+| Like some smalltalk before moving on to business | Like to build a personal relationship before moving on to business |
 
-##### Tips for Dutchies
+##### Tips for Dutch people
 1.	Try starting with a light discussion. You can talk about family, work, hobbies and sports.
 2.	Use the name and title on the business cards to address your conversation partner.
 3.	Be friendly and try to build a personal relationship as soon as possible.
+
+
+### Meetings
+Meetings are attended by employees of similar status. A list of attendees and their functions is expected in the invitation. Business in Lithuania is generally a hierarchical afair. The chair of the meeting is likely the most senior attendee. He will determine the pace and decide who can speak. During the opening of the meeting the chair will do the introductions in order of seniority. Junior members mostly only respond to direct questions from senior members.
+
+An agenda is used and followed sequentially.
+
+Meetings should be short and well prepared. All relevant information should be present and questions need direct answers. Because of the strong hierarchy within businesses most decision are made by the most senior member. Any negotations should also be done with the most senior member because of this. You should never interrupt a speaker and wait patiently to talk.
+
+The chair concludes the meeting with a summary of the discussion.
+
+##### Presentations
+
+Presentations should be short and concise and include data to support your position. Be prepared to answer any question anybody may have directly after the presentation.
+
+---
+
+##### Minutes
+
+The minutes of the meeting should summarize the main points of discussion, the decisions that were taken and the methods by which the desired results may be achieved. The minutes are sent by the party that is hosting the meeting and should be sent within a couple of days after the meeting.
 
 
 ### General Etiquette
@@ -87,22 +107,21 @@ During a first meeting, Lithuanians will try to be formal and polite, listening 
 | An individual's cooperation and trust are valued over performance; one-upmanship is frowned upon.      | Like to know who is in control. Find equal partnerships more difficult to manage.                       |
 | In the Netherlands, commitments are taken seriously. Do not promise anything that cannot be delivered. | Believe in education but also believe that one can only do things for which one has had proper training |
 
-##### Tips for Dutchies
+##### Tips for Dutch people
 1.	The Roman Catholic Church has great influence on the daily life of Lithuanians, so swearing is not done.
 
-
-
 ### Non-verbal Communication
-| Dutch                                                                                                                                                               | Lithuania   |
-| -------                                                                                                                                                             | ----------- |
-| When entering a room it is customary to shake hands with everyone present, then to shake hands again on leaving                                                     | Lithuanians like keeping a distance when speaking to someone. Especially when dealing with strangers. (About two arm lengths is common)            |
-| If seated, it is polite to stand up before shaking hands                                                                                                            | It is important to make eye contact, as refusing to make eyecontact is sometimes seen as a sign of dishonesty            |
-| The Dutch expect eye contact while speaking with someone. Looking away or staring at the ground is considered impolite and may be perceived as disinterest or lying | Lithuanians shake hands a lot. Hugging and kissing is only acceptable among close friends            |
-| The Dutch tend to be reserved in using hand gestures. However, having your hands in pockets or arms crossed might be interpreted as a sign of disinterest           | Lithuanians do not use a lot of gestures or facial expressions.             |
-| When yawning, coughing or sneezing, the mouth should be covered with a flat hand or fist                                                                            |             |
+| Dutch                                                                                                                                                               | Lithuania                                                                                                                               |
+| -------                                                                                                                                                             | -----------                                                                                                                             |
+| When entering a room it is customary to shake hands with everyone present, then to shake hands again on leaving                                                     | Lithuanians like keeping a distance when speaking to someone. Especially when dealing with strangers. (About two arm lengths is common) |
+| If seated, it is polite to stand up before shaking hands                                                                                                            | It is important to make eye contact, as refusing to make eyecontact is sometimes seen as a sign of dishonesty                           |
+| The Dutch expect eye contact while speaking with someone. Looking away or staring at the ground is considered impolite and may be perceived as disinterest or lying | Lithuanians shake hands a lot. Hugging and kissing is only acceptable among close friends                                               |
+| The Dutch tend to be reserved in using hand gestures. However, having your hands in pockets or arms crossed might be interpreted as a sign of disinterest           | Lithuanians do not use a lot of gestures or facial expressions.                                                                         |
+| When yawning, coughing or sneezing, the mouth should be covered with a flat hand or fist                                                                            |                                                                                                                                         |
 
+---
 
-##### Tips for Dutchies:
+##### Tips for Dutch people:
 1. Lithuanians have a strong sense of personal space, try to observe their degree of comfort and adjust distance accordingly.
 2. Try to have an appropriate amount of eye contact but do not stare.
 
@@ -113,14 +132,12 @@ During a first meeting, Lithuanians will try to be formal and polite, listening 
 | Accept apologies for late arrival                                                                        | Expect partner to notify them when partner is unexpectedly delayed |
 | Calling half an hour or less before the start of a meeting to change the time is considered bad manners. | Use time as a tactic, especially if they know you have a deadline  |
 
-##### Tips for Dutchies
+##### Tips for Dutch people
 1.	Arrive for a meeting 10 minutes beforehand to decrease the chances of arriving late.
 2.	Give the Lithuanians a call when you might arrive late.
 3.	Lithuanians will not be rushed into making a deal until they believe it is in their best interest
 4.	Meetings often conclude with a summary of the discussion and a toast to future business
 
-
-	
 ### Business hierarchy
 77% of the Lithuanian population is roman catholic. Because of the strong hierarchy inside the roman catholic church in Lithuania and the big impact the church has on everyday life, these hierarchical trends carry on into the business aspects of the Lithuanian culture.  
 
@@ -128,7 +145,7 @@ There is a strong sense of hierarchy within every part of the culture, this mean
 
 In comparison, the Dutch usually have a significantly less strict hierarchy. Hierarchies in the Netherlands tend to have productivity as a goal, and function less as a way of respect or authority above another person.
 
-#### Tips for Dutchies
+##### Tips for Dutch people
 1. Key tip here is to keep in mind that __not all__ Lithuanian companies will adhere to such a strict hierarchy, but to know that __if__ they do. Try to figure out your place in the meeting and do not be offended if a highly-ranked person in the company speaks to you less often (or not at all).
 
 ---
@@ -139,7 +156,7 @@ In comparison, the Dutch usually have a significantly less strict hierarchy. Hie
 | Conservatively though less formal in different sectors | Conservatively, dark suit and tie for men, trouser suit/jacket and skirt for women |
 | Better to be well-dressed rather than under-dressed    | Expect business associate to be well dressed                                       |
 
-##### Tips for Dutchies
+##### Tips for Dutch people
 1.	Dress well, dark suit and a tie is the safest option.
 
 
@@ -152,7 +169,7 @@ In comparison, the Dutch usually have a significantly less strict hierarchy. Hie
 | If invited to a Dutch home, it's accepted to bring a gift              |                                                                             |
 | Gifts are generally not given or expected at business meetings         |                                                                             |
 
-##### Tips for Dutchies
+##### Tips for Dutch people
 1. For a meeting **after** the first meeting, bring a souvenir from your home country.
 2. Depending on the time of the meeting, it might be a good idea to serve Stroopwafels. (These will also serve the purpose of being a 'souvenir', even though it's not really a gift)
 
@@ -186,6 +203,7 @@ In comparison, the Dutch usually have a significantly less strict hierarchy. Hie
 | Pardon                    | Atsiprasau               |
 | Ik weet het niet          | Nezinau                  |
 
+Listen to YouTube video (https://www.youtube.com/watch?v=QuKwMV8-cjE) for pronounciation.
 
 ## What to do in Groningen
 
@@ -213,8 +231,7 @@ Groningen has a wide variety of bars and clubs to entertain the large population
 2. [http://www.ediplomat.com/np/cultural_etiquette/ce_nl.htm](http://www.ediplomat.com/np/cultural_etiquette/ce_nl.htm)
 3. [http://businessculture.org/western-europe/business-culture-in-netherlands/business-etiquette-in-netherlands/](http://businessculture.org/western-europe/business-culture-in-netherlands/business-etiquette-in-netherlands/)
 4. [http://en.wikipedia.org/wiki/Dutch_customs_and_etiquette](http://en.wikipedia.org/wiki/Dutch_customs_and_etiquette)
-5. [https://www.youtube.com/watch?v=QuKwMV8-cjE](https://www.youtube.com/watch?v=QuKwMV8-cjE)
-6. [http://www.nationsencyclopedia.com/Europe/Netherlands-CLIMATE.html](http://www.nationsencyclopedia.com/Europe/Netherlands-CLIMATE.html)
-7. [http://www.readysetpresent.com/products/powerpointcountries/lithuania.htm](http://www.readysetpresent.com/products/powerpointcountries/lithuania.htm)
-8. [http://www.kwintessential.co.uk/etiquette/doing-business-lithuania.html](http://www.kwintessential.co.uk/etiquette/doing-business-lithuania.html)
-9. [http://www.intercultures.ca/cil-cai/ci-ic-eng.asp?iso=lt](http://www.intercultures.ca/cil-cai/ci-ic-eng.asp?iso=lt)
+5. [http://www.nationsencyclopedia.com/Europe/Netherlands-CLIMATE.html](http://www.nationsencyclopedia.com/Europe/Netherlands-CLIMATE.html)
+6. [http://www.readysetpresent.com/products/powerpointcountries/lithuania.htm](http://www.readysetpresent.com/products/powerpointcountries/lithuania.htm)
+7. [http://www.kwintessential.co.uk/etiquette/doing-business-lithuania.html](http://www.kwintessential.co.uk/etiquette/doing-business-lithuania.html)
+8. [http://www.intercultures.ca/cil-cai/ci-ic-eng.asp?iso=lt](http://www.intercultures.ca/cil-cai/ci-ic-eng.asp?iso=lt)
