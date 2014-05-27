@@ -54,6 +54,7 @@ Executive power is exercised by the government, which is headed by the Prime Min
 1.	Try to guide the conversation in the right direction, but of course prevent coming across as rude.
 2.	Ask open questions during the first (or first few) meetings.
 3.	Don't be taken aback if you don't see clear signs of appreciation. Ask for confirmation if you're unclear about their opinion.
+4.  The decision-making process in Lithuania is relatively quick. You simply have to agree on a specific date with your partner, and a decision will be ready by that date.
 
 ### Breaking the ice
 Any topic of discussion is good to start a conversation with. You can talk about family, work, hobbies and sports. Lithuanians are fond of basketball and their national team is among the best in the world.
@@ -185,6 +186,25 @@ In comparison, the Dutch usually have a significantly less strict hierarchy. Hie
 | Dank u                    | Aciu                     |
 | Pardon                    | Atsiprasau               |
 | Ik weet het niet          | Nezinau                  |
+
+
+## What to do in Groningen
+
+Although Groningen is not a very large city, it does have an important role as the main urban centre of this part of the country, particularly in the fields of music and other arts, education, and business. The large number of students living in Groningen also contributes to a diverse cultural scene for a city of its size. This chapter will cover things you can do in the city of Groningen.
+
+### Museums
+
+The most important and most famous museum in Groningen is the Groninger Museum. With the construction of its current building, designed by Alessandro Mendini, the museum has been transformed into one of the most modern and innovative of its kind in the Netherlands. In addition, the city also has a maritime museum, a university museum, a comics museum and a graphical museum.
+
+### Sightseeing
+
+Last but not least Groningen is a great place for sightseeing. The city is more than 500 years old which means that there are many old buildings to be watched. Probably the biggest sightseeing attraction is the church located on the Grote Markt called the Martinikerk, which has a large tower called the Martinitoren. The Martinitoren can be scaled by stair to get a nice view of Groningen.
+
+Other sightseeing attractions in the center of Groningen are city hall, The Korenbeurs (a building where crops and goods were traded many years ago but now functions as a supermarket), another church called the AA Kerk and the main building of the University of Groningen.
+
+### Nightlife
+
+Groningen has a wide variety of bars and clubs to entertain the large population of students that live in the city. Almost every street in Groningen has at least one bar on it, which amounts to more than a hundred bars spread across Groningen.
 
 
 ## Sources
