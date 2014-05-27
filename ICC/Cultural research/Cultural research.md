@@ -12,9 +12,10 @@ Outsiders often refer to the Netherlands to as "Holland", however, Holland is th
 
 The politics of the country take place mostly in The Hague, this city is also host to the international criminal court. The Netherlands is described as a consociational state. Dutch politics and governance in general are characterised by striving for broad consensus on important issues. Both in politics and in society as a whole.
 
-Religion in the Netherlands was predominantly Christian. However, there has been a steep decline of religious adherence. The Netherlands is one of the most secular countries in Western Europe. Only 39% of the country's population is affiliated to a religion.
-
-The Netherlands has a maritime climate, with both mild summers and winters. The average annual temperature is around 10 degrees celsius. The time zone in the Netherlands is CE(S)T Central European (Summer) Time (GMT+2 during Daylight Savings Time (DST), GMT+1 without DST)
+Religion in the Netherlands was predominantly Christian. However, there has been a steep decline of religious adherence. The Netherlands is one of the most secular countries in Western Europe. Only 39% of the country's population is affiliated to a religion.  
+  
+The Netherlands has a maritime climate, with both mild summers and winters. The average annual temperature is around 10 degrees celsius. The time zone in the Netherlands is CE(S)T Central European (Summer) Time (GMT+2 during Daylight Savings Time (DST), GMT+1 without DST).
+  
 ---
 
 ### Lithuania
