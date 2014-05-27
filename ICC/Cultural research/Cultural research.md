@@ -90,15 +90,20 @@ During a first meeting, Lithuanians will try to be formal and polite, listening 
 
 
 ### Non-verbal Communication
-| Dutch                                                                                                                                                               | Lithuania   |
-| -------                                                                                                                                                             | ----------- |
-| When entering a room it is customary to shake hands with everyone present, then to shake hands again on leaving                                                     |             |
-| If seated, it is polite to stand up before shaking hands                                                                                                            |             |
-| The Dutch expect eye contact while speaking with someone. Looking away or staring at the ground is considered impolite and may be perceived as disinterest or lying |             |
-| The Dutch tend to be reserved in using hand gestures. However, having your hands in pockets or arms crossed might be interpreted as a sign of disinterest           |             |
-| When yawning, coughing or sneezing, the mouth should be covered with a flat hand or fist                                                                            |             |
+| Dutch                                                                                                                                                               | Lithuania                                                                  |
+| -------                                                                                                                                                             | -----------                                                                |
+| When entering a room it is customary to shake hands with everyone present, then to shake hands again on leaving                                                     | Woman do not tend to shake hands although this is changing.                |
+| If seated, it is polite to stand up before shaking hands                                                                                                            |                                                                            |
+| The Dutch expect eye contact while speaking with someone. Looking away or staring at the ground is considered impolite and may be perceived as disinterest or lying | Lithuanians like to look eachother in the eyes when having a conversation. |
+| The Dutch tend to be reserved in using hand gestures. However, having your hands in pockets or arms crossed might be interpreted as a sign of disinterest           | Lithuania is a low-contact society. Touching is non-advised.               |
+| When yawning, coughing or sneezing, the mouth should be covered with a flat hand or fist                                                                            |                                                                            |
 
----
+##### Tips for Dutchies
+1.	Only shake hans with women if they initiate this.
+2.	Stand up before shaking hands and make eye contact when talking.
+3.	Do not touch Lithuanians if not nessesary.
+
+
 
 ### Punctuality
 | Dutch                                                                                                    | Lithuania                                                          |
@@ -192,3 +197,4 @@ In comparison, the Dutch usually have a significantly less strict hierarchy. Hie
 6. [http://www.nationsencyclopedia.com/Europe/Netherlands-CLIMATE.html](http://www.nationsencyclopedia.com/Europe/Netherlands-CLIMATE.html)
 7. [http://www.readysetpresent.com/products/powerpointcountries/lithuania.htm](http://www.readysetpresent.com/products/powerpointcountries/lithuania.htm)
 8. [http://www.kwintessential.co.uk/etiquette/doing-business-lithuania.html](http://www.kwintessential.co.uk/etiquette/doing-business-lithuania.html)
+9. [http://www.intercultures.ca/cil-cai/ci-ic-eng.asp?iso=lt](http://www.intercultures.ca/cil-cai/ci-ic-eng.asp?iso=lt)
