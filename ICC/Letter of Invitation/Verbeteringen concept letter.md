@@ -3,15 +3,20 @@ Da Vinci Data
 Zernikeplein 11  
 9747 AS GRONINGEN  
 The Netherlands  
-27/05/2014  
+2014/05/27  
 </span>
 
-SUBJECT: INVITATION  
+<br/>
+
+SUBJECT: INVITATION
+
+<br/>
+
 Dear Sir/Madam,  
 
 Headquarters informed us that you have shown an interest in United Nations Weather Data
 Management Institute. We would be honoured to invite you to a meeting, located at Van
-Doorenveste, on 2014-06-04 at 08:30 AM (CEST).  
+Doorenveste, on 2014-06-04 at 08:30 (CEST).  
 
 During this meeting we would like to conduct an interview with you, so you can inform us
 about your wishes. It would be a great pleasure to have you as our guest.  
@@ -19,7 +24,7 @@ about your wishes. It would be a great pleasure to have you as our guest.
 In case you need any extra transportation to attend the meeting, please do not hesitate to ask
 us, so we can make arrangements to make your trip as comfortable as possible.  
 
-Please send us an email confirming whether you will be attending the meeting or not.  
+Please send us an email confirming whether you will be attending the meeting.  
 
 We are looking forward to meeting you and hope you will be present on that day.  
 
