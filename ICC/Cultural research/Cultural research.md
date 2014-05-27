@@ -58,6 +58,8 @@ The climate in Lithuania is maritime and wet, Lithuania has both moderate winter
 ### Breaking the ice
 Any topic of discussion is good to start a conversation with. You can talk about family, work, hobbies and sports. Lithuanians are fond of basketball and their national team is among the best in the world.
 
+Do not suggest that Lithuanians are basically Russian, Lithuanians are proud to be independent. Do not start about the Eurovision song contest. The first time Lithuania participated they finished last, without a single point. After that, Lithuania withdrew and didn’t return until 1999. It just went downhill from there. Stick to sport subjects that is their strong suit.
+
 People are referred to by their title and surname. Colleagues and supervisors are usually referred to by their first name with Ponas (Mr), Panele (Ms) or Ponia (Mrs) or by title: Doctor, Professor, Director, Principle etc. and sometimes including last names. It is important not to address someone by their first name until invited to do so.
 
 It is advisable to use the information on their business card to determine how to address an associate. So, if he or she has a title written in front of their name, then you should address the person by their title and surname
