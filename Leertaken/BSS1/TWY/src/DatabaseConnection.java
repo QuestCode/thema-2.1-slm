@@ -10,7 +10,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public class DatabaseConnection {
-    private static final String hostname = "jdbc:postgresql://95.85.63.58:5432/one";
+    private static final String hostname = "jdbc:postgresql://95.85.22.170:5432/one";
     private static final String username = "one";
     private static final String password = "Tr3ll0?";
 
