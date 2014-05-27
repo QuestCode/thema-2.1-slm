@@ -12,6 +12,8 @@ The Netherlands, which shares it borders with Germany and Belgium, is often refe
 
 The politics of the Netherlands take place within the framework of a parliamentary representative democracy, a constitutional monarchy and a decentralised unitary state. The Netherlands is described as a consociational state.[2] Dutch politics and governance are characterised by a common striving for broad consensus on important issues, within both the political community and society as a whole.
 
+Religion in the Netherlands was predominantly Christian until late into the 20th century. Although religious diversity remains, there has been a decline of religious adherence. The Netherlands is one of the most secular countries in Western Europe, with only 39% being religiously affiliated (31% for those aged under 35), and fewer than 5.6% visiting church regularly (meaning once or more per month) in 2010. Religion is in the Netherlands generally considered a personal matter which is not supposed to be propagated in public.
+
 The Netherlands has a maritime climate, with cool summers and mild winters. The average temperature is 2°C in January and 19°C in July, with an annual average of about 10°C. Clouds generally appear every day, and in the winter months fog often abounds, while rainfall occurs frequently.
 
 ---
@@ -27,6 +29,8 @@ Lithuania has had an interesting history. At the end of the 14th century, the co
 The Lithuanian population is more than three million people, mostly comprised of Lithuanians, but also Poles, Russians, Belarusians and other ethnic groups. The main religions are Roman Catholicism and Russian Orthodox.
 
 Politics of Lithuania takes place in a framework of a parliamentary representative democratic republic, whereby the Prime Minister of Lithuania is the head of government, and of a multi-party system.
+
+As per the 2011 census, the predominant religion in Lithuania is Christianity, with the largest confession being Roman Catholicism. Lithuania was the last pagan country in Europe, with the Roman Catholic Church becoming widely accepted only in the late 14th century. In the early 21st century, about 77% of the population is Roman Catholic according to the 2011 census. There are also smaller groups of Evangelical Lutherans and Reformed churches other Protestants, as well as people of other faiths. Some elements of the ancient Lithuanian pagan religion survives in the countryside, mingled with Christianity.
 
 Executive power is exercised by the government, which is headed by the Prime Minister. Legislative power is vested in both the government and the unicameral Seimas (Lithuanian Parliament). Judicial power is vested in judges appointed by the President of Lithuania and is independent of executive and legislature power. The judiciary consists of the Constitutional Court, the Supreme Court, and the Court of Appeal as well as the separate administrative courts. The Constitution of the Republic of Lithuania established these powers upon its approval on October 25, 1992. Being a multi-party system, the government of Lithuania is not dominated by any single political party, rather it consists of numerous parties that must work with each other to form coalition governments.
 
@@ -46,7 +50,7 @@ Executive power is exercised by the government, which is headed by the Prime Min
 | Whispering in the presence of other people is considered impolite.                                 |                                                                                                           |
 | Relatively loud conversations in public are not uncommon. However, they may be frowned upon.       |                                                                                                           |
 
-##### Tips
+##### Tips for Dutchies
 1.	Try to guide the conversation in the right direction, but of course prevent coming across as rude.
 2.	Ask open questions during the first (or first few) meetings.
 3.	Don't be taken aback if you don't see clear signs of appreciation. Ask for confirmation if you're unclear about their opinion.
@@ -70,7 +74,7 @@ During a first meeting, Lithuanians will try to be formal and polite, listening 
 | An individual's cooperation and trust are valued over performance; one-upmanship is frowned upon.      | Like to know who is in control. Find equal partnerships more difficult to manage.                       |
 | In the Netherlands, commitments are taken seriously. Do not promise anything that cannot be delivered. | Believe in education but also believe that one can only do things for which one has had proper training |
 
-##### Tips
+##### Tips for Dutchies
 1.	The Roman Catholic Church has great influence on the daily life of Lithuanians, so swearing is not done.
 
 
@@ -93,7 +97,7 @@ During a first meeting, Lithuanians will try to be formal and polite, listening 
 | Accept apologies for late arrival                                                                        | Expect partner to notify them when partner is unexpectedly delayed |
 | Calling half an hour or less before the start of a meeting to change the time is considered bad manners. | Use time as a tactic, especially if they know you have a deadline  |
 
-##### Tips
+##### Tips for Dutchies
 1.	Arrive for a meeting 10 minutes beforehand to decrease the chances of arriving late.
 2.	Give the Lithuanians a call when you might arrive late.
 3.	Lithuanians will not be rushed into making a deal until they believe it is in their best interest
@@ -108,7 +112,7 @@ There is a strong sense of hierarchy within every part of the culture, this mean
 
 In comparison, the Dutch usually have a significantly less strict hierarchy. Hierarchies in the Netherlands tend to have productivity as a goal, and function less as a way of respect or authority above another person.
 
-#### Tips
+#### Tips for Dutchies
 1. Key tip here is to keep in mind that not all Lithuanian companies will adhere to such a strict hierarchy, but to know that IF they do. Try to figure out your place in the conversation and do not be offended if a highly-ranked person in the company speaks less often to you (or not at all).
 
 ---
@@ -119,7 +123,7 @@ In comparison, the Dutch usually have a significantly less strict hierarchy. Hie
 | Conservatively though less formal in different sectors | Conservatively, dark suit and tie for men, trouser suit/jacket and skirt for women |
 | Better to be well-dressed rather than under-dressed    | Expect business associate to be well dressed                                       |
 
-##### Tips
+##### Tips for Dutchies
 1.	Dress well, dark suit and a tie is the safest option.
 
 
@@ -132,7 +136,7 @@ In comparison, the Dutch usually have a significantly less strict hierarchy. Hie
 | If invited to a Dutch home, it's accepted to bring a gift              |                                                                             |
 | Gifts are generally not given or expected at business meetings         |                                                                             |
 
-##### Tips
+##### Tips for Dutchies
 1. For a meeting **after** the first meeting, bring a souvenir from your home country.
 
 
