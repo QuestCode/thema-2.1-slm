@@ -210,6 +210,7 @@ Groningen has a wide variety of bars and clubs to entertain the large population
 ## Sources
 
 1. [http://businessculture.org/eastern-europe/lithuania/business-etiquette/](http://businessculture.org/eastern-europe/lithuania/business-etiquette/)
+2. [http://businessculture.org/eastern-europe/lithuania/business-communication/](http://businessculture.org/eastern-europe/lithuania/business-communication/)
 2. [http://www.ediplomat.com/np/cultural_etiquette/ce_nl.htm](http://www.ediplomat.com/np/cultural_etiquette/ce_nl.htm)
 3. [http://businessculture.org/western-europe/business-culture-in-netherlands/business-etiquette-in-netherlands/](http://businessculture.org/western-europe/business-culture-in-netherlands/business-etiquette-in-netherlands/)
 4. [http://en.wikipedia.org/wiki/Dutch_customs_and_etiquette](http://en.wikipedia.org/wiki/Dutch_customs_and_etiquette)
