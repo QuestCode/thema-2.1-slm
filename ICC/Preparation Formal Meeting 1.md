@@ -21,7 +21,13 @@ Zelf doen vóór de meeting:
 ### Aanhef:
 Stadman: Chancellor Stadman
 
-### Vragen om te stellen:
+### Doelen:
+- Overzicht krijgen over wat de klant met de data wil.
+- Uitzoeken welke data de klant wil.
+- Uitvinden op wat voor manier de klant de data wil verwerken.
+- Uitvinden wat de doelgroep is.
+
+### Mogelijke vragen om te stellen:
 - What kind of data do you need? (Certain country/region?)
 - What do you want to achieve with the data?
 - How do you want to represent the data?
