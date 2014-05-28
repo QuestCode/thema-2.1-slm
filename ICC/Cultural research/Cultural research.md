@@ -137,6 +137,7 @@ The minutes of the meeting should summarize the main points of discussion, the d
 
 ##### Tips for Dutch people
 1.	The Roman Catholic Church has great influence on the daily life of Lithuanians, so swearing is not done.
+2.	There is no real difference between the style of a Dutch or Lithuanian business card.
 
 ##### Tips for Lithuanian people
 1. Try not to make any promises that can not be delivered upon, be honest if you think you might not be able to fulfill a request.  
