@@ -1,4 +1,4 @@
- # Cultural Research Document
+# Cultural Research Document
 
 > __Group:__ 1
 >
@@ -8,57 +8,40 @@
 
 # Index
 
-- __General information__											<span style="float:right;font-weight:bold">3</span>
-	- The Netherlands												<span style="float:right;font-weight:normal">3</span>
+- __Introduction__													<span style="float:right;font-weight:bold">3</span>
+- __General information__											<span style="float:right;font-weight:bold">4</span>
 	- Lithuania														<span style="float:right;font-weight:normal">4</span>
-- __Differences between Dutch and Lithuanian business etiquette__	<span style="float:right;font-weight:bold">5</span>
-	- Communication													<span style="float:right;font-weight:normal">5</span>
-	- Breaking the ice												<span style="float:right;font-weight:normal">6</span>
-	- Meetings														<span style="float:right;font-weight:normal">7</span>
-	- Negotiation Process											<span style="float:right;font-weight:normal">7</span>
-	- General Etiquette												<span style="float:right;font-weight:normal">8</span>
-	- Non-verbal Communication										<span style="float:right;font-weight:normal">9</span>
-	- Punctuality													<span style="float:right;font-weight:normal">10</span>
-	- Business hierarchy											<span style="float:right;font-weight:normal">11</span>
-	- Dress code													<span style="float:right;font-weight:normal">11</span>
-	- Gift giving													<span style="float:right;font-weight:normal">12</span>
-	- Bribery and Corruption										<span style="float:right;font-weight:normal">12</span>
-- __Basic words and phrases__										<span style="float:right;font-weight:bold">13</span>
-- __Weather Terminology:__											<span style="float:right;font-weight:bold">14</span>
-- __What to do in Groningen__										<span style="float:right;font-weight:bold">15</span>
-	- Museums														<span style="float:right;font-weight:normal">15</span>
-	- Sightseeing													<span style="float:right;font-weight:normal">15</span>
-	- Nightlife														<span style="float:right;font-weight:normal">15</span>
-- __Sources__														<span style="float:right;font-weight:bold">16</span>
+	- The Netherlands												<span style="float:right;font-weight:normal">5</span>
+- __Differences between Dutch and Lithuanian business etiquette__	<span style="float:right;font-weight:bold">6</span>
+	- Communication													<span style="float:right;font-weight:normal">6</span>
+	- Breaking the ice												<span style="float:right;font-weight:normal">7</span>
+	- Meetings														<span style="float:right;font-weight:normal">8</span>
+	- Negotiation Process											<span style="float:right;font-weight:normal">8</span>
+	- General Etiquette												<span style="float:right;font-weight:normal">9</span>
+	- Non-verbal Communication										<span style="float:right;font-weight:normal">10</span>
+	- Punctuality													<span style="float:right;font-weight:normal">11</span>
+	- Business hierarchy											<span style="float:right;font-weight:normal">12</span>
+	- Dress code													<span style="float:right;font-weight:normal">12</span>
+	- Gift giving													<span style="float:right;font-weight:normal">13</span>
+	- Bribery and Corruption										<span style="float:right;font-weight:normal">13</span>
+- __Basic words and phrases__										<span style="float:right;font-weight:bold">14</span>
+- __Weather Terminology:__											<span style="float:right;font-weight:bold">15</span>
+- __What to do in Groningen__										<span style="float:right;font-weight:bold">16</span>
+	- Museums														<span style="float:right;font-weight:normal">16</span>
+	- Sightseeing													<span style="float:right;font-weight:normal">16</span>
+	- Nightlife														<span style="float:right;font-weight:normal">16</span>
+- __Sources__														<span style="float:right;font-weight:bold">17</span>
 
-# Introduction 
+# Introduction
+This cultural research document will extensively list (and describe) several topics regarding business etiquette in both Lithuania and the Netherlands. The most important differences between the business cultures in these countries will be noted and elaborated on.
 
-This cultural research document will extensively list (and describe) several topics regarding business etiquette in both Lithuania and the Netherlands. The most important differences between the business cultures in these countries will be noted and elaborated on. 
-
-The document will also contain tips for both parties to help avoid or mitigate the risk of conflict situations stemming from these differences on topics where this is relevant or necessary. 
+The document will also contain tips for both parties to help avoid or mitigate the risk of conflict situations stemming from these differences on topics where this is relevant or necessary.
 
 Finally, to help bridge the language barrier: there will be short lists containing terminology and basic sentences in both English and Lithuanian and sometimes Dutch.
-
 
 # General information
 
 The following chapters will describe general information about the Netherlands and Lithuania.
-
-## The Netherlands
-
-<img src="Figures/religion_netherlands.png" title="Religion Netherlands" style="float:right;margin:0 0 0 20px"/>
-
-The Netherlands is a small country in Western Europe. The Netherlands is one of the world's most populous country, counting 17 million citizens on a surface area of over 41,000 km². A quarter of the Netherlands lies below sea level.
-
-Outsiders often refer to the Netherlands to as "Holland", however, Holland is the identity of two western coastal provinces, North and South Holland. This area of the Netherlands contains the most businesses and have played a dominant role in the history of the Netherlands.
-
-The politics of the country take place mostly in The Hague, this city is also host to the international criminal court. The Netherlands is described as a consociational state. Dutch politics and governance in general are characterised by striving for broad consensus on important issues. Both in politics and in society as a whole.
-
-Religion in the Netherlands was predominantly Christian. However, there has been a steep decline of religious adherence. The Netherlands is one of the most secular countries in Western Europe. Only 39% of the country's population is affiliated to a religion.
-
-The Netherlands has a maritime climate, with both mild summers and winters. The average annual temperature is around 10 degrees celsius. The time zone in the Netherlands is CE(S)T Central European (Summer) Time (GMT+2 during Daylight Savings Time (DST), GMT+1 without DST).
-
----
 
 ## Lithuania
 
@@ -79,6 +62,22 @@ During the 2011 census, it was determined that the predominant religion in Lithu
 In 2013 Lithuania was the country with the second best average internet speed, which was 38,85 mbps. The Netherlands was on the fourth place with an average speed of 34,52 mbps.
 
 The climate in Lithuania is maritime and wet, Lithuania has both moderate winters and summers. The time zone in Lithuania is EE(S)T, Eastern European (Summer) Time (GMT+3 during Daylight Savings Time (DST), GMT+2 without DST).
+
+---
+
+## The Netherlands
+
+<img src="Figures/religion_netherlands.png" title="Religion Netherlands" style="float:right;margin:0 0 0 20px"/>
+
+The Netherlands is a small country in Western Europe. The Netherlands is one of the world's most populous country, counting 17 million citizens on a surface area of over 41,000 km². A quarter of the Netherlands lies below sea level.
+
+Outsiders often refer to the Netherlands to as "Holland", however, Holland is the identity of two western coastal provinces, North and South Holland. This area of the Netherlands contains the most businesses and have played a dominant role in the history of the Netherlands.
+
+The politics of the country take place mostly in The Hague, this city is also host to the international criminal court. The Netherlands is described as a consociational state. Dutch politics and governance in general are characterised by striving for broad consensus on important issues. Both in politics and in society as a whole.
+
+Religion in the Netherlands was predominantly Christian. However, there has been a steep decline of religious adherence. The Netherlands is one of the most secular countries in Western Europe. Only 39% of the country's population is affiliated to a religion.
+
+The Netherlands has a maritime climate, with both mild summers and winters. The average annual temperature is around 10 degrees celsius. The time zone in the Netherlands is CE(S)T Central European (Summer) Time (GMT+2 during Daylight Savings Time (DST), GMT+1 without DST).
 
 # Differences between Dutch and Lithuanian business etiquette
 
