@@ -30,7 +30,11 @@ The Lithuanian population consists of over three million people, mostly comprise
 
 Politics of Lithuania are democratic, the Prime Minister of Lithuania is the head of government, and there is a multi-party system.
 
+The elderly in Lithuania most likely speak only Lithuanian or only Russian. Their children, currently the middle age-generation, will most likely speak a few more languages, such as Ukrainian or Polish, but usually not English. It is just more recently that English has began infiltrating Lithuania, and it is the younger generations (20s and younger) that have taken an interest in becoming fluent.
+
 During the 2011 census, it was determined that the predominant religion in Lithuania is Christianity. The far majority of the Christians in Lithuania are Roman Catholicist. About 77% of the population is Roman Catholic according to the census.
+
+In 2013 Lithuania was the country with the second best average internet speed, which was 38,85 mbps. The Netherlands was on the fourth place with an average speed of 34,52 mbps.
 
 The climate in Lithuania is maritime and wet, Lithuania has both moderate winters and summers. The time zone in Lithuania is EE(S)T, Eastern European (Summer) Time (GMT+3 during Daylight Savings Time (DST), GMT+2 without DST).
 
@@ -296,6 +300,8 @@ Groningen has a wide variety of bars and clubs to entertain the large population
 4. [http://businessculture.org/western-europe/business-culture-in-netherlands/business-etiquette-in-netherlands/](http://businessculture.org/western-europe/business-culture-in-netherlands/business-etiquette-in-netherlands/)
 5. [http://en.wikipedia.org/wiki/Dutch_customs_and_etiquette](http://en.wikipedia.org/wiki/Dutch_customs_and_etiquette)
 6. [http://www.nationsencyclopedia.com/Europe/Netherlands-CLIMATE.html](http://www.nationsencyclopedia.com/Europe/Netherlands-CLIMATE.html)
-7. [http://www.kwintessential.co.uk/etiquette/doing-business-lithuania.html](http://www.kwintessential.co.uk/etiquette/doing-business-lithuania.html)
-8. [http://www.intercultures.ca/cil-cai/ci-ic-eng.asp?iso=lt](http://www.intercultures.ca/cil-cai/ci-ic-eng.asp?iso=lt)
-9. [http://www.lietuva.lt/en/business/business_etiquette](http://www.lietuva.lt/en/business/business_etiquette)
+7. [http://www.readysetpresent.com/products/powerpointcountries/lithuania.htm](http://www.readysetpresent.com/products/powerpointcountries/lithuania.htm)
+8. [http://www.kwintessential.co.uk/etiquette/doing-business-lithuania.html](http://www.kwintessential.co.uk/etiquette/doing-business-lithuania.html)
+9. [http://www.intercultures.ca/cil-cai/ci-ic-eng.asp?iso=lt](http://www.intercultures.ca/cil-cai/ci-ic-eng.asp?iso=lt)
+10. [http://www.lietuva.lt/en/business/business_etiquette](http://www.lietuva.lt/en/business/business_etiquette)
+11. [http://www.goabroad.com/articles/10-things-you-should-know-before-teaching-in-lithuania](http://www.goabroad.com/articles/10-things-you-should-know-before-teaching-in-lithuania)
