@@ -24,8 +24,10 @@ Stadman: Chancellor Stadman
 ### Doelen:
 - Overzicht krijgen over wat de klant met de data wil.
 - Uitzoeken welke data de klant wil.
-- Uitvinden op wat voor manier de klant de data wil verwerken.
+- Uitvinden op wat voor manier de klant de data wil verwerken en vertonen.
 - Uitvinden wat de doelgroep is.
+- Wat voor ondersteuning na de oplevering? Onderhouden?
+- Wat voor rapportage verwachten ze tijdens het ontwikkelingsproces?
 
 ### Mogelijke vragen om te stellen:
 - What kind of data do you need? (Certain country/region?)
