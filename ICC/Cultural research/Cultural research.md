@@ -250,6 +250,25 @@ In comparison, the Dutch usually have a significantly less strict hierarchy. Hie
 
 Listen to YouTube video (https://www.youtube.com/watch?v=QuKwMV8-cjE) for pronounciation.
 
+## Weather Terminology:
+
+| Dutch                 | Lithuanian         | English             | Explanation                                                                                       |
+| ---                   | ---                | ---                 | ---                                                                                               |
+| Temperatuur           | temperatūra        | Temperature         | The temperature, in both countries measured in Celsius                                            |
+| Dauwpunt              | Rasos taškas       | Dew point           | Temperature at which water in the air condenses into liquid water                                 |
+| Luchtdruk             | Oro slėgis         | Air pressure        | The amount of pressure exerted on a surface by the total weight of all the air above that surface |
+| Zichtbaarheidsafstand | žvilgsnio atstumas | Sight distance      | The distance a person can see before the vision is obscured                                       |
+| Windsnelheid          | vėjo greitis       | Wind velocity/speed | The speed of wind moving from one place to another (km/h)                                         |
+| Neerslag              | krituliai          | Precipitation       | Any product of condensation of water in the atmosphere (hail, rain, etc.)                         |
+| Bewolking             | apsiniaukęs        | Overcast            | The amount of clouds in the atmosphere                                                            |
+| Windrichting          | vėjas              | Wind direction      | The direction the wind is traveling to                                                            |
+| Onweer                | audra              | (Thunder)storm      | Form of turbulent weather characterized by the presence of lightning                              |
+| Tornado               | tornadas           | Tornado             | Violently rotating column of air that is in contact with the surface of the earth                 |
+| Weer                  | oras               | Weather             | State of the atmosphere                                                                           |
+| Klimaat               | klimatas           | Climate             | Measure of the average pattern of variation in weather measurements in a given region             |
+
+---
+
 ## What to do in Groningen
 
 Although Groningen is not a very large city, it does have an important role as the main urban centre of this part of the country, particularly in the fields of music and other arts, education, and business. The large number of students living in Groningen also contributes to a diverse cultural scene for a city of its size. This chapter will cover things you can do in the city of Groningen.
