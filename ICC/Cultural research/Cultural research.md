@@ -106,6 +106,7 @@ The minutes of the meeting should summarize the main points of discussion, the d
 | Spouses or partners are often included in a business dinner.                                           | Prefer to demonstrate individuality and compete rather than collaberate.                                |
 | An individual's cooperation and trust are valued over performance; one-upmanship is frowned upon.      | Like to know who is in control. Find equal partnerships more difficult to manage.                       |
 | In the Netherlands, commitments are taken seriously. Do not promise anything that cannot be delivered. | Believe in education but also believe that one can only do things for which one has had proper training |
+| No set ritual for exchanging business cards, either after or during conversation | Tradition of exchanging business cards during the very first meeting |
 
 ##### Tips for Dutch people
 1.	The Roman Catholic Church has great influence on the daily life of Lithuanians, so swearing is not done.
@@ -235,3 +236,4 @@ Groningen has a wide variety of bars and clubs to entertain the large population
 6. [http://www.readysetpresent.com/products/powerpointcountries/lithuania.htm](http://www.readysetpresent.com/products/powerpointcountries/lithuania.htm)
 7. [http://www.kwintessential.co.uk/etiquette/doing-business-lithuania.html](http://www.kwintessential.co.uk/etiquette/doing-business-lithuania.html)
 8. [http://www.intercultures.ca/cil-cai/ci-ic-eng.asp?iso=lt](http://www.intercultures.ca/cil-cai/ci-ic-eng.asp?iso=lt)
+9. [http://www.lietuva.lt/en/business/business_etiquette](http://www.lietuva.lt/en/business/business_etiquette)
