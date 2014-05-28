@@ -1,4 +1,7 @@
-Corporate Social Responsibility
+#Business etiquette
+###Source: [http://businessculture.org/eastern-europe/lithuania/business-etiquette/](http://businessculture.org/eastern-europe/lithuania/business-etiquette/)
+
+##Corporate Social Responsibility
 
 The understanding of Corporate Social Responsibility differs among Lithuanian companies and is frequently linked to philanthropy rather than partnerships. For most of them, CSR is about ethical conduct and transparency in operations. For others, protecting the environment is a socially responsible activity.
 
@@ -12,7 +15,7 @@ The Lithuanian government’s national programme for the development of CSR betw
 
     http://www.lm.gov.lv/upload/darba_devejiem/csr_060220_estonia_latvia_lithuania.pdf
 
-Punctuality
+##Punctuality
 
 Lithuanians are usually on time for meetings and visitors are expected to arrive on time. Generally, it is always a good idea to arrive about ten minutes before your appointment, in order to give you time to prepare for the meeting. If you know that you are going to be delayed, it is advisable to call ahead and apologize for your delay. Scheduling appointments 2 to 3 weeks prior to the meeting date is required. Lithuanians favour face-to-face meetings, because they need to foster relationships for mutual understanding. Punctuality may not be as strict in social situations.
 Gift Giving
@@ -23,7 +26,7 @@ It is traditional to bring something for the host when visiting a Lithuanian hom
 
     http://www.giftsforeurope.com/en/international-gift-guide/gifts-lithuania.htm
 
-Business Dress Code
+##Business Dress Code
 
 In business, conservative/classical clothing is common. Men tend to wear a dark suit with a tie, while women might wear a trouser suit, or jacket and skirt. For business meetings, choosing a dark suit to wear is always appropriate for men and women should also wear a suit or something elegant. Lithuanians expect their foreign business associates to be well dressed and business attire is appropriate for almost all formal occasions.
 
@@ -31,7 +34,7 @@ During normal working hours, there is a less formal code. Men take off their jac
 
     http://www.culturecrossing.net/basics_business_student.php?id=119
 
-Bribery and Corruption
+##Bribery and Corruption
 
 According to the Corruption Perception index of 2012, Lithuania ranked 48th among 176 rated countries, with 54 of a possible 100 points. According to the Lithuanian office of Transparency International, business representatives saw a better outlook for Lithuania’s anti-corruption environment in 2012. According the experts, Lithuania also boasts a favourable legal environment that can easily accommodate further anti-corruption measures.
 
