@@ -1,15 +1,18 @@
 #Cultural information Lithuania
 ###Source 8: [http://businessculture.org/eastern-europe/lithuania/business-etiquette/](http://businessculture.org/eastern-europe/lithuania/business-etiquette/)
 
+__Sections used in our cultural research document are indicated as followed:__
+>  This is a paragraph used in our cultural research document.
+
 ##Cultural Information - Conversations
 ###Question:
 I am meeting someone for the first time and I want to make a good impression. What would be good discussion topics?
 ###Local Perspective:
 When meeting someone for the first time you should be dressed appropriately, it is most important to be clean and tidy. Also a sincere smile and eye contact are valuable.
 
-Any discussion topic is good, you can talk about everything: family, work, where you are from, hobbies (i.e. fishing and sports). Lithuanians are crazy about basketball, very similar to hockey in Canada. It is very important to consider the context and to not repeat the same questions and jokes without taking the context into account. Lithuanian humour is a little bit different from Canadian humour, it is more like British, dry. Canadians will not have any trouble understanding or accepting it. Just try to avoid sarcasm and irony.
+> Any discussion topic is good, you can talk about everything: family, work, where you are from, hobbies (i.e. fishing and sports). Lithuanians are crazy about basketball, very similar to hockey in Canada. It is very important to consider the context and to not repeat the same questions and jokes without taking the context into account. Lithuanian humour is a little bit different from Canadian humour, it is more like British, dry. Canadians will not have any trouble understanding or accepting it. Just try to avoid sarcasm and irony.
 
-Lithuanians talk a lot about politics. People have very strong opinions and usually are not happy with how things are done in the Government. For a Canadian it would be hard to understand the political situation and that is why it is better to stay away from discussing politics.
+> Lithuanians talk a lot about politics. People have very strong opinions and usually are not happy with how things are done in the Government. For a Canadian it would be hard to understand the political situation and that is why it is better to stay away from discussing politics.
 
 ###Canadian Perspective:
 For business meetings personal topics should be reserved for later.
@@ -26,22 +29,22 @@ Subjects that should be avoided include potentially divisive ones such as politi
 What do I need to know about verbal and non-verbal communications?
 
 ###Local Perspective:
-When it comes to acceptable distance when speaking to someone, Lithuanians are very similar to Canadians. Generally stand so that the tips of the fingers of your outstretched arm just barely touches the other person. Distance can be even greater when speaking or dealing with strangers. It is best to carefully observe each person’s degree of comfort with touching and their preference for personal space.
+> When it comes to acceptable distance when speaking to someone, Lithuanians are very similar to Canadians. Generally stand so that the tips of the fingers of your outstretched arm just barely touches the other person. Distance can be even greater when speaking or dealing with strangers. It is best to carefully observe each person’s degree of comfort with touching and their preference for personal space.
 
 The situation is different when you stand in line in the store or bank, people could be standing very close to each other. The same situation is if you take public transportation: people are very close to each other.
 
-It is very important to make eye contact. Just like Canadians, Lithuanians consider it a sign of dishonesty if a person refuses to or is reluctant to make eye contact.
+> It is very important to make eye contact. Just like Canadians, Lithuanians consider it a sign of dishonesty if a person refuses to or is reluctant to make eye contact.
 
-Lithuanians in general will shake hands more often than North Americans. It is a custom to shake hands when greeting each other, especially among men. Hugging and kissing is acceptable only among close friends.
+> Lithuanians in general will shake hands more often than North Americans. It is a custom to shake hands when greeting each other, especially among men. Hugging and kissing is acceptable only among close friends.
 
-While talking, men and women generally do not touch, but someone patting you on the shoulder could happen. Although Lithuanians do not have very strong sense of space it is best to observe each person’s degree of comfort.
+> While talking, men and women generally do not touch, but someone patting you on the shoulder could happen. Although Lithuanians do not have very strong sense of space it is best to observe each person’s degree of comfort.
 
 Lithuanians do not use a lot of gestures or facial expressions. That could vary from person to person. The meaning of gestures and face expressions are the same as in Canada.
 
 ###Canadian Perspective:
 There should be an arm’s length distance when communicating. Eye contact is similar to that in Canada; two sayings related to the eyes are (translated): "You can tell a person by their eyes" and "Eyes are the soul of a person". Staring should be avoided.
 
-Lithuania is a low-contact society. Touching is non-advised. Women tend not to shake hands, although this might be changing. Lithuanians tend to conceal their emotions, be reserved until they get to know you. Lithuanians can be facially expressive.
+> Lithuania is a low-contact society. Touching is non-advised. Women tend not to shake hands, although this might be changing. Lithuanians tend to conceal their emotions, be reserved until they get to know you. Lithuanians can be facially expressive.
 
 ##Cultural Information - Display of Emotion
 ###Question:
