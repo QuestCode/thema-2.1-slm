@@ -56,7 +56,7 @@ The climate in Lithuania is maritime and wet, Lithuania has both moderate winter
 3.	Don't be taken aback if you don't see clear signs of appreciation. Ask for confirmation if you're unclear about their opinion.
 4.  The decision-making process in Lithuania is relatively quick. You simply have to agree on a specific date with your partner, and a decision will be ready by that date.
 
-#### Tips for Lithuanian people
+##### Tips for Lithuanian people
 1. Don't be afraid to say no, Dutch people will not be offended by it.
 2. Try not to take it as an insult when someone Dutch seems very direct. This __can__ be a good quality so that everyone knows each other's opinion. Besides, most Dutch people will not be aware of this tendency.
 
@@ -82,7 +82,7 @@ During a first meeting, Lithuanians will try to be formal and polite, listening 
 2.	Use the name and title on the business cards to address your conversation partner.  
 3.	Be friendly and try to build a personal relationship as soon as possible.  
 
-#### Tips for Lithuanian people
+##### Tips for Lithuanian people
 1. Do not be afraid of breaking the ice, even if a spontaneous joke or informal conversation seems odd. This is common in Dutch culture.  
 2. If you do not like being called by your first name, do not call Dutch people by their first name either. Alternatively you could take the more direct approach by telling them you do not like being called by your first name. Because directness is also appreciated within Dutch culture.
 
@@ -118,7 +118,7 @@ The minutes of the meeting should summarize the main points of discussion, the d
 ##### Tips for Dutch people
 1.	The Roman Catholic Church has great influence on the daily life of Lithuanians, so swearing is not done.
 
-#### Tips for Lithuanian people
+##### Tips for Lithuanian people
 1. Try not to make any promises that can not be delivered upon, be honest if you think you might not be able to fulfill a request.  
 2. There is no ritual for exchanging business cards in the Netherlands, so just exchanging business cards during the first meeting is fine.
 
@@ -137,7 +137,7 @@ The minutes of the meeting should summarize the main points of discussion, the d
 1. Lithuanians have a strong sense of personal space, try to observe their degree of comfort and adjust distance accordingly.
 2. Try to have an appropriate amount of eye contact but do not stare.
 
-#### Tips for Lithuanian people:
+##### Tips for Lithuanian people:
 1. Stand up before shaking hands
 2. Make eye contact when talking to someone.
 3. Cover your mouth with a flat hand or fist when coughing, sneezing or yawning.
@@ -155,7 +155,7 @@ The minutes of the meeting should summarize the main points of discussion, the d
 3.	Lithuanians will not be rushed into making a deal until they believe it is in their best interest
 4.	Meetings often conclude with a summary of the discussion and a toast to future business
 
-#### Tips for Lithuanian people
+##### Tips for Lithuanian people
 1. Dutch people may not pay as much respect to punctuality as you do, try emphasise on this during contact beforehand (without sounding accusing).
 2. If you are late, it is no problem to just apologise after entering.
 
@@ -169,7 +169,7 @@ In comparison, the Dutch usually have a significantly less strict hierarchy. Hie
 ##### Tips for Dutch people
 1. Key tip here is to keep in mind that __not all__ Lithuanian companies will adhere to such a strict hierarchy, but to know that __if__ they do. Try to figure out your place in the meeting and do not be offended if a highly-ranked person in the company speaks to you less often (or not at all).
 
-#### Tips for Lithuanian people
+##### Tips for Lithuanian people
 1. If Dutch people might seem offended when someone higher-up in the hierarchy does not talk to them as much, try explaining that this is not personal and mostly habitual and ritualistic.
 
 ---
@@ -183,7 +183,7 @@ In comparison, the Dutch usually have a significantly less strict hierarchy. Hie
 ##### Tips for Dutch people
 1.	Dress well, dark suit and a tie is the safest option.
 
-#### Tips for Lithuanian people
+##### Tips for Lithuanian people
 1. It is okay to dress less formally in some sectors or happenings, especially in IT it is not common for people to dress for example in jeans and a shirt.
 
 
@@ -199,7 +199,7 @@ In comparison, the Dutch usually have a significantly less strict hierarchy. Hie
 1. For a meeting **after** the first meeting, bring a souvenir from your home country.
 2. Depending on the time of the meeting, it might be a good idea to serve Stroopwafels. (These will also serve the purpose of being a 'souvenir', even though it's not really a gift)
 
-#### Tips for Lithuanian people
+##### Tips for Lithuanian people
 1. Do not expect a gift during the first meeting. 
 
 ### Bribery and Corruption
