@@ -1,7 +1,42 @@
+# Cultural Research Document
 
-# Cultural Research
+> __Group:__ 1
+>
+> __Authors:__ <span style="display:inline-block;vertical-align:top">André Nanninga, Markus Wind, Maurits van Mastrigt,<br/>Tom Broenink, Ward Holthof, and Yuri Hoogeweg</span>
+>
+> __Date:__ May 28th 2014
 
-### The Netherlands
+# Index
+
+- __General information__											<span style="float:right;font-weight:bold">3</span>
+	- The Netherlands												<span style="float:right;font-weight:normal">3</span>
+	- Lithuania														<span style="float:right;font-weight:normal">4</span>
+- __Differences between Dutch and Lithuanian business etiquette__	<span style="float:right;font-weight:bold">5</span>
+	- Communication													<span style="float:right;font-weight:normal">3</span>
+	- Breaking the ice												<span style="float:right;font-weight:normal">3</span>
+	- Meetings														<span style="float:right;font-weight:normal">3</span>
+	- Negotiation Process											<span style="float:right;font-weight:normal">3</span>
+	- Psychological factors that determine behaviour				<span style="float:right;font-weight:normal">3</span>
+	- General Etiquette												<span style="float:right;font-weight:normal">3</span>
+	- Non-verbal Communication										<span style="float:right;font-weight:normal">3</span>
+	- Punctuality													<span style="float:right;font-weight:normal">3</span>
+	- Business hierarchy											<span style="float:right;font-weight:normal">3</span>
+	- Dress code													<span style="float:right;font-weight:normal">3</span>
+	- Gift giving													<span style="float:right;font-weight:normal">3</span>
+	- Bribery and Corruption										<span style="float:right;font-weight:normal">3</span>
+- __Basic words and phrases__										<span style="float:right;font-weight:bold">3</span>
+- __Weather Terminology:__											<span style="float:right;font-weight:bold">3</span>
+- __What to do in Groningen__										<span style="float:right;font-weight:bold">3</span>
+	- Museums														<span style="float:right;font-weight:normal">3</span>
+	- Sightseeing													<span style="float:right;font-weight:normal">3</span>
+	- Nightlife														<span style="float:right;font-weight:normal">3</span>
+- __Sources__														<span style="float:right;font-weight:bold">3</span>
+
+# General information
+
+The following chapters will describe general information about the Netherlands and Lithuania.
+
+## The Netherlands
 
 <img src="Figures/religion_netherlands.png" title="Religion Netherlands" style="float:right;margin:0 0 0 20px"/>
 
@@ -17,7 +52,7 @@ The Netherlands has a maritime climate, with both mild summers and winters. The 
 
 ---
 
-### Lithuania
+## Lithuania
 
 <img src="Figures/religion_lithuania.png" title="Religion Lithuania" style="float:right;margin:0 0 0 20px"/>
 
@@ -37,11 +72,9 @@ In 2013 Lithuania was the country with the second best average internet speed, w
 
 The climate in Lithuania is maritime and wet, Lithuania has both moderate winters and summers. The time zone in Lithuania is EE(S)T, Eastern European (Summer) Time (GMT+3 during Daylight Savings Time (DST), GMT+2 without DST).
 
----
+# Differences between Dutch and Lithuanian business etiquette
 
-## Differences between Dutch and Lithuanian business etiquette
-
-### Communication
+## Communication
 | Dutch                                                                                              | Lithuania                                                                                                 |
 | -------                                                                                            | -----------                                                                                               |
 | Strictly Sir/Madam.                                                                                | Titles are regularly used. In the absence use Sir or Madam.                                               |
@@ -63,7 +96,9 @@ The climate in Lithuania is maritime and wet, Lithuania has both moderate winter
 1. Don't be afraid to say no, Dutch people will not be offended by it.
 2. Try not to take it as an insult when someone Dutch seems very direct. This __can__ be a good quality so that everyone knows each other's opinion. Besides, most Dutch people will not be aware of this tendency.
 
-### Breaking the ice
+---
+
+## Breaking the ice
 Any topic of discussion is good to start a conversation with. You can talk about family, work, hobbies and sports. Lithuanians are fond of basketball and their national team is among the best in the world.
 Talking about money is not an issue.
 
@@ -90,7 +125,9 @@ During a first meeting, Lithuanians will try to be formal and polite, listening 
 1. Do not be afraid of breaking the ice, even if a spontaneous joke or informal conversation seems odd. This is common in Dutch culture.
 2. If you do not like being called by your first name, do not call Dutch people by their first name either. Alternatively you could take the more direct approach by telling them you do not like being called by your first name. Because directness is also appreciated within Dutch culture.
 
-### Meetings
+---
+
+## Meetings
 Meetings are attended by employees of similar status. A list of attendees and their functions is expected in the invitation. Business in Lithuania is generally a hierarchical afair. The chair of the meeting is likely the most senior attendee. He will determine the pace and decide who can speak. During the opening of the meeting the chair will do the introductions in order of seniority. Junior members mostly only respond to direct questions from senior members.
 
 An agenda is used and followed sequentially.
@@ -102,27 +139,21 @@ The chair concludes the meeting with a summary of the discussion.
 ##### Presentations
 Presentations should be short and concise and include data to support your position. Be prepared to answer any question anybody may have directly after the presentation.
 
-### Negotiation Process
+## Negotiation Process
 Decisions tend to be made from the top down. Avoid hard selling tactics and any sort of conflict or confrontational approach. It is always helpful to know a few words in the native language as a sign of respect and this will undoubtedly generate a friendlier response. Lithuanians prefer face-to-face meetings and do not give their trust easily. So if you want to do business in Lithuania, you have to build some trust first.
 
 Lithuanians expect that any unsolicited approach is an attempt to sell them something and they expect the worst scenario. Business managers who do business with Russia, Ukraine, and Eastern Europe make personal relationships first, business comes later.
 
-### Psychological factors that determine behaviour
-
+## Psychological factors that determine behaviour
 It is important to avoid interrupting someone while they are speaking. Also, Lithuanians don't like long meetings, and will get annoyed if a meeting takes to long. This might affect the way they do business.
 
 Lithuanians are typically modest in the work place. They usually speak in a calm and non emotive way without the use of unnecessary hand gestures and it is important therefore, that you remain collected during your meetings as any outbursts could lead to the dissolution of the relationship. They are also extremely polite during any interactions and it is considered rude to interrupt someone who is already speaking.
-
-
-
----
 
 ##### Minutes
 
 The minutes of the meeting should summarize the main points of discussion, the decisions that were taken and the methods by which the desired results may be achieved. The minutes are sent by the party that is hosting the meeting and should be sent within a couple of days after the meeting. Irrespective of the outcome of the meeting, it is custom to write to your hosts and express thanks for their time and effort. Sending a follow-up email shows that you care and are prepared to make the effort required to form a good business relationship.
 
-
-### General Etiquette
+## General Etiquette
 | Dutch                                                                                                  | Lithuania                                                                                               |
 | -------                                                                                                | -----------                                                                                             |
 | Business can be discussed during lunch. Business breakfasts are not common.                            |                                                                                                         |
@@ -139,7 +170,7 @@ The minutes of the meeting should summarize the main points of discussion, the d
 1. Try not to make any promises that can not be delivered upon, be honest if you think you might not be able to fulfill a request.
 2. There is no ritual for exchanging business cards in the Netherlands, so just exchanging business cards during the first meeting is fine.
 
-### Non-verbal Communication
+## Non-verbal Communication
 | Dutch                                                                                                                                                               | Lithuania                                                                                                                               |
 | -------                                                                                                                                                             | -----------                                                                                                                             |
 | When entering a room it is customary to shake hands with everyone present, then to shake hands again on leaving                                                     | Lithuanians like keeping a distance when speaking to someone. Especially when dealing with strangers. (About two arm lengths is common) |
@@ -147,8 +178,6 @@ The minutes of the meeting should summarize the main points of discussion, the d
 | The Dutch expect eye contact while speaking with someone. Looking away or staring at the ground is considered impolite and may be perceived as disinterest or lying | Lithuanians shake hands a lot. Hugging and kissing is only acceptable among close friends                                               |
 | The Dutch tend to be reserved in using hand gestures. However, having your hands in pockets or arms crossed might be interpreted as a sign of disinterest           | Lithuanians do not use a lot of gestures or facial expressions.                                                                         |
 | When yawning, coughing or sneezing, the mouth should be covered with a flat hand or fist                                                                            |                                                                                                                                         |
-
----
 
 ##### Tips for Dutch people:
 1. Lithuanians have a strong sense of personal space, try to observe their degree of comfort and adjust distance accordingly.
@@ -159,7 +188,7 @@ The minutes of the meeting should summarize the main points of discussion, the d
 2. Make eye contact when talking to someone.
 3. Cover your mouth with a flat hand or fist when coughing, sneezing or yawning.
 
-### Punctuality
+## Punctuality
 | Dutch                                                                                                    | Lithuania                                                          |
 | -------                                                                                                  | -----------                                                        |
 | Punctuality regarded as virtue                                                                           | Usually on time, expects partner to be on time                     |
@@ -176,7 +205,7 @@ The minutes of the meeting should summarize the main points of discussion, the d
 1. Dutch people may not pay as much respect to punctuality as you do, try emphasise on this during contact beforehand (without sounding accusing).
 2. If you are late, it is no problem to just apologise after entering.
 
-### Business hierarchy
+## Business hierarchy
 77% of the Lithuanian population is roman catholic. Because of the strong hierarchy inside the roman catholic church in Lithuania and the big impact the church has on everyday life, these hierarchical trends carry on into the business aspects of the Lithuanian culture.
 
 There is a strong sense of hierarchy within every part of the culture, this means that showing respect and deference to people of a higher authority is important. At the same time, bragging or overstating your higher authority when you are in this position is frowned upon, as most Lithuanians are very modest. It is also important to note that it is not uncommon for Lithuanian companies to have a strict hierarchy wherein senior-level businessmen only speak with people of the same rank. This could seem arrogant or even rude to some cultures.
@@ -189,9 +218,7 @@ In comparison, the Dutch usually have a significantly less strict hierarchy. Hie
 ##### Tips for Lithuanian people
 1. If Dutch people might seem offended when someone higher-up in the hierarchy does not talk to them as much, try explaining that this is not personal and mostly habitual and ritualistic.
 
----
-
-### Dress code
+## Dress code
 | Dutch                                                  | Lithuania                                                                          |
 | -------                                                | -----------                                                                        |
 | Conservatively though less formal in different sectors | Conservatively, dark suit and tie for men, trouser suit/jacket and skirt for women |
@@ -203,7 +230,7 @@ In comparison, the Dutch usually have a significantly less strict hierarchy. Hie
 ##### Tips for Lithuanian people
 1. It is okay to dress less formally in some sectors or happenings, especially in IT it is not common for people to dress for example in jeans and a shirt.
 
-### Gift giving
+## Gift giving
 | Dutch                                                                  | Lithuania                                                                   |
 | -------                                                                | -----------                                                                 |
 | Don't like to feel obligated into gift giving                          | Do not expect gifts at first meeting                                        |
@@ -218,15 +245,13 @@ In comparison, the Dutch usually have a significantly less strict hierarchy. Hie
 ##### Tips for Lithuanian people
 1. Do not expect a gift during the first meeting.
 
-### Bribery and Corruption
+## Bribery and Corruption
 | Dutch                                                                 | Lithuania                                                            |
 | -------                                                               | -----------                                                          |
 | Reputation for honesty                                                | Average corruption and bribery. Anti-corruption measures on the rise |
 | One of the highest transparency ratings in the world (9th out of 176) | Somewhat average transparency rating (48th out of 176)               |
 
----
-
-### Basic words and phrases
+# Basic words and phrases
 | Dutch                     | Lithuania                |
 | -------                   | -----------              |
 | Hallo                     | Labas                    |
@@ -250,7 +275,7 @@ In comparison, the Dutch usually have a significantly less strict hierarchy. Hie
 
 Additionally the YouTube video (https://www.youtube.com/watch?v=QuKwMV8-cjE) can be used for practising pronounciation.
 
-## Weather Terminology:
+# Weather Terminology:
 | Dutch                 | Lithuanian         | English             | Explanation                                                                                       |
 | ---                   | ---                | ---                 | ---                                                                                               |
 | Temperatuur           | temperatūra        | Temperature         | The temperature, in both countries measured in Celsius                                            |
@@ -266,23 +291,21 @@ Additionally the YouTube video (https://www.youtube.com/watch?v=QuKwMV8-cjE) can
 | Weer                  | oras               | Weather             | State of the atmosphere                                                                           |
 | Klimaat               | klimatas           | Climate             | Measure of the average pattern of variation in weather measurements in a given region             |
 
----
-
-## What to do in Groningen
+# What to do in Groningen
 Although Groningen is not a very large city, it does have an important role as the main urban centre of this part of the country, particularly in the fields of music and other arts, education, and business. The large number of students living in Groningen also contributes to a diverse cultural scene for a city of its size. This chapter will cover things you can do in the city of Groningen.
 
-### Museums
+## Museums
 The most important and most famous museum in Groningen is the Groninger Museum. With the construction of its current building, designed by Alessandro Mendini, the museum has been transformed into one of the most modern and innovative of its kind in the Netherlands. In addition, the city also has a maritime museum, a university museum, a comics museum and a graphical museum.
 
-### Sightseeing
+## Sightseeing
 Last but not least Groningen is a great place for sightseeing. The city is more than 500 years old which means that there are many old buildings to be watched. Probably the biggest sightseeing attraction is the church located on the Grote Markt called the Martinikerk, which has a large tower called the Martinitoren. The Martinitoren can be scaled by stair to get a nice view of Groningen.
 
 Other sightseeing attractions in the center of Groningen are city hall, The Korenbeurs (a building where crops and goods were traded many years ago but now functions as a supermarket), another church called the AA Kerk and the main building of the University of Groningen.
 
-### Nightlife
+## Nightlife
 Groningen has a wide variety of bars and clubs to entertain the large population of students that live in the city. Almost every street in Groningen has at least one bar on it, which amounts to more than a hundred bars spread across Groningen.
 
-## Sources
+# Sources
 1. [http://businessculture.org/eastern-europe/lithuania/business-etiquette/](http://businessculture.org/eastern-europe/lithuania/business-etiquette/)
 2. [http://businessculture.org/eastern-europe/lithuania/business-communication/](http://businessculture.org/eastern-europe/lithuania/business-communication/)
 3. [http://www.ediplomat.com/np/cultural_etiquette/ce_nl.htm](http://www.ediplomat.com/np/cultural_etiquette/ce_nl.htm)
