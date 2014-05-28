@@ -123,7 +123,7 @@ Lithuanians are typically modest in the work place. They usually speak in a calm
 
 ##### Minutes
 
-The minutes of the meeting should summarize the main points of discussion, the decisions that were taken and the methods by which the desired results may be achieved. The minutes are sent by the party that is hosting the meeting and should be sent within a couple of days after the meeting.
+The minutes of the meeting should summarize the main points of discussion, the decisions that were taken and the methods by which the desired results may be achieved. The minutes are sent by the party that is hosting the meeting and should be sent within a couple of days after the meeting. Irrespective of the outcome of the meeting, it is custom to write to your hosts and express thanks for their time and effort. Sending a follow-up email shows that you care and are prepared to make the effort required to form a good business relationship.
 
 
 ### General Etiquette
