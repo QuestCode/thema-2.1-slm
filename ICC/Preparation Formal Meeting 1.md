@@ -1,7 +1,8 @@
 #Formal Meeting 1:
 
 Zelf doen vóór de meeting:
-- Lees het complete ICC document!
+- Lees het complete ICC document, leertaak 5, en de casus!
+- Verdiep je in je eigen rol (bedenk eventueel ook wat -open- vragen)
 - Zorg voor gekleed een donker pak met niet al te glimmende schoenen
 - Eventueel een beetje oefenen op basiswoorden in het Litouws
 - Lees de casus om een beeld te krijgen van onze achtergrond
@@ -12,7 +13,7 @@ Zelf doen vóór de meeting:
 
 - Yuri is notulist/secretary
 - André regelt Business cards, concept staat in repo onder Business Card Concept
-- Voorzieningen regelen, koffie kan via Wempe. - Misschien stroopwafels?
+- Voorzieningen regelen, koffie kan via Wempe (zelf stroopwafels regelen)
 - VVV Informatiebrochure wordt door Maurits geregeld.
 - Maurits is Projectmanager (haalt gasten op uit de main hall)
 
@@ -36,10 +37,10 @@ Stadman: Chancellor Stadman
 - Who will see these visual representations?
 
 ### Rolverdeling:
-- Mastrigt, Maurits van Chief Executive Officer 
-- Broenink, Tom Junior Development & Maintenance 
-- Holthof, Ward Senior ICT Services 
-- Nanninga, André Senior Data Acquisition 
-- Hoogeweg, Yuri Senior Development & Maintenance 
+- Mastrigt, Maurits van Chief Executive Officer
+- Broenink, Tom Junior Development & Maintenance
+- Holthof, Ward Senior ICT Services
+- Nanninga, André Senior Data Acquisition
+- Hoogeweg, Yuri Senior Development & Maintenance
 - Wind, Markus Junior Data Acquisition
 
