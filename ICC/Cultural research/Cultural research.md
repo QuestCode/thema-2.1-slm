@@ -1,4 +1,4 @@
-# Cultural Research Document
+ # Cultural Research Document
 
 > __Group:__ 1
 >
@@ -31,6 +31,15 @@
 	- Sightseeing													<span style="float:right;font-weight:normal">3</span>
 	- Nightlife														<span style="float:right;font-weight:normal">3</span>
 - __Sources__														<span style="float:right;font-weight:bold">3</span>
+
+# Introduction 
+
+This cultural research document will extensively list (and describe) several topics regarding business etiquette in both Lithuania and the Netherlands. The most important differences between the business cultures in these countries will be noted and elaborated on. 
+
+The document will also contain tips for both parties to help avoid or mitigate the risk of conflict situations stemming from these differences on topics where this is relevant or necessary. 
+
+Finally, to help bridge the language barrier: there will be short lists containing terminology and basic sentences in both English and Lithuanian and sometimes Dutch.
+
 
 # General information
 
