@@ -1,5 +1,5 @@
 #Business communication
-###Source: [http://businessculture.org/eastern-europe/lithuania/business-communication/](http://businessculture.org/eastern-europe/lithuania/business-communication/)
+###Source 2: [http://businessculture.org/eastern-europe/lithuania/business-communication/](http://businessculture.org/eastern-europe/lithuania/business-communication/)
 
 ##Face-to-face Contact
 
