@@ -96,15 +96,24 @@ Meetings should be short and well prepared. All relevant information should be p
 
 The chair concludes the meeting with a summary of the discussion.
 
+##### Presentations
+
+Presentations should be short and concise and include data to support your position. Be prepared to answer any question anybody may have directly after the presentation.
+
 ### Negotiation Process
 
 Decisions tend to be made from the top down. Avoid hard selling tactics and any sort of conflict or confrontational approach. It is always helpful to know a few words in the native language as a sign of respect and this will undoubtedly generate a friendlier response. Lithuanians prefer face-to-face meetings and do not give their trust easily. So if you want to do business in Lithuania, you have to build some trust first.
 
 Lithuanians expect that any unsolicited approach is an attempt to sell them something and they expect the worst scenario. Business managers who do business with Russia, Ukraine, and Eastern Europe make personal relationships first, business comes later.
 
-##### Presentations
 
-Presentations should be short and concise and include data to support your position. Be prepared to answer any question anybody may have directly after the presentation.
+### Psychological factors that determine behaviour
+
+It is important to avoid interrupting someone while they are speaking. Also, Lithuanians don't like long meetings, and will get annoyed if a meeting takes to long. This might affect the way they do business.
+
+Lithuanians are typically modest in the work place. They usually speak in a calm and non emotive way without the use of unnecessary hand gestures and it is important therefore, that you remain collected during your meetings as any outbursts could lead to the dissolution of the relationship. They are also extremely polite during any interactions and it is considered rude to interrupt someone who is already speaking.
+
+
 
 ---
 
