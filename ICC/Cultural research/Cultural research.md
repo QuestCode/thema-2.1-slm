@@ -12,25 +12,24 @@
 	- The Netherlands												<span style="float:right;font-weight:normal">3</span>
 	- Lithuania														<span style="float:right;font-weight:normal">4</span>
 - __Differences between Dutch and Lithuanian business etiquette__	<span style="float:right;font-weight:bold">5</span>
-	- Communication													<span style="float:right;font-weight:normal">3</span>
-	- Breaking the ice												<span style="float:right;font-weight:normal">3</span>
-	- Meetings														<span style="float:right;font-weight:normal">3</span>
-	- Negotiation Process											<span style="float:right;font-weight:normal">3</span>
-	- Psychological factors that determine behaviour				<span style="float:right;font-weight:normal">3</span>
-	- General Etiquette												<span style="float:right;font-weight:normal">3</span>
-	- Non-verbal Communication										<span style="float:right;font-weight:normal">3</span>
-	- Punctuality													<span style="float:right;font-weight:normal">3</span>
-	- Business hierarchy											<span style="float:right;font-weight:normal">3</span>
-	- Dress code													<span style="float:right;font-weight:normal">3</span>
-	- Gift giving													<span style="float:right;font-weight:normal">3</span>
-	- Bribery and Corruption										<span style="float:right;font-weight:normal">3</span>
-- __Basic words and phrases__										<span style="float:right;font-weight:bold">3</span>
-- __Weather Terminology:__											<span style="float:right;font-weight:bold">3</span>
-- __What to do in Groningen__										<span style="float:right;font-weight:bold">3</span>
-	- Museums														<span style="float:right;font-weight:normal">3</span>
-	- Sightseeing													<span style="float:right;font-weight:normal">3</span>
-	- Nightlife														<span style="float:right;font-weight:normal">3</span>
-- __Sources__														<span style="float:right;font-weight:bold">3</span>
+	- Communication													<span style="float:right;font-weight:normal">5</span>
+	- Breaking the ice												<span style="float:right;font-weight:normal">6</span>
+	- Meetings														<span style="float:right;font-weight:normal">7</span>
+	- Negotiation Process											<span style="float:right;font-weight:normal">7</span>
+	- General Etiquette												<span style="float:right;font-weight:normal">8</span>
+	- Non-verbal Communication										<span style="float:right;font-weight:normal">9</span>
+	- Punctuality													<span style="float:right;font-weight:normal">10</span>
+	- Business hierarchy											<span style="float:right;font-weight:normal">11</span>
+	- Dress code													<span style="float:right;font-weight:normal">11</span>
+	- Gift giving													<span style="float:right;font-weight:normal">12</span>
+	- Bribery and Corruption										<span style="float:right;font-weight:normal">12</span>
+- __Basic words and phrases__										<span style="float:right;font-weight:bold">13</span>
+- __Weather Terminology:__											<span style="float:right;font-weight:bold">14</span>
+- __What to do in Groningen__										<span style="float:right;font-weight:bold">15</span>
+	- Museums														<span style="float:right;font-weight:normal">15</span>
+	- Sightseeing													<span style="float:right;font-weight:normal">15</span>
+	- Nightlife														<span style="float:right;font-weight:normal">15</span>
+- __Sources__														<span style="float:right;font-weight:bold">16</span>
 
 # Introduction 
 
@@ -153,7 +152,7 @@ Decisions tend to be made from the top down. Avoid hard selling tactics and any 
 
 Lithuanians expect that any unsolicited approach is an attempt to sell them something and they expect the worst scenario. Business managers who do business with Russia, Ukraine, and Eastern Europe make personal relationships first, business comes later.
 
-## Psychological factors that determine behaviour
+##### Psychological factors that determine behaviour
 It is important to avoid interrupting someone while they are speaking. Also, Lithuanians don't like long meetings, and will get annoyed if a meeting takes to long. This might affect the way they do business.
 
 Lithuanians are typically modest in the work place. They usually speak in a calm and non emotive way without the use of unnecessary hand gestures and it is important therefore, that you remain collected during your meetings as any outbursts could lead to the dissolution of the relationship. They are also extremely polite during any interactions and it is considered rude to interrupt someone who is already speaking.
@@ -179,6 +178,8 @@ The minutes of the meeting should summarize the main points of discussion, the d
 1. Try not to make any promises that can not be delivered upon, be honest if you think you might not be able to fulfill a request.
 2. There is no ritual for exchanging business cards in the Netherlands, so just exchanging business cards during the first meeting is fine.
 
+---
+
 ## Non-verbal Communication
 | Dutch                                                                                                                                                               | Lithuania                                                                                                                               |
 | -------                                                                                                                                                             | -----------                                                                                                                             |
@@ -197,6 +198,8 @@ The minutes of the meeting should summarize the main points of discussion, the d
 2. Make eye contact when talking to someone.
 3. Cover your mouth with a flat hand or fist when coughing, sneezing or yawning.
 
+---
+
 ## Punctuality
 | Dutch                                                                                                    | Lithuania                                                          |
 | -------                                                                                                  | -----------                                                        |
@@ -213,6 +216,8 @@ The minutes of the meeting should summarize the main points of discussion, the d
 ##### Tips for Lithuanian people
 1. Dutch people may not pay as much respect to punctuality as you do, try emphasise on this during contact beforehand (without sounding accusing).
 2. If you are late, it is no problem to just apologise after entering.
+
+---
 
 ## Business hierarchy
 77% of the Lithuanian population is roman catholic. Because of the strong hierarchy inside the roman catholic church in Lithuania and the big impact the church has on everyday life, these hierarchical trends carry on into the business aspects of the Lithuanian culture.
