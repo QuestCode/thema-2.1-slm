@@ -16,7 +16,7 @@ Notwithstanding interferences and difficulties in the Lithuanian business world,
 
 The Lithuanian government’s national programme for the development of CSR between 2009 and 2013 is one of many signposts helping to establish changes in the country. The purpose of the programme is the creation of a friendly environment for future growth of CSR in Lithuania and to motivate companies to apply these principles in their operations.
 
-    http://www.lm.gov.lv/upload/darba_devejiem/csr_060220_estonia_latvia_lithuania.pdf
+Source: [http://www.lm.gov.lv/upload/darba_devejiem/csr_060220_estonia_latvia_lithuania.pdf](http://www.lm.gov.lv/upload/darba_devejiem/csr_060220_estonia_latvia_lithuania.pdf)
 
 ##Punctuality
 
@@ -27,7 +27,7 @@ Gift Giving
 
 It is traditional to bring something for the host when visiting a Lithuanian home. An appropriate gift is a bottle of wine or liquor or a box of sweets or chocolates. It is recommended to avoid giving white flowers that are reserved for weddings and chrysanthemums that are typical at funerals. The family is the central unit in the social structure of Lithuanian society. Therefore, a family gift should be accompanied with small gifts for the children or grandparents. In Lithuania, gifts are opened in front of the guest upon receiving them.
 
-    http://www.giftsforeurope.com/en/international-gift-guide/gifts-lithuania.htm
+Source: [http://www.giftsforeurope.com/en/international-gift-guide/gifts-lithuania.htm](http://www.giftsforeurope.com/en/international-gift-guide/gifts-lithuania.htm)
 
 ##Business Dress Code
 
@@ -35,7 +35,9 @@ It is traditional to bring something for the host when visiting a Lithuanian hom
 
 During normal working hours, there is a less formal code. Men take off their jackets and usually wear short sleeved shirts. In small and medium sized companies, there is often no dress code. Dressing is business casual, unless they have some sort of business meeting or formal event to attend.
 
-    http://www.culturecrossing.net/basics_business_student.php?id=119
+Source: [http://www.culturecrossing.net/basics_business_student.php?id=119](http://www.culturecrossing.net/basics_business_student.php?id=119)
+
+---
 
 ##Bribery and Corruption
 

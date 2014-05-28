@@ -99,6 +99,7 @@ After many years of inefficiency, competence is highly regarded as well as openn
 
 Non-locals may be viewed more formally at the start. They will be held in good regard if viewed as knowledgeable, approachable and helpful. Language communication difficulties may be a barrier, although more and more, people in Lithuania are speaking English. An effort to learn rudimentary Lithuanian may be difficult, but practical, and it would be an indication of respect for the local language and culture.
 
+---
 
 ##Cultural Information - Hierarchy and Decision-making
 
@@ -144,6 +145,7 @@ Lithuania is somewhat hierarchical. In the beginning it is probably a good idea 
 ####Ethnicity: 
 Lithuanians make up about 80% of the population. Vilnius is the most cosmopolitan of the cities with strong representations of minorities. One cannot always tell a Lithuanian from a non-Lithuanian.
 
+---
 
 ##Cultural Information - Relationship-building
 
@@ -168,6 +170,7 @@ In Lithuania, a colleague or employee would expect special privileges or conside
 ###Canadian Perspective:
 Yes. Each situation needs to be evaluated based on its own merit.
 
+---
 
 ##Cultural Information - Conflicts in the Workplace
 
@@ -234,6 +237,8 @@ Lithuanian dishes tend to be meat and potato-based such as: cepelinai, kugelis, 
 
 Two festivals worth attending are the World Lithuanian Song Festival http://www.lfcc.lt/ds/principai.html and the Lithuanian Folk Dance Festival (both Festivals occur in Vilnius every four years).
 
+---
+
 
 ##Cultural Information - National Heroes
 
@@ -252,6 +257,7 @@ Grand Duke Vytautas the Great (1392-1430) is considered Lithuania’s greatest l
 
 Sports stars are considered to be national heroes, eg: basketball greats Arvydas Sabonis and Sarunas Maciulionis; and 2000 Olympic champions Virgilijus Alekna discus gold medallist and Daina Gudzineviciute trap shooting gold medalist.
 
+---
 
 ##Cultural Information - Shared Historical Events with Canada
 
@@ -278,6 +284,7 @@ Stereotypes of Lithuanians being lax and wanting to exploit Westerners will not 
 
 Many people in Lithuania are very well educated and sophisticated having also had many educational opportunities in Scandinavia, Western Europe and other parts of the world. They are now able to travel abroad and this contributes to more realistic expectations of the West. Many speak several languages and are well-read and knowledgeable about art, classical music, theatre etc... Many are also very hard-working.
 
+---
 
 ##Cultural Information - About the Cultural Interpreters
 

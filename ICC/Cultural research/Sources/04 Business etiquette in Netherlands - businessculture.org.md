@@ -24,7 +24,7 @@ If you are invited for dinner, it will not be unreasonable to ask your host what
 
 For further information please visit the link below:
 
-Executive Planet: http://www.executiveplanet.com/index.php?title=Netherlands:_Appointment_Alert%21 [en]
+Executive Planet: [http://www.executiveplanet.com/index.php?title=Netherlands:_Appointment_Alert%21](http://www.executiveplanet.com/index.php?title=Netherlands:_Appointment_Alert%21) [en]
 
 ##Gift giving
 
@@ -40,8 +40,8 @@ A handwritten note of appreciation the following day will also always be welcome
 
 For further information please visit the link below:
 
-Executive Planet: http://www.executiveplanet.com/index.php?title=Netherlands:_Gift_Giving [en]
-eDiplomat: http://www.ediplomat.com/np/cultural_etiquette/ce_nl.htm [en]
+Executive Planet: [http://www.executiveplanet.com/index.php?title=Netherlands:_Gift_Giving](http://www.executiveplanet.com/index.php?title=Netherlands:_Gift_Giving) [en]
+eDiplomat: [http://www.ediplomat.com/np/cultural_etiquette/ce_nl.htm](http://www.ediplomat.com/np/cultural_etiquette/ce_nl.htm) [en]
 
 ##Business Dress Code
 
@@ -61,4 +61,4 @@ A law revising corruption legislation came into force in February 2001. This inc
 
 For further information please visit the link below:
 
-Transparency: http://www.transparency.org/country#NLD [en]
+Transparency: [http://www.transparency.org/country#NLD](http://www.transparency.org/country#NLD) [en]

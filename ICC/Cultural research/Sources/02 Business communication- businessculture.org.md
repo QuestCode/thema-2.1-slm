@@ -16,8 +16,8 @@ Lithuanians are respectful with a conservative demeanour. They are formal and te
 
 Lithuanians are multilingual, often speaking Russian, English, French and German as second languages. Lithuania is ranked in the top five EU countries with the highest number of people who are proficient in at least two foreign languages. 90% of the population is able to communicate in at least one foreign language and approximately 50% of Lithuanians can speak two foreign languages.
 
-	http://www.investlithuania.com/en/why-invest/talent-pool
-	http://www.intercultures.ca/cil-cai/ci-ic-eng.asp?iso=lt
+Source: [http://www.investlithuania.com/en/why-invest/talent-pool](http://www.investlithuania.com/en/why-invest/talent-pool)
+Source: [http://www.intercultures.ca/cil-cai/ci-ic-eng.asp?iso=lt](http://www.intercultures.ca/cil-cai/ci-ic-eng.asp?iso=lt)
 
 ##Business Relationships
 
@@ -41,9 +41,11 @@ You should dedicate time and effort in fostering relationships through informal 
 
 > Any topic of discussion is good to start a conversation with. You can talk about family, work, hobbies and sports. Lithuanians are fond of basketball and their national team is among the best in the world.
 
-	http://www.intercultures.ca/cil-cai/ci-ic-eng.asp?iso=lt
-	http://www.kwintessential.co.uk/resources/global-etiquette/lithuania.html
-	http://www.lingo24.com/international_business_intelligence/lithuania.html
+Source: [http://www.intercultures.ca/cil-cai/ci-ic-eng.asp?iso=lt](http://www.intercultures.ca/cil-cai/ci-ic-eng.asp?iso=lt)
+Source: [http://www.kwintessential.co.uk/resources/global-etiquette/lithuania.html](http://www.kwintessential.co.uk/resources/global-etiquette/lithuania.html)
+Source: [http://www.lingo24.com/international_business_intelligence/lithuania.html](http://www.lingo24.com/international_business_intelligence/lithuania.html)
+
+---
 
 ##Personal Titles
 
