@@ -1,6 +1,6 @@
-# Cultural Research
 
-## General cultural information
+#Cultural Research
+
 
 ### The Netherlands
 
@@ -56,10 +56,14 @@ The climate in Lithuania is maritime and wet, Lithuania has both moderate winter
 3.	Don't be taken aback if you don't see clear signs of appreciation. Ask for confirmation if you're unclear about their opinion.
 4.  The decision-making process in Lithuania is relatively quick. You simply have to agree on a specific date with your partner, and a decision will be ready by that date.
 
+#### Tips for Lithuanian people
+1. Don't be afraid to say no, Dutch people will not be offended by it.
+2. Try not to take it as an insult when someone Dutch seems very direct. This __can__ be a good quality so that everyone knows each other's opinion. Besides, most Dutch people will not be aware of this tendency.
+
 ### Breaking the ice
 Any topic of discussion is good to start a conversation with. You can talk about family, work, hobbies and sports. Lithuanians are fond of basketball and their national team is among the best in the world.
 
-Do not suggest that Lithuanians are basically Russian, Lithuanians are proud to be independent. Do not start about the Eurovision song contest. The first time Lithuania participated they finished last, without a single point. After that, Lithuania withdrew and didn’t return until 1999. It just went downhill from there. Stick to sport subjects that is their strong suit.
+Do not suggest that Lithuanians are basically Russian, Lithuanians are proud to be independent. Do not start about the Eurovision song contest. The first time Lithuania participated they finished last, without a single point. After that, Lithuania withdrew and didn’t return until 1999. It just went downhill from there. Stick to sport subjects, that is their strong suit.
 
 People are referred to by their title and surname. Colleagues and supervisors are usually referred to by their first name with Ponas (Mr), Panele (Ms) or Ponia (Mrs) or by title: Doctor, Professor, Director, Principle etc. and sometimes including last names. It is important not to address someone by their first name until invited to do so.
 
@@ -74,10 +78,13 @@ During a first meeting, Lithuanians will try to be formal and polite, listening 
 | Like some smalltalk before moving on to business | Like to build a personal relationship before moving on to business |
 
 ##### Tips for Dutch people
-1.	Try starting with a light discussion. You can talk about family, work, hobbies and sports.
-2.	Use the name and title on the business cards to address your conversation partner.
-3.	Be friendly and try to build a personal relationship as soon as possible.
+1.	Try starting with a light discussion. You can talk about family, work, hobbies and sports.  
+2.	Use the name and title on the business cards to address your conversation partner.  
+3.	Be friendly and try to build a personal relationship as soon as possible.  
 
+#### Tips for Lithuanian people
+1. Do not be afraid of breaking the ice, even if a spontaneous joke or informal conversation seems odd. This is common in Dutch culture.  
+2. If you do not like being called by your first name, do not call Dutch people by their first name either. Alternatively you could take the more direct approach by telling them you do not like being called by your first name. Because directness is also appreciated within Dutch culture.
 
 ### Meetings
 Meetings are attended by employees of similar status. A list of attendees and their functions is expected in the invitation. Business in Lithuania is generally a hierarchical afair. The chair of the meeting is likely the most senior attendee. He will determine the pace and decide who can speak. During the opening of the meeting the chair will do the introductions in order of seniority. Junior members mostly only respond to direct questions from senior members.
@@ -111,6 +118,10 @@ The minutes of the meeting should summarize the main points of discussion, the d
 ##### Tips for Dutch people
 1.	The Roman Catholic Church has great influence on the daily life of Lithuanians, so swearing is not done.
 
+#### Tips for Lithuanian people
+1. Try not to make any promises that can not be delivered upon, be honest if you think you might not be able to fulfill a request.  
+2. There is no ritual for exchanging business cards in the Netherlands, so just exchanging business cards during the first meeting is fine.
+
 ### Non-verbal Communication
 | Dutch                                                                                                                                                               | Lithuania                                                                                                                               |
 | -------                                                                                                                                                             | -----------                                                                                                                             |
@@ -126,6 +137,11 @@ The minutes of the meeting should summarize the main points of discussion, the d
 1. Lithuanians have a strong sense of personal space, try to observe their degree of comfort and adjust distance accordingly.
 2. Try to have an appropriate amount of eye contact but do not stare.
 
+#### Tips for Lithuanian people:
+1. Stand up before shaking hands
+2. Make eye contact when talking to someone.
+3. Cover your mouth with a flat hand or fist when coughing, sneezing or yawning.
+
 ### Punctuality
 | Dutch                                                                                                    | Lithuania                                                          |
 | -------                                                                                                  | -----------                                                        |
@@ -139,6 +155,10 @@ The minutes of the meeting should summarize the main points of discussion, the d
 3.	Lithuanians will not be rushed into making a deal until they believe it is in their best interest
 4.	Meetings often conclude with a summary of the discussion and a toast to future business
 
+#### Tips for Lithuanian people
+1. Dutch people may not pay as much respect to punctuality as you do, try emphasise on this during contact beforehand (without sounding accusing).
+2. If you are late, it is no problem to just apologise after entering.
+
 ### Business hierarchy
 77% of the Lithuanian population is roman catholic. Because of the strong hierarchy inside the roman catholic church in Lithuania and the big impact the church has on everyday life, these hierarchical trends carry on into the business aspects of the Lithuanian culture.  
 
@@ -148,6 +168,9 @@ In comparison, the Dutch usually have a significantly less strict hierarchy. Hie
 
 ##### Tips for Dutch people
 1. Key tip here is to keep in mind that __not all__ Lithuanian companies will adhere to such a strict hierarchy, but to know that __if__ they do. Try to figure out your place in the meeting and do not be offended if a highly-ranked person in the company speaks to you less often (or not at all).
+
+#### Tips for Lithuanian people
+1. If Dutch people might seem offended when someone higher-up in the hierarchy does not talk to them as much, try explaining that this is not personal and mostly habitual and ritualistic.
 
 ---
 
@@ -160,6 +183,8 @@ In comparison, the Dutch usually have a significantly less strict hierarchy. Hie
 ##### Tips for Dutch people
 1.	Dress well, dark suit and a tie is the safest option.
 
+#### Tips for Lithuanian people
+1. It is okay to dress less formally in some sectors or happenings, especially in IT it is not common for people to dress for example in jeans and a shirt.
 
 
 ### Gift giving
@@ -173,6 +198,9 @@ In comparison, the Dutch usually have a significantly less strict hierarchy. Hie
 ##### Tips for Dutch people
 1. For a meeting **after** the first meeting, bring a souvenir from your home country.
 2. Depending on the time of the meeting, it might be a good idea to serve Stroopwafels. (These will also serve the purpose of being a 'souvenir', even though it's not really a gift)
+
+#### Tips for Lithuanian people
+1. Do not expect a gift during the first meeting. 
 
 ### Bribery and Corruption
 | Dutch                                                                 | Lithuania                                                            |
