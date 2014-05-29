@@ -103,6 +103,15 @@
 		<antcall target="db:setup"/>
 	</target>
 
+	<target name="db:start">
+		<exec executable="mongod" os="Mac OS X">
+			<arg line="--config /usr/local/etc/mongod.conf" />
+		</exec>
+		<exec executable="mongod" os="Windows 7, Windows 8">
+			<arg line="--config /{path}/{to}/mongod.conf" />
+		</exec>
+	</target>
+
 	<target name="generate">
 		<exec executable="java" newenvironment="true" dir="../Resources">
 			<arg value="-jar"/>
