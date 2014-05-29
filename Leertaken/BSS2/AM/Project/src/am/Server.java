@@ -22,9 +22,7 @@ public class Server implements Runnable
 		this.database = new Database( "localhost", 27017, "unwdmi" );
 
 		// Clear measurements table
-		System.out.println( this.database.getActualQueryCount() );
 		this.database.clearMeasurements();
-		System.out.println( this.database.getActualQueryCount() );
 
 		System.out.println( "[Server] Measurements cleared." );
 	}

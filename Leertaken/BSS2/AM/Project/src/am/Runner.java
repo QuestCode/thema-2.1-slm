@@ -30,10 +30,10 @@ public class Runner {
 	public Runner() {
 
 		// Set query buffer size
-		RecordBuffer.BUFFER_SIZE = 300;
+		RecordBuffer.BUFFER_SIZE = 50;
 
 		// Set corrector cache size
-		Corrector.CACHE_SIZE = 4;
+		Corrector.CACHE_SIZE = 12;
 
 		Server server           = new Server();
 		Thread serverThread     = new Thread( server );

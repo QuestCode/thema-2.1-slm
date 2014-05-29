@@ -11,6 +11,7 @@ import com.mongodb.DBObject;
 import com.mongodb.MongoClient;
 import com.mongodb.WriteConcern;
 import com.mongodb.ParallelScanOptions;
+import com.mongodb.MongoInterruptedException;
 
 import java.util.List;
 import java.util.Set;
@@ -137,10 +138,16 @@ public class Database {
 			try {
 
 				for( ; i < values.length; ++i ) {
+					if( values[i] == null ) {
+						break; // Buffer commited early
+					}
 					collection.insert( values[i] );
 				}
 
 				++i;
+			}
+			catch( MongoInterruptedException e ) {
+				// On Shutdown
 			}
 			catch( Exception e ) {
 				e.printStackTrace();
