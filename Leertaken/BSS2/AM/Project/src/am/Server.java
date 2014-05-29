@@ -14,21 +14,16 @@ public class Server implements Runnable
 	private ExecutorService workerPool;
 	private Database database;
 
-	public Server() {
+	public Server( Database database ) {
+		this.database = database;
+
 		// Create worker pool
 		this.workerPool = Executors.newFixedThreadPool( 850 );
-
-		// Connect to database
-		this.database = new Database( "localhost", 27017, "unwdmi" );
 
 		// Clear measurements table
 		this.database.clearMeasurements();
 
 		System.out.println( "[Server] Measurements cleared." );
-	}
-
-	public Database getDatabase() {
-		return this.database;
 	}
 
 	public void interrupt() throws IOException {
@@ -37,24 +32,11 @@ public class Server implements Runnable
 		// Close socket
 		this.socket.close();
 
+		// Close database connection
+		this.database.close();
+
 		// Shutdown workers
 		this.workerPool.shutdownNow();
-
-		// Block until shut down
-		try {
-			this.workerPool.awaitTermination( 600, SECONDS );
-		}
-		catch( InterruptedException e ) {
-			e.printStackTrace();
-		}
-
-		// Shutdown executors and release locks
-		try {
-			this.database.shutdownExecutors();
-		}
-		catch( Exception e ) {
-			e.printStackTrace();
-		}
 	}
 
 	public void run() {

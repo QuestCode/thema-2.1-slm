@@ -14,13 +14,13 @@ public class Worker implements Runnable {
 
 	private Socket socket;
 	private Corrector corrector;
-	private RecordBuffer recordBuffer;
+	private Database database;
 
 	public Worker( Socket socket, Database database ) {
-		this.id          = ++Worker.ID;
-		this.socket      = socket;
-		this.corrector   = new Corrector();
-		this.recordBuffer = new RecordBuffer( database );
+		this.id        = ++Worker.ID;
+		this.socket    = socket;
+		this.corrector = new Corrector();
+		this.database  = database;
 	}
 
 	public void run() {
@@ -54,7 +54,7 @@ public class Worker implements Runnable {
 
 					this.corrector.validate( record );
 
-					this.recordBuffer.add( record );
+					this.database.insertValue( Record.toDBObject( record ) );
 				}
 			}
 
@@ -62,9 +62,6 @@ public class Worker implements Runnable {
 
 			// Close connection
 			socket.close();
-
-			// Write remaining buffer
-			this.recordBuffer.write();
 		}
 		catch( Exception e ) {
 			// Print error
