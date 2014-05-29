@@ -10,7 +10,7 @@ public class Worker implements Runnable {
 
 	public static int ID = 0;
 
-	private int id;
+	public int id;
 
 	private Socket socket;
 	private Corrector corrector;
@@ -33,7 +33,8 @@ public class Worker implements Runnable {
 			// Prepare
 			in = new BufferedReader( new InputStreamReader( this.socket.getInputStream() ) );
 
-			while( ! Thread.currentThread().isInterrupted() ) {
+			while( Server.isOpen ) {
+				// System.out.println( "[Worker] worker #" + this.id + " working hard." );
 				// Skip preface
 				try {
 					while( ! in.readLine().equals( "<?xml version=\"1.0\"?>" ) ); // Reset and skip

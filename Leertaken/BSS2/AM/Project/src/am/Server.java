@@ -7,12 +7,14 @@ import java.io.IOException;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ExecutorService;
 import static java.util.concurrent.TimeUnit.SECONDS;
+import java.util.List;
 
 public class Server implements Runnable
 {
 	ServerSocket socket;
 	private ExecutorService workerPool;
 	private Database database;
+	public static Boolean isOpen;
 
 	public Server( Database database ) {
 		this.database = database;
@@ -32,11 +34,23 @@ public class Server implements Runnable
 		// Close socket
 		this.socket.close();
 
-		// Close database connection
-		this.database.close();
+		// Flag workers that the server is no longer open
+		Server.isOpen = false;
 
 		// Shutdown workers
-		this.workerPool.shutdownNow();
+		List<Runnable> workers = this.workerPool.shutdownNow();
+
+		try {
+			if (!this.workerPool.awaitTermination(60, SECONDS)) {
+				this.workerPool.shutdownNow();
+			}
+		}
+		catch( Exception e ) {
+			this.workerPool.shutdownNow();
+		}
+
+		// Close database connection
+		this.database.close();
 	}
 
 	public void run() {
@@ -45,6 +59,8 @@ public class Server implements Runnable
 			this.socket = new ServerSocket( 7789 );
 			Thread t;
 
+			// Flag workers that the server is now open
+			Server.isOpen = true;
 			System.out.println( "[Server] Accepting.." );
 
 			// Accept incoming sockets
