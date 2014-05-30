@@ -82,7 +82,6 @@ Voor opslag van de gegevens is er gekozen voor de meest bekende non-relationele 
 
 In deze paragraaf zullen de verschillende klassen van de applicatie in volgorde van verloop worden toegelicht.
 
-```
 ### Runner
 
 De zogeheten "Runner" van de applicatie dient als startpunt van de applicatie. Hierin wordt de applicatie geconfigureerd en worden de initiële onderdelen, zoals de Server, opgezet. Tevens dient de _Runner_ klasse voor het meten van de resultaten, waarbij de server een X aantal seconden wordt gedraaid - terwijl ondertussen metingen worden verricht als:
@@ -104,13 +103,13 @@ De _Server_ klasse beheert de database connectie en accepteert continue inkomend
 
 ### Database
 
-De _Database_ klasse zorgt voor zowel het tot stand brengen van een verbinding met de MySQL database, als eenvoudige communicatie met deze database. Tevens maakt deze laag van abstractie het wisselen van database mogelijk, wat voordelig is (met oog op de tweede leertaak).
+De _Database_ klasse zorgt voor zowel het tot stand brengen van een verbinding met de Mongo database, als eenvoudige communicatie met deze database. Deze laag van abstractie heeft het vervangen van de MySQL database (gebruikt in de eerste leertaak) met een non-relationele database, in dit geval MongoDB, zeer eenvoudig gemaakt.
 
-Voor het optimaal uitvoeren van de "INSERT" queries, waarbij de ingelezen weerdata wordt ingeschoten in de database, is er gekozen om deze uit te laten voeren door een aparta klasse: _Database.Executor_. De database klasse maakt een _Executor_ instantie aan voor elke query die wordt gedraaid, waardoor er eenvoudig in één keer een grote hoeveelheid aan records ingeschoten kan worden.
+Ten opzichte van de eerste leertaak is er geen gebruik gemaakt van een _Database.Executor_ (of _RecordBuffer_), omdat de non-relationele database het inschieten van de data objecten prima aan kan.
 
 ### Worker
 
-De _Worker_ klasse staat centraal aan de applicatie. Deze moet zo snel mogelijk de ingelezen gegevens verwerken tot bruikbare weerdata, de data corrigeren (met behulp van een _Corrector_), en inschieten in de database (met behulp van een _RecordBuffer_). Dit laatste punt kost weinig tijd door het gebruik query buffering en de _Database.Executor_ klasse (welke in een aparte thread draait).
+De _Worker_ klasse staat centraal aan de applicatie. Deze moet zo snel mogelijk de ingelezen gegevens verwerken tot bruikbare weerdata, de data corrigeren (met behulp van een _Corrector_), en inschieten in de database (in dit geval zonder behulp van een _RecordBuffer_). Dit laatste punt kost weinig tijd door het gebruik van een non-relationele database, die zeer hoge schrijfsnelheiden behaald ten opzichte van een relationele database (zoals gebruikt in de eerste leertaak).
 
 ### Corrector
 
@@ -122,8 +121,7 @@ Ook de _Corrector_ moet snel handelen, omdat deze draait in dezelfde thread als 
 
 De _Record_ klasse dient voornamelijk als hulpmiddel bij gebruik van een record object. De ingelezen weerdata wordt namelijk niet omgezet naar een klasseinstantie, maar wordt in een Object array gezet. Dit is zeer lichtgewicht, waardoor er enkel een hulpmiddel nodig is voor het defineren van de indexen van de array (welke sleutel welke waarde representeert).
 
-Tevens biedt deze klasse de mogelijkheid de missende waarde van een record object te bepalen en een record object om te zetten naar een database "INSERT" query. Op deze manier wordt alle logica intern gehouden, waardoor de applicatie code netjes blijft en andere klassen geen kennis hoeven te hebben van het record object. Met uitzondering van het ophalen van een waarde (bijvoorbeeld `record[ Record.WNDDIR ]`) en het instellen van een waarde (bijvoorbeeld `record[ Record.WNDDIR ] = value;`).
-```
+Tevens biedt deze klasse de mogelijkheid de missende waarde van een record object te bepalen en een record object om te zetten naar een database object. Op deze manier wordt alle logica intern gehouden, waardoor de applicatie code netjes blijft en andere klassen geen kennis hoeven te hebben van het record object. Met uitzondering van het ophalen van een waarde (bijvoorbeeld `record[ Record.WNDDIR ]`) en het instellen van een waarde (bijvoorbeeld `record[ Record.WNDDIR ] = value;`).
 
 # Stresstest resultaten
 
