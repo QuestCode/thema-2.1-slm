@@ -1,0 +1,4 @@
+Je applicatie moet: •	één voorbeeld naar eigen inzicht van een selectiequery op de weergegevens zoals beschreven is in de casustekst.
+
+de "query": db.measurements.find( { TEMP : { $gt : 25 } } );
+Dit commando laat alle MongoDB measurement records met een temperatuur hoger dan 25 graden zien.

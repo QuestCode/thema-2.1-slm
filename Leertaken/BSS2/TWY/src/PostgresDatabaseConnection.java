@@ -4,23 +4,21 @@
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.*;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.sql.Statement;
 
-public class DatabaseConnection {
+public class PostgresDatabaseConnection {
     private static final String hostname = "jdbc:postgresql://127.0.0.1:5432/one";
     private static final String username = "one";
     private static final String password = "Tr3ll0?";
 
     private Connection databaseConnection;
 
-    HashMap<String, MessageCorrector> messageCorrectors = new HashMap<String,MessageCorrector>();
+    //HashMap<String, MessageCorrector> messageCorrectors = new HashMap<String,MessageCorrector>();
+    MessageCorrector[] messageCorrectors = new MessageCorrector[9959300];
 
     MessageCounter counter;
 
-    public DatabaseConnection(MessageCounter counter){
+    public PostgresDatabaseConnection(MessageCounter counter){
         this.counter = counter;
         try {
             Class.forName("org.postgresql.Driver");
@@ -45,11 +43,12 @@ public class DatabaseConnection {
             Statement statement = databaseConnection.createStatement();
 
             // Get the message corrector for the current station or create a new one.
-            if(!this.messageCorrectors.containsKey(message.getValue("STN"))){
+            int STN = Integer.parseInt(message.getValue("STN"));
+            if(this.messageCorrectors[STN] == null){
                 messageCorrector = new MessageCorrector(message.getValue("STN"));
-                messageCorrectors.put(messageCorrector.STN, messageCorrector);
+                messageCorrectors[STN] = messageCorrector;
             } else {
-                messageCorrector = messageCorrectors.get(message.getValue("STN"));
+                messageCorrector = messageCorrectors[STN];
             }
 
             // If the message is incomplete, let the messagecorrecter correct it.

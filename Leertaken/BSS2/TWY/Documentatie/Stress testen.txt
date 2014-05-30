@@ -1,0 +1,19 @@
+Eerst mongoDB installleren en server starten (Doe maar lokaal): 
+	http://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/
+
+Database UNWDMI aanmaken in console: 
+	use UNWDMI
+
+Dan het setup script dat we gejat hebben van André en Maurits laden via console: 
+	load("G:\\Git\\thema-2.1-i\\Leertaken\\Resources\\Mongo"); 
+
+Als het goed is kan je dan database contents zien. Om te testen of je de collections ziet:
+	show collections
+
+Om alle records in een collection te printen
+	db.measurements.find({});
+
+Om het aantal records in een collection te tellen
+	db.measurements.count();
+
+Als het goed is werkt alles dan. Misschien moet je in IntelliJ nog de MongoDB jar als library markeren door rechtermuisknop -> Add as Library -> Project Library.

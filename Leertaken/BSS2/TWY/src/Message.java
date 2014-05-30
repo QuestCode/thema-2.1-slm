@@ -1,6 +1,6 @@
+import com.mongodb.BasicDBObject;
+
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Created by Yuri on 13/5/2014.
@@ -75,6 +75,23 @@ public class Message {
                 this.values[11] + ", " +
                 this.values[12] + ", " +
                 this.values[13] + ")";
+    }
+
+    public BasicDBObject getMongoDBObject(){
+        return new BasicDBObject("STN", this.values[0])
+                .append("DATE", this.values[1])
+                .append("TIME", this.values[2])
+                .append("TEMP", Double.parseDouble(this.values[3]))
+                .append("DEWP", Double.parseDouble(this.values[4]))
+                .append("STP", Double.parseDouble(this.values[5]))
+                .append("SLP", Double.parseDouble(this.values[6]))
+                .append("VISIB", Double.parseDouble(this.values[7]))
+                .append("WDSP", Double.parseDouble(this.values[8]))
+                .append("PRCP", Double.parseDouble(this.values[9]))
+                .append("SNDP", Double.parseDouble(this.values[10]))
+                .append("FRSHTT", Integer.parseInt(this.values[11]))
+                .append("CLDC", Double.parseDouble(this.values[12]))
+                .append("WNDDIR", Double.parseDouble(this.values[13]));
     }
 
     public Boolean isComplete(){

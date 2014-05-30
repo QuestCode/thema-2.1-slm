@@ -2,7 +2,6 @@ import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.Socket;
-import java.util.Timer;
 
 /**
  * Created by Yuri on 8/5/2014.
@@ -10,11 +9,11 @@ import java.util.Timer;
 public class ClusterConnection implements Runnable {
     Socket client;
     customInputStreamReader customInputStreamReader;
-    public DatabaseConnection databaseConnection;
+    public MongoDatabaseConnection mongoDatabaseConnection;
 
-    public ClusterConnection(Socket client, DatabaseConnection databaseConnection, MessageCounter counter){
+    public ClusterConnection(Socket client, MongoDatabaseConnection mongoDatabaseConnection, MessageCounter counter){
         this.client = client;
-        this.databaseConnection = databaseConnection;
+        this.mongoDatabaseConnection = mongoDatabaseConnection;
 
         try
         {
@@ -52,7 +51,7 @@ private class customInputStreamReader {
                     message.addValue(line);
 
                     if(line.contains("</MEASUREMENT>")){
-                        databaseConnection.sendToServer(message);
+                        mongoDatabaseConnection.sendToServer(message);
                         message = new Message();
                         weatherdataCount++;
 
