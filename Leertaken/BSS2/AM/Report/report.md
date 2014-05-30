@@ -15,10 +15,16 @@
 - __Stresstest resultaten__					<span style="float:right;font-weight:bold">X</span>
 	- Machine gebruik tijdens stresstesting	<span style="float:right;font-weight:normal">X</span>
 - __Conclusies & bevindingen__				<span style="float:right;font-weight:bold">X</span>
+	- Weghalen buffer						<span style="float:right;font-weight:normal">X</span>
+	- Schaalbaarheid						<span style="float:right;font-weight:normal">X</span>
 
 # Inleiding
 
-Dit rapport beschrijft de conclusies en bevindingen van André Nanninga en Maurits van Mastrigt tijdens het uitwerken van Leertaak 2. Dit document zal eerst ingaan op de definitie van de tweede leertaak. Hierop volgend de een toelichting op de probleemstelling. Vervolgens zullen de programmaonderdelen en stresstest resultaten worden toegelicht, met afsluitend de conclusies & bevindingen.
+Dit rapport beschrijft de conclusies en bevindingen van André Nanninga en Maurits van Mastrigt tijdens het uitwerken van Leertaak 2.
+
+De rapportage is opgedeeld in drie delen: inleiding, resultaten, en conclusie. Waarbij in de inleiding de tweede leertaak, de probleemstelling en de programmaonderdelen zullen worden toegelicht. Hierop volgend worden de stresstest resultaten gespresenteerd en toegelicht. En afsluitend worden de conclusies en bevindingen beschreven.
+
+Het uitgevoerde onderzoek is een vervolg op de uitwerking van de eerste leertaak.
 
 # Definitie leertaak twee
 
@@ -172,9 +178,16 @@ Onderstaand schermafdrukken van respectievelijk het CPU-, geheugen-, en hardesch
 
 # Conclusies & bevindingen
 
+Onderstaand worden de conclusies en bevindingen toegelicht.
+
+## Weghalen buffer
+
 ```
-Toelichten:
-- Weghalen buffer
-- Winddown (afsluiten)
-- Schaalbaarheid
+- Niet meer nodig
+- Sneller
+- Eliminatie van afronding (winddown)
 ```
+
+## Schaalbaarheid
+
+..
