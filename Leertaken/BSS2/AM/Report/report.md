@@ -15,7 +15,7 @@
 - __Stresstest resultaten__					<span style="float:right;font-weight:bold">X</span>
 	- Machine gebruik tijdens stresstesting	<span style="float:right;font-weight:normal">X</span>
 - __Conclusies & bevindingen__				<span style="float:right;font-weight:bold">X</span>
-	- Weghalen buffer						<span style="float:right;font-weight:normal">X</span>
+	- Eliminatie RecordBuffer				<span style="float:right;font-weight:normal">X</span>
 	- Schaalbaarheid						<span style="float:right;font-weight:normal">X</span>
 
 # Inleiding
@@ -187,7 +187,7 @@ Het doel van de opdracht is het bepalen en oplossen van bottlenecks in de applic
 
 De uitwerking in dit rapport, naar aanleiding van de tweede leertaak, borduurt verder op de resultaten uit de eerste leertaken. Bij de eerste leertaak is een relationele database (MySQL) gebruikt, die de bottleneck voor grote hoeveelheden weerdata bleek te vormen. Dit probleem is in dit rapport opgelost door het gebruik van een non-relationele database (MongoDB).
 
-## Weghalen buffer
+## Eliminatie RecordBuffer
 
 Tevens zijn er optimalisaties in de applicatie toegepast. Zo wordt er geen gebruik meer gemaakt van een _RecordBuffer_ die de weerdata objecten even vasthoudt om deze vervolgens in een batch in te schieten. Door de grote doorvoersnelheid van MongoDB kan elke inkomende record direct in de database worden geschoten.
 
