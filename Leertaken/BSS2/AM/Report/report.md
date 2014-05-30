@@ -183,22 +183,20 @@ Onderstaand schermafdrukken van respectievelijk het CPU-, geheugen-, en hardesch
 
 Onderstaand worden de conclusies en bevindingen toegelicht.
 
+Het doel van de opdracht is het bepalen en oplossen van bottlenecks in de applicatie, waardoor er uiteindelijk 8000+ weerstations ondersteund kunnen worden. Elk weerstation levert elke seconde een meting van bepaalde waarden (bijv. temperatoor, windrichting, etc.). Belangrijk hierbij is dat de applicatie schaalbaar is en in de toekomst een grote hoeveelheid weerdata (bijv. weerdata van het afgelopen jaar), maar ook meer weerstations, aan moet kunnen.
+
+De uitwerking in dit rapport, naar aanleiding van de tweede leertaak, borduurt verder op de resultaten uit de eerste leertaken. Bij de eerste leertaak is een relationele database (MySQL) gebruikt, die de bottleneck voor grote hoeveelheden weerdata bleek te vormen. Dit probleem is in dit rapport opgelost door het gebruik van een non-relationele database (MongoDB).
+
 ## Weghalen buffer
 
-```
-- Niet meer nodig
-- Sneller
-- Eliminatie van afronding (winddown)
-```
+Tevens zijn er optimalisaties in de applicatie toegepast. Zo wordt er geen gebruik meer gemaakt van een _RecordBuffer_ die de weerdata objecten even vasthoudt om deze vervolgens in een batch in te schieten. Door de grote doorvoersnelheid van MongoDB kan elke inkomende record direct in de database worden geschoten.
+
+Voorheen had de applicatie bij het afsluiten een aantal seconden (oplopend tot meerdere minuten) nodig om de deels gevulde buffers te verwerken. Door eliminatie van deze buffers is dit niet meer nodig, waardoor bij een mogelijk vastlopen van de applicatie geen weerdata verloren zal gaan.
 
 ## Schaalbaarheid
 
-..
+Omdat een non-relationele database als Mongo DB gemaakt is voor grote datasets, is het schalen van deze database dan ook zeer eenvoudig. Wanneer de data blijft groeien, kan het voorkomen dat een enkele machine niet meer voldoende is voor het verwerken van de data. Dit wordt opgelost met een techniek die __Sharding__ (of 'horizontaal schalen') heet. Hiermee worden de werklast en datasets verdeeld over meerdere machines ('shards'), waardoor de database horizontaal schaalt.
 
 ```
-Oud:
-
-De doel van de opdracht is het bepalen van bottlenecks in de applicatie, waardoor uiteindelijk het verwerken van 8000 records per seconde niet mogelijk zou moeten zijn. Er zijn veel punten die een bottleneck kunnen vor‐ men, waaronder de hardware, het verwerken van data, het corrigeren van data, en het opslaan van de data in de database. Echter is er gebleken dat elk obstakel, door middel van de juiste optimalisaties, te overkomen is. Zo moest er voor elk onderdeel van de applicatie worden gekeken naar de mogelijke bottlenecks en waar hierin winst te behalen is. Met behulp van goede meetinstrumenten (zoals Java HProf en handmatig gemeten waar‐ den) kon de kink in de kabel telkens relatief snel worden bepaald.
-Het doel van 8000 records per seconde verwerken is uiteindelijk gehaald. Hieraan ligt ten grondslag dat elk on‐ derdeel van de applicatie is gescheiden (waaronder met behulp van multithreading), waardoor er een zo hoog mogelijk haalbare verwerkingssnelheid kon worden bereikt. Tevens bleek het gebruik van de juiste hardware (een quadcore desktop PC) noodzakelijk, omdat met het gebruik van laptops het maximaal gehaalde aantal clus‐ ters slechts 560 was.
-Desalniettemin is de database telkens de grootste bottleneck gebleken. Er moest hievoor grote hoeveelheden code worden geoptimaliseerd. Tevens kan er niet worden uitgesloten dat bij het langer draaien van de appli‐ catie, de dataverwerkingssnelheid constant blijft. Het is goed mogelijk dat deze afneemt, doordat de database de invoer niet op tijd kan verwerken (door schrijfsnelheiden naar de hardeschijf en het intact houden van de referentiële integriteit).
+Zie: http://docs.mongodb.org/master/MongoDB-sharding-guide.pdf
 ```
