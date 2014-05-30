@@ -194,3 +194,11 @@ Onderstaand worden de conclusies en bevindingen toegelicht.
 ## Schaalbaarheid
 
 ..
+
+```
+Oud:
+
+De doel van de opdracht is het bepalen van bottlenecks in de applicatie, waardoor uiteindelijk het verwerken van 8000 records per seconde niet mogelijk zou moeten zijn. Er zijn veel punten die een bottleneck kunnen vor‐ men, waaronder de hardware, het verwerken van data, het corrigeren van data, en het opslaan van de data in de database. Echter is er gebleken dat elk obstakel, door middel van de juiste optimalisaties, te overkomen is. Zo moest er voor elk onderdeel van de applicatie worden gekeken naar de mogelijke bottlenecks en waar hierin winst te behalen is. Met behulp van goede meetinstrumenten (zoals Java HProf en handmatig gemeten waar‐ den) kon de kink in de kabel telkens relatief snel worden bepaald.
+Het doel van 8000 records per seconde verwerken is uiteindelijk gehaald. Hieraan ligt ten grondslag dat elk on‐ derdeel van de applicatie is gescheiden (waaronder met behulp van multithreading), waardoor er een zo hoog mogelijk haalbare verwerkingssnelheid kon worden bereikt. Tevens bleek het gebruik van de juiste hardware (een quadcore desktop PC) noodzakelijk, omdat met het gebruik van laptops het maximaal gehaalde aantal clus‐ ters slechts 560 was.
+Desalniettemin is de database telkens de grootste bottleneck gebleken. Er moest hievoor grote hoeveelheden code worden geoptimaliseerd. Tevens kan er niet worden uitgesloten dat bij het langer draaien van de appli‐ catie, de dataverwerkingssnelheid constant blijft. Het is goed mogelijk dat deze afneemt, doordat de database de invoer niet op tijd kan verwerken (door schrijfsnelheiden naar de hardeschijf en het intact houden van de referentiële integriteit).
+```
