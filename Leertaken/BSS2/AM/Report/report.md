@@ -11,6 +11,7 @@
 - __Probleemstelling__						<span style="float:right;font-weight:bold">X</span>
 - __Verklaring programmaonderdelen__		<span style="float:right;font-weight:bold">X</span>
 	- Infrastructuur						<span style="float:right;font-weight:normal">X</span>
+	- Database								<span style="float:right;font-weight:normal">X</span>
 	- Applicatie							<span style="float:right;font-weight:normal">X</span>
 - __Stresstest resultaten__					<span style="float:right;font-weight:bold">X</span>
 	- Machine gebruik tijdens stresstesting	<span style="float:right;font-weight:normal">X</span>
@@ -75,6 +76,18 @@ De __generator__ is door de Hanzehogeschool als uitvoerbaar `.jar`-bestand aange
 De bovengenoemde __applicatie__ is volledig zelf ontwikkeld. Hier lagen wel een aantal vereisten aan ten grondslag. Samengevat moest er een multithreaded Java applicatie worden gebouwd, die door middel van sockets een XML stream uitleest. De ingelezen gegevens moeten vervolgens worden omgezet naar een werkbaar data formaat. Ontbrekende data moest worden gecorrigeerd en de data moest worden opgeslagen in non-relationale database. De specifieke uitwerking van de applicatie zal nader worden toegelicht in paragraaf _Applicatie_.
 
 Voor opslag van de gegevens is er gekozen voor de meest bekende non-relationele database: __MongoDB__. Deze database is eenvoudig in opzet, kan zeer hoge lees- en schrijfsnelheden behalen, en schaalt enorm goed.
+
+---
+
+## Database
+
+De opdracht verbiedt het gebruik van een relationele database. Hierdoor is er gekeken naar de mogelijke alternatieven. De twee voornaamste alternatieven zijn non-relationele databases en flat-file databases.
+
+..
+
+```
+- Toelichting MongoDB
+```
 
 ---
 
@@ -196,6 +209,8 @@ Voorheen had de applicatie bij het afsluiten een aantal seconden (oplopend tot m
 ## Schaalbaarheid
 
 Omdat een non-relationele database als Mongo DB gemaakt is voor grote datasets, is het schalen van deze database dan ook zeer eenvoudig. Wanneer de data blijft groeien, kan het voorkomen dat een enkele machine niet meer voldoende is voor het verwerken van de data. Dit wordt opgelost met een techniek die __Sharding__ (of 'horizontaal schalen') heet. Hiermee worden de werklast en datasets verdeeld over meerdere machines ('shards'), waardoor de database horizontaal schaalt.
+
+..
 
 ```
 Zie: http://docs.mongodb.org/master/MongoDB-sharding-guide.pdf
