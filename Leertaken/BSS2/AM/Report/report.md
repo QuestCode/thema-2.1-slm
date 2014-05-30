@@ -45,7 +45,12 @@ De in dit rapport beschreven conclusies en bevindingen zullen worden meegenomen 
 
 # Probleemstelling
 
-..
+```
+In grote lijnen staat het UNWDMI in de steigers. De oprichting is een feit en de medewerkers worden nu geacht de dienstverlening operationeel te maken. Daarbij wordt jullie hulp ingeroepen bij twee onderdelen:
+
+het ontwikkelen van de applicatie die de dienstverlening aan klanten mogelijk maakt. De nadruk ligt daarbij op de correctie, de opslag en de beschikbaarstelling van de weergegevens voor klanten. 
+het afsluiten van enkele servicecontracten inclusief het formuleren van infrastructurele maatregelen die de normstelling mogelijk maken en inclusief een tarief.
+```
 
 # Verklaring programmaonderdelen
 
