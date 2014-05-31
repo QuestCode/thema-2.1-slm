@@ -38,10 +38,10 @@ public class Server implements Runnable
 		Server.isOpen = false;
 
 		// Shutdown workers
-		List<Runnable> workers = this.workerPool.shutdownNow();
+		this.workerPool.shutdownNow();
 
 		try {
-			if (!this.workerPool.awaitTermination(60, SECONDS)) {
+			if (!this.workerPool.awaitTermination(10, SECONDS)) {
 				this.workerPool.shutdownNow();
 			}
 		}
