@@ -7,17 +7,17 @@
 # Inhoud
 
 - __Inleiding__								<span style="float:right;font-weight:bold">3</span>
-- __Definitie leertaak twee__				<span style="float:right;font-weight:bold">X</span>
-- __Probleemstelling__						<span style="float:right;font-weight:bold">X</span>
-- __Verklaring programmaonderdelen__		<span style="float:right;font-weight:bold">X</span>
-	- Infrastructuur						<span style="float:right;font-weight:normal">X</span>
-	- Database								<span style="float:right;font-weight:normal">X</span>
-	- Applicatie							<span style="float:right;font-weight:normal">X</span>
-- __Stresstest resultaten__					<span style="float:right;font-weight:bold">X</span>
-	- Machine gebruik tijdens stresstesting	<span style="float:right;font-weight:normal">X</span>
-- __Conclusies & bevindingen__				<span style="float:right;font-weight:bold">X</span>
-	- Eliminatie RecordBuffer				<span style="float:right;font-weight:normal">X</span>
-	- Schaalbaarheid						<span style="float:right;font-weight:normal">X</span>
+- __Definitie leertaak twee__				<span style="float:right;font-weight:bold">4</span>
+- __Probleemstelling__						<span style="float:right;font-weight:bold">5</span>
+- __Verklaring programmaonderdelen__		<span style="float:right;font-weight:bold">6</span>
+	- Infrastructuur						<span style="float:right;font-weight:normal">6</span>
+	- Database								<span style="float:right;font-weight:normal">7</span>
+	- Applicatie							<span style="float:right;font-weight:normal">8</span>
+- __Stresstest resultaten__					<span style="float:right;font-weight:bold">10</span>
+	- Machine gebruik tijdens stresstesting	<span style="float:right;font-weight:normal">12</span>
+- __Conclusies & bevindingen__				<span style="float:right;font-weight:bold">14</span>
+	- Conclusie								<span style="float:right;font-weight:normal">14</span>
+	- Bevindingen							<span style="float:right;font-weight:normal">14</span>
 
 # Inleiding
 
@@ -140,6 +140,8 @@ De _Database_ klasse zorgt voor zowel het tot stand brengen van een verbinding m
 
 Ten opzichte van de eerste leertaak is er geen gebruik gemaakt van een _Database.Executor_ (of _RecordBuffer_), omdat de non-relationele database het inschieten van de data objecten prima aan kan.
 
+---
+
 ### Worker
 
 De _Worker_ klasse staat centraal aan de applicatie. Deze moet zo snel mogelijk de ingelezen gegevens verwerken tot bruikbare weerdata, de data corrigeren (met behulp van een _Corrector_), en inschieten in de database (in dit geval zonder behulp van een _RecordBuffer_). Dit laatste punt kost weinig tijd door het gebruik van een non-relationele database, die zeer hoge schrijfsnelheiden behaald ten opzichte van een relationele database (zoals gebruikt in de eerste leertaak).
@@ -172,8 +174,6 @@ De stresstest is meerdere malen uitgevoerd met een doorloop tijd van 30 seconden
 | __Gemiddeld__ |           |          |                |                         |             |
 | 800           | 436.90 MB | 246978   | 246178         | 240000                  | 102.57%     |
 
----
-
 ### Stresstest resultaten met MySQL
 
 | Clusters      | Geheugen  | Mutaties | Aantal records | Verwacht aantal records | Efficiëntie |
@@ -186,8 +186,6 @@ De stresstest is meerdere malen uitgevoerd met een doorloop tijd van 30 seconden
 | __Gemiddeld__ |           |          |                |                         |             |
 | 800           | 514.40 MB | 878      | 247574         | 240000                  | 103.16%     |
 
----
-
 De reden dat de efficiëntie boven 100% is omdat de workers niet direct worden gestopt en zo dus nog een klein beetje data kunnen ontvangen.
 
 Omdat de applicatie met MySQL al 100% efficiëntie kon bereiken is daar geen verschil in te zien. Het enige verschil is een kleine daling in geheugen verbruikt (van 514.40 MB naar 436.90 MB). Deze daling is ontstaan door het verwijderen van de RecordBuffer, deze bufferde de Records tot een bepaald punt waarna het werd wegschreven naar de database. Deze buffer zorgde voor extra geheugenverbruik.
@@ -199,10 +197,12 @@ Hier staat tegen over dat het aantal mutaties wel flink is opgelopen (van 878 ge
 | Duur          | Clusters  | Geheugen  | Mutaties       | Aantal records          | Verwacht aantal records | Efficiëntie |
 | :------------ | :-------- | :------   | :------------- | :---------------------- | :----------             | :---------- |
 | 15 minuten    | 800       | 153.50 MB | 7207550        | 7206750                 | 7200000                 | 100.09%     |
-| 30 minuten    | 8000      | 149.00 MB | 14176000       | 14472520                | 14400000                | 100.05%     |
+| 30 minuten    | 800       | 149.00 MB | 14176000       | 14472520                | 14400000                | 100.05%     |
 | 60 minuten    | 800       | 148.50 MB | 28805760       | 28804960                | 28800000                | 100.02%     |
 
 Na het uitvoeren van een aantal langere stresstests ontstaan nog steeds geen problemen. De efficiëntie blijft 100% en het gebruikte geheugen stijgt ook niet. De grootte van de database na de stresstest van 15 minuten was _1.73 GB_. Na de stresstest van 60 minuten was de grootte _6.91 GB_ oftewel (bijna) precies 4 keer zo groot als bij de stresstest van 15 minuten. De stresstest van 30 minuten toont een database grootte van _3.46 GB_ oftewel twee keer zo groot als de grootte na een kwartier en twee keer zo klein als de grootte na een uur. De groei van de database lijkt dus lineair te zijn.
+
+---
 
 ## Machine gebruik tijdens stresstesting
 
@@ -226,20 +226,22 @@ Het doel van de opdracht is het bepalen en oplossen van bottlenecks in de applic
 
 De uitwerking in dit rapport, naar aanleiding van de tweede leertaak, borduurt verder op de resultaten uit de eerste leertaken. Bij de eerste leertaak is een relationele database (MySQL) gebruikt, die de bottleneck voor grote hoeveelheden weerdata bleek te vormen. Dit probleem is in dit rapport opgelost door het gebruik van een non-relationele database (MongoDB).
 
-## Eliminatie RecordBuffer
-
-Tevens zijn er optimalisaties in de applicatie toegepast. Zo wordt er geen gebruik meer gemaakt van een _RecordBuffer_ die de weerdata objecten even vasthoudt om deze vervolgens in een batch in te schieten. Door de grote doorvoersnelheid van MongoDB kan elke inkomende record direct in de database worden geschoten.
-
-Voorheen had de applicatie bij het afsluiten een aantal seconden (oplopend tot meerdere minuten) nodig om de deels gevulde buffers te verwerken. Door eliminatie van deze buffers is dit niet meer nodig, waardoor bij een mogelijk vastlopen van de applicatie geen weerdata verloren zal gaan.
-
-## Schaalbaarheid
-
-Omdat een non-relationele database als Mongo DB gemaakt is voor grote datasets, is het schalen van deze database dan ook zeer eenvoudig. Wanneer de data blijft groeien, kan het voorkomen dat een enkele machine niet meer voldoende is voor het verwerken van de data. Dit wordt opgelost met een techniek die __Sharding__ (of 'horizontaal schalen') heet. Hiermee worden de werklast en datasets verdeeld over meerdere machines ('shards'), waardoor de database horizontaal schaalt.
-
-Zie: http://docs.mongodb.org/master/MongoDB-sharding-guide.pdf
-
 ## Conclusie
 
 Met het gebruik van MongoDB als database kan het doel van het verwerken van de meetgegevens van 8000+ weerstations makkelijk gehaald worden. Omdat de vorige versie van de applicatie al de 8000+ weerstations kon verwerken was er minimaal werk nodig om deze geschikt te maken voor gebruik van MongoDB. Ook de database zelf schaalt goed mee; zoals uit de stresstests is gebleken schaalt de datbase lineair mee over langere periode van verwerken van meetgegevens.
 
 Na een stresstest van een uur was ongeveer 8 GB aan data opgeslagen in de database. Als we uit gaan van de lineaire stijging in database opslag zoals geconstateerd bij de stresstests dan betekent dit dat elk jaar bijna 60 TB aan data wordt opgeslagen. Het opslaan van de meetgegevens van 8000+ weerstations per seconde is mogelijk excessief. Gekeken zou kunnen worden naar het samenvoegen van data na een bepaalde periode of het opslaan van de meetgegevens in een lagere frequentie.
+
+## Bevindingen
+
+Onderstaand de bevindingen tijdens het uitwerken van de tweede leertaak.
+
+### Eliminatie RecordBuffer
+
+Tevens zijn er optimalisaties in de applicatie toegepast. Zo wordt er geen gebruik meer gemaakt van een _RecordBuffer_ die de weerdata objecten even vasthoudt om deze vervolgens in een batch in te schieten. Door de grote doorvoersnelheid van MongoDB kan elke inkomende record direct in de database worden geschoten.
+
+Voorheen had de applicatie bij het afsluiten een aantal seconden (oplopend tot meerdere minuten) nodig om de deels gevulde buffers te verwerken. Door eliminatie van deze buffers is dit niet meer nodig, waardoor bij een mogelijk vastlopen van de applicatie geen weerdata verloren zal gaan.
+
+### Schaalbaarheid
+
+Omdat een non-relationele database als Mongo DB gemaakt is voor grote datasets, is het schalen van deze database dan ook zeer eenvoudig. Wanneer de data blijft groeien, kan het voorkomen dat een enkele machine niet meer voldoende is voor het verwerken van de data. Dit wordt opgelost met een techniek die __Sharding__ (of 'horizontaal schalen') heet. Hiermee worden de werklast en datasets verdeeld over meerdere machines ('shards'), waardoor de database horizontaal schaalt.
