@@ -199,9 +199,10 @@ Hier staat tegen over dat het aantal mutaties wel flink is opgelopen (van 878 ge
 | Duur          | Clusters  | Geheugen  | Mutaties       | Aantal records          | Verwacht aantal records | Efficiëntie |
 | :------------ | :-------- | :------   | :------------- | :---------------------- | :----------             | :---------- |
 | 15 minuten    | 800       | 153.50 MB | 7207550        | 7206750                 | 7200000                 | 100.09%     |
+| 30 minuten    | 8000      | 149.00 MB | 14176000       | 14472520                | 14400000                | 100.05%     |
 | 60 minuten    | 800       | 148.50 MB | 28805760       | 28804960                | 28800000                | 100.02%     |
 
-Na het uitvoeren van een aantal langere stresstests ontstaan nog steeds geen problemen. De efficiëntie blijft 100% en het gebruikte geheugen stijgt ook niet. De grootte van de database na de stresstest van 15 minuten was _1.73 GB_. Na de stresstest van 60 minuten was de grootte _6.91 GB_ oftewel (bijna) precies 4 keer zo groot als bij de stresstest van 15 minuten. De groeit van de database lijkt dus lineair te zijn.
+Na het uitvoeren van een aantal langere stresstests ontstaan nog steeds geen problemen. De efficiëntie blijft 100% en het gebruikte geheugen stijgt ook niet. De grootte van de database na de stresstest van 15 minuten was _1.73 GB_. Na de stresstest van 60 minuten was de grootte _6.91 GB_ oftewel (bijna) precies 4 keer zo groot als bij de stresstest van 15 minuten. De stresstest van 30 minuten toont een database grootte van _3.46 GB_ oftewel twee keer zo groot als de grootte na een kwartier en twee keer zo klein als de grootte na een uur. De groei van de database lijkt dus lineair te zijn.
 
 ## Machine gebruik tijdens stresstesting
 
