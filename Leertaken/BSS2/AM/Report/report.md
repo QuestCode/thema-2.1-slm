@@ -188,7 +188,7 @@ De stresstest is meerdere malen uitgevoerd met een doorloop tijd van 30 seconden
 
 ---
 
-Omdat de applicatie met MySQL al 100% efficiëntie kon bereiken is daar geen verschil in te zien. Het enige verschil is een kleine daling in geheugen verbruikt (van 514.40 MB naar 436.90 MB). Deze daling is ontstaan door het verwijderen van de RecordBuffer, deze bufferde de Records tot een bepaald punt waarna het werd wegschreven naar de database. Deze buffer zorgde voor extra geheugen verbruik.
+Omdat de applicatie met MySQL al 100% efficiëntie kon bereiken is daar geen verschil in te zien. Het enige verschil is een kleine daling in geheugen verbruikt (van 514.40 MB naar 436.90 MB). Deze daling is ontstaan door het verwijderen van de RecordBuffer, deze bufferde de Records tot een bepaald punt waarna het werd wegschreven naar de database. Deze buffer zorgde voor extra geheugenverbruik.
 
 Hier staat tegen over dat het aantal mutaties wel flink is opgelopen (van 878 gemiddeld naar 246978 gemiddeld). Met de voormalige RecordBuffer werden veel minder mutaties gedaan maar bestonde mutaties wel uit meerdere Records. Met het verwijderen van de RecordBuffer wordt elke Record direct weggeschreven wat zorgt voor een groter aantal mutaties. MongoDB is zelf erg geomptimaliseerd voor het snel wegschrijven van veel data dus deze wijzigen heeft niet gezorgd voor een daling in efficiëntie.
 
@@ -238,4 +238,7 @@ Omdat een non-relationele database als Mongo DB gemaakt is voor grote datasets, 
 
 ```
 Zie: http://docs.mongodb.org/master/MongoDB-sharding-guide.pdf
+
+- Toelichten schaalbaarheid, clusters en database grootte na 1 jaar
+- Twee uur draaien? Kijken of de database lineair groeit?
 ```
