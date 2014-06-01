@@ -59,19 +59,19 @@ public class Record {
 	 */
 	public static BasicDBObject toDBObject( Object[] record ) {
 		return new BasicDBObject( "stn", record[ Record.STN ].toString() )
-			.append( "date"  , record[ Record.DATE   ].toString() )
-			.append( "time"  , record[ Record.TIME   ].toString() )
-			.append( "temp"  , record[ Record.TEMP   ].toString() )
-			.append( "dewp"  , record[ Record.DEWP   ].toString() )
-			.append( "stp"   , record[ Record.STP    ].toString() )
-			.append( "slp"   , record[ Record.SLP    ].toString() )
-			.append( "visib" , record[ Record.VISIB  ].toString() )
-			.append( "wdsp"  , record[ Record.WDSP   ].toString() )
-			.append( "prcp"  , record[ Record.PRCP   ].toString() )
-			.append( "sndp"  , record[ Record.SNDP   ].toString() )
-			.append( "frshtt", record[ Record.FRSHTT ].toString() )
-			.append( "cldc"  , record[ Record.CLDC   ].toString() )
-			.append( "wnddir", record[ Record.WNDDIR ].toString() )
+			.append( "date"  , record[ Record.DATE   ] )
+			.append( "time"  , record[ Record.TIME   ] )
+			.append( "temp"  , record[ Record.TEMP   ] )
+			.append( "dewp"  , record[ Record.DEWP   ] )
+			.append( "stp"   , record[ Record.STP    ] )
+			.append( "slp"   , record[ Record.SLP    ] )
+			.append( "visib" , record[ Record.VISIB  ] )
+			.append( "wdsp"  , record[ Record.WDSP   ] )
+			.append( "prcp"  , record[ Record.PRCP   ] )
+			.append( "sndp"  , record[ Record.SNDP   ] )
+			.append( "frshtt", record[ Record.FRSHTT ] )
+			.append( "cldc"  , record[ Record.CLDC   ] )
+			.append( "wnddir", record[ Record.WNDDIR ] )
 			;
 	}
 }

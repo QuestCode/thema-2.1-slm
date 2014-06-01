@@ -1,1 +1,1 @@
-db.measurements.remove({});
+db.dropDatabase();

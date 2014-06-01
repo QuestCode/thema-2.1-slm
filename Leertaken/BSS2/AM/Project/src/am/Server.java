@@ -7,28 +7,25 @@ import java.io.IOException;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ExecutorService;
 import static java.util.concurrent.TimeUnit.SECONDS;
+import java.util.List;
 
 public class Server implements Runnable
 {
 	ServerSocket socket;
 	private ExecutorService workerPool;
 	private Database database;
+	public static Boolean isOpen;
 
-	public Server() {
+	public Server( Database database ) {
+		this.database = database;
+
 		// Create worker pool
 		this.workerPool = Executors.newFixedThreadPool( 850 );
-
-		// Connect to database
-		this.database = new Database( "localhost", 27017, "unwdmi" );
 
 		// Clear measurements table
 		this.database.clearMeasurements();
 
 		System.out.println( "[Server] Measurements cleared." );
-	}
-
-	public Database getDatabase() {
-		return this.database;
 	}
 
 	public void interrupt() throws IOException {
@@ -37,24 +34,23 @@ public class Server implements Runnable
 		// Close socket
 		this.socket.close();
 
+		// Flag workers that the server is no longer open
+		Server.isOpen = false;
+
 		// Shutdown workers
 		this.workerPool.shutdownNow();
 
-		// Block until shut down
 		try {
-			this.workerPool.awaitTermination( 600, SECONDS );
-		}
-		catch( InterruptedException e ) {
-			e.printStackTrace();
-		}
-
-		// Shutdown executors and release locks
-		try {
-			this.database.shutdownExecutors();
+			if (!this.workerPool.awaitTermination(10, SECONDS)) {
+				this.workerPool.shutdownNow();
+			}
 		}
 		catch( Exception e ) {
-			e.printStackTrace();
+			this.workerPool.shutdownNow();
 		}
+
+		// Close database connection
+		this.database.close();
 	}
 
 	public void run() {
@@ -63,6 +59,8 @@ public class Server implements Runnable
 			this.socket = new ServerSocket( 7789 );
 			Thread t;
 
+			// Flag workers that the server is now open
+			Server.isOpen = true;
 			System.out.println( "[Server] Accepting.." );
 
 			// Accept incoming sockets

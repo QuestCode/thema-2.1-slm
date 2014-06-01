@@ -10,7 +10,7 @@ import am.Server;
 import am.Worker;
 
 public class Runner {
-	private int runtime = 10; // seconds
+	private int runtime = 100; // seconds
 
 	/**
 	 * Bootstrap
@@ -29,23 +29,24 @@ public class Runner {
 
 	public Runner() {
 
-		// Set query buffer size
-		RecordBuffer.BUFFER_SIZE = 50;
-
 		// Set corrector cache size
 		Corrector.CACHE_SIZE = 12;
 
-		Server server           = new Server();
+		// Database configuration
+		String host       = "localhost";
+		Integer port      = 27017;
+		String collection = "unwdmi";
+
+		Database database       = new Database( host, port, collection );
+		Server server           = new Server( database );
 		Thread serverThread     = new Thread( server );
 		ThreadMXBean threadBean = ManagementFactory.getThreadMXBean();
-		Database database       = server.getDatabase();
 
 		serverThread.start();
 
 		System.out.println(
 				  "--- CONFIGURATION ---\n"
 				+ "Runtime            : " + this.runtime + " seconds\n"
-				+ "Record buffer size : " + RecordBuffer.BUFFER_SIZE + "\n"
 				+ "Cache size         : " + Corrector.CACHE_SIZE + "\n"
 				+ "Date               : " + new SimpleDateFormat( "yyyy/MM/dd 'at' HH:mm:ss" ).format( new Date() ) + "\n"
 				+ "---------------------"
@@ -71,20 +72,19 @@ public class Runner {
 			server.interrupt();
 
 			// Block until gracefully terminated
-			while( threadBean.getThreadCount() > 6 ) {
-				// System.out.println( "[Runner] Thread count: " + threadBean.getThreadCount() );
+			while( threadBean.getThreadCount() > 7 ) {
+				System.out.println( "[Runner] Thread count: " + threadBean.getThreadCount() );
 				Thread.sleep( 100 );
 			}
 
 			long endTime = System.nanoTime();
 
 			// Get total row count
-			long rowCount = database.getActualQueryCount();
+			Database database2 = new Database( host, port, collection );
+			long rowCount      = database2.getActualQueryCount();
 
 			// Close database connection
-			System.out.println( "[Runner] Closing database connection.." );
-
-			database.close();
+			database2.close();
 
 			// Output information
 			float actualTime        = (float) ( endTime - startTime ) / 1000000000;
@@ -95,7 +95,6 @@ public class Runner {
 			System.out.print(
 				  "--- CONFIGURATION ---\n"
 				+ "Runtime            : " + this.runtime + " seconds\n"
-				+ "Record buffer size : " + RecordBuffer.BUFFER_SIZE + "\n"
 				+ "Cache size         : " + Corrector.CACHE_SIZE + "\n"
 				+ "------- USAGE -------\n"
 				+ "Date               : " + new SimpleDateFormat( "yyyy/MM/dd 'at' HH:mm:ss" ).format( new Date() ) + "\n"
@@ -119,7 +118,7 @@ public class Runner {
 			e.printStackTrace();
 		}
 		finally {
-			System.exit(0);
+			System.exit( 0 );
 		}
 	}
 }

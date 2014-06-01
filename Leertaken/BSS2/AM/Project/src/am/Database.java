@@ -16,10 +16,6 @@ import com.mongodb.MongoInterruptedException;
 import java.util.List;
 import java.util.Set;
 
-import java.util.concurrent.Executors;
-import java.util.concurrent.ExecutorService;
-import static java.util.concurrent.TimeUnit.SECONDS;
-
 public class Database {
 	/**
 	 * Variables
@@ -27,7 +23,6 @@ public class Database {
 	private MongoClient mongoClient;
 	private DB database;
 	private DBCollection collection;
-	private ExecutorService executorPool;
 
 	private long queryCount    = 0;
 	private Long insertedCount = 0L;
@@ -47,9 +42,6 @@ public class Database {
 			this.collection = this.database.getCollection( "measurements" );
 
 			System.out.println( "[Database] Connected to " + host + ":" + port );
-
-			// Create cached thread pool
-			this.executorPool = Executors.newCachedThreadPool();
 		}
 		catch( Exception e ) {
 			// Print error
@@ -80,11 +72,6 @@ public class Database {
 	/**
 	 * Setters
 	 *******************************************************/
-	public void increaseInsertedCount( long count ) {
-		synchronized( this.insertedCount ) {
-			this.insertedCount += count;
-		}
-	}
 
 	/**
 	 * Connection methods
@@ -95,6 +82,8 @@ public class Database {
 	}
 
 	public void close() {
+		System.out.println( "[Database] Closing connection.." );
+
 		// Close connection
 		this.mongoClient.close();
 	}
@@ -102,62 +91,22 @@ public class Database {
 	/**
 	 * Querying
 	 *******************************************************/
-	public void insertValues( BasicDBObject[] values ) {
+	public synchronized void insertValue( BasicDBObject value ) {
 		try {
 			// Increment counter
 			++this.queryCount;
 
 			// Execute query
-			this.executorPool.submit( new Executor( this, values ) );
+			this.collection.insert( value );
+
+			// Increment counter
+			++this.insertedCount;
+		}
+		catch( MongoInterruptedException ie ) {
+			// On shutdown
 		}
 		catch( Exception e ) {
-			System.err.println( "[Database] Error inserting record batch." );
-
-			e.printStackTrace();
-		}
-	}
-
-	public void shutdownExecutors() {
-		this.executorPool.shutdownNow();
-	}
-
-	protected class Executor implements Runnable {
-
-		private Database database;
-		public BasicDBObject values[];
-
-		public Executor( Database database, BasicDBObject[] values ) {
-			this.database = database;
-			this.values   = values;
-		}
-
-		public void run() {
-			int i = 0;
-			DBCollection collection = database.getCollection();
-
-			try {
-
-				for( ; i < values.length; ++i ) {
-					if( values[i] == null ) {
-						break; // Buffer commited early
-					}
-					collection.insert( values[i] );
-				}
-
-				++i;
-			}
-			catch( MongoInterruptedException e ) {
-				// On Shutdown
-			}
-			catch( Exception e ) {
-				e.printStackTrace();
-			}
-			finally {
-				this.database.increaseInsertedCount( Long.valueOf( i ) );
-
-				// Clean up
-				collection = null;
-			}
+			System.err.println( "[Database] Error inserting record: " + e.getMessage() );
 		}
 	}
 }

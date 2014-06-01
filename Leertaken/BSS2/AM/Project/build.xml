@@ -59,7 +59,7 @@
 
 	<target name="profile" depends="jar">
 		<java jar="${dir.jar}/Leertaak-2.jar" fork="true">
-			<jvmarg value="-agentlib:hprof=cpu=times,heap=dump,depth=10" />
+			<jvmarg value="-agentlib:hprof=cpu=times,heap=dump,depth=15" />
 			<jvmarg value="-XX:-UseGCOverheadLimit" />
 			<jvmarg value="-Xmx1512m" />
 		</java>

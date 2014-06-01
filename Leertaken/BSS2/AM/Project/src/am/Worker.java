@@ -10,17 +10,17 @@ public class Worker implements Runnable {
 
 	public static int ID = 0;
 
-	private int id;
+	public int id;
 
 	private Socket socket;
 	private Corrector corrector;
-	private RecordBuffer recordBuffer;
+	private Database database;
 
 	public Worker( Socket socket, Database database ) {
-		this.id          = ++Worker.ID;
-		this.socket      = socket;
-		this.corrector   = new Corrector();
-		this.recordBuffer = new RecordBuffer( database );
+		this.id        = ++Worker.ID;
+		this.socket    = socket;
+		this.corrector = new Corrector();
+		this.database  = database;
 	}
 
 	public void run() {
@@ -33,7 +33,8 @@ public class Worker implements Runnable {
 			// Prepare
 			in = new BufferedReader( new InputStreamReader( this.socket.getInputStream() ) );
 
-			while( ! Thread.currentThread().isInterrupted() ) {
+			while( Server.isOpen ) {
+				// System.out.println( "[Worker] worker #" + this.id + " working hard." );
 				// Skip preface
 				try {
 					while( ! in.readLine().equals( "<?xml version=\"1.0\"?>" ) ); // Reset and skip
@@ -54,7 +55,7 @@ public class Worker implements Runnable {
 
 					this.corrector.validate( record );
 
-					this.recordBuffer.add( record );
+					this.database.insertValue( Record.toDBObject( record ) );
 				}
 			}
 
@@ -62,9 +63,6 @@ public class Worker implements Runnable {
 
 			// Close connection
 			socket.close();
-
-			// Write remaining buffer
-			this.recordBuffer.write();
 		}
 		catch( Exception e ) {
 			// Print error
