@@ -188,19 +188,20 @@ De stresstest is meerdere malen uitgevoerd met een doorloop tijd van 30 seconden
 
 ---
 
+De reden dat de efficiëntie boven 100% is omdat de workers niet direct worden gestopt en zo dus nog een klein beetje data kunnen ontvangen.
+
 Omdat de applicatie met MySQL al 100% efficiëntie kon bereiken is daar geen verschil in te zien. Het enige verschil is een kleine daling in geheugen verbruikt (van 514.40 MB naar 436.90 MB). Deze daling is ontstaan door het verwijderen van de RecordBuffer, deze bufferde de Records tot een bepaald punt waarna het werd wegschreven naar de database. Deze buffer zorgde voor extra geheugenverbruik.
 
 Hier staat tegen over dat het aantal mutaties wel flink is opgelopen (van 878 gemiddeld naar 246978 gemiddeld). Met de voormalige RecordBuffer werden veel minder mutaties gedaan maar bestonde mutaties wel uit meerdere Records. Met het verwijderen van de RecordBuffer wordt elke Record direct weggeschreven wat zorgt voor een groter aantal mutaties. MongoDB is zelf erg geomptimaliseerd voor het snel wegschrijven van veel data dus deze wijzigen heeft niet gezorgd voor een daling in efficiëntie.
 
-### Stresstest van 1 uur
+### Langdurende stresstests
 
-| Clusters      | Geheugen  | Queries  | Aantal records | Verwacht aantal records | Efficiëntie |
-| :------------ | :-------- | :------  | :------------- | :---------------------- | :---------- |
-| 800           | 148.50 MB | 28805760 | 28804960       | 28800000                | 100.02%     |
+| Duur          | Clusters  | Geheugen  | Mutaties       | Aantal records          | Verwacht aantal records | Efficiëntie |
+| :------------ | :-------- | :------   | :------------- | :---------------------- | :----------             | :---------- |
+| 15 minuten    | 800       | 153.50 MB | 7207550        | 7206750                 | 7200000                 | 100.09%     |
+| 60 minuten    | 800       | 148.50 MB | 28805760       | 28804960                | 28800000                | 100.02%     |
 
-Een stresstest van een duur van 1 uur levert geen problemen op. De efficiëntie ligt nog steeds op 100% en MongoDB kan alle records tijdig wegschrijven. Na een uur bevat de database ongeveer 7 GB aan data.
-Tijdens deze stresstest nam de MongoDB database ongeveer 4 GB aan geheugen in beslag. Dit zal betekenen dat minstens de overige 3 GB aan data al is weggeschreven naar de database en niet langer in het geheugen is opgeslagen. Hieruit valt te concluderen dat MongoDB tijdig de data kan wegschrijven naar de harde schijf zonder dat hierbij de efficiëntie omlaag gaat.
-
+Na het uitvoeren van een aantal langere stresstests ontstaan nog steeds geen problemen. De efficiëntie blijft 100% en het gebruikte geheugen stijgt ook niet. De grootte van de database na de stresstest van 15 minuten was _1.73 GB_. Na de stresstest van 60 minuten was de grootte _6.91 GB_ oftewel (bijna) precies 4 keer zo groot als bij de stresstest van 15 minuten. De groeit van de database lijkt dus lineair te zijn.
 
 ## Machine gebruik tijdens stresstesting
 
@@ -234,14 +235,10 @@ Voorheen had de applicatie bij het afsluiten een aantal seconden (oplopend tot m
 
 Omdat een non-relationele database als Mongo DB gemaakt is voor grote datasets, is het schalen van deze database dan ook zeer eenvoudig. Wanneer de data blijft groeien, kan het voorkomen dat een enkele machine niet meer voldoende is voor het verwerken van de data. Dit wordt opgelost met een techniek die __Sharding__ (of 'horizontaal schalen') heet. Hiermee worden de werklast en datasets verdeeld over meerdere machines ('shards'), waardoor de database horizontaal schaalt.
 
-..
-
-```
 Zie: http://docs.mongodb.org/master/MongoDB-sharding-guide.pdf
 
-- Toelichten schaalbaarheid, clusters en database grootte na 1 jaar
-- Twee uur draaien? Kijken of de database lineair groeit?
+## Conclusie
 
-- Toelichten MongoDB (hoofstuk Database)
-- Bij stresstest resultaten ook de te hoge efficiëntie toelichten
-```
+Met het gebruik van MongoDB als database kan het doel van het verwerken van de meetgegevens van 8000+ weerstations makkelijk gehaald worden. Omdat de vorige versie van de applicatie al de 8000+ weerstations kon verwerken was er minimaal werk nodig om deze geschikt te maken voor gebruik van MongoDB. Ook de database zelf schaalt goed mee; zoals uit de stresstests is gebleken schaalt de datbase lineair mee over langere periode van verwerken van meetgegevens.
+
+Na een stresstest van een uur was ongeveer 8 GB aan data opgeslagen in de database. Als we uit gaan van de lineaire stijging in database opslag zoals geconstateerd bij de stresstests dan betekent dit dat elk jaar bijna 60 TB aan data wordt opgeslagen. Het opslaan van de meetgegevens van 8000+ weerstations per seconde is mogelijk excessief. Gekeken zou kunnen worden naar het samenvoegen van data na een bepaalde periode of het opslaan van de meetgegevens in een lagere frequentie.
