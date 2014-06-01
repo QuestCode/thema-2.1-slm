@@ -241,4 +241,7 @@ Zie: http://docs.mongodb.org/master/MongoDB-sharding-guide.pdf
 
 - Toelichten schaalbaarheid, clusters en database grootte na 1 jaar
 - Twee uur draaien? Kijken of de database lineair groeit?
+
+- Toelichten MongoDB (hoofstuk Database)
+- Bij stresstest resultaten ook de te hoge efficiëntie toelichten
 ```
