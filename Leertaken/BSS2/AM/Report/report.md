@@ -103,11 +103,11 @@ Voor opslag van de gegevens is er gekozen voor de meest bekende non-relationele 
 
 De opdracht verbiedt het gebruik van een relationele database. Hierdoor is er gekeken naar de mogelijke alternatieven. De twee voornaamste alternatieven zijn non-relationele databases en flat-file databases.
 
-..
+Flat-file databases lastig schalen, omdat deze logica zelf ingebouwd moet worden. Bijvoorbeeld als een bestand een bepaalde grootte (bijvoorbeeld 4 gigabyte) overschrijdt, kan er worden gekozen om in een nieuw bestand te schrijven. Omdat hierbij zelf de functionaliteit voor schaling van de database moet worden voorzien, is een non-relationele database in dit geval een betere optie.
 
-```
-- Toelichting MongoDB
-```
+Het meest bekende en doorontwikkelde non-relationele database is [MongoDB](http://www.mongodb.com/). Dit is een zogeheten "document based" database, wat inhoudt dat objecten in een document (collectie) worden opgeslagen. Dit in tegenstelling tot een relationele database, die met tabellen, kolommen, en rijen werkt. MongoDB is eenvoudig op te zetten, makkelijk in gebruik, en wordt goed ondersteund (in de vorm van driver beschikbaarheid). Dit maakt het vervangen van de MySQL database een stuk eenvoudiger.
+
+Deze database is ontwikkeld met "Big Data" in gedachte, waardoor schaalbaarheid door middel van clusters heel eenvoudig op te zetten is. Ook dit aspect is meegenomen in de keuze voor MongoDB. Omdat deze database gemaakt is voor het verwerken van veel data, sluit hij goed aan op de wens is daarmee een zeer geschikte vervanger voor MySQL.
 
 ---
 
