@@ -8,18 +8,14 @@ import com.mongodb.DBCollection;
 import com.mongodb.MongoClient;
 
 import java.net.UnknownHostException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.Statement;
-import java.util.Set;
 
 public class MongoDatabaseConnection {
-    private static final String hostname = "localhost";
+    private static final String hostname = "10.0.1.220";
     private static final int port = 27017;
 
     private static final Boolean verifySTN = true;
 
-    private DB db;
+    private DB two;
     private DBCollection stations;
     private DBCollection measurements;
 
@@ -34,16 +30,16 @@ public class MongoDatabaseConnection {
         try{
             MongoClient mongoClient = new MongoClient(hostname, port);
 
-            db = mongoClient.getDB("UNWDMI");
+            two = mongoClient.getDB("UNWDMI");
 
-            this.stations = db.getCollection("stations");
-            this.measurements = db.getCollection("measurements");
+            this.stations = two.getCollection("stations");
+            this.measurements = two.getCollection("measurements");
         } catch (UnknownHostException e){
             System.out.println("Could not connect to MongoDB on " + hostname + ":" + port);
         }
 
         this.counter = counter;
-        if(this.stations != null && this.measurements != null && this.db != null){
+        if(this.stations != null && this.measurements != null && this.two != null){
             System.out.println("Database connection to " + hostname + ":" + port + " established.");
         }
     }
