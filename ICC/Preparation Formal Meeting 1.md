@@ -91,3 +91,17 @@ Tip for Maurits: Speak clearly and not to fast!
 	- The next meeting (in 3 weeks)
 - Exchange business cards
 - "I thank you for your time."
+- "Have a nice day, and enjoy the weather!"
+
+### Notes after final rehearsel
+
+Awkward momenten op begin (andre moet deur openhouden) en einde
+Interview opdelen in technisch (data formaat, availability, integrity, exclusivity) en service gedeelte (handleiding, beschikbaarheid, tijden, website?)
+Vaker samenvatten
+Niet te gauw tevreden
+Hints oppikken (technische achtergrond/kennis)
+Wanneer klaar
+Hou contact onderhouden, hoe/wanneer/hoe laat bereikbaar
+U kunt ons altijd contacteren + visitekaartjes geven
+Exacte datum voorstullen bij pick dates
+"If you don't mind my asking.."
