@@ -11,6 +11,9 @@
 
 1. Opening
 
+- Introduction Davinci Data
+
+- Introduction University
 
 
 2. Confirmation of the agenda
@@ -21,11 +24,32 @@
 
 
 
-4. Interview
+4. Goal?
 
 
 
-5. Any other business
+5. Technical
+
+- Useful data
+
+- Country/regions?
+
+- Users
+
+- Data frequency (second/minute/hour)
+
+- Data correction
+
+- Representing
+
+6. Recap wishes
+
+
+
+7. Agreements
+
+
+8. Any other business
 
 
 
