@@ -15,7 +15,7 @@ public class MongoDatabaseConnection {
 
     private static final Boolean verifySTN = true;
 
-    private DB two;
+    private DB db;
     private DBCollection stations;
     private DBCollection measurements;
 
@@ -30,16 +30,16 @@ public class MongoDatabaseConnection {
         try{
             MongoClient mongoClient = new MongoClient(hostname, port);
 
-            two = mongoClient.getDB("UNWDMI");
+            db = mongoClient.getDB("two");
 
-            this.stations = two.getCollection("stations");
-            this.measurements = two.getCollection("measurements");
+            this.stations = db.getCollection("stations");
+            this.measurements = db.getCollection("measurements");
         } catch (UnknownHostException e){
             System.out.println("Could not connect to MongoDB on " + hostname + ":" + port);
         }
 
         this.counter = counter;
-        if(this.stations != null && this.measurements != null && this.two != null){
+        if(this.stations != null && this.measurements != null && this.db != null){
             System.out.println("Database connection to " + hostname + ":" + port + " established.");
         }
     }
