@@ -44,3 +44,50 @@ Stadman: Chancellor Stadman
 - Hoogeweg, Yuri Senior Development & Maintenance
 - Wind, Markus Junior Data Acquisition
 
+
+
+
+
+# Procedure
+
+### Pre meeting
+
+Tip for Maurits: Speak clearly and not to fast!
+
+- Pick up from main hall
+- Tour?
+- Have a seat
+- Do you want coffee/tea
+- Did you have a good trip? (smalltalk)
+- Any trouble finding this place?
+- Have you ever been to the Netherlands before?
+- Have you been able to do some sightseeing yet? (hand brochures)
+
+### Meeting
+
+- "Thank you for your kind introduction of Lithuania. I would like to move on to business, if that is ok with you chancellor?"
+- Welcome
+- First of, would you mind telling us something about you and Aleksandro Stulginskio Universtitetas?
+- Tell something about Da Vinci Data as a division of UNWDMI for European customers
+- Interview
+	- What is the reason you have contacted us?
+	- What kind of data do you need? (Certain country/region?)
+	- What do you want to achieve with the data?
+	- How do you want to represent the data?
+	- Who will see these visual representations?
+	- Follow up:
+		- What is the area of measurement?
+		- Historical data required?
+- [Other questions]
+
+### Post meeting
+
+- "I think we have everything we need to get started."
+- Summarize
+- Any further questions?
+- Pick dates for:
+	- Sending the minutes (tomorrow)
+	- Sending the SLA (in 2 weeks)
+	- The next meeting (in 3 weeks)
+- Exchange business cards
+- "I thank you for your time."
