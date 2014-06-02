@@ -42,6 +42,7 @@
 
 - Representing
 
+
 6. Recap wishes
 
 
@@ -53,15 +54,15 @@
 
 
 
-6. Unscheduled questions
+9. Unscheduled questions
 
 
 
-7. Arrangements next meeting
+10. Arrangements next meeting
 
 
 
-8. Closure
+11. Closure
 
 
 ### Next meeting
