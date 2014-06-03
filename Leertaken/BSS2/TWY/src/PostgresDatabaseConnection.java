@@ -7,7 +7,7 @@ import java.sql.DriverManager;
 import java.sql.Statement;
 
 public class PostgresDatabaseConnection {
-    private static final String hostname = "jdbc:postgresql://127.0.0.1:5432/one";
+    private static final String hostname = "jdbc:postgresql://95.85.22.170:5432/one";
     private static final String username = "one";
     private static final String password = "Tr3ll0?";
 

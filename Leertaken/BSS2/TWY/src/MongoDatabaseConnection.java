@@ -8,13 +8,9 @@ import com.mongodb.DBCollection;
 import com.mongodb.MongoClient;
 
 import java.net.UnknownHostException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.Statement;
-import java.util.Set;
 
 public class MongoDatabaseConnection {
-    private static final String hostname = "localhost";
+    private static final String hostname = "127.0.0.1";
     private static final int port = 27017;
 
     private static final Boolean verifySTN = true;
@@ -87,7 +83,8 @@ public class MongoDatabaseConnection {
             messageCorrector.addMessage(message);
 
             // Insert document into mongodb if we have MAX_DOCS_BUFFER amount of messages.
-            measurements.insert(message.getMongoDBObject());
+            BasicDBObject messageDBObject = message.getMongoDBObject();
+            measurements.insert(messageDBObject);
 
         } catch (Exception e){
             System.out.println("Error inserting message: " + e.getMessage());

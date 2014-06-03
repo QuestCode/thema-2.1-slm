@@ -15,12 +15,18 @@
 
 3. Announcements
 
-4. Interview
+4. General information
 
-5. Any other business
+5. Technical
 
-6. Unscheduled questions
+6. Service
 
-7. Arrangements next meeting
+7. Agreements
 
-8. Closure
+8. Any other business
+
+9. Unscheduled questions
+
+10. Arrangements next meeting
+
+11. Closure
