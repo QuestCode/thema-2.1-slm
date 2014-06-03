@@ -11,24 +11,15 @@
 
 1. Opening
 
- * Introduction Davinci Data
-
- * Introduction Aleksandro Stulginskio Universitetas
-
 2. Confirmation of the agenda
 
 3. Announcements
 
-4. Goal?
+4. General information
 
 5. Technical
 
-- Useful data
-- Country/regions?
-- Users
-- Data frequency (second/minute/hour)
-- Data correction
-- Representing
+6. Service
 
 7. Agreements
 
@@ -39,12 +30,3 @@
 10. Arrangements next meeting
 
 11. Closure
-
-
-### Next meeting
-
-Logo on beamer
-
-Better lay-out/format for agenda
-
-Introduction for our companys
