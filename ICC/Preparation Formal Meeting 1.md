@@ -70,14 +70,27 @@ Tip for Maurits: Speak clearly and not to fast!
 - First of, would you mind telling us something about you and Aleksandro Stulginskio Universtitetas?
 - Tell something about Da Vinci Data as a division of UNWDMI for European customers
 - Interview
-	- What is the reason you have contacted us?
-	- What kind of data do you need? (Certain country/region?)
-	- What do you want to achieve with the data?
-	- How do you want to represent the data?
-	- Who will see these visual representations?
-	- Follow up:
-		- What is the area of measurement?
-		- Historical data required?
+	
+	- General
+		- What is the reason you have contacted us?
+		- What kind of data do you need? (Certain country/region?)
+		- What do you want to achieve with the data?
+
+	- Functional
+		- How do you want to represent the data?
+		- Who will see/has access these visual representations?
+		- Follow up:
+			- What is the area of measurement?
+			- Historical data required?
+
+	- Service
+		- Language 
+		- Availability (hours)
+		- Security
+		- Service reports
+		- 
+
+
 - [Other questions]
 
 ### Post meeting
