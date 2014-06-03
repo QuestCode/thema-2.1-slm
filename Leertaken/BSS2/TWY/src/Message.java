@@ -96,7 +96,7 @@ public class Message {
 
     public Boolean isComplete(){
         for(int i = 0; i < this.values.length; i++){
-            if(values[i] == null || this.values[i] == ""){
+            if(values[i] == null || this.values[i] == "" || this.values[i].equals("")){
                 return false;
             }
         }

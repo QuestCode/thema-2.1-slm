@@ -7,11 +7,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="postgresql-9.3-1101.jdbc4 (2)" level="project" />
-    <orderEntry type="library" exported="" name="mongo-java-driver-2.9.3" level="project" />
-    <orderEntry type="library" exported="" name="mongo-java-driver-2.9.3-javadoc" level="application" />
-    <orderEntry type="library" exported="" name="mongo-java-driver-2.12.2" level="project" />
-    <orderEntry type="library" exported="" name="Database Drivers" level="project" />
+    <orderEntry type="library" name="Database Drivers" level="project" />
   </component>
 </module>
 
