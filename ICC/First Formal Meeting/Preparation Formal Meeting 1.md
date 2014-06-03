@@ -67,10 +67,10 @@ Tip for Maurits: Speak clearly and not to fast!
 
 - "Thank you for your kind introduction of Lithuania. I would like to move on to business, if that is ok with you chancellor?"
 - Welcome
-- First of, would you mind telling us something about you and Aleksandro Stulginskio Universtitetas?
 - Tell something about Da Vinci Data as a division of UNWDMI for European customers
+- Would you mind telling us something about you and Aleksandro Stulginskio Universtitetas?
 - Interview
-	
+
 	- General
 		- What is the reason you have contacted us?
 		- What kind of data do you need? (Certain country/region?)
@@ -84,12 +84,11 @@ Tip for Maurits: Speak clearly and not to fast!
 			- Historical data required?
 
 	- Service
-		- Language 
+		- Language
 		- Availability (hours)
-		- Security
+		- Security (integrity, exclusivity)
 		- Service reports
-		- 
-
+		- Usage manual?
 
 - [Other questions]
 
@@ -99,12 +98,18 @@ Tip for Maurits: Speak clearly and not to fast!
 - Summarize
 - Any further questions?
 - Pick dates for:
+	- [Suggest exact dates]
 	- Sending the minutes (tomorrow)
 	- Sending the SLA (in 2 weeks)
 	- The next meeting (in 3 weeks)
+- How to stay in touch (when and at what times available)
 - Exchange business cards
 - "I thank you for your time."
 - "Have a nice day, and enjoy the weather!"
+
+
+
+
 
 ### Notes after final rehearsel
 
