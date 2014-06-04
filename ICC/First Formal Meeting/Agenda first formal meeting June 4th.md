@@ -6,6 +6,16 @@
 > * Chair: Maurits van Mastrigt
 > * Secretary: Yuri Hoogeweg
 
+## Attendees
+
+| Da Vinci Data               | Aleksandro Stulginskio Universtitetas |
+| :-------------------------- | :----------                           |
+| Mr. van Mastrigt            | Chancellor Stadman                    |
+| Mr. Nanninga                | and associate(s)                      |
+| Mr. Holthof                 |                                       |
+| Mr. Hoogeweg                |                                       |
+| Mr. Broenink                |                                       |
+| Mr. Wind                    |                                       |
 
 ## Items
 
