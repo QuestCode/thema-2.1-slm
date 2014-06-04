@@ -1,4 +1,4 @@
-#Formal Meeting 1:
+# Formal Meeting 1:
 
 Zelf doen vóór de meeting:
 - Lees het complete ICC document, leertaak 5, en de casus!
@@ -58,37 +58,57 @@ Tip for Maurits: Speak clearly and not to fast!
 - Tour?
 - Have a seat
 - Do you want coffee/tea
-- Did you have a good trip? (smalltalk)
-- Any trouble finding this place?
-- Have you ever been to the Netherlands before?
-- Have you been able to do some sightseeing yet? (hand brochures)
 
 ### Meeting
 
-- "Thank you for your kind introduction of Lithuania. I would like to move on to business, if that is ok with you chancellor?"
 - Welcome
-- Tell something about Da Vinci Data as a division of UNWDMI for European customers
-- Would you mind telling us something about you and Aleksandro Stulginskio Universtitetas?
-- Interview
 
-	- General
+	1. Opening
+
+		- Did you have a good trip? (smalltalk)
+		- Any trouble finding this place?
+		- Have you ever been to the Netherlands before?
+		- Have you been able to do some sightseeing yet? (hand brochures)
+
+		- Tell something about Da Vinci Data as a division of UNWDMI for European customers
+		- Would you mind telling us something about you and Aleksandro Stulginskio Universtitetas?
+		- "Thank you for your kind introduction of Lithuania. I would like to move on to business, if that is ok with you chancellor?"
+
+	2. Confirmation of the agenda
+
+	3. Announcements
+
+	4. General information
+
 		- What is the reason you have contacted us?
 		- What kind of data do you need? (Certain country/region?)
 		- What do you want to achieve with the data?
 
-	- Functional
+	5. Technical
+
 		- How do you want to represent the data?
 		- Who will see/has access these visual representations?
 		- Follow up:
 			- What is the area of measurement?
 			- Historical data required?
 
-	- Service
+	6. Service
+
 		- Language
-		- Availability (hours)
+		- Availability (usage and peek hours)
 		- Security (integrity, exclusivity)
 		- Service reports
 		- Usage manual?
+
+	7. Agreements
+
+	8. Any other business
+
+	9. Unscheduled questions
+
+	10. Arrangements next meeting
+
+	11. Closure
 
 - [Other questions]
 
