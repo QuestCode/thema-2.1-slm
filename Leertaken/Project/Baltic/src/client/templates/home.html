@@ -1,0 +1,30 @@
+<template name="home">
+	<div class="container-fluid well">
+		<h1>Weather stations near Vilnius, Lithuania</h1>
+		<button id="search" class="btn" data-km="50">50KM</button>
+		<button id="search" class="btn" data-km="100">100KM</button>
+		<button id="search" class="btn" data-km="150">150KM</button>
+		<button id="search" class="btn" data-km="200">200KM</button>
+		<button id="search" class="btn" data-km="500">500KM</button>
+		<button id="search" class="btn" data-km="1000">1000KM</button>
+		<button id="search" class="btn" data-km="1500">1500KM</button>
+		<table class="table">
+			<thead>
+				<tr>
+					<th width="15%">Stationnumber</th>
+					<th width="40%">Name</th>
+					<th>Country</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each getNearbyStations}}
+					<tr>
+						<td>{{stn}}</td>
+						<td>{{name}}</td>
+						<td>{{country}}</td>
+					</tr>
+				{{/each}}
+			</tbody>
+		</table>
+	</div>
+</template>
