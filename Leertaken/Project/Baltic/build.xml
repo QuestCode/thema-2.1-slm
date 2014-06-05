@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<project name="Baltic" default="run">
+
+	<target name="run">
+		<exec executable="vagrant">
+			<arg value="up"/>
+		</exec>
+		<exec executable="vagrant">
+			<arg value="ssh"/>
+			<arg line="-- /vagrant/run.sh"/>
+		</exec>
+	</target>
+
+</project>
