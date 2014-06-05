@@ -1,20 +1,50 @@
-# Minutes Meeting 04-06-2014
+# Minutes
+
+> * Date: June 4th 2014
+> * Time: 09.30 AM (CEST)
+> * Venue: Van Doorenveste, room H150
+> * Chair: Maurits van Mastrigt
+> * Secretary: Yuri Hoogeweg
+
+## Attendees
+
+### Aleksandro Stulginskio Universtitetas
+Mr. Stadman (Chancellor)
+Ms. Wempe (Actinv vice Chancellor)
+
+### Da Vinci Data
+Mr. van Mastrigt (CEO)
+Mr. Nanninga (Senior Data Acquisition)
+Mr. Holthof (Senior ICT Services)
+Mr. Hoogeweg (Senior Development & Maintenance)
+Mr. Broenink (Junior Development & Maintenance)
 
 ## Announcements
 Markus Wind was absent due to illess.
 
 ## General information
-Aleksandro Stulginskio Universitetas will perform calculations on weather data to conduct research on climate change. The university is interested in climate change in Lithuania and other countries around the Baltic Sea.
+Aleksandro Stulginskio Universitetas will perform calculations on weather data to conduct research on climate change. The university is interested in climate change in Lithuania and other countries around the Baltic Sea. The university is especially interested in weather changes regarding the milder weather in the past years.
 
 Would like 'sleet' measurements.
 
 Interested in the following measurements:
+
 - Wind speed
 - Rain fall
 - Temperature
 - Humidity
 
-Countries: 'Lithuania, Denmark, Germany, Poland, Kalingrad (Russia), Estonia, Latvia, Finland, Sweden.'
+Relevant countries:
+
+- Lithuania
+- Denmark
+- Germany
+- Poland
+- Kalingrad (Russia)
+- Estonia
+- Latvia
+- Finland
+- Sweden
 
 Want a view to display the top 10 of weather stations by highest average wind speed.
 
@@ -30,20 +60,22 @@ Be able to show a graph of temperature and humidity of any individual weathersta
 
 #### Key requirements
 - Cockpit-like graphical presentation, no 'boring' tables.
-- History of data by days, weeks and months. 
+- History of data by days, weeks and months.
 - Half a year (6 months) data retention.
-- Support Internet Explorer 11 and Google Chrome.
-- We host data and webapp.
+- Support Google Chrome and latest version of Internet Explorer.
+- Data and webinteface will be hosted by Da Vinci Data.
 - Map with colour code for wind speed and temperature values.
 - Authenticate using username and password, no specific user roles.
 - Allow for data to be downloaded in Excel file for the past half a year in days/weeks/months.
 - ONLY measurements per minute.
 - SSL to secure safe data transport.
 
+---
+
 ## Service
 
 #### Security
-- Customer will not store username and password locally.
+- Users will not store usernames or passwords locally.
 - 50 users, no segregation in privileges.
 
 #### Availability
@@ -64,7 +96,7 @@ Three different levels of availability:
 - Query 3: 1 minute.
 
 #### Language
-The entire interface and data will be in English.
+The interface and data will be in English. No need for Lithuanian translations due to the many international students at the university.
 
 #### Reporting
 Monthly service reports.
@@ -81,17 +113,19 @@ Initially, one-year contract with a half year draft period. Possibility of incre
 
 ## Agreements
 
-1. Email minutes
-2. Email suggestion and representations for type of graphs
+- Email minutes
+- Email suggestion and representations for type of graphs
 
 ## Any other business
-none
+
+There were no other points to discuss.
 
 ## Unscheduled business
-none
+
+There were no other points to discuss.
 
 ## Arrangements next meeting
-- Minutes will be sent within 2 working days by email in PDF or Word format.
-- Next meeting will be on the 26th of June.
-- We will have a fully working application for the next meeting.
-- Can email Chancellor Stadman and Acting Vice Chancellor Wempe 24/7 for questions.
+- Minutes will be sent within 2 working days by email in PDF or Word format;
+- Next meeting will be on the 26th of June;
+- We will have a fully working application for the next meeting;
+- We can email Chancellor Stadman or Acting Vice Chancellor Wempe if any questions arise.
