@@ -1,13 +1,16 @@
 if (Meteor.isClient) {
+  Session.set('greeting', 'Welcome to src.')
+
   Template.hello.greeting = function () {
-    return "Welcome to src.";
+    return Session.get('greeting');
   };
 
   Template.hello.events({
     'click input': function () {
       // template data, if any, is available in 'this'
       if (typeof console !== 'undefined')
-        console.log("You pressed the button");
+
+        Session.set('greeting', "You pressed the button");
     }
   });
 }

@@ -1,2 +1,5 @@
 .vagrant/
-.meteor/
+src/.meteor/
+src/packages/
+
+src/smart.lock
