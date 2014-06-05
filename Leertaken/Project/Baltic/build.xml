@@ -17,6 +17,29 @@
 		</exec>
 	</target>
 
+	<target name="db:setup">
+		<exec executable="vagrant">
+			<arg value="ssh" />
+			<arg line="-- mongo meteor /vagrant/resources/db.setup.js" />
+		</exec>
+
+		<exec executable="mongoimport">
+			<arg line="--db meteor" />
+			<arg line="--collection stations" />
+			<arg line="--type json" />
+			<arg line="--file resources/stations.json" />
+			<arg line="--jsonArray" />
+		</exec>
+	</target>
+
+	<target name="db:reset">
+		<exec executable="vagrant">
+			<arg value="ssh" />
+			<arg line="-- mongo meteor /vagrant/resources/db.reset.js" />
+		</exec>
+		<antcall target="db:setup"/>
+	</target>
+
 	<target name="generate">
 		<delete file="${dir.geo}/baltic.json"/>
 
@@ -78,5 +101,4 @@
 
 
 	</target>
-
 </project>
