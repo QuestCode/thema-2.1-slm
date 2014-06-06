@@ -1,14 +1,14 @@
-#Algemeen
+# Algemeen
 
-##Partijen
+## Partijen
 
 Deze Service Level Agreement (verder te noemen: SLA) is een overeenkomst die is gesloten tussen:
 
-Afdeling ICT van Team4s, Delftsestraat 5b, 3013 AB Rotterdam, geregistreerd bij de Kamer van Koophandel in Rotterdam onder nummer 24404163, hierna te noemen Afdeling ICT.
-Opdrachtgever van de afdeling ICT en afnemer van de diensten is Team4s, hierna te noemen Opdrachtgever.
-Klant van de afdeling ICT en gebruikers van de diensten zijn de medewerkers van Team4s, hierna te noemen Gebruiker(s).
+Afdeling ICT van uitzendbureau Team4s hierna te noemen Afdeling ICT.
+Opdrachtgever van de afdeling ICT en afnemer van de diensten is uitzendbureau Team4s, hierna te noemen Opdrachtgever.
+Klant van de afdeling ICT en gebruikers van de diensten zijn de medewerkers van uitzendbureau Team4s, hierna te noemen Gebruiker(s).
 
-##Inleiding
+## Inleiding
 
 Dit Service Level Agreement (SLA) is van toepassing op alle door Team4s afgesloten CLOUD-overeenkomsten, en beschrijft de algemene voorwaarden waaronder de afdeling ICT de CLOUD-dienstverlening uitvoert.
 
