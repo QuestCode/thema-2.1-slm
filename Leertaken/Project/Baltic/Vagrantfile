@@ -46,5 +46,5 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     v.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]
   end
 
-  config.vm.provision "shell", path: "setup.sh"
+  config.vm.provision "shell", path: "scripts/setup.sh"
 end
