@@ -1,4 +1,4 @@
-##Beschrijving van de Service
+## Beschrijving van de Service
 
 De opdrachtgever wil graag data in de CLOUD opslaan om deze zodoende makkelijk bereikbaar te maken voor alle medewerkers (KLANT). Data in de CLOUD moet beschikbaar zijn voor medewerkers die daar rechten toe hebben en moet voor hen inzichtelijk zijn en bewerkt kunnen worden. Ook moet er nieuwe data toegevoegd kunnen worden en data verwijdert kunnen worden.
 
