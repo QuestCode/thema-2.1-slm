@@ -10,10 +10,10 @@ import com.mongodb.MongoClient;
 import java.net.UnknownHostException;
 
 public class MongoDatabaseConnection {
-    private static final String hostname = "10.0.1.220";
+    private static final String hostname = "127.0.0.1";
     private static final int port = 27017;
 
-    private static final Boolean verifySTN = true;
+    private static final Boolean verifySTN = false;
 
     private DB db;
     private DBCollection stations;
@@ -30,7 +30,7 @@ public class MongoDatabaseConnection {
         try{
             MongoClient mongoClient = new MongoClient(hostname, port);
 
-            db = mongoClient.getDB("two");
+            db = mongoClient.getDB("UNWDMI");
 
             this.stations = db.getCollection("stations");
             this.measurements = db.getCollection("measurements");
