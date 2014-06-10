@@ -3,23 +3,20 @@
 ## Rollen en Verantwoordelijkheden
 
 ### Definitie rol Service Level Manager
-De rol van de Service Level Manager is het overzicht geven in de diensten die de klant vereist. Ook moet de Service Level Manager een Service Level Agreement definiëren. Na het definiëren en opzetten van het SLA zal de Service Level Manager ook de voortgang en (al dan niet behaalde) KPI's van het SLA bijhouden. De Service Level Manager zal de resultaten van deze activiteiten rapporteren aan de klant.
+De rol van de Service Level Manager is het overzicht geven in de diensten die de klant vereist. Ook moet de Service Level Manager een Service Level Agreement definiëren en streven naar het volledig voldoen aan alle eisen in dit SLA. Na het definiëren en opzetten van het SLA zal de Service Level Manager ook de voortgang en (al dan niet behaalde) KPI's van het SLA bijhouden. De Service Level Manager zal de resultaten van deze activiteiten rapporteren aan de klant.
 
 ### Verantwoordelijkheden van de Service Level Manager
 - Rapporteren aan Order Manager.
 
 - Communiceren met:
-- Change Manager
+- Change Manager  
+> - Change requests kunnen verminderde stabiliteit in de services veroorzaken.
 
-> Change requests kunnen verminderde stabiliteit in de services veroorzaken.
+- Problem Manager  
+> - Problems moeten zo snel mogelijk worden geïdentificeerd en geanalyseerd zodat de service doelen kunnen worden behaald.
 
-- Problem Manager
-
-> Problems moeten zo snel mogelijk worden geïdentificeerd en geanalyseerd zodat de service doelen kunnen worden behaald.
-
-- Incident Manager
-
-> Incidenten moeten binnen de normen de gedefinieerd zijn in het SLA worden opgelost.
+- Incident Manager  
+> - Incidenten moeten binnen de normen de gedefinieerd zijn in het SLA worden opgelost.
 
 ## Doelen
 - Overzicht krijgen van de wensen van de klant.
