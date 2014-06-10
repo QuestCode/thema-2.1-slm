@@ -18,4 +18,10 @@ De door de ICT aangeboden CLOUD-dienstverlening bestaat uit het ter beschikking 
 
 Bij aanvang van de CLOUD-dienstverlening sluiten de ICT en Team4s een CLOUD-overeenkomst af, waarin is beschreven onder welke voorwaarden de CLOUD-dienstverlening voor opdrachtgever wordt uitgevoerd. In deze CLOUD-overeenkomst kunnen bepalingen uit dit SLA specifiek voor opdrachtgever worden aangepast; bepalingen in de CLOUD-overeenkomst prevaleren daarom boven bepalingen in dit SLA.
 
-De service moet 24/7 beschikbaar zijn zodat er op elk willekeurig tijdstip data opgevraagd kan worden.
+Een aantal eisen van de service zijn:
+* Data is vertrouwelijk. Deze moet veilig worden opgeslagen.
+* Data moet inzichtelijk zijn voor applicaties en wellicht bewerkt kunnen worden door applicaties.
+* Data moet in nederland worden opgeslagen bij een betrouwbare partij met een hoge beschikbaarheid.
+* Beveiliging is belangrijk (zeer vertrouwelijke data).
+* 200 mobiele medewerkers, zitten vaak bij de klant. Data moet altijd beschikbaar zijn.
+* Overstappen naar de cloud moet zo snel mogelijk gerealiseerd worden.

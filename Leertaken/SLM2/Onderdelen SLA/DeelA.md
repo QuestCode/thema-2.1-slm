@@ -14,3 +14,5 @@ Ten behoeve van de operationele ondersteuning van de CLOUD-programmatuur levert 
 * De voor implementatie van de CLOUD-programmatuur benodigde diensten, zoals vooronderzoek, projectleiding, inrichting, functioneel en technisch ontwerp, programmering, testen, opleiding en klantbegeleiding.
 * Operationele ondersteuning, te weten klantbegeleiding en eerstelijns en tweedelijns helpdeskondersteuning.
 * Inrichting hardware en systeemsoftware bij opdrachtgever, indien dit in de CLOUD-overeenkomst expliciet is vermeld.
+
+De service moet 24/7 beschikbaar zijn zodat er op elk willekeurig tijdstip data opgevraagd kan worden.
