@@ -41,8 +41,20 @@ The service provider supports the services that are in scope, and defines who th
 
 ### Customer
 
-Description of the customers, attributes, and structure.
+Hier moet duidelijk gemaakt worden wie de klant precies is.
+Het kan handig zijn om aan te geven welke mensen van de klant een rol spelen, en wat hun functie is (denk aan helpdesk-medewerkers, managers etc.).
+Ook moet er een duidelijk onderscheid gemaakt worden tussen de klant en de gebruikers. Een klant hoeft immers geen gebruiker te zijn.
+Kortom: een duidelijk overzicht wíe de klant is, en wat zijn rol is in de beschreven service(s).
 
 ### Services
 
-A high-level view of the services that are ultimately in scope for SLM.
+Een specifieke omschrijving van de services.
+Hier kun je een simpel tabelletje voor gebruiken:
+
+(VOORBEELD)<br><br>
+<b>Service tower - Description and options</b><br>
+Managed application - Enterprise, department<br>
+Network - Internet, WAN, LAN, remote acces<br>
+Service desk - Helpdesk, service request management, interactive voice response<br>
+
+Service Tower is een zogenaamde categorie van services. Descriptions and options spreekt voor zich.
