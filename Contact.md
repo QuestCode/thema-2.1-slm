@@ -22,9 +22,3 @@ Skype: spirit3775
 Tel: 06 105 73 692  
 Email: maurits@vanmastrigt.nl  
 Skype: maurits_van_mastrigt
-
-### Markus Wind
-Tel: 06 302 597 61
-Email: markuswind@gmail.com
-Skype: -
-
