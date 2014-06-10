@@ -10,8 +10,10 @@ Klant van de afdeling ICT en gebruikers van de diensten zijn de medewerkers van 
 
 ## Inleiding
 
-Dit Service Level Agreement (SLA) is van toepassing op alle door Team4s afgesloten CLOUD-overeenkomsten, en beschrijft de algemene voorwaarden waaronder de afdeling ICT de CLOUD-dienstverlening uitvoert.
+Dit Service Level Agreement (SLA) is van toepassing op de service CLOUD en de hierbij horende dienstverlening.
 
-De door de afdeling ICT aangeboden CLOUD-dienstverlening bestaat uit het ter beschikking stellen van hardware, infrastructuur en software om opdrachtgever in staat te stellen via internet met CLOUD-programmatuur te werkenen uit de implementatie en operationele ondersteuning van deze CLOUD-programmatuur.
+Dit SLA is van toepassing op alle door Team4s afgesloten CLOUD-overeenkomsten, en beschrijft de algemene voorwaarden waaronder de afdeling ICT de CLOUD-dienstverlening uitvoert.
+
+De door de afdeling ICT aangeboden CLOUD-dienstverlening bestaat uit het ter beschikking stellen van hardware, infrastructuur en software om opdrachtgever in staat te stellen via de CLOUD-programmatuur data te benaderen en op te slaan om te werkenen uit de implementatie en operationele ondersteuning van deze CLOUD-programmatuur.
 
 Bij aanvang van de CLOUD-dienstverlening sluiten de afdeling ICT en Team4s een CLOUD-overeenkomst af, waarin is beschreven onder welke voorwaarden de CLOUD-dienstverlening voor opdrachtgever wordt uitgevoerd. In deze CLOUD-overeenkomst kunnen bepalingen uit dit SLA specifiek voor opdrachtgever worden aangepast; bepalingen in de CLOUD-overeenkomst prevaleren daarom boven bepalingen in dit SLA.
