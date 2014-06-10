@@ -1,5 +1,6 @@
 # Algemeen
 
+
 ## Partijen
 
 Deze Service Level Agreement (verder te noemen: SLA) is een overeenkomst die is gesloten tussen:
@@ -7,6 +8,7 @@ Deze Service Level Agreement (verder te noemen: SLA) is een overeenkomst die is 
 Afdeling ICT van uitzendbureau Team4s hierna te noemen ICT.
 Opdrachtgever van de afdeling ICT en afnemer van de diensten is uitzendbureau Team4s, hierna te noemen Opdrachtgever.
 Klant van de afdeling ICT en gebruikers van de diensten zijn de medewerkers van uitzendbureau Team4s, hierna te noemen Gebruiker(s).
+
 
 ## Inleiding
 
@@ -25,3 +27,39 @@ Een aantal eisen van de service zijn:
 * Beveiliging is belangrijk (zeer vertrouwelijke data).
 * 200 mobiele medewerkers, zitten vaak bij de klant. Data moet altijd beschikbaar zijn.
 * Overstappen naar de cloud moet zo snel mogelijk gerealiseerd worden.
+
+
+## Prioriteitenbepaling
+
+De volgende prioriteiten bepaling wordt gebruikt om ...
+
+### Urgentie bepaling
+| Urgentie                         | Niveau     |
+| -------------------------------- | ---------- |
+| Het werkproces is niet gehinderd | Laag       |
+| Het werkproces is gehinderd      | Gemiddeld  |
+| Het werkproces ligt stil         | Hoog       |
+
+### Impact bepaling
+| Impact                                   | Niveau     |
+| ---------------------------------------  | ---------- |
+| Het incident betreft één gebruiker       | Laag       |
+| Het incident betreft meerdere gebruikers | Gemiddeld  |
+| Het incident betreft veel gebruikers     | Hoog       |
+
+### Prioriteitentabel
+| Impact / Urgentie      |                     |                          |                     |
+| :--------------------- | ------------------- | ------------------------ | ------------------- |
+| _Impact Hoog_          | 3                   | 2                        | 1                   |
+| _Impact Gemiddeld_     | 4                   | 3                        | 2                   |
+| _Impact Laag_          | 5                   | 4                        | 3                   |
+|                        | _Urgentie laag_     | _Urgentie Gemiddeld_     | _Urgentie Hoog_     |
+
+### Reactietijd
+| Prioriteit   | Reactiteit       | Planning (Doorlooptijd)   |
+| ------------ | ------------     | ------------------------- |
+| 1            | Binnen _ minuten | Binnen _ uur              |
+| 2            | Binnen _ minuten | Binnen _ uur              |
+| 3            | Binnen _ minuten | Binnen _ uur              |
+| 4            | Binnen _ uur     | Binnen _ werkdagen        |
+| 5            | Binnen _ uur     | Binnen _ werkdagen        |
