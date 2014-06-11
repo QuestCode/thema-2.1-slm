@@ -27,7 +27,7 @@ Service document is simple, executive summary answering these questions with cle
 
 ### Customization degree
 
-The degree to which the service provider will allow service customization per customer is important to decide an d define in the service structure document.
+The degree to which the service provider will allow service customization per customer is important to decide and define in the service structure document.
 
 ## Key chapters
 
@@ -35,9 +35,21 @@ The degree to which the service provider will allow service customization per cu
 
 Answer key questions about the organizational strategy and objectives for implementing service-based management.
 
+This section should capture key objectives, limitations, assumptions, and requirements of the organization on the way that services are defined,
+
+- Service scope, descibe level of detail of service documentation (which determines the level of reporting, cost analysis, and charges)
+- Financial implications, organizational limitations or requirements of how services can be defined
+- Cost of accounting, with al service decicions - from metrics and reporting to cost and chargeback - there is a cost of reporting
+- Service measurement and reporting, how to report in a meaningful way (tools and processes in place to support this)
+- Budgets and funding, does the organization plan to invest in developing a programme or in supporting efforts in a business in a usual manner?
+- How many services, services that will be implemented in the near and long term
+- Customer incentives, behaviours that need to be changed (through charging models, service design, etc.) - such as influencing employees to use more self-service tools rather than call the (costly) helpdesk with simple questions
+
 ### Service provider
 
 The service provider supports the services that are in scope, and defines who they are, what they are responsible for, interactions, work methods, and structure.
+
+
 
 ### Customer
 
