@@ -2,6 +2,7 @@
 
 De opdrachtgever wil graag data in de cloud opslaan om deze zodoende makkelijk bereikbaar te maken voor alle medewerkers (KLANT). Data in de cloud moet beschikbaar zijn voor medewerkers die daar rechten toe hebben en moet voor hen inzichtelijk zijn en bewerkt kunnen worden. Ook moet er nieuwe data toegevoegd kunnen worden en data verwijdert kunnen worden.
 
+### Eisen opdrachtgever
 Een aantal van de eisen aan deze dienst zijn:
 * Data is vertrouwelijk. Deze moet veilig worden opgeslagen
 * Data moet inzichtelijk zijn voor applicaties en wellicht bewerkt kunnen worden door applicaties
@@ -10,6 +11,8 @@ Een aantal van de eisen aan deze dienst zijn:
 * 200 medewerkers, heel mobiel, zitten vaak bij de klant. Data moet altijd beschikbaar zijn
 * Overstappen naar de cloud moet zo snel mogelijk gerealiseerd worden
 
+
+### Beloften ICT
 De ICT zal ervoor instaan dat de service voldoet aan de volgende eisen:
 * De service zal 24/7 beschikbaar zijn zodat er op elk willekeurig tijdstip data opgevraagd kan worden.
 * Data zal worden opgeslagen in een raid configuratie zodat de data altijd veilig staat
@@ -19,6 +22,7 @@ De ICT zal ervoor instaan dat de service voldoet aan de volgende eisen:
 * De data zal bereikbaar zijn voor interne applicaties door gebruik te maken van een beveiligings certificaat en een ssl beveiligde verbinding.
 
 
+### Diensten
 De ICT heeft de volgende cloud-faciliteiten in eigendom en stelt deze ter beschikking om opdrachtgever in staat te stellen via internet met de in de cloud-overeenkomst aangegeven cloud-programmatuur te werken:
 
 * Een cloud-server met bijbehorende systeemprogrammatuur.
