@@ -1,3 +1,5 @@
+# Cloud customer service
+
 ## Critical Success Factors
 
 * Data moet 24/7 beschikbaar zijn voor de gebruikers.
@@ -9,10 +11,10 @@
 
 ### Data moet 24/7 beschikbaar zijn voor alle gebruikers.
 
-| Meeteenheid             | Bron                           |
-| :----------             | :---                           |
-| Uptime van de service   | Gemeten uptime van de service. |
-| Uptime tijdens piekuren | Gemeten uptime van de service. |
+| Meeteenheid                             | Bron                           |
+| :----------                             | :---                           |
+| Uptime van de service.                  | Gemeten uptime van de service. |
+| Uptime van de service tijdens piekuren. | Gemeten uptime van de service. |
 
 ### Data moet overal beschikbaar zijn voor de gebruikers.
 
@@ -31,10 +33,37 @@
 
 ### Beveiliging van de data.
 
-| Meeteenheid                               | Bron                                                                                         |
-| :----------                               | :---                                                                                         |
-| Aantal server inbraken.                   | Aantal veiligheidsincidenten met betrekking tot service waarbij ingebroken is op de servers. |
-| Het cijfer van een beveiligingsrapportage | Halfjaarlijkse veiligheidsonderzoek door een externe partij.                                 |
+| Meeteenheid                                | Bron                                                                                         |
+| :----------                                | :---                                                                                         |
+| Aantal server inbraken.                    | Aantal veiligheidsincidenten met betrekking tot service waarbij ingebroken is op de servers. |
+| Het cijfer van een beveiligingsrapportage. | Halfjaarlijkse veiligheidsonderzoek door een externe partij.                                 |
 
+# Servicedesk
 
+## Critical Success Factors
 
+* Het tijdig reageren op incidenten.
+* Het tijdig oplossen van incidenten.
+* De beschikbaarheid van de servicedesk.
+
+## Key Performance Indicators
+
+### Het tijdig reageren op incidenten.
+
+| Meeteenheid                                                       | Bron                                                                                 |
+| :----------                                                       | :---                                                                                 |
+| Aantal incidenten die niet tijdig zijn opgepakt.                  | Het aantal incidenten die de afgesproken responsetijd overschrijden.                 |
+| Aantal incidenten tijdens piekuren die niet tijdig zijn opgepakt. | Het aantal incidenten tijdens piekuren die de afgesproken responsetijd overschrijden |
+
+### Het tijdig oplossen van incidenten.
+
+| Meeteenheid                                                       | Bron                                                                              |
+| :----------                                                       | :---                                                                              |
+| Aantal incidenten die niet tijdig zijn opgelost.                  | Het aantal incidenten die de afgesproken oplostijd overschrijden.                 |
+| Aantal incidenten tijdens piekuren die niet tijdig zijn opgelost. | Het aantal incidenten tijdens piekuren die de afgesproken oplostijd overschrijden |
+
+### De beschikbaarheid van de servicedesk.
+
+| Meeteenheid              | Bron                                                  |
+| :----------              | :---                                                  |
+| Aantal service klachten. | Aantal binnengekomen klachten bij de service manager. |
