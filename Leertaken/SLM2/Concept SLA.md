@@ -10,7 +10,7 @@ Algemeen
 	Continuïteit van de cloud-dienstverlening
 	Aansprakelijkheid
 Klantdiensten
-	Definitie
+	Definitie [Yuri]
 		- Cloud hosting (waar de servers staan)
 			+ 200 medewerkers
 			+ Heel mobiel, zitten vaak bij de klant
