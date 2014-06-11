@@ -25,27 +25,20 @@ Gewenste Service Levels
 		- Integriteit
 		- Back-up en restore
 Definitie van Service Levels
-Risicoanalyse
-Capaciteitsplanning
-Kosten
-	Materiële kosten
-	Personeelskosten
-Rapportageverplichtingen
-	Voorbeeld Service Level Rapport
-	Service Review
-
-
-
-
-# Uit voorbeeld
-
 Dienstverlening
 	Systeem- en applicatiebeheer
 	Afhandeling van storingen in de cloud-programmatuur
 	Helpdeskondersteuning
 	Eisen aan infrastructuur opdrachtgever
-Tariefstructuur en condities cloud-overeenkomst
+Risicoanalyse
+Capaciteitsplanning
+Tariefstructuur en condities
 	Algemeen
 	Cloud-maandbedrag en vaststelling aantal users
 	Implementatiebedrag
+		- Materiële kosten
+		- Personeelskosten
 	Helpdeskondersteuning
+Rapportageverplichtingen
+	Voorbeeld Service Level Rapport
+	Service Review
