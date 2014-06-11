@@ -7,7 +7,7 @@ Deze Service Level Agreement (verder te noemen: SLA) is een overeenkomst die is 
 
 - Afdeling ICT van uitzendbureau Team4S, hierna te noemen 'ICT'.
 - Opdrachtgever van de afdeling ICT en afnemer van de diensten is uitzendbureau Team4S, hierna te noemen 'Opdrachtgever'.
-Klant van de afdeling ICT en gebruikers van de diensten zijn de medewerkers van uitzendbureau Team4S, hierna te noemen 'Gebruiker(s)'.
+- Klant van de afdeling ICT en gebruikers van de diensten zijn de medewerkers van uitzendbureau Team4S, hierna te noemen 'Gebruiker(s)'.
 
 
 ## Inleiding
@@ -31,7 +31,7 @@ Een aantal eisen van de service zijn:
 
 ## Prioriteitenbepaling
 
-De volgende prioriteiten bepaling wordt gebruikt om ...
+De volgende prioriteiten bepaling wordt gebruikt om de reactieteid en afhandeltijd te berekenen. Afhankelijk van het niveau van de dienstverlening kan dit afwijken.
 
 ### Urgentie bepaling
 | Urgentie                         | Niveau     |
@@ -58,8 +58,8 @@ De volgende prioriteiten bepaling wordt gebruikt om ...
 ### Reactietijd
 | Prioriteit   | Reactiteit       | Planning (Doorlooptijd)   |
 | ------------ | ------------     | ------------------------- |
-| 1            | Binnen _ minuten | Binnen _ uur              |
-| 2            | Binnen _ minuten | Binnen _ uur              |
-| 3            | Binnen _ minuten | Binnen _ uur              |
-| 4            | Binnen _ uur     | Binnen _ werkdagen        |
-| 5            | Binnen _ uur     | Binnen _ werkdagen        |
+| 1            | Binnen 15 minuten | Binnen 1 uur              |
+| 2            | Binnen 30 minuten | Binnen 4 uur              |
+| 3            | Binnen 60 minuten | Binnen 8 uur              |
+| 4            | Binnen 4 uur     | Binnen 2 werkdagen        |
+| 5            | Binnen 8 uur     | Binnen 7 werkdagen        |
