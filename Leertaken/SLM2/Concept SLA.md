@@ -18,7 +18,7 @@ Klantdiensten
 			+ Medewerkers hebben extern altijd wel een internet verbinding.
 		- Helpdesk
 			+ Helpdeskondersteuning
-			+ Helpdesk in Nederland EN Duitsland
+			+ Helpdeskondersteuning in Nederland EN Duitsland
 	Per klantdienst:
 		Service Levels
 			Beschikbaarheid [Availability]
@@ -74,7 +74,7 @@ Implementatie en condities
 			+ Rapportage (voorbeeld met kwalitieve en kwantitieve data)
 			+ Eventuele bijstellingen
 	Bonus/malus
-Rapportageverplichtingen [andre]
+Rapportageverplichtingen
 	Voorbeeld Service Level Rapport
 	Service Review
 		- Hoe wordt de nieuwe Service geëvalueerd met de klant (rapportage en service review)?
