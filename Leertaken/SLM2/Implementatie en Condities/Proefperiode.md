@@ -1,6 +1,3 @@
 # Proefperiode
 
-- Na afloop: service evaluatie
-	+ Wat wordt er besproken met de klant
-	+ Rapportage (voorbeeld met kwalitieve en kwantitieve data)
-	+ Eventuele bijstellingen
+Voor deze overeenkomst geldt een proefperiode van 6 maanden. Na afloop van deze periode zal er een evaluatie plaatsvinden tussen Opdrachtgever en ICT. Tijdens deze evaluatie zal er gekeken worden of de overeenkomst voldoet of dat deze nog bijgesteld moet worden.
