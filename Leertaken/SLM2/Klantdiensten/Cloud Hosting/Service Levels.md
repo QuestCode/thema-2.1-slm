@@ -4,9 +4,9 @@ Onderstaand worden de service levels van de Cloud dienst beschreven.
 
 #### Beschikbaarheid
 
-De Cloud dienst heeft voor de opdrachtgever en eindgebruikers een beschikbaarheid van 24 uur per dag, 7 dagen per week. Met een minimal uptime van 95% per jaar; De 5% downtime wordt veroorzaakt door storingen en geplande onderhoudswerkzaamheden. Middels Cloud-hosting wordt data aangeboden aan de gebruikers. Hiervoor is een internetverbinding vereist. Opslag van de data gebeurd op dezelfde wijze als voorheen, waardoor gebruikers op een transparante wijze hun werk kunnen voortzetten.
+De Cloud dienst heeft voor de opdrachtgever en eindgebruikers een beschikbaarheid van 24 uur per dag, 7 dagen per week. Met een minimal uptime van 98% per jaar; De 2% downtime wordt veroorzaakt door storingen en geplande onderhoudswerkzaamheden. Middels Cloud-hosting wordt data aangeboden aan de gebruikers. Hiervoor is een internetverbinding vereist. Opslag van de data gebeurd op dezelfde wijze als voorheen, waardoor gebruikers op een transparante wijze hun werk kunnen voortzetten.
 
-In verband met het verwerken van salarissen en andere kritieke processen tussen de 25e en laatste dag van de maand, worden hiervoor speciale piekperiodes gehanteerd. Tijdens openstellingstijden (werkdagen van 8:00 - 17:30) en piekperiodes wordt een minimale uptime van 99% gegarandeerd.
+In verband met het verwerken van salarissen en andere kritieke processen tussen de 25e en laatste dag van de maand, worden hiervoor speciale piekperiodes gehanteerd. Tijdens openstellingstijden (werkdagen van 8:00 - 17:30) en piekperiodes wordt een minimale uptime van 99,5% gegarandeerd.
 
 #### Prestaties
 
