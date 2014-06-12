@@ -1,6 +1,6 @@
 ## Prioriteitenbepaling
 
-De volgende prioriteitbepaling wordt gebruikt om de reactieteid en afhandeltijd te berekenen. Afhankelijk van het niveau van de dienstverlening kan dit afwijken.
+De volgende prioriteiten bepaling wordt gebruikt om de reactie- en afhandeltijd te berekenen. Afhankelijk van het niveau van de dienstverlening kan dit afwijken.
 
 ### Urgentie bepaling
 | Urgentie                         | Niveau     |
@@ -23,6 +23,10 @@ De volgende prioriteitbepaling wordt gebruikt om de reactieteid en afhandeltijd 
 | _Impact Gemiddeld_     | 4                   | 3                        | 2                   |
 | _Impact Laag_          | 5                   | 4                        | 3                   |
 |                        | _Urgentie laag_     | _Urgentie Gemiddeld_     | _Urgentie Hoog_     |
+
+
+
+# NOTE: DEZE IS AFHANKELIJK VAN DE SERVICE LEVEL (MOET ERGENS ANDERS???)
 
 ### Reactietijd
 | Prioriteit   | Reactiteit        | Planning (Doorlooptijd)   |
