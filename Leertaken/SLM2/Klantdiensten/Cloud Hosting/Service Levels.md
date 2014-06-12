@@ -26,7 +26,8 @@ In verband met het verwerken van salarissen en andere kritieke processen tussen 
 	- MTTR of MTRS
 	- service windows, downtime
 
-#### Verwachte maximale aantal storingen per jaar
+#### Verwachte maximale aantal storingen per jaar [Tom]
+
 
 
 #### Geheugengebruik [Tom]
