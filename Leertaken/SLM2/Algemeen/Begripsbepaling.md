@@ -4,6 +4,8 @@
 - __Servicedesk__ Het aanspreekpunt bij problemen en wijzigingen met betrekking tot de service.
 - __Dienst__ Het tegen betaling beschikbaar stellen en houden van de cloud ten behoeve van de opdrachtgever.
 - __Authenticatie__ Elektronische identificatie en om voldoende zekerheid te verkrijgen of de serviceleverancier de juiste persoon tegenover zich heeft.
+- __Incidents / Incidenten__ Een kleine storing die op zichzelf staat.
+- __Problems__ Een verzameling van icidenten en de oorzaak van deze incidenten.
 
 ### Partijen
 Deze Service Level Agreement (verder te noemen: SLA) is een overeenkomst die is gesloten tussen:
