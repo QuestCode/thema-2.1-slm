@@ -55,11 +55,6 @@ __Vertrouwelijkheid van de data.__
 | Aantal server inbraken.                    | Aantal veiligheidsincidenten met betrekking tot service waarbij ingebroken is op de servers. |
 | Het cijfer van een beveiligingsrapportage. | Halfjaarlijkse veiligheidsonderzoek door een externe partij.                                 |
 
-#### Snelheid en responstijd
-
-	- Reactietijd
-	- Gemiddelde en maximale storingsduur
-
 #### Betrouwbaarheid
 
 	- MTBSI of MTBF
