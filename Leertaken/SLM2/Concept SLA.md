@@ -1,14 +1,15 @@
 # Inhoud
 
 Algemeen
-	Inleiding [Ward (Zie algemeen.md)]
-	Beschrijving van de dienstverlening [Ward (Zie DeelA.md)]
+	Begripsbepaling
+	Inleiding [Ward]
+	Prioriteitbepaling
+	Beschrijving van de Dienstverlening [Ward]
 		- Leid uit je analyses de gebruikerswens(en) af voor de Service die je wilt inrichten met het oog op de ontwikkeling in de techniek
 		- Concretiseer deze doelen van de Service, geef helder aan wat voor service met welke kwaliteit de klant mag verwachten ("Wat beloven we")?
 		- Klant- of servicegericht
 		- Voordelen voor Team4S
-		- 
-	Continuïteit van de cloud-dienstverlening
+	Continuïteit van de Cloud-Dienstverlening
 	Aansprakelijkheid
 Klantdiensten
 	Definitie [Yuri]
@@ -56,25 +57,28 @@ Klantdiensten
 			- Leverancier moet betrouwbare partij zijn! Riscoanalyse!
 		Capaciteitsplanning
 Tariefstructuur
-	Cloud-maandbedrag en vaststelling aantal users
-	Implementatiebedrag
-		- Materiële kosten
-		- Personeelskosten
-	Niveau's van dienstverlening (goud, zilver, brons)
+	Eenmalige kosten
+		Implementatiebedrag
+			- Materiële kosten
+			- Personeelskosten
+	Structurele Kosten
+		Cloud-maandbedrag en vaststelling aantal users
+	Niveau's van Dienstverlening (goud, zilver, brons)
 		- Overzicht van server level waarden (availability percentage etc.)
 		- Kostenplaatje per niveau
 			+ Eenmalige kosten
 			+ Structurele kosten (jaarlijks)
 	Helpdeskondersteuning
-Implementatie en condities
-	Eisen aan infrastructuur opdrachtgever
-	Geschatte opleverdatum
+Implementatie en Condities
+	Eisen aan Infrastructuur
+		- Van opdrachtgever
+	Geschatte Opleverdatum
 	Proefperiode
 		- Na afloop: service evaluatie
 			+ Wat wordt er besproken met de klant
 			+ Rapportage (voorbeeld met kwalitieve en kwantitieve data)
 			+ Eventuele bijstellingen
-	Bonus/malus
+	Bonus en Malus
 Rapportageverplichtingen [Yuri]
 	Voorbeeld Service Level Rapport
 	Service Review
