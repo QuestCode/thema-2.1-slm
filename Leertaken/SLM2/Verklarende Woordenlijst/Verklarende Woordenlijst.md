@@ -1,0 +1,3 @@
+# Woordenlijst
+
+- Dedicated server
