@@ -17,4 +17,3 @@ Team4S biedt ter ondersteuning van de Cloud dienst een servicedesk. Deze service
 Werknemers kunnen contact opnemen met de servicedesk voor:
 - Vragen om advies en uitleg over de functionaliteit en de werking van de cloud dienst.
 - Vastleggen, analyseren en oplossen van problemen.
-
