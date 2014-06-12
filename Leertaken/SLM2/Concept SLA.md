@@ -59,7 +59,7 @@ Klantdiensten
 			- Toegang tot internet (is waarschijnlijk geen probleem)
 			- Leverancier moet betrouwbare partij zijn! Riscoanalyse!
 		Capaciteitsplanning
-Tariefstructuur
+Tariefstructuur [Andre]
 	Eenmalige kosten
 		Implementatiebedrag
 			- Materiële kosten
