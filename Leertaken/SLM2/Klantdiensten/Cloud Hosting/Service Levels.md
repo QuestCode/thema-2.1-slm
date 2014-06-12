@@ -84,12 +84,36 @@ Per jaar worden er ongeveer maximaal 150 storingen verwacht. Onder storing valt:
 
 #### Beveiliging
 
-	- Exclusiviteit
-	- Uitzendkrachtinformatie is vertrouwelijk. Waar staat de data (wel in Nederland)? Eigendom van data.
-		- Contract met externe partij die de data opslaat in Nederland. Goede partij kiezen. Hoe kunnen wij dit verantwoorden? Juiste, meest betrouwebare, beschikbarepartij? 24/7 beschikbaarheid. Data mag fysiek gezien niet op gedeelde schijven staan. Beveiliging is belangrijk.
+##### Exclusiviteit
+De cloud server is op een afzonderlijke server gehost, dit zorgt voor fysieke exclusiviteit ten opzichte van de andere servers in het datacentrum.
 
-#### Calamiteiten
+De vertrouwelijke informatie is alleen beschikbaar voor werknemers van Team4S. Om zeker te zijn van de identiteit van de gebruiker wordt er gebruik gemaakt van encryptiemethoden. Elke gebruiker zal dan ook zijn eigen gebruikersnaam en wachtwoord krijgen.
 
-	- Integriteit
-	- Afhandeling van storingen in de cloud-programmatuur
-	- Back-up en restore (beschrijven hoeveel data er verloren gaat)
+##### Wachtwoord policy
+Om ongeauthoriseerde toegang te voorkomen wordt er gebruik gemaakt van een stricte wachtwoord policy. Dit betekent dat: 
+- Gebruikers elke 2 maanden, vóór de eerste maandag van de maand hun wachtwoord dienen te veranderen.
+- Wachtwoorden moeten voldoen aan de volgende eisen:
+	- 8 of meer karakters
+	- 1 of meer hoofdletters
+	- 1 of meer symbolen
+
+Deze policy wordt door de cloud-programmatuur gehandhaafd.
+
+##### Eisen aan de leverancier
+Voor het hosten van de server wordt gebruik gemaakt van een externe leverancier. Team4S stelt stricte eisen aan de betrouwbaarheid van deze leverancier om hoge kwaliteit in zowel uptime en beveiliging te kunnen garanderen.
+
+- De leverancier dient te voldoen aan de eerder gestelde 'exclusiviteit' voorwaarden.
+- De leverancier dient een rapportage op te leveren met alle incidenten die in het afgelopen jaar (vóór ingang van deze SLA) hebben plaatsgevonden. Aan de hand van een review van deze incidenten wordt besloten of de hardware van de leverancier voldoende beveiligd en beschikbaar is.
+- De leverancier dient gevestigd te zijn in Nederland.
+
+##### Eisen aan de klant
+Ook de klant zal een aantal voorzorgsmaatregelen moeten treffen om de integriteit van zijn account te garanderen:
+
+- Als de werknemer via een publiek netwerk ('hotspot') verbinding maakt zal deze eerst een VPN verbinding moeten opzetten.
+- Indien de werknemer vermoedt dat een derde zich toegang tot zijn/haar account kan verschaffen dient de werknemer onmiddelijk zijn wachtwoord te veranderen en contact op te nemen met de servicedesk.
+
+##### Monitoring
+Alle programmatuur-gerelateerde incidenten worden gelogged en opgeslagen, hier zitten een aantal voorwaarden aan:
+
+- Logs blijven een maand na het incident beschikbaar.
+- Afhankelijk van de prioriteit van een incident kan er besloten worden de logs permanent te bewaren, bijvoorbeeld wanneer deze nodig zijn als bewijsmateriaal.
