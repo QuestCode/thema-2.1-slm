@@ -65,7 +65,17 @@ __Vertrouwelijkheid van de data.__
 
 #### Uitvoeren van onderhoud
 
-	- MTTR of MTRS
+Mean Time To Repair of Mean Time To Restore Service
+
+Onderhoud aan de dienst zal plaatsvinden op standaard tijden. Dit zal zijn op dinsdagavond tussen 19:00 en 21:00 uur.
+Wanneer er met spoed onderhoud moet worden gepleegd (omdat de continuiteit of intergriteit van de dienst anders niet gewaarborgd kunnen worden) zal dit in overleg met opdrachtgever plaatsvinden en vooraf worden gecommuniceerd naar de gebruikers.
+
+Duur van onderhoud zal subjectief zijn aan de uptime garantie en zal zodoende nooit langer kunnen duren dan 
+
+365 dagen per jaar = 8760uur
+
+
+
 	- service windows, downtime
 
 #### Verwachte maximale aantal storingen per jaar [Tom]
