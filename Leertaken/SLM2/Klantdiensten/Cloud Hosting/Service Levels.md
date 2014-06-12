@@ -110,6 +110,7 @@ Onder calamiteiten worden incidenten zoals storing, brand of diefstal waardoor d
 
 Zoals beschreven in de paragraaf _Aansprakelijkheid_ valt een calamiteit onder het punt van overmacht en daarmee is de afdeling ICT niet aansprakelijk voor schade van welke aard dan ook.
 
-- Integriteit
+Om de integritiet van de cloud-dienstverlening te waarborgen worden alle cloud-programmatuur en gegevensbestanden regelmatig gekopieerd van de operationele cloud-server naar een tweede (backup) server, die eigendom is van de afdeling ICT. 
+
 - Afhandeling van storingen in de cloud-programmatuur
 - Back-up en restore (beschrijven hoeveel data er verloren gaat)
