@@ -78,9 +78,9 @@ Duur van onderhoud zal subjectief zijn aan de uptime garantie en zal zodoende no
 
 	- service windows, downtime
 
-#### Verwachte maximale aantal storingen per jaar [Tom]
+#### Verwachte maximale aantal storingen per jaar
 
-Per jaar worden er ongeveer maximaal 150 storingen verwacht. Onder storing valt: alles wat van invloed kan zijn op de bereikbaarheid van de cloud voor één of meerdere gebruikers gedurende een bepaalde periode. Als een gebruiker geen internetverbinding heeft, dan wordt dit niet als storing gezien.
+Per jaar worden er ongeveer maximaal 150 storingen verwacht. Onder storing valt: alles wat van invloed kan zijn op de bereikbaarheid van de cloud voor één of meerdere gebruikers gedurende een bepaalde periode. Een trage- of geen verbinding met het internet heeft op de locatie van de gebruiker wordt niet als incident beschouwd.
 
 #### Beveiliging
 
