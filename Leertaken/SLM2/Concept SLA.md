@@ -41,7 +41,7 @@ Klantdiensten
 				- Gemiddelde en maximale storingsduur
 			Betrouwbaarheid
 				- MTBSI of MTBF
-			Uitvoeren van onderhoud
+			Uitvoeren van onderhoud [Ward]
 				- MTTR of MTRS
 				- service windows, downtime
 			Verwachte maximale aantal storingen per jaar
