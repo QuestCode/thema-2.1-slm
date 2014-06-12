@@ -46,7 +46,7 @@ Klantdiensten
 				- service windows, downtime
 			Verwachte maximale aantal storingen per jaar
 			Geheugengebruik
-			Beveiliging
+			Beveiliging [Yuri]
 				- Exclusiviteit
 				- Uitzendkrachtinformatie is vertrouwelijk. Waar staat de data (wel in Nederland)? Eigendom van data.
 				- Contract met externe partij die de data opslaat in Nederland. Goede partij kiezen. Hoe kunnen wij dit verantwoorden? Juiste, meest betrouwebare, beschikbare partij? 24/7 beschikbaarheid. Data mag fysiek gezien niet op gedeelde schijven staan. Beveiliging is belangrijk.
