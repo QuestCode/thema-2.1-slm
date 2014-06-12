@@ -23,36 +23,39 @@ De volgende punten zijn kritiek in het succesvol draaiend houden van de cloud-di
 
 ##### Key Performance Indicators
 
-De onderstaande meeteenheden zijn gedefinieerd naar aanleiding van de kritieke success factoren. Deze worden gebruikt voor het meten van de kwaliteit van de basisdienst.
+De onderstaande meeteenheden zijn gedefinieerd naar aanleiding van de kritieke success factoren. Deze worden gebruikt voor het meten van de kwaliteit van de basisdienst. 
 
 __Data moet 24/7 beschikbaar zijn voor alle gebruikers.__
 
-| Meeteenheid                             | Bron                           |
-| :----------                             | :---                           |
-| Uptime van de service.                  | Gemeten uptime van de service. |
-| Uptime van de service tijdens piekuren. | Gemeten uptime van de service. |
+| Meeteenheid                                        | Doel  | Bron                           |
+| :----------                                        | :---  | :---                           |
+| Uptime van de service.                             | 98%   | Gemeten uptime van de service. |
+| Uptime van de service tijdens openstellingstijden. | 99.5% | Gemeten uptime van de service. |
+| Uptime van de service tijdens piekuren.            | 99.5% | Gemeten uptime van de service. |
 
 __Data moet overal beschikbaar zijn voor de gebruikers.__
 
-| Meeteenheid                              | Bron                                                                                                              |
-| :----------                              | :---                                                                                                              |
-| Aantal hoge prioriteit incidenten.       | Aantal binnengekomen beschikbaarheidsincidenten over de service bij de servicedesk met een hoge prioriteit.       |
-| Aantal gemiddelde prioriteit incidenten. | Aantal binnengekomen beschikbaarheidsincidenten over de service bij de servicedesk met een gemiddelde prioriteit. |
-| Aantal lage prioriteit incidenten.       | Aantal binnengekomen beschikbaarheidsincidenten over de service bij de servicedesk met een lage prioriteit.       |
-| Gemiddelde oplostijd per incident.       | Gemiddelde van de oplostijden van de beschikbaarheids incidenten.                                                 |
+| Meeteenheid                                            | Doel | Bron                                                                                                              |
+| :----------                                            | :--- | :---                                                                                                              |
+| Aantal hoge prioriteit incidenten.                     | <3   | Aantal binnengekomen beschikbaarheidsincidenten over de service bij de servicedesk met een hoge prioriteit.       |
+| Aantal gemiddelde prioriteit incidenten.               | <20  | Aantal binnengekomen beschikbaarheidsincidenten over de service bij de servicedesk met een gemiddelde prioriteit. |
+| Aantal lage prioriteit incidenten.                     | <50  | Aantal binnengekomen beschikbaarheidsincidenten over de service bij de servicedesk met een lage prioriteit.       |
+| Gemiddelde oplostijd per incident met hoge prioriteit. |      | Gemiddelde van de oplostijden van de beschikbaarheids incidenten met een hoge prioriteit.                         |
+| Gemiddelde oplostijd per incident met hoge prioriteit. |      | Gemiddelde van de oplostijden van de beschikbaarheids incidenten met een gemiddelde prioriteit.                   |
+| Gemiddelde oplostijd per incident met hoge prioriteit. |      | Gemiddelde van de oplostijden van de beschikbaarheids incidenten met een lage prioriteit.                         |
 
 __Beschikbaarheid van recente backups.__
 
-| Meeteenheid                               | Bron                                                                                  |
-| :----------                               | :---                                                                                  |
-| Aantal onopgelost integriteitsincidenten. | Aantal binnengekomen integriteitsincidenten waarbij de data niet herstelt kan worden. |
+| Meeteenheid                               | Doel | Bron                                                                                  |
+| :----------                               | :--- | :---                                                                                  |
+| Aantal onopgelost integriteitsincidenten. | 0    | Aantal binnengekomen integriteitsincidenten waarbij de data niet herstelt kan worden. |
 
 __Vertrouwelijkheid van de data.__
 
-| Meeteenheid                                | Bron                                                                                         |
-| :----------                                | :---                                                                                         |
-| Aantal server inbraken.                    | Aantal veiligheidsincidenten met betrekking tot service waarbij ingebroken is op de servers. |
-| Het cijfer van een beveiligingsrapportage. | Halfjaarlijkse veiligheidsonderzoek door een externe partij.                                 |
+| Meeteenheid                                | Doel | Bron                                                                                         |
+| :----------                                | :--- | :---                                                                                         |
+| Aantal server inbraken.                    | 0    | Aantal veiligheidsincidenten met betrekking tot service waarbij ingebroken is op de servers. |
+| Het cijfer van een beveiligingsrapportage. | 8    | Halfjaarlijkse veiligheidsonderzoek door een externe partij.                                 |
 
 #### Betrouwbaarheid
 
