@@ -21,9 +21,9 @@ Klantdiensten
 			+ Heel mobiel, zitten vaak bij de klant
 			+ Data altijd beschikbaar
 			+ Medewerkers hebben extern altijd wel een internet verbinding.
-		- Helpdesk
-			+ Helpdeskondersteuning
-			+ Helpdeskondersteuning in Nederland EN Duitsland
+		- Servicedesk
+			+ Servicedeskondersteuning
+			+ Servicedeskondersteuning in Nederland EN Duitsland
 	Per klantdienst:
 		Service Levels
 			Beschikbaarheid [Availability]
@@ -71,7 +71,7 @@ Tariefstructuur
 		- Kostenplaatje per niveau
 			+ Eenmalige kosten
 			+ Structurele kosten (jaarlijks)
-	Helpdeskondersteuning
+	Servicedeskondersteuning
 Implementatie en Condities [Tom]
 	Eisen aan Infrastructuur
 		- Van opdrachtgever
