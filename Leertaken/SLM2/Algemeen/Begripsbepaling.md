@@ -8,6 +8,6 @@
 ### Partijen
 Deze Service Level Agreement (verder te noemen: SLA) is een overeenkomst die is gesloten tussen:
 
-- __ICT__ De afdeling ICT van uitzendbureau Team4S, hierna te noemen 'ICT'.
+- __Afdeling ICT__ De afdeling ICT van uitzendbureau Team4S.
 - __Opdrachtgever__ De afnemer van de diensten van de afdeling ICT is uitzendbureau Team4S, hierna te noemen 'Opdrachtgever'.
 - __Gebruikers__ De gebruikers van de diensten en servicedesk zijn de medewerkers van uitzendbureau Team4S, hierna te noemen 'Gebruiker(s)'.
