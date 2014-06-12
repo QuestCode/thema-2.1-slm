@@ -10,7 +10,49 @@ In verband met het verwerken van salarissen en andere kritieke processen tussen 
 
 #### Prestaties
 
-	- Hoe wordt (de kwaliteit van) de “Service-uitvoering” gemeten?
+Voor het bepalen van prestaties zijn er Critical Success Factors (CSFs) opgesteld en hier vervolgens de Key Performance Indicators (KPIs) van afgeleid. Deze worden in de komende paragrafen beschreven.
+
+##### Critical Success Factors
+
+De volgende punten zijn kritiek in het succesvol draaiend houden van de cloud-dienst:
+
+- Data moet 24/7 beschikbaar zijn voor de gebruikers;
+- Data moet overal beschikbaar zijn voor de gebruikers;
+- Van de data moeten recente backups beschikbaar zijn;
+- De data is vertrouwelijk en moet daarom beveiligd zijn en niet inzichtelijk zijn voor 3de partijen.
+
+##### Key Performance Indicators
+
+De onderstaande meeteenheden zijn gedefinieerd naar aanleiding van de kritieke success factoren. Deze worden gebruikt voor het meten van de kwaliteit van de basisdienst.
+
+__Data moet 24/7 beschikbaar zijn voor alle gebruikers.__
+
+| Meeteenheid                             | Bron                           |
+| :----------                             | :---                           |
+| Uptime van de service.                  | Gemeten uptime van de service. |
+| Uptime van de service tijdens piekuren. | Gemeten uptime van de service. |
+
+__Data moet overal beschikbaar zijn voor de gebruikers.__
+
+| Meeteenheid                              | Bron                                                                                                              |
+| :----------                              | :---                                                                                                              |
+| Aantal hoge prioriteit incidenten.       | Aantal binnengekomen beschikbaarheidsincidenten over de service bij de servicedesk met een hoge prioriteit.       |
+| Aantal gemiddelde prioriteit incidenten. | Aantal binnengekomen beschikbaarheidsincidenten over de service bij de servicedesk met een gemiddelde prioriteit. |
+| Aantal lage prioriteit incidenten.       | Aantal binnengekomen beschikbaarheidsincidenten over de service bij de servicedesk met een lage prioriteit.       |
+| Gemiddelde oplostijd per incident.       | Gemiddelde van de oplostijden van de beschikbaarheids incidenten.                                                 |
+
+__Beschikbaarheid van recente backups.__
+
+| Meeteenheid                               | Bron                                                                                  |
+| :----------                               | :---                                                                                  |
+| Aantal onopgelost integriteitsincidenten. | Aantal binnengekomen integriteitsincidenten waarbij de data niet herstelt kan worden. |
+
+__Vertrouwelijkheid van de data.__
+
+| Meeteenheid                                | Bron                                                                                         |
+| :----------                                | :---                                                                                         |
+| Aantal server inbraken.                    | Aantal veiligheidsincidenten met betrekking tot service waarbij ingebroken is op de servers. |
+| Het cijfer van een beveiligingsrapportage. | Halfjaarlijkse veiligheidsonderzoek door een externe partij.                                 |
 
 #### Snelheid en responstijd
 
