@@ -72,7 +72,7 @@ Tariefstructuur
 			+ Eenmalige kosten
 			+ Structurele kosten (jaarlijks)
 	Helpdeskondersteuning
-Implementatie en Condities
+Implementatie en Condities [Tom]
 	Eisen aan Infrastructuur
 		- Van opdrachtgever
 	Geschatte Opleverdatum
