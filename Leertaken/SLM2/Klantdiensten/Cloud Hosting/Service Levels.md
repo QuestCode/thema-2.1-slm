@@ -30,9 +30,6 @@ In verband met het verwerken van salarissen en andere kritieke processen tussen 
 
 
 
-#### Geheugengebruik [Tom]
-
-
 #### Beveiliging
 
 	- Exclusiviteit
