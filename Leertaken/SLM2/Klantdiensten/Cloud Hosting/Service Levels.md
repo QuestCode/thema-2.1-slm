@@ -112,3 +112,12 @@ Alle programmatuur-gerelateerde incidenten worden gelogged en opgeslagen, hier z
 
 - Logs blijven een maand na het incident beschikbaar.
 - Afhankelijk van de prioriteit van een incident kan er besloten worden de logs permanent te bewaren, bijvoorbeeld wanneer deze nodig zijn als bewijsmateriaal.
+
+#### Calamiteiten
+Onder calamiteiten worden incidenten zoals storing, brand of diefstal waardoor de Cloud dienst niet langer (compleet) beschikbaar is voor de gebruikers. Bij het optreden van een calamiteit wordt alles in werk gesteld om de Cloud dienst zo snel mogelijk te hervatten, wat uiterlijk 5 werkdagen na het optreden van de calamiteit het geval zal zijn.
+
+Zoals beschreven in de paragraaf _Aansprakelijkheid_ valt een calamiteit onder het punt van overmacht en daarmee is de afdeling ICT niet aansprakelijk voor schade van welke aard dan ook.
+
+- Integriteit
+- Afhandeling van storingen in de cloud-programmatuur
+- Back-up en restore (beschrijven hoeveel data er verloren gaat)
