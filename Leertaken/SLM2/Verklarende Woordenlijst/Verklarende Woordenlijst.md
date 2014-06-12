@@ -1,3 +1,4 @@
 # Woordenlijst
 
 - Dedicated server
+- Uptime
