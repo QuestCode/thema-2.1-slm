@@ -24,7 +24,7 @@ Klantdiensten
 		- Servicedesk
 			+ Servicedeskondersteuning
 			+ Servicedeskondersteuning in Nederland EN Duitsland
-	Per klantdienst: [Cloud-dienst: Yuri - Servicedesk: ?]
+	Per klantdienst: [Cloud-dienst: Maurits - Servicedesk: Yuri]
 		Service Levels
 			Beschikbaarheid [Availability]
 				- 24/7
