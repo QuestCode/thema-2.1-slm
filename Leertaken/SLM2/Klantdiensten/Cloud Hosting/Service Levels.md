@@ -70,7 +70,7 @@ __Vertrouwelijkheid van de data.__
 
 #### Verwachte maximale aantal storingen per jaar [Tom]
 
-Per jaar worden er ongeveer maximaal 150 storingen verwacht. Onder storing valt: alles wat van invloed kan zijn op één of meerdere gebruikers gedurende een bepaalde periode.
+Per jaar worden er ongeveer maximaal 150 storingen verwacht. Onder storing valt: alles wat van invloed kan zijn op de bereikbaarheid van de cloud voor één of meerdere gebruikers gedurende een bepaalde periode. Als een gebruiker geen internetverbinding heeft, dan wordt dit niet als storing gezien.
 
 #### Beveiliging
 
