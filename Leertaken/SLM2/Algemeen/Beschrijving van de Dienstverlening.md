@@ -1,6 +1,6 @@
 ## Beschrijving van de Dienstverlening
 
-De opdrachtgever wil graag data in de cloud opslaan om deze zodoende makkelijk bereikbaar te maken voor alle medewerkers (KLANT). Data in de cloud moet beschikbaar zijn voor medewerkers die daar rechten toe hebben en moet voor hen inzichtelijk zijn en bewerkt kunnen worden. Ook moet er nieuwe data toegevoegd kunnen worden en data verwijdert kunnen worden.
+De opdrachtgever wil graag data in de cloud opslaan om deze zodoende makkelijk bereikbaar te maken voor alle medewerkers (Gebruikers). Data in de cloud moet beschikbaar zijn voor medewerkers die daar rechten toe hebben en moet voor hen inzichtelijk zijn en bewerkt kunnen worden. Ook moet er nieuwe data toegevoegd kunnen worden en data verwijdert kunnen worden.
 
 ### Eisen opdrachtgever
 Een aantal van de eisen aan deze dienst zijn:
