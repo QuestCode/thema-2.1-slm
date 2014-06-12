@@ -108,9 +108,9 @@ Alle programmatuur-gerelateerde incidenten worden gelogged en opgeslagen, hier z
 #### Calamiteiten
 Onder calamiteiten worden incidenten zoals storing, brand of diefstal waardoor de Cloud dienst niet langer (compleet) beschikbaar is voor de gebruikers. Bij het optreden van een calamiteit wordt alles in werk gesteld om de Cloud dienst zo snel mogelijk te hervatten, wat uiterlijk 5 werkdagen na het optreden van de calamiteit het geval zal zijn.
 
-Zoals beschreven in de paragraaf _Aansprakelijkheid_ valt een calamiteit onder het punt van overmacht en daarmee is de afdeling ICT niet aansprakelijk voor schade van welke aard dan ook.
+Zoals beschreven in de paragraaf _Aansprakelijkheid_ valt een calamiteit onder het punt van overmacht en daarmee is ICT niet aansprakelijk voor schade van welke aard dan ook.
 
-Om de integritiet van de cloud-dienstverlening te waarborgen worden alle cloud-programmatuur en gegevensbestanden regelmatig gekopieerd van de operationele cloud-server naar een tweede (backup) server, die eigendom is van de afdeling ICT. 
+Om de integritiet van de cloud-dienstverlening te waarborgen worden alle cloud-programmatuur en gegevensbestanden regelmatig gekopieerd van de operationele cloud-server naar een tweede (backup) server, die eigendom is van ICT. 
 
 - Afhandeling van storingen in de cloud-programmatuur
 - Back-up en restore (beschrijven hoeveel data er verloren gaat)
