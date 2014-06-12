@@ -29,7 +29,7 @@ In verband met het verwerken van salarissen en andere kritieke processen tussen 
 #### Verwachte maximale aantal storingen per jaar
 
 
-#### Geheugengebruik
+#### Geheugengebruik [Tom]
 
 
 #### Beveiliging
