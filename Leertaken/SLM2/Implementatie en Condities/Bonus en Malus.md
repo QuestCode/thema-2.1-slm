@@ -1,9 +1,7 @@
 ## 4.4 Bonus en Malus
 
-> Afmaken
+Boetes zijn in deze overeenkomst niet opgenomen. Bij het niet nakomen van de toegezegde garanties zoals beschreven in hoofstuk _1.4 Beschrijving van de Dienstverlening_ volgt een waarschuwing van de Opdrachtgever. Na een waarschuwing wordt zo nog een intern evaluatie gedaan door de afdeling ICT om te bepalen waardoor de garantie niet geleverd kon worden. 
 
-- Bonussen
-Bonussen zijn in deze overeenkomst niet opgenomen.
+Wanneer zich drie waarschuwingen voordoen zullen zowel de Opdrachtgever en de afdeling ICT evalueren waarom de garanties niet nagekomen worden en zal zonodig de SLA bijgesteld worden om de garanties alsnog te kunnen verzekeren. 
 
-- Boetes
-Boetes zijn in deze overeenkomst niet opgenomen. Echter, bij het niet nakomen van toegezegde garanties zoals aangegeven in [hoofdstukweetikveel], volgt er een waarschuwing van Opdrachtgever. Bij drie waarschuwing zal Opdrachtgever een overleg plannen met de afdelfing ICT om te achterhalen hoe en waarom de garanties niet nagekomen zijn. Deze SLA zal, indien nodig, bijgesteld worden om de garanties alsnog te kunnen verzekeren.
+Voor het leveren van de diensten Cloud Hosting en Servicedesk worden _geen_ bonussen opgenomen. 
