@@ -70,7 +70,7 @@ Duur van onderhoud zal subjectief zijn aan de uptime garantie en zal zodoende no
 
 #### Verwachte maximale aantal problems per jaar
 
-Per jaar worden er ongeveer maximaal 150 problems verwacht. Onder problems valt: alles wat van invloed kan zijn op de bereikbaarheid van de cloud voor één of meerdere gebruikers gedurende een bepaalde periode. Een trage- of geen verbinding met het internet heeft op de locatie van de gebruiker wordt niet als incident beschouwd.
+Per jaar worden er ongeveer maximaal 150 problems verwacht. Onder problems valt: alles wat van invloed kan zijn op de bereikbaarheid van de cloud voor één of meerdere gebruikers gedurende een bepaalde periode. Een trage of niet-werkende verbinding met het internet op de locatie van de gebruiker wordt niet als incident beschouwd.
 
 #### Beveiliging
 
