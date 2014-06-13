@@ -37,6 +37,7 @@ __De beschikbaarheid van de servicedesk.__
 De maximale duur van het oplossen van een incident ligt aan de prioriteit van het incident. De maximale respons- en oplostijd van incidenten met een gold-level servicedesk is als volgt:
 
 ## Reactietijd
+
 | Prioriteit   | Responstijd       | Oplostijd (Doorlooptijd)  |
 | ------------ | ------------      | ------------------------- |
 | 1            | Binnen 15 minuten | Binnen 1 uur              |

@@ -14,5 +14,4 @@ Voor het opzetten van de servicedesk
 
 | Personeel                 | Kosten                           |
 | :--------                 | :-----                           |
-|                           |                                  |
 | 1 Medewerkers servicedesk | € 1.000 (€ 1.000 per medewerker) |
