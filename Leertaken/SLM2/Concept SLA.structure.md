@@ -40,8 +40,8 @@
 
 <!-- @include Tariefstructuur/Eenmalige Kosten.md -->
 <!-- @include Tariefstructuur/Structurele Kosten.md -->
-<!-- @include Tariefstructuur/Niveau's van Dienstverlening.md -->
 <!-- @include Tariefstructuur/Servicedeskondersteuning.md -->
+<!-- @include Tariefstructuur/Niveau's van Dienstverlening.md -->
 
 # 4 Implementatie en Condities
 
