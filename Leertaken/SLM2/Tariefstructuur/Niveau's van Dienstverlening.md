@@ -1,4 +1,4 @@
-## Niveau's van Dienstverlening
+## 3.3 Niveau's van Dienstverlening
 
 > Niveau's van dienstverlening (goud, zilver, brons)
 > 

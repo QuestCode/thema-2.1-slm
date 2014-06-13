@@ -1,15 +1,15 @@
-## Eenmalige Kosten
+## 3.1 Eenmalige Kosten
 
 > Implementatiebedrag
 > 
 > - Materiële kosten
 > - Personeelskosten
 
-### Materiële kosten
+### 3.1.1 Materiële kosten
 
 > Voor het opzetten van de servicedesk
 
-### Personeelskosten
+### 3.1.2 Personeelskosten
 
 | Personeel                 | Kosten                           |
 | :--------                 | :-----                           |

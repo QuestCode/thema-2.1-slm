@@ -1,4 +1,4 @@
-### Service Levels
+### 2.2.1 Service Levels
 
 Onderstaand worden de service levels van de Cloud dienst beschreven.
 

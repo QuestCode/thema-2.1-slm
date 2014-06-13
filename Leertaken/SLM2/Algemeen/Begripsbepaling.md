@@ -1,4 +1,4 @@
-## Begripsbepaling
+## 1.1 Begripsbepaling
 
 - __Applicatie:__ De programmatuur voor de dienst. Inclusief nieuwe versies daarvan, zoals nader omschreven in de overeenkomst en/of dienstbeschrijving;
 - __Servicedesk:__ Het aanspreekpunt bij problemen en wijzigingen met betrekking tot de service;
@@ -7,7 +7,7 @@
 - __Incidents / Incidenten:__ Een kleine storing die op zichzelf staat;
 - __Problems:__ Een verzameling van incidenten en de oorzaak van deze incidenten.
 
-### Partijen
+### 1.1.1 Partijen
 
 Deze Service Level Agreement (verder te noemen: SLA) is een overeenkomst die is gesloten tussen:
 

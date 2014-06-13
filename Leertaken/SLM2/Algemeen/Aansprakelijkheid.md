@@ -1,4 +1,4 @@
-## Aansprakelijkheid
+## 1.7 Aansprakelijkheid
 
 De afdeling ICT is bij het niet voldoen aan de in dit SLA opgenomen voorwaarden op geen enkele wijze aansprakelijk, indien:
 

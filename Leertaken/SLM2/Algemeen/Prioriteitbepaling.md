@@ -1,10 +1,10 @@
-## Prioriteitbepaling
+## 1.6 Prioriteitbepaling
 
 De volgende prioriteitbepaling wordt gebruikt om de reactie- en afhandeltijd te berekenen, deze tijden zijn afhankelijk van het niveau van de dienstverlening.
 
 De onderstaand genoemde reactietijden zijn gebaseerd op het niveau 'goud'. De verschillen in reactietijd staan per niveau beschreven in paragraaf _Niveau's van Dienstverlening_.
 
-### Urgentie bepaling
+### 1.6.1 Urgentie bepaling
 
 | Urgentie                         | Niveau     |
 | -------------------------------- | ---------- |
@@ -12,7 +12,7 @@ De onderstaand genoemde reactietijden zijn gebaseerd op het niveau 'goud'. De ve
 | Het werkproces is gehinderd      | Gemiddeld  |
 | Het werkproces ligt stil         | Hoog       |
 
-### Impact bepaling
+### 1.6.2 Impact bepaling
 
 | Impact                                   | Niveau     |
 | ---------------------------------------  | ---------- |
@@ -20,7 +20,7 @@ De onderstaand genoemde reactietijden zijn gebaseerd op het niveau 'goud'. De ve
 | Het incident betreft meerdere gebruikers | Gemiddeld  |
 | Het incident betreft veel gebruikers     | Hoog       |
 
-### Prioriteitentabel
+### 1.6.3 Prioriteitentabel
 
 | Impact / Urgentie      |                     |                          |                     |
 | :--------------------- | ------------------- | ------------------------ | ------------------- |

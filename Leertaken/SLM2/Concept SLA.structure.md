@@ -2,7 +2,7 @@
 
 # Inhoud
 
-# Algemeen
+# 1 Algemeen
 
 <!-- @include Algemeen/Begripsbepaling.md -->
 <!-- @include Algemeen/Inleiding.md -->
@@ -11,41 +11,41 @@
 <!-- @include Algemeen/Prioriteitbepaling.md -->
 <!-- @include Algemeen/Aansprakelijkheid.md -->
 
-# Klantdiensten
+# 2 Klantdiensten
 
 <!-- @include Klantdiensten/Definitie.md -->
 
-## Cloud Hosting
+## 2.2 Cloud Hosting
 
 <!-- @include Klantdiensten/Cloud Hosting/Service Levels.md -->
 <!-- @include Klantdiensten/Cloud Hosting/Risicoanalyse.md -->
 <!-- @include Klantdiensten/Cloud Hosting/Capaciteitsplanning.md -->
 
-## Servicedesk
+## 2.3 Servicedesk
 
 <!-- @include Klantdiensten/Servicedesk/Service Levels.md -->
 <!-- @include Klantdiensten/Servicedesk/Risicoanalyse.md -->
 <!-- @include Klantdiensten/Servicedesk/Capaciteitsplanning.md -->
 
-# Tariefstructuur
+# 3 Tariefstructuur
 
 <!-- @include Tariefstructuur/Eenmalige Kosten.md -->
 <!-- @include Tariefstructuur/Structurele Kosten.md -->
 <!-- @include Tariefstructuur/Niveau's van Dienstverlening.md -->
 <!-- @include Tariefstructuur/Servicedeskondersteuning.md -->
 
-# Implementatie en Condities
+# 4 Implementatie en Condities
 
 <!-- @include Implementatie en Condities/Eisen aan Infrastructuur.md -->
 <!-- @include Implementatie en Condities/Geschatte Opleverdatum.md -->
 <!-- @include Implementatie en Condities/Proefperiode.md -->
 <!-- @include Implementatie en Condities/Bonus en Malus.md -->
 
-# Rapportageverplichtingen
+# 5 Rapportageverplichtingen
 
 <!-- @include Rapportageverplichtingen/Voorbeeld Service Level Rapport.md -->
 <!-- @include Rapportageverplichtingen/Service Review.md -->
 
-# Verklarende Woordenlijst
+# 6 Verklarende Woordenlijst
 
 <!-- @include Verklarende Woordenlijst/Verklarende Woordenlijst.md -->
