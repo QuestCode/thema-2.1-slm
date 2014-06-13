@@ -43,14 +43,14 @@ __Data moet 24/7 beschikbaar zijn voor alle gebruikers.__
 
 __Data moet overal beschikbaar zijn voor de gebruikers.__
 
-| Meeteenheid                                            | Doel | Daadwerkelijk | Toelichting                                                                                                     |
-| :----------                                            | :--- | :------------ | :----------                                                                                                     |
-| Aantal hoge prioriteit incidenten.                     | < 3  | __5__         | Tijdens een storing op 27 mei waren klanten aanwezig waardoor 3 incidenten op een hoge prioriteit werden gezet. |
-| Aantal gemiddelde prioriteit incidenten.               | < 20 | 14            |                                                                                                                 |
-| Aantal lage prioriteit incidenten.                     | < 50 | 37            |                                                                                                                 |
-| Gemiddelde oplostijd per incident met hoge prioriteit. |      |               |                                                                                                                 |
-| Gemiddelde oplostijd per incident met hoge prioriteit. |      |               |                                                                                                                 |
-| Gemiddelde oplostijd per incident met hoge prioriteit. |      |               |                                                                                                                 |
+| Meeteenheid                                            | Doel         | Daadwerkelijk       | Toelichting                                                                                                     |
+| :----------                                            | :---         | :------------       | :----------                                                                                                     |
+| Aantal hoge prioriteit incidenten.                     | < 3          | __5__               | Tijdens een storing op 27 mei waren klanten aanwezig waardoor 3 incidenten op een hoge prioriteit werden gezet. |
+| Aantal gemiddelde prioriteit incidenten.               | < 20         | 14                  |                                                                                                                 |
+| Aantal lage prioriteit incidenten.                     | < 50         | 37                  |                                                                                                                 |
+| Gemiddelde oplostijd per incident met hoge prioriteit. | < half uur   | 53 minuten          |                                                                                                                 |
+| Gemiddelde oplostijd per incident met hoge prioriteit. | < 4 uur      | 3 uur en 15 minuten |                                                                                                                 |
+| Gemiddelde oplostijd per incident met hoge prioriteit. | < halve week | 6 dagen             |                                                                                                                 |
 
 __Beschikbaarheid van recente backups.__
 
