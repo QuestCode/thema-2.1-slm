@@ -1,5 +1,20 @@
 ### 2.2.2 Risicoanalyse
 
-> - Veiligheid
-> - Toegang tot internet (is waarschijnlijk geen probleem)
-> - Leverancier moet betrouwbare partij zijn! Riscoanalyse!
+#### Risicobeschrijvingen
+
+| Risico                                    | Kans      | Gevolg    | Maatregel                                                                                                 |
+| ---                                       | ---       | ---       | ---                                                                                                       |
+| Externe cloudhosting partij gaat failliet | Laag      | Hoog      | Preventie.                                                                                                |
+| Internetstoring                           | Laag      | Laag      | Acceptatie. Internetstoringen zijn vaak van korte duur en hebben geen invloed op de correctheid van data. |
+| DDoS aanval op datacenter                 | Laag      | Hoog      | Repressie.                                                                                                |
+| Storing serversoftware                    | Gemiddeld | Hoog      | Repressie.                                                                                                |
+| Schijfuitval server                       | Gemiddeld | Gemiddeld | Preventie.                                                                                                |
+
+#### Maatregelbeschrijvingen
+
+| Risico                                    | Maatregel 1                                                    | Maatregel 2                    | Bronze | Silver | Gold   |
+| ---                                       | ---                                                            | ---                            | ---    | ---    | ---    |
+| Externe cloudhosting partij gaat failliet | Bij kiezen van externe partij een sterkte-zwakteanalyse maken. |                                | x      | 1      | 1      |
+| DDoS aanval op datacenter                 | Software om DDoS te voorkomen                                  | Interventieplan DDoS opzetten. | x      | 1      | 1 & 2 |
+| Storing serversoftware                    | Onderhoudsabonnement afsluiten bij softwareleverancier         | Personeel bijscholen           | x      | 1      | 1 & 2 |
+| Schijfuitval Server                       | Jaarlijks schijfeenheden nalopen en vervangen                  | Raid 10 toepassen              | x      | 1      | 1 & 2 |
