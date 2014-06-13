@@ -52,7 +52,6 @@
 
 # 5 Rapportageverplichtingen
 
-<!-- @include Rapportageverplichtingen/Voorbeeld Service Level Rapport.md -->
 <!-- @include Rapportageverplichtingen/Service Review.md -->
 
 # 6 Verklarende Woordenlijst

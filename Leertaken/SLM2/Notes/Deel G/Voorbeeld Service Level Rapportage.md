@@ -3,7 +3,7 @@
 ## Cloud-hosting Team4s
 
 __Plaats:__ Groningen  
-__Datum:__ 10-06-2014  
+__Datum:__ 09-06-2014  
 __Auteur:__ Klaas Jansen  
 __Status:__ Eindversie  
 
