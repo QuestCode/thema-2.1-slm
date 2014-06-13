@@ -6,4 +6,4 @@ De servicedesk krijgt maandelijks een vast bedrag van €2000,- toegewezen. Dit 
 - Uitgebreide testmogelijkheden
 - Aanschaf nieuwe apparatuur
 - Aannemen tijdelijke krachten voor ondersteuning bij uitrol-procedures.
-- Licensiebeheer
+- Licentiebeheer

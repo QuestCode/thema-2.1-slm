@@ -10,4 +10,4 @@ De afdeling ICT is bij het niet voldoen aan de in dit SLA opgenomen voorwaarden 
 	- Overstromingen
 	- Epidemieën
 	- Oorlogen
-- De oorzaak hiervan niet is gelegen bij ICT, maar bij opdrachtgever of een ten behoeve van de cloud-dienstverlening ingeschakelde derde, zoals bijvoorbeeld een internetprovider.
+- De oorzaak hiervan niet is gelegen bij de afdeling ICT, maar bij opdrachtgever of een ten behoeve van de cloud-dienstverlening ingeschakelde derde, zoals bijvoorbeeld een internetprovider.
