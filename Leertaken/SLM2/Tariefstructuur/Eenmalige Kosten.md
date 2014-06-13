@@ -2,24 +2,11 @@
 
 Om de servicedesk in te richten voor de cloud en de daarbij horende benodigdheden moet er nieuwe apparatuur en dergelijke aangeschaft worden. Ook moet de cloud-infrastructuur uitgerold worden door een externe partij. Deze werkzaamheden brengen eenmalige kosten met zich mee, wat er als volgt uit komt te zien:
 
-- €10.000,- voor de aanschaf van alle apparatuur en benodigdheden voor de servicedesk en de cloud-infrastructuur.
-- €5000,- voor de uitrol van de cloud-infrastructuur door een externe partij.
+| Onderdeel                                                                         | Kosten         |
+| :---                                                                              | :---           |
+| Aanschaf apparatuur cloud-infrastructuur (servers, netwerk, etc.)                 | € 8.000,-      |
+| Benodigdheden voor de servicedesk (opleiding extra mankracht, aanschaf hardware). | € 2.000,-      |
+| Uitrol cloud-infrastructuur door externe partij.                                  | € 5.000,-      |
+| <div style="text-align:right">__Totaal:__</div>                                    | __€ 15.000,-__ |
 
-
-[Kan eventueel nog wat van gebruikt worden]<br>
-Nieuwe releases
-Minimaal één keer per twee jaar brengt Deltacareeen nieuwe release uit van de CLOUDstandaardprogrammatuur, die o.a. bestaat uit technische verbeteringen. Deltacarebepaalt het moment waarop nieuwe releases worden uitgebracht, en bepaalt in overleg met opdrachtgever wanneer 
-deze hiermee gaat werken. Opdrachtgever is verplicht uiterlijk binnen 6 maanden na het eerste verzoek van Deltacarehiertoe met de nieuwe releasete gaan werken.
-Het CLOUD-maandbedrag is inclusief: installatie, conversie en oplevering van de nieuwe release van 
-CLOUD-standaardprogrammatuur.
-Voor rekening van opdrachtgever komt: de klantbegeleiding die nodig is bij het opleveren van de 
-nieuwe 
-release. Facturering geschiedt op basis van nacalculatie tegen de dan geldende tarieven.
-Nieuwe versies
-Als Deltacareeen nieuwe versie uitbrengt kan opdrachtgever aangeven of hij deze al dan niet wil 
-gaan 
-gebruiken. Als opdrachtgever ervoor kiest met de nieuwe versie te gaan werken, wordt het CLOUDmaandbedrag voor de reeds in gebruik zijnde standaardprogrammatuur opnieuw vastgesteld.
-Bij overgang naar een nieuwe versie worden gratis door Deltacareuitgevoerd: installatie, conversie en 
-oplevering van de nieuwe versie van CLOUD-standaardprogrammatuur.
-Voor rekening van opdrachtgever is: de klantbegeleiding die nodig is bij het opleveren van een nieuwe 
-versie. Facturering geschiedt op basis van nacalculatie tegen de dan geldende tarieven.
+Na uitvoering van het implementatietraject kunnen er door wijzigingen en onderhoud andere eenmalige kosten naar voren komen. Zo brengt de afdeling ICT elk jaar nieuwe releases van de cloud-programmatuur uit. Hierin worden onder andere technische en functionele verbeteringen doorgevoerd, waarin tevens bestaande software fouten ('bugs') worden verholpen. De opdrachtgever is verplicht uiterlijk binnen zes maanden, na het eerste verzoek van de afdeling ICT, met de nieuwe releases te gaan werken. Het hiervoor gehanteerde bedrag is jaarlijks __€ 2500,-__, waar installatie, oplevering, conversie, installatiehandleidingen en eventuele cursussen bij inbegrepen zijn.

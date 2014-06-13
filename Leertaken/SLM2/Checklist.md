@@ -3,7 +3,7 @@
 - Klantdiensten
 	- Cloud Hosting
 		- [ ] Capaciteitsplanning (aan het eind) [Allemaal]
-		- [ ] Risicoanalyse [Yuri]
+		- [x] Risicoanalyse [Yuri]
 	- Servicedesk
 		- [ ] Capaciteitsplanning (aan het eind) [Allemaal]
 		- [ ] Risicoanalyse [Yuri]
@@ -13,10 +13,10 @@
 	- [x] Proefperiode [Andre]
 	- [x] Bonus en Malus [Andre]
 - Tariefstructuur
-	- [ ] Eenmalige kosten [Tom]
-	- [ ] Structurele kosten [Tom]
+	- [x] Eenmalige kosten [Tom]
+	- [x] Structurele kosten [Tom]
 	- [ ] Niveau's van Dienstverlening [Tom]
-	- [ ] Servicedeskondersteuning [Tom]
+	- [x] Servicedeskondersteuning [Tom]
 - Rapportageverplichtingen
 	- [x] Voorbeeld Service Level Rapport [Andre]
 	- [x] Service Review [Andre]

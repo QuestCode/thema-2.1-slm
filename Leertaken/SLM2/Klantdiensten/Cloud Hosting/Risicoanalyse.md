@@ -16,7 +16,7 @@ In de volgende tabel worden de risico's uiteengezet tegen de kans, gevolgschade 
 
 #### Maatregelbeschrijvingen
 
-In de volgende tabel worden de risico's uiteengezet tegen de maatregels per niveau van dienstverlening.
+In de volgende tabel worden de risico's uiteengezet tegen de maatregelen per niveau van dienstverlening.
 
 | Risico                                    | Maatregel 1                                                    | Maatregel 2                    | Bronze | Silver | Gold   |
 | ---                                       | ---                                                            | ---                            | ---    | ---    | ---    |
