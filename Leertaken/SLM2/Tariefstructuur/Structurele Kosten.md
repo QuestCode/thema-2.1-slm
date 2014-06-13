@@ -1,3 +1,3 @@
-## 3.2 Structurele Kosten
+## 3.3 Structurele Kosten
 
-> Cloud-maandbedrag en vaststelling aantal users.
+- €250,- per maand voor de licensie van de cloud-software
