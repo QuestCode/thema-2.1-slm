@@ -10,7 +10,7 @@
 - Implementaties en Condities
 	- [ ] Eisen aan Infrastructuur [Maurits]
 	- [ ] Geschatte Opleverdatum [Maurits]
-	- [ ] Proefperiode [Maurits]
+	- [x] Proefperiode [Maurits]
 	- [ ] Bonus en Malus [Maurits]
 - Tariefstructuur
 	- [ ] Eenmalige kosten [Tom]
@@ -20,6 +20,7 @@
 - Rapportageverplichtingen
 	- [x] Voorbeeld Service Level Rapport [Andre]
 	- [x] Service Review [Andre]
+	- [x] Proefperiode Rapportage [Andre]
 - Verklarende Woordenlijst (aan het eind) [Maurits]
 	- [ ] Alfabetische volgorde
 	- [ ] Toelichten termen (bijv. m.b.h.v. bronverwijzing)
