@@ -37,9 +37,9 @@ __Data moet overal beschikbaar zijn voor de gebruikers.__
 
 | Meeteenheid                                            | Doel | Bron                                                                                                              |
 | :----------                                            | :--- | :---                                                                                                              |
-| Aantal hoge prioriteit incidenten.                     | <3   | Aantal binnengekomen beschikbaarheidsincidenten over de service bij de servicedesk met een hoge prioriteit.       |
-| Aantal gemiddelde prioriteit incidenten.               | <20  | Aantal binnengekomen beschikbaarheidsincidenten over de service bij de servicedesk met een gemiddelde prioriteit. |
-| Aantal lage prioriteit incidenten.                     | <50  | Aantal binnengekomen beschikbaarheidsincidenten over de service bij de servicedesk met een lage prioriteit.       |
+| Aantal hoge prioriteit incidenten.                     | < 3  | Aantal binnengekomen beschikbaarheidsincidenten over de service bij de servicedesk met een hoge prioriteit.       |
+| Aantal gemiddelde prioriteit incidenten.               | < 20 | Aantal binnengekomen beschikbaarheidsincidenten over de service bij de servicedesk met een gemiddelde prioriteit. |
+| Aantal lage prioriteit incidenten.                     | < 50 | Aantal binnengekomen beschikbaarheidsincidenten over de service bij de servicedesk met een lage prioriteit.       |
 | Gemiddelde oplostijd per incident met hoge prioriteit. |      | Gemiddelde van de oplostijden van de beschikbaarheids incidenten met een hoge prioriteit.                         |
 | Gemiddelde oplostijd per incident met hoge prioriteit. |      | Gemiddelde van de oplostijden van de beschikbaarheids incidenten met een gemiddelde prioriteit.                   |
 | Gemiddelde oplostijd per incident met hoge prioriteit. |      | Gemiddelde van de oplostijden van de beschikbaarheids incidenten met een lage prioriteit.                         |
@@ -78,9 +78,9 @@ Omdat er wordt gewerkt met zeer vertrouwelijke informatie is een goede beveiligi
 
 ##### Backups
 
-Elke nacht wordt een incrementele backup gemaakt van de data op de cloud servers. Deze backup wordt uitgevoerd om twee uur 's nachts en duur maximaal twee uur. Elke zondagnacht wordt een totale backup gemaakt van de data om de integriteit van de data te behouden. Deze backup wordt om twee uur 's nachts uitgevoerd en duurt maximaal vier uur. 
+Elke nacht wordt een incrementele backup gemaakt van de data op de cloud servers. Deze backup wordt uitgevoerd om twee uur 's nachts en duur maximaal twee uur. Elke zondagnacht wordt een totale backup gemaakt van de data om de integriteit van de data te behouden. Deze backup wordt om twee uur 's nachts uitgevoerd en duurt maximaal vier uur.
 
-De backups worden opgeslagen op meerdere locaties om het risico van data verlies te beperken. De locaties bestaan uit het hoofdkantoor van Team4s en de cloud servers zelf. 
+De backups worden opgeslagen op meerdere locaties om het risico van data verlies te beperken. De locaties bestaan uit het hoofdkantoor van Team4s en de cloud servers zelf.
 
 Bij een integriteitsincident kan dankzij de dagelijkse backups een maximale dataverlies van één dag ontstaan.
 

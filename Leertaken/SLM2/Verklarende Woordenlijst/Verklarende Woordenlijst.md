@@ -5,3 +5,5 @@ Onderstaand verklaring van de in deze SLA gebruikte vaktermen in alfabetische vo
 - RAID
 - Hosting
 - Server
+- Policy
+- VPN verbinding
