@@ -8,6 +8,7 @@
 - __Problems__ Een verzameling van icidenten en de oorzaak van deze incidenten.
 
 ### Partijen
+
 Deze Service Level Agreement (verder te noemen: SLA) is een overeenkomst die is gesloten tussen:
 
 - __Afdeling ICT__ De afdeling ICT van uitzendbureau Team4S.

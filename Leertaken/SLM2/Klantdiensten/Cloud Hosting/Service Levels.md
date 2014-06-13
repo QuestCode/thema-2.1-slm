@@ -23,7 +23,7 @@ De volgende punten zijn kritiek in het succesvol draaiend houden van de cloud-di
 
 ##### Key Performance Indicators
 
-De onderstaande meeteenheden zijn gedefinieerd naar aanleiding van de kritieke success factoren. Deze worden gebruikt voor het meten van de kwaliteit van de basisdienst. 
+De onderstaande meeteenheden zijn gedefinieerd naar aanleiding van de kritieke success factoren. Deze worden gebruikt voor het meten van de kwaliteit van de basisdienst.
 
 __Data moet 24/7 beschikbaar zijn voor alle gebruikers.__
 
@@ -59,7 +59,7 @@ __Vertrouwelijkheid van de data.__
 
 #### Betrouwbaarheid
 
-	- MTBSI of MTBF
+- MTBSI of MTBF
 
 #### Uitvoeren van onderhoud
 
@@ -75,12 +75,15 @@ Per jaar worden er ongeveer maximaal 150 problems verwacht. Onder problems valt:
 #### Beveiliging
 
 ##### Exclusiviteit
+
 De cloud server is op een afzonderlijke server gehost, dit zorgt voor fysieke exclusiviteit ten opzichte van de andere servers in het datacentrum.
 
 De vertrouwelijke informatie is alleen beschikbaar voor werknemers van Team4S. Om zeker te zijn van de identiteit van de gebruiker wordt er gebruik gemaakt van encryptiemethoden. Elke gebruiker zal dan ook zijn eigen gebruikersnaam en wachtwoord krijgen.
 
 ##### Wachtwoord policy
-Om ongeauthoriseerde toegang te voorkomen wordt er gebruik gemaakt van een stricte wachtwoord policy. Dit betekent dat: 
+
+Om ongeauthoriseerde toegang te voorkomen wordt er gebruik gemaakt van een stricte wachtwoord policy. Dit betekent dat:
+
 - Gebruikers elke 2 maanden, vóór de eerste maandag van de maand hun wachtwoord dienen te veranderen.
 - Wachtwoorden moeten voldoen aan de volgende eisen:
 	- 8 of meer karakters
@@ -90,6 +93,7 @@ Om ongeauthoriseerde toegang te voorkomen wordt er gebruik gemaakt van een stric
 Deze policy wordt door de cloud-programmatuur gehandhaafd.
 
 ##### Eisen aan de leverancier
+
 Voor het hosten van de server wordt gebruik gemaakt van een externe leverancier. Team4S stelt stricte eisen aan de betrouwbaarheid van deze leverancier om hoge kwaliteit in zowel uptime en beveiliging te kunnen garanderen.
 
 - De leverancier dient te voldoen aan de eerder gestelde 'exclusiviteit' voorwaarden.
@@ -97,23 +101,26 @@ Voor het hosten van de server wordt gebruik gemaakt van een externe leverancier.
 - De leverancier dient gevestigd te zijn in Nederland.
 
 ##### Eisen aan de klant
+
 Ook de klant zal een aantal voorzorgsmaatregelen moeten treffen om de integriteit van zijn account te garanderen:
 
 - Als de werknemer via een publiek netwerk ('hotspot') verbinding maakt zal deze eerst een VPN verbinding moeten opzetten.
 - Indien de werknemer vermoedt dat een derde zich toegang tot zijn/haar account kan verschaffen dient de werknemer onmiddelijk zijn wachtwoord te veranderen en contact op te nemen met de servicedesk.
 
 ##### Monitoring
+
 Alle programmatuur-gerelateerde incidenten worden gelogged en opgeslagen, hier zitten een aantal voorwaarden aan:
 
 - Logs blijven een maand na het incident beschikbaar.
 - Afhankelijk van de prioriteit van een incident kan er besloten worden de logs permanent te bewaren, bijvoorbeeld wanneer deze nodig zijn als bewijsmateriaal.
 
 #### Calamiteiten
+
 Onder calamiteiten worden incidenten zoals storing, brand of diefstal waardoor de Cloud dienst niet langer (compleet) beschikbaar is voor de gebruikers. Bij het optreden van een calamiteit wordt alles in werk gesteld om de Cloud dienst zo snel mogelijk te hervatten, wat uiterlijk 5 werkdagen na het optreden van de calamiteit het geval zal zijn.
 
 Zoals beschreven in de paragraaf _Aansprakelijkheid_ valt een calamiteit onder het punt van overmacht en daarmee is ICT niet aansprakelijk voor schade van welke aard dan ook.
 
-Om de integritiet van de cloud-dienstverlening te waarborgen worden alle cloud-programmatuur en gegevensbestanden regelmatig gekopieerd van de operationele cloud-server naar een tweede (backup) server, die eigendom is van ICT. 
+Om de integritiet van de cloud-dienstverlening te waarborgen worden alle cloud-programmatuur en gegevensbestanden regelmatig gekopieerd van de operationele cloud-server naar een tweede (backup) server, die eigendom is van ICT.
 
 - Afhandeling van storingen in de cloud-programmatuur
 - Back-up en restore (beschrijven hoeveel data er verloren gaat)

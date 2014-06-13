@@ -1,4 +1,4 @@
-# Bonus en Malus
+## Bonus en Malus
 
 - Bonussen
 Bonussen zijn in deze overeenkomst niet opgenomen.

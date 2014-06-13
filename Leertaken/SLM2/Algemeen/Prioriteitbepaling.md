@@ -3,6 +3,7 @@
 De volgende prioriteiten bepaling wordt gebruikt om de reactie- en afhandeltijd te berekenen. Afhankelijk van het niveau van de dienstverlening kan dit afwijken.
 
 ### Urgentie bepaling
+
 | Urgentie                         | Niveau     |
 | -------------------------------- | ---------- |
 | Het werkproces is niet gehinderd | Laag       |
@@ -10,6 +11,7 @@ De volgende prioriteiten bepaling wordt gebruikt om de reactie- en afhandeltijd 
 | Het werkproces ligt stil         | Hoog       |
 
 ### Impact bepaling
+
 | Impact                                   | Niveau     |
 | ---------------------------------------  | ---------- |
 | Het incident betreft één gebruiker       | Laag       |
@@ -17,6 +19,7 @@ De volgende prioriteiten bepaling wordt gebruikt om de reactie- en afhandeltijd 
 | Het incident betreft veel gebruikers     | Hoog       |
 
 ### Prioriteitentabel
+
 | Impact / Urgentie      |                     |                          |                     |
 | :--------------------- | ------------------- | ------------------------ | ------------------- |
 | _Impact Hoog_          | 3                   | 2                        | 1                   |
@@ -24,11 +27,10 @@ De volgende prioriteiten bepaling wordt gebruikt om de reactie- en afhandeltijd 
 | _Impact Laag_          | 5                   | 4                        | 3                   |
 |                        | _Urgentie laag_     | _Urgentie Gemiddeld_     | _Urgentie Hoog_     |
 
-
-
-# NOTE: DEZE IS AFHANKELIJK VAN DE SERVICE LEVEL (MOET ERGENS ANDERS???)
+> NOTE: DEZE IS AFHANKELIJK VAN DE SERVICE LEVEL (MOET ERGENS ANDERS???)
 
 ### Reactietijd
+
 | Prioriteit   | Reactiteit        | Planning (Doorlooptijd)   |
 | ------------ | ------------      | ------------------------- |
 | 1            | Binnen 15 minuten | Binnen 1 uur              |

@@ -1,7 +1,8 @@
-# Service Levels Servicedesk
+### Service Levels Servicedesk
 
-## Beschikbaarheid
-De servicedesk zal dagelijks van 8:00 tot 17:30 beschikbaar zijn. De beschikbaarheid van de servicedesk is maximaal 99,9%. 
+#### Beschikbaarheid
+
+De servicedesk zal dagelijks van 8:00 tot 17:30 beschikbaar zijn. De beschikbaarheid van de servicedesk is maximaal 99,9%.
 
 ##### Critical Success Factors
 
@@ -13,7 +14,7 @@ De volgende punten zijn kritiek in het succesvol draaiend houden van de serviced
 
 ##### Key Performance Indicators
 
-De onderstaande meeteenheden zijn gedefinieerd naar aanleiding van de kritieke success factoren. Deze worden gebruikt voor het meten van de kwaliteit van de basisdienst. 
+De onderstaande meeteenheden zijn gedefinieerd naar aanleiding van de kritieke success factoren. Deze worden gebruikt voor het meten van de kwaliteit van de basisdienst.
 
 __Het tijdig reageren op incidenten.__
 
@@ -33,10 +34,11 @@ __De beschikbaarheid van de servicedesk.__
 | :----------              | :--  | :---                                                  |
 | Aantal service klachten. | 0    | Aantal binnengekomen klachten bij de service manager. |
 
-## Oplostijd en responstijd
+#### Oplostijd en responstijd
+
 De maximale duur van het oplossen van een incident ligt aan de prioriteit van het incident. De maximale respons- en oplostijd van incidenten met een gold-level servicedesk is als volgt:
 
-## Reactietijd
+#### Reactietijd
 
 | Prioriteit   | Responstijd       | Oplostijd (Doorlooptijd)  |
 | ------------ | ------------      | ------------------------- |

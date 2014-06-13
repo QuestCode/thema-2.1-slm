@@ -1,3 +1,3 @@
-# Structurele Kosten
+## Structurele Kosten
 
-Cloud-maandbedrag en vaststelling aantal users
+> Cloud-maandbedrag en vaststelling aantal users.
