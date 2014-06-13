@@ -1,5 +1,7 @@
 ## 4.4 Bonus en Malus
 
+> Afmaken
+
 - Bonussen
 Bonussen zijn in deze overeenkomst niet opgenomen.
 

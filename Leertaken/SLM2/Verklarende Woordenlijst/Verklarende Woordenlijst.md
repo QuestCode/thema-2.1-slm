@@ -3,3 +3,5 @@ Onderstaand verklaring van de in deze SLA gebruikte vaktermen in alfabetische vo
 - Dedicated server
 - Uptime
 - RAID
+- Hosting
+- Server

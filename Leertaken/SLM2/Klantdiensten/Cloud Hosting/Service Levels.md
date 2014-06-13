@@ -4,7 +4,7 @@ Onderstaand worden de service levels van de Cloud dienst beschreven.
 
 #### Beschikbaarheid
 
-De Cloud dienst heeft voor de opdrachtgever en eindgebruikers een beschikbaarheid van 24 uur per dag, 7 dagen per week. Met een minimal uptime van 98% per jaar; De 2% downtime wordt veroorzaakt door storingen en geplande onderhoudswerkzaamheden. Middels Cloud-hosting wordt data aangeboden aan de gebruikers. Hiervoor is een internetverbinding vereist. Opslag van de data gebeurd op dezelfde wijze als voorheen, waardoor gebruikers op een transparante wijze hun werk kunnen voortzetten.
+De Cloud dienst heeft voor de opdrachtgever en eindgebruikers een beschikbaarheid van 24 uur per dag, 7 dagen per week. Met een minimal uptime van 98% per jaar; waarbij de 2% downtime wordt veroorzaakt door storingen en geplande onderhoudswerkzaamheden. Middels Cloud-hosting wordt data aangeboden aan de gebruikers. Hiervoor is een internetverbinding vereist. Opslag van de data gebeurd op dezelfde wijze als voorheen, waardoor gebruikers op een transparante wijze hun werk kunnen voortzetten.
 
 In verband met het verwerken van salarissen en andere kritieke processen worden periodes tussen de 25e en laatste dag van de maand als speciale piekperiodes gezien. Tijdens openstellingstijden (werkdagen van 8:00 - 17:30) en piekperiodes wordt een minimale uptime van 99,5% per jaar gegarandeerd.
 
@@ -59,7 +59,7 @@ __Vertrouwelijkheid van de data.__
 
 #### Betrouwbaarheid
 
-- MTBSI of MTBF
+> MTBSI of MTBF
 
 #### Uitvoeren van onderhoud
 
@@ -73,6 +73,8 @@ Duur van onderhoud zal subjectief zijn aan de uptime garantie en zal zodoende no
 Per jaar worden er ongeveer maximaal 150 problems verwacht. Onder problems valt: alles wat van invloed kan zijn op de bereikbaarheid van de cloud voor één of meerdere gebruikers gedurende een bepaalde periode. Een trage- of geen verbinding met het internet heeft op de locatie van de gebruiker wordt niet als incident beschouwd.
 
 #### Beveiliging
+
+Omdat er wordt gewerkt met zeer vertrouwelijke informatie is een goede beveiliging van groot belang. Onderstaand worden maatregelen beschreven die zijn genomen om de veiligheid van de data te kunnen waarborgen.
 
 ##### Exclusiviteit
 
