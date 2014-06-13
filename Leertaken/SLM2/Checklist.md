@@ -10,8 +10,8 @@
 - Implementaties en Condities
 	- [ ] Eisen aan Infrastructuur [Maurits]
 	- [ ] Geschatte Opleverdatum [Maurits]
-	- [x] Proefperiode [Maurits]
-	- [ ] Bonus en Malus [Maurits]
+	- [x] Proefperiode [Andre]
+	- [x] Bonus en Malus [Andre]
 - Tariefstructuur
 	- [ ] Eenmalige kosten [Tom]
 	- [ ] Structurele kosten [Tom]
