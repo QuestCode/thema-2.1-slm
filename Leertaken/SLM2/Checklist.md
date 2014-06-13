@@ -2,10 +2,10 @@
 
 - Klantdiensten
 	- Cloud Hosting
-		- [ ] Capaciteitsplanning (aan het eind)
+		- [ ] Capaciteitsplanning (aan het eind) [Allemaal]
 		- [ ] Risicoanalyse [Yuri]
 	- Servicedesk
-		- [ ] Capaciteitsplanning (aan het eind)
+		- [ ] Capaciteitsplanning (aan het eind) [Allemaal]
 		- [ ] Risicoanalyse [Yuri]
 - Implementaties en Condities
 	- [ ] Eisen aan Infrastructuur [Maurits]
@@ -24,6 +24,7 @@
 	- [ ] Alfabetische volgorde
 	- [ ] Toelichten termen (bijv. m.b.h.v. bronverwijzing)
 - Afronding
-	- [ ] Controleren volledigheid
+	- [ ] Inhoudsopgave [Maurits]
+	- [ ] Controleren volledigheid [Allemaal]
 	- [ ] Genereren PDF (goed zetten hoofdstukken, checken stijl) [Maurits]
 	- [ ] Maken en voorbereiden presentatie (maandag)
