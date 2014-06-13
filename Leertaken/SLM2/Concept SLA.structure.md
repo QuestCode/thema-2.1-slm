@@ -1,13 +1,22 @@
-# SLM2 Cover
+<h1 style="font-size:4em">Service Level Agreement</h1>
+<h2 style="font-size:2.5em;margin:-30px 0 580px">Cloud-hosting Team4S</h2>
+
+> __Opdracht:__ Leertaak 4 (SLM2), thema 2.1-I, groep 1
+>
+> __Auteurs:__ <span style="display:inline-block;vertical-align:top">Tom Broenink, Ward Holthof, Yuri Hoogeweg,<br/>André Nanninga en Maurits van Mastrigt</span>
+>
+> __Datum:__ 16 juni 2014
 
 # Inhoud
+
+> To do (Maurits)
 
 # 1 Algemeen
 
 <!-- @include Algemeen/Begripsbepaling.md -->
 <!-- @include Algemeen/Inleiding.md -->
 <!-- @include Algemeen/Beschrijving van de Dienstverlening.md -->
-<!-- @include Algemeen/Continuiteit van de Cloud-Dienstverlening.md -->
+<!-- @include Algemeen/Continuiteit van de Cloud-dienstverlening.md -->
 <!-- @include Algemeen/Prioriteitbepaling.md -->
 <!-- @include Algemeen/Aansprakelijkheid.md -->
 
