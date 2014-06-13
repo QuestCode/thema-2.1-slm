@@ -22,16 +22,16 @@
 
 # 2 Klantdiensten
 
-<!-- @include Klantdiensten/Definitie.md -->
-
 ## 2.2 Cloud Hosting
 
+<!-- @include Klantdiensten/Cloud Hosting/Definitie.md -->
 <!-- @include Klantdiensten/Cloud Hosting/Service Levels.md -->
 <!-- @include Klantdiensten/Cloud Hosting/Risicoanalyse.md -->
 <!-- @include Klantdiensten/Cloud Hosting/Capaciteitsplanning.md -->
 
 ## 2.3 Servicedesk
 
+<!-- @include Klantdiensten/Servicedesk/Definitie.md -->
 <!-- @include Klantdiensten/Servicedesk/Service Levels.md -->
 <!-- @include Klantdiensten/Servicedesk/Risicoanalyse.md -->
 <!-- @include Klantdiensten/Servicedesk/Capaciteitsplanning.md -->

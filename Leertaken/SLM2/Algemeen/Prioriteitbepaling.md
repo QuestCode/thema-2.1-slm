@@ -29,7 +29,7 @@ De onderstaand genoemde reactietijden zijn gebaseerd op het niveau 'goud'. De ve
 | _Impact Laag_          | 5                   | 4                        | 3                   |
 |                        | _Urgentie laag_     | _Urgentie Gemiddeld_     | _Urgentie Hoog_     |
 
-### Reactietijd
+### 1.6.4 Reactietijd
 
 | Prioriteit   | Reactietijd       | Doorlooptijd (planning)   |
 | ------------ | ------------      | ------------------------- |

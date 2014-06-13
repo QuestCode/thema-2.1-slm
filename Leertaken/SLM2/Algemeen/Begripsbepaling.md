@@ -7,7 +7,7 @@
 - __Incidents / Incidenten:__ Een kleine storing die op zichzelf staat;
 - __Problems:__ Een verzameling van incidenten en de oorzaak van deze incidenten.
 
-### 1.1.1 Partijen
+## 1.2 Partijen
 
 Deze Service Level Agreement (verder te noemen: SLA) is een overeenkomst die is gesloten tussen:
 
