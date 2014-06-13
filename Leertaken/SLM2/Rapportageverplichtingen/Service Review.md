@@ -4,4 +4,4 @@ Elke maand levert de afdeling ICT een Service Level Rapportage aan de opdrachtge
 
 De Service Level Rapportage wordt uiterlijk 10 dagen na het einde van de maand geleverd.
 
-Zie de bijlage(s) voor een voorbeeld van een Service Level Rapportage.
+Zie de bijlage _"Voorbeeld Service Level Rapportage.pdf"_ voor een voorbeeld van een Service Level Rapportage.

@@ -18,8 +18,8 @@
 	- [ ] Niveau's van Dienstverlening [Tom]
 	- [ ] Servicedeskondersteuning [Tom]
 - Rapportageverplichtingen
-	- [ ] Voorbeeld Service Level Rapport [Andre]
-	- [ ] Service Review [Andre]
+	- [x] Voorbeeld Service Level Rapport [Andre]
+	- [x] Service Review [Andre]
 - Verklarende Woordenlijst (aan het eind) [Maurits]
 	- [ ] Alfabetische volgorde
 	- [ ] Toelichten termen (bijv. m.b.h.v. bronverwijzing)
