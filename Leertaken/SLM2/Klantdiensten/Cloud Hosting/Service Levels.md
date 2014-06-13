@@ -76,6 +76,14 @@ Per jaar worden er ongeveer maximaal 150 problems verwacht. Onder problems valt:
 
 Omdat er wordt gewerkt met zeer vertrouwelijke informatie is een goede beveiliging van groot belang. Onderstaand worden maatregelen beschreven die zijn genomen om de veiligheid van de data te kunnen waarborgen.
 
+##### Backups
+
+Elke nacht wordt een incrementele backup gemaakt van de data op de cloud servers. Deze backup wordt uitgevoerd om twee uur 's nachts en duur maximaal twee uur. Elke zondagnacht wordt een totale backup gemaakt van de data om de integriteit van de data te behouden. Deze backup wordt om twee uur 's nachts uitgevoerd en duurt maximaal vier uur. 
+
+De backups worden opgeslagen op meerdere locaties om het risico van data verlies te beperken. De locaties bestaan uit het hoofdkantoor van Team4s en de cloud servers zelf. 
+
+Bij een integriteitsincident kan dankzij de dagelijkse backups een maximale dataverlies van één dag ontstaan.
+
 ##### Exclusiviteit
 
 De cloud server is op een afzonderlijke server gehost, dit zorgt voor fysieke exclusiviteit ten opzichte van de andere servers in het datacentrum.
@@ -122,7 +130,4 @@ Onder calamiteiten worden incidenten zoals storing, brand of diefstal waardoor d
 
 Zoals beschreven in de paragraaf _Aansprakelijkheid_ valt een calamiteit onder het punt van overmacht en daarmee is ICT niet aansprakelijk voor schade van welke aard dan ook.
 
-Om de integritiet van de cloud-dienstverlening te waarborgen worden alle cloud-programmatuur en gegevensbestanden regelmatig gekopieerd van de operationele cloud-server naar een tweede (backup) server, die eigendom is van ICT.
-
-- Afhandeling van storingen in de cloud-programmatuur
-- Back-up en restore (beschrijven hoeveel data er verloren gaat)
+In de paragraaf _Backups_ staat beschreven dat er regelmatig backups worden gemaakt. Deze backups kunnen worden gebruikt bij een calamiteit om de Cloud dienst met minimale dataverlies opnieuw in werk te stellen.
