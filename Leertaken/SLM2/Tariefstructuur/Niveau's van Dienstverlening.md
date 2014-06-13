@@ -6,3 +6,7 @@
 > - Kostenplaatje per niveau
 > 	+ Eenmalige kosten
 > 	+ Structurele kosten (jaarlijks)
+
+|      | Brons | Zilver | Goud |
+| :--- | :---  | :---   | :--- |
+|      |       |        |      |
