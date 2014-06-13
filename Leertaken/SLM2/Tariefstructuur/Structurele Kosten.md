@@ -6,5 +6,5 @@ Om de cloud-software te blijven gebruiken, moet er maandelijks een bedrag betaal
 | :---                                            | :---          | :---           |
 | Cloud-hosting                                   | € 400,-       | € 4.800,-      |
 | Licenties voor cloud-software                   | € 100,-       | € 1.200,-      |
-| Medewerkers servicedesk                         | € 1.500,-     | € 18.000,-     |
-| <div style="text-align:right">__Totaal:__</div> | __€ 2.000,-__ | __€ 24.000,-__ |
+| Medewerkers servicedesk                         | € 1.000,-     | € 12.000,-     |
+| <div style="text-align:right">__Totaal:__</div> | __€ 1.500,-__ | __€ 18.000,-__ |
