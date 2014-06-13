@@ -1,16 +1,22 @@
 ### 2.2.2 Risicoanalyse
 
+Onderstaand de risico- en maatregelbeschrijvingen voor de cloud-dienstverlening.
+
 #### Risicobeschrijvingen
 
-| Risico                                    | Kans      | Gevolg    | Maatregel                                                                                                 |
-| ---                                       | ---       | ---       | ---                                                                                                       |
-| Externe cloudhosting partij gaat failliet | Laag      | Hoog      | Preventie.                                                                                                |
-| Internetstoring                           | Laag      | Laag      | Acceptatie. Internetstoringen zijn vaak van korte duur en hebben geen invloed op de correctheid van data. |
-| DDoS aanval op datacenter                 | Laag      | Hoog      | Repressie.                                                                                                |
-| Storing serversoftware                    | Gemiddeld | Hoog      | Repressie.                                                                                                |
-| Schijfuitval server                       | Gemiddeld | Gemiddeld | Preventie.                                                                                                |
+In de volgende tabel worden de risico's uiteengezet tegen de kans, gevolgschade en benodigde maatregel.
+
+| Risico                                    | Kans      | Gevolgschade | Maatregel                                                                                                 |
+| :---                                      | :---      | :---         | :---                                                                                                      |
+| Externe cloudhosting partij gaat failliet | Laag      | Hoog         | Preventie.                                                                                                |
+| Internetstoring                           | Laag      | Laag         | Acceptatie. Internetstoringen zijn vaak van korte duur en hebben geen invloed op de correctheid van data. |
+| DDoS aanval op datacenter                 | Laag      | Hoog         | Repressie.                                                                                                |
+| Storing serversoftware                    | Gemiddeld | Hoog         | Repressie.                                                                                                |
+| Schijfuitval server                       | Gemiddeld | Gemiddeld    | Preventie.                                                                                                |
 
 #### Maatregelbeschrijvingen
+
+In de volgende tabel worden de risico's uiteengezet tegen de maatregels per niveau van dienstverlening.
 
 | Risico                                    | Maatregel 1                                                    | Maatregel 2                    | Bronze | Silver | Gold   |
 | ---                                       | ---                                                            | ---                            | ---    | ---    | ---    |

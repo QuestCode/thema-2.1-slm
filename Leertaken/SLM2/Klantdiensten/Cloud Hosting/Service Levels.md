@@ -23,7 +23,7 @@ De volgende punten zijn kritiek in het succesvol draaiend houden van de cloud-di
 
 ##### Key Performance Indicators
 
-De onderstaande meeteenheden zijn gedefinieerd naar aanleiding van de kritieke success factoren. Deze worden gebruikt voor het meten van de kwaliteit van de basisdienst.
+De onderstaande meeteenheden zijn gedefinieerd naar aanleiding van de kritieke success factoren. Deze succes factoren worden gebruikt voor het meten van de kwaliteit van de basisdiensten.
 
 __Data moet 24/7 beschikbaar zijn voor alle gebruikers.__
 

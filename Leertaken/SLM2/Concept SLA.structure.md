@@ -22,19 +22,7 @@
 
 # 2 Klantdiensten
 
-## 2.2 Cloud Hosting
-
-<!-- @include Klantdiensten/Cloud Hosting/Definitie.md -->
-<!-- @include Klantdiensten/Cloud Hosting/Service Levels.md -->
-<!-- @include Klantdiensten/Cloud Hosting/Risicoanalyse.md -->
-<!-- @include Klantdiensten/Cloud Hosting/Capaciteitsplanning.md -->
-
-## 2.3 Servicedesk
-
-<!-- @include Klantdiensten/Servicedesk/Definitie.md -->
-<!-- @include Klantdiensten/Servicedesk/Service Levels.md -->
-<!-- @include Klantdiensten/Servicedesk/Risicoanalyse.md -->
-<!-- @include Klantdiensten/Servicedesk/Capaciteitsplanning.md -->
+<!-- @include Klantdiensten/Klantdiensten.md -->
 
 # 3 Tariefstructuur
 

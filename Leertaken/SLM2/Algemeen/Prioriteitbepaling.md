@@ -6,6 +6,8 @@ De onderstaand genoemde reactietijden zijn gebaseerd op het niveau 'goud'. De ve
 
 ### 1.6.1 Urgentie bepaling
 
+Onderstaand het urgentie niveau per impact op het werkproces.
+
 | Urgentie                         | Niveau     |
 | -------------------------------- | ---------- |
 | Het werkproces is niet gehinderd | Laag       |
@@ -13,6 +15,8 @@ De onderstaand genoemde reactietijden zijn gebaseerd op het niveau 'goud'. De ve
 | Het werkproces ligt stil         | Hoog       |
 
 ### 1.6.2 Impact bepaling
+
+Onderstaand het niveau per impact of gebruiker aantallen.
 
 | Impact                                   | Niveau     |
 | ---------------------------------------  | ---------- |
@@ -22,6 +26,8 @@ De onderstaand genoemde reactietijden zijn gebaseerd op het niveau 'goud'. De ve
 
 ### 1.6.3 Prioriteitentabel
 
+Onderstaand een matrix voor prioriteitbepaling aan de hand van de impact en urgentie.
+
 | Impact / Urgentie      |                     |                          |                     |
 | :--------------------- | ------------------- | ------------------------ | ------------------- |
 | _Impact Hoog_          | 3                   | 2                        | 1                   |
@@ -30,6 +36,8 @@ De onderstaand genoemde reactietijden zijn gebaseerd op het niveau 'goud'. De ve
 |                        | _Urgentie laag_     | _Urgentie Gemiddeld_     | _Urgentie Hoog_     |
 
 ### 1.6.4 Reactietijd
+
+Onderstaand de uiterlijk reactie- en doorlooptijd per prioriteit.
 
 | Prioriteit   | Reactietijd       | Doorlooptijd (planning)   |
 | ------------ | ------------      | ------------------------- |

@@ -13,13 +13,13 @@ Ten behoeve van de operationele ondersteuning van de cloud-programmatuur levert 
 
 - Systeembeheer, applicatiebeheer en onderhoud van de bovenstaande cloud-faciliteiten;
 - De voor implementatie van de cloud-programmatuur benodigde diensten, waaronder:
-  - Vooronderzoek
-  - Projectleiding
-  - Inrichting
-  - Functioneel en technisch ontwerp
-  - Programmering
-  - Testen
-  - Opleiding
-  - Klantbegeleiding
+	- Vooronderzoek
+	- Projectleiding
+	- Inrichting
+	- Functioneel en technisch ontwerp
+	- Programmering
+	- Testen
+	- Opleiding
+	- Klantbegeleiding
 - Operationele ondersteuning, te weten klantbegeleiding en eerste- en tweedelijns servicedeskondersteuning;
 - Inrichting hardware en systeemsoftware bij opdrachtgever, indien dit in de cloud-overeenkomst expliciet is vermeld.
