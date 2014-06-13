@@ -6,9 +6,9 @@
 
 <!-- @include Algemeen/Begripsbepaling.md -->
 <!-- @include Algemeen/Inleiding.md -->
-<!-- @include Algemeen/Prioriteitbepaling.md -->
 <!-- @include Algemeen/Beschrijving van de Dienstverlening.md -->
-<!-- @include Algemeen/Continuïteit van de Cloud-Dienstverlening.md -->
+<!-- @include Algemeen/Continuiteit van de Cloud-Dienstverlening.md -->
+<!-- @include Algemeen/Prioriteitbepaling.md -->
 <!-- @include Algemeen/Aansprakelijkheid.md -->
 
 # Klantdiensten

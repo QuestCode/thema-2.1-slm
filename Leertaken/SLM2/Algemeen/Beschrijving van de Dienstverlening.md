@@ -1,43 +1,50 @@
 ## Beschrijving van de Dienstverlening
 
-De opdrachtgever wil graag data in de cloud opslaan om deze zodoende makkelijk bereikbaar te maken voor alle medewerkers (Gebruikers). Data in de cloud moet beschikbaar zijn voor medewerkers die daar rechten toe hebben en moet voor hen inzichtelijk zijn en bewerkt kunnen worden. Ook moet er nieuwe data toegevoegd kunnen worden en data verwijdert kunnen worden.
+De opdrachtgever wil data in de cloud opslaan om deze makkelijk bereikbaar te maken voor alle gebruikers, ongeacht het tijdstip of de locatie. Data in de cloud moet beschikbaar zijn voor medewerkers die daar recht toe hebben. Deze gegevens moeten via de bestaande software toegankelijk gemaakt worden. Tevens moet er datamanipulatie mogelijk zijn.
 
 ### Eisen opdrachtgever
 
-Een aantal van de eisen aan deze dienst zijn:
+De eisen van de opdrachtgever aan de cloud-dienstverlening zijn:
 
-* Data is vertrouwelijk. Deze moet veilig worden opgeslagen
-* Data moet inzichtelijk zijn voor applicaties en wellicht bewerkt kunnen worden door applicaties
-* Data moet in nederland worden opgeslagen bij een betrouwbare partij met een hoge beschikbaarheid
-* Beveiliging is belangrijk (zeer belangrijke data)
-* 200 medewerkers, heel mobiel, zitten vaak bij de klant. Data moet altijd beschikbaar zijn
-* Overstappen naar de cloud moet zo snel mogelijk gerealiseerd worden
-
+- Data is vertrouwelijk, deze moet veilig worden opgeslagen;
+- Data moet inzichtelijk zijn voor applicaties en waar nodig bewerkt kunnen worden door applicaties;
+- Data moet in Nederland worden opgeslagen bij een betrouwbare partij met een hoge beschikbaarheid;
+- Data moet altijd beschikbaar zijn voor de 200 gebruikers;
+- De overstap naar de cloud moet zo snel mogelijk worden gerealiseerd.
 
 ### Beloften afdeling ICT
 
 De afdeling ICT zal ervoor instaan dat de service voldoet aan de volgende eisen:
 
-* De service zal 24/7 beschikbaar zijn zodat er op elk willekeurig tijdstip data opgevraagd kan worden.
-* Data zal worden opgeslagen in een raid configuratie zodat de data altijd veilig staat
-* Data zal weggezet worden bij een betrouwbare 3e partij in Nederland met een eigen datacenter en Backup facilitieten
-* De service zal halfjaarlijk onderworpen worden aan een security audit om zodoende te kijken of de dienst nog aan de beveiligingseisen voldoet.
-* De service zal voldoen aan een minimale uptime van 99%
-* De data zal bereikbaar zijn voor interne applicaties door gebruik te maken van een beveiligings certificaat en een ssl beveiligde verbinding.
-
+- De service zal 24/7 beschikbaar zijn, zodat op elk willekeurig moment data opgevraagd kan worden;
+- Meerdere kopieën van de data zullen worden opgeslagen;
+- Data zal worden weggezet bij een betrouwbare derde partij in Nederland met een eigen datacenter en back-up faciliteiten;
+- De service zal halfjaarlijk onderworpen worden aan een security audit om de beveiligingseisen te verifiëren;
+- De service zal voldoen aan een minimale uptime van 98%;
+- De data zal bereikbaar zijn voor interne applicaties die gebruik maken van een beveiligde verbinding.
 
 ### Diensten
 
-De afdeling ICT heeft de volgende cloud-faciliteiten in eigendom en stelt deze ter beschikking om opdrachtgever in staat te stellen via internet met de in de cloud-overeenkomst aangegeven cloud-programmatuur te werken:
+De afdeling ICT heeft de volgende cloud-faciliteiten in beheer:
 
-* Een cloud-server met bijbehorende systeemprogrammatuur.
-* De in de cloud-overeenkomst aangegeven cloud-programmatuur.
-* De voor het werken via internet benodigde technische infrastructuur, zoals routers, modems, bekabeling, en dergelijke.
-* de overige benodigde infrastructuur, zoals fysieke ruimte, elektra en dergelijke.
+- Een cloud-server met bijbehorende systeemprogrammatuur;
+- De in de cloud-overeenkomst aangegeven cloud-programmatuur;
+- De voor het werken via internet benodigde technische infrastructuur (zoals routers, modems, bekabeling, etc.);
+- De overige benodigde infrastructuur, zoals fysieke ruimte, elektra en dergelijke.
+
+Deze faciliteiten bieden gebruikers de mogelijkheid om via het internet gebruik te maken van de cloud-dienst en bijbehorende cloud-programmatuur.
 
 Ten behoeve van de operationele ondersteuning van de cloud-programmatuur levert de afdeling ICT de volgende diensten:
 
-* Systeembeheer, applicatiebeheer en onderhoud van de bovenstaande cloud-faciliteiten.
-* De voor implementatie van de cloud-programmatuur benodigde diensten, zoals vooronderzoek, projectleiding, inrichting, functioneel en technisch ontwerp, programmering, testen, opleiding en klantbegeleiding.
-* Operationele ondersteuning, te weten klantbegeleiding en eerstelijns en tweedelijns helpdeskondersteuning.
-* Inrichting hardware en systeemsoftware bij opdrachtgever, indien dit in de cloud-overeenkomst expliciet is vermeld.
+- Systeembeheer, applicatiebeheer en onderhoud van de bovenstaande cloud-faciliteiten;
+- De voor implementatie van de cloud-programmatuur benodigde diensten, waaronder:
+	- Vooronderzoek
+	- Projectleiding
+	- Inrichting
+	- Functioneel en technisch ontwerp
+	- Programmering
+	- Testen
+	- Opleiding
+	- Klantbegeleiding
+- Operationele ondersteuning, te weten klantbegeleiding en eerste- en tweedelijns helpdeskondersteuning;
+- Inrichting hardware en systeemsoftware bij opdrachtgever, indien dit in de cloud-overeenkomst expliciet is vermeld.
