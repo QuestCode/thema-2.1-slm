@@ -32,7 +32,7 @@
 <!-- @include Tariefstructuur/Eenmalige Kosten.md -->
 <!-- @include Tariefstructuur/Structurele Kosten.md -->
 <!-- @include Tariefstructuur/Niveau's van Dienstverlening.md -->
-<!-- @include Tariefstructuur/Helpdeskondersteuning.md -->
+<!-- @include Tariefstructuur/Servicedeskondersteuning.md -->
 
 # Implementatie en Condities
 

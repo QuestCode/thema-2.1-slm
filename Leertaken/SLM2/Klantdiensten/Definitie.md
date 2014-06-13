@@ -27,12 +27,12 @@ Ten behoeve van de operationele ondersteuning van de cloud-programmatuur levert 
 	- Testen
 	- Opleiding
 	- Klantbegeleiding
-- Operationele ondersteuning, te weten klantbegeleiding en eerste- en tweedelijns helpdeskondersteuning;
+- Operationele ondersteuning, te weten klantbegeleiding en eerste- en tweedelijns servicedeskondersteuning;
 - Inrichting hardware en systeemsoftware bij opdrachtgever, indien dit in de cloud-overeenkomst expliciet is vermeld.
 
 ### Servicedesk
 
-Team4S biedt ter ondersteuning van de Cloud dienst een servicedesk. Deze servicedesk is gevestigd in Nederland en is beschikbaar voor alle werknemers van Team4S in zowel Nederland als Duitsland. De helpdesk zal van 8:00 tot 17:30 beschikbaar zijn, met uitzondering van algemeen erkende feestdagen in Nederland. De servicedesk zal zowel in de Duitse als Nederlandse taal bekwaam zijn.
+Team4S biedt ter ondersteuning van de Cloud dienst een servicedesk. Deze servicedesk is gevestigd in Nederland en is beschikbaar voor alle werknemers van Team4S in zowel Nederland als Duitsland. De servicedesk zal van 8:00 tot 17:30 beschikbaar zijn, met uitzondering van algemeen erkende feestdagen in Nederland. Medewerkers van de servicedesk zullen zowel in de Duitse als Nederlandse taal bekwaam zijn.
 
 Werknemers kunnen contact opnemen met de servicedesk voor:
 
