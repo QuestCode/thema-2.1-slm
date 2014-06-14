@@ -2,25 +2,28 @@
 
 - Klantdiensten
 	- Cloud Hosting
-		- [ ] Capaciteitsplanning (aan het eind) [Allemaal]
-		- [x] Risicoanalyse [Yuri]
+		- [ ] Capaciteitsplanning (afmaken)
+		- [x] Risicoanalyse
 	- Servicedesk
-		- [ ] Capaciteitsplanning (aan het eind) [Allemaal]
-		- [ ] Risicoanalyse [Yuri]
+		- [ ] Capaciteitsplanning (afmaken)
+		- [ ] Risicoanalyse (controleren)
 - Implementaties en Condities
-	- [ ] Eisen aan Infrastructuur [Maurits]
-	- [ ] Geschatte Opleverdatum [Maurits]
+	- [x] Eisen aan Infrastructuur
+	- [x] Geschatte Opleverdatum
 	- [x] Proefperiode [Andre]
 	- [x] Bonus en Malus [Andre]
 - Tariefstructuur
-	- [x] Eenmalige kosten [Tom]
-	- [x] Structurele kosten [Tom]
-	- [ ] Niveau's van Dienstverlening [Tom]
-	- [x] Servicedeskondersteuning [Tom]
+	- [x] Eenmalige kosten
+	- [x] Structurele kosten
+	- [ ] Niveau's van Dienstverlening
+		- Opsommen verschillen per pakket
+		- Vergelijken met voorbeelden
+		- Maken tabel met aangeboden pakketten
+	- [x] Servicedeskondersteuning
 - Rapportageverplichtingen
-	- [x] Voorbeeld Service Level Rapport [Andre]
-	- [x] Service Review [Andre]
-	- [x] Proefperiode Rapportage [Andre]
+	- [x] Voorbeeld Service Level Rapport
+	- [x] Service Review
+	- [x] Proefperiode Rapportage
 - Verklarende Woordenlijst (aan het eind) [Maurits]
 	- [ ] Alfabetische volgorde
 	- [ ] Toelichten termen (bijv. m.b.h.v. bronverwijzing)
@@ -28,4 +31,4 @@
 	- [ ] Inhoudsopgave [Maurits]
 	- [ ] Controleren volledigheid [Allemaal]
 	- [ ] Genereren PDF (goed zetten hoofdstukken, checken stijl) [Maurits]
-	- [ ] Maken en voorbereiden presentatie (maandag)
+	- [ ] Maken en voorbereiden presentatie (maandag) [Allemaal]
