@@ -46,9 +46,9 @@ __Data moet overal beschikbaar zijn voor de gebruikers.__
 
 __Beschikbaarheid van recente backups.__
 
-| Meeteenheid                               | Doel | Bron                                                                                  |
-| :----------                               | :--- | :---                                                                                  |
-| Aantal onopgelost integriteitsincidenten. | 0    | Aantal binnengekomen integriteitsincidenten waarbij de data niet herstelt kan worden. |
+| Meeteenheid                                | Doel | Bron                                                                                  |
+| :----------                                | :--- | :---                                                                                  |
+| Aantal onopgeloste integriteitsincidenten. | 0    | Aantal binnengekomen integriteitsincidenten waarbij de data niet herstelt kan worden. |
 
 __Vertrouwelijkheid van de data.__
 
@@ -64,7 +64,7 @@ __Vertrouwelijkheid van de data.__
 #### Uitvoeren van onderhoud
 
 Onderhoud aan de dienst zal plaatsvinden op standaard tijden. Dit zal zijn op dinsdagavond tussen 19:00 en 21:00 uur buiten piekperiodes.
-Wanneer er met spoed onderhoud moet worden gepleegd (omdat de continuiteit of intergriteit van de dienst anders niet gewaarborgd kunnen worden) zal dit in overleg met opdrachtgever plaatsvinden en vooraf worden gecommuniceerd naar de gebruikers.
+Wanneer er met spoed onderhoud moet worden gepleegd (omdat de continuïteit of intergriteit van de dienst anders niet gewaarborgd kunnen worden) zal dit in overleg met opdrachtgever plaatsvinden en vooraf worden gecommuniceerd naar de gebruikers.
 
 Duur van onderhoud zal subjectief zijn aan de uptime garantie en zal zodoende nooit langer kunnen duren dan 15 minuten per dag buiten piekuren en 4 minuten per dag binnen de piekuren.
 

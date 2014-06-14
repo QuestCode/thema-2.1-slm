@@ -23,3 +23,5 @@ Ten behoeve van de operationele ondersteuning van de cloud-programmatuur levert 
 	- Klantbegeleiding
 - Operationele ondersteuning, te weten klantbegeleiding en eerste- en tweedelijns servicedeskondersteuning;
 - Inrichting hardware en systeemsoftware bij opdrachtgever, indien dit in de cloud-overeenkomst expliciet is vermeld.
+
+De afdeling ICT schat de initiële hoeveelheid van data op 800 gigabyte met een lineaire groei van 10 gigabyte per maand.
