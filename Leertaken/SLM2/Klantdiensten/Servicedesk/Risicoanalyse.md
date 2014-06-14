@@ -4,8 +4,8 @@ Ook in de servicedesk kunnen er een aantal risico's vastgesteld worden. Zo kunne
 
 #### Risicobeschrijvingen
 
-| Risico              | Kans      | Gevolg    |
-| ---                 | ---       | ---       |
+| Risico              | Kans      | Impact    |
+| :---                | :---      | :---      |
 | Telefoonstoring     | Laag      | Gemiddeld |
 | Online-chat storing | Gemiddeld | Laag      |
 | Email storing       | Laag      | Laag      |
