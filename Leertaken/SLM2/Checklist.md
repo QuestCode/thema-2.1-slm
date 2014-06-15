@@ -2,11 +2,12 @@
 
 - Klantdiensten
 	- Cloud Hosting
-		- [ ] Capaciteitsplanning (afmaken)
+		- [x] Capaciteitsplanning
 		- [x] Risicoanalyse
+		- [ ] Betrouwbaarheid
 	- Servicedesk
-		- [ ] Capaciteitsplanning (afmaken)
-		- [ ] Risicoanalyse (controleren)
+		- [x] Capaciteitsplanning
+		- [x] Risicoanalyse
 - Implementaties en Condities
 	- [x] Eisen aan Infrastructuur
 	- [x] Geschatte Opleverdatum
@@ -24,9 +25,9 @@
 	- [x] Voorbeeld Service Level Rapport
 	- [x] Service Review
 	- [x] Proefperiode Rapportage
-- Verklarende Woordenlijst (aan het eind) [Maurits]
+- Verklarende Woordenlijst (aan het eind)
 	- [ ] Alfabetische volgorde
-	- [ ] Toelichten termen (bijv. m.b.h.v. bronverwijzing)
+	- [ ] Toelichten termen (bijv. a.d.h.v. bronverwijzing)
 - Afronding
 	- [ ] Inhoudsopgave [Maurits]
 	- [ ] Controleren volledigheid [Allemaal]
