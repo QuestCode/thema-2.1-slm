@@ -10,7 +10,11 @@ In verband met het verwerken van salarissen en andere kritieke processen worden 
 
 #### Prestaties
 
-Voor het bepalen van prestaties zijn er Critical Success Factors (CSFs) opgesteld en hier vervolgens de Key Performance Indicators (KPIs) van afgeleid. Deze worden in de komende paragrafen beschreven.
+Voor het bepalen van prestaties (Service Level Targets) zijn er Critical Success Factors (CSFs) opgesteld en hier vervolgens de Key Performance Indicators (KPIs) van afgeleid. Deze worden in de komende paragrafen beschreven.
+
+> Beschrijven tijden voor het ophalen van data
+
+> “Monday through Friday, from 8am EST to 5pmEST, when operating under normal conditions (where normal means not in dial-backup) an authorized user of the system can retrieve a customer record in less than 5 seconds. No more than 10 times during the month when operating under normal conditions will any record take more than 30 seconds to retrieve.”
 
 ##### Critical Success Factors
 
@@ -60,6 +64,8 @@ __Vertrouwelijkheid van de data.__
 #### Betrouwbaarheid
 
 > MTBSI of MTBF
+
+> “Average mean time to repair (MTTR) where MTTR means the elapsed time from acknowledgement of receipt to restoration of normal activities shall be no longer than 4 hours. Any incident with MTTR of more than 4 hours will be reviewed by a specialist to determine why, and those reasons shall be shared with the customer at the customers’ discretion and convenience.”
 
 #### Uitvoeren van onderhoud
 

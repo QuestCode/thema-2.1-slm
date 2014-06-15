@@ -4,6 +4,8 @@
 
 De servicedesk zal dagelijks van 8:00 tot 17:30 beschikbaar zijn. De beschikbaarheid van de servicedesk is maximaal 99,9%.
 
+Onderstaand worden, naar aanleiding van de Service Level Targets, de Critical Success Factors en Key Performance Indicators toegelicht.
+
 ##### Critical Success Factors
 
 De volgende punten zijn kritiek in het succesvol draaiend houden van de servicedesk:

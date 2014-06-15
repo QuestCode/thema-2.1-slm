@@ -4,6 +4,7 @@
 	- Cloud Hosting
 		- [x] Capaciteitsplanning
 		- [x] Risicoanalyse
+		- [ ] Prestaties
 		- [ ] Betrouwbaarheid
 	- Servicedesk
 		- [x] Capaciteitsplanning
