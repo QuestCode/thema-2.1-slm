@@ -31,9 +31,9 @@ SLM life cycle:
 
 1. SLA management
 2. Monitor and report					]
-3. Service review						] loop
+3. Service review						] = loop
 4. Service improvement plan (SIP) 		]
-5. Continual Process Improvement (CPI)
+5. Continual Process Improvement (CPI)	= outer loop
 
 Implement SLM steps:
 
@@ -90,7 +90,7 @@ Service Structure Document (before SLA) contains high level overview of services
 
 1. Stakeholders/involved parties
 2. Boundaries of SLM
-3. Topis:
+3. Topics:
 
 	- Service scope
 	- Financial implications
@@ -170,7 +170,7 @@ Parts of SLA:
 
 9. Service objective table (service level targets)
 
-Quality indicators of SLA:
+Four quality indicators of SLA:
 
 1. __Availability__
 2. __Integrity__ (of data and information)
@@ -508,7 +508,7 @@ Alle SLM'ers op één afdeling.
 
 Agile en SCRUM worden gebruikt in beheer.
 
-Extended Resource Team (near-shoring), partij in Servië.\
+Extended Resource Team (near-shoring), partij in Servië.
 
 Fasen:
 
@@ -592,13 +592,13 @@ Tooling:
 4. Sharepoint
 5. Monitoringsoftware
 
-## Klanttevredenheidsonderzoek
+### Klanttevredenheidsonderzoek
 
 Practief incidenten voorkomen door __trends rapportage__ met oog op hardware, applicaties, besturingssytemen, etc. (CIs).
 
 Steekproefgewijs.
 
-## Klantteams
+### Klantteams
 
 Dedicated en shared (oplosgroepen).
 
@@ -606,7 +606,7 @@ Servicemanagere heeft gedeelde verantwoorelijkheid voor uitvoering met klantteam
 
 Ordina doet geen werkplekbeheer.
 
-## Tot slot
+### Tot slot
 
 Het service plan wordt met de klant geëvalueerd.
 
@@ -616,3 +616,13 @@ Impactanalyse om het volgende te bepalen:
 2. Tijd
 3. Planning
 4. Kosten
+
+## Seven secrets of SLM
+
+1. Service level reporting is not service level management
+2. Effective SLM requires clear, service-oriented SLAs
+3. Effective SLM requires definition of multiple Requirements and Targets
+4. Effective SLRs & SLTs require LOB alignment
+5. Effective SLA’s require breadth and depth
+6. Effective SLA’s require multiple data sources
+7. Effective SLM requires automation

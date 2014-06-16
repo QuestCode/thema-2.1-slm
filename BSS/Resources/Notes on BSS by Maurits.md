@@ -27,11 +27,14 @@ Deadlock conditions		 = mutual exclusion, hold and wait, no preemption, circular
 MMU						 = Memory Management Unit, relocation register
 External fragmentation	 = wasted space in memory (on contigious allocation)
 Internal fragmentation	 = wasted space in memory block
+DMA						 = Direct Memory Access
 EAT						 = effective access time
 PTBR					 = Page Table Base Register
 PTLR					 = Page Table Length Register
 Page sharing			 = loading read-only binaries only once
 Modify (dirty) bit		 = indicate wether virtual memory is equal to value on disk
+User level thread		 = green thread, thread spawned by program, mapped to kernel thread
+						 = one-to-one, many-to-one, many-to-many, two-level (O:O and M:M)
 
 
 Components of computer system:
@@ -39,7 +42,7 @@ Components of computer system:
 1. Hardware
 2. [Virtualization layer]
 3. Operating System
-4. Applications
+4. System and application programs
 5. Users
 
 Address bindings:
@@ -60,6 +63,21 @@ Memory allocation:
 3. Segmentation (sections for each type)
 
 Page size == frame size
+
+Process states:
+
+1. New
+2. Ready (after admitted, interrupt, or I/O or event completion)
+3. Running (after scheduler dispatch)
+4. Waiting (after I/O or event wait)
+5. Terminated (after exit)
+
+Thread states:
+
+1. New (after init)
+2. Runnable (after start or I/O available)
+3. Blocked (after I/O or sleep)
+4. Done (after exit of run method)
 
 ## Virtual Memory
 
