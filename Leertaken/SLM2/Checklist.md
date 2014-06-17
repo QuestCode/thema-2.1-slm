@@ -10,7 +10,7 @@
 			- Zie notes in SLM/Resources map
 		- [ ] Prestaties
 		- [ ] Betrouwbaarheid
-		- [ ] Loss time
+		- [x] Loss time
 			- Norm voor verliestijd per event (bijv. 2 uur)
 			- Norm voor totale verliestijd in contractperiode (bijv 2%)
 	- Servicedesk
