@@ -14,6 +14,8 @@ Onderstaand het urgentie niveau per impact op het werkproces.
 | Het werkproces is gehinderd      | Gemiddeld  |
 | Het werkproces ligt stil         | Hoog       |
 
+---
+
 ### 1.7.2 Impact bepaling
 
 Onderstaand het niveau per impact of gebruiker aantallen.

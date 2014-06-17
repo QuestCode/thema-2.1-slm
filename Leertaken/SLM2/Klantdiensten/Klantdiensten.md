@@ -7,9 +7,14 @@ In dit hoofdstuk worden de klantdiensten (cloud-hosting en servicedesk) beschrev
 <!-- @include Cloud Hosting/Risicoanalyse.md -->
 <!-- @include Cloud Hosting/Capaciteitsplanning.md -->
 
+---
+
 ## 2.2 Servicedesk
 
 <!-- @include Servicedesk/Definitie.md -->
 <!-- @include Servicedesk/Service Levels.md -->
+
+---
+
 <!-- @include Servicedesk/Risicoanalyse.md -->
 <!-- @include Servicedesk/Capaciteitsplanning.md -->

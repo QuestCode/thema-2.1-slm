@@ -26,5 +26,5 @@ Onderstaand verklaring van de in deze SLA gebruikte vaktermen in alfabetische vo
 
 - __VPN verbinding__
 
-	> Een VPN is een netwerk dat door een ander netwerk (gewoonlijk het internet)[1] getunneld wordt.
+	> Een VPN is een netwerk dat door een ander netwerk (gewoonlijk het internet) getunneld wordt.
 	> --- https://nl.wikipedia.org/wiki/Virtueel\_Particulier\_Netwerk

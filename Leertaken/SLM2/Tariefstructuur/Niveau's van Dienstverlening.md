@@ -26,6 +26,8 @@ In de volgende tabel worden de risico's uiteengezet tegen de maatregelen per niv
 | Storing serversoftware                    | Onderhoudsabonnement afsluiten bij softwareleverancier         | Personeel bijscholen           | -      | 1      | 1 & 2 |
 | Schijfuitval Server                       | Jaarlijks schijfeenheden nalopen en vervangen                  | Raid 10 toepassen              | -      | 1      | 1 & 2 |
 
+---
+
 ### Servicedesk
 
 | Servicedesk                                       | Brons        | Zilver      | Goud        |

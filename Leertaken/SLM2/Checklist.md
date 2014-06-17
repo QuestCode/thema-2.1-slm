@@ -35,9 +35,9 @@
 	- [x] Alfabetische volgorde
 	- [x] Toelichten termen (bijv. a.d.h.v. bronverwijzing)
 - Afronding
-	- [ ] Inhoudsopgave [Maurits]
+	- [x] Inhoudsopgave [Maurits]
 	- [x] Pagina voor handtekeningen aan eind [Maurits]
 	- [x] Controleren volledigheid [Allemaal]
-	- [ ] Genereren PDF (goed zetten hoofdstukken, checken stijl) [Maurits]
-	- [ ] Printen [Andre]
+	- [x] Genereren PDF (goed zetten hoofdstukken, checken stijl) [Maurits]
+	- [x] Printen [Andre]
 	- [x] Maken en voorbereiden presentatie (maandag) [Allemaal]

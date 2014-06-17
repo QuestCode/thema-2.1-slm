@@ -112,6 +112,8 @@ In de volgende tabel worden de risico's uiteengezet tegen impact, gevolgschade, 
 	</tbody>
 </table>
 
+---
+
 #### Maatregelbeschrijvingen
 
 In de volgende tabel worden de risico's uiteengezet tegen de maatregelen.

@@ -51,6 +51,8 @@ __Data moet overal beschikbaar zijn voor de gebruikers.__
 | Aantal gemiddelde prioriteit incidenten. | < 20 | Aantal binnengekomen incidenten over de service bij de servicedesk met een gemiddelde prioriteit. |
 | Aantal lage prioriteit incidenten.       | < 50 | Aantal binnengekomen incidenten over de service bij de servicedesk met een lage prioriteit.       |
 
+---
+
 __Beschikbaarheid van recente backups.__
 
 | Meeteenheid                                | Doel | Bron                                                                                  |
@@ -144,6 +146,8 @@ Ook de klant zal een aantal voorzorgsmaatregelen moeten treffen om de integritei
 
 - Als de werknemer via een publiek netwerk ('hotspot') verbinding maakt zal deze eerst een VPN verbinding moeten opzetten.
 - Indien de werknemer vermoedt dat een derde zich toegang tot zijn/haar account kan verschaffen dient de werknemer onmiddelijk zijn wachtwoord te veranderen en contact op te nemen met de servicedesk.
+
+---
 
 ##### Monitoring
 

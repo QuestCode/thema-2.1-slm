@@ -27,6 +27,7 @@ __Het tijdig reageren op incidenten.__
 | Gemiddelde reactietijd per incident met gemiddelde prioriteit. | < 1 uur      | Gemiddelde van de reactietijden van de incidenten met een gemiddelde prioriteit. |
 | Gemiddelde reactietijd per incident met lage prioriteit.       | < 8 uur      | Gemiddelde van de reactietijden van de incidenten met een lage prioriteit.       |
 
+---
 
 __Het tijdig oplossen van incidenten.__
 
