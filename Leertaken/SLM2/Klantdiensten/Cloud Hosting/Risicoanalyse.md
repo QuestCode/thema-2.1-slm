@@ -24,3 +24,109 @@ In de volgende tabel worden de risico's uiteengezet tegen de maatregelen per niv
 | DDoS aanval op datacenter                 | Software om DDoS te voorkomen                                  | Interventieplan DDoS opzetten. | x      | 1      | 1 & 2 |
 | Storing serversoftware                    | Onderhoudsabonnement afsluiten bij softwareleverancier         | Personeel bijscholen           | x      | 1      | 1 & 2 |
 | Schijfuitval Server                       | Jaarlijks schijfeenheden nalopen en vervangen                  | Raid 10 toepassen              | x      | 1      | 1 & 2 |
+
+<table>
+	<thead>
+	  <tr>
+	    <th>Dienst</th>
+	    <th></th>
+	    <th>Cloudhosting</th>
+	    <th></th>
+	    <th></th>
+	    <th></th>
+	    <th></th>
+	    <th></th>
+	    <th></th>
+	  </tr>
+	</thead>
+	<tbody>
+	  <tr>
+	    <td>Betrouwbaarheidseisen</td>
+	    <td></td>
+	    <td>Beschikbaarheid</td>
+	    <td>Integriteit</td>
+	    <td>Exclusiviteit</td>
+	    <td>RISICO</td>
+	    <td>Beschikbaarheid</td>
+	    <td>Integriteit</td>
+	    <td>Exclusiviteit</td>
+	  </tr>
+	  <tr>
+	    <td></td>
+	    <td></td>
+	    <td>Hoog</td>
+	    <td>Hoog</td>
+	    <td>Hoog</td>
+	    <td>&nbsp;&nbsp;</td>
+	    <td>&nbsp;&nbsp;</td>
+	    <td>&nbsp;&nbsp;</td>
+	    <td>&nbsp;&nbsp;</td>
+	  </tr>
+	  <tr>
+	    <td></td>
+	    <td>Impact</td>
+	    <td></td>
+	    <td>Gevolgschade</td>
+	    <td></td>
+	    <td>Kans</td>
+	    <td>&nbsp;&nbsp;</td>
+	    <td>RISICO</td>
+	    <td>&nbsp;&nbsp;</td>
+	  </tr>
+	  <tr>
+	    <td>Externe cloudhosting partij gaat failliet</td>
+	    <td>Hoog</td>
+	    <td>Hoog</td>
+	    <td>Hoog</td>
+	    <td></td>
+	    <td>Laag</td>
+	    <td>Gemiddeld</td>
+	    <td>Gemiddeld</td>
+	    <td></td>
+	  </tr>
+	  <tr>
+	    <td>Internetstoring</td>
+	    <td>Laag</td>
+	    <td>Hoog</td>
+	    <td>Laag</td>
+	    <td></td>
+	    <td>Laag</td>
+	    <td>Gemiddeld</td>
+	    <td>Laag</td>
+	    <td></td>
+	  </tr>
+	  <tr>
+	    <td>DDoS aanval op datacenter</td>
+	    <td>Hoog</td>
+	    <td>Hoog</td>
+	    <td>Laag</td>
+	    <td>Gemiddeld</td>
+	    <td>Laag</td>
+	    <td>Gemiddeld</td>
+	    <td>Laag</td>
+	    <td>Laag</td>
+	  </tr>
+	  <tr>
+	    <td>Storing serversoftware</td>
+	    <td>Hoog</td>
+	    <td>Hoog</td>
+	    <td>Laag</td>
+	    <td></td>
+	    <td>Gemiddeld</td>
+	    <td>Hoog</td>
+	    <td>Laag</td>
+	    <td></td>
+	  </tr>
+	  <tr>
+	    <td>Schijfuitval server</td>
+	    <td>Gemiddeld</td>
+	    <td>Hoog</td>
+	    <td>Laag</td>
+	    <td></td>
+	    <td>Gemiddeld</td>
+	    <td>Hoog</td>
+	    <td>Gemiddeld</td>
+	    <td></td>
+	  </tr>
+	</tbody>
+</table>
