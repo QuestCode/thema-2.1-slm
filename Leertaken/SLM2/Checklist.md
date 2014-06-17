@@ -38,4 +38,5 @@
 	- [ ] Inhoudsopgave [Maurits]
 	- [ ] Controleren volledigheid [Allemaal]
 	- [ ] Genereren PDF (goed zetten hoofdstukken, checken stijl) [Maurits]
+	- [ ] Printen [Andre]
 	- [ ] Maken en voorbereiden presentatie (maandag) [Allemaal]
