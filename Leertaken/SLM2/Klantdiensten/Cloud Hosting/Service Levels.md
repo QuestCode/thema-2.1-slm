@@ -67,6 +67,14 @@ __Vertrouwelijkheid van de data.__
 
 > “Average mean time to repair (MTTR) where MTTR means the elapsed time from acknowledgement of receipt to restoration of normal activities shall be no longer than 4 hours. Any incident with MTTR of more than 4 hours will be reviewed by a specialist to determine why, and those reasons shall be shared with the customer at the customers’ discretion and convenience.”
 
+#### Verliestijd
+
+Voor het leveren van de cloud-dienst wordt gestreven naar een minimale verliestijd. De verliestijd is de hoeveelheid uren bij een integriteitsincident die verloren gaan. Wanneer een integriteitsincident zich voordoet wordt gebruik gemaakt van de laatst gemaakte backups. In de paragraaf _Backups_ wordt beschreven dat elke nacht een backup wordt gemaakt van de data. 
+
+Dit betekent dat wanneer een integriteitsincident zich voordoet er gemiddeld 4 uur en drie kwartier aan verliestijd ontstaat (uitgaand van een opstellingstijd van 08:00 tot 17:30). Dir betekend dat de norm voor dataverlies per integriteits incident niet meer dan 5 uur is. De norm voor de totale verliestijd over de contractperiode is maximaal 2%. 
+
+Wanneer een van de bovenstaande normen niet behaald wordt, wordt in samenwerking tussen de afdeling ICT en de opdrachtgever een dienstreview gedaan van de cloud-dienst om te bepalen waarom de gestelde norm(en) niet worden behaald.
+
 #### Uitvoeren van onderhoud
 
 Onderhoud aan de dienst zal plaatsvinden op standaard tijden. Dit zal zijn op dinsdagavond tussen 19:00 en 21:00 uur buiten piekperiodes.
