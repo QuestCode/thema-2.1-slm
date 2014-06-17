@@ -14,7 +14,6 @@
 	- Servicedesk
 		- [WTF] Capaciteitsplanning [Ward]
 		- [ ] Risicoanalyse [Yuri]
-		- [ ] Loss time [Andre]
 - Implementaties en Condities
 	- [x] Eisen aan Infrastructuur
 	- [x] Geschatte Opleverdatum
