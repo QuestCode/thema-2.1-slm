@@ -22,7 +22,7 @@
 - Tariefstructuur
 	- [x] Eenmalige kosten
 	- [x] Structurele kosten
-	- [ ] Niveau's van Dienstverlening
+	- [ ] Niveau's van Dienstverlening [Allemaal]
 		- Opsommen verschillen per pakket
 		- Vergelijken met voorbeelden
 		- Maken tabel met aangeboden pakketten
@@ -36,6 +36,7 @@
 	- [ ] Toelichten termen (bijv. a.d.h.v. bronverwijzing)
 - Afronding
 	- [ ] Inhoudsopgave [Maurits]
+	- [ ] Pagina voor handtekeningen aan eind [Tom]
 	- [ ] Controleren volledigheid [Allemaal]
 	- [ ] Genereren PDF (goed zetten hoofdstukken, checken stijl) [Maurits]
 	- [ ] Printen [Andre]

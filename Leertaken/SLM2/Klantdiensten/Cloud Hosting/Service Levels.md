@@ -86,7 +86,24 @@ Wanneer een van de bovenstaande normen niet behaald wordt, wordt in samenwerking
 Onderhoud aan de dienst zal plaatsvinden op standaard tijden. Dit zal zijn op dinsdagavond tussen 19:00 en 21:00 uur buiten piekperiodes.
 Wanneer er met spoed onderhoud moet worden gepleegd (omdat de continuïteit of intergriteit van de dienst anders niet gewaarborgd kan worden) zal dit in overleg met opdrachtgever plaatsvinden en vooraf worden gecommuniceerd naar de gebruikers.
 
-Duur van onderhoud zal subjectief zijn aan de uptime garantie en zal zodoende nooit langer kunnen duren dan 15 minuten per dag buiten piekuren en 4 minuten per dag binnen de piekuren.
+Duur van onderhoud zal subjectief zijn aan de uptime garantie en zal zodoende nooit langer kunnen duren dan 2 uur en 16 minuten per week buiten piekuren en 23 minuten per week binnen de piekuren.
+
+__Berekening:__
+
+Een jaar heeft 365,25 dagen (kwart dag is voor schikkeljaren).
+Van de 25e t/m het einde van de maand is per jaar 65,25 dagen.
+De piekperiodes bevatten gemiddeld 5 werkdagen.
+
+| Moment              | Dagen                         | Uren                        | Availability 99,5% | Maximale downtime op jaarbasis |
+| :---                | :---                          | :---                        | :---               | :---                           |
+| Piekuren            | 65,25                         | 65,25 * 24 = 1566           | 99,5%              | 1566 * (100% - 99,5%) = 7,83   |
+| Openstellingstijden | 365,25 - 65,25 - 12 * 5 = 240 | 240 * 9,5 = 2280            | 99,5%              | 2280 * (100% - 99,5%) = 11,4   |
+| __Subtotaal__       | __305,25__                    | __3846__                    |                    | __19,23__                      |
+| Overig              | 365,25 - 305,25 = 60          | (365,25 * 24) - 3846 = 4920 | 98%                | 4920 * (100% - 98%) = 98,4     |
+| __Totaal__          | __365,25__                    | __8766__                    |                    | __117,63__                     |
+
+De maximale downtime per week tijdens piekuren en openstellingstijden is: 19,23 / 52 = 0,37 uur = 22,2 minuten.
+Voor de overige tijden geldt een wekelijkse maximale downtime van: 117,63 / 52 = 2,26 uur = 2 uur en 15,6 minuten.
 
 #### Verwachte maximale aantal problems per jaar
 
