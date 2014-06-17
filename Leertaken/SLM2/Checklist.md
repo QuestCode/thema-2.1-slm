@@ -36,7 +36,7 @@
 	- [x] Toelichten termen (bijv. a.d.h.v. bronverwijzing)
 - Afronding
 	- [ ] Inhoudsopgave [Maurits]
-	- [ ] Pagina voor handtekeningen aan eind [Tom]
+	- [x] Pagina voor handtekeningen aan eind [Maurits]
 	- [ ] Controleren volledigheid [Allemaal]
 	- [ ] Genereren PDF (goed zetten hoofdstukken, checken stijl) [Maurits]
 	- [ ] Printen [Andre]
