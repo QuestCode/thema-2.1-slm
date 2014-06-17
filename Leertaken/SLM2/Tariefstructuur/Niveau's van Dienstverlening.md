@@ -1,6 +1,8 @@
 ## 3.4 Niveau's van Dienstverlening
 
-Onderstaand de verschillen in niveau's van de dienstverlening opgedeeld in brons, zilver en goud.
+Onderstaand worden de klant- en basisdiensten uiteengezet tegen de beschikbare niveau's dienstverlening (brons, zilver en goed).
+
+### Cloud Hosting
 
 | Cloud-dienst                                      | Brons         | Zilver       | Goud         |
 | :-----------                                      | :----         | :-----       | :---         |
@@ -14,6 +16,17 @@ Onderstaand de verschillen in niveau's van de dienstverlening opgedeeld in brons
 | Aantal serverinbraken.                            | 2             | 1            | 0            |
 | Cijfer beveiligingsrapportage.                    | n.v.t.        | 7            | 8            |
 | Aantal onopgeloste integriteitsincidenten.        | 5             | 3            | 0            |
+
+In de volgende tabel worden de risico's uiteengezet tegen de maatregelen per niveau van dienstverlening.
+
+| Risico                                    | Maatregel 1                                                    | Maatregel 2                    | Bronze | Silver | Gold  |
+| ---                                       | ---                                                            | ---                            | ---    | ---    | ---   |
+| Externe cloudhosting partij gaat failliet | Bij kiezen van externe partij een sterkte-zwakteanalyse maken. |                                | -      | 1      | 1     |
+| DDoS aanval op datacenter                 | Software om DDoS te voorkomen                                  | Interventieplan DDoS opzetten. | -      | 1      | 1 & 2 |
+| Storing serversoftware                    | Onderhoudsabonnement afsluiten bij softwareleverancier         | Personeel bijscholen           | -      | 1      | 1 & 2 |
+| Schijfuitval Server                       | Jaarlijks schijfeenheden nalopen en vervangen                  | Raid 10 toepassen              | -      | 1      | 1 & 2 |
+
+### Servicedesk
 
 | Servicedesk                                       | Brons        | Zilver      | Goud        |
 | :----------                                       | :----        | :-----      | :---        |
@@ -35,4 +48,4 @@ Onderstaand de verschillen in niveau's van de dienstverlening opgedeeld in brons
 | Cloud-hosting                                   | € 3.600,-      | € 4.300,-     | € 4.800,-      |
 | Licenties voor cloud-software                   | € 1.200,-      | € 1.200,-     | € 1.200,-      |
 | Medewerkers servicedesk                         | € 8.000,-      | € 10.500,-    | € 12.000,-     |
-| <div style="text-align:right">__Totaal:__</div> | __€ 12.800,-__ | __€16.000,-__ | __€ 18.000,-__ |
+| <div style="te-t-align:right">__Totaal:__</div> | __€ 12.800,-__ | __€16.000,-__ | __€ 18.000,-__ |

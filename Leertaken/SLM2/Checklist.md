@@ -22,7 +22,7 @@
 - Tariefstructuur
 	- [x] Eenmalige kosten
 	- [x] Structurele kosten
-	- [ ] Niveau's van Dienstverlening [Allemaal]
+	- [x] Niveau's van Dienstverlening [Allemaal]
 		- Opsommen verschillen per pakket
 		- Vergelijken met voorbeelden
 		- Maken tabel met aangeboden pakketten
@@ -37,7 +37,7 @@
 - Afronding
 	- [ ] Inhoudsopgave [Maurits]
 	- [x] Pagina voor handtekeningen aan eind [Maurits]
-	- [ ] Controleren volledigheid [Allemaal]
+	- [x] Controleren volledigheid [Allemaal]
 	- [ ] Genereren PDF (goed zetten hoofdstukken, checken stijl) [Maurits]
 	- [ ] Printen [Andre]
-	- [ ] Maken en voorbereiden presentatie (maandag) [Allemaal]
+	- [x] Maken en voorbereiden presentatie (maandag) [Allemaal]
