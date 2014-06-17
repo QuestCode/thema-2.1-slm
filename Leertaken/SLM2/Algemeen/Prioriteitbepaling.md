@@ -37,13 +37,3 @@ Onderstaand een matrix voor prioriteitbepaling aan de hand van de impact en urge
 | _Impact Laag_          | Gemiddeld           | Laag                     | Laag                |
 |                        | _Urgentie Hoog_     | _Urgentie Gemiddeld_     | _Urgentie Laag_     |
 |                        | _Urgentie Hoog_     | _Urgentie Gemiddeld_     | _Urgentie Laag_     |
-
-### 1.7.4 Reactietijd
-
-Onderstaand de uiterlijk reactie- en doorlooptijd per prioriteit.
-
-| Prioriteit   | Reactietijd       | Doorlooptijd (planning)   |
-| ------------ | ------------      | ------------------------- |
-| Hoog         | Binnen 15 minuten | Binnen 1 uur              |
-| Gemiddeld    | Binnen 60 minuten | Binnen 8 uur              |
-| Laag         | Binnen 8 uur      | Binnen 7 werkdagen        |
