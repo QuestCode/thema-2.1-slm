@@ -1,6 +1,6 @@
-# Service Level Rapportage - Mei 2014
-
-## Cloud-hosting Team4s
+<h1 style="font-size:4em">Service Level Rapportage</h1>
+<h2 style="font-size:4em;margin-top:-30px">Mei 2014</h2>
+<h2 style="font-size:2.5em;margin:-30px 0 430px">Cloud-hosting Team4S</h2>
 
 __Plaats:__ Groningen  
 __Datum:__ 09-06-2014  
@@ -16,20 +16,20 @@ T: 050 1369 25
 F: 050 1369 25  
 I: www.team4s.nl  
 
-## 1 Inhoudsopgave
-1. Inhoudsopgave
-2. Inleiding
-3. Cloud Hosting
-4. Servicedesk
-5. Wijzigingen
-6. Availability
-7. Samenvatting
+# Inhoud
 
-## 2 Inleiding
+- 1 &nbsp;Inleiding			<span style="float:right;font-weight:bold">3</span>
+- 2 &nbsp;Cloud Hosting		<span style="float:right;font-weight:bold">4</span>
+- 3 &nbsp;Servicedesk		<span style="float:right;font-weight:bold">5</span>
+- 4 &nbsp;Wijzigingen		<span style="float:right;font-weight:bold">6</span>
+- 5 &nbsp;Availability		<span style="float:right;font-weight:bold">7</span>
+- 6 &nbsp;Samenvatting		<span style="float:right;font-weight:bold">8</span>
+
+# 1 Inleiding
 
 Deze rapportage geeft inzicht in de dienstverlening die het applicatiebeheer en development team van Team4S in de afgelopen maand heeft geleverd aan de overige afdelingen binnen Team4S.
 
-## 3 Cloud Hosting 
+# 2 Cloud Hosting
 
 Op basis van de in de SLA gedefinieerde Critical Success Factors en de daarbij horende Key Performance Indicators voor de dienst Cloud Hosting wordt vastgesteld of de dienstverlening adequaat wordt geleverd. Hieronder staan de Key Performance Indicators en of de doelen zijn bereikt.
 
@@ -65,7 +65,7 @@ __Vertrouwelijkheid van de data.__
 | Aantal server inbraken.                    | 0    | 0             |                                                          |
 | Het cijfer van een beveiligingsrapportage. | 8    | n.v.t.        | Afgelopen maand is geen veiligheidsonderzoek uitgevoerd. |
 
-## 4 Servicedesk
+# 3 Servicedesk
 
 Op basis van de in de SLA gedefinieerde Critical Success Factors en de daarbij horende Key Performance Indicators voor de dienst Servicedesk wordt vastgesteld of de dienstverlening adequaat wordt geleverd. Hieronder staan de Key Performance Indicators en of de doelen zijn bereikt.
 
@@ -87,15 +87,15 @@ __De beschikbaarheid van de servicedesk.__
 | :----------              | :--  | :------------ | :---------- |
 | Aantal service klachten. | 0    | 0             |             |
 
-## 5 Wijzigingen
+# 4 Wijzigingen
 
 Er zijn deze periode geen change requests aangegeven.
 
-## 6 Availability
+# 5 Availability
 
 Het availability percentage over de afgelopen maand was 99.95%. Dit voldoet aan de minimumeis van 98% in het SLA
 
-## 7 Samenvatting
+# 6 Samenvatting
 
 In de maand mei zijn bijna alle doelen bereikt. Een storing tijdens bezoek van een klant had als gevolg dat een aantal incidenten die normaal een gemiddelde prioriteit zouden krijgen geescaleerd werden naar hoge prioriteit. Dit had als gevolg dat het doel van '< 3 hoge prioriteit incidenten' helaas niet gehaald is.
 
