@@ -2,7 +2,7 @@
 
 #### Beschikbaarheid
 
-De servicedesk zal dagelijks van 8:00 tot 17:30 beschikbaar zijn. De beschikbaarheid van de servicedesk is maximaal 99,9%.
+De servicedesk zal dagelijks van 8:00 tot 17:30 beschikbaar zijn. De beschikbaarheid van de servicedesk is minimaal 97%.
 
 Onderstaand worden, naar aanleiding van de Service Level Targets, de Critical Success Factors en Key Performance Indicators toegelicht.
 
@@ -20,15 +20,23 @@ De onderstaande meeteenheden zijn gedefinieerd naar aanleiding van de kritieke s
 
 __Het tijdig reageren op incidenten.__
 
-| Meeteenheid                                      | Doel | Bron                                                                 |
-| :----------                                      | :--- | :---                                                                 |
-| Aantal incidenten die niet tijdig zijn opgepakt. | <5   | Het aantal incidenten die de afgesproken responsetijd overschrijden. |
+| Meeteenheid                                                    | Doel         | Bron                                                                             |
+| :----------                                                    | :---         | :---                                                                             |
+| Aantal incidenten die reactietijd overschrijden.               | <5           | Het aantal incidenten die de afgesproken reactietijd overschrijden.              |
+| Gemiddelde reactietijd per incident met hoge prioriteit.       | < 15 minuten | Gemiddelde van de reactietijden van de incidenten met een hoge prioriteit.       |
+| Gemiddelde reactietijd per incident met gemiddelde prioriteit. | < 1 uur      | Gemiddelde van de reactietijden van de incidenten met een gemiddelde prioriteit. |
+| Gemiddelde reactietijd per incident met lage prioriteit.       | < 8 uur      | Gemiddelde van de reactietijden van de incidenten met een lage prioriteit.       |
+
 
 __Het tijdig oplossen van incidenten.__
 
-| Meeteenheid                                      | Doel | Bron                                                              |
-| :----------                                      | :--  | :---                                                              |
-| Aantal incidenten die niet tijdig zijn opgelost. | <5   | Het aantal incidenten die de afgesproken oplostijd overschrijden. |
+| Meeteenheid                                                  | Doel          | Bron                                                                           |
+| :----------                                                  | :--           | :---                                                                           |
+| Aantal incidenten die doorlooptijd overschrijden.            | <5            | Het aantal incidenten die de afgesproken doorlooptijd overschrijden.           |
+| Gemiddelde oplostijd per incident met hoge prioriteit.       | < half uur    | Gemiddelde van de oplostijden van de incidenten met een hoge prioriteit.       |
+| Gemiddelde oplostijd per incident met gemiddelde prioriteit. | < 4 uur       | Gemiddelde van de oplostijden van de incidenten met een gemiddelde prioriteit. |
+| Gemiddelde oplostijd per incident met lage prioriteit.       | < 3 werkdagen | Gemiddelde van de oplostijden van de incidenten met een lage prioriteit.       |
+
 
 __De beschikbaarheid van de servicedesk.__
 
@@ -44,8 +52,7 @@ De maximale duur van het oplossen van een incident ligt aan de prioriteit van he
 
 | Prioriteit   | Responstijd       | Oplostijd (Doorlooptijd)  |
 | ------------ | ------------      | ------------------------- |
-| 1            | Binnen 15 minuten | Binnen 1 uur              |
-| 2            | Binnen 30 minuten | Binnen 4 uur              |
-| 3            | Binnen 60 minuten | Binnen 8 uur              |
-| 4            | Binnen 4 uur      | Binnen 2 werkdagen        |
-| 5            | Binnen 8 uur      | Binnen 7 werkdagen        |
+| Hoog         | Binnen 15 minuten | Binnen 30 minuten         |
+| Gemiddeld    | Binnen 1 uur      | Binnen 4 uur              |
+| Laag         | Binnen 8 uuur     | Binnen 3 werkdagen        |
+

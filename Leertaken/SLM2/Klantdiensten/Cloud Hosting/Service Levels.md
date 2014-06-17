@@ -45,14 +45,11 @@ __Data moet 24/7 beschikbaar zijn voor alle gebruikers.__
 
 __Data moet overal beschikbaar zijn voor de gebruikers.__
 
-| Meeteenheid                                                  | Doel         | Bron                                                                                                              |
-| :----------                                                  | :---         | :---                                                                                                              |
-| Aantal hoge prioriteit incidenten.                           | < 3          | Aantal binnengekomen beschikbaarheidsincidenten over de service bij de servicedesk met een hoge prioriteit.       |
-| Aantal gemiddelde prioriteit incidenten.                     | < 20         | Aantal binnengekomen beschikbaarheidsincidenten over de service bij de servicedesk met een gemiddelde prioriteit. |
-| Aantal lage prioriteit incidenten.                           | < 50         | Aantal binnengekomen beschikbaarheidsincidenten over de service bij de servicedesk met een lage prioriteit.       |
-| Gemiddelde oplostijd per incident met hoge prioriteit.       | < half uur    | Gemiddelde van de oplostijden van de beschikbaarheidsincidenten met een hoge prioriteit.                          |
-| Gemiddelde oplostijd per incident met gemiddelde prioriteit. | < 4 uur      | Gemiddelde van de oplostijden van de beschikbaarheidsincidenten met een gemiddelde prioriteit.                    |
-| Gemiddelde oplostijd per incident met lage prioriteit.       | < halve week | Gemiddelde van de oplostijden van de beschikbaarheidsincidenten met een lage prioriteit.                          |
+| Meeteenheid                              | Doel | Bron                                                                                              |
+| :----------                              | :--- | :---                                                                                              |
+| Aantal hoge prioriteit incidenten.       | < 3  | Aantal binnengekomen incidenten over de service bij de servicedesk met een hoge prioriteit.       |
+| Aantal gemiddelde prioriteit incidenten. | < 20 | Aantal binnengekomen incidenten over de service bij de servicedesk met een gemiddelde prioriteit. |
+| Aantal lage prioriteit incidenten.       | < 50 | Aantal binnengekomen incidenten over de service bij de servicedesk met een lage prioriteit.       |
 
 __Beschikbaarheid van recente backups.__
 
