@@ -28,7 +28,7 @@ Onderstaand de verschillen in niveau's van de dienstverlening opgedeeld in brons
 | Doorlooptijd servicedesk - prioriteit laag.       | 10 werkdagen | 6 werkdagen | 3 werkdagen |
 | Aantal serviceklachten - servicedesk              | 5            | 3           | 0           |
 
-### Jaarlijkse prijs per service level
+### Jaarlijkse kosten per service level
 
 | Onderdeel                                       | Brons          | Zilver        | Goud           |
 | :---                                            | :-----         | :-----        | :---           |
