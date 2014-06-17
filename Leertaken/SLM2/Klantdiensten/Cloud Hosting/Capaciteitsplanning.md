@@ -6,4 +6,4 @@ Voor de opslag van de data wordt er te allen tijden een overcapaciteit van minim
 
 Omdat we hier praten over een cloud dienst nemen we bij de externe partij alleen opslagruimte af. Achterliggende processen als bandbreedte, cpu cycles en KWh zijn hier al in doorberekend.
 
-Opslagruimte wordt weergegeven als Gigabytes (GB). Er zal in eerste instantie 800GB worden afgenomen en dit aantal zal stijgen meet 10GB per maand.
+Opslagruimte wordt weergegeven als Gigabytes (GB). Er zal in eerste instantie 800GB worden afgenomen en dit aantal zal stijgen met 10GB per maand.
