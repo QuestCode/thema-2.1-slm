@@ -1,22 +1,20 @@
 # Checklist
 
-- Algmeen
-	- [ ] Aangeven klantgericht
 - Klantdiensten
 	- Cloud Hosting
-		- [ ] Capaciteitsplanning
+		- [ ] Capaciteitsplanning [Ward]
 			- Meeteenheid (bijv. KWh) per basisdienst (lecture 5 page 9)
-		- [ ] Risicoanalyse
+		- [ ] Risicoanalyse [Yuri]
 			- Zie notes in SLM/Resources map
-		- [ ] Prestaties
-		- [ ] Betrouwbaarheid
-		- [ ] Loss time
+		- [ ] Prestaties [Tom]
+		- [ ] Betrouwbaarheid [Maurits]
+		- [ ] Loss time [Andre]
 			- Norm voor verliestijd per event (bijv. 2 uur)
 			- Norm voor totale verliestijd in contractperiode (bijv 2%)
 	- Servicedesk
-		- [ ] Capaciteitsplanning
-		- [ ] Risicoanalyse
-		- [ ] Loss time
+		- [ ] Capaciteitsplanning [Ward]
+		- [ ] Risicoanalyse [Yuri]
+		- [ ] Loss time [Andre]
 - Implementaties en Condities
 	- [x] Eisen aan Infrastructuur
 	- [x] Geschatte Opleverdatum
