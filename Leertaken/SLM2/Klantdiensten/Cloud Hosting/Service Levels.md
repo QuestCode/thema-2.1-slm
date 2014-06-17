@@ -10,11 +10,17 @@ In verband met het verwerken van salarissen en andere kritieke processen worden 
 
 #### Prestaties
 
-Voor het bepalen van prestaties (Service Level Targets) zijn er Critical Success Factors (CSFs) opgesteld en hier vervolgens de Key Performance Indicators (KPIs) van afgeleid. Deze worden in de komende paragrafen beschreven.
+Voor het bepalen van prestaties (Service Level Targets) zijn er Critical Success Factors (CSFs) opgesteld en hier vervolgens de Key Performance Indicators (KPIs) van afgeleid. Deze worden in de hierop volgende paragrafen beschreven.
 
-> Beschrijven tijden voor het ophalen van data
+Prestaties van de cloud kunnen op de volgende manier worden samengevat:
 
-> “Monday through Friday, from 8am EST to 5pmEST, when operating under normal conditions (where normal means not in dial-backup) an authorized user of the system can retrieve a customer record in less than 5 seconds. No more than 10 times during the month when operating under normal conditions will any record take more than 30 seconds to retrieve.”
+###### Het ophalen van data:
+Op werkdagen van maandag t/m vrijdag van 08:00 - 17:30 kan een geautoriseerde gebruiker binnen 5 seconden data ophalen. Het zal niet vaker dan 10 keer per maand voorkomen dat het langer duurt dan 5 seconden. Beide condities gaan uit van een 'normale' situatie.
+
+###### Het wegschrijven van data:
+Op werkdagen van maandag t/m vrijdag van 08:00 - 17:30 kan een geautoriseerde gebruiker binnen 5 seconden data wegschrijven. Deze 5 seconden staan voor _het accepteren van het verzoek om te schrijven naar de cloud_. Afhankelijk van de bestandsgrootte(n) kan het natuurlijk veel langer duren dan 5 seconden om data weg te schrijven. Het zal niet vaker dan 10 keer per maand voorkomen dat het langer duurt dan 5 seconden. Beide condities gaan uit van een 'normale' situatie.
+
+>Een 'normale' situatie is een situatie waarin er geen storingen of andere incidenten spelen die van invloed kunnen hebben op de beschikbaarheid van de cloud.
 
 ##### Critical Success Factors
 
@@ -92,11 +98,11 @@ Omdat er wordt gewerkt met zeer vertrouwelijke informatie is een goede beveiligi
 
 ##### Backups
 
-Elke nacht wordt een incrementele backup gemaakt van de data op de cloud servers. Deze backup wordt uitgevoerd om twee uur 's nachts en duur maximaal twee uur. Elke zondagnacht wordt een totale backup gemaakt van de data om de integriteit van de data te behouden. Deze backup wordt om twee uur 's nachts uitgevoerd en duurt maximaal vier uur.
+Elke nacht wordt een incrementele backup gemaakt van de data op de cloud servers. Deze backup wordt uitgevoerd om twee uur 's nachts en duurt maximaal twee uur. Elke zondagnacht wordt een totale backup gemaakt van de data van de afgelopen week om de integriteit van de data te behouden. Deze backup wordt om twee uur 's nachts uitgevoerd en duurt maximaal vier uur.
 
-De backups worden opgeslagen op meerdere locaties om het risico van data verlies te beperken. De locaties bestaan uit het hoofdkantoor van Team4s en de cloud servers zelf.
+De backups worden opgeslagen op twee fysiek gescheiden locaties om het risico van data verlies te beperken. De locaties bestaan uit het hoofdkantoor van Team4s en de cloud servers zelf.
 
-Bij een integriteitsincident kan dankzij de dagelijkse backups een maximale dataverlies van één dag ontstaan. Het terugzetten van een back-up zal dan ook maximaal één werkdag in beslag nemen.
+Bij een integriteitsincident kan dankzij de dagelijkse backups een maximale dataverlies van één dag ontstaan. Het terugzetten van een incrementele back-up zal maximaal twee uur in beslag nemen. Het herstellen van de volledige dataset zal maximaal één werkdag in beslag nemen.
 
 ##### Exclusiviteit
 
