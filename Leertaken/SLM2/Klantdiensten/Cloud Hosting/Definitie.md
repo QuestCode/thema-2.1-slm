@@ -25,3 +25,5 @@ Ten behoeve van de operationele ondersteuning van de cloud-programmatuur levert 
 - Inrichting hardware en systeemsoftware bij opdrachtgever, indien dit in de cloud-overeenkomst expliciet is vermeld.
 
 De afdeling ICT schat de initiële hoeveelheid van data op 800 gigabyte met een lineaire groei van 10 gigabyte per maand.
+
+Halfjaarlijks zal worden gekeken of deze groei van data nog doorzet of dat deze groei stopgezet kan worden.
