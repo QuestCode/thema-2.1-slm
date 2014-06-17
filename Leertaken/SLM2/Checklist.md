@@ -7,7 +7,7 @@
 		- [ ] Risicoanalyse [Yuri]
 			- Zie notes in SLM/Resources map
 		- [ ] Prestaties [Tom]
-		- [ ] Betrouwbaarheid [Maurits]
+		- [x] Betrouwbaarheid [Maurits]
 		- [ ] Loss time [Andre]
 			- Norm voor verliestijd per event (bijv. 2 uur)
 			- Norm voor totale verliestijd in contractperiode (bijv 2%)

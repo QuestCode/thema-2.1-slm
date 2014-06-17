@@ -61,12 +61,6 @@ __Vertrouwelijkheid van de data.__
 | Aantal server inbraken.                    | 0    | Aantal veiligheidsincidenten met betrekking tot service waarbij ingebroken is op de servers. |
 | Het cijfer van een beveiligingsrapportage. | 8    | Halfjaarlijkse veiligheidsonderzoek door een externe partij.                                 |
 
-#### Betrouwbaarheid
-
-> MTBSI of MTBF
-
-> “Average mean time to repair (MTTR) where MTTR means the elapsed time from acknowledgement of receipt to restoration of normal activities shall be no longer than 4 hours. Any incident with MTTR of more than 4 hours will be reviewed by a specialist to determine why, and those reasons shall be shared with the customer at the customers’ discretion and convenience.”
-
 #### Uitvoeren van onderhoud
 
 Onderhoud aan de dienst zal plaatsvinden op standaard tijden. Dit zal zijn op dinsdagavond tussen 19:00 en 21:00 uur buiten piekperiodes.
@@ -84,11 +78,11 @@ Omdat er wordt gewerkt met zeer vertrouwelijke informatie is een goede beveiligi
 
 ##### Backups
 
-Elke nacht wordt een incrementele backup gemaakt van de data op de cloud servers. Deze backup wordt uitgevoerd om twee uur 's nachts en duur maximaal twee uur. Elke zondagnacht wordt een totale backup gemaakt van de data om de integriteit van de data te behouden. Deze backup wordt om twee uur 's nachts uitgevoerd en duurt maximaal vier uur.
+Elke nacht wordt een incrementele backup gemaakt van de data op de cloud servers. Deze backup wordt uitgevoerd om twee uur 's nachts en duurt maximaal twee uur. Elke zondagnacht wordt een totale backup gemaakt van de data van de afgelopen week om de integriteit van de data te behouden. Deze backup wordt om twee uur 's nachts uitgevoerd en duurt maximaal vier uur.
 
-De backups worden opgeslagen op meerdere locaties om het risico van data verlies te beperken. De locaties bestaan uit het hoofdkantoor van Team4s en de cloud servers zelf.
+De backups worden opgeslagen op twee fysiek gescheiden locaties om het risico van data verlies te beperken. De locaties bestaan uit het hoofdkantoor van Team4s en de cloud servers zelf.
 
-Bij een integriteitsincident kan dankzij de dagelijkse backups een maximale dataverlies van één dag ontstaan. Het terugzetten van een back-up zal dan ook maximaal één werkdag in beslag nemen.
+Bij een integriteitsincident kan dankzij de dagelijkse backups een maximale dataverlies van één dag ontstaan. Het terugzetten van een incrementele back-up zal maximaal twee uur in beslag nemen. Het herstellen van de volledige dataset zal maximaal één werkdag in beslag nemen.
 
 ##### Exclusiviteit
 
