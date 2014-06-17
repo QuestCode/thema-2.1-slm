@@ -1,4 +1,4 @@
-### 2.3.3 Capaciteitsplanning
+### 2.2.3 Capaciteitsplanning
 
 Omdat de opdrachtgever qua medewerkers verwacht te groeien in de komende jaren zal het aantal gebruikers dat aanspraak doet op de servicedesk ook stijgen. Vanwege deze groei is het belangrijk om tijdens een halfjaarlijkse evaluatie vast te stellen of de doelen gesteld bij de Critical Success Factors ook moeten stijgen.
 

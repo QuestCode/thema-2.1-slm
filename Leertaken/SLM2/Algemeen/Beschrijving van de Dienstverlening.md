@@ -1,8 +1,8 @@
-## 1.4 Beschrijving van de Dienstverlening
+## 1.5 Beschrijving van de Dienstverlening
 
 De opdrachtgever wil data in de cloud opslaan om deze makkelijk bereikbaar te maken voor alle gebruikers, ongeacht het tijdstip of de locatie. Data in de cloud moet beschikbaar zijn voor medewerkers die daar recht toe hebben. Deze gegevens moeten via de bestaande software toegankelijk gemaakt worden. Tevens moet er datamanipulatie mogelijk zijn.
 
-### 1.4.1 Eisen opdrachtgever
+### 1.5.1 Eisen opdrachtgever
 
 De eisen van de opdrachtgever aan de cloud-dienstverlening zijn:
 
@@ -12,7 +12,7 @@ De eisen van de opdrachtgever aan de cloud-dienstverlening zijn:
 - Data moet altijd beschikbaar zijn voor de 200 gebruikers;
 - De overstap naar de cloud moet zo snel mogelijk worden gerealiseerd.
 
-### 1.4.2 Beloften afdeling ICT
+### 1.5.2 Beloften afdeling ICT
 
 De afdeling ICT zal ervoor instaan dat de service voldoet aan de volgende eisen:
 

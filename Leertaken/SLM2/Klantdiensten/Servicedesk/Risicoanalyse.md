@@ -1,4 +1,4 @@
-### 2.3.2 Risicoanalyse
+### 2.2.2 Risicoanalyse
 
 Ook in de servicedesk kunnen er een aantal risico's vastgesteld worden. Zo kunnen bijvoorbeeld middelen van communicatie tijdelijk niet beschikbaar zijn. Als gevolg hiervan kunnen klanten de servicedesk niet of later pas bereiken en komen incidenten vertraagd aan het licht.
 

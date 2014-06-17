@@ -1,4 +1,4 @@
-### 2.2.2 Risicoanalyse
+### 2.1.2 Risicoanalyse
 
 Onderstaand de risico- en maatregelbeschrijvingen voor de cloud-dienstverlening.
 
