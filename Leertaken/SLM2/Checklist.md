@@ -2,7 +2,7 @@
 
 - Klantdiensten
 	- Cloud Hosting
-		- [ ] Capaciteitsplanning [Ward]
+		- [x] Capaciteitsplanning [Ward]
 			- Meeteenheid (bijv. KWh) per basisdienst (lecture 5 page 9)
 		- [ ] Risicoanalyse [Yuri]
 			- Zie notes in SLM/Resources map
@@ -12,7 +12,7 @@
 			- Norm voor verliestijd per event (bijv. 2 uur)
 			- Norm voor totale verliestijd in contractperiode (bijv 2%)
 	- Servicedesk
-		- [ ] Capaciteitsplanning [Ward]
+		- [WTF] Capaciteitsplanning [Ward]
 		- [ ] Risicoanalyse [Yuri]
 		- [ ] Loss time [Andre]
 - Implementaties en Condities
