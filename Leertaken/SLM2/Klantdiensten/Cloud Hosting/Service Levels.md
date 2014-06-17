@@ -67,12 +67,6 @@ __Vertrouwelijkheid van de data.__
 | Aantal server inbraken.                    | 0    | Aantal veiligheidsincidenten met betrekking tot service waarbij ingebroken is op de servers. |
 | Het cijfer van een beveiligingsrapportage. | 8    | Halfjaarlijkse veiligheidsonderzoek door een externe partij.                                 |
 
-#### Betrouwbaarheid
-
-> MTBSI of MTBF
-
-> “Average mean time to repair (MTTR) where MTTR means the elapsed time from acknowledgement of receipt to restoration of normal activities shall be no longer than 4 hours. Any incident with MTTR of more than 4 hours will be reviewed by a specialist to determine why, and those reasons shall be shared with the customer at the customers’ discretion and convenience.”
-
 #### Verliestijd
 
 Voor het leveren van de cloud-dienst wordt gestreven naar een minimale verliestijd. De verliestijd is de hoeveelheid uren bij een integriteitsincident die verloren gaan. Wanneer een integriteitsincident zich voordoet wordt gebruik gemaakt van de laatst gemaakte backups. In de paragraaf _Backups_ wordt beschreven dat elke nacht een backup wordt gemaakt van de data. 

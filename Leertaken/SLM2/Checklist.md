@@ -4,16 +4,16 @@
 	- Cloud Hosting
 		- [x] Capaciteitsplanning [Ward]
 			- Meeteenheid (bijv. KWh) per basisdienst (lecture 5 page 9)
-		- [ ] Risicoanalyse [Yuri]
+		- [x] Risicoanalyse [Yuri]
 			- Zie notes in SLM/Resources map
-		- [ ] Prestaties [Tom]
+		- [x] Prestaties [Tom]
 		- [x] Betrouwbaarheid [Maurits]
 		- [x] Loss time [Andre]
 			- Norm voor verliestijd per event (bijv. 2 uur)
 			- Norm voor totale verliestijd in contractperiode (bijv 2%)
 	- Servicedesk
-		- [WTF] Capaciteitsplanning [Ward]
-		- [ ] Risicoanalyse [Yuri]
+		- [x] Capaciteitsplanning [Ward]
+		- [x] Risicoanalyse [Yuri]
 - Implementaties en Condities
 	- [x] Eisen aan Infrastructuur
 	- [x] Geschatte Opleverdatum
@@ -31,9 +31,9 @@
 	- [x] Voorbeeld Service Level Rapport
 	- [x] Service Review
 	- [x] Proefperiode Rapportage
-- Verklarende Woordenlijst (aan het eind)
-	- [ ] Alfabetische volgorde
-	- [ ] Toelichten termen (bijv. a.d.h.v. bronverwijzing)
+- Verklarende Woordenlijst (aan het eind) [Maurits]
+	- [x] Alfabetische volgorde
+	- [x] Toelichten termen (bijv. a.d.h.v. bronverwijzing)
 - Afronding
 	- [ ] Inhoudsopgave [Maurits]
 	- [ ] Pagina voor handtekeningen aan eind [Tom]
