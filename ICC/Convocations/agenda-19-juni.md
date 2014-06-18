@@ -1,8 +1,8 @@
 # Agenda
 
 > * Group: 1
-> * Date: June 12th 2014
-> * Venue: TN/A227
+> * Date: June 19th 2014
+> * Venue: TN/A221
 > * Chair: Yuri Hoogeweg
 > * Secretary: Maurits van Mastrigt
 > * Action Point Dude (APD): Tom Broenink
@@ -27,21 +27,20 @@
 
 4. Incoming and outgoing mail / documents
 
-5. Confirmation minutes last meeting
+5. Group Process/Communication
 
-6. Group Process
+6. Self-assessments
 
-7. Learning Task(s)
+7. Project Specification
 
-	- SLM 2
-	- Project
+8. Planning and Progress Learning Task 5
 
-8. To-do list
+9. To-do list
 
-9. Any other business
+10. Any other business
 
-10. Unscheduled questions
+11. Unscheduled questions
 
-11. Arrangements next meeting
+12. Arrangements next meeting
 
-12. Closure
+13. Closure
