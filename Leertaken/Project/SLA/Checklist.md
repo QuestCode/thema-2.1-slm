@@ -1,0 +1,43 @@
+# Checklist
+
+- Klantdiensten
+	- Cloud Hosting
+		- [x] Capaciteitsplanning [Ward]
+			- Meeteenheid (bijv. KWh) per basisdienst (lecture 5 page 9)
+		- [x] Risicoanalyse [Yuri]
+			- Zie notes in SLM/Resources map
+		- [x] Prestaties [Tom]
+		- [x] Betrouwbaarheid [Maurits]
+		- [x] Loss time [Andre]
+			- Norm voor verliestijd per event (bijv. 2 uur)
+			- Norm voor totale verliestijd in contractperiode (bijv 2%)
+	- Servicedesk
+		- [x] Capaciteitsplanning [Ward]
+		- [x] Risicoanalyse [Yuri]
+- Implementaties en Condities
+	- [x] Eisen aan Infrastructuur
+	- [x] Geschatte Opleverdatum
+	- [x] Proefperiode [Andre]
+	- [x] Bonus en Malus [Andre]
+- Tariefstructuur
+	- [x] Eenmalige kosten
+	- [x] Structurele kosten
+	- [x] Niveau's van Dienstverlening [Allemaal]
+		- Opsommen verschillen per pakket
+		- Vergelijken met voorbeelden
+		- Maken tabel met aangeboden pakketten
+	- [x] Servicedeskondersteuning
+- Rapportageverplichtingen
+	- [x] Voorbeeld Service Level Rapport
+	- [x] Service Review
+	- [x] Proefperiode Rapportage
+- Verklarende Woordenlijst (aan het eind) [Maurits]
+	- [x] Alfabetische volgorde
+	- [x] Toelichten termen (bijv. a.d.h.v. bronverwijzing)
+- Afronding
+	- [x] Inhoudsopgave [Maurits]
+	- [x] Pagina voor handtekeningen aan eind [Maurits]
+	- [x] Controleren volledigheid [Allemaal]
+	- [x] Genereren PDF (goed zetten hoofdstukken, checken stijl) [Maurits]
+	- [x] Printen [Andre]
+	- [x] Maken en voorbereiden presentatie (maandag) [Allemaal]
