@@ -1,5 +1,7 @@
 ## 1.7 Prioriteitbepaling
 
+> Brainstormen of we deze hetzelfde laten of dat er iets aangepast moet worden, en zo ja, in hoeverre.
+
 De volgende prioriteitbepaling wordt gebruikt om de reactie- en afhandeltijd te berekenen, deze tijden zijn afhankelijk van het niveau van de dienstverlening.
 
 De onderstaand genoemde reactietijden zijn gebaseerd op het niveau 'goud'. De verschillen in reactietijd staan per niveau beschreven in paragraaf _Niveau's van Dienstverlening_.
