@@ -1,4 +1,5 @@
 .vagrant/
+temp/
 src/.meteor/
 src/packages/
 
