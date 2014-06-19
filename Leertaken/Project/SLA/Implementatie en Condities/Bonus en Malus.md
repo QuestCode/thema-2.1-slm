@@ -4,4 +4,4 @@ Boetes zijn in deze overeenkomst niet opgenomen. Bij het niet nakomen van de toe
 
 Wanneer zich drie waarschuwingen voordoen zullen zowel de Opdrachtgever en de afdeling ICT evalueren waarom de garanties niet nagekomen worden en zal zonodig de SLA bijgesteld worden om de garanties alsnog te kunnen verzekeren. 
 
-Voor het leveren van de diensten Cloud Hosting en Servicedesk worden _geen_ bonussen opgenomen. 
+Voor het leveren van de diensten worden _geen_ bonussen opgenomen.
