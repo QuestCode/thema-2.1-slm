@@ -6,3 +6,4 @@
 >- __Authentication:__ Electronic identification to ensure that the user trying to access the service is authorized to do so;
 >- __Incidents / Incidenten:__ An incidental outage;
 >- __Problems:__ A collection of incidents that might indicate a common cause;
+  

@@ -52,3 +52,4 @@ Supplier zal ervoor instaan dat de service voldoet aan de volgende eisen:
 - Supplier will deliver monthly service reports.
 - Supplier will set up a service desk.
 - Supplier will ensure access is possible for 50 users.
+  
