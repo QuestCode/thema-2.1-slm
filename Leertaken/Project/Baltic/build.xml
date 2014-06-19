@@ -6,7 +6,11 @@
 	<property name="dir.temp" value="temp"/>
 	<property name="dir.resources" value="resources"/>
 	<property name="dir.public" value="${dir.src}/public"/>
+	<property name="dir.assets" value="${dir.src}/client/assets"/>
 	<property name="dir.geo" value="${dir.public}/geo"/>
+	<property name="dir.html" value="html"/>
+
+	<property name="dir.bootstrap" value="${dir.resources}/bootstrap-3.1.1"/>
 
 	<target name="run">
 		<exec executable="vagrant">
@@ -25,6 +29,9 @@
 
 		<antcall target="db:setup"/>
 		<antcall target="generate-map"/>
+
+		<antcall target="bootstrap:setup"/>
+		<antcall target="bootstrap"/>
 	</target>
 
 	<target name="clearTemp">
@@ -66,6 +73,28 @@
 			<arg line="-- /vagrant/${dir.scripts}/generate-map-baltic.sh"/>
 		</exec>
 
-		<!-- <antcall target="clearTemp"/> -->
+		<antcall target="clearTemp"/>
+	</target>
+
+	<target name="bootstrap:setup">
+		<exec dir="${dir.bootstrap}" executable="npm install"/>
+	</target>
+
+	<target name="bootstrap">
+
+		<condition property="grunt" value="grunt.cmd" else="grunt">
+			<os family="windows"/>
+		</condition>
+
+		<exec dir="${dir.bootstrap}" executable="${grunt}">
+			<arg value="dist"/>
+		</exec>
+
+		<copy todir="${dir.assets}">
+			<fileset dir="${dir.bootstrap}/dist/">
+				<exclude name="**/*.min*"/>
+				<exclude name="**/*.map*"/>
+			</fileset>
+		</copy>
 	</target>
 </project>
