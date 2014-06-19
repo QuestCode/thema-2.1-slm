@@ -1,5 +1,5 @@
-## 1.8 Vertrouwelijkheid
+## 1.8 Confidentiality
 
-Partijen zullen geheimhouding betrachten ter zake van alle informatie en gegevens die zij van elkaar ontvangen en die zijn aangemerkt als vertrouwelijk of waarvan het vertrouwelijke karakter voortvloeit uit de aard van die informatie en gegevens, tenzij een wettelijke plicht openbaarmaking van die informatie en/of gegevens gebiedt. De plicht tot geheimhouding eindigt één jaar na het beëindigen van de Overeenkomst.<br><br>
+Both parties will attempt to maintain confidentiality regarding all information and data exchanged between the parties and that have been marked as confidential. Unless a legal commitment/obligation enforces this information/data to be made public. The agreement to confidentiality ends precisely one year after ending the contract.<br><br>
 
-Niets uit dit document mag op enigerlei wijze worden vermenigvuldigd en/of openbaar gemaakt zonder voorafgaand schriftelijke toestemming.
+Nothing in this document may be replicated or made public in anyway without written permission by both supplier and client.
