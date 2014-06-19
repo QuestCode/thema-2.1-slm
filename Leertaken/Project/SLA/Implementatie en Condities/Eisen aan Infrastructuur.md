@@ -1,6 +1,6 @@
-## 4.1 Eisen aan Infrastructuur
+## 4.1 Demands of Infrastructure
 
-Het beheer van de IT-services van het bedrijf moet professioneel zijn ingericht met een hoge beschikbaarheid. De genoemde eisen in _1.4 Beschrijving van de Dienstverlening_ kunnen worden vertaald naar de volgende, aan de infrastructuur gestelde, eisen:
+The management of the IT-services of the company should be done professionally with a high availability. The demands mentioned in _1.4 Beschrijving van de Dienstverlening_ can be translated to the following demands of infrastructure:
 
 - Data and webinterface will be hosted by Supplier;
 - Application requires support for Google Chrome & latest version of Internet Explorer;
