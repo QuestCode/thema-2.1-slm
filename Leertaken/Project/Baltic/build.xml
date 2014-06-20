@@ -77,7 +77,11 @@
 	</target>
 
 	<target name="bootstrap:setup">
-		<exec dir="${dir.bootstrap}" executable="npm install"/>
+		<condition property="npm" value="npm.cmd" else="npm">
+			<os family="windows"/>
+		</condition>
+
+		<exec dir="${dir.bootstrap}" executable="${npm} install"/>
 	</target>
 
 	<target name="bootstrap">
