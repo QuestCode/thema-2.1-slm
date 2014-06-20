@@ -8,12 +8,13 @@ if ! ls ~/meteorapp 2> /dev/null; then
 	rm -rf /vagrant/src/packages
 	mkdir /vagrant/src/.meteor
 	mkdir /vagrant/src/packages
-	sudo mount --bind /home/vagrant/meteorapp/.meteor /vagrant/src/.meteor/
-	sudo mount --bind /home/vagrant/meteorapp/packages /vagrant/src/packages/
 
 	rm -rf ~/meteorapp/.meteor/packages
 	ln -s /vagrant/src/installed-packages ~/meteorapp/.meteor/packages
 fi
+
+sudo mount --bind /home/vagrant/meteorapp/.meteor /vagrant/src/.meteor/
+sudo mount --bind /home/vagrant/meteorapp/packages /vagrant/src/packages/
 
 export MONGO_URL=mongodb://localhost:27017/meteor
 export METEOR_LOCAL_DIR=/data/meteor

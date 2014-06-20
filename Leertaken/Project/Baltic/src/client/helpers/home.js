@@ -64,7 +64,7 @@ Template.home.created = function() {
 			.enter().append('circle')
 				.attr('class', 'station')
 				.attr('name', function(d) { return d.name; })
-				.attr('r', 10.1865 * 2)
+				.attr('r', 2)
 				.attr('cx', function(d) { return projection(d.position.coordinates)[0] })
 				.attr('cy', function(d) { return projection(d.position.coordinates)[1] })
 	});

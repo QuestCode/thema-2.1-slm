@@ -28,3 +28,11 @@
 #map .sea {
 	fill: #92B4CA;
 }
+
+#map .station {
+	opacity: 1;
+}
+
+#map .station.clicked {
+	display: none;
+}

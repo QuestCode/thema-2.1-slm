@@ -1,6 +1,6 @@
 app.controllers.HomeController = RouteController.extend({
 	waitOn: function() {
-		var stations = Meteor.subscribe('stations');
+		var stations = Meteor.subscribe('balticStations');
 
 		return [
 			stations
