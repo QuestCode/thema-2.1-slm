@@ -28,6 +28,8 @@ Template.login.getLoginError = function() {
 	return Session.get('loginError');
 }
 
-Template.login.loggingIn = function() {
-	return Meteor.loggingIn();
+Template.login.isDisabled = function() {
+	if(Meteor.loggingIn()) {
+		return 'disabled="disabled"';
+	}
 }

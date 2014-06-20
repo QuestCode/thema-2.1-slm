@@ -1,22 +1,20 @@
 app.controllers.HomeController = RouteController.extend({
 	waitOn: function() {
-		var distance = Session.get('distance');
-		return this.subscribe('nearbyStations', distance);
+		var stations = Meteor.subscribe('stations');
+
+		return [
+			stations
+		];
 	},
 
 	onBeforeAction: function() {
-		this.render('loading');
 	},
 
 	onRun: function() {
-		Session.setDefault('distance', 50);
 	},
 
 	actionHome: function() {
-		if(!this.ready()) {
-			this.render('loading');
-		}
-		else {
+		if(this.ready()) {
 			this.template = 'home';
 			this.render();
 		}

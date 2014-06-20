@@ -9,3 +9,22 @@
 #login p.bg-danger {
 	padding: 10px 15px;
 }
+
+#map svg {
+	/*background-color: #92B4CA;*/
+}
+
+#map .country {
+	fill: #CED8B6;
+}
+
+#map .borders {
+	fill: none;
+	stroke: #9DA58B;
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+}
+
+#map .sea {
+	fill: #92B4CA;
+}
