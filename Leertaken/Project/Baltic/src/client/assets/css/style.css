@@ -1,0 +1,11 @@
+#login.container {
+	max-width: 300px;
+}
+
+#login input {
+	margin-bottom: 10px;
+}
+
+#login p.bg-danger {
+	padding: 10px 15px;
+}

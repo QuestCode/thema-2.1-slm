@@ -3,4 +3,6 @@ app = {
 	collections: {},
 	schemas: {},
 	models: {}
-}
+};
+
+app.collections.users = Meteor.users;

@@ -4,6 +4,7 @@ npm
 collection2
 winston
 moment
-bootstrap-3
 blaze-layout
 simple-schema
+accounts-password
+bootstrap-3
