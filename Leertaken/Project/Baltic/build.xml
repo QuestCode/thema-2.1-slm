@@ -29,9 +29,6 @@
 
 		<antcall target="db:setup"/>
 		<antcall target="generate-map"/>
-
-		<antcall target="bootstrap:setup"/>
-		<antcall target="bootstrap"/>
 	</target>
 
 	<target name="clearTemp">
@@ -74,31 +71,5 @@
 		</exec>
 
 		<antcall target="clearTemp"/>
-	</target>
-
-	<target name="bootstrap:setup">
-		<condition property="npm" value="npm.cmd" else="npm">
-			<os family="windows"/>
-		</condition>
-
-		<exec dir="${dir.bootstrap}" executable="${npm} install"/>
-	</target>
-
-	<target name="bootstrap">
-
-		<condition property="grunt" value="grunt.cmd" else="grunt">
-			<os family="windows"/>
-		</condition>
-
-		<exec dir="${dir.bootstrap}" executable="${grunt}">
-			<arg value="dist"/>
-		</exec>
-
-		<copy todir="${dir.assets}">
-			<fileset dir="${dir.bootstrap}/dist/">
-				<exclude name="**/*.min*"/>
-				<exclude name="**/*.map*"/>
-			</fileset>
-		</copy>
 	</target>
 </project>
