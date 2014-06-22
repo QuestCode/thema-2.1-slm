@@ -1,14 +1,16 @@
-### 2.2.2 Risicoanalyse
+### 2.2.2 Risk Analysis
 
-Ook in de servicedesk kunnen er een aantal risico's vastgesteld worden. Zo kunnen bijvoorbeeld middelen van communicatie tijdelijk niet beschikbaar zijn. Als gevolg hiervan kunnen klanten de servicedesk niet of later pas bereiken en komen incidenten vertraagd aan het licht.
+The servicedesk can also be subject to several risks. Although some of these risks are highly unlikely we must prepare for the consequenses these might propose, as we want to warrant the availability.
 
 #### Risicobeschrijvingen
 
-| Risico              | Kans      | Impact    |
-| :---                | :---      | :---      |
-| Telefoonstoring     | Laag      | Gemiddeld |
-| Online-chat storing | Gemiddeld | Laag      |
-| Email storing       | Laag      | Laag      |
+| Risk                | Chance | Impact |
+| :---                | :---   | :---   |
+| Phone defects       | Low    | Medium |
+| Online-chat failure | Medium | Low    |
+| Email failure       | Low    | Low    |
+
+
 
 Het gevolg van een telefoonstoring wordt als 'gemiddeld' geclassificeerd omdat telefonisch contact met de servicedesk de meest efficiënte methode is. Telefonisch contact zorgt voor een snellere overdracht van informatie, een servicedesk-medewerker kan bijvoorbeeld ook doorvragen/troubleshooten. Een storing in het online-chat systeem is iets waarschijnlijker, maar de gevolgen hiervan zijn laag. Als de online-chat niet werkt zullen mensen vaak nog wel telefonisch de servicedesk kunnen bereiken. Als laatste risico heeft de email storing zowel een lage kans als een laag gevolg. Dit komt doordat email de minst geprefereerde manier van communicatie is. Email communicatie met de service desk werkt vaak traag, maar is vaak wel stabiel.
 
