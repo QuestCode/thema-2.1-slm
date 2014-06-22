@@ -1,23 +1,17 @@
 ## 1.7 Priority definitions
 
-> Brainstormen of we deze hetzelfde laten of dat er iets aangepast moet worden, en zo ja, in hoeverre.
-
-The following priority matrix will be used to define the response and the time to solve an incident. These times do however differ for each service level.
-
-The response times defined below are based on the 'Gold level' package. The differences in response time for each individual level of service have been described in the _Levels of Service_ paragraph.
+The following priority matrix will be used to define the IRT and the MPT.
 
 ### 1.7.1 Urgency definition
 
 The urgency level defining the impact on the working process:
 
-| Urgency                          | Level     |
+| Urgency                          | Level      |
 | -------------------------------- | ---------- |
 | Service is not hindered          | Low        |
 | Service is hindered              | Medium     |
 | Service has stopped              | High       |
 
-
----
 
 ### 1.7.2 Impact definition
 
@@ -25,9 +19,9 @@ The impact level defined by the amount of users affected:
 
 | Users affected                           | Impact level |
 | ---------------------------------------  | ----------   |
-| The incident affects one user            | Laag         |
-| The incident affects several users       | Gemiddeld    |
-| The incident affects a majority of users | Hoog         |
+| The incident affects one user            | Low          |
+| The incident affects several users       | Medium       |
+| The incident affects a majority of users | High         |
 
 ### 1.7.3 Priorities Table
 

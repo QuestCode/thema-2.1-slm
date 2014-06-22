@@ -1,59 +1,57 @@
 ### 2.2.1 Service Levels
 
-#### Beschikbaarheid
+#### Availability
 
-De servicedesk zal dagelijks van 8:00 tot 17:30 beschikbaar zijn. De beschikbaarheid van de servicedesk is minimaal 97%.
+The servicedesk will be available on working days from 8:00 to 17:30. Minimal availability between these hours will be 97%.
 
-Onderstaand worden, naar aanleiding van de Service Level Targets, de Critical Success Factors en Key Performance Indicators toegelicht.
+Below you'll find the Critical Success Factors and Key Performance Indicators that belong to the Service Level Targets.
 
 ##### Critical Success Factors
 
-De volgende punten zijn kritiek in het succesvol draaiend houden van de servicedesk:
+The following points are critical for the success of the servicedesk:
 
-* Het tijdig reageren op incidenten.
-* Het tijdig oplossen van incidenten.
-* De beschikbaarheid van de servicedesk.
+* Responding on new incidents on time.
+* Resolving new incidents on time.
+* The availability of the servicedesk.
 
 ##### Key Performance Indicators
 
-De onderstaande meeteenheden zijn gedefinieerd naar aanleiding van de kritieke success factoren. Deze worden gebruikt voor het meten van de kwaliteit van de basisdienst.
+Below you'll find the standards that define the Critical Success Factors. These will be used to measure the quality of the service.
 
-__Het tijdig reageren op incidenten.__
+__Timely responce to new incidents.__
 
-| Meeteenheid                                                    | Doel         | Bron                                                                             |
-| :----------                                                    | :---         | :---                                                                             |
-| Aantal incidenten die reactietijd overschrijden.               | <5           | Het aantal incidenten die de afgesproken reactietijd overschrijden.              |
-| Gemiddelde reactietijd per incident met hoge prioriteit.       | < 15 minuten | Gemiddelde van de reactietijden van de incidenten met een hoge prioriteit.       |
-| Gemiddelde reactietijd per incident met gemiddelde prioriteit. | < 1 uur      | Gemiddelde van de reactietijden van de incidenten met een gemiddelde prioriteit. |
-| Gemiddelde reactietijd per incident met lage prioriteit.       | < 8 uur      | Gemiddelde van de reactietijden van de incidenten met een lage prioriteit.       |
-
----
-
-__Het tijdig oplossen van incidenten.__
-
-| Meeteenheid                                                  | Doel          | Bron                                                                           |
-| :----------                                                  | :--           | :---                                                                           |
-| Aantal incidenten die doorlooptijd overschrijden.            | <5            | Het aantal incidenten die de afgesproken doorlooptijd overschrijden.           |
-| Gemiddelde oplostijd per incident met hoge prioriteit.       | < half uur    | Gemiddelde van de oplostijden van de incidenten met een hoge prioriteit.       |
-| Gemiddelde oplostijd per incident met gemiddelde prioriteit. | < 4 uur       | Gemiddelde van de oplostijden van de incidenten met een gemiddelde prioriteit. |
-| Gemiddelde oplostijd per incident met lage prioriteit.       | < 3 werkdagen | Gemiddelde van de oplostijden van de incidenten met een lage prioriteit.       |
+| Measurement                                    | Goal         | Source                                                                                  |
+| :----------                                    | :---         | :---                                                                                    |
+| Amount of incidents with exeeding IRT          | <5           | Amount of incidents without response within the agreed upon IRT from the last 3 months. |
+| Average IRT of incidents with high priority.   | < 15 minutes | Average IRT of all solved incidents with high priority from last 3 months.              |
+| Average IRT of incidents with medium priority. | < 1 hour     | Average IRT of all solved incidents with medium priority from last 3 months.            |
+| Average IRT of incidents with low priority.    | < 8 hours    | Average IRT of all solved incidents with low priority from last 3 months.               |
 
 
-__De beschikbaarheid van de servicedesk.__
+__Timely resolving of incidents.__
 
-| Meeteenheid              | Doel | Bron                                                  |
-| :----------              | :--  | :---                                                  |
-| Aantal service klachten. | 0    | Aantal binnengekomen klachten bij de service manager. |
+| Measurement                                             | Goal           | Source                                                                                    |
+| :----------                                             | :--            | :---                                                                                      |
+| Amount of incidents with exeeding MPT                   | <5             | Amount of incidents without resolution within the agreed upon MPT from the last 3 months. |
+| Average resolve time of incidents with high priority.   | < half an hour | Average resolve time of all solved incidents with high priority from last 3 months.       |
+| Average resolve time of incidents with medium priority. | < 4 hours      | Average resolve time of all solved incidents with medium priority from last 3 months.     |
+| Average resolve time of incidents with low priority.    | < 3 work days  | Average resolve time of all solved incidents with low priority from last 3 months.        |
 
-#### Oplostijd en responstijd
+
+__The availability of the servicedesk.__
+
+| Measurement           | Goal | Source                                                |
+| :----------           | :--  | :---                                                  |
+| Amount of complaints. | 0    | Amount of complaints recieved by the Service Manager. |
+
+
+#### Responce and process times
 
 De maximale duur van het oplossen van een incident ligt aan de prioriteit van het incident. De maximale respons- en oplostijd van incidenten met een gold-level servicedesk is als volgt:
 
-#### Reactietijd
-
-| Prioriteit   | Responstijd       | Oplostijd (Doorlooptijd)  |
-| ------------ | ------------      | ------------------------- |
-| Hoog         | Binnen 15 minuten | Binnen 30 minuten         |
-| Gemiddeld    | Binnen 1 uur      | Binnen 4 uur              |
-| Laag         | Binnen 8 uuur     | Binnen 3 werkdagen        |
+| Prioriteit   | Initial Response Time | Maximum Process Time      |
+| ------------ | ------------          | ------------------------- |
+| High         | Within 15 minutes     | Within 30 minutes         |
+| Medium       | Within 1 hour         | Within 4 hours            |
+| Low          | Within 8 hours        | Within 3 work days        |
 
