@@ -62,20 +62,6 @@ Template.home.created = function() {
 			.size([width, height])
 			.radius(15);
 
-		var colors = ['#ffffd9','#edf8b1','#c7e9b4','#7fcdbb','#41b6c4','#1d91c0','#225ea8','#253494','#081d58'];
-
-		// svg.append('g')
-		// 	.attr('id', 'stations')
-		// 	.selectAll('path')
-		// 	.data(stations)
-		// 	.enter().append('circle')
-		// 		.attr('class', 'station')
-		// 		.attr('name', function(d) { return d.name; })
-		// 		.attr('r', 20)
-		// 		.attr('cx', function(d) { return projection(d.position.coordinates)[0] })
-		// 		.attr('cy', function(d) { return projection(d.position.coordinates)[1] })
-		// 		.attr('fill', function() { return colors[Math.floor(Math.random() * colors.length)]; })
-
 		stations.forEach(function(d) {
 			var p = projection(d.position.coordinates);
 			d[0] = p[0];
@@ -110,58 +96,5 @@ Template.home.created = function() {
 
       	return color(temp);
       });
-
-		// var points = [];
-		// for(var i = 0; i < stations.length; i++) {
-		// 	var station = stations[i];
-		// 	var duplicate = false;
-
-		// 	for(var j = 0; j < points.length; j++) {
-		// 		var point = points[j];
-
-		// 		if(station.position.coordinates[0] == point[0] && station.position.coordinates[1] == point[1]) {
-		// 			duplicate = true;
-		// 		}
-		// 	}
-
-		// 	if(!duplicate) {
-		// 		points.push({
-		// 			'0': station.position.coordinates[0],
-		// 			'1': station.position.coordinates[1],
-		// 			'stn': station.stn,
-		// 			'name': station.name
-		// 		});
-		// 	}
-		// }
-
-		// var colors = ['#ffffd9','#edf8b1','#c7e9b4','#7fcdbb','#41b6c4','#1d91c0','#225ea8','#253494','#081d58'];
-
-		// svg.append('g')
-		// 	.attr('id', 'areas')
-		// 	.selectAll('path')
-		// 	.data(d3.geom.voronoi(points.map(projection)))
-		// 	.enter().append('path')
-		// 		.attr('clip-path', 'url(#mask)')
-		// 		.attr('class', function(d, i) {
-		// 			if(balticStations.indexOf(points[i].stn) === -1) {
-		// 				return 'area inactive'
-		// 			}
-
-		// 			return 'area'
-		// 		})
-		// 		.attr('name', function(d, i) { return points[i].name; })
-		// 		.attr('stn', function(d, i) { return points[i].stn; })
-		// 		.attr('d', function(d) { return 'M' + d.join('L') + 'Z'; })
-		// 		.style('fill', function() {
-		// 			return colors[Math.floor(Math.random() * colors.length)];
-		// 		})
-
-		// svg.append('path')
-		// 	.datum(d3.geom.voronoi(points.map(projection)))
-		// 	.style('stroke', 'red')
-		// 	.style('fill', 'none')
-  //     .attr('class', 'voronoi')
-  //     .attr('d', function(d) { return 'M' + d.map(function(d) { return d.join('L'); }).join('ZM') + 'Z'; });
-
 	});
 }
