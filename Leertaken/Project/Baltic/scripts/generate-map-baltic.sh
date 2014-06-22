@@ -1,6 +1,6 @@
 ogr2ogr \
 	-f GeoJSON \
-	-where "iso_a3 IN ('SWE', 'DNK', 'DEU', 'POL', 'RUS', 'LTU', 'LVA', 'EST', 'FIN', 'NOR', 'NLD', 'BLR')" \
+	-where "ADM0_A3_IS IN ('SWE', 'DNK', 'DEU', 'POL', 'RUS', 'LTU', 'LVA', 'EST', 'FIN', 'NOR', 'NLD', 'BLR')" \
 	/vagrant/temp/countries.json \
 	/vagrant/resources/ne_50m_admin_0_countries/ne_50m_admin_0_countries.shp
 
@@ -12,7 +12,7 @@ ogr2ogr \
 
 topojson \
 	-o /vagrant/temp/topo_countries.json \
-	-p name \
+	-p name=NAME \
 	-- /vagrant/temp/countries.json
 
 topojson \

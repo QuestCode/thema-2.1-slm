@@ -58,7 +58,7 @@ public class Record {
 	 * @param StringBuilder builder
 	 */
 	public static BasicDBObject toDBObject( Object[] record ) {
-		return new BasicDBObject( "stn", record[ Record.STN ].toString() )
+		return new BasicDBObject( "stn", record[ Record.STN ] )
 			.append( "date"  , record[ Record.DATE   ] )
 			.append( "time"  , record[ Record.TIME   ] )
 			.append( "temp"  , record[ Record.TEMP   ] )

@@ -11,7 +11,7 @@
 }
 
 #map svg {
-	/*background-color: #92B4CA;*/
+	background-color: #92B4CA;
 }
 
 #map .country {
@@ -22,17 +22,19 @@
 	fill: none;
 	stroke: #9DA58B;
 	stroke-width: 1px;
-	stroke-linejoin: miter;
+	stroke-linejoin: round;
+	opacity: 0.6;
 }
 
 #map .sea {
 	fill: #92B4CA;
+	opacity: 0.6;
 }
 
 #map .station {
-	opacity: 1;
+	opacity: 0.4;
 }
 
-#map .station.clicked {
-	display: none;
+#map .hexagon {
+	opacity: 0.85;
 }

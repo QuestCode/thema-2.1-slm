@@ -75,7 +75,7 @@ app.schemas.measurements = new SimpleSchema({
 
 app.collections.measurements = new Meteor.Collection('measurements', {
 	schema: app.schemas.measurements,
-	transform: function(doc) {
-		return new app.models.Measurement(doc);
-	}
+	// transform: function(doc) {
+	// 	return new app.models.Measurement(doc);
+	// }
 });

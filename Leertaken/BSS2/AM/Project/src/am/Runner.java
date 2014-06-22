@@ -10,7 +10,7 @@ import am.Server;
 import am.Worker;
 
 public class Runner {
-	private int runtime = 1800; // seconds
+	private int runtime = 10; // seconds
 
 	/**
 	 * Bootstrap
@@ -35,7 +35,7 @@ public class Runner {
 		// Database configuration
 		String host       = "localhost";
 		Integer port      = 27017;
-		String collection = "unwdmi";
+		String collection = "meteor";
 
 		Database database       = new Database( host, port, collection );
 		Server server           = new Server( database );
