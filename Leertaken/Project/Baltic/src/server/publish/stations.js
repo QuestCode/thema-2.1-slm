@@ -9,7 +9,7 @@ Meteor.publish('stations', function() {
 				'POLAND',
 				'GERMANY',
 				'LATVIA',
-				'RUSSIA',
+				// 'RUSSIA',
 				'NORWAY',
 				'ESTONIA'
 			]

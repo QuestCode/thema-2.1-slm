@@ -1,6 +1,7 @@
 Template.home.created = function() {
 
 	d3.json('geo/baltic.json', function(err, baltic) {
+
 		var countries = topojson.feature(baltic, baltic.objects.countries);
 		var seas = topojson.feature(baltic, baltic.objects.seas);
 		var stations = app.collections.stations.find().fetch();
@@ -69,8 +70,8 @@ Template.home.created = function() {
 	  });
 
 		var color = d3.scale.linear()
-			.domain([0, 5])
-			.range(["#ef8a62", "#f7f7f7", "#67a9cf"]);
+			.domain([0, 40])
+			.range(["#777", "#ddd"]);
 
 	  svg.append('g')
       .attr('class', 'hexagons')
@@ -87,14 +88,19 @@ Template.home.created = function() {
       		stn: { $in: stns }
       	}).fetch();
 
-      	var temp = _.reduce(measurements, function(memo, m) { return memo + m.temp }, 0);
+      	var temp = _.reduce(measurements, function(memo, m) { return memo + m.wdsp }, 0);
       	var temp = temp / measurements.length;
 
-      	if(measurements.length == 0) {
-      		return 'none'
+      	if(isNaN(temp)) {
+      		temp = 0;
       	}
 
+      	stations.temp = temp;
+
       	return color(temp);
-      });
+      })
+     .style('stroke', function(stations) {
+     		return color(stations.temp);
+     })
 	});
 }
