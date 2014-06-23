@@ -1,3 +1,8 @@
+The client wants to perform calculations on weather data to conduct research on climate change. The client is interested in climate change in Lithuania and other countries around the Baltic Sea and is especially interested in weather changes regarding the milder weather in the past years.
+Da Vinci Data provides an application that allows the client to access the weather data.
+
+
+
 Team4S biedt de volgende cloud faciliteiten om de 200 werknemers van de opdrachtgever in staat te stellen via internet te beschikken over een centrale, betrouwbare opslag van gegevens. De cloud dienst zal 24/7 beschikbaar zijn. Veiligheid wordt gewaarborgd door het fysiek afschermen van de server (een speciaal toegewijde server die niet toegankelijk is voor derden).
 
 De afdeling ICT heeft de volgende cloud-faciliteiten in beheer:
