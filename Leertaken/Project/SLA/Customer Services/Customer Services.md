@@ -1,7 +1,3 @@
-# 2 Customer Services
-
-In this chapter you will find a description of the Customer services (Weather data application and Servicedesk).
-
 ## 2.1 Weather data application
 
 <!-- @include Weather data application/Definition.md -->

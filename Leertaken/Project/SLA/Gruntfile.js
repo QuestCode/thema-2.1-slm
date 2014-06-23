@@ -12,7 +12,7 @@ module.exports = function( grunt ) {
 		pkg: grunt.file.readJSON( 'package.json' ),
 		preprocess: {
 			document: {
-				src: 'Concept SLA.structure.md',
+				src: 'SLA Structure.md',
 				dest: 'Concept SLA.md'
 			}
 		},

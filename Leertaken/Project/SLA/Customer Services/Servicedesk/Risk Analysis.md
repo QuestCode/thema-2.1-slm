@@ -2,7 +2,7 @@
 
 The servicedesk can also be subject to several risks. Although some of these risks are highly unlikely we must prepare for the consequenses these might propose, as we want to warrant the availability.
 
-#### Risicobeschrijvingen
+#### Risk descriptions
 
 | Risk                | Chance | Impact |
 | :---                | :---   | :---   |

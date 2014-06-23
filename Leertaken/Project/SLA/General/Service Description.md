@@ -53,7 +53,7 @@ The client's requirements regarding the service are:
 - Only measurements per minute;
 - SSL to secure safe datatransport.
 
-### 1.5.2 Responsibilities supplier
+### 1.5.4 Responsibilities supplier
 
 Supplier will make sure the service will satisfy the following requirements:
 
