@@ -1,6 +1,7 @@
 package am;
 
 import com.mongodb.BasicDBObject;
+import java.util.Date;
 
 public class Record {
 
@@ -58,20 +59,30 @@ public class Record {
 	 * @param StringBuilder builder
 	 */
 	public static BasicDBObject toDBObject( Object[] record ) {
+		String date   = (String) record[ Record.DATE ];
+		String time   = (String) record[ Record.TIME ];
+		Date datetime = new Date(
+			Integer.parseInt( date.substring( 0, 4  ) ) - 1900,
+			Integer.parseInt( date.substring( 5, 7  ) ),
+			Integer.parseInt( date.substring( 8, 10 ) ),
+			Integer.parseInt( time.substring( 0, 2  ) ),
+			Integer.parseInt( time.substring( 3, 5  ) ),
+			Integer.parseInt( time.substring( 6, 8  ) )
+		);
+
 		return new BasicDBObject( "stn", record[ Record.STN ] )
-			.append( "date"  , record[ Record.DATE   ] )
-			.append( "time"  , record[ Record.TIME   ] )
-			.append( "temp"  , record[ Record.TEMP   ] )
-			.append( "dewp"  , record[ Record.DEWP   ] )
-			.append( "stp"   , record[ Record.STP    ] )
-			.append( "slp"   , record[ Record.SLP    ] )
-			.append( "visib" , record[ Record.VISIB  ] )
-			.append( "wdsp"  , record[ Record.WDSP   ] )
-			.append( "prcp"  , record[ Record.PRCP   ] )
-			.append( "sndp"  , record[ Record.SNDP   ] )
-			.append( "frshtt", record[ Record.FRSHTT ] )
-			.append( "cldc"  , record[ Record.CLDC   ] )
-			.append( "wnddir", record[ Record.WNDDIR ] )
+			.append( "datetime", datetime )
+			.append( "temp"    , record[ Record.TEMP   ] )
+			.append( "dewp"    , record[ Record.DEWP   ] )
+			.append( "stp"     , record[ Record.STP    ] )
+			.append( "slp"     , record[ Record.SLP    ] )
+			.append( "visib"   , record[ Record.VISIB  ] )
+			.append( "wdsp"    , record[ Record.WDSP   ] )
+			.append( "prcp"    , record[ Record.PRCP   ] )
+			.append( "sndp"    , record[ Record.SNDP   ] )
+			.append( "frshtt"  , record[ Record.FRSHTT ] )
+			.append( "cldc"    , record[ Record.CLDC   ] )
+			.append( "wnddir"  , record[ Record.WNDDIR ] )
 			;
 	}
 }
