@@ -65,12 +65,12 @@ In this chapter you will find a description of the Customer services (Weather da
 <!-- @include Tariefstructuur/Servicedeskondersteuning.md -->
 <!-- @include Tariefstructuur/Niveau's van Dienstverlening.md -->
 
-# 4 Implementatie en Condities
+# 4 Implementation and Conditions
 
-<!-- @include Implementatie en Condities/Eisen aan Infrastructuur.md -->
-<!-- @include Implementatie en Condities/Geschatte Opleverdatum.md -->
-<!-- @include Implementatie en Condities/Proefperiode.md -->
-<!-- @include Implementatie en Condities/Bonus en Malus.md -->
+<!-- @include Implementation and Conditions/Demands to Infrastructure.md -->
+<!-- @include Implementation and Conditions/Estimated date of delivery.md -->
+<!-- @include Implementation and Conditions/Trial period.md -->
+<!-- @include Implementation and Conditions/Bonus and Malus.md -->
 
 # 5 Rapportageverplichtingen
 
