@@ -1,87 +1,79 @@
 ### 2.1.1 Service Levels
 
-Onderstaand worden de service levels van de Cloud dienst beschreven.
+This chapter will describe the service levels regarding the Web Interface service. This chapter was written assuming no particular Service Level Package. The chapter _Service Levels_ contains more information on the options and differences between these options.
 
-#### Beschikbaarheid
+#### Availability
 
-De Cloud dienst heeft voor de opdrachtgever en eindgebruikers een beschikbaarheid van 24 uur per dag, 7 dagen per week. Met een minimal uptime van 98% per jaar; waarbij de 2% downtime wordt veroorzaakt door storingen en geplande onderhoudswerkzaamheden. Middels Cloud-hosting wordt data aangeboden aan de gebruikers. Hiervoor is een internetverbinding vereist. Opslag van de data gebeurd op dezelfde wijze als voorheen, waardoor gebruikers op een transparante wijze hun werk kunnen voortzetten.
+The Web Interface has a minimum availability of 97% on Mondays before 12:00. However, because this is a web application, Da Vinci Data will strive to reach and maintain a minimal uptime of 99% over the course of a year, even outside of the by the client stated times (Mondays before 12:00). There is a slight margin of not more than 3% (depending on the service level) to ensure room for software patches/releases and hardware maintenance.
 
-In verband met het verwerken van salarissen en andere kritieke processen worden periodes tussen de 25e en laatste dag van de maand als speciale piekperiodes gezien. Tijdens openstellingstijden (werkdagen van 8:00 - 17:30) en piekperiodes wordt een minimale uptime van 99,5% per jaar gegarandeerd.
+Because the initial requirement was for the Web Interface to be accessible on Mondays before 12:00, this will now be deemed the peak period of the service. Depending on the service level, Da Vinci Data offers a higher minimum availability during these peak periods. (minimum 97%)
 
-#### Prestaties
+#### Service Level Targets
 
-Voor het bepalen van prestaties (Service Level Targets) zijn er Critical Success Factors (CSFs) opgesteld en hier vervolgens de Key Performance Indicators (KPIs) van afgeleid. Deze worden in de hierop volgende paragrafen beschreven.
+Several Critical Success Factors (CSFs) and Key Performance Indicators (KPIs) have been outlined to define the Service Level Targets in a clear and concise manner.
 
-Prestaties van de cloud kunnen op de volgende manier worden samengevat:
+Service Level Targets of the Web Interface can be summarised in the following way;
 
-###### Het ophalen van data:
-Op werkdagen van maandag t/m vrijdag van 08:00 - 17:30 kan een geautoriseerde gebruiker binnen 5 seconden data ophalen. Het zal niet vaker dan 10 keer per maand voorkomen dat het langer duurt dan 5 seconden. Beide condities gaan uit van een 'normale' situatie.
+###### Query load time
+Both queries have a maximum load time of 1 minute on Mondays before 12:00. Only authorised users will be able to issue a query request.   
 
-###### Het wegschrijven van data:
-Op werkdagen van maandag t/m vrijdag van 08:00 - 17:30 kan een geautoriseerde gebruiker binnen 5 seconden data wegschrijven. Deze 5 seconden staan voor _het accepteren van het verzoek om te schrijven naar de cloud_. Afhankelijk van de bestandsgrootte(n) kan het natuurlijk veel langer duren dan 5 seconden om data weg te schrijven. Het zal niet vaker dan 10 keer per maand voorkomen dat het langer duurt dan 5 seconden. Beide condities gaan uit van een 'normale' situatie.
-
->Een 'normale' situatie is een situatie waarin er geen storingen of andere incidenten spelen die van invloed kunnen hebben op de beschikbaarheid van de cloud.
+N.B.: Da Vinci Data guarantees the maximum load time of 1 minute only when there is no problem on the customer's side slowing the load time down. Chapter _1.8 Responsibilities_ contains more information on situations like these.
 
 ##### Critical Success Factors
 
-De volgende punten zijn kritiek in het succesvol draaiend houden van de cloud-dienst:
+The following points are of utmost importance in successfully keeping the Web Interface available and ensuring it meets the Service Level Targets.
 
-- Data moet 24/7 beschikbaar zijn voor de gebruikers;
-- Data moet overal beschikbaar zijn voor de gebruikers;
-- Van de data moeten recente backups beschikbaar zijn;
-- De data is vertrouwelijk en moet daarom beveiligd zijn en niet inzichtelijk zijn voor 3de partijen.
+- Data must be retained for at least 6 months and available 97% of the time on mondays before 12:00
+- Graphs/Maps related to the queries must load within 1 minute.
+- Data must be backed up starting from every midnight (until the next midnight).
+- The data may not be viewed or accessed by third parties.
 
 ##### Key Performance Indicators
 
-De onderstaande meeteenheden zijn gedefinieerd naar aanleiding van de kritieke success factoren. Deze succes factoren worden gebruikt voor het meten van de kwaliteit van de basisdiensten.
+The metrics below have been defined from the Critical Success Factors, these metrics will be used to measure the quality of the services.
 
-__Data moet 24/7 beschikbaar zijn voor alle gebruikers.__
 
-| Meeteenheid                                        | Doel  | Bron                           |
-| :----------                                        | :---  | :---                           |
-| Uptime van de service.                             | 98%   | Gemeten uptime van de service. |
-| Uptime van de service tijdens openstellingstijden. | 99.5% | Gemeten uptime van de service. |
-| Uptime van de service tijdens piekuren.            | 99.5% | Gemeten uptime van de service. |
+__Data must be retained for at least 6 months and available 97% of the time on mondays before 12:00__
 
-__Data moet overal beschikbaar zijn voor de gebruikers.__
+| Metric                              | Target | Source                   |
+| :----------                         | :---   | :---                     |
+| Uptime service                      | 98%    | Measured uptime service. |
+| Uptime service during opening times | 99.5%  | Measured uptime service. |
+| Uptime service during peak hoours   | 99.5%  | Measured uptime service. |
 
-| Meeteenheid                              | Doel | Bron                                                                                              |
-| :----------                              | :--- | :---                                                                                              |
-| Aantal hoge prioriteit incidenten.       | < 3  | Aantal binnengekomen incidenten over de service bij de servicedesk met een hoge prioriteit.       |
-| Aantal gemiddelde prioriteit incidenten. | < 20 | Aantal binnengekomen incidenten over de service bij de servicedesk met een gemiddelde prioriteit. |
-| Aantal lage prioriteit incidenten.       | < 50 | Aantal binnengekomen incidenten over de service bij de servicedesk met een lage prioriteit.       |
+__Graphs/Maps related to the queries must load within 1 minute.__
+
+| Metric                | Target     | Source                                                        |
+| :----------           | :---       | :---                                                          |
+| Average response time | < 1 minute | Response time measured in tests on a wide variety of systems. |
+| Maximum response time | < 1 minute | Response time measured in tests on a wide variety of systems. |
+
+__Data must be backed up starting from every midnight (until the next midnight).__
+
+| Metric                                 | Target | Source                                                     |
+| :----------                            | :---   | :---                                                       |
+| Amount of failed or incomplete backups | 0      | Amount of incidents involving a corrupt or missing backup. |
+
+__The data may not be viewed or accessed by third parties.__
+| Metric                                        | Target | Source                                                                                                          |
+| :----------                                   | :---   | :---                                                                                                            |
+| Amount of security breaches compromising data | 0      | Amount of security related incidents involving (suspected) successful retrieving of information by third party. |
 
 ---
 
-__Beschikbaarheid van recente backups.__
+#### Losstime
 
-| Meeteenheid                                | Doel | Bron                                                                                  |
-| :----------                                | :--- | :---                                                                                  |
-| Aantal onopgeloste integriteitsincidenten. | 0    | Aantal binnengekomen integriteitsincidenten waarbij de data niet herstelt kan worden. |
+To ensure service availability and data integrity, Da Vinci Data set up a maximum losstime. The definition of losstime is the amount of hours it takes for a backup to be restored after an integrity incident. This inevitably means that some amount of data depending on the losstime will be lost.
 
-__Vertrouwelijkheid van de data.__
+The maximum losstime for weather data is half an hour. If this loss time is exceeded, Da Vinci Data will schedule a service review with the client to evaluate why the loss time was exceeded and what measures can be taken to prevent this from happening.
 
-| Meeteenheid                                | Doel | Bron                                                                                         |
-| :----------                                | :--- | :---                                                                                         |
-| Aantal server inbraken.                    | 0    | Aantal veiligheidsincidenten met betrekking tot service waarbij ingebroken is op de servers. |
-| Het cijfer van een beveiligingsrapportage. | 8    | Halfjaarlijkse veiligheidsonderzoek door een externe partij.                                 |
+#### Maintenance
 
-#### Verliestijd
+Service maintenance will take place during set times. This will be on tuesday nights between 19:00 and 21:00 (if necessary). When maintenance has to urgently be performed (because the continuity or integrity of the service may be at risk), this will take place in accordance with the client. Customers will receive notice of maintenance at least half an hour before the start of the maintenance.
 
-Voor het leveren van de cloud-dienst wordt gestreven naar een minimale verliestijd. De verliestijd is de hoeveelheid uren bij een integriteitsincident die verloren gaan. Wanneer een integriteitsincident zich voordoet wordt gebruik gemaakt van de laatst gemaakte backups. In de paragraaf _Backups_ wordt beschreven dat elke nacht een backup wordt gemaakt van de data. 
+The duration of maintenance may depend on the severity of the issues and the uptime guarantee depending on the service level package.
 
-Dit betekent dat wanneer een integriteitsincident zich voordoet er gemiddeld 4 uur en drie kwartier aan verliestijd ontstaat (uitgaand van een opstellingstijd van 08:00 tot 17:30). Dir betekend dat de norm voor dataverlies per integriteits incident niet meer dan 5 uur is. De norm voor de totale verliestijd over de contractperiode is maximaal 2%. 
-
-Wanneer een van de bovenstaande normen niet behaald wordt, wordt in samenwerking tussen de afdeling ICT en de opdrachtgever een dienstreview gedaan van de cloud-dienst om te bepalen waarom de gestelde norm(en) niet worden behaald.
-
-#### Uitvoeren van onderhoud
-
-Onderhoud aan de dienst zal plaatsvinden op standaard tijden. Dit zal zijn op dinsdagavond tussen 19:00 en 21:00 uur buiten piekperiodes.
-Wanneer er met spoed onderhoud moet worden gepleegd (omdat de continuïteit of intergriteit van de dienst anders niet gewaarborgd kan worden) zal dit in overleg met opdrachtgever plaatsvinden en vooraf worden gecommuniceerd naar de gebruikers.
-
-Duur van onderhoud zal subjectief zijn aan de uptime garantie en zal zodoende nooit langer kunnen duren dan 2 uur en 16 minuten per week buiten piekuren en 23 minuten per week binnen de piekuren.
-
-__Berekening:__
+__Calculation:__
 
 Een jaar heeft 365,25 dagen (kwart dag is voor schikkeljaren).
 Van de 25e t/m het einde van de maand is per jaar 65,25 dagen.
