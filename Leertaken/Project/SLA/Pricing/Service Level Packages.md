@@ -1,4 +1,4 @@
-## 3.4 Levels of Service
+## 3.4 Service Level Packages
 
 In this chapter, each the customer- and basic services' KPI's will be listed for each service level. The available service levels are bronze, silver and gold.
 
