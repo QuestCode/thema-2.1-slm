@@ -4,14 +4,14 @@ import java.lang.management.ManagementFactory;
 import java.lang.management.ThreadMXBean;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
 import am.Database;
 import am.Server;
 import am.Worker;
 
 public class Runner {
-	private int runtime = 10; // seconds
-
 	/**
 	 * Bootstrap
 	 *
@@ -46,7 +46,6 @@ public class Runner {
 
 		System.out.println(
 				  "--- CONFIGURATION ---\n"
-				+ "Runtime            : " + this.runtime + " seconds\n"
 				+ "Cache size         : " + Corrector.CACHE_SIZE + "\n"
 				+ "Date               : " + new SimpleDateFormat( "yyyy/MM/dd 'at' HH:mm:ss" ).format( new Date() ) + "\n"
 				+ "---------------------"
@@ -59,10 +58,11 @@ public class Runner {
 			// Benchmark
 			long startTime = System.nanoTime();
 
-			System.out.println( "[Runner] Running..");
+			System.out.println( "[Runner] Running (press Enter to stop)..");
 
-			// Run for given period of time
-			Thread.sleep( this.runtime * 1000 );
+			// Run until interrupted
+			BufferedReader br = new BufferedReader( new InputStreamReader( System.in ) );
+			br.readLine();
 
 			// Gather process information
 			long memory     = Runtime.getRuntime().totalMemory();
@@ -94,7 +94,7 @@ public class Runner {
 
 			System.out.print(
 				  "--- CONFIGURATION ---\n"
-				+ "Runtime            : " + this.runtime + " seconds\n"
+				+ "Runtime            : " + actualTime + " seconds\n"
 				+ "Cache size         : " + Corrector.CACHE_SIZE + "\n"
 				+ "------- USAGE -------\n"
 				+ "Date               : " + new SimpleDateFormat( "yyyy/MM/dd 'at' HH:mm:ss" ).format( new Date() ) + "\n"
@@ -105,9 +105,8 @@ public class Runner {
 				+ "Queries            : " + queryCount + "\n"
 				+ "Records            : " + database.getInsertedCount() + "\n"
 				+ "In database        : " + rowCount + "\n"
-				+ "Expected (1)       : " + Math.round( workerCount * 10 * this.runtime ) + "\n"
-				+ "Expected (2)       : " + expectedRecordCount + "\n"
-				+ "Efficiency         : " + String.format( "%.2f", ( (float) rowCount / Math.round( workerCount * 10 * this.runtime ) ) * 100 ) + " %\n"
+				+ "Expected           : " + expectedRecordCount + "\n"
+				+ "Efficiency         : " + String.format( "%.2f", ( (float) rowCount / Math.round( workerCount * 10 * actualTime ) ) * 100 ) + " %\n"
 				+ "---------------------"
 			);
 
