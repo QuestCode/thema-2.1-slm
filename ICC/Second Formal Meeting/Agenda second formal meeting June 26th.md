@@ -31,6 +31,4 @@
 
 7. Unscheduled questions
 
-8. Arrangements next meeting
-
-9. Closure
+8. Closure
