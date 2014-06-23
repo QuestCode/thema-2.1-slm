@@ -63,7 +63,7 @@ public class Record {
 		String time   = (String) record[ Record.TIME ];
 		Date datetime = new Date(
 			Integer.parseInt( date.substring( 0, 4  ) ) - 1900,
-			Integer.parseInt( date.substring( 5, 7  ) ),
+			Integer.parseInt( date.substring( 5, 7  ) ) - 1,
 			Integer.parseInt( date.substring( 8, 10 ) ),
 			Integer.parseInt( time.substring( 0, 2  ) ),
 			Integer.parseInt( time.substring( 3, 5  ) ),
