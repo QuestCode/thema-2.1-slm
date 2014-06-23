@@ -18,7 +18,7 @@ Signature client:
 
 <br/>
 
-Ondertekening afdeling ICT:
+Signature supplier:
 
 | Name                 | Signature |
 | :---                 | :---      |

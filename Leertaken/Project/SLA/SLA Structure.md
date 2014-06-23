@@ -72,10 +72,10 @@ In this chapter you will find a description of the Customer services (Weather da
 <!-- @include Implementation and Conditions/Trial period.md -->
 <!-- @include Implementation and Conditions/Bonus and Malus.md -->
 
-# 5 Rapportageverplichtingen
+# 5 Reporting
 
-<!-- @include Rapportageverplichtingen/Service Review.md -->
-<!-- @include Rapportageverplichtingen/Proefperiode Rapportage.md -->
+<!-- @include Reporting/Service Review.md -->
+<!-- @include Reporting/Trial period report.md -->
 
 # 6 Glossary
 
