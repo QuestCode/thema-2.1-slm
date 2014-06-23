@@ -11,21 +11,18 @@ The supplier manages to the following facilities needed to provide the service:
 
 These facilities offer users the possibility to access the service using the internet.
 
-Ten behoeve van de operationele ondersteuning van de cloud-programmatuur levert de afdeling ICT de volgende diensten:
 
-- Systeembeheer, applicatiebeheer en onderhoud van de bovenstaande cloud-faciliteiten;
-- De voor implementatie van de cloud-programmatuur benodigde diensten, waaronder:
-	- Vooronderzoek
-	- Projectleiding
-	- Inrichting
-	- Functioneel en technisch ontwerp
-	- Programmering
-	- Testen
-	- Opleiding
-	- Klantbegeleiding
-- Operationele ondersteuning, te weten klantbegeleiding en eerste- en tweedelijns servicedeskondersteuning;
-- Inrichting hardware en systeemsoftware bij opdrachtgever, indien dit in de cloud-overeenkomst expliciet is vermeld.
+Operational services that are managed by the supplier needed to support the service:
+- System administrators, application administrators, maintanance of the service;
+- Services needed to implement the service, e.g.:
+	- Project management
+	- Preparatory research
+	- Functional an technical desig
+	- Programming
+	- Testing
+	- Installation
+	- Education
+	- User management
+- Operational support, i.e. First- and seccond degree servicedesk support;
+- Installation of hardware and software at the client, if nessesary;
 
-De afdeling ICT schat de initiële hoeveelheid van data op 800 gigabyte met een lineaire groei van 10 gigabyte per maand.
-
-Halfjaarlijks zal worden gekeken of deze groei van data nog doorzet of dat deze groei stopgezet kan worden.
