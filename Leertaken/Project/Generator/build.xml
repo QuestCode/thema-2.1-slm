@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<project name="Leertaak 2" default="run" xmlns:ivy="antlib:org.apache.ivy.ant">
+<project name="Leertaak 5" default="run" xmlns:ivy="antlib:org.apache.ivy.ant">
 
 	<property environment="env"/>
 	<property name="ivy.home" value="${env.IVY_HOME}"/>
@@ -11,12 +11,6 @@
 	<property name="dir.lib" location="${dir.build}/lib" />
 
 	<property name="main-class" value="am.Runner" />
-
-	<property name="sql.driver" value="org.gjt.mm.mysql.Driver"/>
-	<property name="sql.classpath" value="${dir.lib}/mysql-connector-java.jar"/>
-	<property name="sql.url" value="jdbc:mysql://localhost:3306/"/>
-	<property name="sql.user" value="root"/>
-	<property name="sql.pass" value="banaan"/>
 
 	<path id="lib-classpath">
 		<fileset dir="${dir.lib}">
@@ -49,7 +43,7 @@
 	</target>
 
 	<target name="jar" depends="compile">
-		<jar destfile="${dir.jar}/Leertaak-2.jar" basedir="${dir.classes}">
+		<jar destfile="${dir.jar}/Leertaak-5.jar" basedir="${dir.classes}">
 			<zipgroupfileset dir="${dir.lib}" includes="*.jar" />
 			<manifest>
 				<attribute name="Main-Class" value="${main-class}" />
@@ -58,7 +52,7 @@
 	</target>
 
 	<target name="profile" depends="jar">
-		<java jar="${dir.jar}/Leertaak-2.jar" fork="true">
+		<java jar="${dir.jar}/Leertaak-5.jar" fork="true">
 			<jvmarg value="-agentlib:hprof=cpu=times,heap=dump,depth=15" />
 			<jvmarg value="-XX:-UseGCOverheadLimit" />
 			<jvmarg value="-Xmx1512m" />
@@ -83,14 +77,14 @@
 	<target name="db:setup">
 		<exec executable="mongo">
 			<arg value="unwdmi" />
-			<arg value="../Resources/db.setup.js" />
+			<arg value="res/db.setup.js" />
 		</exec>
 
 		<exec executable="mongoimport">
 			<arg line="--db unwdmi" />
 			<arg line="--collection stations" />
 			<arg line="--type json" />
-			<arg line="--file ../Resources/unwdmi_nosql_stations_data.json" />
+			<arg line="--file res/unwdmi_nosql_stations_data.json" />
 			<arg line="--jsonArray" />
 		</exec>
 	</target>
@@ -98,7 +92,7 @@
 	<target name="db:reset">
 		<exec executable="mongo">
 			<arg value="unwdmi" />
-			<arg value="../Resources/db.reset.js" />
+			<arg value="res/db.reset.js" />
 		</exec>
 		<antcall target="db:setup"/>
 	</target>
@@ -113,7 +107,7 @@
 	</target>
 
 	<target name="generate">
-		<exec executable="java" newenvironment="true" dir="../Resources">
+		<exec executable="java" newenvironment="true" dir="res">
 			<arg value="-jar"/>
 			<arg value="UnwdmiGenerator-2.1.jar"/>
 		</exec>
