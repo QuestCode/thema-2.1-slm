@@ -12,4 +12,4 @@ Da Vinci Data is under no circumstances responsible if the requirements in this 
 	
 or:  
 - If the incident has not been caused by Da Vinci Data, but by the client or a third party.
-  
+
