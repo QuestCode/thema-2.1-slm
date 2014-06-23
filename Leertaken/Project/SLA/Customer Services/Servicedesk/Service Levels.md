@@ -2,9 +2,9 @@
 
 #### Availability
 
-The servicedesk will be available on working days from 8:00 to 17:30. Minimal availability between these hours will be 97%.
+The servicedesk will be available on working days from 07:00 to 20:00. Minimal availability between these hours will be 97%.
 
-Below you'll find the Critical Success Factors and Key Performance Indicators that belong to the Service Level Targets.
+Below you will find the Critical Success Factors and Key Performance Indicators that belong to the Service Level Targets.
 
 ##### Critical Success Factors
 
@@ -16,7 +16,7 @@ The following points are critical for the success of the servicedesk:
 
 ##### Key Performance Indicators
 
-Below you'll find the standards that define the Critical Success Factors. These will be used to measure the quality of the service.
+Below you will find the standards that define the Critical Success Factors. These will be used to measure the quality of the service.
 
 __Timely responce to new incidents.__
 
@@ -47,9 +47,9 @@ __The availability of the servicedesk.__
 
 #### Responce and process times
 
-De maximale duur van het oplossen van een incident ligt aan de prioriteit van het incident. De maximale respons- en oplostijd van incidenten met een gold-level servicedesk is als volgt:
+The maximum time spent on solving a incident depends on the priority of the incident. The maximum response- and processtime with a gold-level servicedesk is as following:
 
-| Prioriteit   | Initial Response Time | Maximum Process Time      |
+| Priority     | Initial Response Time | Maximum Process Time      |
 | ------------ | ------------          | ------------------------- |
 | High         | Within 15 minutes     | Within 30 minutes         |
 | Medium       | Within 1 hour         | Within 4 hours            |
