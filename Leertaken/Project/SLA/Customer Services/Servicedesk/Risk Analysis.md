@@ -10,9 +10,12 @@ The servicedesk can also be subject to several risks. Although some of these ris
 | Online-chat failure | Medium | Low    |
 | Email failure       | Low    | Low    |
 
+The consequences of a phone defect is described as 'medium' because phone contact is the most efficient way of contacting the Servicedesk. Phone contact ensures a fast transfer of information and allows the servicedesk employee to 
+question and troubleshoot with the user.
+A failure in the online-chat system has a higher probability but has no major consequences. When the online-chat function is no longer availible users are still able to phone the Servicedesk.
+An email failure is also very unlikely and although this is a preffered means of communication for users it is not a very functional way communication. Therefore we consider the consequences to be low and give it a low impact.
 
 
-Het gevolg van een telefoonstoring wordt als 'gemiddeld' geclassificeerd omdat telefonisch contact met de servicedesk de meest efficiënte methode is. Telefonisch contact zorgt voor een snellere overdracht van informatie, een servicedesk-medewerker kan bijvoorbeeld ook doorvragen/troubleshooten. Een storing in het online-chat systeem is iets waarschijnlijker, maar de gevolgen hiervan zijn laag. Als de online-chat niet werkt zullen mensen vaak nog wel telefonisch de servicedesk kunnen bereiken. Als laatste risico heeft de email storing zowel een lage kans als een laag gevolg. Dit komt doordat email de minst geprefereerde manier van communicatie is. Email communicatie met de service desk werkt vaak traag, maar is vaak wel stabiel.
+#### Measures
+In order to saveguard the availability of the Servicedesk we will increase the responce times of these means of communication. Depending on the service level (Gold, Silver, Bronze) there will be a higher responce time of the Servicedesk. This ensures that whenever one of there risks occurs users can fallback to one of te other means of communication.
 
-#### Maatregelen
-Voor alle drie risico's kan er één uniforme maatregel getroffen worden, namelijk het verhogen van de responstijd op alle communicatiemiddelen. Afhankelijk van het gekozen pakket (Gold, Silver, Bronze) zullen er meer communicatiemiddelen beschikbaar zijn. Ook de responstijd per communicatiemiddel zal variëren met het gekozen pakket. Dit zorgt er voor dat áls één van de drie risico's daadwerkelijk voorkomt, klanten en servicedesk-medewerkers altijd kunnen terugvallen op een andere mogelijkheid.

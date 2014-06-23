@@ -2,7 +2,7 @@
 
 #### Availability
 
-The servicedesk will be available on working days from 07:00 to 20:00. Minimal availability between these hours will be 97%.
+The servicedesk will be available from Monday to Friday from 07:00 to 20:00 (local time in Kaunas). Minimal availability between these hours will be 97%.
 
 Below you will find the Critical Success Factors and Key Performance Indicators that belong to the Service Level Targets.
 
@@ -25,7 +25,7 @@ __Timely responce to new incidents.__
 | Amount of incidents with exeeding IRT          | <5           | Amount of incidents without response within the agreed upon IRT from the last 3 months. |
 | Average IRT of incidents with high priority.   | < 15 minutes | Average IRT of all solved incidents with high priority from last 3 months.              |
 | Average IRT of incidents with medium priority. | < 1 hour     | Average IRT of all solved incidents with medium priority from last 3 months.            |
-| Average IRT of incidents with low priority.    | < 8 hours    | Average IRT of all solved incidents with low priority from last 3 months.               |
+| Average IRT of incidents with low priority.    | < 2 hours    | Average IRT of all solved incidents with low priority from last 3 months.               |
 
 
 __Timely resolving of incidents.__
@@ -35,7 +35,7 @@ __Timely resolving of incidents.__
 | Amount of incidents with exeeding MPT                   | <5             | Amount of incidents without resolution within the agreed upon MPT from the last 3 months. |
 | Average resolve time of incidents with high priority.   | < half an hour | Average resolve time of all solved incidents with high priority from last 3 months.       |
 | Average resolve time of incidents with medium priority. | < 4 hours      | Average resolve time of all solved incidents with medium priority from last 3 months.     |
-| Average resolve time of incidents with low priority.    | < 3 work days  | Average resolve time of all solved incidents with low priority from last 3 months.        |
+| Average resolve time of incidents with low priority.    | < 8 hours      | Average resolve time of all solved incidents with low priority from last 3 months.        |
 
 
 __The availability of the servicedesk.__
@@ -53,5 +53,6 @@ The maximum time spent on solving a incident depends on the priority of the inci
 | ------------ | ------------          | ------------------------- |
 | High         | Within 15 minutes     | Within 30 minutes         |
 | Medium       | Within 1 hour         | Within 4 hours            |
-| Low          | Within 8 hours        | Within 3 work days        |
+| Low          | Within 2 hours        | Within 8 hours            |
+
 
