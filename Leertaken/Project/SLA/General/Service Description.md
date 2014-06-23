@@ -1,6 +1,8 @@
 ## 1.5 Service Description/Definition
 
-Customer wants to perform calculations on weather data to conduct research on climate change. Customer is interested in climate change in Lithuania and other countries around the Baltic Sea. Customer is especially interested in weather changes regarding the milder weather in the past years. Customer is interested in the following measurements:
+The client wants to perform calculations on weather data to conduct research on climate change. The client is interested in climate change in Lithuania and other countries around the Baltic Sea and is especially interested in weather changes regarding the milder weather in the past years.
+
+The client is interested in the following measurements:
 - Windspeed
 - Rainfall
 - Temperature
@@ -17,7 +19,13 @@ The relevant countries:
 - Finland
 - Sweden
 
-The customer wants to see data visualised according to the following two 'queries':  
+## Application
+
+The client wants a SSL secured webpages protected by a username and password showing a map of the baltic countries. When clicking on a weather station they want a cockpit like view showing the wind speed, rain fall, temperature and humidity (color coded) per minute.
+
+Historic data of days, weeks and months. Data should be saved for at least a half year. Allow this data to be downloaded.
+
+The client wants to see data visualised according to the following two 'queries':    
 __1. Rain fall above 10 mm within 50 km.__  
 Show data about rain fall when the rain fall is more than 10 mm. Don’t show when rain fall is below that. Only stations within 50 km of coastline of the Baltic Sea. 
 
@@ -52,4 +60,4 @@ Supplier zal ervoor instaan dat de service voldoet aan de volgende eisen:
 - Supplier will deliver monthly service reports.
 - Supplier will set up a service desk.
 - Supplier will ensure access is possible for 50 users.
-  
+
