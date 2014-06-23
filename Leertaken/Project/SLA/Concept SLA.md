@@ -45,7 +45,7 @@ In this chapter you will find a general description of the service and requireme
 
 ## 1.1 Definitions
 
->- __Application:__ The software for the service. Including new versions of the software, as defined in the agreement and service description;
+>- __Application:__ The weather data application. Including new versions of the software, as defined in the agreement and service description;
 >- __Servicedesk:__ The point of contact for the customer for changes and problems regarding the service;
 >- __Service:__ The service (and maintenance) that's supplied to the customer;
 >- __Authentication:__ Electronic identification to ensure that the user trying to access the service is authorized to do so;
@@ -61,7 +61,8 @@ In this chapter you will find a general description of the service and requireme
 This Service Level Agreement (hereafter called: SLA) is a contract between the following parties:
 
 - __Client:__ Aleksandro Stulginskio Universitetas - Faculty of Water and Land Management;
-- __Supplier:__ United Nations Weather DataManagement Institute - Da Vinci Data;
+- __Supplier:__ United Nations Weather Data Management Institute - Da Vinci Data;
+- __UNWDMI:__ The United Nations Weather Data Management Institute the umbrella organisation of Da Vinci Data
 - __Users:__ The students and teachers of Aleksandro Stulginskio Universitetas;
 
 
@@ -210,119 +211,119 @@ In this chapter you will find a description of the Customer services (Weather da
 
 ## 2.1 Weather data application
 
-Team4S biedt de volgende cloud faciliteiten om de 200 werknemers van de opdrachtgever in staat te stellen via internet te beschikken over een centrale, betrouwbare opslag van gegevens. De cloud dienst zal 24/7 beschikbaar zijn. Veiligheid wordt gewaarborgd door het fysiek afschermen van de server (een speciaal toegewijde server die niet toegankelijk is voor derden).
+The client wants to perform calculations on weather data to conduct research on climate change. The client is interested in climate change in Lithuania and other countries around the Baltic Sea and is especially interested in weather changes regarding the milder weather in the past years.
+Da Vinci Data provides an application that allows the client to access the weather data.
 
-De afdeling ICT heeft de volgende cloud-faciliteiten in beheer:
+The application will be used by 50 users who will all need a username and password in order to use the application. The service will be made available using an SSL connection. The application will be hosted in the Netherlands using a server that is property of the UNWMDI.
 
-- Een cloud-server met bijbehorende systeemprogrammatuur;
-- De in de cloud-overeenkomst aangegeven cloud-programmatuur;
-- De voor het werken via internet benodigde technische infrastructuur (zoals routers, modems, bekabeling, etc.);
-- De overige benodigde infrastructuur, zoals fysieke ruimte, elektra en dergelijke.
+The supplier offers the following features in the application:
 
-Deze faciliteiten bieden gebruikers de mogelijkheid om via het internet gebruik te maken van de cloud-dienst en bijbehorende cloud-programmatuur.
+- A way for the customer to get a representation in which the rain fall of each weatherstation within 50 km of the coastline around the baltic sea is shown. (if the rain fall was more than 10 mm)
+- A way for the customer to get a representation in which the temperature and humidity since the most recent midnight of any UNWDMI weather station is shown.
+- A map showing weather stations with a colour code depending on the current temperature.
+- A way for the customer to download data of the last 6 months in an Excel (files contain either a day, a week or a month of information)
 
-Ten behoeve van de operationele ondersteuning van de cloud-programmatuur levert de afdeling ICT de volgende diensten:
+These features offer an intuitive and cockpit-like feeling to the application, enabling users to easily access detailed information on current weather data as well as weather data from any period in the last 6 months.
 
-- Systeembeheer, applicatiebeheer en onderhoud van de bovenstaande cloud-faciliteiten;
-- De voor implementatie van de cloud-programmatuur benodigde diensten, waaronder:
-	- Vooronderzoek
-	- Projectleiding
-	- Inrichting
-	- Functioneel en technisch ontwerp
-	- Programmering
-	- Testen
-	- Opleiding
-	- Klantbegeleiding
-- Operationele ondersteuning, te weten klantbegeleiding en eerste- en tweedelijns servicedeskondersteuning;
-- Inrichting hardware en systeemsoftware bij opdrachtgever, indien dit in de cloud-overeenkomst expliciet is vermeld.
 
-De afdeling ICT schat de initiële hoeveelheid van data op 800 gigabyte met een lineaire groei van 10 gigabyte per maand.
+The supplier manages to the following facilities needed to provide the service:
+- A webserver containing the application;
+- Certificates needed to make the SSL connection possible;
+- The nessesary technical infrastructure (Computers, Firewalls, Routers, Kabels, etc.);
+- Other infrasturcture, e.g., physical space, power supplies, offices, etc.;
 
-Halfjaarlijks zal worden gekeken of deze groei van data nog doorzet of dat deze groei stopgezet kan worden.
+These facilities offer users the possibility to access the service using the internet.
+
+
+To support the development and implementation as well as continued operation of the service, Da Vinci Data offers the following services:
+- System administrators, application administrators, maintanance of the service;
+- Services needed to implement the service, e.g.:
+	- Project management
+	- Preparatory research
+	- Functional an technical design
+	- Software Programming
+	- Testing
+	- Installation
+	- Education
+	- User management
+- Operational support, i.e. First- and seccond level servicedesk support;
+- Installation of hardware and software at the client, if nessesary;
 ### 2.1.1 Service Levels
 
-Onderstaand worden de service levels van de Cloud dienst beschreven.
+This chapter will describe the service levels regarding the Web Interface service. This chapter was written assuming no particular Service Level Package. The chapter _Service Levels_ contains more information on the options and differences between these options.
 
-#### Beschikbaarheid
+#### Availability
 
-De Cloud dienst heeft voor de opdrachtgever en eindgebruikers een beschikbaarheid van 24 uur per dag, 7 dagen per week. Met een minimal uptime van 98% per jaar; waarbij de 2% downtime wordt veroorzaakt door storingen en geplande onderhoudswerkzaamheden. Middels Cloud-hosting wordt data aangeboden aan de gebruikers. Hiervoor is een internetverbinding vereist. Opslag van de data gebeurd op dezelfde wijze als voorheen, waardoor gebruikers op een transparante wijze hun werk kunnen voortzetten.
+The Web Interface has a minimum availability of 97% on Mondays before 12:00. However, because this is a web application, Da Vinci Data will strive to reach and maintain a minimal uptime of 99% over the course of a year, even outside of the by the client stated times (Mondays before 12:00). There is a slight margin of not more than 3% (depending on the service level) to ensure room for software patches/releases and hardware maintenance.
 
-In verband met het verwerken van salarissen en andere kritieke processen worden periodes tussen de 25e en laatste dag van de maand als speciale piekperiodes gezien. Tijdens openstellingstijden (werkdagen van 8:00 - 17:30) en piekperiodes wordt een minimale uptime van 99,5% per jaar gegarandeerd.
+Because the initial requirement was for the Web Interface to be accessible on Mondays before 12:00, this will now be deemed the peak period of the service. Depending on the service level, Da Vinci Data offers a higher minimum availability during these peak periods. (minimum 97%)
 
-#### Prestaties
+#### Service Level Targets
 
-Voor het bepalen van prestaties (Service Level Targets) zijn er Critical Success Factors (CSFs) opgesteld en hier vervolgens de Key Performance Indicators (KPIs) van afgeleid. Deze worden in de hierop volgende paragrafen beschreven.
+Several Critical Success Factors (CSFs) and Key Performance Indicators (KPIs) have been outlined to define the Service Level Targets in a clear and concise manner.
 
-Prestaties van de cloud kunnen op de volgende manier worden samengevat:
+Service Level Targets of the Web Interface can be summarised in the following way;
 
-###### Het ophalen van data:
-Op werkdagen van maandag t/m vrijdag van 08:00 - 17:30 kan een geautoriseerde gebruiker binnen 5 seconden data ophalen. Het zal niet vaker dan 10 keer per maand voorkomen dat het langer duurt dan 5 seconden. Beide condities gaan uit van een 'normale' situatie.
+###### Query load time
+Both queries have a maximum load time of 1 minute on Mondays before 12:00. Only authorised users will be able to issue a query request.   
 
-###### Het wegschrijven van data:
-Op werkdagen van maandag t/m vrijdag van 08:00 - 17:30 kan een geautoriseerde gebruiker binnen 5 seconden data wegschrijven. Deze 5 seconden staan voor _het accepteren van het verzoek om te schrijven naar de cloud_. Afhankelijk van de bestandsgrootte(n) kan het natuurlijk veel langer duren dan 5 seconden om data weg te schrijven. Het zal niet vaker dan 10 keer per maand voorkomen dat het langer duurt dan 5 seconden. Beide condities gaan uit van een 'normale' situatie.
-
->Een 'normale' situatie is een situatie waarin er geen storingen of andere incidenten spelen die van invloed kunnen hebben op de beschikbaarheid van de cloud.
+N.B.: Da Vinci Data guarantees the maximum load time of 1 minute only when there is no problem on the customer's side slowing the load time down. Chapter _1.8 Responsibilities_ contains more information on situations like these.
 
 ##### Critical Success Factors
 
-De volgende punten zijn kritiek in het succesvol draaiend houden van de cloud-dienst:
+The following points are of utmost importance in successfully keeping the Web Interface available and ensuring it meets the Service Level Targets.
 
-- Data moet 24/7 beschikbaar zijn voor de gebruikers;
-- Data moet overal beschikbaar zijn voor de gebruikers;
-- Van de data moeten recente backups beschikbaar zijn;
-- De data is vertrouwelijk en moet daarom beveiligd zijn en niet inzichtelijk zijn voor 3de partijen.
+- Data must be retained for at least 6 months and available 97% of the time on mondays before 12:00
+- Graphs/Maps related to the queries must load within 1 minute.
+- Data must be backed up starting from every midnight (until the next midnight).
+- The data may not be viewed or accessed by third parties.
 
 ##### Key Performance Indicators
 
-De onderstaande meeteenheden zijn gedefinieerd naar aanleiding van de kritieke success factoren. Deze succes factoren worden gebruikt voor het meten van de kwaliteit van de basisdiensten.
+The metrics below have been defined from the Critical Success Factors, these metrics will be used to measure the quality of the services.
 
-__Data moet 24/7 beschikbaar zijn voor alle gebruikers.__
 
-| Meeteenheid                                        | Doel  | Bron                           |
-| :----------                                        | :---  | :---                           |
-| Uptime van de service.                             | 98%   | Gemeten uptime van de service. |
-| Uptime van de service tijdens openstellingstijden. | 99.5% | Gemeten uptime van de service. |
-| Uptime van de service tijdens piekuren.            | 99.5% | Gemeten uptime van de service. |
+__Data must be retained for at least 6 months and available 97% of the time on mondays before 12:00__
 
-__Data moet overal beschikbaar zijn voor de gebruikers.__
+| Metric                              | Target | Source                   |
+| :----------                         | :---   | :---                     |
+| Uptime service                      | 98%    | Measured uptime service. |
+| Uptime service during opening times | 99.5%  | Measured uptime service. |
+| Uptime service during peak hoours   | 99.5%  | Measured uptime service. |
 
-| Meeteenheid                              | Doel | Bron                                                                                              |
-| :----------                              | :--- | :---                                                                                              |
-| Aantal hoge prioriteit incidenten.       | < 3  | Aantal binnengekomen incidenten over de service bij de servicedesk met een hoge prioriteit.       |
-| Aantal gemiddelde prioriteit incidenten. | < 20 | Aantal binnengekomen incidenten over de service bij de servicedesk met een gemiddelde prioriteit. |
-| Aantal lage prioriteit incidenten.       | < 50 | Aantal binnengekomen incidenten over de service bij de servicedesk met een lage prioriteit.       |
+__Graphs/Maps related to the queries must load within 1 minute.__
+
+| Metric                | Target     | Source                                                        |
+| :----------           | :---       | :---                                                          |
+| Average response time | < 1 minute | Response time measured in tests on a wide variety of systems. |
+| Maximum response time | < 1 minute | Response time measured in tests on a wide variety of systems. |
+
+__Data must be backed up starting from every midnight (until the next midnight).__
+
+| Metric                                 | Target | Source                                                     |
+| :----------                            | :---   | :---                                                       |
+| Amount of failed or incomplete backups | 0      | Amount of incidents involving a corrupt or missing backup. |
+
+__The data may not be viewed or accessed by third parties.__
+| Metric                                        | Target | Source                                                                                                          |
+| :----------                                   | :---   | :---                                                                                                            |
+| Amount of security breaches compromising data | 0      | Amount of security related incidents involving (suspected) successful retrieving of information by third party. |
 
 ---
 
-__Beschikbaarheid van recente backups.__
+#### Losstime
 
-| Meeteenheid                                | Doel | Bron                                                                                  |
-| :----------                                | :--- | :---                                                                                  |
-| Aantal onopgeloste integriteitsincidenten. | 0    | Aantal binnengekomen integriteitsincidenten waarbij de data niet herstelt kan worden. |
+To ensure service availability and data integrity, Da Vinci Data set up a maximum losstime. The definition of losstime is the amount of hours it takes for a backup to be restored after an integrity incident. This inevitably means that some amount of data depending on the losstime will be lost.
 
-__Vertrouwelijkheid van de data.__
+The maximum losstime for weather data is half an hour. If this loss time is exceeded, Da Vinci Data will schedule a service review with the client to evaluate why the loss time was exceeded and what measures can be taken to prevent this from happening.
 
-| Meeteenheid                                | Doel | Bron                                                                                         |
-| :----------                                | :--- | :---                                                                                         |
-| Aantal server inbraken.                    | 0    | Aantal veiligheidsincidenten met betrekking tot service waarbij ingebroken is op de servers. |
-| Het cijfer van een beveiligingsrapportage. | 8    | Halfjaarlijkse veiligheidsonderzoek door een externe partij.                                 |
+#### Maintenance
 
-#### Verliestijd
+Service maintenance will take place during set times. This will be on tuesday nights between 19:00 and 21:00 (if necessary). When maintenance has to urgently be performed (because the continuity or integrity of the service may be at risk), this will take place in accordance with the client. Customers will receive notice of maintenance at least half an hour before the start of the maintenance.
 
-Voor het leveren van de cloud-dienst wordt gestreven naar een minimale verliestijd. De verliestijd is de hoeveelheid uren bij een integriteitsincident die verloren gaan. Wanneer een integriteitsincident zich voordoet wordt gebruik gemaakt van de laatst gemaakte backups. In de paragraaf _Backups_ wordt beschreven dat elke nacht een backup wordt gemaakt van de data. 
+The duration of maintenance may depend on the severity of the issues and the uptime guarantee depending on the service level package.
 
-Dit betekent dat wanneer een integriteitsincident zich voordoet er gemiddeld 4 uur en drie kwartier aan verliestijd ontstaat (uitgaand van een opstellingstijd van 08:00 tot 17:30). Dir betekend dat de norm voor dataverlies per integriteits incident niet meer dan 5 uur is. De norm voor de totale verliestijd over de contractperiode is maximaal 2%. 
-
-Wanneer een van de bovenstaande normen niet behaald wordt, wordt in samenwerking tussen de afdeling ICT en de opdrachtgever een dienstreview gedaan van de cloud-dienst om te bepalen waarom de gestelde norm(en) niet worden behaald.
-
-#### Uitvoeren van onderhoud
-
-Onderhoud aan de dienst zal plaatsvinden op standaard tijden. Dit zal zijn op dinsdagavond tussen 19:00 en 21:00 uur buiten piekperiodes.
-Wanneer er met spoed onderhoud moet worden gepleegd (omdat de continuïteit of intergriteit van de dienst anders niet gewaarborgd kan worden) zal dit in overleg met opdrachtgever plaatsvinden en vooraf worden gecommuniceerd naar de gebruikers.
-
-Duur van onderhoud zal subjectief zijn aan de uptime garantie en zal zodoende nooit langer kunnen duren dan 2 uur en 16 minuten per week buiten piekuren en 23 minuten per week binnen de piekuren.
-
-__Berekening:__
+__Calculation:__
 
 Een jaar heeft 365,25 dagen (kwart dag is voor schikkeljaren).
 Van de 25e t/m het einde van de maand is per jaar 65,25 dagen.
@@ -552,20 +553,20 @@ Opslagruimte wordt weergegeven als Gigabytes (GB). Er zal in eerste instantie 80
 
 ## 2.2 Servicedesk
 
-Team4S biedt ter ondersteuning van de Cloud dienst een servicedesk. Deze servicedesk is gevestigd in Nederland en is beschikbaar voor alle werknemers van Team4S in zowel Nederland als Duitsland. De servicedesk zal van 8:00 tot 17:30 beschikbaar zijn, met uitzondering van algemeen erkende feestdagen in Nederland. Medewerkers van de servicedesk zullen zowel in de Duitse als Nederlandse taal bekwaam zijn.
+The supplier will support the weather data application with a Servicedesk. The Servicedesk will be hosted in the Netherlands and will be availible for all users of the application. The Servicedesk will be availible from Monday to Friday from 07:00 to 20:00 (local time in Kaunas). Employees of the servicedesk will be English speaking.
 
-Werknemers kunnen contact opnemen met de servicedesk voor:
+Users can contact the servicedesk for:
+- Questions and advice about the application and its functionality;
+- Recording, analysing and resolving of incidents;
 
-- Vragen om advies en uitleg over de functionaliteit en de werking van de cloud dienst;
-- Vastleggen, analyseren en oplossen van problemen.
 
 ### 2.2.1 Service Levels
 
 #### Availability
 
-The servicedesk will be available on working days from 8:00 to 17:30. Minimal availability between these hours will be 97%.
+The servicedesk will be available from Monday to Friday from 07:00 to 20:00 (local time in Kaunas). Minimal availability between these hours will be 97%.
 
-Below you'll find the Critical Success Factors and Key Performance Indicators that belong to the Service Level Targets.
+Below you will find the Critical Success Factors and Key Performance Indicators that belong to the Service Level Targets.
 
 ##### Critical Success Factors
 
@@ -577,7 +578,7 @@ The following points are critical for the success of the servicedesk:
 
 ##### Key Performance Indicators
 
-Below you'll find the standards that define the Critical Success Factors. These will be used to measure the quality of the service.
+Below you will find the standards that define the Critical Success Factors. These will be used to measure the quality of the service.
 
 __Timely responce to new incidents.__
 
@@ -586,7 +587,7 @@ __Timely responce to new incidents.__
 | Amount of incidents with exeeding IRT          | <5           | Amount of incidents without response within the agreed upon IRT from the last 3 months. |
 | Average IRT of incidents with high priority.   | < 15 minutes | Average IRT of all solved incidents with high priority from last 3 months.              |
 | Average IRT of incidents with medium priority. | < 1 hour     | Average IRT of all solved incidents with medium priority from last 3 months.            |
-| Average IRT of incidents with low priority.    | < 8 hours    | Average IRT of all solved incidents with low priority from last 3 months.               |
+| Average IRT of incidents with low priority.    | < 2 hours    | Average IRT of all solved incidents with low priority from last 3 months.               |
 
 
 __Timely resolving of incidents.__
@@ -596,7 +597,7 @@ __Timely resolving of incidents.__
 | Amount of incidents with exeeding MPT                   | <5             | Amount of incidents without resolution within the agreed upon MPT from the last 3 months. |
 | Average resolve time of incidents with high priority.   | < half an hour | Average resolve time of all solved incidents with high priority from last 3 months.       |
 | Average resolve time of incidents with medium priority. | < 4 hours      | Average resolve time of all solved incidents with medium priority from last 3 months.     |
-| Average resolve time of incidents with low priority.    | < 3 work days  | Average resolve time of all solved incidents with low priority from last 3 months.        |
+| Average resolve time of incidents with low priority.    | < 8 hours      | Average resolve time of all solved incidents with low priority from last 3 months.        |
 
 
 __The availability of the servicedesk.__
@@ -608,13 +609,14 @@ __The availability of the servicedesk.__
 
 #### Responce and process times
 
-De maximale duur van het oplossen van een incident ligt aan de prioriteit van het incident. De maximale respons- en oplostijd van incidenten met een gold-level servicedesk is als volgt:
+The maximum time spent on solving a incident depends on the priority of the incident. The maximum response- and processtime with a gold-level servicedesk is as following:
 
-| Prioriteit   | Initial Response Time | Maximum Process Time      |
+| Priority     | Initial Response Time | Maximum Process Time      |
 | ------------ | ------------          | ------------------------- |
 | High         | Within 15 minutes     | Within 30 minutes         |
 | Medium       | Within 1 hour         | Within 4 hours            |
-| Low          | Within 8 hours        | Within 3 work days        |
+| Low          | Within 2 hours        | Within 8 hours            |
+
 
 
 ### 2.2.2 Risk Analysis
@@ -629,99 +631,120 @@ The servicedesk can also be subject to several risks. Although some of these ris
 | Online-chat failure | Medium | Low    |
 | Email failure       | Low    | Low    |
 
+The consequences of a phone defect is described as 'medium' because phone contact is the most efficient way of contacting the Servicedesk. Phone contact ensures a fast transfer of information and allows the servicedesk employee to 
+question and troubleshoot with the user.
+A failure in the online-chat system has a higher probability but has no major consequences. When the online-chat function is no longer availible users are still able to phone the Servicedesk.
+An email failure is also very unlikely and although this is a preffered means of communication for users it is not a very functional way communication. Therefore we consider the consequences to be low and give it a low impact.
 
 
-Het gevolg van een telefoonstoring wordt als 'gemiddeld' geclassificeerd omdat telefonisch contact met de servicedesk de meest efficiënte methode is. Telefonisch contact zorgt voor een snellere overdracht van informatie, een servicedesk-medewerker kan bijvoorbeeld ook doorvragen/troubleshooten. Een storing in het online-chat systeem is iets waarschijnlijker, maar de gevolgen hiervan zijn laag. Als de online-chat niet werkt zullen mensen vaak nog wel telefonisch de servicedesk kunnen bereiken. Als laatste risico heeft de email storing zowel een lage kans als een laag gevolg. Dit komt doordat email de minst geprefereerde manier van communicatie is. Email communicatie met de service desk werkt vaak traag, maar is vaak wel stabiel.
+#### Measures
+In order to saveguard the availability of the Servicedesk we will increase the responce times of these means of communication. Depending on the service level (Gold, Silver, Bronze) there will be a higher responce time of the Servicedesk. This ensures that whenever one of there risks occurs users can fallback to one of te other means of communication.
 
-#### Maatregelen
-Voor alle drie risico's kan er één uniforme maatregel getroffen worden, namelijk het verhogen van de responstijd op alle communicatiemiddelen. Afhankelijk van het gekozen pakket (Gold, Silver, Bronze) zullen er meer communicatiemiddelen beschikbaar zijn. Ook de responstijd per communicatiemiddel zal variëren met het gekozen pakket. Dit zorgt er voor dat áls één van de drie risico's daadwerkelijk voorkomt, klanten en servicedesk-medewerkers altijd kunnen terugvallen op een andere mogelijkheid.
 
 ### 2.2.3 Capaciteitsplanning
 
-Omdat de opdrachtgever qua medewerkers verwacht te groeien in de komende jaren zal het aantal gebruikers dat aanspraak doet op de servicedesk ook stijgen. Vanwege deze groei is het belangrijk om tijdens een halfjaarlijkse evaluatie vast te stellen of de doelen gesteld bij de Critical Success Factors ook moeten stijgen.
+Because there will be a fixed amount of users on the system we can make an accurate estimate of the amount of users that will contact the Servicedesk.
 
-Tijdens de bovenstaande evaluatie zal er tevens moeten worden bepaald of het budget van de servicedesk toereikend is. Deze zal mogelijk moeten worden verhoogd om de groei van gebruikers en het aantal problems en incidenten te kunnen blijven ondersteunen. En hiermee ook de Key Performance Indicators (zoals beschreven in _2.3.1 Service Levels_) te kunnen waarborgen.
+If at any time reports show that the Servicedesk cannot handle the amount of incidents there will be an evaluation to decide if the budget for the servicedesk is still realistic or if some changes in this SLA need to be made in order to guarantee the Key Performance Indicators (as described in _2.3.1 Service Levels_).
 
-Tot slot kan tijdens de proefperiode blijken dat het aantal geschatte problems en incidenten in eerste instantie te hoog of te laag is ingeschat. In dit geval zal afdeling ICT in overleg met de opdrachtgever tot nieuwe, en meer accurate, schatting moeten komen.
+If the conclusion at the end of the trial period shows that the amount of estimated incidents and problems is much higher or lower as initialy suggested the supplier and client will redefine these estimates (as described in _4.3 Trial period_).
 
-# 3 Tariefstructuur
 
-Tariefstructuur\Eenmalige Kosten.md not found
-## 3.2 Structurele Kosten
 
-Om de cloud-software te blijven gebruiken, moet er maandelijks een bedrag betaald worden voor licenties en hosting. Tevens moeten de beschikbaar gestelde servicedesk medewerkers worden betaald. Dit brengt de volgende structurele kosten met zich mee:
+# 3 Pricing
 
-| Onderdeel                                       | Maandelijks   | Jaarlijks      |
+### 3.1 Implementation costs
+
+To set up the servicedesk to support the new weather data application, new hardware and servicedesk training/employees will be necessary. These processes cause implementation costs:
+
+| Part                                                | Costs          |
+| :---                                                | :---           |
+| Hardware costs web interface (Dedicated Server etc) | € 8.000,-      |
+| Service desk (extra staff, service desk hardware)   | € 2.000,-      |
+| <div style="text-align:right">__Total:__</div>      | __€ 10.000,-__ |
+
+After the execution of the implementation processes, changes and maintenance can cause other costs. For example, the supplier will keep maintaining the software, ensuring it is up to date and remains bug-free. The client is obliged to start using the new releases within 6 months after the supplier delivers a new release. The estimated cost for this service is __€2500,-__ yearly. This includes installation, delivery, convertion and education for the servicedesk staff.
+
+
+## 3.2 Structural costs
+
+To provide continued use of the weather data application, a monthly sum will be needed for for example hosting. In addition to that, the servicedesk employees will need to be paid. Due to situations like these, the following structural costs have been defined:
+
+__For the client:__  
+
+| Monthly       | Yearly         |
+| :---          | :---           |
+| __€ 1.500,-__ | __€ 18.000,-__ |
+
+
+__For the teacher:__
+
+| Component                                       | Monthly       | Yearly         |
 | :---                                            | :---          | :---           |
-| Cloud-hosting                                   | € 400,-       | € 4.800,-      |
-| Licenties voor cloud-software                   | € 100,-       | € 1.200,-      |
-| Medewerkers servicedesk                         | € 1.000,-     | € 12.000,-     |
+| Hosting                                         | € 400,-       | € 4.800,-      |
+| Service desk employees                          | € 1.000,-     | € 12.000,-     |
 | <div style="text-align:right">__Totaal:__</div> | __€ 1.500,-__ | __€ 18.000,-__ |
 
-In verband met de verwachte groei van data zullen de kosten van het onderdeel Cloud-hosting stijgen met €5,- per maand. Per jaar zal dit neerkomen op een stijging van €60,- euro.
-## 3.3 Servicedeskondersteuning
 
-De servicedesk krijgt maandelijks een vast bedrag van € 1.000,- toegewezen. Dit bedrag is bedoeld voor de ontwikkeling en onderhoud van de servicedesk. Denk daarbij aan:
+## 3.3 Servicedesk support
 
-- Nieuwe ontwikkelingen in de cloud-software;
-- Uitgebreide testmogelijkheden;
-- Aanschaf nieuwe apparatuur;
-- Aannemen tijdelijke krachten voor ondersteuning bij uitrol-procedures;
-- Licentiebeheer.
+The servicedesk will recieve a monthly sum of € 1.000,-. This money will be used for the develoopment and maintenance of the servicedesk. For example:
+- Keep the knowledge up-to-date when the weather data application gets a new release.
+- Expand on servicedesk infrastructure and hardware when necessary.
+- Hire new employees temporarily during release procedures.
+- Licence management.
 
-## 3.4 Niveau's van Dienstverlening
 
-Onderstaand worden de klant- en basisdiensten uiteengezet tegen de beschikbare niveau's dienstverlening (brons, zilver en goed).
+## 3.4 Levels of Service
 
-### Cloud Hosting
+In this chapter, each the customer- and basic services' KPI's will be listed for each service level. The available service levels are bronze, silver and gold.
 
-| Cloud-dienst                                      | Brons         | Zilver       | Goud         |
-| :-----------                                      | :----         | :-----       | :---         |
-| Algemene uptime.                                  | 94%           | 96%          | 98%          |
-| Uptime tijdens piekperiodes en opstellingstijden. | 97%           | 98.5%        | 99.5%        |
-| Snelheid ophalen van data.                        | < 15 seconden | < 7 seconden | < 5 seconden |
-| Snelheid wegschrijven van data.                   | < 15 seconden | < 7 seconden | < 5 seconden |
-| Aantal incidenten met hoge prioriteit             | < 10          | < 6          | < 3          |
-| Aantal incidenten met gemiddelde prioriteit       | < 50          | < 35         | < 20         |
-| Aantal incidenten met lage prioriteit             | < 100         | < 75         | < 50         |
-| Aantal serverinbraken.                            | 2             | 1            | 0            |
-| Cijfer beveiligingsrapportage.                    | n.v.t.        | 7            | 8            |
-| Aantal onopgeloste integriteitsincidenten.        | 5             | 3            | 0            |
+### Weather data application
 
-In de volgende tabel worden de risico's uiteengezet tegen de maatregelen per niveau van dienstverlening.
+| Weather data application                         | Bronze       | Silver       | Gold         |
+| :-----------                                     | :----        | :-----       | :---         |
+| General uptime.                                  | 95%          | 97%          | 99%          |
+| Uptime during peak times and opening times.      | 97%          | 98.5%        | 99.5%        |
+| Load time for queries.                           | < 60 seconds | < 30 seconds | < 10 seconds |
+| Maximum amount of incidents with high priority   | < 10         | < 6          | < 3          |
+| Maximum amount of incidents with medium priority | < 50         | < 35         | < 20         |
+| Maximum amount of incidents with low priority    | < 100        | < 75         | < 50         |
+| Minimum score security report.                   | n.v.t.       | 7            | 9            |
+| Maximum amount of unsolved integrity incidents.  | 5            | 3            | 0            |
 
-| Risico                                    | Maatregel 1                                                    | Maatregel 2                    | Bronze | Silver | Gold  |
-| ---                                       | ---                                                            | ---                            | ---    | ---    | ---   |
-| Externe cloudhosting partij gaat failliet | Bij kiezen van externe partij een sterkte-zwakteanalyse maken. |                                | -      | 1      | 1     |
-| DDoS aanval op datacenter                 | Software om DDoS te voorkomen                                  | Interventieplan DDoS opzetten. | -      | 1      | 1 & 2 |
-| Storing serversoftware                    | Onderhoudsabonnement afsluiten bij softwareleverancier         | Personeel bijscholen           | -      | 1      | 1 & 2 |
-| Schijfuitval Server                       | Jaarlijks schijfeenheden nalopen en vervangen                  | Raid 10 toepassen              | -      | 1      | 1 & 2 |
+In the table below, the risks will be listed along with the measures that will be taken to prevent or react to these risks for each service level package.
+
+| Risk                                | Measure 1                                                                                  | Measure 2                             | Bronze | Silver | Gold  |
+| ---                                 | ---                                                                                        | ---                                   | ---    | ---    | ---   |
+| Server instability (hardware fault) | After trial period, deliver a report evaluating the current hardware and different options | Free periodic hardware upgrade        | -      | 1      | 1 & 2 |
+| DDoS attacks                        | Software to prevent DDoS.                                                                  | Create an intervention plan.          | -      | 1      | 1 & 2 |
+| Software fault (security/stability) | Real-time bug reporting to the development and maintenance team.                           | Set up a dedicated bug-resolving team | -      | 1      | 1 & 2 |
 
 ---
 
 ### Servicedesk
 
-| Servicedesk                                       | Brons        | Zilver      | Goud        |
-| :----------                                       | :----        | :-----      | :---        |
-| Beschikbaarheid servicedesk.                      | 93%          | 95%         | 97%         |
-| Aantal incidenten die reactietijd overschrijden.  | < 15         | < 8         | < 5         |
-| Aantal incidenten die doorlooptijd overschrijden. | < 15         | < 8         | < 5         |
-| Reactietijd servicedesk - prioriteit hoog.        | 30 minuten   | 20 minuten  | 15 minuten  |
-| Reactietijd servicedesk - prioriteit gemiddeld.   | 4 uur        | 2 uur       | 1 uur       |
-| Reactietijd servicedesk - prioriteit laag.        | 5 werkdagen  | 2 werkdagen | 8 uur       |
-| Doorlooptijd servicedesk - prioriteit hoog.       | 2 uur        | 1 uur       | 30 minuten  |
-| Doorlooptijd servicedesk - prioriteit gemiddeld.  | 2 werkdagen  | 1 werkdag   | 4 uur       |
-| Doorlooptijd servicedesk - prioriteit laag.       | 10 werkdagen | 6 werkdagen | 3 werkdagen |
-| Aantal serviceklachten - servicedesk              | 5            | 3           | 0           |
+| Servicedesk                                                                         | Bronze          | Silver         | Gold           |
+| :----------                                                                         | :----           | :-----         | :---           |
+| Servicedesk availability.                                                           | 95%             | 97%            | 99%            |
+| Max. amount of incidents that are not responded to within the maximum response time | < 15            | < 8            | < 5            |
+| Max. amount of incidents that are not solved within the maximum solve time.         | < 15            | < 8            | < 5            |
+| Responsetime servicedesk - priority high.                                           | 30 minutes      | 20 minutes     | 15 minutes     |
+| Responsetime servicedesk - priority medium.                                         | 4 hours         | 2 hours        | 1 hours        |
+| Responsetime servicedesk - priority low.                                            | 5 working days  | 2 working days | 8 hours        |
+| Maximum solve time servicedesk - priority high.                                     | 2 hours         | 1 hours        | 30 minutes     |
+| Maximum solve time servicedesk - priority medium.                                   | 2 working days  | 1 working days | 4 hours        |
+| Maximum solve time servicedesk - priority low.                                      | 10 working days | 6 working days | 3 working days |
+| Maximum amount of service desk complaints                                           | 5               | 3              | 0              |
 
-### Jaarlijkse kosten per service level
+### Yearly costs for each service level
 
-| Onderdeel                                       | Brons          | Zilver        | Goud           |
-| :---                                            | :-----         | :-----        | :---           |
-| Cloud-hosting                                   | € 3.600,-      | € 4.300,-     | € 4.800,-      |
-| Licenties voor cloud-software                   | € 1.200,-      | € 1.200,-     | € 1.200,-      |
-| Medewerkers servicedesk                         | € 8.000,-      | € 10.500,-    | € 12.000,-     |
-| <div style="te-t-align:right">__Totaal:__</div> | __€ 12.800,-__ | __€16.000,-__ | __€ 18.000,-__ |
+| Component                                      | Bronze         | Silver        | Gold           |
+| :---                                           | :-----         | :-----        | :---           |
+| Web Interface                                  | € 3.600,-      | € 4.300,-     | € 4.800,-      |
+| Employees servicedesk                          | € 8.000,-      | € 10.500,-    | € 12.000,-     |
+| <div style="te-t-align:right">__Total:__</div> | __€ 11.600,-__ | __€14.800,-__ | __€ 16.800,-__ |
+
 
 
 # 4 Implementation and Conditions
@@ -761,18 +784,8 @@ When three warnings have been issued by the client, the supplier as well as the 
 
 # 5 Rapportageverplichtingen
 
-## 5.1 Service Review
-
-Elke maand levert de afdeling ICT een Service Level Rapportage aan de opdrachtgever. In dit rapportage worden van de diensten Cloud Hosting en Servicedesk de doelen van de Critical Success Factors naast de daadwerklijk behaalde waarden gelegd. Dit geeft een duidelijk overzicht of de gewenste kwaliteit van de diensten behaald wordt. Mocht de Critical Success Factor niet adequaat behaald worden dan wordt dit toegelicht in de rapportage waarmee vervolgens gegeken kan worden waar verbetering te halen is.
-
-De Service Level Rapportage wordt uiterlijk 10 dagen na het einde van de maand geleverd.
-
-Zie de bijlage _"Voorbeeld Service Level Rapportage.pdf"_ voor een voorbeeld van een Service Level Rapportage.
-## 5.2 Proefperiode Rapportage
-
-Aan het einde van de proefperiode wordt een rapport opgesteld op basis van de maandelijkse Service Level Rapportages. In dit rapport wordt beschreven welke doelen, gesteld in de Critical Success Factors, wel en niet realistisch zijn. Gekeken wordt naar de daadwerkelijk behaalde waardes in de maandelijkse rapportages tegenover de gezette doelen. 
-
-Wanneer een doel regelmatig (meer dan 3 maanden) niet gehaald wordt kan deze als niet realistisch worden beschouwt en moet het doel opnieuw geevalueerd worden. Ook wanneer een doel een (eenmalige) grote overschrijding heeft moet deze opnieuw geevalueerd worden.
+Rapportageverplichtingen\Service Review.md not found
+Rapportageverplichtingen\Proefperiode Rapportage.md not found
 
 # 6 Glossary
 
@@ -785,7 +798,8 @@ B
 	> A server is a computer that provides data to other computers. It may serve data to systems on a local area network (LAN) or a wide area network (WAN) over the Internet.
 	> --- http://www.techterms.com/definition/server
 
--__VPN Connection__
+
+- __VPN Connection__
 	> A virtual private network is "tunneled" through a wide area network WAN such as the Internet. This means the network does not have to be located in one physical location like a LAN. However, by using encryption and other security measures, a VPN can scramble all the data sent through the wide area network, so the network is "virtually" private.
 	> --- http://www.techterms.com/definition/vpn
 

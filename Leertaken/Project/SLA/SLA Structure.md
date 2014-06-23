@@ -58,12 +58,12 @@ In this chapter you will find a description of the Customer services (Weather da
 
 <!-- @include Customer Services/Customer Services.md -->
 
-# 3 Tariefstructuur
+# 3 Pricing
 
-<!-- @include Tariefstructuur/Eenmalige Kosten.md -->
-<!-- @include Tariefstructuur/Structurele Kosten.md -->
-<!-- @include Tariefstructuur/Servicedeskondersteuning.md -->
-<!-- @include Tariefstructuur/Niveau's van Dienstverlening.md -->
+<!-- @include Pricing/Implementation Costs.md -->
+<!-- @include Pricing/Structural Costs.md -->
+<!-- @include Pricing/Servicedesk support.md -->
+<!-- @include Pricing/Service levels.md -->
 
 # 4 Implementation and Conditions
 
