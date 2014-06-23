@@ -15,8 +15,3 @@ fi
 
 sudo mount --bind /home/vagrant/meteorapp/.meteor /vagrant/src/.meteor/
 sudo mount --bind /home/vagrant/meteorapp/packages /vagrant/src/packages/
-
-export MONGO_URL=mongodb://localhost:27017/meteor
-export METEOR_LOCAL_DIR=/data/meteor
-# cd /vagrant/src
-# meteor run

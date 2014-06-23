@@ -21,3 +21,5 @@ if ! ls /data/db 2> /dev/null; then
 	sudo chown -R vagrant /data
 	sudo chgrp -R vagrant /data
 fi
+
+echo -e "\nexport MONGO_URL=mongodb://localhost:27017/meteor\ncd /vagrant/src/" >> ~/.bashrc

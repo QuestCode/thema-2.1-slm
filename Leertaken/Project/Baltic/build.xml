@@ -64,7 +64,7 @@
 		<delete file="${dir.geo}/baltic.json"/>
 
 		<antcall target="clearTemp"/>
-		
+
 		<exec executable="vagrant">
 			<arg value="ssh"/>
 			<arg line="-- /vagrant/${dir.scripts}/generate-map-baltic.sh"/>
