@@ -1,18 +1,15 @@
 The client wants to perform calculations on weather data to conduct research on climate change. The client is interested in climate change in Lithuania and other countries around the Baltic Sea and is especially interested in weather changes regarding the milder weather in the past years.
 Da Vinci Data provides an application that allows the client to access the weather data.
 
+The application will be used by 50 users that will all need a username and password in order to use the application. The service will be made available using an SSL connection. The application will be hosted in the Netherlands using a server of the UNWMDI.
 
+The supplier manages to the following facilities needed to provide the service:
+- A webserver containing the application;
+- Certificates needed to make the SSL connection possible;
+- The nessesary technical infrastructure (Computers, Firewalls, Routers, Kabels, etc.);
+- Other infrasturcture, e.g., physical space, power supplies, offices, etc.;
 
-Team4S biedt de volgende cloud faciliteiten om de 200 werknemers van de opdrachtgever in staat te stellen via internet te beschikken over een centrale, betrouwbare opslag van gegevens. De cloud dienst zal 24/7 beschikbaar zijn. Veiligheid wordt gewaarborgd door het fysiek afschermen van de server (een speciaal toegewijde server die niet toegankelijk is voor derden).
-
-De afdeling ICT heeft de volgende cloud-faciliteiten in beheer:
-
-- Een cloud-server met bijbehorende systeemprogrammatuur;
-- De in de cloud-overeenkomst aangegeven cloud-programmatuur;
-- De voor het werken via internet benodigde technische infrastructuur (zoals routers, modems, bekabeling, etc.);
-- De overige benodigde infrastructuur, zoals fysieke ruimte, elektra en dergelijke.
-
-Deze faciliteiten bieden gebruikers de mogelijkheid om via het internet gebruik te maken van de cloud-dienst en bijbehorende cloud-programmatuur.
+These facilities offer users the possibility to access the service using the internet.
 
 Ten behoeve van de operationele ondersteuning van de cloud-programmatuur levert de afdeling ICT de volgende diensten:
 
