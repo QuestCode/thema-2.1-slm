@@ -61,14 +61,14 @@ public class Record {
 	public static BasicDBObject toDBObject( Object[] record ) {
 		String date   = (String) record[ Record.DATE ];
 		String time   = (String) record[ Record.TIME ];
-		Date datetime = new Date(
+		Date datetime = new Date( Date.UTC(
 			Integer.parseInt( date.substring( 0, 4  ) ) - 1900,
 			Integer.parseInt( date.substring( 5, 7  ) ) - 1,
 			Integer.parseInt( date.substring( 8, 10 ) ),
 			Integer.parseInt( time.substring( 0, 2  ) ),
 			Integer.parseInt( time.substring( 3, 5  ) ),
 			Integer.parseInt( time.substring( 6, 8  ) )
-		);
+		) );
 
 		return new BasicDBObject( "stn", record[ Record.STN ] )
 			.append( "datetime", datetime )

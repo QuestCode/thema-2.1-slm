@@ -5,6 +5,12 @@ Router.map(function(){
 		action: 'actionHome'
 	});
 
+	this.route('graph', {
+		path: '/graph',
+		controller: 'app.controllers.GraphController',
+		action: 'actionGraph'
+	});
+
 	this.route('login', {
 		path: '/login',
 		controller: 'app.controllers.LoginController'
@@ -26,7 +32,7 @@ if(Meteor.isClient) {
 		if(Meteor.userId() === null) {
 			this.redirect('login');
 		}
-	}, { 
+	}, {
 		except: ['login']
 	});
 
@@ -37,5 +43,5 @@ if(Meteor.isClient) {
 		}
 	}, {
 		only: ['login']
-	})
+	});
 }

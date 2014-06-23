@@ -33,7 +33,4 @@ app.schemas.stations = new SimpleSchema({
 
 app.collections.stations = new Meteor.Collection('stations', {
 	schema: app.schemas.stations,
-	// transform: function(doc) {
-	// 	return new app.models.Station(doc);
-	// }
-})
+});
