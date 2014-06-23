@@ -9,3 +9,4 @@
 >- __Problem:__ A collection of incidents that might indicate a common cause;
 >- __Initial Responce time (IRT):__ Within this time a responce should be given to a new incident;
 >- __Maximum Process Time (MPT):__ Within this time a incident should be resolved or be scaled up to a major incident / problem;
+

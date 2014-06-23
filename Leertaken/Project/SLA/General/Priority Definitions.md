@@ -33,4 +33,4 @@ This matrix defines the priority of an incident, depending on the impact and urg
 | _Impact Medium_        | Medium              | Medium                   | Low                 |
 | _Impact Low_           | Medium              | Low                      | Low                 |
 |                        | _Urgency High_      | _Urgency Medium_         | _Urgency Low_       |
-  
+
