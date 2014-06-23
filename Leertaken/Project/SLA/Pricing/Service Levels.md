@@ -2,9 +2,9 @@
 
 In this chapter, each the customer- and basic services' KPI's will be listed for each service level. The available service levels are bronze, silver and gold.
 
-### Web Interface
+### Weather data application
 
-| Web Interface                                    | Bronze       | Silver       | Gold         |
+| Weather data application                         | Bronze       | Silver       | Gold         |
 | :-----------                                     | :----        | :-----       | :---         |
 | General uptime.                                  | 95%          | 97%          | 99%          |
 | Uptime during peak times and opening times.      | 97%          | 98.5%        | 99.5%        |
@@ -47,3 +47,4 @@ In the table below, the risks will be listed along with the measures that will b
 | Web Interface                                  | € 3.600,-      | € 4.300,-     | € 4.800,-      |
 | Employees servicedesk                          | € 8.000,-      | € 10.500,-    | € 12.000,-     |
 | <div style="te-t-align:right">__Total:__</div> | __€ 11.600,-__ | __€14.800,-__ | __€ 16.800,-__ |
+
