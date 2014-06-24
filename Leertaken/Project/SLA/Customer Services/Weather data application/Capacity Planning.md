@@ -1,4 +1,4 @@
-### 2.1.3 Capaciteitsplanning
+### 2.1.3 Capacity planning
 
 De werklast van de Cloud dienst ligt voornamelijk op de Cloud servers en de hoeveelheid dataopslag. Omdat het principe van "de Cloud" is ontworpen met oog op het verwerken en opslaan van grote hoeveelheden data, is opschaling van de servers eenvoudig en heeft dit een lage impact op de beschikbaarheid. Tevens is het inzetten van minders servers bij een werklast of hoeveelheid data die lager uitvalt dan geschat, ook zonder grote gevolgen.
 
