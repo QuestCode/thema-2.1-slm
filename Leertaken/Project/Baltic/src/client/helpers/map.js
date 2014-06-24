@@ -84,6 +84,8 @@ WorldMap._drawWorldMap = function() {
 			.radius(2);
 
 		self._drawHexbin(svg, hexbin, stations);
+
+		Session.set( 'map-isReady', true );
 	});
 };
 
@@ -123,25 +125,39 @@ WorldMap._drawBalticMap = function() {
 			.radius(15);
 
 		self._drawHexbin(svg, hexbin, stations);
+
+		Session.set( 'map-isReady', true );
 	});
 };
 
 WorldMap.showWorld = function() {
 	var self = this;
 
+	Session.set( 'map-isReady', false );
+
 	this._$map.empty();
 	this._$worldToggle.addClass( 'active' );
 	this._$balticToggle.removeClass( 'active' );
-	this._drawWorldMap();
 	app.Graph.setStations( [] );
+
+	Meteor.subscribe( 'stations', function() {
+		self._drawWorldMap();
+	} );
 };
 
 WorldMap.showBalticSea = function() {
+	var self = this;
+
+	Session.set( 'map-isReady', false );
+
 	this._$map.empty();
 	this._$worldToggle.removeClass( 'active' );
 	this._$balticToggle.addClass( 'active' );
-	this._drawBalticMap();
 	app.Graph.setStations( [] );
+
+	Meteor.subscribe( 'balticStations', function() {
+		self._drawBalticMap();
+	} );
 };
 
 WorldMap.init = function() {
@@ -152,6 +168,10 @@ WorldMap.init = function() {
 		this.showBalticSea();
 	}
 	this._init = true;
+};
+
+Template.map.isReady = function() {
+	return Session.get( 'map-isReady' );
 };
 
 Template.map.rendered = function() {

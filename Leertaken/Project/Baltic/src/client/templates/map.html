@@ -1,3 +1,8 @@
 <template name="map">
+	{{#unless isReady }}
+	<div id="map-loader">
+		<b class="glyphicon glyphicon-refresh"></b> Loading&hellip;
+	</div>
+	{{/unless}}
 	<div id="map"></div>
 </template>
