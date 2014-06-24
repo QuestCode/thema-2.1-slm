@@ -4,46 +4,72 @@ WorldMap.getStations = function() {
 	return app.collections.stations.find().fetch();
 };
 
-WorldMap._drawWorldMap = function() {
-	// ..
-};
+WorldMap._drawMap = function() {
+	this._width = 1000;
+	this._height = 600;
 
-WorldMap._drawBalticMap = function() {
+	this._projection = d3.geo.mercator()
+		.scale(1)
+		.translate([0, 0]);
+
+	this._path = d3.geo.path()
+		.projection(this._projection);
+}
+
+WorldMap._drawHexbin = function(svg, hexbin, stations) {
 	var self = this;
 
-	d3.json('geo/baltic.json', function(err, baltic) {
+	stations.forEach(function(d) {
+		var p = self._projection(d.position.coordinates);
+		d[0] = p[0];
+		d[1] = p[1];
+	});
 
-		var countries = topojson.feature(baltic, baltic.objects.countries);
-		var seas = topojson.feature(baltic, baltic.objects.seas);
+	svg.append('g')
+		.attr('class', 'hexbin')
+		.selectAll('path')
+		.data(hexbin(stations))
+		.enter().append('path')
+			.attr('class', 'hexagon')
+			.attr('d', function(d) { return hexbin.hexagon(); })
+			.attr('transform', function(d) { return 'translate(' + d.x + ',' + d.y + ')'; })
+			.style('fill', 'red')
+			.style('stroke', '')
+			.on('click', function() {
+				console.log(this);
+				console.log(arguments);
+			})
+}
+
+WorldMap._center = function(object, zoom) {
+	var bounds = this._path.bounds(object);
+
+	var scale = zoom / Math.max(
+		(bounds[1][0] - bounds[0][0]) / this._width,
+		(bounds[1][1] - bounds[0][1]) / this._height);
+	var translate = [
+		(this._width - scale * (bounds[1][0] + bounds[0][0])) / 2,
+		(this._height - scale * (bounds[1][1] + bounds[0][1])) / 2
+	];
+
+	this._projection
+		.scale(scale)
+		.translate(translate);
+}
+
+WorldMap._drawWorldMap = function() {
+	var self = this;
+	this._drawMap();
+
+	d3.json('geo/world.json', function(err, world) {
+		var countries = topojson.feature(world, world.objects.world);
 		var stations = self.getStations();
 
-		var width = 970;
-		var height = 600;
+		self._center(countries, 1);
 
 		var svg = d3.select('#map').append('svg')
-			.attr('width', width)
-			.attr('height', height);
-
-		var projection = d3.geo.mercator()
-			.scale(1)
-			.translate([0, 0]);
-
-		var path = d3.geo.path()
-			.projection(projection);
-
-		var bounds = path.bounds(seas);
-
-		var scale = 0.85 / Math.max(
-			(bounds[1][0] - bounds[0][0]) / width,
-			(bounds[1][1] - bounds[0][1]) / height);
-		var translate = [
-			(width - scale * (bounds[1][0] + bounds[0][0])) / 2,
-			(height - scale * (bounds[1][1] + bounds[0][1])) / 2
-		];
-
-		projection
-			.scale(scale)
-			.translate(translate);
+			.attr('width', self._width)
+			.attr('height', self._height);
 
 		svg.append('g')
 			.attr('id', 'countries')
@@ -52,71 +78,58 @@ WorldMap._drawBalticMap = function() {
 			.enter().append('path')
 				.attr('class', 'country')
 				.attr('name', function(d) { return d.properties.name; })
-				.attr('d', path);
+				.attr('d', self._path);
+
+		var hexbin = d3.hexbin()
+			.size([self._width, self._height])
+			.radius(2);
+
+		self._drawHexbin(svg, hexbin, stations);
+	})	
+};
+
+WorldMap._drawBalticMap = function() {
+	var self = this;
+	this._drawMap();
+
+	d3.json('geo/baltic.json', function(err, baltic) {
+		var countries = topojson.feature(baltic, baltic.objects.countries);
+		var seas = topojson.feature(baltic, baltic.objects.seas);
+		var stations = self.getStations();
+
+		self._center(seas, 0.85);
+
+		var svg = d3.select('#map').append('svg')
+			.attr('width', self._width)
+			.attr('height', self._height);
 
 		svg.append('g')
-			.attr('id', 'seas')
+			.attr('id', 'countries')
 			.selectAll('path')
-			.data(seas.features)
+			.data(countries.features)
 			.enter().append('path')
-				.attr('class', 'sea')
+				.attr('class', 'country')
 				.attr('name', function(d) { return d.properties.name; })
-				.attr('d', path);
+				.attr('d', self._path);
 
 		svg.append('g')
 			.attr('id', 'borders')
 			.append('path')
 				.datum(topojson.mesh(baltic, baltic.objects.countries, function(a, b) { return a !== b; }))
-				.attr('d', path)
+				.attr('d', self._path)
 				.attr('class', 'borders');
 
 		var hexbin = d3.hexbin()
-			.size([width, height])
+			.size([self._width, self._height])
 			.radius(15);
 
-		stations.forEach(function(d) {
-			var p = projection(d.position.coordinates);
-			d[0] = p[0];
-			d[1] = p[1];
-			});
-
-		var color = d3.scale.linear()
-			.domain([0, 40])
-			.range(["#777", "#ddd"]);
-
-		svg.append('g')
-			.attr('class', 'hexagons')
-		.selectAll('path')
-			.data(hexbin(stations))
-		.enter().append('path')
-			.attr('class', 'hexagon')
-			.attr('d', function(d) { return hexbin.hexagon(); })
-			.attr('transform', function(d) { return 'translate(' + d.x + ',' + d.y + ')'; })
-			.style('fill', function(stations) {
-				var stns = _.pluck(stations, 'stn');
-
-				var measurements = app.collections.measurements.find({
-					stn: { $in: stns }
-				}).fetch();
-
-				var temp = _.reduce(measurements, function(memo, m) { return memo + m.wdsp; }, 0);
-				temp = temp / measurements.length;
-
-				if(isNaN(temp)) {
-					temp = 0;
-				}
-
-				stations.temp = temp;
-
-				return color(temp);
-			})
-		.style('stroke', function(stations) {
-			return color(stations.temp);
-		});
+		self._drawHexbin(svg, hexbin, stations);
 	});
-};
+}
 
 WorldMap.showWorld = function() {
+	var self = this;
+
 	this._$map.empty();
 	this._$worldToggle.addClass( 'active' );
 	this._$balticToggle.removeClass( 'active' );
