@@ -35,7 +35,7 @@ The metrics below have been defined from the Critical Success Factors, these met
 
 __Data must be retained for at least 6 months and available 97% of the time on mondays before 12:00__
 
-| Metric                              | Target | Source                   |
+| Metric                              | Goal | Source                   |
 | :----------                         | :---   | :---                     |
 | Uptime service                      | 98%    | Measured uptime service. |
 | Uptime service during opening times | 99.5%  | Measured uptime service. |
@@ -43,19 +43,19 @@ __Data must be retained for at least 6 months and available 97% of the time on m
 
 __Graphs/Maps related to the queries must load within 1 minute.__
 
-| Metric                | Target     | Source                                                        |
+| Metric                | Goal     | Source                                                        |
 | :----------           | :---       | :---                                                          |
 | Average response time | < 1 minute | Response time measured in tests on a wide variety of systems. |
 | Maximum response time | < 1 minute | Response time measured in tests on a wide variety of systems. |
 
 __Data must be backed up starting from every midnight (until the next midnight).__
 
-| Metric                                 | Target | Source                                                     |
+| Metric                                 | Goal | Source                                                     |
 | :----------                            | :---   | :---                                                       |
 | Amount of failed or incomplete backups | 0      | Amount of incidents involving a corrupt or missing backup. |
 
 __The data may not be viewed or accessed by third parties.__
-| Metric                                        | Target | Source                                                                                                          |
+| Metric                                        | Goal | Source                                                                                                          |
 | :----------                                   | :---   | :---                                                                                                            |
 | Amount of security breaches compromising data | 0      | Amount of security related incidents involving (suspected) successful retrieving of information by third party. |
 
