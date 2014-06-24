@@ -28,5 +28,4 @@ Mastrigt, Maurits Van   - _CEO_
 Broenink, Tom			- _Junior Development & Maintenance_  
 Holthof, Ward			- _Senior ICT Services_    
 Nanninga, André			- _Senior Data Acquisition_    
-Hoogeweg, Yuri			- _Senior Development & Maintenance_  
-Wind, Markus			- _Junior Data Acquisition_  
+Hoogeweg, Yuri			- _Senior Development & Maintenance_
