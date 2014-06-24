@@ -1,12 +1,9 @@
 var Export = {};
 
 Export.make = function( stations, startDate, stopDate ) {
-	if( ! stations ) {
+	if( ! stations || ! stations.length ) {
 		console.error( 'Please select a station first.' );
 		return;
-	}
-	if( ! Array.isArray( stations ) ) {
-		stations = [ stations ];
 	}
 	if( ! ( startDate instanceof Date ) ) {
 		startDate = new Date( startDate );

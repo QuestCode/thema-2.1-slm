@@ -5,7 +5,7 @@ WorldMap.getStations = function() {
 };
 
 WorldMap._drawMap = function() {
-	this._width = 1000;
+	this._width = 970;
 	this._height = 600;
 
 	this._projection = d3.geo.mercator()
@@ -35,10 +35,8 @@ WorldMap._drawHexbin = function(svg, hexbin, stations) {
 			.attr('transform', function(d) { return 'translate(' + d.x + ',' + d.y + ')'; })
 			.style('fill', 'red')
 			.style('stroke', '')
-			.on('click', function( stations ) {
-				app.Graph.setStations( _.pluck( stations, 'stn' ) );
-			})
 			.on('mouseover', function( stations ) {
+				self._stations = stations;
 				self._$tooltip.html( _.pluck( stations, 'name' ).join( '<br/>' ) );
 			} );
 };
@@ -170,13 +168,28 @@ WorldMap.showBalticSea = function() {
 };
 
 WorldMap.init = function() {
-	if( ! this._init ) {
-		this._$worldToggle = $( '#toggle-world' );
-		this._$balticToggle = $( '#toggle-baltic' );
-		this._$map = $( '#map' );
-		this._$tooltip = $( '#map-tooltip' );
-		this.showBalticSea();
+	var self = this;
+	if( this._init ) {
+		return;
 	}
+
+	this._$worldToggle = $( '#toggle-world' );
+	this._$balticToggle = $( '#toggle-baltic' );
+	this._$map = $( '#map' );
+	this._$tooltip = $( '#map-tooltip' );
+	this.showBalticSea();
+
+	this._$map.on( 'click', function( e ) {
+		e.preventDefault();
+		if( self._stations ) {
+			app.Graph.setStations( _.pluck( self._stations, 'stn' ) );
+		}
+	} );
+	this._$map.on( 'dblclick, selectstart', function( e ) {
+		e.preventDefault();
+		return false;
+	} );
+
 	this._init = true;
 };
 
