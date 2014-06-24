@@ -22,7 +22,7 @@ __Timely response to new incidents.__
 
 | Measurement                                    | Goal         | Source                                                                                  |
 | :----------                                    | :---         | :---                                                                                    |
-| Amount of incidents with exeeding IRT          | <5           | Amount of incidents without response within the agreed upon IRT from the last 3 months. |
+| Amount of incidents with exeeding IRT          | < 15         | Amount of incidents without response within the agreed upon IRT from the last 3 months. |
 | Average IRT of incidents with high priority.   | < 15 minutes | Average IRT of all solved incidents with high priority from last 3 months.              |
 | Average IRT of incidents with medium priority. | < 1 hour     | Average IRT of all solved incidents with medium priority from last 3 months.            |
 | Average IRT of incidents with low priority.    | < 2 hours    | Average IRT of all solved incidents with low priority from last 3 months.               |
@@ -32,7 +32,7 @@ __Timely resolving of incidents.__
 
 | Measurement                                             | Goal           | Source                                                                                    |
 | :----------                                             | :--            | :---                                                                                      |
-| Amount of incidents with exeeding MPT                   | <5             | Amount of incidents without resolution within the agreed upon MPT from the last 3 months. |
+| Amount of incidents with exeeding MPT                   | < 15           | Amount of incidents without resolution within the agreed upon MPT from the last 3 months. |
 | Average resolve time of incidents with high priority.   | < half an hour | Average resolve time of all solved incidents with high priority from last 3 months.       |
 | Average resolve time of incidents with medium priority. | < 4 hours      | Average resolve time of all solved incidents with medium priority from last 3 months.     |
 | Average resolve time of incidents with low priority.    | < 8 hours      | Average resolve time of all solved incidents with low priority from last 3 months.        |
@@ -54,5 +54,4 @@ The maximum time spent on solving a incident depends on the priority of the inci
 | High         | Within 15 minutes     | Within 30 minutes         |
 | Medium       | Within 1 hour         | Within 4 hours            |
 | Low          | Within 2 hours        | Within 8 hours            |
-
 
