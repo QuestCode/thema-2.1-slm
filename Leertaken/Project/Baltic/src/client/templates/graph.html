@@ -1,13 +1,21 @@
 <template name="graph">
-	<ul>
-		{{#each stations}}
-		<li><a href="#" class="station">{{ name }}</a></li>
-		{{/each}}
-	</ul>
-	<div id="graph-temperature">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<ul id="station-list">
+					{{#each stations}}
+					<li><a href="#" class="station">{{ name }}</a></li>
+					{{/each}}
+				</ul>
+			</div>
+			<div class="col-md-8">
+				<div id="graph-temperature" class="chart">
 
-	</div>
-	<div id="graph-humidity">
+				</div>
+				<div id="graph-humidity" class="chart">
 
+				</div>
+			</div>
+		</div>
 	</div>
 </template>

@@ -6,6 +6,8 @@ Graph.setStations = function( stations ) {
 	}
 
 	app.subscriptions.graphMeasurements = Meteor.subscribe( 'measurementAverages', [ this.stn ], new Date() - 10 * 60 * 1000 );
+
+	this.drawGraphs();
 };
 
 Graph.getTemperatureGraph = function() {
