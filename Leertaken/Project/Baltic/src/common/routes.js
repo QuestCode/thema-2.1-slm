@@ -24,6 +24,27 @@ Router.map(function(){
 			});
 		}
 	});
+
+	this.route('export', {
+		where: 'server', 
+		action: function() {
+			var params = this.params;
+
+			var csv = app.exportMeasurements(
+				this.params.stations.split(','), 
+				this.params.startDate,
+				this.params.stopDate
+			);
+
+			var header = {
+				'Content-type': 'text/csv',
+				'Content-Disposition': 'attachment;filename=export.csv'
+			};
+
+			this.response.writeHead(200, header);
+			return this.response.end(csv);
+		}
+	})
 });
 
 if(Meteor.isClient) {
