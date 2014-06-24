@@ -30,6 +30,7 @@ topojson \
 ogr2ogr \
 	-simplify .05 \
 	-f GeoJSON \
+	-where "ADM0_A3_IS NOT IN ('ATA')" \
 	/vagrant/temp/world.json \
 	/vagrant/resources/ne_110m_admin_0_countries/ne_110m_admin_0_countries.shp
 
