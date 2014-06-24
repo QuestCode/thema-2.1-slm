@@ -22,11 +22,11 @@
 	- 1.8 &nbsp;Responsibilities							<span style="float:right;font-weight:normal">5</span>
 - 2 &nbsp;Customer Services									<span style="float:right;font-weight:bold">6</span>
 	- 2.1 &nbsp;Weather Data Application 					<span style="float:right;font-weight:normal">6</span>
-	- 2.2 &nbsp;Servicedesk								<span style="float:right;font-weight:normal">12</span>
+	- 2.2 &nbsp;Service desk								<span style="float:right;font-weight:normal">12</span>
 - 3 &nbsp;Pricing       									<span style="float:right;font-weight:bold">15</span>
 	- 3.1 &nbsp;Implementation Costs						<span style="float:right;font-weight:normal">15</span>
 	- 3.2 &nbsp;Structural Costs							<span style="float:right;font-weight:normal">15</span>
-	- 3.3 &nbsp;Servicedesk support 						<span style="float:right;font-weight:normal">15</span>
+	- 3.3 &nbsp;Service desk support 						<span style="float:right;font-weight:normal">15</span>
 	- 3.4 &nbsp;Service Level Packages						<span style="float:right;font-weight:normal">16</span>
 - 4 &nbsp;Implementation & Conditions						<span style="float:right;font-weight:bold">18</span>
 	- 4.1 &nbsp;Demands to Infrastructure					<span style="float:right;font-weight:normal">18</span>
@@ -54,7 +54,7 @@ In this chapter you will find a general description of the service and requireme
 
 # 2 Customer Services
 
-In this chapter you will find a description of the Customer services (Weather data application and Servicedesk).
+In this chapter you will find a description of the Customer services (Weather data application and Service desk).
 
 <!-- @include Customer Services/Customer Services.md -->
 
@@ -62,7 +62,7 @@ In this chapter you will find a description of the Customer services (Weather da
 
 <!-- @include Pricing/Implementation Costs.md -->
 <!-- @include Pricing/Structural Costs.md -->
-<!-- @include Pricing/Servicedesk support.md -->
+<!-- @include Pricing/Service desk support.md -->
 <!-- @include Pricing/Service Level Packages.md -->
 
 # 4 Implementation and Conditions

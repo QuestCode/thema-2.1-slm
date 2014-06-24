@@ -2,17 +2,17 @@
 
 #### Availability
 
-The servicedesk will be available from Monday to Friday from 07:00 to 20:00 (local time in Kaunas). Minimal availability between these hours will be 97%.
+The service desk will be available from Monday to Friday from 07:00 to 20:00 (local time in Kaunas). Minimal availability between these hours will be 97%.
 
 Below you will find the Critical Success Factors and Key Performance Indicators that belong to the Service Level Targets.
 
 ##### Critical Success Factors
 
-The following points are critical for the success of the servicedesk:
+The following points are critical for the success of the service desk:
 
 * Responding on new incidents on time.
 * Resolving new incidents on time.
-* The availability of the servicedesk.
+* The availability of the service desk.
 
 ##### Key Performance Indicators
 
@@ -38,7 +38,7 @@ __Timely resolving of incidents.__
 | Average resolve time of incidents with low priority.    | < 8 hours      | Average resolve time of all solved incidents with low priority from last 3 months.        |
 
 
-__The availability of the servicedesk.__
+__The availability of the service desk.__
 
 | Measurement           | Goal | Source                                                |
 | :----------           | :--  | :---                                                  |
@@ -47,7 +47,7 @@ __The availability of the servicedesk.__
 
 #### Responce and process times
 
-The maximum time spent on solving a incident depends on the priority of the incident. The maximum response- and processtime with a gold-level servicedesk is as following:
+The maximum time spent on solving a incident depends on the priority of the incident. The maximum response- and processtime with a gold-level service desk is as following:
 
 | Priority     | Initial Response Time | Maximum Process Time      |
 | ------------ | ------------          | ------------------------- |

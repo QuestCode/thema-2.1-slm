@@ -5,9 +5,9 @@
 <!-- @include Weather data application/Risk Analysis.md -->
 <!-- @include Weather data application/Capacity Planning.md -->
 
-## 2.2 Servicedesk
+## 2.2 Service desk
 
-<!-- @include Servicedesk/Definition.md -->
-<!-- @include Servicedesk/Service Levels.md -->
-<!-- @include Servicedesk/Risk Analysis.md -->
-<!-- @include Servicedesk/Capacity Planning.md -->
+<!-- @include Service desk/Definition.md -->
+<!-- @include Service desk/Service Levels.md -->
+<!-- @include Service desk/Risk Analysis.md -->
+<!-- @include Service desk/Capacity Planning.md -->

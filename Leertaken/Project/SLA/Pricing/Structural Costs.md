@@ -1,6 +1,6 @@
 ## 3.2 Structural costs
 
-To provide continued use of the weather data application, a monthly sum will be needed for for example hosting. In addition to that, the servicedesk employees will need to be paid. Due to situations like these, the following structural costs have been defined:
+To provide continued use of the weather data application, a monthly sum will be needed for for example hosting. In addition to that, the service desk employees will need to be paid. Due to situations like these, the following structural costs have been defined:
 
 __For the client:__  
 

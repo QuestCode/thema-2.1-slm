@@ -21,7 +21,7 @@ I: www.davincidata.nl
 
 - 1 &nbsp;Introduction		<span style="float:right;font-weight:bold">3</span>
 - 2 &nbsp;Web interface		<span style="float:right;font-weight:bold">4</span>
-- 3 &nbsp;Servicedesk		<span style="float:right;font-weight:bold">5</span>
+- 3 &nbsp;Service desk		<span style="float:right;font-weight:bold">5</span>
 - 4 &nbsp;Changes			<span style="float:right;font-weight:bold">6</span>
 - 5 &nbsp;Availability		<span style="float:right;font-weight:bold">7</span>
 - 6 &nbsp;Conclusion		<span style="float:right;font-weight:bold">8</span>

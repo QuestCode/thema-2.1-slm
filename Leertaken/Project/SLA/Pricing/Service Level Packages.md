@@ -25,19 +25,19 @@ In the table below, the risks will be listed along with the measures that will b
 
 ---
 
-### Servicedesk
+### Service desk
 
-| Servicedesk                                                                         | Bronze          | Silver         | Gold           |
+| Service desk                                                                         | Bronze          | Silver         | Gold           |
 | :----------                                                                         | :----           | :-----         | :---           |
-| Servicedesk availability.                                                           | 95%             | 97%            | 99%            |
+| Service desk availability.                                                           | 95%             | 97%            | 99%            |
 | Max. amount of incidents that are not responded to within the maximum response time | < 15            | < 8            | < 5            |
 | Max. amount of incidents that are not solved within the maximum solve time.         | < 15            | < 8            | < 5            |
-| Responsetime servicedesk - priority high.                                           | 30 minutes      | 20 minutes     | 15 minutes     |
-| Responsetime servicedesk - priority medium.                                         | 4 hours         | 2 hours        | 1 hours        |
-| Responsetime servicedesk - priority low.                                            | 5 working days  | 2 working days | 8 hours        |
-| Maximum solve time servicedesk - priority high.                                     | 2 hours         | 1 hours        | 30 minutes     |
-| Maximum solve time servicedesk - priority medium.                                   | 2 working days  | 1 working days | 4 hours        |
-| Maximum solve time servicedesk - priority low.                                      | 10 working days | 6 working days | 3 working days |
+| Responsetime service desk - priority high.                                           | 30 minutes      | 20 minutes     | 15 minutes     |
+| Responsetime service desk - priority medium.                                         | 4 hours         | 2 hours        | 1 hours        |
+| Responsetime service desk - priority low.                                            | 5 working days  | 2 working days | 8 hours        |
+| Maximum solve time service desk - priority high.                                     | 2 hours         | 1 hours        | 30 minutes     |
+| Maximum solve time service desk - priority medium.                                   | 2 working days  | 1 working days | 4 hours        |
+| Maximum solve time service desk - priority low.                                      | 10 working days | 6 working days | 3 working days |
 | Maximum amount of service desk complaints                                           | 5               | 3              | 0              |
 
 ### Yearly costs for each service level
@@ -45,6 +45,6 @@ In the table below, the risks will be listed along with the measures that will b
 | Component                                      | Bronze         | Silver        | Gold           |
 | :---                                           | :-----         | :-----        | :---           |
 | Web Interface                                  | € 3.600,-      | € 4.300,-     | € 4.800,-      |
-| Employees servicedesk                          | € 8.000,-      | € 10.500,-    | € 12.000,-     |
+| Employees service desk                          | € 8.000,-      | € 10.500,-    | € 12.000,-     |
 | <div style="te-t-align:right">__Total:__</div> | __€ 11.600,-__ | __€14.800,-__ | __€ 16.800,-__ |
 

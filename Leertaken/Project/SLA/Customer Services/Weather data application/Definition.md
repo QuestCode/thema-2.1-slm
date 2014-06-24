@@ -33,5 +33,5 @@ To support the development and implementation as well as continued operation of 
 	- Installation
 	- Education
 	- User management
-- Operational support, i.e. First- and seccond level servicedesk support;
+- Operational support, i.e. First- and seccond level service desk support;
 - Installation of hardware and software at the client, if nessesary;
