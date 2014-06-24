@@ -100,3 +100,4 @@ The availabiltiy percentages of the Web Interface were slightly below the requir
 During the month May, the goals and requirements regarding the Service Desk have all been accomplished. However, because of the two (rare) power outages both happening during the peak times of the availability requirements regarding the Web Interface, these goals were not fully met. 
 
 The power outage also had a negative impact on the backup system which caused one backup to fail. Other than that there were no incidents regarding data confidentiality or integrity.
+

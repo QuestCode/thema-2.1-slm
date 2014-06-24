@@ -35,3 +35,4 @@ To support the development and implementation as well as continued operation of 
 	- User management
 - Operational support, i.e. First- and seccond level service desk support;
 - Installation of hardware and software at the client, if nessesary;
+
