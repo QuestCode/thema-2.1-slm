@@ -37,7 +37,10 @@ WorldMap._drawHexbin = function(svg, hexbin, stations) {
 			.style('stroke', '')
 			.on('click', function( stations ) {
 				app.Graph.setStations( _.pluck( stations, 'stn' ) );
-			});
+			})
+			.on('mouseover', function( stations ) {
+				self._$tooltip.html( _.pluck( stations, 'name' ).join( '<br/>' ) );
+			} );
 };
 
 WorldMap._center = function(object, zoom) {
@@ -122,7 +125,7 @@ WorldMap._drawBalticMap = function() {
 
 		var hexbin = d3.hexbin()
 			.size([self._width, self._height])
-			.radius(15);
+			.radius(5);
 
 		self._drawHexbin(svg, hexbin, stations);
 
@@ -140,7 +143,10 @@ WorldMap.showWorld = function() {
 	this._$balticToggle.removeClass( 'active' );
 	app.Graph.setStations( [] );
 
-	Meteor.subscribe( 'stations', function() {
+	if( app.subscriptions.map ) {
+		app.subscriptions.map.stop();
+	}
+	app.subscriptions.map = Meteor.subscribe( 'stations', function() {
 		self._drawWorldMap();
 	} );
 };
@@ -155,16 +161,20 @@ WorldMap.showBalticSea = function() {
 	this._$balticToggle.addClass( 'active' );
 	app.Graph.setStations( [] );
 
-	Meteor.subscribe( 'balticStations', function() {
+	if( app.subscriptions.map ) {
+		app.subscriptions.map.stop();
+	}
+	app.subscriptions.map = Meteor.subscribe( 'balticStations', function() {
 		self._drawBalticMap();
 	} );
 };
 
 WorldMap.init = function() {
 	if( ! this._init ) {
-		this._$map = $( '#map' );
 		this._$worldToggle = $( '#toggle-world' );
 		this._$balticToggle = $( '#toggle-baltic' );
+		this._$map = $( '#map' );
+		this._$tooltip = $( '#map-tooltip' );
 		this.showBalticSea();
 	}
 	this._init = true;
