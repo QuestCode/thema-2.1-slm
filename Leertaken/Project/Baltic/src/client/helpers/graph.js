@@ -167,11 +167,23 @@ Graph.drawGraphs = function() {
 	this._drawHumidityGraph( measurements );
 };
 
+Graph.init = function() {
+	var self = this;
+	this._interval = setInterval( function() {
+		console.log( 'Redrawing graphs..' );
+		self.drawGraphs();
+	}, 20 * 1000 );
+};
+
 Template.graph.getLegend = function() {
 	Session.get( 'graph-stations' );
 	return {
 		stations: _.values( Graph.getStations() )
 	};
+};
+
+Template.graph.created = function() {
+	Graph.init();
 };
 
 Template.graph.events = {
