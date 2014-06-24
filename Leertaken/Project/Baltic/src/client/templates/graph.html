@@ -10,9 +10,12 @@
 				</div>
 			</div>
 			<div class="col-md-4">
-				<div id="graph-legend">
-
-				</div>
+				<h3>Legend</h3>
+				<ul id="graph-legend">
+					{{#with getLegend}}
+					{{> legend }}
+					{{/with}}
+				</ul>
 				<ul id="station-list">
 					{{#each stations}}
 					<li><a href="#" class="station">{{ name }}</a></li>

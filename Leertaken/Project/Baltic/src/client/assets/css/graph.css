@@ -22,3 +22,24 @@
   fill: none;
   stroke-width: 1.5px;
 }
+
+#graph-legend {
+	list-style: none;
+	padding-left: 0;
+}
+
+#graph-legend li {
+	line-height: 14px;
+}
+#graph-legend li span {
+	display: block;
+	float: left;
+	width: 20px;
+	height: 14px;
+	margin-right: 6px;
+}
+
+#station-list {
+	font-size: 8px;
+	padding-left: 26px;
+}

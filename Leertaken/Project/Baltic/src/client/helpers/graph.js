@@ -1,5 +1,7 @@
 var Graph = {};
 
+Graph._stations = {};
+
 Graph.getStartDate = function() {
 	return new Date() - 24 * 60 * 60 * 1000;
 };
@@ -15,14 +17,29 @@ Graph.setStations = function( stations ) {
 		app.subscriptions.graphMeasurements.stop();
 	}
 
-	this._stations = stations;
+	this._stations = {};
+
+	var color = d3.scale.category20();
+	var station;
+
+	stations.forEach( function( stn ) {
+		station = app.collections.stations.findOne( { stn: stn } );
+		station.color = color( stn );
+
+		self._stations[stn] = station;
+	} );
+
+	Session.set( 'graph-stations', new Date() );
 
 	app.subscriptions.graphMeasurements = Meteor.subscribe( 'measurementAverages', stations, this.getStartDate(), this.getStopDate(), function() {
 		self.drawGraphs();
 	} );
 };
 
-Graph.getStations = function() {
+Graph.getStations = function( asArray ) {
+	if( asArray ) {
+		return Object.keys( this._stations );
+	}
 	return this._stations;
 };
 
@@ -48,6 +65,7 @@ Graph.getHumidityGraph = function() {
 
 Graph._drawTemperatureGraph = function( measurements ) {
 	var $temp = this.getTemperatureGraph();
+	var stations = this.getStations();
 
 	$temp.empty();
 
@@ -85,9 +103,6 @@ Graph._drawTemperatureGraph = function( measurements ) {
 		.attr( 'transform', 'translate(' + margin.left + ',' + margin.top + ')' )
 		;
 
-	var color = d3.scale.category20();
-	var coloring = function( d, i ) { return color(i); };
-
 	x.domain( [ this.getStartDate(), this.getStopDate() ] );
 	y.domain( [ -40, 60 ] );
 
@@ -113,13 +128,14 @@ Graph._drawTemperatureGraph = function( measurements ) {
 			.datum( measurements[ stn ] )
 			.attr( 'd', line )
 			.attr( 'class', 'line' )
-			.style( 'stroke', coloring )
+			.style( 'stroke', stations[stn].color )
 			;
 	}
 };
 
 Graph._drawHumidityGraph = function( measurements ) {
 	var $humi = this.getHumidityGraph();
+	var stations = this.getStations();
 
 	$humi.empty();
 
@@ -157,9 +173,6 @@ Graph._drawHumidityGraph = function( measurements ) {
 		.attr( 'transform', 'translate(' + margin.left + ',' + margin.top + ')' )
 		;
 
-	var color = d3.scale.category20();
-	var coloring = function( d, i ) { return color(i); };
-
 	x.domain( [ this.getStartDate(), this.getStopDate() ] );
 	y.domain( [ 0, 100 ] );
 
@@ -185,7 +198,7 @@ Graph._drawHumidityGraph = function( measurements ) {
 			.datum( measurements[ stn ] )
 			.attr( 'd', line )
 			.attr( 'class', 'line' )
-			.style( 'stroke', coloring )
+			.style( 'stroke', stations[stn].color )
 			;
 	}
 };
@@ -199,6 +212,13 @@ Graph.drawGraphs = function() {
 
 	this._drawTemperatureGraph( measurements );
 	this._drawHumidityGraph( measurements );
+};
+
+Template.graph.getLegend = function() {
+	Session.get( 'graph-stations' );
+	return {
+		stations: _.values( Graph.getStations() )
+	};
 };
 
 Template.graph.events = {
