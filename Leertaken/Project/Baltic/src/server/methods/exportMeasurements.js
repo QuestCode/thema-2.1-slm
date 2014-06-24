@@ -3,12 +3,12 @@ var Future = Npm.require('fibers/future');
 var json2csv = Meteor.require('json2csv');
 
 app.exportMeasurements = function(stations, startDate, stopDate) {
+  console.log('Exporting measurements for stations: ' + stations.join(', ') + '.');
   var fields = [
     'stn',
     'datetime',
     'avg_prcp',
     'avg_temp',
-    'avg_dewp',
     'avg_humi'
   ];
 
@@ -26,7 +26,7 @@ app.exportMeasurements = function(stations, startDate, stopDate) {
     }
   }).fetch();
 
-  console.log(stations,startDate,stopDate,measurements);
+  console.log('Saving measurements to csv.');
 
   var future = new Future();
 
