@@ -56,6 +56,8 @@ Meteor.startup( function() {
 
 		app.collections.measurementAverages.remove( { datetime: start } );
 
+		console.log( 'Inserting averages for ' + results.length + ' station.' );
+
 		results.forEach( function( result ) {
 			app.collections.measurementAverages.insert( {
 				datetime: start,
