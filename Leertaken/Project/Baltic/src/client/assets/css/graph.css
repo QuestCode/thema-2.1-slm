@@ -23,20 +23,14 @@
   stroke-width: 1.5px;
 }
 
-#graph-legend {
-	list-style: none;
-	padding-left: 0;
-}
-
-#graph-legend li {
+#graph-legend .station {
 	line-height: 14px;
 }
-#graph-legend li span {
-	display: block;
-	float: left;
+#graph-legend .station span {
+	display: inline-block;
 	width: 20px;
 	height: 14px;
-	margin-right: 6px;
+	margin: 0 6px -2px 8px;
 }
 
 #station-list {

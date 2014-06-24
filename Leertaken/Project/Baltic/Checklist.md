@@ -3,9 +3,9 @@
 		- Lithuania, Denmark, Germany, Poland, Kalingrad (Russia), Estonia, Latvia, Finland, Sweden
 	- Rain fall measurements
 		- Don't show when rain fall is below 10mm
+	- Improve map colors
 - Maurits
 	- Test if measurements are realtime (subscription is updated properly)
-	- Add toggle to graph stations
 - Both
 	- Fake HTTPS (unsigned SSL)
 	- Backup data from last day

@@ -1,10 +1,14 @@
 <template name="legend">
 	{{#if stations }}
 	<h3>Legend</h3>
-	<ul id="graph-legend">
+	<div id="graph-legend">
 		{{#each stations}}
-		<li><span style="background-color:{{ color }}"></span>{{ name }}</li>
+		<div class="station" data-stn="{{ stn }}s">
+			<input class="toggle" type="checkbox" checked="checked"/>
+			<span style="background-color:{{ color }}"></span>
+			{{ name }}
+		</div>
 		{{/each}}
-	</ul>
+	</div>
 	{{/if}}
 </template>

@@ -127,6 +127,9 @@ Graph._drawGraph = function( measurements, $node, yDomain, yText, valueKey ) {
 		;
 
 	for( var stn in measurements ) {
+		if( stations[stn].hide ) {
+			continue;
+		}
 		svg.append( 'path' )
 			.datum( measurements[ stn ] )
 			.attr( 'd', line )
@@ -187,10 +190,18 @@ Template.graph.created = function() {
 };
 
 Template.graph.events = {
-	'click .station': function stationClick( e ) {
-		e.preventDefault();
+	'click #graph-legend .station .toggle': function stationClick( e ) {
+		var $checkbox = $(e.target);
+		var stn = this.stn;
+		var stations = Graph.getStations();
 
-		Graph.setStations( [ this.stn ] );
+		for( var i in stations ) {
+			if( stations[i].stn == stn ) {
+				stations[i].hide = ! $checkbox.prop( 'checked' );
+			}
+		}
+
+		Graph.drawGraphs();
 	}
 };
 
