@@ -23,12 +23,11 @@ var map = function() {
 	minute.setSeconds(0);
 	minute.setMilliseconds(0);
 
-	var key = {
-		stn: this.stn,
-		datetime: minute
-	} 
+	var key = this.stn + '_' + minute.getTime();
+
 	var value = {
 		stn: this.stn,
+		datetime: minute,
 		count: 1,
 		prcp: this.prcp,
 		temp: this.temp,
@@ -40,8 +39,8 @@ var map = function() {
 
 var reduce = function( key, values ) {
 	var object = {
-		stn: key.stn,
-		datetime: key.datetime,
+		stn: values[0].stn,
+		datetime: values[0].datetime,
 		count: 0,
 		total_prcp: 0,
 		total_temp: 0,

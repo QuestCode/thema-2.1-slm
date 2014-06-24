@@ -3,7 +3,7 @@ var Graph = {};
 Graph._stations = {};
 
 Graph.getStartDate = function() {
-	return new Date() - 24 * 60 * 60 * 1000;
+	return new Date() - 60 * 60 * 1000;
 };
 
 Graph.getStopDate = function() {
@@ -44,9 +44,9 @@ Graph.getStations = function( asArray ) {
 };
 
 Graph.getMeasurements = function() {
-	var measurements = app.collections.measurementAverages.find( {}, { sort: { datetime: 1 } } ).fetch();
+	var measurements = app.collections.measurementAverages.find( {}, { sort: { 'value.datetime': 1 } } ).fetch();
 
-	return _.groupBy( measurements, function( m ){ return m.stn; } );
+	return _.groupBy( measurements, function( m ){ return m.value.stn; } );
 };
 
 Graph.getTemperatureGraph = function() {
@@ -95,8 +95,8 @@ Graph._drawGraph = function( measurements, $node, yDomain, yText, valueKey ) {
 		;
 
 	var line = d3.svg.line()
-		.x( function( d ) { return x( d.datetime ); } )
-		.y( function( d ) { return y( d[valueKey] || 0 ); } )
+		.x( function( d ) { return x( d.value.datetime ); } )
+		.y( function( d ) { return y( d.value[valueKey] || 0 ); } )
 		;
 
 	var svg = d3.select( $node[0] ).append( 'svg' )

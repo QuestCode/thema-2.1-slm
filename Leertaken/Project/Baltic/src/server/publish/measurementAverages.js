@@ -5,10 +5,11 @@ Meteor.publish( 'measurementAverages', function( stations, startDate, stopDate )
 		dateFilter.$lt = new Date( stopDate );
 	}
 
-	return app.collections.measurementAverages.find( {
-		stn: {
-			$in: stations
-		},
-		datetime: dateFilter
-	} );
+
+	var query = {
+		'value.stn': { $in: stations },
+		'value.datetime': dateFilter
+	};
+
+	return app.collections.measurementAverages.find( query );
 } );
