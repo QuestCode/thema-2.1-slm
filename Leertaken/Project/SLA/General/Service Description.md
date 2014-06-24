@@ -3,7 +3,7 @@
 The client wants to perform calculations on weather data to conduct research on climate change. The client is interested in climate change in Lithuania and other countries around the Baltic Sea and is especially interested in weather changes regarding the milder weather in the past years.
 
 The client is interested in the following measurements:
-- Windspeed
+- Wind speed
 - Rainfall
 - Temperature
 - Humidity
