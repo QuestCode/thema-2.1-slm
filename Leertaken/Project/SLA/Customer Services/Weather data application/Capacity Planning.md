@@ -1,9 +1,12 @@
 ### 2.1.3 Capacity planning
 
-De werklast van de Cloud dienst ligt voornamelijk op de Cloud servers en de hoeveelheid dataopslag. Omdat het principe van "de Cloud" is ontworpen met oog op het verwerken en opslaan van grote hoeveelheden data, is opschaling van de servers eenvoudig en heeft dit een lage impact op de beschikbaarheid. Tevens is het inzetten van minders servers bij een werklast of hoeveelheid data die lager uitvalt dan geschat, ook zonder grote gevolgen.
+The Weather Data Application is expected to cause the most workload on the storage space of the server. The supplier does not expect the graphical representations and the calculations needed for these to cause too much strain on the system itself. However, the application might cause some strain on the storage space, seeing as all data has to be saved over a period of 6 months. Because the supplier has not yet processed 6 months of data it is hard to make an exact measurement concerning the maximum amount of storage space needed.
 
-Voor de opslag van de data wordt er te allen tijden een overcapaciteit van minimaal 10% gehanteerd. Dit wil zeggen dat de Cloud Hosting opslagruimte altijd minimaal 10% meer is dan de hoeveelheid opgeslagen data. Omdat de Opdrachtgever verwacht flink te groeien in de komende jaren, zal tijdens een half jaarlijkse evaluatie bepaald worden of de opslagruimte op de Cloud Server uitgebreid moet worden. Hierbij wordt ook de bovenstaande 10% in acht genomen.
+Instead of an exact measurement, the supplier has made a rough estimate, assuming that the amount of data per day will stay consistent and not taking into account caching/compression algorithms that may be implemented at a later stage: 
+<!-- BEREKENING MAXIMALE BENODIGDE OPSLAGRUIMTE -->
 
-Omdat we hier praten over een cloud dienst nemen we bij de externe partij alleen opslagruimte af. Achterliggende processen als bandbreedte, cpu cycles en KWh zijn hier al in doorberekend.
+As seen in the calculation, a maximum amount of storage space of _<!-- minimum startcapacity --> GB_ will be required to store half a year of weather data. 
 
-Opslagruimte wordt weergegeven als Gigabytes (GB). Er zal in eerste instantie 800GB worden afgenomen en dit aantal zal stijgen met 10GB per maand.
+To ensure that the application will not run out of storage capacity, the supplier will strive to maintain an overcapacity of 10%. Important to note is the ease of adding additional storage space. The expectation is that the supplier will be able to provide the application with additional storage hardware at any given moment (given the necessary hardware is available on site), this process will not cause more than 30 minutes of downtime.
+
+The total startcapacity including the overcapacity margin for the Weather Data Application will be: _<!-- minimum startcapacity --> * 1,10 = <!--total startcapacity -->_
