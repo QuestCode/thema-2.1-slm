@@ -1,0 +1,24 @@
+- Andre
+	- Display country names
+		- Lithuania, Denmark, Germany, Poland, Kalingrad (Russia), Estonia, Latvia, Finland, Sweden
+	- Rain fall measurements
+		- Show data about rain fall when it is above 10 mm
+		- Don't show when rain fall is below that
+		- Only stations within 50 km of coastline of the Baltic Sea
+	- Allow for data download in Excel
+- Maurits
+	- Measurements (since previous midnight):
+		- Temperature
+		- Humidity
+- Both
+	- Fake HTTPS (unsigned SSL)
+	- Backup data from last day
+		- Export data
+		- Place file in specific folder
+	- Technical report
+		- Infrastructure
+			- Ant, Java, UNWDMIDP, Vagrant, NodeJS, Meteor, D3, Geodata
+		- Backups
+			- Explain backup using RSYNC
+	- Prepare for demo
+		- Add example users
