@@ -1,18 +1,18 @@
 ### 2.1.1 Service Levels
 
-This chapter will describe the service levels regarding the Web Interface service. This chapter was written assuming no particular Service Level Package. The chapter _Service Levels_ contains more information on the options and differences between these options.
+This chapter will describe the service levels regarding the weather data application. This chapter was written assuming no particular Service Level Package. The chapter _Service Levels_ contains more information on the options and differences between these options.
 
 #### Availability
 
-The Web Interface has a minimum availability of 97% on Mondays before 12:00. However, because this is a web application, the supplier will strive to keep the application available even outside of peak times. However, the supplier can not guarantee an availability percentage over this time period. The supplier will strive to perform all maintenance related processes during this time.
+The weather data application has a minimum availability of 97% on Mondays before 12:00. However, because this is a web application, the supplier will strive to keep the application available even outside of peak times. However, the supplier can not guarantee an availability percentage over this time period. The supplier will strive to perform all maintenance related processes during this time.
 
-Because the initial requirement was for the Web Interface to be accessible on Mondays before 12:00, this will now be deemed the peak times of the service. Depending on the service level, the supplier offers a higher minimum availability during these peak periods. (minimum of 97%)
+Because the initial requirement was for the weather data application to be accessible on Mondays before 12:00, this will now be deemed the peak times of the service. Depending on the service level, the supplier offers a higher minimum availability during these peak periods. (minimum of 97%)
 
 #### Service Level Targets
 
 Several Critical Success Factors (CSFs) and Key Performance Indicators (KPIs) have been outlined to define the Service Level Targets in a clear and concise manner.
 
-Service Level Targets of the Web Interface can be summarised in the following way;
+Service Level Targets of the weather data application can be summarised in the following way;
 
 ###### Query load time
 Both queries have a maximum load time of 1 minute on Mondays before 12:00. Only authorised users will be able to issue a query request.   
@@ -21,7 +21,7 @@ N.B.: the supplier guarantees the maximum load time of 1 minute only when there 
 
 ##### Critical Success Factors
 
-The following points are of utmost importance in successfully keeping the Web Interface available and ensuring it meets the Service Level Targets.
+The following points are of utmost importance in successfully keeping the weather data application available and ensuring it meets the Service Level Targets.
 
 - Data must be retained for at least 6 months and available 97% of the time on mondays before 12:00
 - Graphs/Maps related to the queries must load within 1 minute.
