@@ -1,5 +1,11 @@
 var WorldMap = {};
 
+function fixCasing( str ) {
+	str = ( '' + str ).toLowerCase();
+	var f = str.charAt( 0 ).toUpperCase();
+	return f + str.substr( 1 );
+}
+
 WorldMap.getStations = function() {
 	return app.collections.stations.find().fetch();
 };
@@ -37,7 +43,17 @@ WorldMap._drawHexbin = function(svg, hexbin, stations) {
 			.style('stroke', '')
 			.on('mouseover', function( stations ) {
 				self._stations = stations;
-				self._$tooltip.html( _.pluck( stations, 'name' ).join( '<br/>' ) );
+				// Hackish, I know
+				var list = _.groupBy( stations, 'country' );
+				var html = '';
+				for( var stn in list ) {
+					if( html ) {
+						html += '<br/><br/>';
+					}
+					html += fixCasing( list[stn][0].country ) + '<br/>- ' +
+						_.pluck( list[stn], 'name' ).map( fixCasing ).join( '<br/>- ' );
+				}
+				self._$tooltip.html( html );
 			} );
 };
 
