@@ -1,8 +1,8 @@
-### 2.1.2 Risicoanalyse
+### 2.1.2 Risk Analysis
 
-Onderstaand de risico- en maatregelbeschrijvingen voor de cloud-dienstverlening.
+This chapter describes the possible risks for the availability of the application, and included are the measures to possibly prevent the risks.
 
-#### Risicobeschrijvingen
+#### Risk descriptions
 
 In de volgende tabel worden de risico's uiteengezet tegen impact, gevolgschade, kans en risico.
 
@@ -114,7 +114,7 @@ In de volgende tabel worden de risico's uiteengezet tegen impact, gevolgschade, 
 
 ---
 
-#### Maatregelbeschrijvingen
+#### Measures
 
 In de volgende tabel worden de risico's uiteengezet tegen de maatregelen.
 
