@@ -2,18 +2,10 @@
 	- Display country names
 		- Lithuania, Denmark, Germany, Poland, Kalingrad (Russia), Estonia, Latvia, Finland, Sweden
 	- Rain fall measurements
-		- Show data about rain fall when it is above 10 mm
-		- Don't show when rain fall is below that
-		- Only stations within 50 km of coastline of the Baltic Sea
-	- Allow for data download in Excel
-		- [OK] Download button
-		- [OK] Range: day/week/month
-		- [OK] Make buttons work
+		- Don't show when rain fall is below 10mm
 - Maurits
-	- Measurements (since previous midnight):
-		- [OK] Temperature
-		- [OK] Humidity
-		- Make realtime
+	- Test if measurements are realtime (subscription is updated properly)
+	- Add toggle to graph stations
 - Both
 	- Fake HTTPS (unsigned SSL)
 	- Backup data from last day
