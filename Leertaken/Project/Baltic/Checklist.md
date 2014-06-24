@@ -1,20 +1,13 @@
-- Andre
-	- Display country names
-		- Lithuania, Denmark, Germany, Poland, Kalingrad (Russia), Estonia, Latvia, Finland, Sweden
-	- Rain fall measurements
-		- Don't show when rain fall is below 10mm
-	- Improve map colors
-- Maurits
-	- Test if measurements are realtime (subscription is updated properly)
-- Both
-	- Fake HTTPS (unsigned SSL)
-	- Backup data from last day
-		- Export data
-		- Place file in specific folder
-	- Technical report
-		- Infrastructure
-			- Ant, Java, UNWDMIDP, Vagrant, NodeJS, Meteor, D3, Geodata
-		- Backups
-			- Explain backup using RSYNC
-	- Prepare for demo
-		- Add example users
+- Rain fall measurements
+	- Don't show when rain fall is below 10mm
+- Improve map colors
+- Test if measurements are realtime (subscription is updated properly)
+- Fake HTTPS (unsigned SSL)
+- Backup data from last day
+	- Export data
+	- Place file in specific folder
+- Technical report
+	- Infrastructure
+		- Ant, Java, UNWDMIDP, Vagrant, NodeJS, Meteor, D3, Geodata
+	- Backups
+		- Explain backup using RSYNC
