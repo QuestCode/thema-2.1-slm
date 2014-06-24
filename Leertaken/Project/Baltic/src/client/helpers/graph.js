@@ -187,6 +187,8 @@ Graph._drawHumidityGraph = function( measurements ) {
 Graph.drawGraphs = function() {
 	var measurements = this.getMeasurements();
 
+	window._lastMeasurements = measurements;
+
 	// console.log(measurements);
 
 	this._drawTemperatureGraph( measurements );

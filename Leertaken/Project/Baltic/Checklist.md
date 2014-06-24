@@ -6,12 +6,14 @@
 		- Don't show when rain fall is below that
 		- Only stations within 50 km of coastline of the Baltic Sea
 	- Allow for data download in Excel
-		- Download button
-		- Range: day/week/month
+		- [OK] Download button
+		- [OK] Range: day/week/month
+		- Make buttons work
 - Maurits
 	- Measurements (since previous midnight):
-		- Temperature
-		- Humidity
+		- [OK] Temperature
+		- [OK] Humidity
+		- Make realtime
 - Both
 	- Fake HTTPS (unsigned SSL)
 	- Backup data from last day
