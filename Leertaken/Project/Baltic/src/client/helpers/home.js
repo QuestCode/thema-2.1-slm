@@ -2,12 +2,12 @@ Template.home.events = {
 	'click #toggle-world': function toggleWorld( e ) {
 		e.preventDefault();
 
-		console.log( 'show world map' );
+		app.WorldMap.showWorld();
 	},
 	'click #toggle-baltic': function toggleBaltic( e ) {
 		e.preventDefault();
 
-		console.log( 'show baltic map' );
+		app.WorldMap.showBalticSea();
 	},
 	'click #export-day': function exportDay( e ) {
 		e.preventDefault();

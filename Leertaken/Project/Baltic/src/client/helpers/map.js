@@ -1,13 +1,24 @@
-Template.map.created = function() {
+var WorldMap = {};
+
+WorldMap.getStations = function() {
+	return app.collections.stations.find().fetch();
+};
+
+WorldMap._drawWorldMap = function() {
+	// ..
+};
+
+WorldMap._drawBalticMap = function() {
+	var self = this;
 
 	d3.json('geo/baltic.json', function(err, baltic) {
 
 		var countries = topojson.feature(baltic, baltic.objects.countries);
 		var seas = topojson.feature(baltic, baltic.objects.seas);
-		var stations = app.collections.stations.find().fetch();
+		var stations = self.getStations();
 
-		var width = 720;
-		var height = 720;
+		var width = 1000;
+		var height = 600;
 
 		var svg = d3.select('#map').append('svg')
 			.attr('width', width)
@@ -22,7 +33,7 @@ Template.map.created = function() {
 
 		var bounds = path.bounds(seas);
 
-		var scale = .85 / Math.max(
+		var scale = 0.85 / Math.max(
 			(bounds[1][0] - bounds[0][0]) / width,
 			(bounds[1][1] - bounds[0][1]) / height);
 		var translate = [
@@ -55,9 +66,9 @@ Template.map.created = function() {
 		svg.append('g')
 			.attr('id', 'borders')
 			.append('path')
-				.datum(topojson.mesh(baltic, baltic.objects.countries, function(a, b) { return a !== b }))
+				.datum(topojson.mesh(baltic, baltic.objects.countries, function(a, b) { return a !== b; }))
 				.attr('d', path)
-				.attr('class', 'borders')
+				.attr('class', 'borders');
 
 		var hexbin = d3.hexbin()
 			.size([width, height])
@@ -67,40 +78,70 @@ Template.map.created = function() {
 			var p = projection(d.position.coordinates);
 			d[0] = p[0];
 			d[1] = p[1];
-	  });
+			});
 
 		var color = d3.scale.linear()
 			.domain([0, 40])
 			.range(["#777", "#ddd"]);
 
-	  svg.append('g')
-      .attr('class', 'hexagons')
-    .selectAll('path')
-      .data(hexbin(stations))
-    .enter().append('path')
-    	.attr('class', 'hexagon')
-      .attr('d', function(d) { return hexbin.hexagon(); })
-      .attr('transform', function(d) { return 'translate(' + d.x + ',' + d.y + ')'; })
-      .style('fill', function(stations) { 
-      	var stns = _.pluck(stations, 'stn');
+		svg.append('g')
+			.attr('class', 'hexagons')
+		.selectAll('path')
+			.data(hexbin(stations))
+		.enter().append('path')
+			.attr('class', 'hexagon')
+			.attr('d', function(d) { return hexbin.hexagon(); })
+			.attr('transform', function(d) { return 'translate(' + d.x + ',' + d.y + ')'; })
+			.style('fill', function(stations) {
+				var stns = _.pluck(stations, 'stn');
 
-      	var measurements = app.collections.measurements.find({ 
-      		stn: { $in: stns }
-      	}).fetch();
+				var measurements = app.collections.measurements.find({
+					stn: { $in: stns }
+				}).fetch();
 
-      	var temp = _.reduce(measurements, function(memo, m) { return memo + m.wdsp }, 0);
-      	var temp = temp / measurements.length;
+				var temp = _.reduce(measurements, function(memo, m) { return memo + m.wdsp; }, 0);
+				temp = temp / measurements.length;
 
-      	if(isNaN(temp)) {
-      		temp = 0;
-      	}
+				if(isNaN(temp)) {
+					temp = 0;
+				}
 
-      	stations.temp = temp;
+				stations.temp = temp;
 
-      	return color(temp);
-      })
-     .style('stroke', function(stations) {
-     		return color(stations.temp);
-     })
+				return color(temp);
+			})
+		.style('stroke', function(stations) {
+			return color(stations.temp);
+		});
 	});
-}
+};
+
+WorldMap.showWorld = function() {
+	this._$map.empty();
+	this._$worldToggle.addClass( 'active' );
+	this._$balticToggle.removeClass( 'active' );
+	this._drawWorldMap();
+};
+
+WorldMap.showBalticSea = function() {
+	this._$map.empty();
+	this._$worldToggle.removeClass( 'active' );
+	this._$balticToggle.addClass( 'active' );
+	this._drawBalticMap();
+};
+
+WorldMap.init = function() {
+	if( ! this._init ) {
+		this._$map = $( '#map' );
+		this._$worldToggle = $( '#toggle-world' );
+		this._$balticToggle = $( '#toggle-baltic' );
+		this.showBalticSea();
+	}
+	this._init = true;
+};
+
+Template.map.rendered = function() {
+	WorldMap.init();
+};
+
+app.WorldMap = WorldMap;
