@@ -14,9 +14,7 @@ app.controllers.HomeController = RouteController.extend({
 	},
 
 	actionHome: function() {
-		if(this.ready()) {
-			this.template = 'home';
-			this.render();
-		}
+		this.template = 'home';
+		this.render();
 	}
 });

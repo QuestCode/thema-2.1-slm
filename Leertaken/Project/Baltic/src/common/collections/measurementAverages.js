@@ -1,27 +1,40 @@
 app.schemas.measurementAverages = new SimpleSchema( {
-	stn: {
+	'_id.stn': {
 		type: Number,
 		label: 'Station Number'
 	},
-	datetime: {
+	'_id.datetime': {
 		type: Date,
 		label: 'Datetime'
 	},
-	avg_prcp: {
+	'value.stn': {
+		type: Number,
+		label: 'Station Number'
+	},
+	'value.datetime': {
+		type: Date,
+		label: 'Datetime'
+	},
+	'value.count': {
+		type: Number,
+		label: 'Number of measurements',
+		min: 0
+	},
+	'value.avg_prcp': {
 		type: Number,
 		label: 'Average Precipitation',
 		min: 0.00,
 		max: 999.99,
 		decimal: true
 	},
-	avg_temp: {
+	'value.avg_temp': {
 		type: Number,
 		label: 'Average Temperature',
 		min: -9999.9,
 		max: 9999.9,
 		decimal: true
 	},
-	avg_humi: {
+	'value.avg_humi': {
 		type: Number,
 		label: 'Average Humidity',
 		min: 0,

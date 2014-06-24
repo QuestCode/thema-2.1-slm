@@ -19,6 +19,8 @@ Meteor.startup(function() {
 			}
 		];
 
-		users.map( Accounts.createUser );
+		for(var i = 0; i < users.length; i++) {
+			Accounts.createUser(users[i]);
+		}
 	}
 });
