@@ -12,18 +12,17 @@ SUBJECT: INVITATION
 
 <br/>
 
-Dear Mr. Stadman,  
+Dear Mr. Stadman,
 
 Thank you for visiting the meeting that conducted on June 4th. It was a pleasure to meet you, and we as Da Vinci Data enjoyed having you as our guests. We hope you feel the same way.
-We would be honoured to invite you to a second meeting, located at Van Olst Toren, on 2014-06-26 at 08:15 (CEST).  
 
-During this meeting we would like to give a demo of the application we built, and do a short presentation on the service-related aspects of the assignment.
+We would be honoured to invite you to a second meeting, located at Van Olst Toren, on 2014-06-26 at 08:15 (CEST). During this meeting we would like to give a demo of the application we have built, and do a short presentation on the service aspects of the project.
 
-Please send us an email confirming whether you will be attending the meeting.  
+Please send us an email confirming whether you will be attending the meeting.
 
-We are looking forward to seeing you again and hope you will be present on that day.  
+We are looking forward to seeing you again and hope you will be present on that day.
 
-Yours sincerely,  
+Yours sincerely,
 
 Mastrigt, Maurits Van   - _CEO_   
 Broenink, Tom			- _Junior Development & Maintenance_  
