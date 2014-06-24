@@ -15,9 +15,15 @@ Graph.setStations = function( stations ) {
 		app.subscriptions.graphMeasurements.stop();
 	}
 
+	this._stations = stations;
+
 	app.subscriptions.graphMeasurements = Meteor.subscribe( 'measurementAverages', stations, this.getStartDate(), this.getStopDate(), function() {
 		self.drawGraphs();
 	} );
+};
+
+Graph.getStations = function() {
+	return this._stations;
 };
 
 Graph.getMeasurements = function() {
@@ -202,3 +208,5 @@ Template.graph.events = {
 		Graph.setStations( [ this.stn ] );
 	}
 };
+
+app.Graph = Graph;

@@ -8,7 +8,7 @@
 	- Allow for data download in Excel
 		- [OK] Download button
 		- [OK] Range: day/week/month
-		- Make buttons work
+		- [OK] Make buttons work
 - Maurits
 	- Measurements (since previous midnight):
 		- [OK] Temperature

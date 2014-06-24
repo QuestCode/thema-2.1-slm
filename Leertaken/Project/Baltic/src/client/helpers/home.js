@@ -12,16 +12,16 @@ Template.home.events = {
 	'click #export-day': function exportDay( e ) {
 		e.preventDefault();
 
-		console.log( 'export day' );
+		app.Export.lastDay();
 	},
 	'click #export-week': function exportWeek( e ) {
 		e.preventDefault();
 
-		console.log( 'export week' );
+		app.Export.lastWeek();
 	},
 	'click #export-month': function exportMonth( e ) {
 		e.preventDefault();
 
-		console.log( 'export month' );
+		app.Export.lastMonth();
 	}
 };
