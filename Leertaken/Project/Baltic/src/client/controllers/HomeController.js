@@ -1,18 +1,16 @@
 app.controllers.HomeController = RouteController.extend({
 	waitOn: function() {
 		var stations = Meteor.subscribe('balticStations');
-		var measurements = Meteor.subscribe('measurements');
 
 		return [
-			stations,
-			measurements
+			stations
 		];
 	},
 
-	onBeforeAction: function() {
-	},
-
-	onRun: function() {
+	data: function() {
+		return {
+			stations: app.collections.stations.find().fetch()
+		};
 	},
 
 	actionHome: function() {

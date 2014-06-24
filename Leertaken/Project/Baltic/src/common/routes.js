@@ -5,6 +5,12 @@ Router.map(function(){
 		action: 'actionHome'
 	});
 
+	this.route('map', {
+		path: '/map',
+		controller: 'app.controllers.MapController',
+		action: 'actionMap'
+	});
+
 	this.route('graph', {
 		path: '/graph',
 		controller: 'app.controllers.GraphController',

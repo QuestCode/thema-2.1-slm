@@ -6,6 +6,8 @@
 		- Don't show when rain fall is below that
 		- Only stations within 50 km of coastline of the Baltic Sea
 	- Allow for data download in Excel
+		- Download button
+		- Range: day/week/month
 - Maurits
 	- Measurements (since previous midnight):
 		- Temperature

@@ -1,3 +1,7 @@
+#wrapper > .container {
+	margin: 24px;
+}
+
 #login.container {
 	max-width: 300px;
 }

@@ -1,4 +1,4 @@
-Template.home.created = function() {
+Template.map.created = function() {
 
 	d3.json('geo/baltic.json', function(err, baltic) {
 
