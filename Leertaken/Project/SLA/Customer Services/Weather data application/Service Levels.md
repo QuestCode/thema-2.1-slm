@@ -4,9 +4,9 @@ This chapter will describe the service levels regarding the Web Interface servic
 
 #### Availability
 
-The Web Interface has a minimum availability of 97% on Mondays before 12:00. However, because this is a web application, Da Vinci Data will strive to reach and maintain a minimal uptime of 99% over the course of a year, even outside of the by the client stated times (Mondays before 12:00). There is a slight margin of not more than 3% (depending on the service level) to ensure room for software patches/releases and hardware maintenance.
+The Web Interface has a minimum availability of 97% on Mondays before 12:00. However, because this is a web application, the supplier will strive to keep the application available even outside of peak times. However, the supplier can not guarantee an availability percentage over this time period. The supplier will strive to perform all maintenance related processes during this time.
 
-Because the initial requirement was for the Web Interface to be accessible on Mondays before 12:00, this will now be deemed the peak period of the service. Depending on the service level, Da Vinci Data offers a higher minimum availability during these peak periods. (minimum 97%)
+Because the initial requirement was for the Web Interface to be accessible on Mondays before 12:00, this will now be deemed the peak times of the service. Depending on the service level, the supplier offers a higher minimum availability during these peak periods. (minimum of 97%)
 
 #### Service Level Targets
 
@@ -17,7 +17,7 @@ Service Level Targets of the Web Interface can be summarised in the following wa
 ###### Query load time
 Both queries have a maximum load time of 1 minute on Mondays before 12:00. Only authorised users will be able to issue a query request.   
 
-N.B.: Da Vinci Data guarantees the maximum load time of 1 minute only when there is no problem on the customer's side slowing the load time down. Chapter _1.8 Responsibilities_ contains more information on situations like these.
+N.B.: the supplier guarantees the maximum load time of 1 minute only when there is no problem on the customer's side slowing the load time down. Chapter _1.8 Responsibilities_ contains more information on situations like these.
 
 ##### Critical Success Factors
 
@@ -63,9 +63,9 @@ __The data may not be viewed or accessed by third parties.__
 
 #### Losstime
 
-To ensure service availability and data integrity, Da Vinci Data set up a maximum losstime. The definition of losstime is the amount of hours it takes for a backup to be restored after an integrity incident. This inevitably means that some amount of data depending on the losstime will be lost.
+To ensure service availability and data integrity, the supplier set up a maximum losstime. The definition of losstime is the amount of hours it takes for a backup to be restored after an integrity incident. This inevitably means that some amount of data depending on the losstime will be lost.
 
-The maximum losstime for weather data is half an hour. If this loss time is exceeded, Da Vinci Data will schedule a service review with the client to evaluate why the loss time was exceeded and what measures can be taken to prevent this from happening.
+The maximum losstime for weather data is half an hour. If this loss time is exceeded, the supplier will schedule a service review with the client to evaluate why the loss time was exceeded and what measures can be taken to prevent this from happening.
 
 #### Maintenance
 
@@ -75,83 +75,67 @@ The duration of maintenance may depend on the severity of the issues and the upt
 
 __Calculation:__
 
-Een jaar heeft 365,25 dagen (kwart dag is voor schikkeljaren).
-Van de 25e t/m het einde van de maand is per jaar 65,25 dagen.
-De piekperiodes bevatten gemiddeld 5 werkdagen.
+A year has 365,25 (0,25 days to account for leap years).
+The peak time (Mondays before 12:00 accounts) for 12 hours a week. Which is 12 / 7 = 1,71 hours a day on average. Or 1,71 * 365,25 = 626,14 hours a year on average. And 626,14 / 24 = 26,09 days a year on average.
 
-| Moment              | Dagen                         | Uren                        | Availability 99,5% | Maximale downtime op jaarbasis |
-| :---                | :---                          | :---                        | :---               | :---                           |
-| Piekuren            | 65,25                         | 65,25 * 24 = 1566           | 99,5%              | 1566 * (100% - 99,5%) = 7,83   |
-| Openstellingstijden | 365,25 - 65,25 - 12 * 5 = 240 | 240 * 9,5 = 2280            | 99,5%              | 2280 * (100% - 99,5%) = 11,4   |
-| __Subtotaal__       | __305,25__                    | __3846__                    |                    | __19,23__                      |
-| Overig              | 365,25 - 305,25 = 60          | (365,25 * 24) - 3846 = 4920 | 98%                | 4920 * (100% - 98%) = 98,4     |
-| __Totaal__          | __365,25__                    | __8766__                    |                    | __117,63__                     |
+| Time                  | Days   | Hours   | Availability | Maximum hours of downtime yearly |
+| :---                  | :---   | :---    | :---         | :---                             |
+| Peak times            | 26,09  | 626,14  | 97%          | 626,14 * 0,03 = 18,78            |
 
-De maximale downtime per week tijdens piekuren en openstellingstijden is: 19,23 / 52 = 0,37 uur = 22,2 minuten.
-Voor de overige tijden geldt een wekelijkse maximale downtime van: 117,63 / 52 = 2,26 uur = 2 uur en 15,6 minuten.
+The maximum amount of downtime a week during peak times is 26,09 / 52 = 0,50 hours (30 minutes).
 
-#### Verwachte maximale aantal problems per jaar
+#### Expected maximum amount of problems a year.
 
-Per jaar worden er ongeveer maximaal 150 problems verwacht. Onder problems valt: alles wat van invloed kan zijn op de bereikbaarheid van de cloud voor één of meerdere gebruikers gedurende een bepaalde periode. Een trage of niet-werkende verbinding met het internet op de locatie van de gebruiker wordt niet als incident beschouwd.
+The supplier expects to encounter no more than 150 problems a year. Problems are defined as: anything that is not out of the supplier's control that will negatively impact the availability of the service for one or multiple users during the peak times. 
 
-#### Beveiliging
+#### Security
 
-Omdat er wordt gewerkt met zeer vertrouwelijke informatie is een goede beveiliging van groot belang. Onderstaand worden maatregelen beschreven die zijn genomen om de veiligheid van de data te kunnen waarborgen.
+Because the information is of great value to the supplier as well as the client, both these parties will take security measures to ensure the data remains secure. These security measures will be outlined and described in this chapter.
 
 ##### Backups
 
-Elke nacht wordt een incrementele backup gemaakt van de data op de cloud servers. Deze backup wordt uitgevoerd om twee uur 's nachts en duurt maximaal twee uur. Elke zondagnacht wordt een totale backup gemaakt van de data van de afgelopen week om de integriteit van de data te behouden. Deze backup wordt om twee uur 's nachts uitgevoerd en duurt maximaal vier uur.
+An incremental backup of all data used in the service will be started at midnight (local time in Kaunas) on every day and kept until the next midnight. This ensures that the client will always have access to the most recent data.
 
-De backups worden opgeslagen op twee fysiek gescheiden locaties om het risico van data verlies te beperken. De locaties bestaan uit het hoofdkantoor van Team4s en de cloud servers zelf.
+After an integrity incident, the daily backup will prevent data loss for the most part. The maximum amount of lost data will be equal to the amount of downtime. The supplier estimates that restoring a backup will not take more than an hour. 
 
-Bij een integriteitsincident kan dankzij de dagelijkse backups een maximale dataverlies van één dag ontstaan. Het terugzetten van een incrementele back-up zal maximaal twee uur in beslag nemen. Het herstellen van de volledige dataset zal maximaal één werkdag in beslag nemen.
+##### Password policy
 
-##### Exclusiviteit
+To prevent third parties from gaining access to the system by exploiting weak passwords, the service will enforce a password policy for all users. The password policy consists of the following requirements:
 
-De cloud server is op een afzonderlijke server gehost, dit zorgt voor fysieke exclusiviteit ten opzichte van de andere servers in het datacentrum.
+- Users are obliged to change their password every two months, before the first Monday of the month.
+- Passwords have to meet the following requirements:
+	- At least 8 characters
+	- At least 1 capital letter
+	- At least 1 symbol
 
-De vertrouwelijke informatie is alleen beschikbaar voor werknemers van Team4S. Om zeker te zijn van de identiteit van de gebruiker wordt er gebruik gemaakt van encryptiemethoden. Elke gebruiker zal dan ook zijn eigen gebruikersnaam en wachtwoord krijgen.
+Of course the passwords will be saved in a secure way (hashed and encrypted).
 
-##### Wachtwoord policy
+##### Customer responsibilities 
 
-Om ongeauthoriseerde toegang te voorkomen wordt er gebruik gemaakt van een stricte wachtwoord policy. Dit betekent dat:
+Even secure, complex passwords can be compromised. It is for this reason that the supplier also places strict requirements on the security on the customer's end.
 
-- Gebruikers elke 2 maanden, vóór de eerste maandag van de maand hun wachtwoord dienen te veranderen.
-- Wachtwoorden moeten voldoen aan de volgende eisen:
-	- 8 of meer karakters
-	- 1 of meer hoofdletters
-	- 1 of meer symbolen
-
-Deze policy wordt door de cloud-programmatuur gehandhaafd.
-
-##### Eisen aan de leverancier
-
-Voor het hosten van de server wordt gebruik gemaakt van een externe leverancier. Team4S stelt stricte eisen aan de betrouwbaarheid van deze leverancier om hoge kwaliteit in zowel uptime en beveiliging te kunnen garanderen.
-
-- De leverancier dient te voldoen aan de eerder gestelde 'exclusiviteit' voorwaarden.
-- De leverancier dient een rapportage op te leveren met alle incidenten die in het afgelopen jaar (vóór ingang van deze SLA) hebben plaatsgevonden. Aan de hand van een review van deze incidenten wordt besloten of de hardware van de leverancier voldoende beveiligd en beschikbaar is.
-- De leverancier dient gevestigd te zijn in Nederland.
-
-##### Eisen aan de klant
-
-Ook de klant zal een aantal voorzorgsmaatregelen moeten treffen om de integriteit van zijn account te garanderen:
-
-- Als de werknemer via een publiek netwerk ('hotspot') verbinding maakt zal deze eerst een VPN verbinding moeten opzetten.
-- Indien de werknemer vermoedt dat een derde zich toegang tot zijn/haar account kan verschaffen dient de werknemer onmiddelijk zijn wachtwoord te veranderen en contact op te nemen met de service desk.
+Every customer logging in to the service needs to:
+- Have ran a virus scan in the past week.
+- Immediately change his/her password and notify the servicedesk if the customer suspects a third party has gained access to his/her account.
 
 ---
 
 ##### Monitoring
 
-Alle programmatuur-gerelateerde incidenten worden gelogged en opgeslagen, hier zitten een aantal voorwaarden aan:
+All software-related incidents will be logged. These logs will be saved. There are a couple conditions to this process:
 
-- Logs blijven een maand na het incident beschikbaar.
-- Afhankelijk van de prioriteit van een incident kan er besloten worden de logs permanent te bewaren, bijvoorbeeld wanneer deze nodig zijn als bewijsmateriaal.
+- Logs will be saved up until a month after the incident.
+- Depending on the priority of the incident, the supplier may decide to keep the log permanently. Especially if the supplier suspects this incident may indicate a problem in the future.
 
-#### Calamiteiten
+#### Calamities
 
-Onder calamiteiten worden incidenten zoals storing, brand of diefstal waardoor de Cloud dienst niet langer (compleet) beschikbaar is voor de gebruikers. Bij het optreden van een calamiteit wordt alles in werk gesteld om de Cloud dienst zo snel mogelijk te hervatten, wat uiterlijk 5 werkdagen na het optreden van de calamiteit het geval zal zijn.
+The supplier defines calamities as incidents such as:
+- Power outage
+- Fire
+- Theft
 
-Zoals beschreven in de paragraaf _Aansprakelijkheid_ valt een calamiteit onder het punt van overmacht en daarmee is ICT niet aansprakelijk voor schade van welke aard dan ook.
+In the unlikely event of a calamity, the supplier will take immediate action to attempt to get the service back up and running as soon as possible. The supplier estimates that the service will always be back up within 5 hours of the event happening.
 
-In de paragraaf _Backups_ staat beschreven dat er regelmatig backups worden gemaakt. Deze backups kunnen worden gebruikt bij een calamiteit om de Cloud dienst met minimale dataverlies opnieuw in werk te stellen.
+The _Responsibilities_ paragraph contains more information on what a calamity is and when a calamity is deemed 'beyond the supplier's control'.
+
+The paragraph _Backups_ states that backups will be kept on a regular basis. These backups can be used in the event of a calamity to ensure the service will be back online with the least amount of data loss possible.
