@@ -23,3 +23,6 @@ if ! ls /data/db 2> /dev/null; then
 fi
 
 echo -e "\nexport MONGO_URL=mongodb://localhost:27017/meteor\ncd /vagrant/src/" >> ~/.bashrc
+
+echo -e "Host *\n    ServerAliveInterval 600\n    ServerAliveCountMax 200\n    ClientAliveInterval 600\n    ClientAliveCountMax 200" > ~/.ssh/config
+service ssh restart
