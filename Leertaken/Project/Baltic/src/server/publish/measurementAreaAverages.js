@@ -1,4 +1,4 @@
-Meteor.publish( 'measurementAreaAverages', function( stations, date ) ) {
+Meteor.publish( 'measurementAreaAverages', function( stations, date ) {
   var self = this;
 
   var startDate = new Date(date);
@@ -8,7 +8,7 @@ Meteor.publish( 'measurementAreaAverages', function( stations, date ) ) {
   var stopDate = new Date(date);
   stopDate.setMilliseconds(0);
   stopDate.setSeconds(0);
-  stopDate.setMinutes(stopDate.getMinutes() + 1); 
+  stopDate.setMinutes(stopDate.getMinutes() + 1);
 
   var query = {
     stn: {
@@ -18,7 +18,7 @@ Meteor.publish( 'measurementAreaAverages', function( stations, date ) ) {
       $gte: startDate,
       $lt: stopDate
     }
-  }
+  };
 
   var handle = app.collections.measurementAverages.find(query).observerChanges({
     added: function(id, doc) {
@@ -33,5 +33,5 @@ Meteor.publish( 'measurementAreaAverages', function( stations, date ) ) {
 
   self.onStop(function() {
     handle.stop();
-  })
+  });
 });

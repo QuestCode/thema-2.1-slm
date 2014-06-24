@@ -26,14 +26,15 @@ Router.map(function(){
 	});
 
 	this.route('export', {
-		where: 'server', 
+		path: '/export/:stations/:startDate/:stopDate',
+		where: 'server',
 		action: function() {
 			var params = this.params;
 
 			var csv = app.exportMeasurements(
-				this.params.stations.split(','), 
-				this.params.startDate,
-				this.params.stopDate
+				this.params.stations.split(','),
+				parseInt( this.params.startDate, 10 ),
+				parseInt( this.params.stopDate, 10 )
 			);
 
 			var header = {
@@ -44,7 +45,7 @@ Router.map(function(){
 			this.response.writeHead(200, header);
 			return this.response.end(csv);
 		}
-	})
+	});
 });
 
 if(Meteor.isClient) {
