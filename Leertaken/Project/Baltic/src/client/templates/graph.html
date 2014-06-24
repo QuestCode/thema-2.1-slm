@@ -10,17 +10,14 @@
 				</div>
 			</div>
 			<div class="col-md-4">
-				<h3>Legend</h3>
-				<ul id="graph-legend">
-					{{#with getLegend}}
-					{{> legend }}
-					{{/with}}
-				</ul>
-				<ul id="station-list">
+				{{#with getLegend}}
+				{{> legend }}
+				{{/with}}
+				<!-- <ul id="station-list">
 					{{#each stations}}
 					<li><a href="#" class="station">{{ name }}</a></li>
 					{{/each}}
-				</ul>
+				</ul> -->
 			</div>
 		</div>
 	</div>

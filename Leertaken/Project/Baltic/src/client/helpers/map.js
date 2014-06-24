@@ -17,7 +17,7 @@ WorldMap._drawBalticMap = function() {
 		var seas = topojson.feature(baltic, baltic.objects.seas);
 		var stations = self.getStations();
 
-		var width = 1000;
+		var width = 970;
 		var height = 600;
 
 		var svg = d3.select('#map').append('svg')
@@ -121,6 +121,7 @@ WorldMap.showWorld = function() {
 	this._$worldToggle.addClass( 'active' );
 	this._$balticToggle.removeClass( 'active' );
 	this._drawWorldMap();
+	app.Graph.setStations( [] );
 };
 
 WorldMap.showBalticSea = function() {
@@ -128,6 +129,7 @@ WorldMap.showBalticSea = function() {
 	this._$worldToggle.removeClass( 'active' );
 	this._$balticToggle.addClass( 'active' );
 	this._drawBalticMap();
+	app.Graph.setStations( [] );
 };
 
 WorldMap.init = function() {

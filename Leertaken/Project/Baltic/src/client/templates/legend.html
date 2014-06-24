@@ -1,5 +1,10 @@
 <template name="legend">
-	{{#each stations}}
-	<li><span style="background-color:{{ color }}"></span>{{ name }}</li>
-	{{/each}}
+	{{#if stations }}
+	<h3>Legend</h3>
+	<ul id="graph-legend">
+		{{#each stations}}
+		<li><span style="background-color:{{ color }}"></span>{{ name }}</li>
+		{{/each}}
+	</ul>
+	{{/if}}
 </template>

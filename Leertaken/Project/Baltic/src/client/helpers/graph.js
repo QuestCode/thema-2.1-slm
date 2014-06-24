@@ -63,15 +63,18 @@ Graph.getHumidityGraph = function() {
 	return this._$graphHumi;
 };
 
-Graph._drawTemperatureGraph = function( measurements ) {
-	var $temp = this.getTemperatureGraph();
+Graph._drawGraph = function( measurements, $node, yDomain, yText, valueKey ) {
 	var stations = this.getStations();
 
-	$temp.empty();
+	$node.empty();
+
+	if( ! Object.keys( stations ).length ) {
+		return;
+	}
 
 	var margin = { top: 20, right: 20, bottom: 30, left: 50 },
-		width  = 600 - margin.left - margin.right,
-		height = 300 - margin.top - margin.bottom;
+		width  = 750 - margin.left - margin.right,
+		height = 400 - margin.top - margin.bottom;
 
 	var x = d3.time.scale()
 		.range( [ 0, width ] )
@@ -93,10 +96,10 @@ Graph._drawTemperatureGraph = function( measurements ) {
 
 	var line = d3.svg.line()
 		.x( function( d ) { return x( d.datetime ); } )
-		.y( function( d ) { return y( d.avg_temp || 0 ); } )
+		.y( function( d ) { return y( d[valueKey] || 0 ); } )
 		;
 
-	var svg = d3.select( $temp[0] ).append( 'svg' )
+	var svg = d3.select( $node[0] ).append( 'svg' )
 		.attr( 'width', width + margin.left + margin.right )
 		.attr( 'height', height + margin.top + margin.bottom )
 		.append( 'g' )
@@ -104,7 +107,7 @@ Graph._drawTemperatureGraph = function( measurements ) {
 		;
 
 	x.domain( [ this.getStartDate(), this.getStopDate() ] );
-	y.domain( [ -40, 60 ] );
+	y.domain( yDomain );
 
 	svg.append( 'g' )
 		.attr( 'class', 'x axis')
@@ -120,7 +123,7 @@ Graph._drawTemperatureGraph = function( measurements ) {
 		.attr( 'y', 6 )
 		.attr( 'dy', '.71em' )
 		.style( 'text-anchor', 'end' )
-		.text( 'Temperature (C°)' )
+		.text( yText )
 		;
 
 	for( var stn in measurements ) {
@@ -133,74 +136,24 @@ Graph._drawTemperatureGraph = function( measurements ) {
 	}
 };
 
+Graph._drawTemperatureGraph = function( measurements ) {
+	this._drawGraph(
+		measurements,
+		this.getTemperatureGraph(),
+		[ -40, 60 ],
+		'Temperature (C°)',
+		'avg_temp'
+	);
+};
+
 Graph._drawHumidityGraph = function( measurements ) {
-	var $humi = this.getHumidityGraph();
-	var stations = this.getStations();
-
-	$humi.empty();
-
-	var margin = { top: 20, right: 20, bottom: 30, left: 50 },
-		width  = 600 - margin.left - margin.right,
-		height = 300 - margin.top - margin.bottom;
-
-	var x = d3.time.scale()
-		.range( [ 0, width ] )
-		;
-
-	var y = d3.scale.linear()
-		.range( [ height, 0 ] )
-		;
-
-	var xAxis = d3.svg.axis()
-		.scale( x )
-		.orient( 'bottom' )
-		;
-
-	var yAxis = d3.svg.axis()
-		.scale( y )
-		.orient( 'left' )
-		;
-
-	var line = d3.svg.line()
-		.x( function( d ) { return x( d.datetime ); } )
-		.y( function( d ) { return y( d.avg_humi || 0 ); } )
-		;
-
-	var svg = d3.select( $humi[0] ).append( 'svg' )
-		.attr( 'width', width + margin.left + margin.right )
-		.attr( 'height', height + margin.top + margin.bottom )
-		.append( 'g' )
-		.attr( 'transform', 'translate(' + margin.left + ',' + margin.top + ')' )
-		;
-
-	x.domain( [ this.getStartDate(), this.getStopDate() ] );
-	y.domain( [ 0, 100 ] );
-
-	svg.append( 'g' )
-		.attr( 'class', 'x axis')
-		.attr( 'transform', 'translate(0,' + height + ')' )
-		.call( xAxis )
-		;
-
-	svg.append( 'g' )
-		.attr( 'class', 'y axis' )
-		.call( yAxis )
-		.append( 'text' )
-		.attr( 'transform', 'rotate( -90 )' )
-		.attr( 'y', 6 )
-		.attr( 'dy', '.71em' )
-		.style( 'text-anchor', 'end' )
-		.text( 'Humidity (%)' )
-		;
-
-	for( var stn in measurements ) {
-		svg.append( 'path' )
-			.datum( measurements[ stn ] )
-			.attr( 'd', line )
-			.attr( 'class', 'line' )
-			.style( 'stroke', stations[stn].color )
-			;
-	}
+	this._drawGraph(
+		measurements,
+		this.getHumidityGraph(),
+		[ 0, 100 ],
+		'Humidity (%)',
+		'avg_humi'
+	);
 };
 
 Graph.drawGraphs = function() {
