@@ -14,7 +14,7 @@ WorldMap._drawMap = function() {
 
 	this._path = d3.geo.path()
 		.projection(this._projection);
-}
+};
 
 WorldMap._drawHexbin = function(svg, hexbin, stations) {
 	var self = this;
@@ -35,11 +35,10 @@ WorldMap._drawHexbin = function(svg, hexbin, stations) {
 			.attr('transform', function(d) { return 'translate(' + d.x + ',' + d.y + ')'; })
 			.style('fill', 'red')
 			.style('stroke', '')
-			.on('click', function() {
-				console.log(this);
-				console.log(arguments);
-			})
-}
+			.on('click', function( stations ) {
+				app.Graph.setStations( _.pluck( stations, 'stn' ) );
+			});
+};
 
 WorldMap._center = function(object, zoom) {
 	var bounds = this._path.bounds(object);
@@ -55,7 +54,7 @@ WorldMap._center = function(object, zoom) {
 	this._projection
 		.scale(scale)
 		.translate(translate);
-}
+};
 
 WorldMap._drawWorldMap = function() {
 	var self = this;
@@ -85,7 +84,7 @@ WorldMap._drawWorldMap = function() {
 			.radius(2);
 
 		self._drawHexbin(svg, hexbin, stations);
-	})	
+	});
 };
 
 WorldMap._drawBalticMap = function() {
@@ -125,7 +124,7 @@ WorldMap._drawBalticMap = function() {
 
 		self._drawHexbin(svg, hexbin, stations);
 	});
-}
+};
 
 WorldMap.showWorld = function() {
 	var self = this;
