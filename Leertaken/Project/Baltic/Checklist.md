@@ -2,12 +2,12 @@
 	- Don't show when rain fall is below 10mm
 - Improve map colors
 - Test if measurements are realtime (subscription is updated properly)
-- Fake HTTPS (unsigned SSL)
 - Backup data from last day
 	- Export data
 	- Place file in specific folder
 - Technical report
 	- Infrastructure
 		- Ant, Java, UNWDMIDP, Vagrant, NodeJS, Meteor, D3, Geodata
+		- SSL/HTTPS
 	- Backups
 		- Explain backup using RSYNC
