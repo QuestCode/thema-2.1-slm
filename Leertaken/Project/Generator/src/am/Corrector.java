@@ -10,7 +10,7 @@ public class Corrector {
 	private int cachePointer;
 
 	public Corrector() {
-		this.cache        = new Object[ CACHE_SIZE ][];
+		this.cache        = new Object[ CACHE_SIZE ][ Record.SIZE ];
 		this.cachePointer = 0;
 	}
 
@@ -19,7 +19,7 @@ public class Corrector {
 	 */
 	public void validate( Object[] record ) {
 		checkCacheSize();
-		correctTemperature( record );
+		// correctTemperature( record );
 		correctMissing( record );
 
 		cache[ cachePointer ] = record;
@@ -33,8 +33,8 @@ public class Corrector {
 	}
 
 	private Object predictPropertyValue( Object[] record, int property ) {
-		if( cache[1] == null ) { // Cache size < 2
-			return 0.0;
+		if( cache[1][ Record.STN ] == null ) { // Cache size < 2
+			return null;
 		}
 
 		int i, size = 0;
@@ -45,7 +45,7 @@ public class Corrector {
 
 		// Sum the differences
 		for( i = 0; i < CACHE_SIZE; ++i ) {
-			if( cache[i] == null ) {
+			if( cache[i][ Record.STN ] == null ) {
 				break;
 			}
 
@@ -79,7 +79,7 @@ public class Corrector {
 
 	private void correctTemperature( Object[] record ) {
 		// Check temperature for deviation
-		if( cache[1] == null ) { // Cache size < 2
+		if( cache[1][ Record.STN ] == null ) { // Cache size < 2
 			return;
 		}
 
@@ -87,7 +87,7 @@ public class Corrector {
 		Double currentValue   = (Double) record[ Record.TEMP ];
 		Double predictedValue = (Double) predictPropertyValue( record, Record.TEMP );
 
-		if( Math.abs( ( currentValue - predictedValue ) / currentValue ) > 0.2 ) { // 20%
+		if(  predictedValue != null && Math.abs( ( currentValue - predictedValue ) / currentValue ) > 0.2 ) { // 20%
 			record[ Record.TEMP ] = predictedValue;
 		}
 
