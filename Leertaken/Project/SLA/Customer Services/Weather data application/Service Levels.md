@@ -75,7 +75,7 @@ The duration of maintenance may depend on the severity of the issues and the upt
 
 __Calculation:__
 
-A year has 365,25 (0,25 days to account for leap years).
+A year has 365,25 days (0,25 days to account for leap years).
 The peak time (Mondays before 12:00 accounts) for 12 hours a week. Which is 12 / 7 = 1,71 hours a day on average. Or 1,71 * 365,25 = 626,14 hours a year on average. And 626,14 / 24 = 26,09 days a year on average.
 
 | Time                  | Days   | Hours   | Availability | Maximum hours of downtime yearly |
