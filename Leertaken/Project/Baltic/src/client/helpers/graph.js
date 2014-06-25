@@ -3,7 +3,11 @@ var Graph = {};
 Graph._stations = {};
 
 Graph.getStartDate = function() {
-	var start = new Date();
+	if( window._startDate ) {
+		return window._startDate;
+	}
+
+	var start = new Date( this.getStopDate() );
 
 	if( $( '#toggle-graph-week input:radio:checked' ).length ) {
 		start.setDate( start.getDate() - 7 ); // Week
@@ -17,7 +21,27 @@ Graph.getStartDate = function() {
 };
 
 Graph.getStopDate = function() {
-	return new Date();
+	return window._stopDate || new Date();
+};
+
+Graph._subscribe = function() {
+	var self = this;
+
+	if( app.subscriptions.graphMeasurements ) {
+		app.subscriptions.graphMeasurements.stop();
+	}
+
+	var stations = this.getStations();
+
+	app.subscriptions.graphMeasurements = Meteor.subscribe(
+		'measurementAverages',
+		_.pluck( stations, 'stn' ),
+		this.getStartDate(),
+		this.getStopDate(),
+		function() {
+			self.drawGraphs();
+		}
+	);
 };
 
 Graph.setStations = function( stations ) {
@@ -40,9 +64,7 @@ Graph.setStations = function( stations ) {
 
 	Session.set( 'graph-stations', new Date() );
 
-	app.subscriptions.graphMeasurements = Meteor.subscribe( 'measurementAverages', _.pluck(stations, 'stn'), this.getStartDate(), this.getStopDate(), function() {
-		self.drawGraphs();
-	} );
+	this._subscribe();
 };
 
 Graph.getStations = function( asArray ) {
@@ -256,8 +278,8 @@ Graph.drawGraphs = function() {
 Graph.init = function() {
 	var self = this;
 	this._interval = setInterval( function() {
-		console.log( 'Redrawing graphs..' );
-		self.drawGraphs();
+		console.log( 'Updating graphs..' );
+		self._subscribe();
 	}, 20 * 1000 );
 };
 
