@@ -12,7 +12,7 @@ Because the initial requirement was for the weather data application to be acces
 
 Several Critical Success Factors (CSFs) and Key Performance Indicators (KPIs) have been outlined to define the Service Level Targets in a clear and concise manner.
 
-Service Level Targets of the weather data application can be summarised in the following way;
+Service Level Targets of the weather data application can be summarized in the following way;
 
 ###### Query load time
 Both queries have a maximum load time of 1 minute on Mondays before 12:00. Only authorised users will be able to issue a query request.   
@@ -91,6 +91,7 @@ The supplier expects to encounter no more than 150 problems a year. Problems are
 #### Security
 
 Because the information is of great value to the supplier as well as the client, both these parties will take security measures to ensure the data remains secure. These security measures will be outlined and described in this chapter.
+The supplier will setup a SSL-connection to secure safe data transport. Users of the application will agree to not store usernames or password locally. There will be a total of 50 users, with no segregation in privileges.
 
 ##### Backups
 
