@@ -9,6 +9,7 @@ __The numbers used in this chapter are based on amounts per month.__
 | :-----------                                     | :----        | :-----       | :---         |
 | General uptime.                                  | 95%          | 97%          | 98%          |
 | Uptime during peak times and opening times.      | 97%          | 98%          | 99.5%        |
+| Amount of changes available                      | 6            | 9            | 12           |
 | General load time for queries.                   | < 60 seconds | < 30 seconds | < 10 seconds |
 | Maximum amount of incidents with high priority   | < 10         | < 6          | < 3          |
 | Maximum amount of incidents with medium priority | < 50         | < 35         | < 20         |
@@ -42,9 +43,10 @@ In the table below, the risks will be listed along with the measures that will b
 
 ### Yearly costs for each service level
 
-| Component                                      | Bronze         | Silver        | Gold           |
-| :---                                           | :-----         | :-----        | :---           |
-| Weather data application                       | € 3.600,-      | € 4.300,-     | € 4.800,-      |
-| Service desk                                   | € 8.000,-      | € 10.500,-    | € 12.000,-     |
-| <div style="te-t-align:right">__Total:__</div> | __€ 11.600,-__ | __€14.800,-__ | __€ 16.800,-__ |
+| Component                                      | Bronze        | Silver         | Gold           |
+| :---                                           | :-----        | :-----         | :---           |
+| Weather data application                       | € 6.900,-     | € 10.350,-     | € 20.700,-     |
+| Service desk                                   | € 2.000,-     | € 6.000,-      | € 12.000,-     |
+| Changes and Maintenance of the application     | € 900,-       | € 1.350        | € 2.700,-      |
+| <div style="te-t-align:right">__Total:__</div> | __€ 9.800,-__ | __€ 17.700,-__ | __€ 35.400,-__ |
 
