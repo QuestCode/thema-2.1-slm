@@ -17,7 +17,7 @@ Service Level Targets of the weather data application can be summarized in the f
 ###### Query load time
 Both queries have a maximum load time of 1 minute on Mondays before 12:00. Only authorised users will be able to issue a query request.
 
-N.B.: the supplier guarantees the maximum load time of 1 minute only when there is no problem on the customer's side slowing the load time down. Chapter _1.8 Responsibilities_ contains more information on situations like these.
+N.B.: the supplier guarantees the maximum load time of 1 minute only when there is no problem on the client side slowing the load time down. Chapter _1.8 Responsibilities_ contains more information on situations like these.
 
 ---
 
@@ -71,7 +71,7 @@ The maximum losstime for weather data is half an hour. If this loss time is exce
 
 #### Maintenance
 
-Service maintenance will take place during set times. This will be on tuesday nights between 19:00 and 21:00 (if necessary). When maintenance has to urgently be performed (because the continuity or integrity of the service may be at risk), this will take place in accordance with the client. Customers will receive notice of maintenance at least half an hour before the start of the maintenance.
+Service maintenance will take place during set times. This will be on tuesday nights between 19:00 and 21:00 (if necessary). When maintenance has to urgently be performed (because the continuity or integrity of the service may be at risk), this will take place in accordance with the client. Users will receive notice of maintenance at least half an hour before the start of the maintenance.
 
 The duration of maintenance may depend on the severity of the issues and the uptime guarantee depending on the service level package.
 
@@ -116,14 +116,14 @@ Of course the passwords will be saved in a secure way (hashed and encrypted).
 
 ---
 
-##### Customer responsibilities
+##### User responsibilities
 
-Even secure, complex passwords can be compromised. It is for this reason that the supplier also places strict requirements on the security on the customer's end.
+Even secure, complex passwords can be compromised. It is for this reason that the supplier also places strict requirements on the security on the user's end.
 
-Every customer logging in to the service needs to:
+Every user logging in to the service needs to:
 
 - Have ran a virus scan in the past week.
-- Immediately change his/her password and notify the service desk if the customer suspects a third party has gained access to his/her account.
+- Immediately change his/her password and notify the service desk if the user suspects a third party has gained access to his/her account.
 
 ##### Monitoring
 
