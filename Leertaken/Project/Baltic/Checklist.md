@@ -1,8 +1,14 @@
-- Rain fall measurements
-	- Don't show when rain fall is below 10mm
-- Improve map colors
-- Test if measurements are realtime (subscription is updated properly)
-- Quick test in IE
+- Andre
+	- Rain fall measurements
+		- Don't show when rain fall is below 10mm
+		- Improve map colors
+	- Quick test in IE
+	- Fix exports
+- Maurits
+	- Temperature and humidity graphs for world
+	- Rainfall by Baltic Sea
+	- Toggle all
+	- 24 hour clock in graphs
 - Technical report
 	- Infrastructure
 		- Ant, Java, UNWDMIDP, Vagrant, NodeJS, Meteor, D3, Geodata
@@ -14,3 +20,13 @@
 		- http://docs.mongodb.org/manual/core/master-slave/
 		- mongod --port 37017 --slave --slavedelay 50400 --source localhost:27017 --dbpath /tmp/mongotest
 		- 12 hours behind
+
+- ToDo
+	- Finish up
+	- Write report
+	- Check which documents have to be handed in
+	- Finalize SLA
+
+- Extra
+	- Zoom
+	- Search with autocomplete
