@@ -13,7 +13,7 @@ module.exports = function( grunt ) {
 		preprocess: {
 			document: {
 				src: 'SLA Structure.md',
-				dest: 'Concept SLA.md'
+				dest: 'SLA.md'
 			}
 		},
 		watch: {

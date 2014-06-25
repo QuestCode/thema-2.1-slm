@@ -14,6 +14,7 @@ These features offer an intuitive and cockpit-like feeling to the application, e
 
 
 The supplier manages to the following facilities needed to provide the service:
+
 - A webserver containing the application;
 - Certificates needed to make the SSL connection possible;
 - The nessesary technical infrastructure (Computers, Firewalls, Routers, Kabels, etc.);
@@ -23,6 +24,7 @@ These facilities offer users the possibility to access the service using the int
 
 
 To support the development and implementation as well as continued operation of the service, Da Vinci Data offers the following services:
+
 - System administrators, application administrators, maintanance of the service;
 - Services needed to implement the service, e.g.:
 	- Project management

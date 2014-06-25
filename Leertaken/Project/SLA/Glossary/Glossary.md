@@ -1,7 +1,6 @@
-#Glossary
+# Glossary
 
 This is an alphabetical list of technical terms used in this SLA with their definitions.
-B
 
 - __Server__
 	> A server is a computer that provides data to other computers. It may serve data to systems on a local area network (LAN) or a wide area network (WAN) over the Internet.

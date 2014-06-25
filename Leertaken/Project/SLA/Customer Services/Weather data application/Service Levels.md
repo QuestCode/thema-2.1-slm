@@ -55,6 +55,7 @@ __Data must be backed up starting from every midnight (until the next midnight).
 | Amount of failed or incomplete backups | 0    | Amount of incidents involving a corrupt or missing backup. |
 
 __The data may not be viewed or accessed by third parties.__
+
 | Metric                                        | Goal | Source                                                                                                          |
 | :----------                                   | :--- | :---                                                                                                            |
 | Amount of security breaches compromising data | 0    | Amount of security related incidents involving (suspected) successful retrieving of information by third party. |
@@ -74,8 +75,7 @@ The duration of maintenance may depend on the severity of the issues and the upt
 
 __Calculation:__
 
-A year has 365,25 (0,25 days to account for leap years).
-The peak time (Mondays before 12:00) accounts for 12 hours a week. Which is 12 / 7 = 1,71 hours a day on average. Or 1,71 * 365,25 = 626,14 hours a year on average. And 626,14 / 24 = 26,09 days a year on average.
+A year has 365,25 (0,25 days to account for leap years). The peak time (Mondays before 12:00) accounts for 12 hours a week. Which is 12 / 7 = 1,71 hours a day on average. Or 1,71 * 365,25 = 626,14 hours a year on average. And 626,14 / 24 = 26,09 days a year on average.
 
 | Time       | Days  | Hours  | Availability | Maximum hours of downtime yearly |
 | :---       | :---  | :---   | :---         | :---                             |
@@ -85,7 +85,7 @@ The maximum amount of downtime a week during peak times is 26,09 / 52 = 0,50 hou
 
 #### Expected maximum amount of problems a year.
 
-The supplier expects to encounter no more than 150 problems a year. Problems are defined as: anything that is not out of the supplier's control that will negatively impact the availability of the service for one or multiple users during the peak times. 
+The supplier expects to encounter no more than 150 problems a year. Problems are defined as: anything that is not out of the supplier's control that will negatively impact the availability of the service for one or multiple users during the peak times.
 
 #### Security
 
@@ -96,7 +96,7 @@ The supplier will setup a SSL-connection to secure safe data transport. Users of
 
 An incremental backup of all data used in the service will be started at midnight (local time in Kaunas) on every day and kept until the next midnight. This ensures that the client will always have access to the most recent data.
 
-After an integrity incident, the daily backup will prevent data loss for the most part. The maximum amount of lost data will be equal to the amount of downtime. The supplier estimates that restoring a backup will not take more than an hour. 
+After an integrity incident, the daily backup will prevent data loss for the most part. The maximum amount of lost data will be equal to the amount of downtime. The supplier estimates that restoring a backup will not take more than an hour.
 
 ##### Password policy
 
@@ -110,11 +110,12 @@ To prevent third parties from gaining access to the system by exploiting weak pa
 
 Of course the passwords will be saved in a secure way (hashed and encrypted).
 
-##### Customer responsibilities 
+##### Customer responsibilities
 
 Even secure, complex passwords can be compromised. It is for this reason that the supplier also places strict requirements on the security on the customer's end.
 
 Every customer logging in to the service needs to:
+
 - Have ran a virus scan in the past week.
 - Immediately change his/her password and notify the service desk if the customer suspects a third party has gained access to his/her account.
 
@@ -128,6 +129,7 @@ All software-related incidents will be logged. These logs will be saved. There a
 #### Calamities
 
 The supplier defines calamities as incidents such as:
+
 - Power outage
 - Fire
 - Theft

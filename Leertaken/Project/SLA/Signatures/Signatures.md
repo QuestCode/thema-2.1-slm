@@ -2,7 +2,7 @@ This agreement has been made between Aleksandro Stulginskio Universitetas (clien
 
 <br/>
 
-The agreement has been agreed on and signed on two copies, at  ……………………………………………, on ……… / ……… / ……… .
+The agreement has been agreed on and signed on two copies, at  ……………………………, on ……… / ……… / ……… .
 
 <br/>
 

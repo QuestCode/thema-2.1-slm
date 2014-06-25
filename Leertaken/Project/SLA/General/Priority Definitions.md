@@ -23,6 +23,8 @@ The impact level defined by the amount of users affected:
 | The incident affects several users       | Medium       |
 | The incident affects a majority of users | High         |
 
+---
+
 ### 1.7.3 Priorities Table
 
 This matrix defines the priority of an incident, depending on the impact and urgency.

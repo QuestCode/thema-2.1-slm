@@ -1,11 +1,11 @@
-<h1 style="font-size:4em">Service Level Agreement</h1>
-<h2 style="font-size:2.5em;margin:-30px 0 580px">Weather Data Application</h2>
+<h1 style="font-size:3.5em">Service Level Agreement</h1>
+<h2 style="font-size:2em;margin:-30px 0 480px">Weather Data Application</h2>
 
 > __Opdracht:__ Leertaak 4 (SLM2), thema 2.1-I, groep 1
 >
 > __Auteurs:__ <span style="display:inline-block;vertical-align:top">Tom Broenink, Ward Holthof, Yuri Hoogeweg,<br/>André Nanninga en Maurits van Mastrigt</span>
 >
-> __Datum:__ 23 juni 2014
+> __Datum:__ 25 juni 2014
 
 <!-- header: Vertrouwelijk document - SLM2, Groep 1, Thema 2.1-I -->
 
@@ -44,9 +44,15 @@
 In this chapter you will find a general description of the service and requirements.
 
 <!-- @include General/Definitions.md -->
+
+---
+
 <!-- @include General/Parties.md -->
 <!-- @include General/Introduction.md -->
 <!-- @include General/Approval SLA.md -->
+
+---
+
 <!-- @include General/Service Description.md -->
 <!-- @include General/Service Continuity.md -->
 <!-- @include General/Priority Definitions.md -->

@@ -3,12 +3,14 @@
 The client wants to perform calculations on weather data to conduct research on climate change. The client is interested in climate change in Lithuania and other countries around the Baltic Sea and is especially interested in weather changes regarding the milder weather in the past years.
 
 The client is interested in the following measurements:
+
 - Wind speed
 - Rainfall
 - Temperature
 - Humidity
 
 The relevant countries:
+
 - Lithuania
 - Denmark
 - Germany
@@ -25,9 +27,12 @@ The client wants a SSL secured webpages protected by a username and password sho
 
 The application should have historic data of days, weeks and months included. Data should be saved for at least a half year. Allow this data to be downloaded.
 
+---
+
 ### 1.5.2 Queries
 
-The client wants to see data visualised according to the following two 'queries':    
+The client wants to see data visualised according to the following two 'queries':
+
 __1. Rainfall above 10 mm within 50 km.__  
 Show data about rainfall when the rainfall is more than 10 mm. Don’t show when rainfall is below that.
 This query only applies to weatherstations within 50 km of the coastline of the Baltic Sea. 
