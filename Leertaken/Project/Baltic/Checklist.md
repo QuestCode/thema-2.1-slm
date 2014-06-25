@@ -5,8 +5,6 @@
 	- Quick test in IE
 	- Fix exports
 - Maurits
-	- Temperature and humidity graphs for world
-	- Rainfall by Baltic Sea
 	- Toggle all
 	- 24 hour clock in graphs
 - Technical report

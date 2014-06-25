@@ -10,6 +10,14 @@ WorldMap.getStations = function() {
 	return app.collections.stations.find().fetch();
 };
 
+WorldMap.isShowingWorldMap = function() {
+	return this._currentMap === 'world';
+};
+
+WorldMap.isShowingBalticSeaMap = function() {
+	return this._currentMap === 'baltic-sea';
+};
+
 WorldMap._drawMap = function() {
 	this._width = 970;
 	this._height = 600;
@@ -73,11 +81,14 @@ WorldMap._center = function(object, zoom) {
 		.translate(translate);
 };
 
-WorldMap._drawWorldMap = function() {
+WorldMap._drawWorldMap = function( cb ) {
 	var self = this;
 	this._drawMap();
 
 	d3.json('geo/world.json', function(err, world) {
+		if( err ) {
+			return cb( err );
+		}
 		var countries = topojson.feature(world, world.objects.world);
 		var stations = self.getStations();
 
@@ -102,15 +113,18 @@ WorldMap._drawWorldMap = function() {
 
 		self._drawHexbin(svg, hexbin, stations);
 
-		Session.set( 'map-isReady', true );
+		cb();
 	});
 };
 
-WorldMap._drawBalticMap = function() {
+WorldMap._drawBalticMap = function( cb ) {
 	var self = this;
 	this._drawMap();
 
 	d3.json('geo/baltic.json', function(err, baltic) {
+		if( err ) {
+			return cb( err );
+		}
 		var countries = topojson.feature(baltic, baltic.objects.countries);
 		var seas = topojson.feature(baltic, baltic.objects.seas);
 		var stations = self.getStations();
@@ -143,7 +157,7 @@ WorldMap._drawBalticMap = function() {
 
 		self._drawHexbin(svg, hexbin, stations);
 
-		Session.set( 'map-isReady', true );
+		cb();
 	});
 };
 
@@ -152,6 +166,7 @@ WorldMap.showWorld = function() {
 
 	Session.set( 'map-isReady', false );
 
+	this._currentMap = '';
 	this._$map.empty();
 	this._$worldToggle.addClass( 'active' );
 	this._$balticToggle.removeClass( 'active' );
@@ -161,7 +176,10 @@ WorldMap.showWorld = function() {
 		app.subscriptions.map.stop();
 	}
 	app.subscriptions.map = Meteor.subscribe( 'stations', function() {
-		self._drawWorldMap();
+		self._drawWorldMap( function( err ) {
+			Session.set( 'map-isReady', true );
+			self._currentMap = 'world';
+		} );
 	} );
 };
 
@@ -169,7 +187,9 @@ WorldMap.showBalticSea = function() {
 	var self = this;
 
 	Session.set( 'map-isReady', false );
+	Session.set( 'map-currentMap', null );
 
+	this._currentMap = '';
 	this._$map.empty();
 	this._$worldToggle.removeClass( 'active' );
 	this._$balticToggle.addClass( 'active' );
@@ -179,7 +199,10 @@ WorldMap.showBalticSea = function() {
 		app.subscriptions.map.stop();
 	}
 	app.subscriptions.map = Meteor.subscribe( 'balticStations', function() {
-		self._drawBalticMap();
+		self._drawBalticMap( function( err ) {
+			Session.set( 'map-isReady', true );
+			self._currentMap = 'baltic-sea';
+		} );
 	} );
 };
 

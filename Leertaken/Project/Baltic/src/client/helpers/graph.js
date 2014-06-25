@@ -3,7 +3,7 @@ var Graph = {};
 Graph._stations = {};
 
 Graph.getStartDate = function() {
-	return new Date() - 60 * 60 * 1000;
+	return new Date() - 24 * 60 * 60 * 1000;
 };
 
 Graph.getStopDate = function() {
@@ -63,7 +63,14 @@ Graph.getHumidityGraph = function() {
 	return this._$graphHumi;
 };
 
-Graph._drawGraph = function( measurements, $node, yDomain, yText, valueKey ) {
+Graph.getPrecipitationGraph = function() {
+	if( ! this._$graphPrcp ) {
+		this._$graphPrcp = $( '#graph-precipitation' );
+	}
+	return this._$graphPrcp;
+};
+
+Graph._drawGraph = function( measurements, $node, yDomain, yText, value ) {
 	var stations = this.getStations();
 
 	$node.empty();
@@ -96,7 +103,7 @@ Graph._drawGraph = function( measurements, $node, yDomain, yText, valueKey ) {
 
 	var line = d3.svg.line()
 		.x( function( d ) { return x( d.value.datetime ); } )
-		.y( function( d ) { return y( d.value[valueKey] || 0 ); } )
+		.y( typeof value === 'function' ? value( y ) : function( d ) { return y( d.value[value] || 0 ); } )
 		;
 
 	var svg = d3.select( $node[0] ).append( 'svg' )
@@ -107,7 +114,7 @@ Graph._drawGraph = function( measurements, $node, yDomain, yText, valueKey ) {
 		;
 
 	x.domain( [ this.getStartDate(), this.getStopDate() ] );
-	y.domain( yDomain );
+	y.domain( typeof yDomain === 'function' ? yDomain( d3 ) : yDomain );
 
 	svg.append( 'g' )
 		.attr( 'class', 'x axis')
@@ -159,6 +166,17 @@ Graph._drawHumidityGraph = function( measurements ) {
 	);
 };
 
+Graph._drawPrecipitationGraph = function( measurements ) {
+	this._drawGraph(
+		measurements,
+		this.getPrecipitationGraph(),
+		// function( d3 ) { return d3.extent( measurements, function( d ) { console.log(d);return ( d.value.avg_prcp || 0 ) * 10; } ); },
+		[ 10, 30 ],
+		'Precipitation (mm)',
+		function( y ) { return function( d ) { return y( ( d.value.avg_prcp || 0 ) * 10 ); }; } // Convert to millimeters
+	);
+};
+
 Graph.drawGraphs = function() {
 	var measurements = this.getMeasurements();
 
@@ -166,8 +184,13 @@ Graph.drawGraphs = function() {
 
 	// console.log(measurements);
 
-	this._drawTemperatureGraph( measurements );
-	this._drawHumidityGraph( measurements );
+	if( app.WorldMap.isShowingWorldMap() ) {
+		this._drawTemperatureGraph( measurements );
+		this._drawHumidityGraph( measurements );
+	}
+	if( app.WorldMap.isShowingBalticSeaMap() ) {
+		this._drawPrecipitationGraph( measurements );
+	}
 };
 
 Graph.init = function() {
