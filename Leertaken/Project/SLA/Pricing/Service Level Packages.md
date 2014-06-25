@@ -22,9 +22,13 @@ In the table below, the risks will be listed along with the measures that will b
 
 | Risk                                | Measure 1                                                                                  | Measure 2                             | Bronze | Silver | Gold  |
 | ---                                 | ---                                                                                        | ---                                   | ---    | ---    | ---   |
+| Internet outage                     | Contracts with reliable parties                                                            | Backup internet connection            |        | 1      | 1 & 2 |
 | Server instability (hardware fault) | After trial period, deliver a report evaluating the current hardware and different options | Free periodic hardware upgrade        | -      | 1      | 1 & 2 |
-| DDoS attacks                        | Software to prevent DDoS.                                                                  | Create an intervention plan.          | -      | 1      | 1 & 2 |
+| DDoS attacks                        | DDoS protection software                                                                   | Intervention plan DDoS                | -      | 1      | 1 & 2 |
 | Software fault (security/stability) | Real-time bug reporting to the development and maintenance team.                           | Set up a dedicated bug-resolving team | -      | 1      | 1 & 2 |
+| Server software failure             | Employees with sufficient expertise                                                        | Maintenance contract with supplier    | -      | 1      | 1 & 2 |
+| Server harddrive failure            | Raid configuration                                                                         | Monthly S.M.A.R.T./drive tests        | -      | 1      | 1 & 2 |
+
 
 ### Service desk
 
