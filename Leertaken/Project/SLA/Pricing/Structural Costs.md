@@ -4,5 +4,5 @@ To provide continued use of the weather data application, a monthly sum will be 
 
 | Monthly       | Yearly         |
 | :---          | :---           |
-| __€ 1.500,-__ | __€ 18.000,-__ |
+| __€ 1.725,-__ | __€ 20.700,-__ |
 

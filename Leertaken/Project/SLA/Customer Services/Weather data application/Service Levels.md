@@ -4,9 +4,9 @@ This chapter will describe the service levels regarding the weather data applica
 
 #### Availability
 
-The weather data application has a minimum availability of 97% on Mondays before 12:00. However, because this is a web application, the supplier will strive to keep the application available even outside of peak times. However, the supplier can not guarantee an availability percentage over this time period. The supplier will strive to perform all maintenance related processes during this time.
+The weather data application has a minimum availability of 99.5% on Mondays before 12:00. However, because this is a web application, the supplier will strive to keep the application available even outside of peak times. However, the supplier can not guarantee an availability percentage over this time period. The supplier will strive to perform all maintenance related processes during this time.
 
-Because the initial requirement was for the weather data application to be accessible on Mondays before 12:00, this will now be deemed the peak times of the service. Depending on the service level, the supplier offers a higher minimum availability during these peak periods. (minimum of 97%)
+Because the initial requirement was for the weather data application to be accessible on Mondays before 12:00, this will now be deemed the peak times of the service. Depending on the service level, the supplier offers a higher minimum availability during these peak periods. (minimum of 99.5%)
 
 #### Service Level Targets
 
@@ -23,7 +23,7 @@ N.B.: the supplier guarantees the maximum load time of 1 minute only when there 
 
 The following points are of utmost importance in successfully keeping the weather data application available and ensuring it meets the Service Level Targets.
 
-- Data must be retained for at least 6 months and available 97% of the time on mondays before 12:00
+- Data must be retained for at least 6 months and available 99.5% of the time on mondays before 12:00
 - Graphs/Maps related to the queries must load within 1 minute.
 - Data must be backed up starting from every midnight (until the next midnight).
 - The data may not be viewed or accessed by third parties.
@@ -33,7 +33,7 @@ The following points are of utmost importance in successfully keeping the weathe
 The metrics below have been defined from the Critical Success Factors, these metrics will be used to measure the quality of the services.
 
 
-__Data must be retained for at least 6 months and available 97% of the time on mondays before 12:00__
+__Data must be retained for at least 6 months and available 99.5% of the time on mondays before 12:00__
 
 | Metric                              | Goal  | Source                   |
 | :----------                         | :---  | :---                     |
@@ -79,7 +79,7 @@ The peak time (Mondays before 12:00) accounts for 12 hours a week. Which is 12 /
 
 | Time       | Days  | Hours  | Availability | Maximum hours of downtime yearly |
 | :---       | :---  | :---   | :---         | :---                             |
-| Peak times | 26,09 | 626,14 | 97%          | 626,14 * 0,03 = __18,78__        |
+| Peak times | 26,09 | 626,14 | 99.5%          | 626,14 * 0,03 = __18,78__        |
 
 The maximum amount of downtime a week during peak times is 26,09 / 52 = 0,50 hours (30 minutes).
 
