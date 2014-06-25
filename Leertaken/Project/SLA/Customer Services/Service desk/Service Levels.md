@@ -54,4 +54,3 @@ The maximum time spent on solving a incident depends on the priority of the inci
 | High         | Within 15 minutes     | Within 30 minutes         |
 | Medium       | Within 1 hour         | Within 4 hours            |
 | Low          | Within 2 hours        | Within 8 hours            |
-

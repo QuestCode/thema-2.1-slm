@@ -12,4 +12,3 @@ The following table shows our risks and measures:
 | DDoS attack on data center | low    | High   | DDoS protection software           | Intervention plan DDoS              |
 | Server software failure    | Medium | High   | Maintenance contract with supplier | Employees with sufficient expertise |
 | Server harddrive failure   | Medium | Medium | Raid configuration                 | Monthly S.M.A.R.T./drive tests      |
-
