@@ -12,7 +12,7 @@ function shiftMeasurementAverages( ms ) {
 		print( 'Shifted ' + i + '/' + total + ' (' + ( ( i / total ) * 100 ).toFixed( 2 ) + '%).' );
 	}
 	db.measurement_averages.find().forEach( function( obj ) {
-		obj.value.datetime = new Date( obj.value.datetime + ms );
+		obj.value.datetime = new Date( obj.value.datetime.getTime() + ms );
 		db.measurement_averages.save( obj );
 		++i;
 		if( i % 10000 === 0 ) {
