@@ -4,9 +4,9 @@ function calculateMeasurementAverages( datetime ) {
 	var path = Meteor.require('path');
 	var exec = Meteor.require('child_process').exec;
 
-	var script = path.resolve('/vagrant/scripts/db.calculateMeasurementAverages.js');
+	var script = path.resolve(path.join(process.cwd(), '../../../../../../scripts', '/db.calculateMeasurementAverages.js'));
 	var evaluate = 'var datetime=' + datetime;
-	var command = 'mongo 127.0.0.1/meteor --eval "' + evaluate + '" ' + script;
+	var command = 'mongo meteor --eval "' + evaluate + '" ' + script;
 
 	var child = exec(command, function(err, stdout, stderr) {
 		if(err) {
