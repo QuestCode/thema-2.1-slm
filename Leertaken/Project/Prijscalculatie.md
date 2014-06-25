@@ -9,7 +9,7 @@
 | Basis kosten service                                | € 1.725,-     | € 20.700,-     |                |
 | Onderhoud van de service desk                       | € 1.000,-     | € 12.000,-     |                |
 | Onderhoud van de applicatie                         | € 225,-       | € 2.700,-      |                |
-| <div style="text-align:right">__Totaal:__</div>     | __€ 2.725,-__ | __€ 32.700,-__ | __€ 14.900,-__ |
+| <div style="text-align:right">__Totaal:__</div>     | __€ 2.950,-__ | __€ 35.400,-__ | __€ 25.025,-__ |
 
 
 ## Specificatie kosten

@@ -7,8 +7,8 @@ __The numbers used in this chapter are based on amounts per month.__
 
 | Weather data application                         | Bronze       | Silver       | Gold         |
 | :-----------                                     | :----        | :-----       | :---         |
-| General uptime.                                  | 95%          | 97%          | 99%          |
-| Uptime during peak times and opening times.      | 97%          | 98.5%        | 99.5%        |
+| General uptime.                                  | 95%          | 97%          | 98%          |
+| Uptime during peak times and opening times.      | 97%          | 98%          | 99.5%        |
 | General load time for queries.                   | < 60 seconds | < 30 seconds | < 10 seconds |
 | Maximum amount of incidents with high priority   | < 10         | < 6          | < 3          |
 | Maximum amount of incidents with medium priority | < 50         | < 35         | < 20         |
