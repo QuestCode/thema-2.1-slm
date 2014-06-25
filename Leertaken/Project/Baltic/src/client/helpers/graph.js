@@ -213,13 +213,24 @@ Template.graph.created = function() {
 };
 
 Template.graph.events = {
-	'click #graph-legend .station .toggle': function stationClick( e ) {
+	'change #graph-legend .station .toggle': function stationClick( e ) {
 		var $checkbox = $(e.target);
-		var stn = this.stn;
 		var stations = Graph.getStations();
 
+		// All
+		if( $checkbox.hasClass( 'all' ) ) {
+			$( '#graph-legend .station .toggle:not(.all)' ).prop( 'checked', $checkbox.prop( 'checked' ) ).trigger( 'change' );
+			return;
+		}
+
+		// Check all if all are checked, else uncheck
+		var $boxes = $( '#graph-legend .station .toggle:not(.all)' );
+
+		$( '#graph-legend .station .toggle.all' ).prop( 'checked', $boxes.filter( ':checked' ).length === $boxes.length );
+
+		// Set hiding
 		for( var i in stations ) {
-			if( stations[i].stn == stn ) {
+			if( stations[i].stn == this.stn ) {
 				stations[i].hide = ! $checkbox.prop( 'checked' );
 			}
 		}

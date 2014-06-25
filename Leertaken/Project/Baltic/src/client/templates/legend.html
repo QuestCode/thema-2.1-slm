@@ -2,11 +2,16 @@
 	{{#if stations }}
 	<h3>Legend</h3>
 	<div id="graph-legend">
+		<div class="station">
+			<input class="toggle all" type="checkbox" checked="checked"/>
+			<span style="background-color:white"></span>
+			All
+		</div>
 		{{#each stations}}
-		<div class="station" data-stn="{{ stn }}s">
+		<div class="station" data-stn="{{ stn }}">
 			<input class="toggle" type="checkbox" checked="checked"/>
 			<span style="background-color:{{ color }}"></span>
-			{{ name }}
+			{{fixCasing name }}
 		</div>
 		{{/each}}
 	</div>

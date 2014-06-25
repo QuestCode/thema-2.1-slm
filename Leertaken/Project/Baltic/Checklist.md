@@ -5,7 +5,6 @@
 	- Quick test in IE
 	- Fix exports
 - Maurits
-	- Toggle all
 	- 24 hour clock in graphs
 - Technical report
 	- Infrastructure
