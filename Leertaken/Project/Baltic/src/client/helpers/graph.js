@@ -32,16 +32,15 @@ Graph.setStations = function( stations ) {
 	var color = d3.scale.category20();
 	var station;
 
-	stations.forEach( function( stn ) {
-		station = app.collections.stations.findOne( { stn: stn }, { reactive: false } );
-		station.color = color( stn );
+	stations.forEach( function( station ) {
+		station.color = color( station.stn );
 
-		self._stations[stn] = station;
+		self._stations[station.stn] = station;
 	} );
 
 	Session.set( 'graph-stations', new Date() );
 
-	app.subscriptions.graphMeasurements = Meteor.subscribe( 'measurementAverages', stations, this.getStartDate(), this.getStopDate(), function() {
+	app.subscriptions.graphMeasurements = Meteor.subscribe( 'measurementAverages', _.pluck(stations, 'stn'), this.getStartDate(), this.getStopDate(), function() {
 		self.drawGraphs();
 	} );
 };

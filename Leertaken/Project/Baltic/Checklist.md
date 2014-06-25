@@ -1,6 +1,4 @@
 - Andre
-	- Fix auto showing baltic sea after login
-	- Fix exports
 	- Show legend for graph colors
 	- Quick test in IE
 - Technical report

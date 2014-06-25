@@ -1,7 +1,7 @@
 var WorldMap = {};
 
 WorldMap.getStations = function() {
-	return app.collections.stations.find( {}, { reactive: false } ).fetch();
+	return this._stations;
 };
 
 WorldMap.isShowingWorldMap = function() {
@@ -213,15 +213,14 @@ WorldMap.showWorld = function() {
 	this._$balticToggle.removeClass( 'active' );
 	app.Graph.setStations( [] );
 
-	if( app.subscriptions.map ) {
-		app.subscriptions.map.stop();
-	}
-	app.subscriptions.map = Meteor.subscribe( 'stations', function() {
+	Meteor.call('stations', function(err, stations) {
+		self._stations = stations;
+
 		self._drawWorldMap( function( err ) {
 			Session.set( 'map-isReady', true );
 			self._currentMap = 'world';
-		} );
-	} );
+		});
+	});
 };
 
 WorldMap.showBalticSea = function() {
@@ -236,15 +235,14 @@ WorldMap.showBalticSea = function() {
 	this._$balticToggle.addClass( 'active' );
 	app.Graph.setStations( [] );
 
-	if( app.subscriptions.map ) {
-		app.subscriptions.map.stop();
-	}
-	app.subscriptions.map = Meteor.subscribe( 'balticStations', function() {
+	Meteor.call('stations', app.balticStations, function(err, stations) {
+		self._stations = stations;
+
 		self._drawBalticMap( function( err ) {
 			Session.set( 'map-isReady', true );
 			self._currentMap = 'baltic-sea';
-		} );
-	} );
+		});
+	});
 };
 
 WorldMap.init = function() {
@@ -262,7 +260,7 @@ WorldMap.init = function() {
 	this._$map.on( 'click', function( e ) {
 		e.preventDefault();
 		if( self._stations ) {
-			app.Graph.setStations( _.pluck( self._stations, 'stn' ) );
+			app.Graph.setStations( self._stations );
 		}
 	} );
 	this._$map.on( 'dblclick, selectstart', function( e ) {
