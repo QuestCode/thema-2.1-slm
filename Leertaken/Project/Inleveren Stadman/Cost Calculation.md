@@ -1,4 +1,4 @@
-# Cost calculation
+# Cost Calculation
 
 | Component                                           | Monthly       | Yearly         | One-off        |
 | :---                                                | :---          | :---           | :---           |
@@ -11,10 +11,15 @@
 | Maintenance for the applicatie                      | € 225,-       | € 2.700,-      |                |
 | <div style="text-align:right">__Total:__</div>      | __€ 2.950,-__ | __€ 35.400,-__ | __€ 25.025,-__ |
 
+The next page contains more in depth descriptions of each component.
 
-## Specification costs
+---
 
-### Development software
+## Specification of costs
+
+The following tables describe the individual components in more detail.
+
+__Development software:__
 
 | Component                                                  | One-off        |
 | :---                                                       | :---           |
@@ -23,16 +28,13 @@
 | <div style="text-align:right">__Total:__</div>             | __€ 7.500,-__  |
 | <div style="text-align:right">__35% profit margin:__</div> | __€ 10.125,-__ |
 
-
-
-### Hardware weather data application (Webserver)
+__Hardware weather data application (Webserver):__
 
 | Component           | One-off   |
 | :---                | :---      |
 | Dell poweredge R510 | € 4.900,- |
 
-
-### Hardware weather data application (Database server)
+__Hardware weather data application (Database server):__
 
 | Component                                      | One-off       |
 | :---                                           | :---          |
@@ -40,9 +42,7 @@
 | Dell poweredge M600 blade server               | € 4.000,-     |
 | <div style="text-align:right">__Total:__</div> | __€ 8.000,-__ |
 
----
-
-### Service desk (Hardware)
+__Service desk (Hardware):__
 
 | Component                                      | One-off      |
 | :---                                           | :---         |
@@ -50,8 +50,9 @@
 | Other appliances                               | € 400,-      |
 | <div style="text-align:right">__Total:__</div> | __€ 2000,-__ |
 
+---
 
-### Basic service
+__Basic service:__
 
 | Component                                                  | Monthly  |
 | :---                                                       | :---         |
@@ -61,7 +62,7 @@
 | <div style="text-align:right">__15% profit margin:__</div> | __€ 1725,-__ |
 
 
-### Maintenance for the service desk
+__Maintenance for the service desk:__
 
 | Component                                      | Yearly         |
 | :---                                           | :---           |
@@ -72,7 +73,7 @@
 | <div style="text-align:right">__Total:__</div> | __€ 12.000,-__ |
 
 
-### Maintenance for the application
+__Maintenance for the application:__
 
 | Component                  | Yearly    |
 | :---                       | :---      |
