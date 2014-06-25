@@ -4,7 +4,7 @@
 
 __Place:__ Groningen  
 __Date:__ 09-06-2014  
-__Author:__ Klaas Jansen  
+__Author:__ Ward Holthof 
 __Status:__ Final version  
 
 __Supplier:__ Da Vinci Data
@@ -39,7 +39,7 @@ __Query Rain Fall above 10mm.__
 | Metric                                     | Goal      | Measured      | Explanation                                                                     |
 | :----------                                | :---      | :------------ | :----------                                                                     |
 | General uptime of service.                 | -         | 97.7%         |                                                                                 |
-| Uptime of service on Mondays before 12:00. | 97%       | 96.8%         | There have been two major electrical outages, both during Mondays before 12:00. |
+| Uptime of service on Mondays before 12:00. | 97%       | 96.8%         | There have been two major power outages, both during Mondays before 12:00. |
 | Maximum (highest) load time                | <1 minute | 43 sec        |                                                                                 |
 | Average load time                          | <1 minute | 23 sec        |                                                                                 |
 
@@ -71,31 +71,27 @@ The service desk performance during the past month will be evaluated based on th
 
 __Timely response to new incidents.__
 
-| Measurement                                    | Goal         | Measured |
-| :----------                                    | :---         | :---     |
-| Amount of incidents with exeeding IRT          | < 15         |          |
-| Average IRT of incidents with high priority.   | < 15 minutes |          |
-| Average IRT of incidents with medium priority. | < 1 hour     |          |
-| Average IRT of incidents with low priority.    | < 2 hours    |          |
-
-
+| Measurement                                    | Goal         | Measured    | Explanation                                                |
+| :----------                                    | :----        | :----       | :----                                                      |
+| Amount of incidents with exeeding IRT          | < 15         | 11          |                                                            |
+| Average IRT of incidents with high priority.   | < 15 minutes | ~14 minutes |                                                            |
+| Average IRT of incidents with medium priority. | < 1 hour     | ~1 hour     |                                                            |
+| Average IRT of incidents with low priority.    | < 2 hours    | ~3 hours    | We recieved a lot of incidents because of the power outage |
 
 __Timely resolving of incidents.__
 
-| Measurement                                             | Goal           | Measured |
-| :----------                                             | :--            | :---     |
-| Amount of incidents with exeeding MPT                   | < 15           |          |
-| Average resolve time of incidents with high priority.   | < half an hour |          |
-| Average resolve time of incidents with medium priority. | < 4 hours      |          |
-| Average resolve time of incidents with low priority.    | < 8 hours      |          |
-
-
+| Measurement                                             | Goal           | Measured     | Explanation                                                |
+| :----------                                             | :----          | :----        | :----                                                      |
+| Amount of incidents with exeeding MPT                   | < 15           | ~ 10         |                                                            |
+| Average resolve time of incidents with high priority.   | < half an hour | ~ 20 minutes |                                                            |
+| Average resolve time of incidents with medium priority. | < 4 hours      | ~ 3 hours    |                                                            |
+| Average resolve time of incidents with low priority.    | < 8 hours      | ~ 9 hours    | We recieved a lot of incidents because of the power outage |
 
 __The availability of the service desk.__
 
-| Measurement           | Goal | Measured |
-| :----------           | :--  | :---     |
-| Amount of complaints. | 0    |          |
+| Measurement           | Goal  | Measured | Explanation |
+| :----------           | :---- | :----    | :----       |
+| Amount of complaints. | 0     | 0        |             |
 
 # 4 Changes
 
@@ -103,7 +99,7 @@ There have not been any change requests during the period covered in this report
 
 # 5 Availability
 
-The availabiltiy percentages of the Web Interface were slightly below the requirement, the suggested solution to the cause of this problem is evaluating the power provider availability and determining if switching to a different provider might guarantee less outages. However, two power outages both happening on Mondays before 12:00 is very rare and the supplier does not expect this to happen again.
+The availabiltiy percentages of the weather data application were slightly below the requirement, the suggested solution to the cause of this problem is evaluating the power provider availability and determining if switching to a different provider might guarantee less outages. However, two power outages both happening on Mondays before 12:00 is very rare and the supplier does not expect this to happen again.
 
 # 6 Conclusion
 
