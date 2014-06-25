@@ -1,9 +1,8 @@
 - Andre
-	- Rain fall measurements
-		- Don't show when rain fall is below 10mm
-		- Improve map colors
-	- Quick test in IE
+	- Fix auto showing baltic sea after login
 	- Fix exports
+	- Show legend for graph colors
+	- Quick test in IE
 - Technical report
 	- Specificatie
 	- Ontwerp + toelichting
@@ -20,14 +19,7 @@
 	- Testrapportage
 
 - ToDo
-	- Move to Digital Ocean
-	- Finish styling
 	- Add day/week/month radio button below legend
-	- Fix auto showing baltic sea after login
-	- Test in IE
-	- Fix exports
-	- HTTPS
-	- Stations publish non-reactive
 
 - Extra
 	- Zoom
