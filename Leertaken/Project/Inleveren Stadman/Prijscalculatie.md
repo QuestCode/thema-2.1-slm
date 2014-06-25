@@ -40,7 +40,7 @@
 | Dell poweredge M600 blade server               | € 4.000,-     |
 | <div style="text-align:right">__Total:__</div> | __€ 8.000,-__ |
 
-	
+---
 
 ### Service desk (Hardware)
 

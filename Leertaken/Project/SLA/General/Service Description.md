@@ -53,7 +53,7 @@ The client's requirements regarding the service are:
 - Data & webinterface will be hosted by Supplier;
 - Map with colourcode for windspeed and temperature values;
 - Authenticate using username and password;
-- No specific user roles, all users get the same permissions.
+- No specific user roles, all users get the same permissions;
 - Allow for data (for the past half a year in days/weeks/months) to be downloaded in Excel file;
 - Only measurements per minute;
 - SSL to secure safe datatransport.

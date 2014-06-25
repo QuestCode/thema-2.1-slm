@@ -1,5 +1,3 @@
-# Glossary
-
 This is an alphabetical list of technical terms used in this SLA with their definitions.
 
 - __Server__

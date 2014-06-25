@@ -14,6 +14,8 @@ The following points are critical for the success of the service desk:
 * Resolving new incidents on time.
 * The availability of the service desk.
 
+---
+
 ##### Key Performance Indicators
 
 Below you will find the standards that define the Critical Success Factors. These will be used to measure the quality of the service.
@@ -44,6 +46,7 @@ __The availability of the service desk.__
 | :----------           | :--  | :---                                                  |
 | Amount of complaints. | 0    | Amount of complaints recieved by the Service Manager. |
 
+---
 
 #### Response and process times
 

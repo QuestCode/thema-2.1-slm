@@ -4,7 +4,7 @@ This agreement has been made between Aleksandro Stulginskio Universitetas (clien
 
 The agreement has been agreed on and signed on two copies, at  ……………………………, on ……… / ……… / ……… .
 
-The client chose the&nbsp; bronze &nbsp;/&nbsp; silver &nbsp;/&nbsp; gold service level.
+The client chooses the&nbsp; bronze &nbsp;/&nbsp; silver &nbsp;/&nbsp; gold service level package (circle the one that applies).
 
 <br/>
 

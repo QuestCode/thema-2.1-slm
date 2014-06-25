@@ -5,10 +5,10 @@ The application will be used by 50 users who will all need a username and passwo
 
 The supplier offers the following features in the application:
 
-- A way for the customer to get a representation in which the rainfall of each weatherstation within 50 km of the coastline around the baltic sea is shown. (if the rainfall was more than 10 mm)
-- A way for the customer to get a representation in which the temperature and humidity since the most recent midnight of any UNWDMI weather station is shown.
-- A map showing weather stations with a colour code depending on the current temperature.
-- A way for the customer to download data of the last 6 months in an Excel (files contain either a day, a week or a month of information)
+- A way for the customer to get a representation in which the rainfall of each weatherstation within 50 km of the coastline around the baltic sea is shown. (if the rainfall was more than 10 mm);
+- A way for the customer to get a representation in which the temperature and humidity since the most recent midnight of any UNWDMI weather station is shown;
+- A map showing weather stations with a colour code depending on the current temperature;
+- A way for the customer to download data of the last 6 months in an Excel (files contain either a day, a week or a month of information).
 
 These features offer an intuitive and cockpit-like feeling to the application, enabling users to easily access detailed information on current weather data as well as weather data from any period in the last 6 months.
 
@@ -18,7 +18,7 @@ The supplier manages the following facilities needed to provide the service:
 - A webserver containing the application;
 - Certificates needed to make the SSL connection possible;
 - The nessesary technical infrastructure (Computers, Firewalls, Routers, Kabels, etc.);
-- Other infrasturcture, e.g., physical space, power supplies, offices, etc.;
+- Other infrasturcture, e.g., physical space, power supplies, offices, etc.
 
 These facilities offer users the possibility to access the service using the internet.
 
@@ -36,5 +36,5 @@ To support the development and implementation as well as continued operation of 
 	- Education
 	- User management
 - Operational support, i.e. First- and second level service desk support;
-- Installation of hardware and software at the client, if necessary;
+- Installation of hardware and software at the client, if necessary.
 

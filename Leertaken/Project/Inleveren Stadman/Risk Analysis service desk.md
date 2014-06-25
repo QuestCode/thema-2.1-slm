@@ -1,4 +1,4 @@
-# Risk Analysis service desk
+# Risk Analysis Service Desk
 
 The service desk can also be subject to several risks. Although some of these risks are highly unlikely the supplier must prepare for the consequences these might propose, as the supplier wants to warrant the availability.
 

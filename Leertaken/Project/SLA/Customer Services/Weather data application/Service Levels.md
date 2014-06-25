@@ -15,9 +15,11 @@ Several Critical Success Factors (CSFs) and Key Performance Indicators (KPIs) ha
 Service Level Targets of the weather data application can be summarized in the following way;
 
 ###### Query load time
-Both queries have a maximum load time of 1 minute on Mondays before 12:00. Only authorised users will be able to issue a query request.   
+Both queries have a maximum load time of 1 minute on Mondays before 12:00. Only authorised users will be able to issue a query request.
 
 N.B.: the supplier guarantees the maximum load time of 1 minute only when there is no problem on the customer's side slowing the load time down. Chapter _1.8 Responsibilities_ contains more information on situations like these.
+
+---
 
 ##### Critical Success Factors
 
@@ -32,7 +34,7 @@ The following points are of utmost importance in successfully keeping the weathe
 
 The metrics below have been defined from the Critical Success Factors, these metrics will be used to measure the quality of the services.
 
-__Data must be retained for at least 6 months and available 99.5% of the time on mondays before 12:00__
+__Data must be retained for at least 6 months and available 99.5% of the time on mondays before 12:00.__
 
 | Metric                              | Goal  | Source                   |
 | :----------                         | :---  | :---                     |
@@ -59,6 +61,7 @@ __The data may not be viewed or accessed by third parties.__
 | :----------                                   | :--- | :---                                                                                                            |
 | Amount of security breaches compromising data | 0    | Amount of security related incidents involving (suspected) successful retrieving of information by third party. |
 
+---
 
 #### Losstime
 
@@ -81,6 +84,8 @@ A year has 365,25 (0,25 days to account for leap years). The peak time (Mondays 
 | Peak times | 26,09 | 626,14 | 99.5%          | 626,14 - ((626,14/100) * 99,5) = 3,13 hours|
 
 The maximum amount of downtime a week during peak times is 26,09 / 52 = 0,50 hours (30 minutes).
+
+---
 
 #### Expected maximum amount of problems a year.
 
@@ -108,6 +113,8 @@ To prevent third parties from gaining access to the system by exploiting weak pa
 	- At least 1 symbol
 
 Of course the passwords will be saved in a secure way (hashed and encrypted).
+
+---
 
 ##### Customer responsibilities
 

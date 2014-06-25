@@ -15,7 +15,7 @@ The following points are of utmost importance in successfully keeping the weathe
 
 The metrics below have been defined from the Critical Success Factors, these metrics will be used to measure the quality of the services.
 
-__Data must be retained for at least 6 months and available 99.5% of the time on mondays before 12:00__
+__Data must be retained for at least 6 months and available 99.5% of the time on mondays before 12:00.__
 
 | Metric                              | Goal  | Source                   |
 | :----------                         | :---  | :---                     |
@@ -41,6 +41,10 @@ __The data may not be viewed or accessed by third parties.__
 | Metric                                        | Goal | Source                                                                                                          |
 | :----------                                   | :--- | :---                                                                                                            |
 | Amount of security breaches compromising data | 0    | Amount of security related incidents involving (suspected) successful retrieving of information by third party. |
+
+---
+
+<br/>
 
 ## Service desk
 
@@ -82,16 +86,70 @@ __The availability of the service desk.__
 | :----------           | :--  | :---                                                  |
 | Amount of complaints. | 0    | Amount of complaints recieved by the Service Manager. |
 
+---
+
+<br/>
+
 ## Service Level Packages & Costs
 
 ### Implementation costs:
 
-|                                                               | Costs          |
-| :---                                                          | :---           |
-| <div style="text-align:right">__Implementation costs:__</div> | __€ 25.025,-__ |
+| Component                                                 | Costs          |
+| :---                                                      | :---           |
+| Development wather data application                       | € 10.125,-     |
+| Hardware costs weather data application (Webserver)       | € 4.900,-      |
+| Hardware costs weather data application (Database server) | € 8.000,-      |
+| Service desk (Hardware)                                   | € 2.000,-      |
+| <div style="text-align:right">__Total:__</div>            | __€ 25.025,-__ |
 
 ### Costs per year:
 
-|                                                       | Bronze        | Silver         | Gold           |
-| :---                                                  | :-----        | :-----         | :---           |
-| <div style="te-t-align:right">__Yearly costs:__</div> | __€ 9.800,-__ | __€ 17.700,-__ | __€ 35.400,-__ |
+In this paragraph, the customer- and basic services' KPI's will be listed for each service level. The available service levels are bronze, silver and gold. __The numbers used in this chapter are based on amounts per month.__
+
+__Weather data application:__
+
+| Weather data application                         | Bronze       | Silver       | Gold         |
+| :-----------                                     | :----        | :-----       | :---         |
+| General uptime.                                  | 95%          | 97%          | 98%          |
+| Uptime during peak times and opening times.      | 97%          | 98%          | 99.5%        |
+| Amount of changes available                      | 6            | 9            | 12           |
+| General load time for queries.                   | < 60 seconds | < 30 seconds | < 10 seconds |
+| Maximum amount of incidents with high priority   | < 10         | < 6          | < 3          |
+| Maximum amount of incidents with medium priority | < 50         | < 35         | < 20         |
+| Maximum amount of incidents with low priority    | < 100        | < 75         | < 50         |
+| Minimum score security report.                   | n.v.t.       | 7            | 9            |
+| Maximum amount of unsolved integrity incidents.  | 5            | 3            | 0            |
+
+In the next table, the risks will be listed along with the measures that will be taken to prevent or react to these risks for each service level package.
+
+| Risk                                | Measure 1                                                                                  | Measure 2                             | Bronze | Silver | Gold  |
+| ---                                 | ---                                                                                        | ---                                   | ---    | ---    | ---   |
+| Server instability (hardware fault) | After trial period, deliver a report evaluating the current hardware and different options | Free periodic hardware upgrade        | -      | 1      | 1 & 2 |
+| DDoS attacks                        | Software to prevent DDoS.                                                                  | Create an intervention plan.          | -      | 1      | 1 & 2 |
+| Software fault (security/stability) | Real-time bug reporting to the development and maintenance team.                           | Set up a dedicated bug-resolving team | -      | 1      | 1 & 2 |
+
+
+__Service desk:__
+
+| Service desk                                        | Bronze         | Silver         | Gold       |
+| :----------                                         | :----          | :-----         | :---       |
+| Service desk availability.                          | 95%            | 97%            | 99%        |
+| Max. amount of incidents that are exeeding the IRT. | < 10           | < 8            | < 5        |
+| Max. amount of incidents that are exeeding the MPT. | < 10           | < 8            | < 5        |
+| IRT of the service desk - priority high.            | 30 minutes     | 20 minutes     | 15 minutes |
+| IRT of the service desk - priority medium.          | 4 hours        | 2 hours        | 1 hour     |
+| IRT of the service desk - priority low.             | 6 hours        | 4 hours        | 2 hours    |
+| MPT of the service desk - priority high.            | 90 minutes     | 1 hour         | 30 minutes |
+| MPT of the service desk - priority medium.          | 8 hours        | 6 hours        | 4 hours    |
+| MPT of the service desk - priority low.             | 3 working days | 2 working days | 8 hours    |
+| Maximum amount of service desk complaints           | 5              | 3              | 0          |
+
+__Yearly costs for each service level:__
+
+| Component                                      | Bronze        | Silver         | Gold           |
+| :---                                           | :-----        | :-----         | :---           |
+| Weather data application                       | € 6.900,-     | € 10.350,-     | € 20.700,-     |
+| Service desk                                   | € 2.000,-     | € 6.000,-      | € 12.000,-     |
+| Changes and Maintenance of the application     | € 900,-       | € 1.350        | € 2.700,-      |
+| <div style="te-t-align:right">__Total:__</div> | __€ 9.800,-__ | __€ 17.700,-__ | __€ 35.400,-__ |
+

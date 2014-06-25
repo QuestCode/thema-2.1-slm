@@ -1,6 +1,6 @@
-<h1 style="font-size:4em">Service Level Report</h1>
-<h2 style="font-size:4em;margin-top:-30px">May 2014</h2>
-<h2 style="font-size:2.5em;margin:-30px 0 430px">Da Vinci Data</h2>
+<h1 style="font-size:3.5em">Service Level Report</h1>
+<h2 style="font-size:3.5em;margin-top:-30px">May 2014</h2>
+<h2 style="font-size:2em;margin:-30px 0 280px">Da Vinci Data</h2>
 
 __Place:__ Groningen  
 __Date:__ 09-06-2014  
@@ -61,6 +61,7 @@ __Backups.__
 | Amount of unsolved integrity incidents          | 0     | 0        |                                     |
 
 __Data confidentiality:__
+
 | Metric                     | Goal | Measured | Explanation |
 | :---                       | :--- | :---     | :---        |
 | Amount of server breaches. | 0    | 0        |             |

@@ -1,6 +1,6 @@
 ## 1.1 Definitions
 
-These are the definitions used throughout this Service Level Agreement (SLA).
+These are the definitions used throughout this Service Level Agreement.
 
 >- __Application:__ The weather data application. Including new versions of the software, as defined in the agreement and service description;
 >- __Service desk:__ The point of contact for the customer for changes and problems regarding the service;

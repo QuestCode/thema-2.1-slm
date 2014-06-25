@@ -10,10 +10,7 @@ The service desk can also be subject to several risks. Although some of these ri
 | Online-chat failure | Medium | Low    |
 | Email failure       | Low    | Low    |
 
-The consequences of a phone defect is described as 'medium' because phone contact is the most efficient way of contacting the Service desk. Phone contact ensures a fast transfer of information and allows the service desk employee to 
-question and troubleshoot with the user.
-A failure in the online-chat system has a higher probability but has no major consequences. When the online-chat function is no longer available, users will still be able to phone the Service desk.
-An email failure is also very unlikely and even though this is a preferred means of communication for users, it is not a very functional way of communication. Therefore, the supplier considers the consequences to be low and gives it a low impact.
+The consequences of a phone defect is described as 'medium' because phone contact is the most efficient way of contacting the Service desk. Phone contact ensures a fast transfer of information and allows the service desk employee to question and troubleshoot with the user. A failure in the online-chat system has a higher probability but has no major consequences. When the online-chat function is no longer available, users will still be able to phone the Service desk. An email failure is also very unlikely and even though this is a preferred means of communication for users, it is not a very functional way of communication. Therefore, the supplier considers the consequences to be low and gives it a low impact.
 
 
 #### Measures

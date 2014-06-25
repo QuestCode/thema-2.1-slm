@@ -1,7 +1,6 @@
 ## 3.4 Service Level Packages
 
-In this chapter, each the customer- and basic services' KPI's will be listed for each service level. The available service levels are bronze, silver and gold.
-__The numbers used in this chapter are based on amounts per month.__
+In this paragraph, the customer- and basic services' KPI's will be listed for each service level. The available service levels are bronze, silver and gold. __The numbers used in this chapter are based on amounts per month.__
 
 ### Weather data application
 
@@ -17,6 +16,8 @@ __The numbers used in this chapter are based on amounts per month.__
 | Minimum score security report.                   | n.v.t.       | 7            | 9            |
 | Maximum amount of unsolved integrity incidents.  | 5            | 3            | 0            |
 
+---
+
 In the table below, the risks will be listed along with the measures that will be taken to prevent or react to these risks for each service level package.
 
 | Risk                                | Measure 1                                                                                  | Measure 2                             | Bronze | Silver | Gold  |
@@ -24,7 +25,6 @@ In the table below, the risks will be listed along with the measures that will b
 | Server instability (hardware fault) | After trial period, deliver a report evaluating the current hardware and different options | Free periodic hardware upgrade        | -      | 1      | 1 & 2 |
 | DDoS attacks                        | Software to prevent DDoS.                                                                  | Create an intervention plan.          | -      | 1      | 1 & 2 |
 | Software fault (security/stability) | Real-time bug reporting to the development and maintenance team.                           | Set up a dedicated bug-resolving team | -      | 1      | 1 & 2 |
-
 
 ### Service desk
 
@@ -40,6 +40,8 @@ In the table below, the risks will be listed along with the measures that will b
 | MPT of the service desk - priority medium.          | 8 hours        | 6 hours        | 4 hours    |
 | MPT of the service desk - priority low.             | 3 working days | 2 working days | 8 hours    |
 | Maximum amount of service desk complaints           | 5              | 3              | 0          |
+
+---
 
 ### Yearly costs for each service level
 

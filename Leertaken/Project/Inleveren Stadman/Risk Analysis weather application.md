@@ -1,4 +1,4 @@
-# Risk Analysis weather data application
+# Risk Analysis Weather Data Application
 
 This chapter describes the possible risks for the availability of the application, and included are the measures to possibly prevent the risks.
 
