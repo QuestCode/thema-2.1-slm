@@ -5,7 +5,7 @@ The application will be used by 50 users who will all need a username and passwo
 
 The supplier offers the following features in the application:
 
-- A way for the customer to get a representation in which the rain fall of each weatherstation within 50 km of the coastline around the baltic sea is shown. (if the rain fall was more than 10 mm)
+- A way for the customer to get a representation in which the rainfall of each weatherstation within 50 km of the coastline around the baltic sea is shown. (if the rainfall was more than 10 mm)
 - A way for the customer to get a representation in which the temperature and humidity since the most recent midnight of any UNWDMI weather station is shown.
 - A map showing weather stations with a colour code depending on the current temperature.
 - A way for the customer to download data of the last 6 months in an Excel (files contain either a day, a week or a month of information)

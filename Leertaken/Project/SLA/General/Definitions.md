@@ -16,7 +16,7 @@
 One of the services in this SLA speaks about weather measurements. As there are some important measurements that are part of the service we define them here.
 
 >- __Wind speed:__ Wind speed is the measure motion of the air with respect to the surface of the earth covering a unit distance over a unit time.
->- __Rainfall:__ The amount of rain that falls on a particular area.
+>- __Rainfall:__ The amount of rain that falls in a particular area.
 >- __Temperature:__ The degree or intensity of heat present in a substance or object, especially as expressed according to a comparative scale and shown by a thermometer or perceived by touch.
 >- __Humidity:__ Humidity is the amount of water vapor in the air. Water vapor is the gaseous state of water and is invisible.
 
