@@ -23,7 +23,7 @@ Graph.setStations = function( stations ) {
 	var station;
 
 	stations.forEach( function( stn ) {
-		station = app.collections.stations.findOne( { stn: stn } );
+		station = app.collections.stations.findOne( { stn: stn }, { reactive: false } );
 		station.color = color( stn );
 
 		self._stations[stn] = station;
@@ -192,9 +192,10 @@ Graph._drawPrecipitationGraph = function( measurements ) {
 		measurements,
 		this.getPrecipitationGraph(),
 		// function( d3 ) { return d3.extent( measurements, function( d ) { console.log(d);return ( d.value.avg_prcp || 0 ) * 10; } ); },
-		[ 10, 30 ],
+		[ 0, 30 ],
 		'Precipitation (mm)',
-		function( y ) { return function( d ) { return y( ( d.value.avg_prcp || 0 ) * 10 ); }; } // Convert to millimeters
+		'avg_prcp'
+		//function( y ) { return function( d ) { console.log(d.value); return y( ( d.value.avg_prcp || 0 ) * 100 ); }; } // Convert to millimeters
 	);
 };
 

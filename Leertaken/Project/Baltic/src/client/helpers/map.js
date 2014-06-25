@@ -1,7 +1,7 @@
 var WorldMap = {};
 
 WorldMap.getStations = function() {
-	return app.collections.stations.find().fetch();
+	return app.collections.stations.find( {}, { reactive: false } ).fetch();
 };
 
 WorldMap.isShowingWorldMap = function() {
@@ -24,7 +24,7 @@ WorldMap._drawMap = function() {
 		.projection(this._projection);
 };
 
-WorldMap._drawHexbin = function(svg, hexbin, stations) {
+WorldMap._drawHexbin = function(svg, hexbin, stations, fillFunction) {
 	var self = this;
 
 	stations.forEach(function(d) {
@@ -39,10 +39,10 @@ WorldMap._drawHexbin = function(svg, hexbin, stations) {
 		.data(hexbin(stations))
 		.enter().append('path')
 			.attr('class', 'hexagon')
-			.attr('d', function(d) { return hexbin.hexagon(); })
+			.attr('d', function(d) { return hexbin.hexagon(self._radius(d.length)); })
 			.attr('transform', function(d) { return 'translate(' + d.x + ',' + d.y + ')'; })
-			.style('fill', 'red')
-			.style('stroke', '')
+			.style('fill', fillFunction)
+			.style('stroke', 'none')
 			.on('mouseover', function( stations ) {
 				self._stations = stations;
 				// Hackish, I know
@@ -79,6 +79,14 @@ WorldMap._drawWorldMap = function( cb ) {
 	var self = this;
 	this._drawMap();
 
+	this._radius = d3.scale.sqrt()
+		.domain([1, 25])
+		.range([1.5, 2.5]);
+
+	this._stationsColor = d3.scale.linear()
+		.domain([1, 3, 9, 27])
+		.range(['#f16913','#d94801','#a63603','#7f2704']);
+
 	d3.json('geo/world.json', function(err, world) {
 		if( err ) {
 			return cb( err );
@@ -86,7 +94,7 @@ WorldMap._drawWorldMap = function( cb ) {
 		var countries = topojson.feature(world, world.objects.world);
 		var stations = self.getStations();
 
-		self._center(countries, 1);
+		self._center(countries, 1.05);
 
 		var svg = d3.select('#map').append('svg')
 			.attr('width', self._width)
@@ -103,9 +111,13 @@ WorldMap._drawWorldMap = function( cb ) {
 
 		var hexbin = d3.hexbin()
 			.size([self._width, self._height])
-			.radius(2);
+			.radius(3);
 
-		self._drawHexbin(svg, hexbin, stations);
+		var fillFunction = function(stations) {
+			return self._stationsColor(stations.length);
+		}
+
+		self._drawHexbin(svg, hexbin, stations, fillFunction);
 
 		cb();
 	});
@@ -114,6 +126,17 @@ WorldMap._drawWorldMap = function( cb ) {
 WorldMap._drawBalticMap = function( cb ) {
 	var self = this;
 	this._drawMap();
+
+	this._radius = d3.scale.sqrt()
+		.domain([1, 5])
+		.range([3, 12]);
+
+	this._prcpColor = d3.scale.linear()
+		.domain([0.1, 0.15, 0.2, 0.25, 0.3, 0.5, 0.8, 1.2])
+		.range(['#fee6ce','#fdd0a2','#fdae6b','#fd8d3c','#f16913','#d94801','#a63603','#7f2704']);
+
+	var stationsKeys = _.pluck(this.getStations(), 'stn');
+
 
 	d3.json('geo/baltic.json', function(err, baltic) {
 		if( err ) {
@@ -147,11 +170,35 @@ WorldMap._drawBalticMap = function( cb ) {
 
 		var hexbin = d3.hexbin()
 			.size([self._width, self._height])
-			.radius(5);
+			.radius(12);
 
-		self._drawHexbin(svg, hexbin, stations);
+		var fillFunction = function(stations) {
+			var totalPrcp = _.reduce(stations, function(prcp, station) {
+				var m = app.collections.measurementAreaAverages.findOne({ 'value.stn': station.stn });
 
-		cb();
+				if(m) {
+					return prcp + m.value.avg_prcp;
+				}
+
+				return prcp;
+			}, 0);
+
+			var avgPrcp = totalPrcp / stations.length;
+
+			if(avgPrcp < 0.1) {
+				$(this).css('opacity', 0.3);
+				return '#444';
+			}
+			else {
+				return self._prcpColor(avgPrcp);
+			}
+		}
+	
+		Meteor.subscribe( 'measurementAreaAverages', stationsKeys, null, function() {
+			self._drawHexbin(svg, hexbin, stations, fillFunction);
+
+			cb();
+		});
 	});
 };
 

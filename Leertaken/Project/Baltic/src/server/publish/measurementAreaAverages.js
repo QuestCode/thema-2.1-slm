@@ -1,26 +1,25 @@
-Meteor.publish( 'measurementAreaAverages', function( stations, date ) {
+Meteor.publish( 'measurementAreaAverages', function( stations, datetime ) {
   var self = this;
 
-  var startDate = new Date(date);
-  startDate.setMilliseconds(0);
-  startDate.setSeconds(0);
-
-  var stopDate = new Date(date);
-  stopDate.setMilliseconds(0);
-  stopDate.setSeconds(0);
-  stopDate.setMinutes(stopDate.getMinutes() + 1);
+  if( datetime ) {
+    var datetime = new Date(datetime);
+    datetime.setMilliseconds(0);
+    datetime.setSeconds(0);
+  }
+  else {
+    var last = app.collections.measurementAverages.findOne({}, { sort: { 'value.datetime': -1 }, limit: 1 });
+    var datetime = new Date(last.value.datetime);
+    datetime.setMinutes(datetime.getMinutes() - 1);
+  }
 
   var query = {
-    stn: {
+    'value.stn': {
       $in: stations
     },
-    datetime: {
-      $gte: startDate,
-      $lt: stopDate
-    }
+    'value.datetime': datetime
   };
 
-  var handle = app.collections.measurementAverages.find(query).observerChanges({
+  var handle = app.collections.measurementAverages.find(query).observeChanges({
     added: function(id, doc) {
       self.added('measurementAreaAverages', id, doc);
     },

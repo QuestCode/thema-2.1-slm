@@ -16,6 +16,8 @@
 			- http://docs.mongodb.org/manual/core/master-slave/
 			- mongod --port 37017 --slave --slavedelay 50400 --source localhost:27017 --dbpath /tmp/mongotest
 			- 12 hours behind
+		- Security
+			- SRP protocol for passwords
 	- Testrapportage
 
 - ToDo

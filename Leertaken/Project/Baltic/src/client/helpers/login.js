@@ -16,7 +16,7 @@ Template.login.events({
 				Session.set('loginError', err.reason);
 			}
 			else {
-				Router.go('/');
+				window.location.replace('/');
 			}
 		});
 

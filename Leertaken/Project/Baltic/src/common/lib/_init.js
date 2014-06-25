@@ -26,3 +26,7 @@ app = {
 };
 
 app.collections.users = Meteor.users;
+
+if(Meteor.isClient) {
+	app.collections.measurementAreaAverages = new Meteor.Collection('measurementAreaAverages');
+}

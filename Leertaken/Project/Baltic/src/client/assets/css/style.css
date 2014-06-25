@@ -25,11 +25,11 @@
 }
 
 #map svg {
-	background-color: #333;
+	background-color: #92B4CA;
 }
 
 #map .country {
-	fill: #111;
+	fill: #CED8B6;
 }
 
 #map .borders {
@@ -37,11 +37,11 @@
 	stroke: #333;
 	stroke-width: 1px;
 	stroke-linejoin: round;
-	opacity: 0.6;
+	opacity: 0.2;
 }
 
 #map .sea {
-	fill: #333;
+  fill: #92B4CA;
 	opacity: 0.6;
 }
 

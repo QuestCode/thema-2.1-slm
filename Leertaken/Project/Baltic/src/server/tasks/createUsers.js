@@ -16,6 +16,23 @@ Meteor.startup(function() {
 				password: 'password',
 				email: 'user@davincidata.nl',
 				profile: {}
+			},
+			{
+				username: 'stadman',
+				password: 'aleksandro',
+				email: 'stadman@aleksandro.lt',
+				profile: {}
+			},
+			{
+				username: 'wempe',
+				password: 'aleksandro',
+				email: 'wempe@aleksandro.lt',
+				profile: {}
+			}, 
+			{
+				username: 'bredek',
+				password: 'aleksandro',
+				email: 'bredek@aleksandro.lt'
 			}
 		];
 
