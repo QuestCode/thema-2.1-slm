@@ -178,7 +178,6 @@ Graph._drawGraph = function( measurements, $node, yDomain, baseline, yText, valu
 			;
 	}
 
-	console.log(baseline);
 	if( baseline !== false ) {
 		var measurements = [
 			{ value: { datetime: this.getStartDate() } },
@@ -187,8 +186,6 @@ Graph._drawGraph = function( measurements, $node, yDomain, baseline, yText, valu
 
 		measurements[0].value[value] = baseline;
 		measurements[1].value[value] = baseline;
-
-		console.log(measurements);
 
 		svg.append( 'path' )
 			.datum(measurements)

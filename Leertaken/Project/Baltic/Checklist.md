@@ -1,6 +1,5 @@
 - Andre
 	- Show legend for graph colors
-	- Quick test in IE
 - Technical report
 	- Specificatie
 	- Ontwerp + toelichting
