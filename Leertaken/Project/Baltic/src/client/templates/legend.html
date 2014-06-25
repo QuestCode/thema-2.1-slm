@@ -1,5 +1,19 @@
 <template name="legend">
 	{{#if stations }}
+	<h3>Filter</h3>
+	<div id="graph-controls">
+		<div class="btn-group" data-toggle="buttons">
+			<label class="btn btn-default navbar-btn active" id="toggle-graph-day">
+				<input type="radio" name="map-toggle" checked> Day
+			</label>
+			<label class="btn btn-default navbar-btn" id="toggle-graph-week">
+				<input type="radio" name="map-toggle"> Week
+			</label>
+			<label class="btn btn-default navbar-btn" id="toggle-graph-month">
+				<input type="radio" name="map-toggle"> Month
+			</label>
+		</div>
+	</div>
 	<h3>Legend</h3>
 	<div id="graph-legend">
 		{{#if hasAtLeastTwoStations}}

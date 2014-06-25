@@ -3,7 +3,17 @@ var Graph = {};
 Graph._stations = {};
 
 Graph.getStartDate = function() {
-	return new Date() - 24 * 60 * 60 * 1000;
+	var start = new Date();
+
+	if( $( '#toggle-graph-week input:radio:checked' ).length ) {
+		start.setDate( start.getDate() - 7 ); // Week
+	} else if( $( '#toggle-graph-month input:radio:checked' ).length ) {
+		start.setMonth( start.getMonth() - 1 ); // Month
+	} else {
+		start.setDate( start.getDate() - 1 ); // Day
+	}
+
+	return start;
 };
 
 Graph.getStopDate = function() {
@@ -91,31 +101,32 @@ Graph._drawGraph = function( measurements, $node, yDomain, yText, value ) {
 		.range( [ height, 0 ] )
 		;
 
-	// https://raygun.io/blog/2013/04/custom-multi-scale-d3-time-series/
-	var timeFormats = [
-		[ d3.time.format.utc( '%Y' ), function() { return true; } ],
-		[ d3.time.format.utc( '%B' ), function( d ) { return d.getUTCMonth(); } ],
-		[ d3.time.format.utc( '%b %d' ), function( d ) { return d.getUTCDate() !== 1; } ],
-		[ d3.time.format.utc( '%a %d' ), function( d ) { return d.getUTCDay() && d.getUTCDate() !== 1; } ],
-		[ d3.time.format.utc( '%H:00' ), function( d ) { return d.getUTCHours(); } ],
-		[ d3.time.format.utc( '%I %p' ), function( d ) { return false; } ]
-	];
+	// // https://raygun.io/blog/2013/04/custom-multi-scale-d3-time-series/
+	// var timeFormats = [
+	// 	[ d3.time.format.utc( '%Y' ), function() { return true; } ],
+	// 	[ d3.time.format.utc( '%B' ), function( d ) { return d.getUTCMonth(); } ],
+	// 	[ d3.time.format.utc( '%b %d' ), function( d ) { return d.getUTCDate() !== 1; } ],
+	// 	[ d3.time.format.utc( '%a %d' ), function( d ) { return d.getUTCDay() && d.getUTCDate() !== 1; } ],
+	// 	[ d3.time.format.utc( '%H:00' ), function( d ) { return d.getUTCHours(); } ],
+	// 	[ d3.time.format.utc( '%I %p' ), function( d ) { return false; } ]
+	// ];
 
-	var timeFormatPicker = function( formats ) {
-		return function( date ) {
-			var i = formats.length - 1, f = formats[i];
-			while( ! f[1]( date ) ) {
-				f = formats[ --i ];
-			}
-			return f[0]( date );
-		};
-	};
+	// var timeFormatPicker = function( formats ) {
+	// 	return function( date ) {
+	// 		var i = formats.length - 1, f = formats[i];
+	// 		while( ! f[1]( date ) ) {
+	// 			f = formats[ --i ];
+	// 		}
+	// 		return f[0]( date );
+	// 	};
+	// };
 
 	var xAxis = d3.svg.axis()
 		.scale( x )
 		.orient( 'bottom' )
-		.tickFormat( timeFormatPicker( timeFormats ) )
 		;
+
+	// xAxis.tickFormat( timeFormatPicker( timeFormats ) );
 
 	var yAxis = d3.svg.axis()
 		.scale( y )
@@ -267,6 +278,9 @@ Template.graph.events = {
 			}
 		}
 
+		Graph.drawGraphs();
+	},
+	'change #graph-controls input:radio': function( e ) {
 		Graph.drawGraphs();
 	}
 };
