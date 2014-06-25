@@ -6,7 +6,7 @@ function calculateMeasurementAverages( datetime ) {
 
 	var script = path.resolve('/vagrant/scripts/db.calculateMeasurementAverages.js');
 	var evaluate = 'var datetime=' + datetime;
-	var command = 'mongo 127.0.1.1/meteor --eval "' + evaluate + '" ' + script;
+	var command = 'mongo 127.0.0.1/meteor --eval "' + evaluate + '" ' + script;
 
 	var child = exec(command, function(err, stdout, stderr) {
 		if(err) {
