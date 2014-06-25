@@ -1,6 +1,6 @@
 ### 2.1.1 Service Levels
 
-This chapter will describe the service levels regarding the weather data application. This chapter was written assuming no particular Service Level Package. The chapter _Service Levels_ contains more information on the options and differences between these options.
+This chapter will describe the service levels regarding the weather data application. This chapter was written assuming no particular Service Level Package. The chapter _3.4 Service Level Packages_ contains more information on the options and differences between these options.
 
 #### Availability
 

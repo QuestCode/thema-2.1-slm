@@ -25,7 +25,7 @@ The relevant countries:
 
 The client wants a SSL secured webpages protected by a username and password showing a map of the Baltic countries. When clicking on a weather station the client wants a 'cockpit'-like view showing the wind speed, rainfall, temperature and humidity (color coded) per minute.
 
-The application will have historic data of days, weeks and months included. Data will be saved for at least a half year, and this data can be downloaded
+The application will have historic data of days, weeks and months included. Data will be saved for at least a half year, and this data can be downloaded.
 
 ---
 
