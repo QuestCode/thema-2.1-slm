@@ -198,12 +198,20 @@ Graph._drawPrecipitationGraph = function( measurements ) {
 	);
 };
 
+Graph.clearGraphs = function() {
+	this.getTemperatureGraph().empty();
+	this.getHumidityGraph().empty();
+	this.getPrecipitationGraph().empty();
+};
+
 Graph.drawGraphs = function() {
 	var measurements = this.getMeasurements();
 
 	window._lastMeasurements = measurements;
 
 	// console.log(measurements);
+
+	this.clearGraphs();
 
 	if( app.WorldMap.isShowingWorldMap() ) {
 		this._drawTemperatureGraph( measurements );
@@ -224,8 +232,10 @@ Graph.init = function() {
 
 Template.graph.getLegend = function() {
 	Session.get( 'graph-stations' );
+	var stations = _.values( Graph.getStations() );
 	return {
-		stations: _.values( Graph.getStations() )
+		stations: stations,
+		hasAtLeastTwoStations: stations.length > 1
 	};
 };
 

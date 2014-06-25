@@ -2,11 +2,13 @@
 	{{#if stations }}
 	<h3>Legend</h3>
 	<div id="graph-legend">
+		{{#if hasAtLeastTwoStations}}
 		<div class="station">
 			<input class="toggle all" type="checkbox" checked="checked"/>
 			<span style="background-color:white"></span>
 			All
 		</div>
+		{{/if}}
 		{{#each stations}}
 		<div class="station" data-stn="{{ stn }}">
 			<input class="toggle" type="checkbox" checked="checked"/>
