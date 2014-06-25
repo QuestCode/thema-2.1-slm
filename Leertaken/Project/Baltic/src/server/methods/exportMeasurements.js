@@ -17,10 +17,10 @@ app.exportMeasurements = function(stations, startDate, stopDate) {
   }
 
   var measurements = app.collections.measurementAverages.find({
-    stn: {
+    'value.stn': {
       $in: stations
     },
-    datetime: {
+    'value.datetime': {
       $gte: new Date( startDate ),
       $lt: new Date( stopDate )
     }
