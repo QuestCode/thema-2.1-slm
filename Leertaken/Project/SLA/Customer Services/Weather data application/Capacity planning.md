@@ -1,9 +1,8 @@
-# Capacity planning weather data application
+### 2.1.3 Capacity planning
 
 The Weather Data Application is expected to cause the most workload on the storage space of the server. The supplier does not expect the graphical representations and the calculations needed for these to cause too much strain on the system itself. However, the application might cause some strain on the storage space, seeing as all data has to be saved over a period of 6 months. Because the supplier has not yet processed 6 months of data it is hard to make an exact measurement concerning the maximum amount o...(line truncated)...
 
 Instead of an exact measurement, the supplier has made a rough estimate, assuming that the amount of data per day will stay consistent and not taking into account caching/compression algorithms that may be implemented at a later stage: 
-
 
 | Size of weather data per day | Backup size per day | Caching |
 | :----                        | :----               |         |

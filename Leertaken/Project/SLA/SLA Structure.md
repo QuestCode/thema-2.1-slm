@@ -1,13 +1,13 @@
 <h1 style="font-size:3.5em">Service Level Agreement</h1>
 <h2 style="font-size:2em;margin:-30px 0 480px">Weather Data Application</h2>
 
-> __Opdracht:__ Leertaak 4 (SLM2), thema 2.1-I, groep 1
+> __Assignment:__ Weather Data Application
 >
-> __Auteurs:__ <span style="display:inline-block;vertical-align:top">Tom Broenink, Ward Holthof, Yuri Hoogeweg,<br/>André Nanninga en Maurits van Mastrigt</span>
+> __Authors:__ <span style="display:inline-block;vertical-align:top">Tom Broenink, Ward Holthof, Yuri Hoogeweg,<br/>André Nanninga en Maurits van Mastrigt</span>
 >
-> __Datum:__ 25 juni 2014
+> __Date:__ 25th of june 2014
 
-<!-- header: Vertrouwelijk document - SLM2, Groep 1, Thema 2.1-I -->
+<!-- header: Confident document - Da Vinci Data, Weather Data Application -->
 
 # Table of Contents
 
@@ -41,8 +41,6 @@
 
 # 1 General
 
-In this chapter you will find a general description of the service and requirements.
-
 <!-- @include General/Definitions.md -->
 
 ---
@@ -59,8 +57,6 @@ In this chapter you will find a general description of the service and requireme
 <!-- @include General/Responsibility.md -->
 
 # 2 Customer Services
-
-In this chapter you will find a description of the Customer services (Weather data application and Service desk).
 
 <!-- @include Customer Services/Customer Services.md -->
 
