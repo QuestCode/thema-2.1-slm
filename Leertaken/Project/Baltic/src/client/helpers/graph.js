@@ -79,8 +79,9 @@ Graph.getPrecipitationGraph = function() {
 	return this._$graphPrcp;
 };
 
-Graph._drawGraph = function( measurements, $node, yDomain, yText, value ) {
+Graph._drawGraph = function( measurements, $node, yDomain, baseline, yText, value, valueFunction ) {
 	var stations = this.getStations();
+	var _value = value;
 
 	$node.empty();
 
@@ -133,8 +134,9 @@ Graph._drawGraph = function( measurements, $node, yDomain, yText, value ) {
 		;
 
 	var line = d3.svg.line()
+		.interpolate('monotone')
 		.x( function( d ) { return x( d.value.datetime ); } )
-		.y( typeof value === 'function' ? value( y ) : function( d ) { return y( d.value[value] || 0 ); } )
+		.y( typeof valueFunction === 'function' ? valueFunction( y ) : function( d ) { return y( d.value[value] || 0 ); } )
 		;
 
 	var svg = d3.select( $node[0] ).append( 'svg' )
@@ -175,6 +177,24 @@ Graph._drawGraph = function( measurements, $node, yDomain, yText, value ) {
 			.style( 'stroke', stations[stn].color )
 			;
 	}
+
+	console.log(baseline);
+	if( baseline !== false ) {
+		var measurements = [
+			{ value: { datetime: this.getStartDate() } },
+			{ value: { datetime: this.getStopDate() } },
+		];
+
+		measurements[0].value[value] = baseline;
+		measurements[1].value[value] = baseline;
+
+		console.log(measurements);
+
+		svg.append( 'path' )
+			.datum(measurements)
+			.attr( 'd', line )
+			.attr( 'class', 'line baseline' )
+	}
 };
 
 Graph._drawTemperatureGraph = function( measurements ) {
@@ -182,6 +202,7 @@ Graph._drawTemperatureGraph = function( measurements ) {
 		measurements,
 		this.getTemperatureGraph(),
 		[ -40, 60 ],
+		0,
 		'Temperature (C°)',
 		'avg_temp'
 	);
@@ -192,6 +213,7 @@ Graph._drawHumidityGraph = function( measurements ) {
 		measurements,
 		this.getHumidityGraph(),
 		[ 0, 100 ],
+		50,
 		'Humidity (%)',
 		'avg_humi'
 	);
@@ -202,10 +224,11 @@ Graph._drawPrecipitationGraph = function( measurements ) {
 		measurements,
 		this.getPrecipitationGraph(),
 		// function( d3 ) { return d3.extent( measurements, function( d ) { console.log(d);return ( d.value.avg_prcp || 0 ) * 10; } ); },
-		[ 0, 30 ],
-		'Precipitation (mm)',
-		'avg_prcp'
-		//function( y ) { return function( d ) { console.log(d.value); return y( ( d.value.avg_prcp || 0 ) * 100 ); }; } // Convert to millimeters
+		[ 0, 3 ],
+		0.1,
+		'Precipitation (cm)',
+		'avg_prcp',
+		function( y ) { return function( d ) { return y( ( d.value.avg_prcp || 0 ) * 10 ); }; } // Convert to millimeters
 	);
 };
 

@@ -23,6 +23,11 @@
   stroke-width: 1.5px;
 }
 
+.chart .line.baseline {
+	stroke-width: 0.5px;
+	stroke: #DDD;
+}
+
 #graph-legend .station {
 	line-height: 14px;
 }
