@@ -4,8 +4,6 @@
 		- Improve map colors
 	- Quick test in IE
 	- Fix exports
-- Maurits
-	- 24 hour clock in graphs
 - Technical report
 	- Infrastructure
 		- Ant, Java, UNWDMIDP, Vagrant, NodeJS, Meteor, D3, Geodata
