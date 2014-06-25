@@ -11,7 +11,7 @@
 		- [x] Loss time [Andre]
 			- Norm voor verliestijd per event (bijv. 2 uur)
 			- Norm voor totale verliestijd in contractperiode (bijv 2%)
-	- Servicedesk
+	- service desk
 		- [x] Capaciteitsplanning [Ward]
 		- [x] Risicoanalyse [Yuri]
 - Implementaties en Condities
@@ -26,7 +26,7 @@
 		- Opsommen verschillen per pakket
 		- Vergelijken met voorbeelden
 		- Maken tabel met aangeboden pakketten
-	- [x] Servicedeskondersteuning
+	- [x] service desk ondersteuning
 - Rapportageverplichtingen
 	- [x] Voorbeeld Service Level Rapport
 	- [x] Service Review

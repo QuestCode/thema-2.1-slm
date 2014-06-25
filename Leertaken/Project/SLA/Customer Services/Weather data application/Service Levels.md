@@ -12,7 +12,7 @@ Because the initial requirement was for the weather data application to be acces
 
 Several Critical Success Factors (CSFs) and Key Performance Indicators (KPIs) have been outlined to define the Service Level Targets in a clear and concise manner.
 
-Service Level Targets of the weather data application can be summarised in the following way;
+Service Level Targets of the weather data application can be summarized in the following way;
 
 ###### Query load time
 Both queries have a maximum load time of 1 minute on Mondays before 12:00. Only authorised users will be able to issue a query request.   
@@ -81,7 +81,6 @@ The peak time (Mondays before 12:00) accounts for 12 hours a week. Which is 12 /
 | :---       | :---  | :---   | :---         | :---                             |
 | Peak times | 26,09 | 626,14 | 97%          | 626,14 * 0,03 = __18,78__        |
 
-
 The maximum amount of downtime a week during peak times is 26,09 / 52 = 0,50 hours (30 minutes).
 
 #### Expected maximum amount of problems a year.
@@ -91,6 +90,7 @@ The supplier expects to encounter no more than 150 problems a year. Problems are
 #### Security
 
 Because the information is of great value to the supplier as well as the client, both these parties will take security measures to ensure the data remains secure. These security measures will be outlined and described in this chapter.
+The supplier will setup a SSL-connection to secure safe data transport. Users of the application will agree to not store usernames or password locally. There will be a total of 50 users, with no segregation in privileges.
 
 ##### Backups
 
@@ -116,9 +116,7 @@ Even secure, complex passwords can be compromised. It is for this reason that th
 
 Every customer logging in to the service needs to:
 - Have ran a virus scan in the past week.
-- Immediately change his/her password and notify the servicedesk if the customer suspects a third party has gained access to his/her account.
-
----
+- Immediately change his/her password and notify the service desk if the customer suspects a third party has gained access to his/her account.
 
 ##### Monitoring
 
