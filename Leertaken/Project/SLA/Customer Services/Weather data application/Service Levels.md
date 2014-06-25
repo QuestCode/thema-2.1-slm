@@ -1,6 +1,6 @@
 ### 2.1.1 Service Levels
 
-This chapter will describe the service levels regarding the weather data application. This chapter was written assuming no particular Service Level Package. The chapter _Service Levels_ contains more information on the options and differences between these options.
+This chapter will describe the service levels regarding the weather data application. This chapter was written assuming the gold Service Level Package. The chapter _Service Levels_ contains more information on the options and differences between these options.
 
 #### Availability
 
@@ -139,3 +139,4 @@ In the unlikely event of a calamity, the supplier will take immediate action to 
 The _Responsibilities_ paragraph contains more information on what a calamity is and when a calamity is deemed 'beyond the supplier's control'.
 
 The paragraph _Backups_ states that backups will be kept on a regular basis. These backups can be used in the event of a calamity to ensure the service will be back online with the least amount of data loss possible.
+
