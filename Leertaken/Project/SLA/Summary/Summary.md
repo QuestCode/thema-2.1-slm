@@ -120,6 +120,10 @@ __Weather data application:__
 | Minimum score security report.                   | n.v.t.       | 7            | 9            |
 | Maximum amount of unsolved integrity incidents.  | 5            | 3            | 0            |
 
+---
+
+<br/>
+
 In the next table, the risks will be listed along with the measures that will be taken to prevent or react to these risks for each service level package.
 
 | Risk                                | Measure 1                                                                                  | Measure 2                             | Bronze | Silver | Gold  |
@@ -146,6 +150,10 @@ __Service desk:__
 | MPT of the service desk - priority medium.          | 8 hours        | 6 hours        | 4 hours    |
 | MPT of the service desk - priority low.             | 3 working days | 2 working days | 8 hours    |
 | Maximum amount of service desk complaints           | 5              | 3              | 0          |
+
+---
+
+<br/>
 
 __Yearly costs for each service level:__
 
