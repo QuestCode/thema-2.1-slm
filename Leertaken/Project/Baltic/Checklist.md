@@ -20,11 +20,14 @@
 	- Testrapportage
 
 - ToDo
-	- Finish up
-	- Write report
-	- Check which documents have to be handed in
-	- Finalize SLA
+	- Move to Digital Ocean
+	- Finish styling
+	- Test in IE
+	- Fix exports
+	- HTTPS
+	- Stations publish non-reactive
 
 - Extra
 	- Zoom
 	- Search with autocomplete
+

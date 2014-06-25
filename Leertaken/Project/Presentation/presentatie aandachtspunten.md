@@ -22,7 +22,7 @@ Go back to start sheet:
 
 ## Aandachtspunten presentatie
 
-Tijdens de demonstratie aangeven hoe de applicatie aansluit op de wensen van de klant. 
+Tijdens de demonstratie aangeven hoe de applicatie aansluit op de wensen van de klant.
 
 __Wensen klant:__
 
@@ -42,3 +42,16 @@ Informeer of de klanten nog vragen hebben over de applicatie en de functionalite
 __Service presentatie:__
 
 Termen in slides uitleggen. Nadruk leggen op dat er verschil zit tussen level packages. 'More detailed information can be found in the SLA'.
+
+## Notities n.a.v. groep 2
+
+- Laat de klant een rol spelen
+- Doosje++
+- Litauwe laten zien in voorbeeld (herkenbaarheid)
+- Voorafgaand aan de demonstratie, de specs samenvatten
+- Veel tijd nemen voor demonstration
+- Toelichting van SLA (op hoofdlijnen) uitdelen
+- Bredek kan vragen of hij in mag loggen
+- https://weatherdata.nerdieworks.nl
+- Accounts aanmaken (voor Bredek en Stadman)
+- Handleiding?
