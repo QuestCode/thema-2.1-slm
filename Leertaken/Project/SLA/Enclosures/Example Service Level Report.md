@@ -93,7 +93,7 @@ There have not been any change requests during the period covered in this report
 
 # 5 Availability
 
-The availabiltiy percentages of the Web Interface were slightly below the requirement, the suggested solution to the cause of this problem is evaluating the power provider availability and determining if switching to a different provider might guarantee less outages. However, two power outages both happening on Mondays before 12:00 is very rare and we do not expect this to happen again.
+The availabiltiy percentages of the Web Interface were slightly below the requirement, the suggested solution to the cause of this problem is evaluating the power provider availability and determining if switching to a different provider might guarantee less outages. However, two power outages both happening on Mondays before 12:00 is very rare and the supplier does not expect this to happen again.
 
 # 6 Conclusion
 

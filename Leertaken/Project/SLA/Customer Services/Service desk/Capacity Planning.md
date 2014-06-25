@@ -1,6 +1,6 @@
 ### 2.2.3 Capacity planning
 
-Because there will be a fixed amount of users on the system, we can make an accurate estimate of the amount of users that will contact the Service desk.
+Because there will be a fixed amount of users on the system, the supplier can make an accurate estimate of the amount of users that will contact the Service desk.
 
 If at any time reports show that the Service desk cannot handle the amount of incidents, there will be an evaluation to decide if the budget for the service desk is still realistic or if some changes in this SLA need to be made in order to guarantee the Key Performance Indicators (as described in _2.3.1 Service Levels_).
 

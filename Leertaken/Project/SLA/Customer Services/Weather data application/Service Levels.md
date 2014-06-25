@@ -116,7 +116,7 @@ Even secure, complex passwords can be compromised. It is for this reason that th
 
 Every customer logging in to the service needs to:
 - Have ran a virus scan in the past week.
-- Immediately change his/her password and notify the servicedesk if the customer suspects a third party has gained access to his/her account.
+- Immediately change his/her password and notify the service desk if the customer suspects a third party has gained access to his/her account.
 
 ---
 

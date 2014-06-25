@@ -13,7 +13,7 @@
 
 ### 1.1.1 Weather data
 
-One of the services in this SLA speaks about weather measurements. As there are some important measurements that are part of the service we define them here.
+One of the services in this SLA speaks about weather measurements. As there are some important measurements that are part of the service as defined here.
 
 >- __Wind speed:__ Wind speed is the measure motion of the air with respect to the surface of the earth covering a unit distance over a unit time.
 >- __Rainfall:__ The amount of rain that falls in a particular area.
