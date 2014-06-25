@@ -1,6 +1,6 @@
 #Glossary
 
-Onderstaand verklaring van de in deze SLA gebruikte vaktermen in alfabetische volgorde.
+This is an alphabetical list of technical terms used in this SLA with their definitions.
 B
 
 - __Server__
