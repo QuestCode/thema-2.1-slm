@@ -2,7 +2,7 @@
 
 To set up the service desk to support the new weather data application, new hardware and service desk training/employees will be necessary. These processes cause implementation costs:
 
-| Part                                                      | Costs          |
+| Component                                                 | Costs          |
 | :---                                                      | :---           |
 | Development wather data application                       | € 10.125,-     |
 | Hardware costs weather data application (Webserver)       | € 4.900,-      |

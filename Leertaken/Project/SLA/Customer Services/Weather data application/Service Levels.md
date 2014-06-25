@@ -23,7 +23,7 @@ N.B.: the supplier guarantees the maximum load time of 1 minute only when there 
 
 The following points are of utmost importance in successfully keeping the weather data application available and ensuring it meets the Service Level Targets.
 
-- Data must be retained for at least 6 months and available 99.5% of the time on mondays before 12:00
+- Data must be retained for at least 6 months and available 99.5% of the time on mondays before 12:00.
 - Graphs/Maps related to the queries must load within 1 minute.
 - Data must be backed up starting from every midnight (until the next midnight).
 - The data may not be viewed or accessed by third parties.
@@ -32,12 +32,11 @@ The following points are of utmost importance in successfully keeping the weathe
 
 The metrics below have been defined from the Critical Success Factors, these metrics will be used to measure the quality of the services.
 
-
 __Data must be retained for at least 6 months and available 99.5% of the time on mondays before 12:00__
 
 | Metric                              | Goal  | Source                   |
 | :----------                         | :---  | :---                     |
-| Uptime service                      | "98%" | Measured uptime service. |
+| Uptime service                      | 98%   | Measured uptime service. |
 | Uptime service during opening times | 99.5% | Measured uptime service. |
 | Uptime service during peak hours    | 99.5% | Measured uptime service. |
 
