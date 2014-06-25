@@ -22,6 +22,8 @@
 - ToDo
 	- Move to Digital Ocean
 	- Finish styling
+	- Add day/week/month radio button below legend
+	- Fix auto showing baltic sea after login
 	- Test in IE
 	- Fix exports
 	- HTTPS
