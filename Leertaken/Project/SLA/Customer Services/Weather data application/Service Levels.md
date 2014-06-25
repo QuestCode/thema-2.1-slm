@@ -79,7 +79,7 @@ The peak time (Mondays before 12:00) accounts for 12 hours a week. Which is 12 /
 
 | Time       | Days  | Hours  | Availability | Maximum hours of downtime yearly |
 | :---       | :---  | :---   | :---         | :---                             |
-| Peak times | 26,09 | 626,14 | 99.5%          | 626,14 * 0,03 = __18,78__        |
+| Peak times | 26,09 | 626,14 | 99.5%          | 626,14 - ((626,14/100) * 99,5) = 3,13 hours|
 
 The maximum amount of downtime a week during peak times is 26,09 / 52 = 0,50 hours (30 minutes).
 
