@@ -5,16 +5,19 @@
 	- Quick test in IE
 	- Fix exports
 - Technical report
-	- Infrastructure
-		- Ant, Java, UNWDMIDP, Vagrant, NodeJS, Meteor, D3, Geodata
-		- SSL/HTTPS
-	- Backups
-		- Explain backup using RSYNC
-		- No option: http://docs.mongodb.org/manual/reference/program/mongodump/#bin.mongodump (full dataset)
-		- No option: https://github.com/micahwedemeyer/automongobackup/blob/master/src/automongobackup.sh (doesn't work)
-		- http://docs.mongodb.org/manual/core/master-slave/
-		- mongod --port 37017 --slave --slavedelay 50400 --source localhost:27017 --dbpath /tmp/mongotest
-		- 12 hours behind
+	- Specificatie
+	- Ontwerp + toelichting
+		- Infrastructure
+			- Ant, Java, UNWDMIDP, Vagrant, NodeJS, Meteor, D3, Geodata
+			- SSL/HTTPS
+		- Backups
+			- Explain backup using RSYNC
+			- No option: http://docs.mongodb.org/manual/reference/program/mongodump/#bin.mongodump (full dataset)
+			- No option: https://github.com/micahwedemeyer/automongobackup/blob/master/src/automongobackup.sh (doesn't work)
+			- http://docs.mongodb.org/manual/core/master-slave/
+			- mongod --port 37017 --slave --slavedelay 50400 --source localhost:27017 --dbpath /tmp/mongotest
+			- 12 hours behind
+	- Testrapportage
 
 - ToDo
 	- Finish up
