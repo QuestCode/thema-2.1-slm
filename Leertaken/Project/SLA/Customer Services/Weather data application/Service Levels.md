@@ -37,7 +37,7 @@ __Data must be retained for at least 6 months and available 99.5% of the time on
 
 | Metric                              | Goal  | Source                   |
 | :----------                         | :---  | :---                     |
-| Uptime service                      | 98%   | Measured uptime service. |
+| Uptime service                      | "98%" | Measured uptime service. |
 | Uptime service during opening times | 99.5% | Measured uptime service. |
 | Uptime service during peak hours    | 99.5% | Measured uptime service. |
 

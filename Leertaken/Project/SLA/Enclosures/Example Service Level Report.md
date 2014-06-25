@@ -69,23 +69,33 @@ __Data confidentiality:__
 
 The service desk performance during the past month will be evaluated based on the Critical Success Factors (CSF) and Key Performance Indicators (KPI) defined in the Service Level Agreement for the service desk. All Key Performance Indicators and the data related to these KPI's can be found in the tables below.
 
-__Timely responding to incidents.__
+__Timely response to new incidents.__
 
-| Metric                                                    | Goal | Measured      | Explanation |
-| :----------                                               | :--- | :------------ | :---------- |
-| Amount of incidents that have not been replied to in time | < 5  | 3             |             |
+| Measurement                                    | Goal         | Measured |
+| :----------                                    | :---         | :---     |
+| Amount of incidents with exeeding IRT          | < 15         |          |
+| Average IRT of incidents with high priority.   | < 15 minutes |          |
+| Average IRT of incidents with medium priority. | < 1 hour     |          |
+| Average IRT of incidents with low priority.    | < 2 hours    |          |
 
-__Timely solving incidents.__
 
-| Metric                                                | Goal | Measured      | Explanation |
-| :----------                                           | :--  | :------------ | :---------- |
-| Amount of incidents that have not been solved in time | < 5  | 2             |             |
 
-__Service desk availability.__
+__Timely resolving of incidents.__
 
-| Metric                             | Goal | Measured      | Explanation |
-| :----------                        | :--  | :------------ | :---------- |
-| Amount of service desk complaints. | 0    | 0             |             |
+| Measurement                                             | Goal           | Measured |
+| :----------                                             | :--            | :---     |
+| Amount of incidents with exeeding MPT                   | < 15           |          |
+| Average resolve time of incidents with high priority.   | < half an hour |          |
+| Average resolve time of incidents with medium priority. | < 4 hours      |          |
+| Average resolve time of incidents with low priority.    | < 8 hours      |          |
+
+
+
+__The availability of the service desk.__
+
+| Measurement           | Goal | Measured |
+| :----------           | :--  | :---     |
+| Amount of complaints. | 0    |          |
 
 # 4 Changes
 
