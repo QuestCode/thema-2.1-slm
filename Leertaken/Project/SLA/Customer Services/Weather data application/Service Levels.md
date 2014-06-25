@@ -35,15 +35,15 @@ The metrics below have been defined from the Critical Success Factors, these met
 
 __Data must be retained for at least 6 months and available 97% of the time on mondays before 12:00__
 
-| Metric                              | Goal | Source                   |
-| :----------                         | :---   | :---                     |
-| Uptime service                      | 98%    | Measured uptime service. |
-| Uptime service during opening times | 99.5%  | Measured uptime service. |
-| Uptime service during peak hoours   | 99.5%  | Measured uptime service. |
+| Metric                              | Goal  | Source                   |
+| :----------                         | :---  | :---                     |
+| Uptime service                      | 98%   | Measured uptime service. |
+| Uptime service during opening times | 99.5% | Measured uptime service. |
+| Uptime service during peak hoours   | 99.5% | Measured uptime service. |
 
 __Graphs/Maps related to the queries must load within 1 minute.__
 
-| Metric                | Goal     | Source                                                        |
+| Metric                | Goal       | Source                                                        |
 | :----------           | :---       | :---                                                          |
 | Average response time | < 1 minute | Response time measured in tests on a wide variety of systems. |
 | Maximum response time | < 1 minute | Response time measured in tests on a wide variety of systems. |
@@ -51,15 +51,14 @@ __Graphs/Maps related to the queries must load within 1 minute.__
 __Data must be backed up starting from every midnight (until the next midnight).__
 
 | Metric                                 | Goal | Source                                                     |
-| :----------                            | :---   | :---                                                       |
-| Amount of failed or incomplete backups | 0      | Amount of incidents involving a corrupt or missing backup. |
+| :----------                            | :--- | :---                                                       |
+| Amount of failed or incomplete backups | 0    | Amount of incidents involving a corrupt or missing backup. |
 
 __The data may not be viewed or accessed by third parties.__
 | Metric                                        | Goal | Source                                                                                                          |
-| :----------                                   | :---   | :---                                                                                                            |
-| Amount of security breaches compromising data | 0      | Amount of security related incidents involving (suspected) successful retrieving of information by third party. |
+| :----------                                   | :--- | :---                                                                                                            |
+| Amount of security breaches compromising data | 0    | Amount of security related incidents involving (suspected) successful retrieving of information by third party. |
 
----
 
 #### Losstime
 
@@ -76,11 +75,12 @@ The duration of maintenance may depend on the severity of the issues and the upt
 __Calculation:__
 
 A year has 365,25 (0,25 days to account for leap years).
-The peak time (Mondays before 12:00 accounts) for 12 hours a week. Which is 12 / 7 = 1,71 hours a day on average. Or 1,71 * 365,25 = 626,14 hours a year on average. And 626,14 / 24 = 26,09 days a year on average.
+The peak time (Mondays before 12:00) accounts for 12 hours a week. Which is 12 / 7 = 1,71 hours a day on average. Or 1,71 * 365,25 = 626,14 hours a year on average. And 626,14 / 24 = 26,09 days a year on average.
 
-| Time                  | Days   | Hours   | Availability | Maximum hours of downtime yearly |
-| :---                  | :---   | :---    | :---         | :---                             |
-| Peak times            | 26,09  | 626,14  | 97%          | 626,14 * 0,03 = 18,78            |
+| Time       | Days  | Hours  | Availability | Maximum hours of downtime yearly |
+| :---       | :---  | :---   | :---         | :---                             |
+| Peak times | 26,09 | 626,14 | 97%          | 626,14 * 0,03 = __18,78__        |
+
 
 The maximum amount of downtime a week during peak times is 26,09 / 52 = 0,50 hours (30 minutes).
 
