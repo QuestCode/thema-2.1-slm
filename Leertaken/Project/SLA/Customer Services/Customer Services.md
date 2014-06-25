@@ -10,4 +10,4 @@
 <!-- @include Service desk/Definition.md -->
 <!-- @include Service desk/Service Levels.md -->
 <!-- @include Service desk/Risk Analysis.md -->
-<!-- @include Service desk/Capacity Planning.md -->
+<!-- @include Service desk/Capacity planning.md -->

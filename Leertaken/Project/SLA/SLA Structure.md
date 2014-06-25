@@ -22,7 +22,13 @@
 	- 1.8 &nbsp;Responsibilities							<span style="float:right;font-weight:normal">5</span>
 - 2 &nbsp;Customer Services									<span style="float:right;font-weight:bold">6</span>
 	- 2.1 &nbsp;Weather Data Application 					<span style="float:right;font-weight:normal">6</span>
+		- 2.1.1 &nbsp;Service Levels						<span style="float:right;font-weight:normal">12</span>
+		- 2.1.2 &nbsp;Risk Analysis							<span style="float:right;font-weight:normal">12</span>
+		- 2.1.3 &nbsp;Capacity Planning						<span style="float:right;font-weight:normal">12</span>
 	- 2.2 &nbsp;Service desk								<span style="float:right;font-weight:normal">12</span>
+		- 2.2.1 &nbsp;Service Levels						<span style="float:right;font-weight:normal">12</span>
+		- 2.2.2 &nbsp;Risk Analysis							<span style="float:right;font-weight:normal">12</span>
+		- 2.2.3 &nbsp;Capacity Planning						<span style="float:right;font-weight:normal">12</span>
 - 3 &nbsp;Pricing       									<span style="float:right;font-weight:bold">15</span>
 	- 3.1 &nbsp;Implementation Costs						<span style="float:right;font-weight:normal">15</span>
 	- 3.2 &nbsp;Structural Costs							<span style="float:right;font-weight:normal">15</span>
