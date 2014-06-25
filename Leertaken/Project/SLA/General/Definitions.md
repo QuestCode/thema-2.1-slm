@@ -9,7 +9,7 @@ These are the definitions used throughout this Service Level Agreement (SLA).
 >- __Incident:__ A disturbance that keeps a user(s) from (partially) using a service;
 >- __Major Incident__ A severe incident that cannot be solved within the MPT;
 >- __Problem:__ A collection of incidents that might indicate a common cause;
->- __Initial Responce time (IRT):__ Within this time a response should be given to a new incident;
+>- __Initial Response time (IRT):__ Within this time a response should be given to a new incident;
 >- __Maximum Process Time (MPT):__ Within this time a incident should be resolved or be scaled up to a major incident / problem;
 
 
