@@ -13,7 +13,7 @@ The supplier offers the following features in the application:
 These features offer an intuitive and cockpit-like feeling to the application, enabling users to easily access detailed information on current weather data as well as weather data from any period in the last 6 months.
 
 
-The supplier manages to the following facilities needed to provide the service:
+The supplier manages the following facilities needed to provide the service:
 
 - A webserver containing the application;
 - Certificates needed to make the SSL connection possible;
@@ -35,6 +35,6 @@ To support the development and implementation as well as continued operation of 
 	- Installation
 	- Education
 	- User management
-- Operational support, i.e. First- and seccond level service desk support;
-- Installation of hardware and software at the client, if nessesary;
+- Operational support, i.e. First- and second level service desk support;
+- Installation of hardware and software at the client, if necessary;
 
