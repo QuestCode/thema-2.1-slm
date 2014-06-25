@@ -80,6 +80,15 @@
 	font-size: 12px;
 }
 
+#map-legend {
+	display: block;
+	position: absolute;
+	bottom: 20px;
+	right: 10px;
+	height: 10px;
+	width: 200px;
+}
+
 @-moz-keyframes spin {
 	0% {
 		-moz-transform: rotate(0deg);

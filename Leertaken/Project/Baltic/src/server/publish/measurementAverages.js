@@ -14,7 +14,15 @@ Meteor.publish( 'measurementAverages', function( stations, startDate, stopDate )
 	// var range = moment(startDate).diff(stopDate);
 
 	// if( range < oneHour ) {
+	// 	var step = moment(0).add('minutes', 1).valueOf();
 	// }
+
+	// while( startDate < stopDate ) {
+	// 	startDate += step;
+	// 	timestamps += new Date( startDate );
+	// }
+
+	// console.log(stations, timestamps);
 
 	var query = {
 		'value.stn': { $in: stations },

@@ -13,6 +13,8 @@ Graph.getStartDate = function() {
 		start.setDate( start.getDate() - 7 ); // Week
 	} else if( $( '#toggle-graph-month input:radio:checked' ).length ) {
 		start.setMonth( start.getMonth() - 1 ); // Month
+	} else if( $( '#toggle-graph-hour input:radio:checked' ).length ) {
+		start.setHours( start.getHours() - 1 ); // Hour
 	} else {
 		start.setDate( start.getDate() - 1 ); // Day
 	}

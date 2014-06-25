@@ -24,6 +24,37 @@ WorldMap._drawMap = function() {
 		.projection(this._projection);
 };
 
+WorldMap._drawLegend = function(map) {
+	var gradient = [];
+
+	if(map === 'baltic-sea') {
+		var domain = [0, 0.09999, 0.1, 0.15, 0.2, 0.25, 0.3, 0.5, 0.8, 1.2];
+		var colors = this._prcpColor;
+	}
+	else if(map === 'world') {
+		var domain = [1, 3, 9, 27];
+		var colors = this._stationsColor;
+	}
+
+	var range = domain[domain.length - 1] - domain[0];
+
+	for(index in domain) {
+		var value = domain[index];
+		var percentage = Math.round(value / range * 100) + '%';
+
+		gradient.push(colors(value) + ' ' + percentage);
+	}
+
+	this._$legend
+		.css({
+			'background-image': 'linear-gradient(left, ' + gradient.join(',') + ')',
+			'background-image': '-o-linear-gradient(left, ' + gradient.join(',') + ')',
+			'background-image': '-ms-linear-gradient(left, ' + gradient.join(',') + ')',
+			'background-image': '-moz-linear-gradient(left, ' + gradient.join(',') + ')',
+			'background-image': '-webkit-linear-gradient(left, ' + gradient.join(',') + ')',
+		});
+}
+
 WorldMap._drawHexbin = function(svg, hexbin, stations, fillFunction) {
 	var self = this;
 
@@ -132,11 +163,11 @@ WorldMap._drawBalticMap = function( cb ) {
 		.range([3, 12]);
 
 	this._prcpColor = d3.scale.linear()
-		.domain([0.1, 0.15, 0.2, 0.25, 0.3, 0.5, 0.8, 1.2])
-		.range(['#fee6ce','#fdd0a2','#fdae6b','#fd8d3c','#f16913','#d94801','#a63603','#7f2704']);
+		.domain([0, 0.09999, 0.1, 0.15, 0.2, 0.25, 0.3, 0.5, 0.8, 1.2])
+		.range(['#444', '#444', '#fee6ce','#fdd0a2','#fdae6b','#fd8d3c','#f16913','#d94801','#a63603','#7f2704']);
+
 
 	var stationsKeys = _.pluck(this.getStations(), 'stn');
-
 
 	d3.json('geo/baltic.json', function(err, baltic) {
 		if( err ) {
@@ -147,6 +178,7 @@ WorldMap._drawBalticMap = function( cb ) {
 		var stations = self.getStations();
 
 		self._center(seas, 0.85);
+		self._drawLegend('baltic-sea');
 
 		var svg = d3.select('#map').append('svg')
 			.attr('width', self._width)
@@ -187,11 +219,9 @@ WorldMap._drawBalticMap = function( cb ) {
 
 			if(avgPrcp < 0.1) {
 				$(this).css('opacity', 0.3);
-				return '#444';
 			}
-			else {
-				return self._prcpColor(avgPrcp);
-			}
+			
+			return self._prcpColor(avgPrcp);
 		}
 	
 		Meteor.subscribe( 'measurementAreaAverages', stationsKeys, null, function() {
@@ -211,6 +241,7 @@ WorldMap.showWorld = function() {
 	this._$map.empty();
 	this._$worldToggle.addClass( 'active' );
 	this._$balticToggle.removeClass( 'active' );
+	this._$legend.css('background-image', 'none');
 	app.Graph.setStations( [] );
 
 	Meteor.call('stations', function(err, stations) {
@@ -219,6 +250,7 @@ WorldMap.showWorld = function() {
 		self._drawWorldMap( function( err ) {
 			Session.set( 'map-isReady', true );
 			self._currentMap = 'world';
+			self._drawLegend('world');
 		});
 	});
 };
@@ -233,6 +265,7 @@ WorldMap.showBalticSea = function() {
 	this._$map.empty();
 	this._$worldToggle.removeClass( 'active' );
 	this._$balticToggle.addClass( 'active' );
+	this._$legend.css('background-image', 'none');
 	app.Graph.setStations( [] );
 
 	Meteor.call('stations', app.balticStations, function(err, stations) {
@@ -241,6 +274,7 @@ WorldMap.showBalticSea = function() {
 		self._drawBalticMap( function( err ) {
 			Session.set( 'map-isReady', true );
 			self._currentMap = 'baltic-sea';
+			self._drawLegend('baltic-sea');
 		});
 	});
 };
@@ -255,6 +289,7 @@ WorldMap.init = function() {
 	this._$balticToggle = $( '#toggle-baltic' );
 	this._$map = $( '#map' );
 	this._$tooltip = $( '#map-tooltip' );
+	this._$legend = $( '#map-legend' );
 	this.showBalticSea();
 
 	this._$map.on( 'click', function( e ) {
