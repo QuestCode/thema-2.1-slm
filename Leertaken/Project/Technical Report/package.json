@@ -1,0 +1,10 @@
+{
+  "name": "SLM2",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-preprocess": "^4.0.0"
+  }
+}
