@@ -32,7 +32,7 @@ app.exportMeasurements = function(stations, startDate, stopDate) {
 
   json2csv({
     fields: fields,
-    data: measurements
+    data: measurements.value
   }, function(err, csv) {
     if(err) {
       future.throw(err);
