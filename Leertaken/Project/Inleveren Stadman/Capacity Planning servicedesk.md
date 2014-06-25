@@ -1,4 +1,4 @@
-### 2.2.3 Capacity planning
+# Capacity planning service desk
 
 Because there will be a fixed amount of users on the system, the supplier can make an accurate estimate of the amount of users that will contact the Service desk.
 
