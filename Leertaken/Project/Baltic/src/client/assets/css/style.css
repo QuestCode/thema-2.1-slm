@@ -1,3 +1,7 @@
+body {
+	overflow-y: scroll;
+}
+
 #wrapper > .container {
 	margin: 24px auto;
 }
