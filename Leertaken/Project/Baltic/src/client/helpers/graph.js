@@ -326,7 +326,7 @@ Template.graph.events = {
 		Graph.drawGraphs();
 	},
 	'change #graph-controls input:radio': function( e ) {
-		Graph.drawGraphs();
+		Graph._subscribe();
 	}
 };
 
