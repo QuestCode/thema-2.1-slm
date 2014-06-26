@@ -195,7 +195,7 @@ WorldMap._drawBalticMap = function( cb ) {
 		.range([3, 12]);
 
 	this._prcpColor = d3.scale.linear()
-		.domain([0, 0.09999, 0.1, 0.15, 0.2, 0.25, 0.3, 0.5, 0.8, 1.2])
+		.domain([0, 0.9999, 1.0, 1.5, 2.0, 2.5, 3.0, 2.5, 3.0, 3.5])
 		.range(['#444', '#444', '#fee6ce','#fdd0a2','#fdae6b','#fd8d3c','#f16913','#d94801','#a63603','#7f2704']);
 
 
@@ -249,7 +249,7 @@ WorldMap._drawBalticMap = function( cb ) {
 
 			var avgPrcp = totalPrcp / stations.length;
 
-			if(avgPrcp < 0.1) {
+			if(avgPrcp < 1.0) {
 				$(this).css('opacity', 0.3);
 			}
 			

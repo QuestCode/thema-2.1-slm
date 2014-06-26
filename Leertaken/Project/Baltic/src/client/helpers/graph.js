@@ -247,11 +247,11 @@ Graph._drawPrecipitationGraph = function( measurements ) {
 		measurements,
 		this.getPrecipitationGraph(),
 		// function( d3 ) { return d3.extent( measurements, function( d ) { console.log(d);return ( d.value.avg_prcp || 0 ) * 10; } ); },
-		[ 0, 3 ],
-		0.1,
-		'Precipitation (cm)',
+		[ 0.0, 30.0 ],
+		10.0,
+		'Precipitation (mm)',
 		'avg_prcp',
-		function( y ) { return function( d ) { return y( ( d.value.avg_prcp || 0 ) * 10 ); }; } // Convert to millimeters
+		function( y ) { return function( d ) { return y( d.value.avg_prcp * 10 ); }; } // Convert to millimeters
 	);
 };
 
