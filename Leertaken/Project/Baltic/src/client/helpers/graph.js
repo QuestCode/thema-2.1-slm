@@ -69,9 +69,11 @@ Graph.setStations = function( stations ) {
 	this._subscribe();
 };
 
-Graph.getStations = function( asArray ) {
+Graph.getStations = function( asArray, excludeDeselected ) {
 	if( asArray ) {
-		return Object.keys( this._stations );
+		return _.pluck( _.filter( this._stations, function( station ) {
+			return ! excludeDeselected || ! station.hide;
+		} ), 'stn' );
 	}
 	return this._stations;
 };

@@ -18,19 +18,19 @@ Export.make = function( stations, startDate, stopDate ) {
 Export.lastDay = function() {
 	var prev = new Date();
 	prev.setDate( prev.getDate() - 1 );
-	this.make( app.Graph.getStations( true ), prev );
+	this.make( app.Graph.getStations( true, true ), prev );
 };
 
 Export.lastWeek = function() {
 	var prev = new Date();
 	prev.setDate( prev.getDate() - 7 );
-	this.make( app.Graph.getStations( true ), prev );
+	this.make( app.Graph.getStations( true, true ), prev );
 };
 
 Export.lastMonth = function() {
 	var prev = new Date();
 	prev.setMonth( prev.getMonth() - 1 );
-	this.make( app.Graph.getStations( true ), prev );
+	this.make( app.Graph.getStations( true, true ), prev );
 };
 
 app.Export = Export;
