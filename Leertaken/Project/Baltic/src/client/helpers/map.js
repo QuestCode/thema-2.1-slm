@@ -30,17 +30,19 @@ WorldMap._drawLegend = function(map) {
 	if(map === 'baltic-sea') {
 		var domain = [0, 0.09999, 0.1, 0.15, 0.2, 0.25, 0.3, 0.5, 0.8, 1.2];
 		var colors = this._prcpColor;
+		var offset = 0;
 	}
 	else if(map === 'world') {
-		var domain = [1, 3, 9, 27];
-		var colors = this._stationsColor;
+		var domain = [-20, -15, -10, -5, 0, 5, 10, 15, 20, 25, 30];
+		var colors = this._tempColor;
+		var offset = 40;
 	}
 
 	var range = domain[domain.length - 1] - domain[0];
 
 	for(index in domain) {
 		var value = domain[index];
-		var percentage = Math.round(value / range * 100) + '%';
+		var percentage = Math.round(value / range * 100) + offset + '%';
 
 		gradient.push(colors(value) + ' ' + percentage);
 	}
@@ -73,7 +75,6 @@ WorldMap._drawHexbin = function(svg, hexbin, stations, fillFunction) {
 			.attr('d', function(d) { return hexbin.hexagon(self._radius(d.length)); })
 			.attr('transform', function(d) { return 'translate(' + d.x + ',' + d.y + ')'; })
 			.style('fill', fillFunction)
-			.style('stroke', 'none')
 			.on('mouseover', function( stations ) {
 				self._stations = stations;
 				// Hackish, I know
@@ -111,12 +112,16 @@ WorldMap._drawWorldMap = function( cb ) {
 	this._drawMap();
 
 	this._radius = d3.scale.sqrt()
-		.domain([1, 25])
-		.range([1.5, 2.5]);
+		.domain([1, 18])
+		.range([2, 3.5]);
 
 	this._stationsColor = d3.scale.linear()
 		.domain([1, 3, 9, 27])
 		.range(['#f16913','#d94801','#a63603','#7f2704']);
+
+	this._tempColor = d3.scale.linear()
+		.domain([-20, -15, -10, -5, 0, 5, 10, 15, 20, 25, 30])
+		.range(['#a50026','#d73027','#f46d43','#fdae61','#fee090','#e0f3f8','#abd9e9','#74add1','#4575b4','#313695'].reverse())
 
 	d3.json('geo/world.json', function(err, world) {
 		if( err ) {
@@ -142,15 +147,42 @@ WorldMap._drawWorldMap = function( cb ) {
 
 		var hexbin = d3.hexbin()
 			.size([self._width, self._height])
-			.radius(3);
+			.radius(4);
+
+		// var fillFunction = function(stations) {
+		// 	return self._stationsColor(stations.length);
+		// }
+
+		// self._drawHexbin(svg, hexbin, stations, fillFunction);
+
+		// cb();
 
 		var fillFunction = function(stations) {
-			return self._stationsColor(stations.length);
+			var totalTemp = _.reduce(stations, function(temp, station) {
+				var m = self._averages[station.stn];
+
+				if(m) {
+					return temp + m.value.avg_temp;
+				}
+
+				return temp;
+			}, 0);
+
+			var avgTemp = totalTemp / stations.length;
+
+			return self._tempColor(avgTemp);
 		}
+	
+		Meteor.call( 'measurementAreaAverages', null, null, function(err, averages) {
+			self._averages = {};
+			averages.forEach( function( average ) {
+				self._averages[average.value.stn] = average;
+			});
 
-		self._drawHexbin(svg, hexbin, stations, fillFunction);
+			self._drawHexbin(svg, hexbin, stations, fillFunction);
 
-		cb();
+			cb();
+		});
 	});
 };
 
@@ -206,7 +238,7 @@ WorldMap._drawBalticMap = function( cb ) {
 
 		var fillFunction = function(stations) {
 			var totalPrcp = _.reduce(stations, function(prcp, station) {
-				var m = app.collections.measurementAreaAverages.findOne({ 'value.stn': station.stn });
+				var m = self._averages[station.stn];
 
 				if(m) {
 					return prcp + m.value.avg_prcp;
@@ -224,7 +256,12 @@ WorldMap._drawBalticMap = function( cb ) {
 			return self._prcpColor(avgPrcp);
 		}
 	
-		Meteor.subscribe( 'measurementAreaAverages', stationsKeys, null, function() {
+		Meteor.call( 'measurementAreaAverages', stationsKeys, null, function(err, averages) {
+			self._averages = {};
+			averages.forEach( function( average ) {
+				self._averages[average.value.stn] = average;
+			});
+
 			self._drawHexbin(svg, hexbin, stations, fillFunction);
 
 			cb();
