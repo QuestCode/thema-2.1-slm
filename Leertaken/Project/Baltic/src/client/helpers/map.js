@@ -281,6 +281,7 @@ WorldMap.showBalticSea = function() {
 
 WorldMap.init = function() {
 	var self = this;
+
 	if( this._init ) {
 		return;
 	}
@@ -301,6 +302,16 @@ WorldMap.init = function() {
 	this._$map.on( 'dblclick, selectstart', function( e ) {
 		e.preventDefault();
 		return false;
+	} );
+
+	this._$map.on( 'mouseover', '.hexagon', function( e ) {
+		self._$tooltip.css( {
+			top: e.offsetY,
+			left: e.offsetX + 15
+		} ).show();
+	} );
+	this._$map.on( 'mouseleave', '.hexagon', function() {
+		self._$tooltip.hide();
 	} );
 
 	this._init = true;
