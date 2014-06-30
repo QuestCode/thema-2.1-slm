@@ -18,7 +18,8 @@ The code below shows how these tools were used.
 ogr2ogr \
   -simplify .001 \
   -f GeoJSON \
-  -where "ADM0_A3_IS IN ('SWE', 'DNK', 'DEU', 'POL', 'RUS', 'LTU', 'LVA', 'EST', 'FIN', 'NOR', 'NLD', 'BLR')" \
+  -where "ADM0_A3_IS IN ('SWE', 'DNK', 'DEU', 'POL', 'RUS', 'LTU', 'LVA', \
+  	'EST', 'FIN', 'NOR', 'NLD', 'BLR')"
   /vagrant/temp/countries.json \
   /vagrant/resources/ne_50m_admin_0_countries/ne_50m_admin_0_countries.shp
 

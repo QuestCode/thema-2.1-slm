@@ -6,7 +6,8 @@ Luckily with MongoDB there is a far more clever approach: Replication with slave
 
 Setting up delayed master-slave replication with MongoDB is relatively easy. It can be done by running the following command on a seperate server:
 
-    mongod --port 37017 --slave --slavedelay 43200 --source <master server>:27017 --dbpath /tmp/backup
+    mongod --port 37017 --slave --slavedelay 43200 \
+    	--source <master server>:27017 --dbpath /tmp/backup
 
 The slave delay is specified in seconds (43200 = 12 hours) and all data is stored in the `/tmp/backup` folder.
 
