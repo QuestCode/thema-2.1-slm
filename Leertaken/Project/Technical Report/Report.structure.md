@@ -10,35 +10,24 @@
 <!-- header: Technical Report, Learning Task 5, Group 1, Theme 2.1-I -->
 
 # Table of Contents
-<!--
-- 1 &nbsp;Algemeen											<span style="float:right;font-weight:bold">3</span>
-	- 1.1 &nbsp;Begripsbepaling								<span style="float:right;font-weight:normal">3</span>
-	- 1.2 &nbsp;Partijen									<span style="float:right;font-weight:normal">3</span>
-	- 1.3 &nbsp;Inleiding									<span style="float:right;font-weight:normal">3</span>
-	- 1.4 &nbsp;Goedkeuring SLA								<span style="float:right;font-weight:normal">3</span>
-	- 1.5 &nbsp;Beschrijving van de Dienstverlening			<span style="float:right;font-weight:normal">3</span>
-	- 1.6 &nbsp;Continuïteit van de Cloud-dienstverlening	<span style="float:right;font-weight:normal">4</span>
-	- 1.7 &nbsp;Prioriteitbepaling							<span style="float:right;font-weight:normal">4</span>
-	- 1.8 &nbsp;Aansprakelijkheid							<span style="float:right;font-weight:normal">5</span>
-- 2 &nbsp;Klantdiensten										<span style="float:right;font-weight:bold">6</span>
-	- 2.1 &nbsp;Cloud Hosting								<span style="float:right;font-weight:normal">6</span>
-	- 2.2 &nbsp;Servicedesk									<span style="float:right;font-weight:normal">12</span>
-- 3 &nbsp;Tariefstructuur									<span style="float:right;font-weight:bold">15</span>
-	- 3.1 &nbsp;Eenmalige Kosten							<span style="float:right;font-weight:normal">15</span>
-	- 3.2 &nbsp;Structurele Kosten							<span style="float:right;font-weight:normal">15</span>
-	- 3.3 &nbsp;Servicedeskondersteuning					<span style="float:right;font-weight:normal">15</span>
-	- 3.4 &nbsp;Niveau's van Dienstverlening				<span style="float:right;font-weight:normal">16</span>
-- 4 &nbsp;Implementatie en Condities						<span style="float:right;font-weight:bold">18</span>
-	- 4.1 &nbsp;Eisen aan Infrastructuur					<span style="float:right;font-weight:normal">18</span>
-	- 4.2 &nbsp;Geschatte Opleverdatum						<span style="float:right;font-weight:normal">18</span>
-	- 4.3 &nbsp;Proefperiode								<span style="float:right;font-weight:normal">19</span>
-	- 4.4 &nbsp;Bonus en Malus								<span style="float:right;font-weight:normal">19</span>
-- 5 &nbsp;Rapportageverplichtingen							<span style="float:right;font-weight:bold">20</span>
-	- 5.1 &nbsp;Service Review								<span style="float:right;font-weight:normal">20</span>
-	- 5.2 &nbsp;Proefperiode Rapportage						<span style="float:right;font-weight:normal">20</span>
-- 6 &nbsp;Glossary											<span style="float:right;font-weight:bold">21</span>
-- 7 &nbsp;Ondertekening										<span style="float:right;font-weight:bold">22</span>
--->
+- __1 &nbsp;Introduction									<span style="float:right">3</span>__
+- __2 &nbsp;Application Specification						<span style="float:right">4</span>__
+	- 2.1 &nbsp;Requirements								<span style="float:right;font-weight:normal">4</span>
+	- 2.2 &nbsp;Goals										<span style="float:right;font-weight:normal">5</span>
+- __3 &nbsp;Application Design								<span style="float:right">6</span>__
+	- 3.1 &nbsp;UNWDMIDP									<span style="float:right;font-weight:normal">6</span>
+	- 3.2 &nbsp;Ant											<span style="float:right;font-weight:normal">7</span>
+	- 3.3 &nbsp;Vagrant										<span style="float:right;font-weight:normal">7</span>
+	- 3.4 &nbsp;Meteor										<span style="float:right;font-weight:normal">7</span>
+	- 3.5 &nbsp;Map Reduce									<span style="float:right;font-weight:normal">8</span>
+	- 3.6 &nbsp;D3											<span style="float:right;font-weight:normal">8</span>
+	- 3.7 &nbsp;Backups										<span style="float:right;font-weight:normal">11</span>
+- __4 &nbsp;Test Results										<span style="float:right">12</span>__
+	- 4.1 &nbsp;Weather Data								<span style="float:right;font-weight:normal">12</span>
+	- 4.2 &nbsp;First Query									<span style="float:right;font-weight:normal">13</span>
+	- 4.3 &nbsp;Second Query								<span style="float:right;font-weight:normal">14</span>
+	- 4.4 &nbsp;Conclusion									<span style="float:right;font-weight:normal">15</span>
+- __5 &nbsp;Glossary											<span style="float:right">16</span>__
 
 # 1 Introduction
 
@@ -57,19 +46,37 @@
 <!-- @include Design/Ant.md -->
 <!-- @include Design/Vagrant.md -->
 <!-- @include Design/Meteor.md -->
+
+---
+
 <!-- @include Design/MapReduce.md -->
 <!-- @include Design/D3.md -->
 <!-- @include Design/D3/Line Graphs.md -->
+
+---
+
 <!-- @include Design/D3/Geodata.md -->
 <!-- @include Design/D3/Hexbin.md -->
+
+---
+
 <!-- @include Design/Backups.md -->
 
 # 4 Test Results
 
 <!-- @include Tests/Intro.md -->
 <!-- @include Tests/WeatherData.md -->
+
+---
+
 <!-- @include Tests/FirstQuery.md -->
+
+---
+
 <!-- @include Tests/SecondQuery.md -->
+
+---
+
 <!-- @include Tests/Conclusion.md -->
 
 # 5 Glossary

@@ -1,4 +1,4 @@
-# 4.1 First Query
+## 4.2 First Query
 
 The first query is __rainfall above 10 mm within 50 km of the Baltic Sea coast__.
 
