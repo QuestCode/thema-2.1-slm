@@ -1,4 +1,4 @@
-## Hexbinning
+### Hexbinning
 
 To show the measurement a method called Hexbinning was used. This is a method to simplify many data points on a map to give a better visual indication of the actual measurements. With this methods data point are grouped in hexagons which can then be styled to give an indication fo the data within.
 
