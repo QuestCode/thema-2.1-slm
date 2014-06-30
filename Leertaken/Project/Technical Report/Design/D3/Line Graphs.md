@@ -1,0 +1,3 @@
+## Line Graph
+
+Line graphs are used to give a detailed view of the measurments of a weatherstation. The line graphs are built using the D3 library and contain data for each weatherstation within a hexagon. The graphs details the measured data over a period of a day, week or month. This can give a good insight in the trends of the measured data and the relation between weatherstations within a hexagon.
