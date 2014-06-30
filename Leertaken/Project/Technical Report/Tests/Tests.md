@@ -1,0 +1,2 @@
+- To validate the response times we did some tests..
+- Introduction to tests

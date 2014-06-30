@@ -1,16 +1,16 @@
 <h1 style="font-size:4em">Technisch Rapportage</h1>
 <h2 style="font-size:2.5em;margin:-30px 0 580px">Baltic Sea Weather Data</h2>
 
-> __Opdracht:__ Leertaak 5, thema 2.1-I, groep 1
+> __Assignment:__ Technical Report for Learning Task 5, Group 1, Theme 2.1-I
 >
-> __Auteurs:__ <span style="display:inline-block;vertical-align:top">Tom Broenink, Ward Holthof, Yuri Hoogeweg,<br/>André Nanninga en Maurits van Mastrigt</span>
+> __Authors:__ <span style="display:inline-block;vertical-align:top">Tom Broenink, Ward Holthof, Yuri Hoogeweg,<br/>André Nanninga, and Maurits van Mastrigt</span>
 >
-> __Datum:__ 25 juni 2014
+> __Date:__ June 30th 2014
 
-<!-- header: Vertrouwelijk document - SLM2, Groep 1, Thema 2.1-I -->
+<!-- header: Technical Report, LT5, Group 1, Theme 2.1-I -->
 
 # Inhoud
-<!-- 
+<!--
 - 1 &nbsp;Algemeen											<span style="float:right;font-weight:bold">3</span>
 	- 1.1 &nbsp;Begripsbepaling								<span style="float:right;font-weight:normal">3</span>
 	- 1.2 &nbsp;Partijen									<span style="float:right;font-weight:normal">3</span>
@@ -36,38 +36,38 @@
 - 5 &nbsp;Rapportageverplichtingen							<span style="float:right;font-weight:bold">20</span>
 	- 5.1 &nbsp;Service Review								<span style="float:right;font-weight:normal">20</span>
 	- 5.2 &nbsp;Proefperiode Rapportage						<span style="float:right;font-weight:normal">20</span>
-- 6 &nbsp;Verklarende Woordenlijst							<span style="float:right;font-weight:bold">21</span>
+- 6 &nbsp;Glossary											<span style="float:right;font-weight:bold">21</span>
 - 7 &nbsp;Ondertekening										<span style="float:right;font-weight:bold">22</span>
- -->
+-->
 
-# 1 Inleiding
+# 1 Introduction
 
-<!-- @include Inleiding/Inleiding.md -->
+<!-- @include General/Introduction.md -->
 
-# 2 UNDWMIDP
+# 2 Application Specification
 
-<!-- @include UNWDMIDP/UNWDMIDP.md -->
-<!-- @include UNWDMIDP/Mapreduce.md -->
+<!-- @include Specification/Specification.md -->
+<!-- @include Specification/Requirements.md -->
 
-# 3 Ant
+# 3 Applicaton Design
 
-<!-- @include Ant/Ant.md -->
+<!-- @include Design/UNWDMIDP.md -->
+<!-- @include Design/Ant.md -->
+<!-- @include Design/Vagrant.md -->
+<!-- @include Design/Meteor.md -->
+<!-- @include Design/MapReduce.md -->
+<!-- @include Design/D3.md -->
+<!-- @include Design/D3/Line Graphs.md -->
+<!-- @include Design/D3/Geodata.md -->
+<!-- @include Design/D3/Hexbin.md -->
+<!-- @include Design/Backup.md -->
 
-# 4 Vagrant
+# 4 Test Results
 
-<!-- @include Vagrant/Vagrant.md -->
+<!-- @include Tests/Tests.md -->
+<!-- @include Tests/FirstQuery.md -->
+<!-- @include Tests/SecondQuery.md -->
 
-# 5 Meteor
+# 5 Glossary
 
-<!-- @include Meteor/Meteor.md -->
-
-# 6 D3
-
-<!-- @include D3/D3.md -->
-<!-- @include D3/Line Graphs.md -->
-<!-- @include D3/Geodata.md -->
-<!-- @include D3/Hexbin.md -->
-
-# 7 Verklarende Woordenlijst
-
-<!-- @include Verklarende Woordenlijst/Verklarende Woordenlijst.md -->
+<!-- @include Glossary/Glossary.md -->

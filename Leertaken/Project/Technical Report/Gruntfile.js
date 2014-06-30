@@ -4,7 +4,7 @@ How to use:
 	$ npm install grunt-cli -g
 	$ npm install
 	$ grunt
-	> See generated "Concept SLA.md" for full document
+	> See generated "Technical Report.md" for full document
 */
 
 module.exports = function( grunt ) {
@@ -12,8 +12,8 @@ module.exports = function( grunt ) {
 		pkg: grunt.file.readJSON( 'package.json' ),
 		preprocess: {
 			document: {
-				src: 'Rapport.structure.md',
-				dest: 'Technisch rapport.md'
+				src: 'Report.structure.md',
+				dest: 'Technichal Report.md'
 			}
 		},
 		watch: {

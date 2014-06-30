@@ -1,0 +1,3 @@
+- Something about UNWDMI, Da Vinci Data
+- About the meeting with Aleksandro..
+- Introduction of the next requirement paragraph
