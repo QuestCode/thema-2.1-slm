@@ -13,7 +13,7 @@ module.exports = function( grunt ) {
 		preprocess: {
 			document: {
 				src: 'Report.structure.md',
-				dest: 'Technichal Report.md'
+				dest: 'Technical Report.md'
 			}
 		},
 		watch: {
