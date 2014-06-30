@@ -65,9 +65,11 @@
 
 # 4 Test Results
 
-<!-- @include Tests/Tests.md -->
+<!-- @include Tests/Intro.md -->
+<!-- @include Tests/WeatherData.md -->
 <!-- @include Tests/FirstQuery.md -->
 <!-- @include Tests/SecondQuery.md -->
+<!-- @include Tests/Conclusion.md -->
 
 # 5 Glossary
 

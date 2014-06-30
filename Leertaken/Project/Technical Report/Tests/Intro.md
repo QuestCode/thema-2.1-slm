@@ -1,0 +1,1 @@
+To determine the workload the application is capable of handling, some tests have done. First of the processing of weather data will be tested. Then the first and the second query (as described in chapter 2) will be tested. Finally, the drawn conclusions will be given, which are based on the test results.
