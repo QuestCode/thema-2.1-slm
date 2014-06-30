@@ -1,0 +1,1 @@
+The meeting, held on June 6th 2014 at the Hanzehogeschool Groningen, gave the Da Vinci Data division many insights on the requested application of the ASU. After the, rather pleasand meeting, the minutes were made and verified with the ASU. They agreed with the general outline of the application, which will be given in the next paragraph.

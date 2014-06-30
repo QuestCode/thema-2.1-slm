@@ -1,15 +1,15 @@
-<h1 style="font-size:4em">Technisch Rapportage</h1>
+<h1 style="font-size:4em">Technical Report</h1>
 <h2 style="font-size:2.5em;margin:-30px 0 580px">Baltic Sea Weather Data</h2>
 
-> __Assignment:__ Technical Report for Learning Task 5, Group 1, Theme 2.1-I
+> __Assignment:__ Technical Report, Learning Task 5, Group 1, Theme 2.1-I
 >
 > __Authors:__ <span style="display:inline-block;vertical-align:top">Tom Broenink, Ward Holthof, Yuri Hoogeweg,<br/>André Nanninga, and Maurits van Mastrigt</span>
 >
 > __Date:__ June 30th 2014
 
-<!-- header: Technical Report, LT5, Group 1, Theme 2.1-I -->
+<!-- header: Technical Report, Learning Task 5, Group 1, Theme 2.1-I -->
 
-# Inhoud
+# Table of Contents
 <!--
 - 1 &nbsp;Algemeen											<span style="float:right;font-weight:bold">3</span>
 	- 1.1 &nbsp;Begripsbepaling								<span style="float:right;font-weight:normal">3</span>
@@ -46,8 +46,9 @@
 
 # 2 Application Specification
 
-<!-- @include Specification/Specification.md -->
+<!-- @include Specification/Intro.md -->
 <!-- @include Specification/Requirements.md -->
+<!-- @include Specification/Goals.md -->
 
 # 3 Applicaton Design
 

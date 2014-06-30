@@ -1,1 +1,5 @@
-Aleksandro Stulginskio Universitetas will perform calculations on weather data to conduct research on climate change. The university is interested in climate change in Lithuania and other countries around the Baltic Sea. The university is especially interested in weather changes regarding the milder weather in the past years.
+The United Nations Weather Data Management Institute (UNWDMI) collects weather data from all over the world. Because of the potential to attract customers from all over the globe, the Da Vinci Data division was set up to handle the European customers. The Aleksandro Stulginskio Universitetas (ASU) contacted the Da Vinci Data division to setup a meeting to discuss potential business.
+
+They will perform calculations on weather data to conduct research on climate change. The university is interested in climate change in Lithuania and other countries around the Baltic Sea. The university is especially interested in weather changes regarding the milder weather in the past years (sleet, rainfall, umidity, and temperature).
+
+This report describes the process of translation the customer wishes into a technical project specification for building the requested web application. Also some test results are included, to validate the speed requirements and to reinforce the propositions made in the Service Level Agreement.
