@@ -2,7 +2,7 @@
 
 To visual the data in a clear and concise manner a map with the weatherstations was used. This map gives both insight into the location and relation between weatherstations and into patterns that the weather may have in specific geographical areas. The map of the wordt with the hexagons showing the temperature gives a very good overview.
 
-![World map](Images/worldmap.png)
+![World map](Figures/worldmap.png)
 
 The figure above gives a very clear picture of the percipitation around the baltic sea. Every hexagon on this map contains one or more weatherstations. The size of the hexagon gives an indication on the amount of weatherstations in that hexagon while the color gives an indication on the amount of percipitation as measured by those weatherstations.
 

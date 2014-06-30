@@ -16,7 +16,7 @@ The response should be served within 1 minute. Because there are many things to 
 | 8           | 11:30:20   | 11:30:04  | 3.8 seconds   |
 | 9           | 11:30:28   | 11:30:32  | 4.5 seconds   |
 | 10          | 11:30:40   | 11:30:44  | 3.7 seconds   |
-| __Average__ |            |           | 4,3 seconds   |
+| __Average__ |            |           | 4.3 seconds   |
 
 From this can be concluded that the response times are well within the 60 second limit.
 

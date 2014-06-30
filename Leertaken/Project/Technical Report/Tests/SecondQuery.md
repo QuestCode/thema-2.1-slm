@@ -16,7 +16,7 @@ This response should also be served within 1 minute. For the second query there 
 | 8           | 11:50:29   | 11:50:49  | 20.2 seconds  |
 | 9           | 11:50:54   | 11:51:11  | 16.6 seconds  |
 | 10          | 11:51:17   | 11:50:34  | 16.7 seconds  |
-| __Average__ |            |           | 17,9 seconds  |
+| __Average__ |            |           | 17.9 seconds  |
 
 From this can be concluded that the response times are well within the 60 second limit.
 
