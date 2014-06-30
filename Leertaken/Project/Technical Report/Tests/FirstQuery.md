@@ -1,6 +1,6 @@
 # 4.1 First Query
 
-The first query is __rain fall above 10 mm within 50 km of the Baltic Sea coast__.
+The first query is __rainfall above 10 mm within 50 km of the Baltic Sea coast__.
 
 The response should be served within 1 minute. Because there are many things to take in consideration, a simple timing test seems te most appropriate. During a period of 20 minutes the Baltic Sea page was fully refreshed 10 times. This page contains a map with 188 weatherstations and a rainfall graph per station. This test resulted in the following load times:
 

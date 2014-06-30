@@ -1,5 +1,5 @@
 <h1 style="font-size:4em">Technical Report</h1>
-<h2 style="font-size:2.5em;margin:-30px 0 580px">Baltic Sea Weather Data</h2>
+<h2 style="font-size:2.5em;margin:-50px 0 500px">Baltic Sea Weather Data</h2>
 
 > __Assignment:__ Technical Report, Learning Task 5, Group 1, Theme 2.1-I
 >
@@ -62,7 +62,7 @@
 <!-- @include Design/D3/Line Graphs.md -->
 <!-- @include Design/D3/Geodata.md -->
 <!-- @include Design/D3/Hexbin.md -->
-<!-- @include Design/Backup.md -->
+<!-- @include Design/Backups.md -->
 
 # 4 Test Results
 

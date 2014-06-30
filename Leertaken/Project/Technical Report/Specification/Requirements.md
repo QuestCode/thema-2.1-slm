@@ -4,12 +4,7 @@ The first meeting resulted in a general outline of the application, which in tur
 
 Aleksandro Stulginskio Universitetas will perform calculations on weather data to conduct research on climate change. The university is interested in climate change in Lithuania and other countries around the Baltic Sea. The university is especially interested in weather changes regarding the milder weather in the past years. They would like 'sleet' measurements.
 
-Also they are interested in the following measurements:
-
-- Wind speed
-- Rain fall
-- Temperature
-- Humidity
+Also they are interested in the following measurements: __Wind speed, rainfall, temperature, and humidity__.
 
 In the following (relevant) countries:
 
@@ -27,11 +22,13 @@ In the following (relevant) countries:
 
 These global functional requirements in turn translate into more detailed queries:
 
-1. __Rain fall above 10 mm within 50 km.__  
-Show data about rain fall when it is above 10 mm. Don't show when rain fall is below that. Only stations within 50 km of coastline of the Baltic Sea.
+1. __Rainfall above 10 mm within 50 km.__  
+Show data about rainfall when it is above 10 mm. Don't show when rainfall is below that. Only stations within 50 km of coastline of the Baltic Sea.
 
 2. __Graphs of temperature and humidity.__  
 Be able to show a graph of temperature and humidity of any individual weatherstation. (Since previous midnight). Any weatherstation worldwide.
+
+---
 
 #### Key requirements
 
