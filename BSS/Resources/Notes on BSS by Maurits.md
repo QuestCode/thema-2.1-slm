@@ -59,7 +59,7 @@ Memory allocation:
 	- Worst-fit
 
 2. Paging (page table(s))
-3. Segmentation (sections for each type)
+3. Segmentation (sections for each category/type)
 
 Page size == frame size
 
@@ -134,7 +134,7 @@ Dispatch latency is the time it takes for the dispatcher to stop one process and
 Process-contention scope (PCS) is user level thread competition within the process scheduler.
 System-contention scope (SCS) is competition among all threads in system.
 
-Homogeneous processors within a multiprocessor: Same types of processors.s
+Homogeneous processors within a multiprocessor: Same types of processors.
 Asymmetric multiprocessing: only one processor accesses the system data structures, alleviating the need for data sharing.
 Symmetric multiprocessing (SMP): each processor is self-scheduling, all processes in common ready queue, or each has its own private queue of ready processes.
 
